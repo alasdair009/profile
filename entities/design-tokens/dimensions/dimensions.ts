@@ -1,6 +1,68 @@
 import {CSSProperties} from "react";
 import {rem} from "polished";
 
+/**
+ * Maximum width that text should be confined to.
+ */
+export const globalTextMaxWidth = 1200;
+
+/**
+ * Maximum width that content should extend to.
+ */
+export const globalContentMaxWidth = 1600;
+
+/**
+ * Maximum width decorative elements can stretch to on the screen.
+ */
+export const globalDecorationMaxWidth = 3440;
+
+/**
+ * Key names for screen width sizes
+ */
+export type Breakpoint =
+    | "base"
+    | "min"
+    | "xsmall"
+    | "small"
+    | "medium"
+    | "large"
+    | "xlarge"
+    | "wide";
+
+/**
+ * Breakpoints (px value) for JDS dimensions of viewport.
+ *
+ * Alternatively {@link @jagex/jds#device} can be used in the context of styles breakpoints.
+ */
+export const breakpoints: Record<Breakpoint, number> = {
+    base: 0,
+    min: 360,
+    xsmall: 576,
+    small: 768,
+    medium: 992,
+    large: globalTextMaxWidth,
+    xlarge: globalContentMaxWidth,
+    wide: globalDecorationMaxWidth,
+} as const;
+
+export type DeviceConfig<T> = {
+    [key in Breakpoint]?: T;
+};
+
+/**
+ * Breakpoints as defined in {@link @jagex/jds#device}, for use in styles.
+ */
+export const device: Record<Breakpoint, `min-width: ${(typeof breakpoints)[Breakpoint]}px`> = {
+    base: `min-width: ${breakpoints.base}px`,
+    min: `min-width: ${breakpoints.min}px`,
+    xsmall: `min-width: ${breakpoints.xsmall}px`,
+    small: `min-width: ${breakpoints.small}px`,
+    medium: `min-width: ${breakpoints.medium}px`,
+    large: `min-width: ${breakpoints.large}px`,
+    xlarge: `min-width: ${breakpoints.xlarge}px`,
+    wide: `min-width: ${breakpoints.wide}px`,
+};
+
 const sizeEntries: Record<string, number> = {
     s2: 2,
     s4: 4,

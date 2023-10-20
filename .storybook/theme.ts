@@ -30,8 +30,8 @@ export default create({
     barTextColor: '#fff',
     barSelectedColor: '#3487F5',
     barBg: '#2E9B26',
-    buttonBg: 'pink',
-    buttonBorder: 'yellow',
+    buttonBg: '#2E9B26',
+    buttonBorder: '#000',
 
     // Form colors
     inputBg: '#000',
