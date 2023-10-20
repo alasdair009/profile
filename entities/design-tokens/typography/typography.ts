@@ -4,6 +4,8 @@ import {Dimension, sizes} from "../dimensions";
 const OPEN_SANS: CSSProperties["fontFamily"] = '"OpenSans","Arial",sans-serif';
 
 type FontAreas = "body" | "heading" | "cta";
+
+export type TextAlignment = "left" | "center" | "right";
 export const fonts: Record<FontAreas, CSSProperties["fontFamily"]> = {
     body: OPEN_SANS,
     heading: OPEN_SANS,
