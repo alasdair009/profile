@@ -4,10 +4,13 @@ import {colors} from "../../design-tokens/colors";
 import {globalContentMaxWidth, globalDecorationMaxWidth, sizes} from "../../design-tokens/dimensions";
 import Image from "next/image";
 
+export const headerHeight = sizes.s48.rem;
+
 export const Root = styled.header`
-  background: ${rgba(colors.blackEvil, 0.5)};
+  background: ${rgba(colors.greyDark, 0.5)};
+  border-bottom: ${sizes.s2.rem} solid ${rgba(colors.greenGrass, 0.25)};
   display: block;
-  height: ${sizes.s48.rem};
+  height: ${headerHeight};
   margin: 0 auto;
   max-width: ${rem(globalDecorationMaxWidth)};
   padding: ${sizes.s8.rem};

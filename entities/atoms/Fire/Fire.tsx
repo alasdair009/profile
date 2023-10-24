@@ -28,10 +28,10 @@ export function Fire({baseColor = "#ff5000", particleSize = sizes.s80.raw, numbe
 
     const particles = [];
     for (let i = 0; i < numberOfParticles; i++) {
-        particles.push(<span></span>);
+        particles.push(<span key={`particle${baseColor}${particleSize}${numberOfParticles}${duration}${i}`}></span>);
     }
 
-    return <Root baseColor={baseColor} particleSize={particleSize} numberOfParticles={numberOfParticles} duration={duration} {...rest}>
+    return <Root $baseColor={baseColor} $particleSize={particleSize} $numberOfParticles={numberOfParticles} $duration={duration} {...rest}>
         {particles}
     </Root>
 }

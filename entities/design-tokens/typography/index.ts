@@ -1,2 +1,2 @@
-export { fonts, fontSizes, fontWeights } from "./typography";
-export type { TextAlignment } from "./typography";
+export { fonts, fontSizes, fontWeights, headingSizes } from "./typography";
+export type { FontSizes, HeadingTypes, TextAlignment } from "./typography";

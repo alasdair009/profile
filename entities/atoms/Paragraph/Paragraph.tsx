@@ -1,11 +1,12 @@
 import {Root} from "./styles";
 import {HTMLAttributes, ReactNode} from "react";
-import {TextAlignment} from "@/entities/design-tokens/typography";
+import {FontSizes, TextAlignment} from "@/entities/design-tokens/typography";
 
 type ParagraphProps = {
     align?: TextAlignment;
+    fontSize?: FontSizes;
     children: ReactNode;
 } & HTMLAttributes<HTMLParagraphElement>;
-export function Paragraph({align, children, ...rest}: ParagraphProps) {
-    return <Root align={align} {...rest}>{children}</Root>
+export function Paragraph({align = "left", fontSize = "medium", children, ...rest}: ParagraphProps) {
+    return <Root $align={align} $fontSize={fontSize} {...rest}>{children}</Root>
 }

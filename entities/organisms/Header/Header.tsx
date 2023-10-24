@@ -1,7 +1,6 @@
-import {Inner, Root, HeaderLogo} from "./styles";
+import {Inner, Root, HeaderLogo, headerHeight} from "./styles";
 import {HTMLAttributes} from "react";
 import amLogo from "../../assets/am.svg";
-import Image from "next/image";
 import {sizes} from "../../design-tokens/dimensions";
 import Link from "next/link";
 
@@ -15,3 +14,5 @@ export function Header({children, ...rest}: HeaderProps) {
         </Inner>
     </Root>
 }
+
+Header.height = headerHeight;
