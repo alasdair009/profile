@@ -5,6 +5,7 @@ export { fonts } from "./design-tokens/typography";
 export { Fire } from "./atoms/Fire";
 export { Heading } from "./atoms/Heading";
 export { Link } from "./atoms/Link";
+export { Orb } from "./atoms/Orb";
 export { Paragraph } from "./atoms/Paragraph";
 export { Spacer } from "./atoms/Spacer";
 export { TextMask } from "./atoms/TextMask";

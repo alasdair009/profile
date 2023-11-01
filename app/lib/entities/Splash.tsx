@@ -2,7 +2,7 @@ import {HTMLAttributes} from "react";
 import styled from "styled-components";
 import {globalContentMaxWidth} from "@/entities/design-tokens/dimensions";
 import {rem} from "polished";
-import {Header, Heading, Paragraph} from "@/entities";
+import {Header, Heading, Orb, Paragraph} from "@/entities";
 
 type SplashProps = {
 } & HTMLAttributes<HTMLDivElement>;
@@ -25,6 +25,7 @@ const SplashCopy = styled.div`
 
 export function Splash({...rest}: SplashProps) {
     return <Root {...rest}>
+        <Orb style={{left: "50%", position: "absolute", top: "50%", transform: "translate(-50%, -50%)"}} />
         <SplashCopy>
             <Heading>Alasdair Macrae</Heading>
             <Paragraph align="center" fontSize="large"><em>Web Developer and Trampolinist</em></Paragraph>
