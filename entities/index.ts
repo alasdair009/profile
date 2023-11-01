@@ -11,4 +11,5 @@ export { Spacer } from "./atoms/Spacer";
 export { TextMask } from "./atoms/TextMask";
 
 export { Container } from "./organisms/Container";
+export { ContentPlate } from "./organisms/ContentPlate";
 export { Header } from "./organisms/Header";
