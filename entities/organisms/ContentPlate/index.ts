@@ -1,1 +1,1 @@
-export {ContentPlate} from "./ContentPlate";
+export { ContentPlate } from "./ContentPlate";

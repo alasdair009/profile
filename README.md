@@ -3,8 +3,9 @@
 My portfolio site for all things me!
 
 ## Requirements
-* npm
-* node 18
+
+- npm
+- node 18
 
 ## Getting Started
 
@@ -24,7 +25,7 @@ npm run storybook
 
 ### Site
 
-To launch the site locally run: 
+To launch the site locally run:
 
 ```shell
 npm run dev

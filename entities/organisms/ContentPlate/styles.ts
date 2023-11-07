@@ -1,8 +1,11 @@
 import styled from "styled-components";
-import {Property} from "csstype";
-import {globalContentMaxWidth, globalDecorationMaxWidth} from "@/entities/design-tokens/dimensions";
-import {rem} from "polished";
-import {ContentPlateProps} from "@/entities/organisms/ContentPlate/ContentPlate.types";
+import { Property } from "csstype";
+import {
+  globalContentMaxWidth,
+  globalDecorationMaxWidth,
+} from "@/entities/design-tokens/dimensions";
+import { rem } from "polished";
+import { ContentPlateProps } from "@/entities/organisms/ContentPlate/ContentPlate.types";
 
 export const Root = styled.section`
   margin: 0 auto;
@@ -11,17 +14,21 @@ export const Root = styled.section`
   position: relative;
 `;
 
-export const Inner = styled.div<{$orientation: Exclude<ContentPlateProps["orientation"], undefined>}>`
+export const Inner = styled.div<{
+  $orientation: Exclude<ContentPlateProps["orientation"], undefined>;
+}>`
   display: flex;
-  flex-direction: ${({$orientation}) => $orientation};
+  flex-direction: ${({ $orientation }) => $orientation};
   margin: 0 auto;
   max-width: ${rem(globalContentMaxWidth)};
   position: relative;
   width: 100%;
 `;
 
-export const BackgroundWrapper = styled.figure<{$backgroundCss: Property.Background}>`
-  background: ${({$backgroundCss}) => $backgroundCss};
+export const BackgroundWrapper = styled.figure<{
+  $backgroundCss: Property.Background;
+}>`
+  background: ${({ $backgroundCss }) => $backgroundCss};
   height: 100%;
   left: 0;
   position: absolute;

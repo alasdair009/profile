@@ -1,1 +1,1 @@
-export {TextMask} from "./TextMask";
+export { TextMask } from "./TextMask";

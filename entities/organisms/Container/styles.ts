@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import {globalContentMaxWidth} from "../../design-tokens/dimensions";
-import {rem} from "polished";
+import { globalContentMaxWidth } from "../../design-tokens/dimensions";
+import { rem } from "polished";
 
 export const Root = styled.section`
   display: block;

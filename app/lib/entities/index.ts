@@ -3,7 +3,7 @@
 import styled from "styled-components";
 
 export * from "@/entities";
-export {Splash} from "./Splash";
+export { Splash } from "./Splash";
 
 export const FireWrapper = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ export const FireWrapper = styled.div`
   position: absolute;
   width: 100%;
 `;
-export const FirePadding = styled.div<{$backgroundColor: string}>`
-  background: ${({$backgroundColor}) => $backgroundColor};
+export const FirePadding = styled.div<{ $backgroundColor: string }>`
+  background: ${({ $backgroundColor }) => $backgroundColor};
   flex: 1;
 `;

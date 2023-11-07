@@ -1,1 +1,1 @@
-export {Particliser} from "./Particliser";
+export { Particliser } from "./Particliser";

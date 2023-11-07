@@ -1,13 +1,12 @@
-import {HTMLAttributes} from "react";
+import { HTMLAttributes } from "react";
 import styled from "styled-components";
-import {globalContentMaxWidth} from "@/entities/design-tokens/dimensions";
-import {rem} from "polished";
-import {colors, Header, Heading, Paragraph} from "@/entities";
+import { globalContentMaxWidth } from "@/entities/design-tokens/dimensions";
+import { rem } from "polished";
+import { colors, Header, Heading, Paragraph } from "@/entities";
 import maskImg from "./mask.svg";
-import {fontSizes} from "@/entities/design-tokens/typography";
+import { fontSizes } from "@/entities/design-tokens/typography";
 
-type SplashProps = {
-} & HTMLAttributes<HTMLDivElement>;
+type SplashProps = {} & HTMLAttributes<HTMLDivElement>;
 
 const Root = styled.section`
   align-items: center;
@@ -38,14 +37,23 @@ const MaskWrapper = styled.div`
   width: 50%;
 `;
 
-export function Splash({...rest}: SplashProps) {
-    return <Root {...rest}>
-        <SplashCopy>
-            <Heading level="h2" as="h1" color={colors.greenGrass} style={{fontSize: fontSizes.xxlarge.rem}}>Alasdair Macrae</Heading>
-            <Paragraph align="center" fontSize="large"><em>Web Developer and Trampolinist</em></Paragraph>
-        </SplashCopy>
-        <MaskWrapper>
-
-        </MaskWrapper>
+export function Splash({ ...rest }: SplashProps) {
+  return (
+    <Root {...rest}>
+      <SplashCopy>
+        <Heading
+          level="h2"
+          as="h1"
+          color={colors.greenGrass}
+          style={{ fontSize: fontSizes.xxlarge.rem }}
+        >
+          Alasdair Macrae
+        </Heading>
+        <Paragraph align="center" fontSize="large">
+          <em>Web Developer and Trampolinist</em>
+        </Paragraph>
+      </SplashCopy>
+      <MaskWrapper></MaskWrapper>
     </Root>
+  );
 }

@@ -1,1 +1,1 @@
-export {Orb} from "./Orb";
+export { Orb } from "./Orb";

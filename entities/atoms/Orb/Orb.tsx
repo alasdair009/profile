@@ -1,16 +1,18 @@
-import {Root} from "./styles";
-import {HTMLAttributes, ReactNode} from "react";
+import { Root } from "./styles";
+import { HTMLAttributes, ReactNode } from "react";
 
 type OrbProps = {
-    numberOfParticles?: number;
+  numberOfParticles?: number;
 } & HTMLAttributes<HTMLDivElement>;
-export function Orb({numberOfParticles = 300, ...rest}: OrbProps) {
-    const particles = [];
-    for (let i = 0; i < numberOfParticles; i++) {
-        particles.push(<span key={`${numberOfParticles}particle${i}`}></span>);
-    }
+export function Orb({ numberOfParticles = 300, ...rest }: OrbProps) {
+  const particles = [];
+  for (let i = 0; i < numberOfParticles; i++) {
+    particles.push(<span key={`${numberOfParticles}particle${i}`}></span>);
+  }
 
-    return <Root $numberOfParticles={numberOfParticles} {...rest}>
-        {particles}
+  return (
+    <Root $numberOfParticles={numberOfParticles} {...rest}>
+      {particles}
     </Root>
+  );
 }

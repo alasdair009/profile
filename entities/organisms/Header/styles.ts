@@ -1,7 +1,11 @@
 import styled from "styled-components";
-import {rem, rgba} from "polished";
-import {colors} from "../../design-tokens/colors";
-import {globalContentMaxWidth, globalDecorationMaxWidth, sizes} from "../../design-tokens/dimensions";
+import { rem, rgba } from "polished";
+import { colors } from "../../design-tokens/colors";
+import {
+  globalContentMaxWidth,
+  globalDecorationMaxWidth,
+  sizes,
+} from "../../design-tokens/dimensions";
 import Image from "next/image";
 
 export const headerHeight = sizes.s48.rem;

@@ -1,6 +1,5 @@
 import { colors } from "../../design-tokens/colors";
-import {fonts} from "../../design-tokens/typography";
-
+import { fonts } from "../../design-tokens/typography";
 
 /**
  * @internal CSS reset, used setting up {@link @jagex/jds#GlobalStyle}.

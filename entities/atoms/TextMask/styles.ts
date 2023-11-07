@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import {fonts, fontSizes, fontWeights} from "../../design-tokens/typography";
-import {Property} from "csstype";
+import { fonts, fontSizes, fontWeights } from "../../design-tokens/typography";
+import { Property } from "csstype";
 
 export const Root = styled.svg`
   display: block;
@@ -8,8 +8,8 @@ export const Root = styled.svg`
   width: 100%;
 `;
 
-export const Rect = styled.rect<{maskFill: Property.Fill}>`
-  fill: ${({maskFill}) => maskFill};
+export const Rect = styled.rect<{ maskFill: Property.Fill }>`
+  fill: ${({ maskFill }) => maskFill};
   mask: url(#mask);
 `;
 

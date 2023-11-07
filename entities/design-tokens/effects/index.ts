@@ -1,1 +1,1 @@
-export {borderRadii} from "./effects";
+export { borderRadii } from "./effects";
