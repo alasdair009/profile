@@ -11,13 +11,14 @@ type TextMaskProps = {
      * The text for the mask
      */
     text: string;
-} & HTMLAttributes<SVGElement>;
+} & HTMLAttributes<HTMLDivElement>;
 
 /**
  * A mask formed from text to place over a background
  */
 export function TextMask({maskFill, text, ...rest}: TextMaskProps) {
-    return <Root xmlns="http://www.w3.org/2000/svg" viewBox='0 0 100 100' {...rest}>
+    return <Root maskFill={maskFill} {...rest}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox='0 0 100 100'>
         <defs>
             <mask id="mask" x="0" y="0" width="100" height="100" >
                 <rect x="0" y="0" width="100" height="100" fill="white" />
@@ -25,5 +26,6 @@ export function TextMask({maskFill, text, ...rest}: TextMaskProps) {
             </mask>
         </defs>
         <Rect x="0" y="0" height="100" width="100" maskFill={maskFill} />
+        </svg>
     </Root>
 }

@@ -1,4 +1,15 @@
-import {Container, Fire, FirePadding, FireWrapper, Heading, Link, Paragraph, Spacer, TextMask} from "./lib/entities";
+import {
+    Container,
+    Fire,
+    FirePadding,
+    FireWrapper,
+    Heading,
+    Link,
+    MaskWrapper,
+    Paragraph,
+    Spacer,
+    TextMask
+} from "./lib/entities";
 import {sizes} from "../entities/design-tokens/dimensions";
 import {colors} from "../entities/design-tokens/colors";
 import {rem, rgba} from "polished";

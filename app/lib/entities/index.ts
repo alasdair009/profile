@@ -16,3 +16,19 @@ export const FirePadding = styled.div<{$backgroundColor: string}>`
   background: ${({$backgroundColor}) => $backgroundColor};
   flex: 1;
 `;
+
+export const MaskWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  
+  &::before {
+    background: ;
+    content: "";
+    flex: 1;
+  }
+
+  &::after {
+    content: "";
+    flex: 1;
+  }
+`;
