@@ -4,8 +4,10 @@ import {globalTextMaxWidth, sizes} from "../../design-tokens/dimensions";
 import {colors} from "../../design-tokens/colors";
 import {rem} from "polished";
 import {headingSizes, HeadingTypes} from "../../design-tokens/typography";
+import {Property} from "csstype";
 
-export const Root = styled.h1<{$level: HeadingTypes, $align: CSSProperties["textAlign"]}>`
+export const Root = styled.h1<{$color: Property.Color, $level: HeadingTypes, $align: Property.TextAlign}>`
+  color: ${({$color}) => $color};
   font-size: ${({$level}) => headingSizes[$level]};
   margin: 0 auto ${sizes.s24.rem};
   max-width: ${rem(globalTextMaxWidth)};
