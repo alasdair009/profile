@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 import { rem, rgba } from "polished";
 import { colors } from "../../design-tokens/colors";

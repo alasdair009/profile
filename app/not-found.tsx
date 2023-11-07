@@ -1,17 +1,16 @@
 import {
+  colors,
   Container,
   Fire,
-  FirePadding,
-  FireWrapper,
   Heading,
   Link,
   Paragraph,
+  sizes,
   Spacer,
   TextMask,
-} from "./lib/entities";
-import { sizes } from "../entities/design-tokens/dimensions";
-import { colors } from "../entities/design-tokens/colors";
-import { rem, rgba } from "polished";
+} from "@/entities";
+import { rgba } from "polished";
+import { FirePadding, FireWrapper } from "@/app/lib/entities";
 
 export default function NotFound() {
   return (

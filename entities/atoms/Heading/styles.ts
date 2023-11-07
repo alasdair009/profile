@@ -1,5 +1,5 @@
+"use client";
 import styled from "styled-components";
-import { CSSProperties } from "react";
 import { globalTextMaxWidth, sizes } from "../../design-tokens/dimensions";
 import { colors } from "../../design-tokens/colors";
 import { rem } from "polished";

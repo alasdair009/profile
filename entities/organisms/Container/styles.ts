@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 import { globalContentMaxWidth } from "../../design-tokens/dimensions";
 import { rem } from "polished";

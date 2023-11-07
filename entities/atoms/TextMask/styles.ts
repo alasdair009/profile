@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 import { fonts, fontSizes, fontWeights } from "../../design-tokens/typography";
 import { Property } from "csstype";

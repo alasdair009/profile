@@ -1,5 +1,6 @@
-import { ContentPlate, Heading, Paragraph, Splash } from "./lib/entities";
 // import meImage from "../entities/assets/me.jpg";
+
+import { ContentPlate, Heading, Paragraph, Splash } from "@/entities";
 
 export default function Home() {
   return (

@@ -1,3 +1,4 @@
+"use client";
 import styled, { keyframes } from "styled-components";
 import { sizes } from "../../design-tokens/dimensions";
 import { rem } from "polished";

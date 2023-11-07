@@ -2,8 +2,7 @@
 
 import styled from "styled-components";
 
-export * from "@/entities";
-export { Splash } from "./Splash";
+export { Splash } from "../../../entities/organisms/Splash";
 
 export const FireWrapper = styled.div`
   display: flex;
