@@ -1,0 +1,1 @@
+export {ContentPlate} from "./ContentPlate";
