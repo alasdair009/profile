@@ -1,4 +1,4 @@
-import {Root} from "./styles";
+import {Root, Ember} from "./styles";
 import {CSSProperties, HTMLAttributes} from "react";
 import {sizes} from "../../design-tokens/dimensions";
 
@@ -26,12 +26,12 @@ type HeadingProps = {
  */
 export function Fire({baseColor = "#ff5000", particleSize = sizes.s80.raw, numberOfParticles = 50, duration = 1, ...rest}: HeadingProps) {
 
-    const particles = [];
+    const embers = [];
     for (let i = 0; i < numberOfParticles; i++) {
-        particles.push(<span key={`particle${baseColor}${particleSize}${numberOfParticles}${duration}${i}`}></span>);
+        embers.push(<Ember key={`ember${baseColor}${particleSize}${numberOfParticles}${duration}${i}`} />);
     }
 
     return <Root $baseColor={baseColor} $particleSize={particleSize} $numberOfParticles={numberOfParticles} $duration={duration} {...rest}>
-        {particles}
+        {embers}
     </Root>
 }

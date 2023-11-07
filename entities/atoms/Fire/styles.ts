@@ -31,21 +31,24 @@ const spreadParticles = (particleSize: number, numberOfParticles: number, durati
     return particleSpread;
 }
 
-export const Root = styled.div<{$baseColor: string, $particleSize: number, $numberOfParticles: number, $duration: number}>`
-  filter: blur(0.32);
-  position: relative;
-  
-  span {
-    animation: ${rise} ${({$duration}) => $duration}s ease-in infinite;
+export const Ember = styled.span`
     aspect-ratio: 1;
-    background-image: radial-gradient(${({$baseColor}) => $baseColor} 20%, ${({$baseColor}) => rgba($baseColor, 0)} 70%);
     border-radius: 50%;
     bottom: 0;
     mix-blend-mode: screen;
     opacity: 0;
     position: absolute;
-    width: ${({$particleSize}) => rem($particleSize)};
+`;
 
+export const Root = styled.div<{$baseColor: string, $particleSize: number, $numberOfParticles: number, $duration: number}>`
+  filter: blur(0.32);
+  position: relative;
+  
+  ${Ember} {
+    animation: ${rise} ${({$duration}) => $duration}s ease-in infinite;
+    background-image: radial-gradient(${({$baseColor}) => $baseColor} 20%, ${({$baseColor}) => rgba($baseColor, 0)} 70%);
+    width: ${({$particleSize}) => rem($particleSize)};
     ${({$particleSize, $numberOfParticles, $duration}) =>  spreadParticles($particleSize, $numberOfParticles, $duration)}
   }
 `;
+
