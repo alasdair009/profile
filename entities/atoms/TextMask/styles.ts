@@ -2,14 +2,14 @@ import styled from "styled-components";
 import { fonts, fontSizes, fontWeights } from "../../design-tokens/typography";
 import { Property } from "csstype";
 
-export const Root = styled.div<{maskFill: Property.Fill}>`
+export const Root = styled.div<{ maskFill: Property.Fill }>`
   display: flex;
   height: 100%;
   width: 100%;
-  
+
   &::before,
   &::after {
-    background: ${({maskFill}) => maskFill};
+    background: ${({ maskFill }) => maskFill};
     content: "";
     flex: 1;
   }

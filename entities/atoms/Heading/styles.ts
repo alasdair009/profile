@@ -1,5 +1,4 @@
 import styled from "styled-components";
-<<<<<<< HEAD
 import { CSSProperties } from "react";
 import { globalTextMaxWidth, sizes } from "../../design-tokens/dimensions";
 import { colors } from "../../design-tokens/colors";
@@ -14,18 +13,6 @@ export const Root = styled.h1<{
 }>`
   color: ${({ $color }) => $color};
   font-size: ${({ $level }) => headingSizes[$level]};
-=======
-import {CSSProperties} from "react";
-import {globalTextMaxWidth, sizes} from "../../design-tokens/dimensions";
-import {colors} from "../../design-tokens/colors";
-import {rem} from "polished";
-import {headingSizes, HeadingTypes} from "../../design-tokens/typography";
-import {Property} from "csstype";
-
-export const Root = styled.h1<{$color: Property.Color, $level: HeadingTypes, $align: Property.TextAlign}>`
-  color: ${({$color}) => $color};
-  font-size: ${({$level}) => headingSizes[$level]};
->>>>>>> 555e247e8d9dbc71ab18766334bc9fb5807fc753
   margin: 0 auto ${sizes.s24.rem};
   max-width: ${rem(globalTextMaxWidth)};
   padding-bottom: ${({ $level }) => ($level === "h1" ? sizes.s8.rem : 0)};

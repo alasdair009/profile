@@ -37,7 +37,15 @@ const spreadParticles = (
   return particleSpread;
 };
 
-<<<<<<< HEAD
+export const Ember = styled.span`
+  aspect-ratio: 1;
+  border-radius: 50%;
+  bottom: 0;
+  mix-blend-mode: screen;
+  opacity: 0;
+  position: absolute;
+`;
+
 export const Root = styled.div<{
   $baseColor: string;
   $particleSize: number;
@@ -47,42 +55,14 @@ export const Root = styled.div<{
   filter: blur(0.32);
   position: relative;
 
-  span {
+  ${Ember} {
     animation: ${rise} ${({ $duration }) => $duration}s ease-in infinite;
-    aspect-ratio: 1;
     background-image: radial-gradient(
       ${({ $baseColor }) => $baseColor} 20%,
       ${({ $baseColor }) => rgba($baseColor, 0)} 70%
     );
-=======
-export const Ember = styled.span`
-    aspect-ratio: 1;
->>>>>>> 555e247e8d9dbc71ab18766334bc9fb5807fc753
-    border-radius: 50%;
-    bottom: 0;
-    mix-blend-mode: screen;
-    opacity: 0;
-    position: absolute;
-<<<<<<< HEAD
     width: ${({ $particleSize }) => rem($particleSize)};
-
     ${({ $particleSize, $numberOfParticles, $duration }) =>
       spreadParticles($particleSize, $numberOfParticles, $duration)}
   }
 `;
-=======
-`;
-
-export const Root = styled.div<{$baseColor: string, $particleSize: number, $numberOfParticles: number, $duration: number}>`
-  filter: blur(0.32);
-  position: relative;
-  
-  ${Ember} {
-    animation: ${rise} ${({$duration}) => $duration}s ease-in infinite;
-    background-image: radial-gradient(${({$baseColor}) => $baseColor} 20%, ${({$baseColor}) => rgba($baseColor, 0)} 70%);
-    width: ${({$particleSize}) => rem($particleSize)};
-    ${({$particleSize, $numberOfParticles, $duration}) =>  spreadParticles($particleSize, $numberOfParticles, $duration)}
-  }
-`;
-
->>>>>>> 555e247e8d9dbc71ab18766334bc9fb5807fc753

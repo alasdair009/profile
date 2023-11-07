@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import { Root } from "./styles";
+import { Root, Ember } from "./styles";
 import { CSSProperties, HTMLAttributes } from "react";
 import { sizes } from "../../design-tokens/dimensions";
-=======
-import {Root, Ember} from "./styles";
-import {CSSProperties, HTMLAttributes} from "react";
-import {sizes} from "../../design-tokens/dimensions";
->>>>>>> 555e247e8d9dbc71ab18766334bc9fb5807fc753
 
 type HeadingProps = {
   /**
@@ -46,7 +40,15 @@ export function Fire({
     );
   }
 
-<<<<<<< HEAD
+  const embers = [];
+  for (let i = 0; i < numberOfParticles; i++) {
+    embers.push(
+      <Ember
+        key={`ember${baseColor}${particleSize}${numberOfParticles}${duration}${i}`}
+      />
+    );
+  }
+
   return (
     <Root
       $baseColor={baseColor}
@@ -55,16 +57,7 @@ export function Fire({
       $duration={duration}
       {...rest}
     >
-      {particles}
-=======
-    const embers = [];
-    for (let i = 0; i < numberOfParticles; i++) {
-        embers.push(<Ember key={`ember${baseColor}${particleSize}${numberOfParticles}${duration}${i}`} />);
-    }
-
-    return <Root $baseColor={baseColor} $particleSize={particleSize} $numberOfParticles={numberOfParticles} $duration={duration} {...rest}>
-        {embers}
->>>>>>> 555e247e8d9dbc71ab18766334bc9fb5807fc753
+      {embers}
     </Root>
   );
 }
