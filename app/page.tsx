@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ContentPlate, Heading, Paragraph, Splash } from "./lib/entities";
 // import meImage from "../entities/assets/me.jpg";
 
