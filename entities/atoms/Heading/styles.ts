@@ -24,7 +24,8 @@ export const Root = styled.h1<{
     background: ${colors.greenGrass};
     bottom: 0;
     content: "";
-    display: ${({ $level }) => ($level === "h1" || $level === "h2" ? "block" : "none")};
+    display: ${({ $level }) =>
+      $level === "h1" || $level === "h2" ? "block" : "none"};
     height: ${rem(3)};
     left: 0;
     position: absolute;

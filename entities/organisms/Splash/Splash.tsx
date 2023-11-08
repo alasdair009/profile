@@ -1,29 +1,28 @@
 import { HTMLAttributes } from "react";
 import { colors } from "../../design-tokens/colors";
-import { Heading } from "../../atoms/Heading";
 import { Paragraph } from "../../atoms/Paragraph";
-import { fontSizes } from "@/entities/design-tokens/typography";
-import { MaskWrapper, Root, SplashCopy } from "./styles";
+import { Copy, FeetSection, HeadSection, Inner, Root } from "./styles";
+import { Link } from "../../atoms/Link";
 
 type SplashProps = {} & HTMLAttributes<HTMLDivElement>;
 
 export function Splash({ ...rest }: SplashProps) {
   return (
     <Root {...rest}>
-      <SplashCopy>
-        <Heading
-          level="h2"
-          as="h1"
-          color={colors.greenGrass}
-          style={{ fontSize: fontSizes.xxlarge.rem }}
-        >
-          Alasdair Macrae
-        </Heading>
-        <Paragraph align="center" fontSize="large">
-          <em>Web Developer and Trampolinist</em>
-        </Paragraph>
-      </SplashCopy>
-      <MaskWrapper></MaskWrapper>
+      <Inner>
+        <FeetSection>
+          <Copy>
+            <Paragraph color={colors.whiteGhost} fontSize="large">
+              I am a front-end web developer and trampolinist!
+            </Paragraph>
+            <Paragraph fontSize="large">Always seeking adventures!</Paragraph>
+            <Link variant="large" href="#">
+              Hire me now!
+            </Link>
+          </Copy>
+        </FeetSection>
+        <HeadSection></HeadSection>
+      </Inner>
     </Root>
   );
 }

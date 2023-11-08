@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Splash />
       <ContentPlate
-          // foregroundImage={meImage}
+        // foregroundImage={meImage}
         foregroundImageAlt="Headshot photo of Ali"
         orientation="right"
       >

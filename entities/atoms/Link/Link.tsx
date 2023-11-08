@@ -1,20 +1,14 @@
 import { Root } from "./styles";
 import { HTMLAttributes, ReactNode } from "react";
-
-type LinkProps = {
-  /**
-   * Content of the link.
-   */
-  children: ReactNode;
-  /**
-   * Url or path to link to.
-   */
-  href: string;
-} & HTMLAttributes<HTMLAnchorElement>;
+import type { LinkProps } from "./types";
 
 /**
  * Link to a new path or url
  */
-export function Link({ children, ...rest }: LinkProps) {
-  return <Root {...rest}>{children}</Root>;
+export function Link({ variant = "regular", children, ...rest }: LinkProps) {
+  return (
+    <Root $variant={variant} {...rest}>
+      {children}
+    </Root>
+  );
 }
