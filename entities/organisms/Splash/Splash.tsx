@@ -13,10 +13,10 @@ export function Splash({ ...rest }: SplashProps) {
         <FeetSection>
           <Copy>
             <CopyParagraph color={colors.whiteGhost} fontSize="large">
-              I am a front-end web developer and trampolinist!
+              Hello I am Ali, a front-end web developer and trampolinist!
             </CopyParagraph>
             <CopyParagraph fontSize="large">Always seeking adventures!</CopyParagraph>
-            <Link variant="large" href="#">
+            <Link variant="large" href="/portfolio">
               Hire me now!
             </Link>
           </Copy>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Property } from "csstype";
 import {
   globalContentMaxWidth,
-  globalDecorationMaxWidth,
+  globalDecorationMaxWidth, sizes,
 } from "@/entities/design-tokens/dimensions";
 import { rem } from "polished";
 import { ContentPlateProps } from "@/entities/organisms/ContentPlate/ContentPlate.types";
@@ -38,9 +38,19 @@ export const BackgroundWrapper = styled.figure<{
 `;
 
 export const ForegroundWrapper = styled.figure`
+  align-items: center;
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   position: relative;
   width: 50%;
 `;
 
-export const CopyBox = styled.div``;
+export const CopyBox = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: ${sizes.s16.rem};
+  width: 50%
+`;

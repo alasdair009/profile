@@ -31,7 +31,7 @@ export function ContentPlate({
         <CopyBox>{children}</CopyBox>
         {foregroundImage && foregroundImageAlt && (
           <ForegroundWrapper>
-            <Image src={foregroundImage} alt={foregroundImageAlt} />
+            <Image height={400} width={400} src={foregroundImage} alt={foregroundImageAlt} />
           </ForegroundWrapper>
         )}
       </Inner>

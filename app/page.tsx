@@ -1,4 +1,4 @@
-// import meImage from "../entities/assets/me.webp";
+import portraitImage from "../entities/assets/ali-portrait.svg";
 
 import { ContentPlate, Heading, Paragraph, Splash } from "@/entities";
 
@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Splash />
       <ContentPlate
-        // foregroundImage={meImage}
+        foregroundImage={portraitImage}
         foregroundImageAlt="Headshot photo of Ali"
         orientation="right"
       >
