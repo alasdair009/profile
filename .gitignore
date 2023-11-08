@@ -130,3 +130,5 @@ dist
 .pnp.*
 /profile.iml
 /.idea/
+
+*.DS_Store
