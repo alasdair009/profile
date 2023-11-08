@@ -1,7 +1,7 @@
 export { borderRadii } from "./design-tokens/effects";
 export { colors } from "./design-tokens/colors";
 export { fonts } from "./design-tokens/typography";
-export { sizes } from "./design-tokens/dimensions";
+export { device, sizes } from "./design-tokens/dimensions";
 
 export { Button } from "./atoms/Button";
 export { Fire } from "./atoms/Fire";

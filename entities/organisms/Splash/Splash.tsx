@@ -1,7 +1,7 @@
 import { HTMLAttributes } from "react";
 import { colors } from "../../design-tokens/colors";
 import { Paragraph } from "../../atoms/Paragraph";
-import { Copy, FeetSection, HeadSection, Inner, Root } from "./styles";
+import {Copy, CopyParagraph, FeetSection, HeadSection, Inner, Root} from "./styles";
 import { Link } from "../../atoms/Link";
 
 type SplashProps = {} & HTMLAttributes<HTMLDivElement>;
@@ -12,10 +12,10 @@ export function Splash({ ...rest }: SplashProps) {
       <Inner>
         <FeetSection>
           <Copy>
-            <Paragraph color={colors.whiteGhost} fontSize="large">
+            <CopyParagraph color={colors.whiteGhost} fontSize="large">
               I am a front-end web developer and trampolinist!
-            </Paragraph>
-            <Paragraph fontSize="large">Always seeking adventures!</Paragraph>
+            </CopyParagraph>
+            <CopyParagraph fontSize="large">Always seeking adventures!</CopyParagraph>
             <Link variant="large" href="#">
               Hire me now!
             </Link>

@@ -1,4 +1,5 @@
 export {
+  device,
   globalTextMaxWidth,
   globalContentMaxWidth,
   globalDecorationMaxWidth,
