@@ -1,4 +1,4 @@
-import meImage from "../entities/assets/me.jpg";
+import meImage from "../entities/assets/me.webp";
 
 import { ContentPlate, Heading, Paragraph, Splash } from "@/entities";
 
