@@ -1,4 +1,4 @@
-// import meImage from "../entities/assets/me.jpg";
+import meImage from "../entities/assets/me.jpg";
 
 import { ContentPlate, Heading, Paragraph, Splash } from "@/entities";
 
@@ -7,6 +7,7 @@ export default function Home() {
     <>
       <Splash />
       <ContentPlate
+          foregroundImage={meImage}
         foregroundImageAlt="Headshot photo of Ali"
         orientation="right"
       >

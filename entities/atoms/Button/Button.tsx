@@ -1,7 +1,9 @@
 import { Root } from "./styles";
-import { HTMLAttributes, ReactNode } from "react";
+import { HTMLAttributes, PointerEvent } from "react";
 
-type ButtonProps = {} & HTMLAttributes<HTMLButtonElement>;
+type ButtonProps = {
+  onClick: (e: PointerEvent<HTMLButtonElement>) => void;
+} & HTMLAttributes<HTMLButtonElement>;
 
 /**
  * Clickable button for executing actions

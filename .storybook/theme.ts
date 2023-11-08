@@ -28,7 +28,7 @@ export default create({
   // Toolbar default and active colors
   barHoverColor: "#051d04",
   barTextColor: "#fff",
-  barSelectedColor: "#3487F5",
+  barSelectedColor: "#004400",
   barBg: "#2E9B26",
   buttonBg: "#2E9B26",
   buttonBorder: "#000",
