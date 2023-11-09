@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { Property } from "csstype";
 import {
   globalContentMaxWidth,
-  globalDecorationMaxWidth, sizes,
+  globalDecorationMaxWidth,
+  sizes,
 } from "@/entities/design-tokens/dimensions";
 import { rem } from "polished";
 import { ContentPlateProps } from "@/entities/organisms/ContentPlate/ContentPlate.types";
@@ -52,5 +53,5 @@ export const CopyBox = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: ${sizes.s16.rem};
-  width: 50%
+  width: 50%;
 `;

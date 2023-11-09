@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { colors } from "../../design-tokens/colors";
 import { fontSizes, fontWeights } from "../../design-tokens/typography";
 import { sizes } from "../../design-tokens/dimensions";
@@ -46,7 +46,7 @@ export const Root = styled(Link)<{ $variant: LinkVariant }>`
     $variant === "large" ? fontSizes.large.rem : "inherit"};
   font-weight: ${fontWeights.bold};
   padding-bottom: ${({ $variant }) =>
-      $variant === "large" ? sizes.s16.rem : sizes.s8.rem};
+    $variant === "large" ? sizes.s16.rem : sizes.s8.rem};
   position: relative;
   text-decoration: none;
   text-transform: ${({ $variant }) =>

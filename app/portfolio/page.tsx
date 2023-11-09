@@ -3,7 +3,5 @@
 import { Heading } from "@/entities";
 
 export default function Portfolio() {
-    return (
-        <Heading>Portfolio</Heading>
-    );
+  return <Heading>Portfolio</Heading>;
 }
