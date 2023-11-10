@@ -1,6 +1,5 @@
 import { HTMLAttributes } from "react";
 import { colors } from "../../design-tokens/colors";
-import { Paragraph } from "../../atoms/Paragraph";
 import {
   Copy,
   CopyParagraph,
@@ -11,11 +10,9 @@ import {
 } from "./styles";
 import { Link } from "../../atoms/Link";
 
-type SplashProps = {} & HTMLAttributes<HTMLDivElement>;
-
-export function Splash({ ...rest }: SplashProps) {
+export function Splash({ ...rest }: HTMLAttributes<HTMLDivElement>) {
   return (
-    <Root {...rest}>
+    <Root style={{ minHeight: "100vh" }} {...rest}>
       <Inner>
         <FeetSection>
           <Copy>
@@ -30,7 +27,7 @@ export function Splash({ ...rest }: SplashProps) {
             </Link>
           </Copy>
         </FeetSection>
-        <HeadSection></HeadSection>
+        <HeadSection />
       </Inner>
     </Root>
   );

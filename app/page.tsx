@@ -1,10 +1,19 @@
 import portraitImage from "../entities/assets/ali-portrait.svg";
 
-import { ContentPlate, Heading, Paragraph, Splash } from "@/entities";
+import {
+  Button,
+  ContentPlate,
+  Heading,
+  Link,
+  Paragraph,
+  Splash,
+  Trampoline,
+} from "@/entities";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: `Alasdair Macrae's home online`,
+  metadataBase: new URL("https://profile-ivory-three.vercel.app"),
   openGraph: {
     title: `Alasdair Macrae's home online`,
     images: "https://profile-ivory-three.vercel.app/og",
@@ -38,7 +47,9 @@ export default function Home() {
           I have a passion for all things front-end and am passionate about
           pushing the limits of CSS on high fidelity web pages.
         </Paragraph>
+        <Link href="about-me">About me</Link>
       </ContentPlate>
+      <Trampoline />
     </>
   );
 }

@@ -10,9 +10,11 @@ export { Link } from "./atoms/Link";
 export { Orb } from "./atoms/Orb";
 export { Paragraph } from "./atoms/Paragraph";
 export { Spacer } from "./atoms/Spacer";
+export { Spinner } from "./atoms/Spinner";
 export { TextMask } from "./atoms/TextMask";
 
 export { Container } from "./organisms/Container";
 export { ContentPlate } from "./organisms/ContentPlate";
 export { Header } from "./organisms/Header";
 export { Splash } from "./organisms/Splash";
+export { Trampoline } from "./organisms/Trampoline";

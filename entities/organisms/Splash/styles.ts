@@ -3,7 +3,10 @@ import styled from "styled-components";
 import { Header } from "../Header";
 import { rem } from "polished";
 import { colors } from "@/entities/design-tokens/colors";
-import { globalContentMaxWidth } from "@/entities/design-tokens/dimensions";
+import {
+  globalContentMaxWidth,
+  globalDecorationMaxWidth,
+} from "@/entities/design-tokens/dimensions";
 import maskImg from "@/entities/organisms/Splash/ali-flight.svg";
 import { device, sizes } from "../../design-tokens/dimensions";
 import { Paragraph } from "@/entities";
@@ -13,12 +16,23 @@ export const Root = styled.section`
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: ${rem(globalContentMaxWidth)};
+  max-width: ${rem(globalDecorationMaxWidth)};
   position: relative;
   width: 100%;
 
   @media (${device.small}) {
     height: calc(100vh - ${Header.height});
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 100%;
+    }
+
+    &::after {
+      background: ${colors.whiteGhost};
+    }
   }
 `;
 
@@ -26,6 +40,7 @@ export const Inner = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  margin: 0 auto;
   max-width: ${rem(globalContentMaxWidth)};
   width: 100%;
 
