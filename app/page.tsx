@@ -1,9 +1,8 @@
 import portraitImage from "../entities/assets/ali-portrait.svg";
 
 import {
-  Button,
   ContentPlate,
-  Heading,
+  Heading, HorizontalRule,
   Link,
   Paragraph,
   Splash,
@@ -33,6 +32,7 @@ export default function Home() {
   return (
     <>
       <Splash />
+      <HorizontalRule margin="bottom" decoration={true} />
       <ContentPlate
         foregroundImage={portraitImage}
         foregroundImageAlt="Headshot photo of Ali"

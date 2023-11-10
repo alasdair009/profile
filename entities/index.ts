@@ -7,6 +7,7 @@ export { device, globalContentMaxWidth, globalTextMaxWidth, globalDecorationMaxW
 export { Button } from "./atoms/Button";
 export { Fire } from "./atoms/Fire";
 export { Heading } from "./atoms/Heading";
+export { HorizontalRule } from "./atoms/HorizontalRule";
 export { Link } from "./atoms/Link";
 export { Orb } from "./atoms/Orb";
 export { Paragraph } from "./atoms/Paragraph";

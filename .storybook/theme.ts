@@ -1,4 +1,5 @@
 import { create } from "@storybook/theming/create";
+// @ts-ignore
 import amLogo from "./assets/am.svg";
 
 export default create({
@@ -38,6 +39,6 @@ export default create({
   inputBorder: "#585C6D",
   inputTextColor: "#fff",
   inputBorderRadius: 2,
-  booleanBg: "orange",
-  booleanSelectedBg: "orange",
+  booleanBg: "#004400",
+  booleanSelectedBg: "#2E9B26",
 });
