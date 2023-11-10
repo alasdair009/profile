@@ -1,6 +1,6 @@
 "use client";
 import styled, { keyframes } from "styled-components";
-import { sizes } from "../../design-tokens/dimensions";
+import { sizes } from "@/entities";
 import Image from "next/image";
 
 const rotate = keyframes`

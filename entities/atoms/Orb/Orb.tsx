@@ -1,5 +1,5 @@
 import { Root } from "./styles";
-import { HTMLAttributes, ReactNode } from "react";
+import { HTMLAttributes } from "react";
 
 type OrbProps = {
   numberOfParticles?: number;

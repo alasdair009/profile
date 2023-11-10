@@ -1,9 +1,7 @@
 "use client";
 import styled from "styled-components";
-import { colors } from "../../design-tokens/colors";
-import { sizes } from "../../design-tokens/dimensions";
+import {colors, fontSizes, fontWeights, sizes} from "@/entities";
 import { darken, rem } from "polished";
-import { fontSizes, fontWeights } from "../../design-tokens/typography";
 
 const buttonClipPath = `polygon(calc(0% + ${sizes.s8.rem}) 0, 100% 0, calc(100% - ${sizes.s8.rem}) 100%, 0 100%);`;
 export const Root = styled.button`

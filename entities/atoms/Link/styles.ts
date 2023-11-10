@@ -1,10 +1,7 @@
 "use client";
 import Link from "next/link";
 import styled, { keyframes } from "styled-components";
-import { colors } from "../../design-tokens/colors";
-import { fontSizes, fontWeights } from "../../design-tokens/typography";
-import { sizes } from "../../design-tokens/dimensions";
-import { rem } from "polished";
+import {colors, fontSizes, fontWeights, sizes} from "@/entities";
 import { LinkVariant } from "./types";
 
 const generatePolygonLine = (yOffset = 0) => {

@@ -1,6 +1,6 @@
 import { Root } from "./styles";
 import { HTMLAttributes, ReactNode } from "react";
-import { FontSizes, TextAlignment } from "@/entities/design-tokens/typography";
+import {FontSizes, TextAlignment} from "@/entities";
 
 type ParagraphProps = {
   align?: TextAlignment;

@@ -1,7 +1,8 @@
 export { borderRadii } from "./design-tokens/effects";
 export { colors } from "./design-tokens/colors";
-export { fonts } from "./design-tokens/typography";
-export { device, sizes } from "./design-tokens/dimensions";
+export { fonts, fontSizes, fontWeights, headingSizes } from "./design-tokens/typography";
+export type {FontSizes, HeadingTypes, TextAlignment} from "./design-tokens/typography"
+export { device, globalContentMaxWidth, globalTextMaxWidth, globalDecorationMaxWidth, sizes } from "./design-tokens/dimensions";
 
 export { Button } from "./atoms/Button";
 export { Fire } from "./atoms/Fire";

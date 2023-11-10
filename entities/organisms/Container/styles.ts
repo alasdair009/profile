@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import { globalContentMaxWidth } from "../../design-tokens/dimensions";
+import { globalContentMaxWidth } from "@/entities";
 import { rem } from "polished";
 
 export const Root = styled.section`

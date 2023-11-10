@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/nextjs";
+const path = require('path');
 
 const config: StorybookConfig = {
   stories: [
@@ -19,5 +20,13 @@ const config: StorybookConfig = {
     autodocs: true,
   },
   staticDirs: ["../public"],
+  webpackFinal: async (config, { configType }) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@/entities': path.resolve(__dirname, "/entities"),
+    };
+
+    return config;
+  }
 };
 export default config;

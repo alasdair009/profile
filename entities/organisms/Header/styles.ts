@@ -1,12 +1,12 @@
 "use client";
 import styled from "styled-components";
 import { rem, rgba } from "polished";
-import { colors } from "../../design-tokens/colors";
 import {
+  colors,
   globalContentMaxWidth,
   globalDecorationMaxWidth,
   sizes,
-} from "../../design-tokens/dimensions";
+} from "@/entities";
 import Image from "next/image";
 
 export const headerHeight = sizes.s48.rem;

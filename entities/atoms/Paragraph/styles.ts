@@ -1,11 +1,8 @@
 "use client";
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors } from "../../design-tokens/colors";
-import { sizes } from "../../design-tokens/dimensions";
-import { fonts, fontSizes, FontSizes } from "../../design-tokens/typography";
-import { globalTextMaxWidth } from "../../design-tokens/dimensions";
 import { Property } from "csstype";
+import {colors, fonts, fontSizes, FontSizes, globalTextMaxWidth, sizes} from "@/entities";
 
 export const Root = styled.p<{
   $fontSize: FontSizes;

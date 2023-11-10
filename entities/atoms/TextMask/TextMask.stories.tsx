@@ -1,6 +1,6 @@
 import { TextMask } from "./TextMask";
 import { Meta, StoryObj } from "@storybook/react";
-import { colors } from "../../design-tokens/colors";
+import { colors } from "@/entities";
 
 const meta: Meta<typeof TextMask> = {
   component: TextMask,

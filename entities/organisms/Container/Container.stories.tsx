@@ -4,6 +4,11 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Container> = {
   component: Container,
+  argTypes: {
+    children: {
+      type: "string",
+    }
+  },
   args: {
     children: <Heading>Container</Heading>,
   },

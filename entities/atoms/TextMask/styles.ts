@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import { fonts, fontSizes, fontWeights } from "../../design-tokens/typography";
+import { fonts, fontSizes, fontWeights } from "@/entities";
 import { Property } from "csstype";
 
 export const Root = styled.div<{ maskFill: Property.Fill }>`

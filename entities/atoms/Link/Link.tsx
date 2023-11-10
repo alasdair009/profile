@@ -1,5 +1,4 @@
 import { Root } from "./styles";
-import { HTMLAttributes, ReactNode } from "react";
 import type { LinkProps } from "./types";
 
 /**

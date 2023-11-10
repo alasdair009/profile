@@ -1,7 +1,6 @@
 import { Root } from "./styles";
 import { HTMLAttributes, ReactNode } from "react";
-import { HeadingTypes, TextAlignment } from "../../design-tokens/typography";
-import { colors } from "../../design-tokens/colors";
+import {colors, HeadingTypes, TextAlignment} from "@/entities";
 import { Property } from "csstype";
 
 type HeadingProps = {

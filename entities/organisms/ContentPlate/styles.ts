@@ -5,9 +5,9 @@ import {
   globalContentMaxWidth,
   globalDecorationMaxWidth,
   sizes,
-} from "@/entities/design-tokens/dimensions";
+} from "@/entities";
 import { rem } from "polished";
-import { ContentPlateProps } from "@/entities/organisms/ContentPlate/ContentPlate.types";
+import { ContentPlateProps } from "./ContentPlate.types";
 
 export const Root = styled.section`
   margin: 0 auto;

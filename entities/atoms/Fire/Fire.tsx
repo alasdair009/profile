@@ -1,6 +1,6 @@
 import { Root, Ember } from "./styles";
 import { CSSProperties, HTMLAttributes } from "react";
-import { sizes } from "../../design-tokens/dimensions";
+import { sizes } from "@/entities";
 
 type HeadingProps = {
   /**

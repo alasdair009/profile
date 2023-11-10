@@ -1,7 +1,6 @@
 "use client";
 import styled, { keyframes } from "styled-components";
-import { sizes } from "../../design-tokens/dimensions";
-import { rem } from "polished";
+import { sizes } from "@/entities";
 
 const particleSize = sizes.s2.rem;
 const baseHue = 0;

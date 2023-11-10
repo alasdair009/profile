@@ -1,7 +1,7 @@
 import { Inner, Root, HeaderLogo, headerHeight } from "./styles";
 import { HTMLAttributes } from "react";
 import amLogo from "../../assets/am.svg";
-import { sizes } from "../../design-tokens/dimensions";
+import { sizes } from "@/entities";
 import Link from "next/link";
 
 type HeaderProps = {} & HTMLAttributes<HTMLDivElement>;

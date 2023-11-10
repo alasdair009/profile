@@ -12,14 +12,6 @@ import { device, sizes } from "../../design-tokens/dimensions";
 import { Paragraph } from "@/entities";
 
 export const Root = styled.section`
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: ${rem(globalDecorationMaxWidth)};
-  position: relative;
-  width: 100%;
-
   @media (${device.small}) {
     height: calc(100vh - ${Header.height});
 
@@ -37,12 +29,7 @@ export const Root = styled.section`
 `;
 
 export const Inner = styled.div`
-  display: flex;
   flex-direction: column;
-  height: 100%;
-  margin: 0 auto;
-  max-width: ${rem(globalContentMaxWidth)};
-  width: 100%;
 
   @media (${device.small}) {
     flex-direction: row;
@@ -50,12 +37,6 @@ export const Inner = styled.div`
 `;
 
 export const FeetSection = styled.div`
-  background: ${colors.blackEvil};
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
   width: 100%;
 
   @media (${device.small}) {
