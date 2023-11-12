@@ -18,6 +18,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: `Alasdair Macrae's home online`,
+  description: "The home of exciting web adventures",
   metadataBase: new URL("https://profile-ivory-three.vercel.app"),
   openGraph: {
     title: `Alasdair Macrae's home online`,
