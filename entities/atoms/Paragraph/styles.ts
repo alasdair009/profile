@@ -2,7 +2,14 @@
 import styled from "styled-components";
 import { rem } from "polished";
 import { Property } from "csstype";
-import {colors, fonts, fontSizes, FontSizes, globalTextMaxWidth, sizes} from "@/entities";
+import {
+  colors,
+  fonts,
+  fontSizes,
+  FontSizes,
+  globalTextMaxWidth,
+  sizes,
+} from "@/entities";
 
 export const Root = styled.p<{
   $fontSize: FontSizes;

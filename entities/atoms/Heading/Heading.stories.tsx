@@ -17,12 +17,12 @@ const meta: Meta<typeof Heading> = {
     },
     as: {
       options: [undefined, "h1", "h2", "h3", "h4", "h5", "h6"],
-    }
+    },
   },
   args: {
     align: "left",
-    level: "h1"
-  }
+    level: "h1",
+  },
 };
 export default meta;
 

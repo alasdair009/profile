@@ -1,8 +1,23 @@
 export { borderRadii } from "./design-tokens/effects";
 export { colors } from "./design-tokens/colors";
-export { fonts, fontSizes, fontWeights, headingSizes } from "./design-tokens/typography";
-export type {FontSizes, HeadingTypes, TextAlignment} from "./design-tokens/typography"
-export { device, globalContentMaxWidth, globalTextMaxWidth, globalDecorationMaxWidth, sizes } from "./design-tokens/dimensions";
+export {
+  fonts,
+  fontSizes,
+  fontWeights,
+  headingSizes,
+} from "./design-tokens/typography";
+export type {
+  FontSizes,
+  HeadingTypes,
+  TextAlignment,
+} from "./design-tokens/typography";
+export {
+  device,
+  globalContentMaxWidth,
+  globalTextMaxWidth,
+  globalDecorationMaxWidth,
+  sizes,
+} from "./design-tokens/dimensions";
 
 export { Button } from "./atoms/Button";
 export { Fire } from "./atoms/Fire";
@@ -16,6 +31,7 @@ export { Spinner } from "./atoms/Spinner";
 export { TextMask } from "./atoms/TextMask";
 
 export { Container } from "./organisms/Container";
+export { CopyBlock } from "./organisms/CopyBlock";
 export { ContentPlate } from "./organisms/ContentPlate";
 export { Header } from "./organisms/Header";
 export { Splash } from "./organisms/Splash";

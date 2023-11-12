@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import {colors, fontSizes, fontWeights, sizes} from "@/entities";
+import { colors, fontSizes, fontWeights, sizes } from "@/entities";
 import { darken, rem } from "polished";
 
 const buttonClipPath = `polygon(calc(0% + ${sizes.s8.rem}) 0, 100% 0, calc(100% - ${sizes.s8.rem}) 100%, 0 100%);`;

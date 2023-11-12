@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import styled, { keyframes } from "styled-components";
-import {colors, fontSizes, fontWeights, sizes} from "@/entities";
+import { colors, fontSizes, fontWeights, sizes } from "@/entities";
 import { LinkVariant } from "./types";
 
 const generatePolygonLine = (yOffset = 0) => {
@@ -66,8 +66,7 @@ export const Root = styled(Link)<{ $variant: LinkVariant }>`
   &::after {
     animation: ${release} 0.2s;
     animation-fill-mode: forwards;
-    background: ${({ $variant }) =>
-      $variant === "large" ? colors.whiteGhost : colors.greenGrass};
+    background: ${colors.whiteGhost};
     bottom: 0;
     clip-path: ${() => generatePolygonLine()};
     content: "";

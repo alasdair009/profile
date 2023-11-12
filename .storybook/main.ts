@@ -1,5 +1,5 @@
 import type { StorybookConfig } from "@storybook/nextjs";
-const path = require('path');
+const path = require("path");
 
 const config: StorybookConfig = {
   stories: [
@@ -11,7 +11,7 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
-    "@storybook/addon-mdx-gfm"
+    "@storybook/addon-mdx-gfm",
   ],
   framework: {
     name: "@storybook/nextjs",
@@ -24,10 +24,10 @@ const config: StorybookConfig = {
   webpackFinal: async (config, { configType }) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@/entities': path.resolve(__dirname, "/entities"),
+      "@/entities": path.resolve(__dirname, "/entities"),
     };
 
     return config;
-  }
+  },
 };
 export default config;

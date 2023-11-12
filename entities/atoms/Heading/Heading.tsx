@@ -1,6 +1,6 @@
 import { Root } from "./styles";
 import { HTMLAttributes, ReactNode } from "react";
-import {colors, HeadingTypes, TextAlignment} from "@/entities";
+import { colors, HeadingTypes, TextAlignment } from "@/entities";
 import { Property } from "csstype";
 
 type HeadingProps = {

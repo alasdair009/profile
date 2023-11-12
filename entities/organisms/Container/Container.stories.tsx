@@ -7,7 +7,7 @@ const meta: Meta<typeof Container> = {
   argTypes: {
     children: {
       type: "string",
-    }
+    },
   },
   args: {
     children: <Heading>Container</Heading>,
