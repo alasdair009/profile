@@ -1,3 +1,4 @@
+"use client";
 import { resets } from "./resets";
 import { Global } from "@storybook/theming";
 

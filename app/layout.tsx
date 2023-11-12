@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import { Header } from "@/entities";
-import { AtRule } from "csstype";
+import { GlobalStyle, Header } from "@/entities";
 import StyledComponentsRegistry from "@/lib/registry";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: `Alasdair Macrae's home online`,
+  description: "The home of exciting web adventures",
   metadataBase: new URL("https://profile-ivory-three.vercel.app"),
   openGraph: {
     title: `Alasdair Macrae's home online`,
@@ -47,6 +46,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <StyledComponentsRegistry>
+          <GlobalStyle />
           <Header />
           <main>{children}</main>
         </StyledComponentsRegistry>

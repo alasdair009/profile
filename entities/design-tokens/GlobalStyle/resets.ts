@@ -6,7 +6,7 @@ import { fonts } from "../../design-tokens/typography";
  */
 export const resets = `
     html, body {
-      background: ${colors.greyDark};
+      background: ${colors.blackEvil};
       margin: 0;
       padding: 0;
     }

@@ -2,6 +2,11 @@ import { CSSProperties } from "react";
 import { rem } from "polished";
 
 /**
+ * Maximum width that inputs should be set to.
+ */
+export const globalInputMaxWidth = 480;
+
+/**
  * Maximum width that text should be confined to.
  */
 export const globalTextMaxWidth = 1200;

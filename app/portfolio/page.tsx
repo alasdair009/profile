@@ -1,7 +1,5 @@
-// import meImage from "../entities/assets/me.webp";
-
-import { Heading } from "@/entities";
+import { PortfolioPageContent } from "@/app/portfolio/PortfolioPageContent";
 
 export default function Portfolio() {
-  return <Heading>Portfolio</Heading>;
+  return <PortfolioPageContent />;
 }

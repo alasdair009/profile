@@ -21,6 +21,7 @@ export const Root = styled.button`
   padding: 0 ${sizes.s48.rem};
   position: relative;
   transition: padding 0.5s;
+  z-index: 0;
 
   &::before,
   &::after {
@@ -38,7 +39,7 @@ export const Root = styled.button`
   }
 
   &::after {
-    background: ${colors.blackEvil};
+    background: ${colors.greyDark};
     left: calc(50% + ${rem(5)});
     top: ${rem(5)};
     z-index: -2;

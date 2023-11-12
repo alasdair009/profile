@@ -3,11 +3,13 @@ import skyImage from "../entities/assets/sky.jpg";
 import Image from "next/image";
 
 import {
-  Button,
+  ContactForm,
   ContentPlate,
   CopyBlock,
   Heading,
   HorizontalRule,
+  LabelledInput,
+  LabelledTextArea,
   Link,
   Paragraph,
   sizes,
@@ -97,17 +99,7 @@ export default function Home() {
         <Link href="https://twitter.com/alasdair009">Twitter</Link>
         <Link href="https://www.linkedin.com/in/alasdairmacrae/">LinkedIn</Link>
       </nav>
-      <form>
-        <label>
-          <span>Your email:</span>
-          <input type="email" name="email" required />
-        </label>
-        <label>
-          <span>Your message:</span>
-          <textarea name="message" required />
-        </label>
-        {/*<Button>Send</Button>*/}
-      </form>
+      <ContactForm />
       <HorizontalRule margin="none" />
       <Trampoline />
     </>
