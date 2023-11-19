@@ -1,10 +1,13 @@
 "use client";
 import styled from "styled-components";
 import { colors, globalInputMaxWidth, sizes } from "@/entities";
-import { rem } from "polished";
+import {rem, rgba} from "polished";
 
-export const Root = styled.textarea`
-  background: ${colors.greyDark};
+const inValidStyles = {
+    background: rgba(colors.redHeat, 0.15),
+};
+export const Root = styled.textarea<{$isInvalid: boolean, $hasBeenFocussed: boolean}>`
+  background: ${({$isInvalid}) => $isInvalid ? inValidStyles.background : colors.greyDark};
   border: ${rem(1)} solid ${colors.greenGrass};
   color: ${colors.whiteGhost};
   display: block;
@@ -13,4 +16,8 @@ export const Root = styled.textarea`
   max-width: ${rem(globalInputMaxWidth)};
   resize: none;
   width: 100%;
+
+  &:invalid {
+    background: ${({$hasBeenFocussed}) => $hasBeenFocussed ? inValidStyles.background : undefined};
+  }
 `;

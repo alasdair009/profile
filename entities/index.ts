@@ -34,6 +34,7 @@ export { Paragraph } from "./atoms/Paragraph";
 export { Spacer } from "./atoms/Spacer";
 export { Spinner } from "./atoms/Spinner";
 export { TextMask } from "./atoms/TextMask";
+export { ErrorText } from "./atoms/ErrorText";
 
 export { LabelledInput } from "./molecules/LabelledInput";
 export { LabelledTextArea } from "./molecules/LabelledTextArea";

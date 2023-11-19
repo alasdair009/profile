@@ -11,8 +11,8 @@ type ContactFormProps = {} & HTMLAttributes<HTMLFormElement>;
 export function ContactForm({ ...rest }: ContactFormProps) {
   return (
     <Root {...rest}>
-      <LabelledInput label="Your email:" type="email" />
-      <LabelledTextArea label="Your message" />
+      <LabelledInput label="Your email:" type="email" required={true} />
+      <LabelledTextArea label="Your message" required={true} />
       <Button onClick={() => alert("WIP")}>Send</Button>
     </Root>
   );

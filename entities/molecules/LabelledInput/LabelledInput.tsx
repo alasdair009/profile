@@ -1,21 +1,25 @@
 import { LabelText, Root } from "./styles";
 import { HTMLAttributes } from "react";
 import { TextInputType } from "../../atoms/BaseInput/BaseInput.types";
-import { BaseInput } from "@/entities";
+import {BaseInput, ErrorText} from "@/entities";
 
 type LabelledInputProps = {
   label: string;
   type: TextInputType;
+  required?: boolean;
+  isInvalid?: boolean;
+  errorText?: string;
 } & HTMLAttributes<HTMLInputElement>;
 
 /**
  * Base input type
  */
-export function LabelledInput({ type, label, ...rest }: LabelledInputProps) {
+export function LabelledInput({ isInvalid, type, label, errorText = `Please enter a valid ${label}`, ...rest }: LabelledInputProps) {
   return (
     <Root>
       <LabelText>{label}</LabelText>
-      <BaseInput type={type} {...rest} />
+      <BaseInput type={type} isInvalid={isInvalid} {...rest} />
+      <ErrorText shown={isInvalid || false}>{errorText}</ErrorText>
     </Root>
   );
 }

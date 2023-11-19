@@ -1,11 +1,22 @@
 import { Root } from "./styles";
-import { HTMLAttributes } from "react";
+import {HTMLAttributes, useState} from "react";
 
-type BaseTextAreaProps = {} & HTMLAttributes<HTMLTextAreaElement>;
+type BaseTextAreaProps = {
+  required?: boolean;
+  isInvalid?: boolean;
+} & HTMLAttributes<HTMLTextAreaElement>;
 
 /**
  * Base input type
  */
-export function BaseTextArea({ ...rest }: BaseTextAreaProps) {
-  return <Root {...rest} />;
+export function BaseTextArea({ isInvalid = false, ...rest }: BaseTextAreaProps) {
+  const [hasBeenFocussed, setHasBeenFocussed] = useState(false);
+  const [isInvalidState, setIsInvalidState] = useState(isInvalid);
+
+  const handleOnChange = () => {
+    setHasBeenFocussed(true);
+    setIsInvalidState(false);
+  }
+
+  return <Root $isInvalid={isInvalidState} $hasBeenFocussed={hasBeenFocussed} onChange={() => handleOnChange()} {...rest} />;
 }

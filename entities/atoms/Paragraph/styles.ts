@@ -12,10 +12,11 @@ import {
 } from "@/entities";
 
 export const Root = styled.p<{
+  $color: Property.Color;
   $fontSize: FontSizes;
   $align: Property.TextAlign;
 }>`
-  color: ${colors.whiteGhost};
+  color: ${({$color}) => $color};
   display: block;
   font-family: ${fonts.body};
   font-size: ${({ $fontSize }) => fontSizes[$fontSize].rem};
