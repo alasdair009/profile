@@ -1,3 +1,4 @@
+"use client"
 import { Root } from "./styles";
 import {HTMLAttributes, useState} from "react";
 

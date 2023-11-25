@@ -1,3 +1,4 @@
+"use client"
 import { Root } from "./styles";
 import { BaseInputProps } from "./BaseInput.types";
 import {useState} from "react";

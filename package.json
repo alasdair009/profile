@@ -15,6 +15,7 @@
     "chromatic": "npx chromatic --project-token=chpt_15397914f82ec8a"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.1.1",
     "@vercel/og": "^0.5.20",
     "next": "13.5.6",
     "react": "^18",

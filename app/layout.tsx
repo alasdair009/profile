@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { GlobalStyle, Header } from "@/entities";
 import StyledComponentsRegistry from "@/lib/registry";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,6 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Analytics />
         <StyledComponentsRegistry>
           <GlobalStyle />
           <Header />
