@@ -1,4 +1,4 @@
-import { EffectBox, Inner, Root } from "./styles";
+import { Content, EffectBox, Inner, Root } from "./styles";
 import { HTMLAttributes, ReactNode } from "react";
 
 type FlurryProps = {
@@ -29,7 +29,7 @@ export function Flurry({
   return (
     <Root {...rest}>
       <Inner>{effectBoxes}</Inner>
-      <div>{children}</div>
+      <Content>{children}</Content>
     </Root>
   );
 }

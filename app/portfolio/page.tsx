@@ -17,11 +17,11 @@ export default function Portfolio() {
     <>
       <Flurry>
         <Heading>Portfolio</Heading>
-        <Paragraph>
+        <Paragraph align="center">
           I am a front-end web engineer with a passion for solving complex
           problems with elegant solutions.
         </Paragraph>
-        <Paragraph>
+        <Paragraph align="center">
           I have over <strong>{getTotalExperienceYears()}</strong> years
           experience in web development building sites and apps for games
           studios and volunteer projects.

@@ -1,6 +1,11 @@
 "use client";
 import styled, { css, keyframes } from "styled-components";
-import { globalDecorationMaxWidth, globalTextMaxWidth } from "@/entities";
+import {
+  colors,
+  globalDecorationMaxWidth,
+  globalTextMaxWidth,
+  sizes,
+} from "@/entities";
 import { rem, rgba } from "polished";
 
 const orbitAnimation = keyframes`
@@ -57,7 +62,11 @@ const generateBlockStyles = (
 
 export const Root = styled.div`
   align-items: center;
-  background: linear-gradient(207deg, #396c93 35%, transparent);
+  background: linear-gradient(
+    207deg,
+    ${rgba(colors.greenGrass, 0.35)} 35%,
+    transparent
+  );
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -70,10 +79,10 @@ export const Root = styled.div`
   &::before {
     background: linear-gradient(
       117deg,
-      #000 15%,
+      ${colors.blackEvil} 15%,
       transparent 50%,
       transparent 65%,
-      #000 95%
+      ${colors.blackEvil} 95%
     );
     content: "";
     height: 100%;
@@ -132,5 +141,6 @@ export const Content = styled.div`
   max-width: ${rem(globalTextMaxWidth)};
   overflow: hidden;
   position: relative;
+  text-shadow: 0 0 ${sizes.s8.rem} ${colors.blackEvil};
   word-break: break-word;
 `;
