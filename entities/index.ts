@@ -31,6 +31,7 @@ export { HorizontalRule } from "./atoms/HorizontalRule";
 export { Link } from "./atoms/Link";
 export { Orb } from "./atoms/Orb";
 export { Paragraph } from "./atoms/Paragraph";
+export { SocialMediaLink } from "./atoms/SocialMediaLink";
 export { Spacer } from "./atoms/Spacer";
 export { Spinner } from "./atoms/Spinner";
 export { TextMask } from "./atoms/TextMask";
