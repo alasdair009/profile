@@ -1,5 +1,16 @@
-import { CopyBlock, Flurry, Heading, Paragraph } from "@/entities";
+import {
+  BlockQuote,
+  CopyBlock,
+  Flurry,
+  Heading,
+  HorizontalRule,
+  Paragraph,
+  sizes,
+  Trampoline,
+} from "@/entities";
 import { getTotalExperienceYears } from "@/lib/data/professional";
+import Image from "next/image";
+import skyImage from "@/entities/assets/sky.jpg";
 
 export default function Portfolio() {
   return (
@@ -16,7 +27,35 @@ export default function Portfolio() {
           studios and volunteer projects.
         </Paragraph>
       </Flurry>
-      <CopyBlock></CopyBlock>
+      <HorizontalRule margin="none" />
+      <CopyBlock>
+        <BlockQuote>
+          We are alive, for a moment, one second in the great abyss of time...
+        </BlockQuote>
+      </CopyBlock>
+      <HorizontalRule margin="none" />
+      <div
+        style={{
+          clipPath: "inset(0)",
+          height: sizes.s512.rem,
+          overflow: "hidden",
+          position: "relative",
+        }}
+      >
+        <Image
+          placeholder="blur"
+          src={skyImage}
+          alt="Ali trampolining outside somersaulting in the air"
+          style={{
+            height: "100%",
+            left: 0,
+            objectFit: "cover",
+            position: "fixed",
+            top: 0,
+            width: "100%",
+          }}
+        />
+      </div>
     </>
   );
 }
