@@ -1,1 +1,1 @@
-export {SocialMediaLink} from "./SocialMediaLink";
+export { SocialMediaLink } from "./SocialMediaLink";

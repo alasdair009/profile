@@ -5,8 +5,8 @@ import { LabelText } from "./styles";
 
 type LabelledTextAreaProps = {
   label: string;
-    required?: boolean;
-    isInvalid?: boolean;
+  required?: boolean;
+  isInvalid?: boolean;
 } & HTMLAttributes<HTMLTextAreaElement>;
 
 /**

@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import { Root } from "./styles";
 import { BaseInputProps } from "./BaseInput.types";
-import {useState} from "react";
+import { useState } from "react";
 
 /**
  * Base input type
@@ -13,7 +13,14 @@ export function BaseInput({ isInvalid = false, ...rest }: BaseInputProps) {
   const handleOnChange = () => {
     setHasBeenFocussed(true);
     setIsInvalidState(false);
-  }
+  };
 
-  return <Root $isInvalid={isInvalidState} $hasBeenFocussed={hasBeenFocussed} onChange={() => handleOnChange()} {...rest} />;
+  return (
+    <Root
+      $isInvalid={isInvalidState}
+      $hasBeenFocussed={hasBeenFocussed}
+      onChange={() => handleOnChange()}
+      {...rest}
+    />
+  );
 }

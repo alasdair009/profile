@@ -26,6 +26,7 @@ export { BaseInput } from "./atoms/BaseInput";
 export { BaseTextArea } from "./atoms/BaseTextArea";
 export { Button } from "./atoms/Button";
 export { Fire } from "./atoms/Fire";
+export { Flurry } from "./atoms/Flurry";
 export { Heading } from "./atoms/Heading";
 export { HorizontalRule } from "./atoms/HorizontalRule";
 export { Link } from "./atoms/Link";

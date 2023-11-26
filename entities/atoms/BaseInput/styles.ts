@@ -1,15 +1,19 @@
 "use client";
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 import { colors, fontSizes, globalInputMaxWidth, sizes } from "@/entities";
 import { rem, rgba } from "polished";
 
 const inValidStyles = {
-    background: rgba(colors.redHeat, 0.15),
+  background: rgba(colors.redHeat, 0.15),
 };
 
-export const Root = styled.input<{$isInvalid: boolean, $hasBeenFocussed: boolean}>`
+export const Root = styled.input<{
+  $isInvalid: boolean;
+  $hasBeenFocussed: boolean;
+}>`
   appearance: none;
-  background: ${({$isInvalid}) => $isInvalid ? inValidStyles.background : colors.greyDark};
+  background: ${({ $isInvalid }) =>
+    $isInvalid ? inValidStyles.background : colors.greyDark};
   border: ${rem(1)} solid ${colors.greenGrass};
   color: ${colors.whiteGhost};
   display: block;
@@ -20,6 +24,7 @@ export const Root = styled.input<{$isInvalid: boolean, $hasBeenFocussed: boolean
   width: 100%;
 
   &:invalid {
-    background: ${({$hasBeenFocussed}) => $hasBeenFocussed ? inValidStyles.background : undefined};
+    background: ${({ $hasBeenFocussed }) =>
+      $hasBeenFocussed ? inValidStyles.background : undefined};
   }
 `;

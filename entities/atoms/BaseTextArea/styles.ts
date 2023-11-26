@@ -1,13 +1,17 @@
 "use client";
 import styled from "styled-components";
 import { colors, globalInputMaxWidth, sizes } from "@/entities";
-import {rem, rgba} from "polished";
+import { rem, rgba } from "polished";
 
 const inValidStyles = {
-    background: rgba(colors.redHeat, 0.15),
+  background: rgba(colors.redHeat, 0.15),
 };
-export const Root = styled.textarea<{$isInvalid: boolean, $hasBeenFocussed: boolean}>`
-  background: ${({$isInvalid}) => $isInvalid ? inValidStyles.background : colors.greyDark};
+export const Root = styled.textarea<{
+  $isInvalid: boolean;
+  $hasBeenFocussed: boolean;
+}>`
+  background: ${({ $isInvalid }) =>
+    $isInvalid ? inValidStyles.background : colors.greyDark};
   border: ${rem(1)} solid ${colors.greenGrass};
   color: ${colors.whiteGhost};
   display: block;
@@ -18,6 +22,7 @@ export const Root = styled.textarea<{$isInvalid: boolean, $hasBeenFocussed: bool
   width: 100%;
 
   &:invalid {
-    background: ${({$hasBeenFocussed}) => $hasBeenFocussed ? inValidStyles.background : undefined};
+    background: ${({ $hasBeenFocussed }) =>
+      $hasBeenFocussed ? inValidStyles.background : undefined};
   }
 `;

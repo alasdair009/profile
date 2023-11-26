@@ -16,7 +16,7 @@ export const Root = styled.p<{
   $fontSize: FontSizes;
   $align: Property.TextAlign;
 }>`
-  color: ${({$color}) => $color};
+  color: ${({ $color }) => $color};
   display: block;
   font-family: ${fonts.body};
   font-size: ${({ $fontSize }) => fontSizes[$fontSize].rem};

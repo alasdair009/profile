@@ -1,7 +1,7 @@
 import { Root } from "./styles";
 import { HTMLAttributes, ReactNode } from "react";
-import {colors, FontSizes, TextAlignment} from "@/entities";
-import { Property} from "csstype";
+import { colors, FontSizes, TextAlignment } from "@/entities";
+import { Property } from "csstype";
 
 type ParagraphProps = {
   align?: TextAlignment;
@@ -11,7 +11,7 @@ type ParagraphProps = {
 } & HTMLAttributes<HTMLParagraphElement>;
 export function Paragraph({
   align = "left",
-    color = colors.whiteGhost,
+  color = colors.whiteGhost,
   fontSize = "medium",
   children,
   ...rest
