@@ -46,6 +46,8 @@ export { ContactForm } from "./organisms/ContactForm";
 export { Container } from "./organisms/Container";
 export { CopyBlock } from "./organisms/CopyBlock";
 export { ContentPlate } from "./organisms/ContentPlate";
+export { FixedPlate } from "./organisms/FixedPlate";
 export { Header } from "./organisms/Header";
 export { Splash } from "./organisms/Splash";
 export { Trampoline } from "./organisms/Trampoline";
+export { VerticalTimeline } from "./organisms/VerticalTimeline";

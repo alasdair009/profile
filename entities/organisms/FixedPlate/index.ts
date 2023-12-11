@@ -1,0 +1,1 @@
+export { FixedPlate } from "./FixedPlate";

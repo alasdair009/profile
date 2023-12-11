@@ -6,6 +6,7 @@ import {
   ContactForm,
   ContentPlate,
   CopyBlock,
+  FixedPlate,
   globalContentMaxWidth,
   Heading,
   HorizontalRule,
@@ -63,28 +64,7 @@ export default function Home() {
         <Link href="about-me">About me</Link>
       </ContentPlate>
       <HorizontalRule margin="none" />
-      <div
-        style={{
-          clipPath: "inset(0)",
-          height: sizes.s512.rem,
-          overflow: "hidden",
-          position: "relative",
-        }}
-      >
-        <Image
-          placeholder="blur"
-          src={skyImage}
-          alt="Ali trampolining outside somersaulting in the air"
-          style={{
-            height: "100%",
-            left: 0,
-            objectFit: "cover",
-            position: "fixed",
-            top: 0,
-            width: "100%",
-          }}
-        />
-      </div>
+      <FixedPlate />
       <HorizontalRule margin="none" />
       <CopyBlock>
         <Heading level="h2">Get in touch</Heading>

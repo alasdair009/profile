@@ -36,6 +36,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-vertical-timeline-component": "^3.3.6",
     "@types/three": "^0.157.2",
     "chromatic": "^9.0.0",
     "eslint": "^8",
@@ -46,6 +47,7 @@
     "lint-staged": "^15.0.2",
     "polished": "^4.2.2",
     "prettier": "^3.0.3",
+    "react-vertical-timeline-component": "^3.6.0",
     "storybook": "^7.6.4",
     "styled-components": "^6.1.0",
     "typescript": "^5"

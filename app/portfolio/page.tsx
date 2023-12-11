@@ -1,16 +1,16 @@
 import {
   BlockQuote,
   CopyBlock,
+  FixedPlate,
   Flurry,
   Heading,
   HorizontalRule,
   Paragraph,
-  sizes,
-  Trampoline,
+  VerticalTimeline,
 } from "@/entities";
 import { getTotalExperienceYears } from "@/lib/data/professional";
-import Image from "next/image";
-import skyImage from "@/entities/assets/sky.jpg";
+import jagexLogo from "../../entities/assets/jagex-square.png";
+import amLogo from "../../entities/assets/am.svg";
 
 export default function Portfolio() {
   return (
@@ -34,28 +34,20 @@ export default function Portfolio() {
         </BlockQuote>
       </CopyBlock>
       <HorizontalRule margin="none" />
-      <div
-        style={{
-          clipPath: "inset(0)",
-          height: sizes.s512.rem,
-          overflow: "hidden",
-          position: "relative",
-        }}
-      >
-        <Image
-          placeholder="blur"
-          src={skyImage}
-          alt="Ali trampolining outside somersaulting in the air"
-          style={{
-            height: "100%",
-            left: 0,
-            objectFit: "cover",
-            position: "fixed",
-            top: 0,
-            width: "100%",
-          }}
-        />
-      </div>
+      <FixedPlate image={jagexLogo} alt="Green Jagex logo" />
+      <CopyBlock>
+        <Heading level="h2">Employment</Heading>
+        <Paragraph>
+          I have worked in the games industry for XXX years. I am current
+          employed at Jagex Games Ltd as a Senior Web Engineer.
+        </Paragraph>
+      </CopyBlock>
+      <VerticalTimeline
+        entries={[
+          { date: "2011-present", icon: amLogo, alt: "", content: "abc" },
+          { date: "2010", icon: amLogo, alt: "", content: "abc" },
+        ]}
+      />
     </>
   );
 }
