@@ -6,13 +6,15 @@ import "react-vertical-timeline-component/style.min.css";
 import { StaticImageData } from "next/image";
 import { TimelineElement } from "./TimelineElement";
 
-type TimelineProps = {
-  entries: {
-    date: string;
-    icon: StaticImageData;
-    alt: string;
-    content: ReactNode;
-  }[];
+export type TimelineEntry = {
+  date: string;
+  icon: StaticImageData;
+  alt: string;
+  content: ReactNode;
+};
+
+export type TimelineProps = {
+  entries: TimelineEntry[];
 } & HTMLAttributes<HTMLDivElement>;
 
 export function Timeline({ entries, ...rest }: TimelineProps) {

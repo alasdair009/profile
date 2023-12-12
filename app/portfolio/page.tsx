@@ -8,9 +8,20 @@ import {
   Paragraph,
   Timeline,
 } from "@/entities";
-import { getTotalExperienceYears } from "@/lib/data/professional";
+import {careerHistory, companyDetails, getTotalExperienceYears} from "@/lib/data/professional";
 import jagexLogo from "../../entities/assets/jagex-square.png";
-import jagexTimelineLogo from "../../entities/assets/jagex-logo.svg";
+import {TimelineEntry} from "@/entities/organisms/Timeline/Timeline";
+import {StaticImageData} from "next/image";
+
+const employmentHistory: TimelineEntry[] = [];
+careerHistory.roles.forEach((employment, index) => {
+    employmentHistory.push({
+        date: `${employment.startDate.toLocaleString('default', { month: 'long' })} ${employment.startDate.getFullYear()}`,
+        icon: companyDetails[employment.company].logo,
+        alt: `${employment.company} logo`,
+        content: <><Heading level="h3">{companyDetails[employment.company].name}</Heading><Paragraph align="center" fontSize="xxlarge">{employment.position}</Paragraph></>
+    });
+});
 
 export default function Portfolio() {
   return (
@@ -44,15 +55,7 @@ export default function Portfolio() {
         </Paragraph>
       </CopyBlock>
       <Timeline
-        entries={[
-          {
-            date: "2011-present",
-            icon: jagexTimelineLogo,
-            alt: "",
-            content: <Heading>Jagex</Heading>,
-          },
-          { date: "2010", icon: jagexTimelineLogo, alt: "", content: "abc" },
-        ]}
+        entries={employmentHistory}
       />
     </>
   );
