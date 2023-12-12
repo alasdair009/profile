@@ -50,4 +50,4 @@ export { FixedPlate } from "./organisms/FixedPlate";
 export { Header } from "./organisms/Header";
 export { Splash } from "./organisms/Splash";
 export { Trampoline } from "./organisms/Trampoline";
-export { VerticalTimeline } from "./organisms/VerticalTimeline";
+export { Timeline } from "./organisms/Timeline";
