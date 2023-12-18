@@ -190,7 +190,8 @@ export default function Portfolio() {
         <Paragraph>
           Below you will find a collection of projects I have worked on
           throughout my career and in my personal time. Referees for projects
-          are available upon request but technical details may be withheld by the owner / business.
+          are available upon request but technical details may be withheld by
+          the owner / business.
         </Paragraph>
       </section>
     </>

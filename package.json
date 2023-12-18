@@ -38,6 +38,7 @@
     "@types/react-dom": "^18",
     "@types/react-vertical-timeline-component": "^3.3.6",
     "@types/three": "^0.157.2",
+    "axios": "^1.6.2",
     "chromatic": "^9.0.0",
     "eslint": "^8",
     "eslint-config-next": "13.5.6",

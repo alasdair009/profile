@@ -7,12 +7,18 @@ type LabelledTextAreaProps = {
   label: string;
   required?: boolean;
   isInvalid?: boolean;
+  value?: string;
+  name: string;
 } & HTMLAttributes<HTMLTextAreaElement>;
 
 /**
  * Base input type
  */
-export function LabelledTextArea({ label, ...rest }: LabelledTextAreaProps) {
+export function LabelledTextArea({
+  label,
+  name,
+  ...rest
+}: LabelledTextAreaProps) {
   return (
     <Root>
       <LabelText>{label}</LabelText>

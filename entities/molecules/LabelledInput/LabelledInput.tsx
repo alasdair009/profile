@@ -6,6 +6,8 @@ import { BaseInput, ErrorText } from "@/entities";
 type LabelledInputProps = {
   label: string;
   type: TextInputType;
+  name: string;
+  value?: string;
   required?: boolean;
   isInvalid?: boolean;
   errorText?: string;
@@ -17,6 +19,7 @@ type LabelledInputProps = {
 export function LabelledInput({
   isInvalid,
   type,
+  name,
   label,
   errorText = `Please enter a valid ${label}`,
   ...rest
