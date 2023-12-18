@@ -1,4 +1,4 @@
-import {StaticImageData} from "next/image";
+import { StaticImageData } from "next/image";
 import jagexTimelineLogo from "../../entities/assets/jagex-logo.svg";
 import pkrTimelineLogo from "../../entities/assets/pkr-logo.svg";
 import codemastersTimelineLogo from "../../entities/assets/codemasters-logo.svg";
@@ -14,7 +14,10 @@ type CareerHistoryData = {
   }[];
 };
 
-export const companyDetails: Record<Company, {name: string; logo: StaticImageData}> = {
+export const companyDetails: Record<
+  Company,
+  { name: string; logo: StaticImageData }
+> = {
   jagex: {
     name: "Jagex Games Ltd",
     logo: jagexTimelineLogo,
@@ -30,8 +33,8 @@ export const companyDetails: Record<Company, {name: string; logo: StaticImageDat
   codemasters: {
     name: "Codemasters",
     logo: codemastersTimelineLogo,
-  }
-}
+  },
+};
 export const careerHistory: CareerHistoryData = {
   roles: [
     {

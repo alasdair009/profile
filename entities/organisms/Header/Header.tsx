@@ -27,5 +27,3 @@ export function Header({ children, ...rest }: HeaderProps) {
     </Root>
   );
 }
-
-Header.height = headerHeight;

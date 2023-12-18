@@ -1,6 +1,5 @@
 "use client";
 import styled from "styled-components";
-import { Header } from "../Header";
 import { rem } from "polished";
 import { colors } from "@/entities/design-tokens/colors";
 import {
@@ -10,6 +9,7 @@ import {
 import maskImg from "@/entities/organisms/Splash/ali-flight.svg";
 import { device, sizes } from "../../design-tokens/dimensions";
 import { Paragraph } from "@/entities";
+import { headerHeight } from "@/entities/organisms/Header/styles";
 
 export const Root = styled.section`
   align-items: center;
@@ -21,7 +21,7 @@ export const Root = styled.section`
   width: 100%;
 
   @media (${device.small}) {
-    height: calc(100vh - ${Header.height});
+    height: calc(100vh - ${headerHeight});
 
     &::before,
     &::after {

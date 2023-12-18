@@ -41,6 +41,8 @@ export { ErrorText } from "./atoms/ErrorText";
 
 export { LabelledInput } from "./molecules/LabelledInput";
 export { LabelledTextArea } from "./molecules/LabelledTextArea";
+export { ScoreCounter } from "./molecules/ScoreCounter";
+export { Skill } from "./molecules/Skill";
 
 export { ContactForm } from "./organisms/ContactForm";
 export { Container } from "./organisms/Container";

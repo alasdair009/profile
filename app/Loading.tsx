@@ -1,4 +1,5 @@
-import { Header, Heading, Spinner } from "@/entities";
+import { Heading, Spinner } from "@/entities";
+import { headerHeight } from "@/entities/organisms/Header/styles";
 
 export default function Loading() {
   return (
@@ -7,7 +8,7 @@ export default function Loading() {
         alignItems: "center",
         display: "flex",
         flexDirection: "column",
-        height: `calc(100vh - ${Header.height});`,
+        height: `calc(100vh - ${headerHeight});`,
         justifyContent: "center",
         width: "100%",
       }}
