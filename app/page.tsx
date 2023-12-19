@@ -22,6 +22,7 @@ import {
 } from "@/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
+import {getTotalExperienceYears} from "@/lib/data/professional";
 
 export const metadata: Metadata = generateMetaData();
 
@@ -37,8 +38,8 @@ export default function Home() {
       >
         <Heading level="h2">Hello there!</Heading>
         <Paragraph>
-          My name is Alasdair (Ali). I am a{" "}
-          <strong>front-end web engineer</strong> with over 12 years experience
+          My name is Alasdair (Ali). I am a
+          <strong>front-end web engineer</strong> with over {getTotalExperienceYears()} years experience
           working in the games industry.
         </Paragraph>
         <Paragraph>
