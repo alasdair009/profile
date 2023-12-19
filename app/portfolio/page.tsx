@@ -301,10 +301,10 @@ export default function Portfolio() {
         <Heading level="h3">RuneFest</Heading>
         <pre>(URL not public)</pre>
         <Paragraph>
-          RuneScape and Old School RuneScape&apos;s player event runs most years and
-          requires a large input from teams across the studio. For this event I
-          have built multiple versions of this site on many different tech
-          stacks.
+          RuneScape and Old School RuneScape&apos;s player event runs most years
+          and requires a large input from teams across the studio. For this
+          event I have built multiple versions of this site on many different
+          tech stacks.
         </Paragraph>
         <Paragraph>
           I also built my first ever Progressive Web App for RuneFest 2017 that
