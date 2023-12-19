@@ -39,6 +39,7 @@ export { Spacer } from "./atoms/Spacer";
 export { Spinner } from "./atoms/Spinner";
 export { TextMask } from "./atoms/TextMask";
 export { ErrorText } from "./atoms/ErrorText";
+export { Video } from "./atoms/Video";
 
 export { LabelledInput } from "./molecules/LabelledInput";
 export { LabelledTextArea } from "./molecules/LabelledTextArea";
@@ -54,3 +55,4 @@ export { Header } from "./organisms/Header";
 export { Splash } from "./organisms/Splash";
 export { Trampoline } from "./organisms/Trampoline";
 export { Timeline } from "./organisms/Timeline";
+export type { TimelineEntry } from "./organisms/Timeline";

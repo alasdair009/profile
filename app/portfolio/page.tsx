@@ -14,6 +14,7 @@ import {
   sizes,
   Skill,
   Timeline,
+  TimelineEntry,
 } from "@/entities";
 import {
   careerHistory,
@@ -28,7 +29,6 @@ import jagexLauncherImage from "../../entities/assets/launcher.png";
 import runeFestImage from "../../entities/assets/runefest.png";
 import runeFestPanelImage from "../../entities/assets/runefest-recipe-for-faster.png";
 import runeScapeNewsImage from "../../entities/assets/runescape-news.png";
-import { TimelineEntry } from "@/entities/organisms/Timeline/Timeline";
 import { rem, rgba } from "polished";
 import amLogo from "../../entities/assets/am.svg";
 import { GridLogo, SkillGrid } from "@/app/portfolio/styles";

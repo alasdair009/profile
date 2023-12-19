@@ -1,6 +1,4 @@
 import portraitImage from "../entities/assets/ali-portrait.svg";
-import skyImage from "../entities/assets/sky.jpg";
-import Image from "next/image";
 
 import {
   ContactForm,
@@ -10,8 +8,6 @@ import {
   globalContentMaxWidth,
   Heading,
   HorizontalRule,
-  LabelledInput,
-  LabelledTextArea,
   Link,
   Paragraph,
   sizes,
@@ -22,7 +18,7 @@ import {
 } from "@/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
-import {getTotalExperienceYears} from "@/lib/data/professional";
+import { getTotalExperienceYears } from "@/lib/data/professional";
 
 export const metadata: Metadata = generateMetaData();
 
@@ -39,8 +35,9 @@ export default function Home() {
         <Heading level="h2">Hello there!</Heading>
         <Paragraph>
           My name is Alasdair (Ali). I am a
-          <strong>front-end web engineer</strong> with over {getTotalExperienceYears()} years experience
-          working in the games industry.
+          <strong>front-end web engineer</strong> with over{" "}
+          {getTotalExperienceYears()} years experience working in the games
+          industry.
         </Paragraph>
         <Paragraph>
           I have a passion for all things front-end and am focussed on pushing
