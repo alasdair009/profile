@@ -22,6 +22,7 @@ export function Header({ children, ...rest }: HeaderProps) {
         <HeaderLinks>
           <HeaderLink href="/">Home</HeaderLink>
           <HeaderLink href="/portfolio">Portfolio</HeaderLink>
+          <HeaderLink href="/about-me">About Me</HeaderLink>
         </HeaderLinks>
       </Inner>
     </Root>

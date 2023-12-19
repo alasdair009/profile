@@ -7,6 +7,7 @@ import {
   sizes,
 } from "@/entities";
 import { rem, rgba } from "polished";
+import Image from "next/image";
 
 const orbitAnimation = keyframes`
     from {
@@ -139,8 +140,19 @@ export const EffectBox = styled.span<{
 
 export const Content = styled.div`
   max-width: ${rem(globalTextMaxWidth)};
-  overflow: hidden;
   position: relative;
   text-shadow: 0 0 ${sizes.s8.rem} ${colors.blackEvil};
   word-break: break-word;
+  z-index: 1;
+`;
+
+export const Silhouette = styled(Image)`
+  left: 50%;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  opacity: 0.025;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 `;

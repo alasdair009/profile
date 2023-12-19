@@ -8,6 +8,7 @@ import {
 } from "@/entities";
 import { rem } from "polished";
 import { ContentPlateProps } from "./ContentPlate.types";
+import Image from "next/image";
 
 export const Root = styled.section`
   margin: 0 auto;
@@ -20,7 +21,8 @@ export const Inner = styled.div<{
   $orientation: Exclude<ContentPlateProps["orientation"], undefined>;
 }>`
   display: flex;
-  flex-direction: ${({ $orientation }) => $orientation};
+  flex-direction: ${({ $orientation }) =>
+    $orientation === "left" ? "row" : "row-reverse"};
   margin: 0 auto;
   max-width: ${rem(globalContentMaxWidth)};
   position: relative;
@@ -45,6 +47,15 @@ export const ForegroundWrapper = styled.figure`
   overflow: hidden;
   position: relative;
   width: 50%;
+`;
+
+export const ForegroundImage = styled(Image)`
+  display: block;
+  height: ${rem(400)};
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  width: ${rem(400)};
 `;
 
 export const CopyBox = styled.div`

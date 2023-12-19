@@ -4,6 +4,7 @@ import {
   BackgroundWrapper,
   ForegroundWrapper,
   CopyBox,
+  ForegroundImage,
 } from "./styles";
 import Image from "next/image";
 import { ContentPlateProps } from "./ContentPlate.types";
@@ -31,12 +32,7 @@ export function ContentPlate({
         <CopyBox>{children}</CopyBox>
         {foregroundImage && foregroundImageAlt && (
           <ForegroundWrapper>
-            <Image
-              height={400}
-              width={400}
-              src={foregroundImage}
-              alt={foregroundImageAlt}
-            />
+            <ForegroundImage src={foregroundImage} alt={foregroundImageAlt} />
           </ForegroundWrapper>
         )}
       </Inner>

@@ -3,26 +3,12 @@ import { Inter } from "next/font/google";
 import { GlobalStyle, Header } from "@/entities";
 import StyledComponentsRegistry from "@/lib/registry";
 import { Analytics } from "@vercel/analytics/react";
+import { generateMetaData } from "@/lib/metadata";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Alasdair Macrae's home online`,
-  description: "The home of exciting web adventures",
-  metadataBase: new URL("https://profile-ivory-three.vercel.app"),
-  openGraph: {
-    title: `Alasdair Macrae's home online`,
-    images: "https://profile-ivory-three.vercel.app/og",
-    description: "The home of exciting web adventures",
-    url: "https://profile-ivory-three.vercel.app/",
-  },
-  twitter: {
-    site: "@alasdair009",
-    card: "summary_large_image",
-    images: "https://profile-ivory-three.vercel.app/og",
-    title: `Alasdair Macrae's home online`,
-    description: "The home of exciting web adventures",
-  },
+  ...generateMetaData(),
   robots: {
     index: false,
     follow: true,

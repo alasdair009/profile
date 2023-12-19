@@ -3,6 +3,7 @@ import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 import { colors, fontSizes, fontWeights, sizes } from "@/entities";
 import { LinkVariant } from "./types";
+import Image from "next/image";
 
 const generatePolygonLine = (yOffset = 0) => {
   return `polygon(0 0, 30% ${yOffset * 0.9}%, 50% ${yOffset}%, 70% ${
@@ -76,4 +77,11 @@ export const Root = styled(Link)<{ $variant: LinkVariant }>`
     position: absolute;
     width: 100%;
   }
+`;
+
+export const NewTabIcon = styled(Image)`
+  display: inline-block;
+  height: ${sizes.s16.rem};
+  margin-left: ${sizes.s4.rem};
+  width: ${sizes.s16.rem};
 `;

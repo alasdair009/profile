@@ -24,7 +24,7 @@ export default function Error({
       <Heading align="center">Error!</Heading>
       <Spacer multiplier={4} />
       <Paragraph align="center">Something went a bit wrong here!</Paragraph>
-      <Button onClick={() => reset} style={{ margin: "0 auto" }}>
+      <Button type="button" onClick={() => reset} style={{ margin: "0 auto" }}>
         Try again
       </Button>
     </Container>

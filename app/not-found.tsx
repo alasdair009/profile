@@ -12,28 +12,13 @@ import {
 import { rgba } from "polished";
 import { FirePadding, FireWrapper } from "@/app/lib/entities";
 import { Metadata } from "next";
+import { generateMetaData } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: `Not Found`,
-  description:
-    "You bounced out of my orbit and I could not find where you were heading!",
-  metadataBase: new URL("https://profile-ivory-three.vercel.app"),
-  openGraph: {
-    title: `Not Found`,
-    images: "https://profile-ivory-three.vercel.app/og?title=Not%20Found",
-    description:
-      "You bounced out of my orbit and I could not find where you were heading!",
-    url: "https://profile-ivory-three.vercel.app/404",
-  },
-  twitter: {
-    site: "@alasdair009",
-    card: "summary_large_image",
-    images: "https://profile-ivory-three.vercel.app/og?title=Not%20Found",
-    title: `Not Found`,
-    description:
-      "You bounced out of my orbit and I could not find where you were heading!",
-  },
-};
+export const metadata: Metadata = generateMetaData(
+  "Not Found",
+  "You bounced out of my orbit and I could not find where you were heading!",
+  "404"
+);
 export default function NotFound() {
   return (
     <Container

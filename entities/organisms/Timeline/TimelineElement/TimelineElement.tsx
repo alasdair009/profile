@@ -4,7 +4,7 @@ import { colors, sizes } from "@/entities";
 import { Logo, Root } from "./styles";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { useInView } from "react-intersection-observer";
-import { HTMLAttributes, ReactNode } from "react";
+import { HTMLAttributes } from "react";
 import "react-vertical-timeline-component/style.min.css";
 
 type TimelineElementProps = {

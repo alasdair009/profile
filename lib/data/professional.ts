@@ -4,35 +4,40 @@ import pkrTimelineLogo from "../../entities/assets/pkr-logo.svg";
 import codemastersTimelineLogo from "../../entities/assets/codemasters-logo.svg";
 
 type Company = "jagex" | "pkr" | "realtimeWorlds" | "codemasters";
+type Field = "web" | "design" | "qa";
 
 type CareerHistoryData = {
   roles: {
     company: Company;
     position: string;
     startDate: Date;
-    field: "web" | "design" | "qa";
+    field: Field;
   }[];
 };
 
 export const companyDetails: Record<
   Company,
-  { name: string; logo: StaticImageData }
+  { name: string; logo: StaticImageData; url: string }
 > = {
   jagex: {
     name: "Jagex Games Ltd",
     logo: jagexTimelineLogo,
+    url: "https://www.jagex.com",
   },
   pkr: {
     name: "PKR Technologies Ltd",
     logo: pkrTimelineLogo,
+    url: "https://en.wikipedia.org/wiki/PKR.com",
   },
   realtimeWorlds: {
     name: "RealTime Worlds",
     logo: jagexTimelineLogo,
+    url: "https://en.wikipedia.org/wiki/Realtime_Worlds",
   },
   codemasters: {
     name: "Codemasters",
     logo: codemastersTimelineLogo,
+    url: "https://www.ea.com/ea-studios/codemasters",
   },
 };
 export const careerHistory: CareerHistoryData = {
@@ -88,12 +93,22 @@ export const careerHistory: CareerHistoryData = {
   ],
 };
 
-export const getTotalExperienceYears = () => {
+/**
+ * Total amount of professional experience
+ * @param field to filter by
+ */
+export const getTotalExperienceYears = (field?: Field) => {
   const webPositions = careerHistory.roles
-    .filter((role) => role.field === "web")
+    .filter((role) => (field ? role.field === "web" : true))
     .sort((a, b) => {
       return +b.startDate - +a.startDate;
     });
   const lastStartDate = webPositions[webPositions.length - 1].startDate;
   return new Date().getFullYear() - lastStartDate.getFullYear();
+};
+
+export const getCurrentEmployer = () => {
+  return careerHistory.roles.reduce(function (prev, current) {
+    return prev && prev.startDate > current.startDate ? prev : current;
+  });
 };

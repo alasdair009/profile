@@ -15,6 +15,7 @@ export const Root = styled.p<{
   $color: Property.Color;
   $fontSize: FontSizes;
   $align: Property.TextAlign;
+  $textWrap: "wrap" | "balance";
 }>`
   color: ${({ $color }) => $color};
   display: block;
@@ -23,5 +24,6 @@ export const Root = styled.p<{
   margin: 0 auto ${sizes.s24.rem};
   max-width: ${rem(globalTextMaxWidth)};
   text-align: ${({ $align }) => $align};
+  text-wrap: ${({ $textWrap }) => $textWrap};
   width: 100%;
 `;

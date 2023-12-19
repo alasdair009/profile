@@ -1,10 +1,13 @@
-import { Content, EffectBox, Inner, Root } from "./styles";
+import { Silhouette, Content, EffectBox, Inner, Root } from "./styles";
 import { HTMLAttributes, ReactNode } from "react";
+import { StaticImageData } from "next/image";
 
 type FlurryProps = {
   particlesPerPlate?: number;
   particleBaseDuration?: number;
   particleBlocks?: number;
+  background?: StaticImageData;
+  backgroundAlt?: string;
 } & HTMLAttributes<HTMLDivElement>;
 
 export function Flurry({
@@ -12,6 +15,8 @@ export function Flurry({
   particleBaseDuration = 30,
   particleBlocks = 4,
   children,
+  background,
+  backgroundAlt,
   ...rest
 }: FlurryProps) {
   const effectBoxes: ReactNode[] = [];
@@ -29,6 +34,9 @@ export function Flurry({
   return (
     <Root {...rest}>
       <Inner>{effectBoxes}</Inner>
+      {background && backgroundAlt && (
+        <Silhouette src={background} alt={backgroundAlt} />
+      )}
       <Content>{children}</Content>
     </Root>
   );

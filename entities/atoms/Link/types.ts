@@ -10,7 +10,7 @@ export type LinkProps = {
   /**
    * Content of the link.
    */
-  children: ReactNode;
+  children?: ReactNode;
   /**
    * Url or path to link to.
    */

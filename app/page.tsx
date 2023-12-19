@@ -21,25 +21,9 @@ import {
   Trampoline,
 } from "@/entities";
 import { Metadata } from "next";
+import { generateMetaData } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: `Alasdair Macrae's home online`,
-  description: "The home of exciting web adventures",
-  metadataBase: new URL("https://profile-ivory-three.vercel.app"),
-  openGraph: {
-    title: `Alasdair Macrae's home online`,
-    images: "https://profile-ivory-three.vercel.app/og",
-    description: "The home of exciting web adventures",
-    url: "https://profile-ivory-three.vercel.app/",
-  },
-  twitter: {
-    site: "@alasdair009",
-    card: "summary_large_image",
-    images: "https://profile-ivory-three.vercel.app/og",
-    title: `Alasdair Macrae's home online`,
-    description: "The home of exciting web adventures",
-  },
-};
+export const metadata: Metadata = generateMetaData();
 
 export default function Home() {
   return (
