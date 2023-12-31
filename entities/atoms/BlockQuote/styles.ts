@@ -14,6 +14,7 @@ export const Root = styled.blockquote`
   font-style: italic;
   margin: ${sizes.s32.rem} auto;
   max-width: ${globalTextMaxWidth};
+  padding: ${sizes.s8.rem};
   position: relative;
   text-align: center;
   text-wrap: balance;

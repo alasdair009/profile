@@ -1,12 +1,12 @@
 import {
-  BlockQuote,
-  CopyBlock,
-  globalContentMaxWidth,
-  globalDecorationMaxWidth,
-  Heading,
-  HorizontalRule,
-  Paragraph,
-  Video,
+    BlockQuote,
+    CopyBlock,
+    globalContentMaxWidth,
+    globalDecorationMaxWidth,
+    Heading,
+    HorizontalRule,
+    Paragraph, sizes,
+    Video,
 } from "@/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
@@ -29,6 +29,7 @@ export default function AboutMe() {
           maxWidth: rem(globalDecorationMaxWidth),
           margin: "0 auto",
           minHeight: "90vh",
+          padding: sizes.s8.rem,
           position: "relative",
         }}
       >
