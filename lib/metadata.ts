@@ -11,7 +11,7 @@ export const generateMetaData = (
   return {
     title: `${pageTitle} | ${siteName}`,
     description: pageDescription,
-    manifest: "/manifest.json",
+    manifest: "/manifest.webmanifest",
     metadataBase: new URL(`${vercelOrigin}/${pagePath}`),
     openGraph: {
       title: `${pageTitle} | ${siteName}`,

@@ -4,6 +4,7 @@ import { GlobalStyle, Header } from "@/entities";
 import StyledComponentsRegistry from "@/lib/registry";
 import { Analytics } from "@vercel/analytics/react";
 import { generateMetaData } from "@/lib/metadata";
+import ServiceWorker from "@/app/ServiceWorker";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,6 +39,7 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
         </StyledComponentsRegistry>
+        <ServiceWorker />
       </body>
     </html>
   );
