@@ -1,7 +1,10 @@
 import {
+  BlockQuote,
+  CopyBlock,
   globalContentMaxWidth,
   globalDecorationMaxWidth,
   Heading,
+  HorizontalRule,
   Paragraph,
   Video,
 } from "@/entities";
@@ -60,6 +63,24 @@ export default function AboutMe() {
           </Paragraph>
         </div>
       </section>
+      <HorizontalRule margin="none" />
+      <BlockQuote>Because life is too short not to jump</BlockQuote>
+      <HorizontalRule margin="bottom" />
+      <CopyBlock>
+        <Heading level="h2">When i&apos;m on the ground...</Heading>
+        <Paragraph>
+          I reside in Suffolk UK and am a rollercoaster fanatic and always like
+          to take a few days per year to visit theme parks up and down the
+          country. I have over XXX credits from coasters around the world with
+          my personal favourite ride being <strong>Tatsu</strong> at Six Flags
+          Magic Mountain closely followed by <strong>Kingda Ka</strong> at Six
+          Flags Great Adventure.
+        </Paragraph>
+        <Paragraph>
+          When at home I am a smart-home enthusiast having been playing around
+          with Apple&apos;s HomeKit platform for many years.
+        </Paragraph>
+      </CopyBlock>
     </>
   );
 }

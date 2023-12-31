@@ -1,6 +1,6 @@
 import { Root } from "./styles";
 import { HTMLAttributes } from "react";
-import {StaticImageData} from "next/image";
+import { StaticImageData } from "next/image";
 
 type VideoProps = {
   loop?: boolean;
@@ -11,8 +11,8 @@ type VideoProps = {
   poster: StaticImageData;
 } & HTMLAttributes<HTMLVideoElement>;
 export function Video({
-                        mp4Src,
-                        webmSrc,
+  mp4Src,
+  webmSrc,
   loop = true,
   autoPlay = true,
   muted = true,
