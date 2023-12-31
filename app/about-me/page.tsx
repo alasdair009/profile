@@ -8,6 +8,7 @@ import {
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
 import { rem } from "polished";
+import trampolinePosterImage from "../../entities/assets/trampoline-poster.png";
 
 export const metadata: Metadata = generateMetaData(
   "About Me",
@@ -29,7 +30,9 @@ export default function AboutMe() {
         }}
       >
         <Video
-          src="https://ftjjvjgljna2ohz8.public.blob.vercel-storage.com/trampoline-cambs.webm"
+          webmSrc="https://ftjjvjgljna2ohz8.public.blob.vercel-storage.com/trampoline-cambs.webm"
+          mp4Src="https://ftjjvjgljna2ohz8.public.blob.vercel-storage.com/trampoline-cambs.mp4"
+          poster={trampolinePosterImage}
           style={{
             height: "100%",
             left: 0,
