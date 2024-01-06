@@ -1,14 +1,9 @@
 import { Root } from "./styles";
-import { HTMLAttributes, PointerEvent } from "react";
-
-type ButtonProps = {
-  onClick?: (e: PointerEvent<HTMLButtonElement>) => void;
-  type: "submit" | "button";
-} & HTMLAttributes<HTMLButtonElement>;
+import { ButtonProps } from "@/entities/atoms/Button/Button.types";
 
 /**
  * Clickable button for executing actions
  */
-export function Button({ ...rest }: ButtonProps) {
-  return <Root {...rest} />;
+export function Button({ variant = "standard", ...rest }: ButtonProps) {
+  return <Root $variant={variant} {...rest} />;
 }

@@ -1,17 +1,21 @@
 import {
-    BlockQuote,
-    CopyBlock,
-    globalContentMaxWidth,
-    globalDecorationMaxWidth,
-    Heading,
-    HorizontalRule,
-    Paragraph, sizes,
-    Video,
+  BlockQuote,
+  CopyBlock,
+  FixedPlate,
+  globalContentMaxWidth,
+  globalDecorationMaxWidth,
+  Heading,
+  HorizontalRule,
+  Paragraph,
+  sizes,
+  Video,
 } from "@/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
 import { rem } from "polished";
 import trampolinePosterImage from "../../entities/assets/trampoline-poster.png";
+import rollercoasterImage from "../../entities/assets/rollercoaster.svg";
+import homekitImage from "../../entities/assets/homekit.svg";
 
 export const metadata: Metadata = generateMetaData(
   "About Me",
@@ -66,6 +70,12 @@ export default function AboutMe() {
       </section>
       <HorizontalRule margin="none" />
       <BlockQuote>Because life is too short not to jump</BlockQuote>
+      <HorizontalRule margin="none" />
+      <FixedPlate
+        image={rollercoasterImage}
+        alt="Rollercoaster"
+        placeholder="empty"
+      />
       <HorizontalRule margin="bottom" />
       <CopyBlock>
         <Heading level="h2">When i&apos;m on the ground...</Heading>
@@ -79,9 +89,13 @@ export default function AboutMe() {
         </Paragraph>
         <Paragraph>
           When at home I am a smart-home enthusiast having been playing around
-          with Apple&apos;s HomeKit platform for many years.
+          with Apple&apos;s HomeKit platform for many years. I have been
+          configuring custom plugins for HomeBride via Hoobs to increase the
+          number of appliances manageable via my HomeKit installation.
         </Paragraph>
       </CopyBlock>
+      <HorizontalRule margin="top" />
+      <FixedPlate image={homekitImage} alt="HomeKit" placeholder="empty" />
     </>
   );
 }

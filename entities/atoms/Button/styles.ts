@@ -2,9 +2,10 @@
 import styled from "styled-components";
 import { colors, fontSizes, fontWeights, sizes } from "@/entities";
 import { darken, rem } from "polished";
+import { ButtonVariant } from "@/entities/atoms/Button/Button.types";
 
 const buttonClipPath = `polygon(calc(0% + ${sizes.s8.rem}) 0, 100% 0, calc(100% - ${sizes.s8.rem}) 100%, 0 100%);`;
-export const Root = styled.button`
+export const Root = styled.button<{ $variant: ButtonVariant }>`
   align-items: center;
   appearance: none;
   background: transparent;
@@ -14,11 +15,14 @@ export const Root = styled.button`
   display: flex;
   font-size: ${fontSizes.medium.rem};
   font-weight: ${fontWeights.bold};
-  height: ${sizes.s48.rem};
+  height: ${({ $variant }) =>
+    $variant === "standard" ? sizes.s48.rem : "auto"};
   justify-content: center;
-  min-width: ${sizes.s64.rem};
+  min-width: ${({ $variant }) =>
+    $variant === "standard" ? sizes.s64.rem : "0"};
   max-width: ${sizes.s256.rem};
-  padding: 0 ${sizes.s48.rem};
+  padding: 0
+    ${({ $variant }) => ($variant === "standard" ? sizes.s48.rem : "0")};
   position: relative;
   transition: padding 0.5s;
   z-index: 0;
@@ -28,6 +32,7 @@ export const Root = styled.button`
     background: ${colors.greenGrass};
     clip-path: ${buttonClipPath};
     content: "";
+    display: ${({ $variant }) => ($variant === "standard" ? "block" : "none")};
     height: 100%;
     left: 50%;
     position: absolute;

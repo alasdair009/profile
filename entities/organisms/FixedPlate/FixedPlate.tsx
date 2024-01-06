@@ -6,20 +6,18 @@ import { StaticImageData } from "next/image";
 type FixedPlateProps = {
   image?: StaticImageData;
   alt?: string;
+  placeholder?: "blur" | "empty";
 } & HTMLAttributes<HTMLDivElement>;
 
 export function FixedPlate({
   image = skyImage,
+  placeholder = "blur",
   alt = "Ali trampolining outside somersaulting in the air",
   ...rest
 }: FixedPlateProps) {
   return (
     <Root {...rest}>
-      <FixedImage
-        placeholder="blur"
-        src={image}
-        alt="Ali trampolining outside somersaulting in the air"
-      />
+      <FixedImage placeholder={placeholder} src={image} alt={alt} />
     </Root>
   );
 }
