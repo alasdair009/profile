@@ -1,6 +1,6 @@
 type Rollercoaster = {
     name: string;
-    park: "Efteling" | "Pleasurewood Hills" | "Chessington World of Adventures" | "Thorpe Park" | "Alton Towers" | "Disneyland Paris" | "Fantasy Island" | "Adventure Island" | "Legoland Windsor" | "Legoland Billund" | "Blackpool Pleasurebeach";
+    park: "Efteling" | "Pleasurewood Hills" | "Chessington World of Adventures" | "Thorpe Park" | "Alton Towers" | "Disneyland Paris" | "Fantasy Island" | "Adventure Island" | "Legoland Windsor" | "Legoland Billund" | "Blackpool Pleasurebeach" | "Europa Park";
 }
 
 export const rollercoasterHistory: Rollercoaster[] = [
