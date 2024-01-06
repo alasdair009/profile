@@ -16,6 +16,7 @@ import { rem } from "polished";
 import trampolinePosterImage from "../../entities/assets/trampoline-poster.png";
 import rollercoasterImage from "../../entities/assets/rollercoaster.svg";
 import homekitImage from "../../entities/assets/homekit.svg";
+import {rollercoasterHistory} from "@/lib/data/rollercoasters";
 
 export const metadata: Metadata = generateMetaData(
   "About Me",
@@ -82,7 +83,7 @@ export default function AboutMe() {
         <Paragraph>
           I reside in Suffolk UK and am a rollercoaster fanatic and always like
           to take a few days per year to visit theme parks up and down the
-          country. I have over XXX credits from coasters around the world with
+            country. I have over <strong>{rollercoasterHistory.length}</strong> credits from coasters around the world with
           my personal favourite ride being <strong>Tatsu</strong> at Six Flags
           Magic Mountain closely followed by <strong>Kingda Ka</strong> at Six
           Flags Great Adventure.
