@@ -1,1 +1,1 @@
-export {SocialMediaBar} from "./SocialMediaBar";
+export { SocialMediaBar } from "./SocialMediaBar";

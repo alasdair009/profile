@@ -12,7 +12,8 @@ type Rollercoaster = {
     | "Legoland Windsor"
     | "Legoland Billund"
     | "Blackpool Pleasurebeach"
-    | "Europa Park" | "Pettitts Adventure Park";
+    | "Europa Park"
+    | "Pettitts Adventure Park";
 };
 
 export const rollercoasterHistory: Rollercoaster[] = [
@@ -210,10 +211,10 @@ export const rollercoasterHistory: Rollercoaster[] = [
   },
   {
     name: "Crazy Caterpiller",
-    park: "Pettitts Adventure Park"
+    park: "Pettitts Adventure Park",
   },
   {
     name: "Rocky Rollercoaster",
-    park: "Pettitts Adventure Park"
-  }
+    park: "Pettitts Adventure Park",
+  },
 ];

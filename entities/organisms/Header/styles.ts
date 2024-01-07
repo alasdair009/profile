@@ -58,8 +58,8 @@ export const HeaderLink = styled(Link)`
 
 export const NotificationButton = styled(Button)``;
 
-export const NotificationIcon = styled(Image)<{$isSubscribed: boolean}>`
+export const NotificationIcon = styled(Image)<{ $isSubscribed: boolean }>`
   height: ${sizes.s24.rem};
-  opacity: ${({$isSubscribed}) => $isSubscribed ? 1 : 0.3};
-  width: ${sizes.s24.rem };
+  opacity: ${({ $isSubscribed }) => ($isSubscribed ? 1 : 0.3)};
+  width: ${sizes.s24.rem};
 `;

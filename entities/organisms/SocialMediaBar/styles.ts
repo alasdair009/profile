@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import styled from "styled-components";
-import {globalContentMaxWidth, sizes} from "@/entities";
-import {rem} from "polished";
+import { globalContentMaxWidth, sizes } from "@/entities";
+import { rem } from "polished";
 
 export const Root = styled.nav`
   align-items: center;

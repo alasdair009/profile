@@ -1,14 +1,17 @@
 import {
-    BlockQuote, ContactForm,
-    CopyBlock,
-    FixedPlate,
-    globalContentMaxWidth,
-    globalDecorationMaxWidth,
-    Heading,
-    HorizontalRule,
-    Paragraph,
-    sizes, SocialMediaBar, Spacer,
-    Video,
+  BlockQuote,
+  ContactForm,
+  CopyBlock,
+  FixedPlate,
+  globalContentMaxWidth,
+  globalDecorationMaxWidth,
+  Heading,
+  HorizontalRule,
+  Paragraph,
+  sizes,
+  SocialMediaBar,
+  Spacer,
+  Video,
 } from "@/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
@@ -97,10 +100,10 @@ export default function AboutMe() {
       </CopyBlock>
       <HorizontalRule margin="top" />
       <FixedPlate image={homekitImage} alt="HomeKit" placeholder="empty" />
-        <HorizontalRule margin="bottom" />
+      <HorizontalRule margin="bottom" />
       <SocialMediaBar />
-        <Spacer multiplier={2} />
-        <ContactForm />
+      <Spacer multiplier={2} />
+      <ContactForm />
     </>
   );
 }

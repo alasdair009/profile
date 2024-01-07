@@ -10,7 +10,7 @@ import { HTMLAttributes } from "react";
 import amLogo from "../../assets/am.svg";
 import { sizes } from "@/entities";
 import Link from "next/link";
-import {NotificationButton} from "./NotificationButton";
+import { NotificationButton } from "./NotificationButton";
 
 type HeaderProps = {} & HTMLAttributes<HTMLDivElement>;
 export function Header({ children, ...rest }: HeaderProps) {
@@ -24,7 +24,10 @@ export function Header({ children, ...rest }: HeaderProps) {
           <HeaderLink href="/">Home</HeaderLink>
           <HeaderLink href="/portfolio">Portfolio</HeaderLink>
           <HeaderLink href="/about-me">About Me</HeaderLink>
-          <Header.NotificationButton isSubscribed={false} style={{display: "none"}} />
+          <Header.NotificationButton
+            isSubscribed={false}
+            style={{ display: "none" }}
+          />
         </HeaderLinks>
       </Inner>
     </Root>

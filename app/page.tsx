@@ -1,18 +1,18 @@
 import portraitImage from "../entities/assets/ali-portrait.svg";
 
 import {
-    ContactForm,
-    ContentPlate,
-    CopyBlock,
-    FixedPlate,
-    Heading,
-    HorizontalRule,
-    Link,
-    Paragraph,
-    SocialMediaBar,
-    Spacer,
-    Splash,
-    Trampoline,
+  ContactForm,
+  ContentPlate,
+  CopyBlock,
+  FixedPlate,
+  Heading,
+  HorizontalRule,
+  Link,
+  Paragraph,
+  SocialMediaBar,
+  Spacer,
+  Splash,
+  Trampoline,
 } from "@/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
