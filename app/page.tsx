@@ -1,20 +1,18 @@
 import portraitImage from "../entities/assets/ali-portrait.svg";
 
 import {
-  ContactForm,
-  ContentPlate,
-  CopyBlock,
-  FixedPlate,
-  globalContentMaxWidth,
-  Heading,
-  HorizontalRule,
-  Link,
-  Paragraph,
-  sizes,
-  SocialMediaLink,
-  Spacer,
-  Splash,
-  Trampoline,
+    ContactForm,
+    ContentPlate,
+    CopyBlock,
+    FixedPlate,
+    Heading,
+    HorizontalRule,
+    Link,
+    Paragraph,
+    SocialMediaBar,
+    Spacer,
+    Splash,
+    Trampoline,
 } from "@/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
@@ -60,20 +58,7 @@ export default function Home() {
           You can contact me using the form below or find me on social media.
         </Paragraph>
       </CopyBlock>
-      <nav
-        style={{
-          alignItems: "center",
-          display: "flex",
-          gap: sizes.s8.rem,
-          justifyContent: "center",
-          margin: "0 auto",
-          maxWidth: globalContentMaxWidth,
-          width: "100%",
-        }}
-      >
-        <SocialMediaLink variant="x">X</SocialMediaLink>
-        <SocialMediaLink variant="linkedin">LinkedIn</SocialMediaLink>
-      </nav>
+      <SocialMediaBar />
       <Spacer multiplier={2} />
       <ContactForm />
       <HorizontalRule margin="none" />

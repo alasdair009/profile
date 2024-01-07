@@ -52,6 +52,7 @@ export { CopyBlock } from "./organisms/CopyBlock";
 export { ContentPlate } from "./organisms/ContentPlate";
 export { FixedPlate } from "./organisms/FixedPlate";
 export { Header } from "./organisms/Header";
+export { SocialMediaBar } from "./organisms/SocialMediaBar";
 export { Splash } from "./organisms/Splash";
 export { Trampoline } from "./organisms/Trampoline";
 export { Timeline } from "./organisms/Timeline";

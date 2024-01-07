@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { rem, rgba } from "polished";
 import {
+  Button,
   colors,
   globalContentMaxWidth,
   globalDecorationMaxWidth,
@@ -53,4 +54,12 @@ export const HeaderLink = styled(Link)`
   height: 100%;
   justify-content: center;
   padding-top: ${sizes.s4.rem};
+`;
+
+export const NotificationButton = styled(Button)``;
+
+export const NotificationIcon = styled(Image)<{$isSubscribed: boolean}>`
+  height: ${sizes.s24.rem};
+  opacity: ${({$isSubscribed}) => $isSubscribed ? 1 : 0.3};
+  width: ${sizes.s24.rem };
 `;

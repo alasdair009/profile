@@ -1,14 +1,14 @@
 import {
-  BlockQuote,
-  CopyBlock,
-  FixedPlate,
-  globalContentMaxWidth,
-  globalDecorationMaxWidth,
-  Heading,
-  HorizontalRule,
-  Paragraph,
-  sizes,
-  Video,
+    BlockQuote, ContactForm,
+    CopyBlock,
+    FixedPlate,
+    globalContentMaxWidth,
+    globalDecorationMaxWidth,
+    Heading,
+    HorizontalRule,
+    Paragraph,
+    sizes, SocialMediaBar, Spacer,
+    Video,
 } from "@/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
@@ -16,7 +16,7 @@ import { rem } from "polished";
 import trampolinePosterImage from "../../entities/assets/trampoline-poster.png";
 import rollercoasterImage from "../../entities/assets/rollercoaster.svg";
 import homekitImage from "../../entities/assets/homekit.svg";
-import {rollercoasterHistory} from "@/lib/data/rollercoasters";
+import { rollercoasterHistory } from "@/lib/data/rollercoasters";
 
 export const metadata: Metadata = generateMetaData(
   "About Me",
@@ -83,10 +83,10 @@ export default function AboutMe() {
         <Paragraph>
           I reside in Suffolk UK and am a rollercoaster fanatic and always like
           to take a few days per year to visit theme parks up and down the
-            country. I have over <strong>{rollercoasterHistory.length}</strong> credits from coasters around the world with
-          my personal favourite ride being <strong>Tatsu</strong> at Six Flags
-          Magic Mountain closely followed by <strong>Kingda Ka</strong> at Six
-          Flags Great Adventure.
+          country. I have over <strong>{rollercoasterHistory.length}</strong>{" "}
+          credits from coasters around the world with my personal favourite ride
+          being <strong>Tatsu</strong> at Six Flags Magic Mountain closely
+          followed by <strong>Kingda Ka</strong> at Six Flags Great Adventure.
         </Paragraph>
         <Paragraph>
           When at home I am a smart-home enthusiast having been playing around
@@ -97,6 +97,10 @@ export default function AboutMe() {
       </CopyBlock>
       <HorizontalRule margin="top" />
       <FixedPlate image={homekitImage} alt="HomeKit" placeholder="empty" />
+        <HorizontalRule margin="bottom" />
+      <SocialMediaBar />
+        <Spacer multiplier={2} />
+        <ContactForm />
     </>
   );
 }
