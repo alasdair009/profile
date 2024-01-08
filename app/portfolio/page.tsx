@@ -15,6 +15,7 @@ import {
   Skill,
   Timeline,
   TimelineEntry,
+  UnorderedList,
 } from "@/entities";
 import {
   careerHistory,
@@ -52,6 +53,13 @@ careerHistory.roles.forEach((employment, index) => {
         <Paragraph align="center" fontSize="xxlarge">
           {employment.position}
         </Paragraph>
+        <UnorderedList>
+          {employment.responsibilities.map((responsibility, index) => {
+            return (
+              <li key={`${employment.company}${index}`}>{responsibility}</li>
+            );
+          })}
+        </UnorderedList>
       </>
     ),
   });
