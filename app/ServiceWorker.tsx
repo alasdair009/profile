@@ -17,6 +17,7 @@ export default function ServiceWorker() {
             "Service Worker registration successful with scope: ",
             registration.scope
           );
+
         })
         .catch((err) => {
           console.log("Service Worker registration failed: ", err);

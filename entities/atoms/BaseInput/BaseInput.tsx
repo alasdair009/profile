@@ -1,7 +1,7 @@
 "use client";
 import { Root } from "./styles";
 import { BaseInputProps } from "./BaseInput.types";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 
 /**
  * Base input type
@@ -14,6 +14,16 @@ export function BaseInput({ isInvalid = false, ...rest }: BaseInputProps) {
     setHasBeenFocussed(true);
     setIsInvalidState(false);
   };
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+
+    setIsClient(true);
+
+  }, []);
+
+  if (!isClient) return null;
 
   return (
     <Root

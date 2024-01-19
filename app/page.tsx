@@ -11,12 +11,12 @@ import {
   Paragraph,
   SocialMediaBar,
   Spacer,
-  Splash,
   Trampoline,
 } from "@/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
 import { getTotalExperienceYears } from "@/lib/data/professional";
+import {Splash} from "@/entities/organisms/Splash";
 
 export const metadata: Metadata = generateMetaData();
 

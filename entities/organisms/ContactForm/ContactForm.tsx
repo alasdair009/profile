@@ -87,6 +87,7 @@ export function ContactForm({ ...rest }: ContactFormProps) {
         required={true}
         onChange={handleOnChange}
         defaultValue={inputs.email}
+        data-lpignore={true}
       />
       <LabelledTextArea
         label="Your message"
