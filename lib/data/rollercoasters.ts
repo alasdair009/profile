@@ -13,7 +13,7 @@ type Rollercoaster = {
     | "Legoland Billund"
     | "Blackpool Pleasurebeach"
     | "Europa Park"
-    | "Pettitts Adventure Park";
+    | "Pettitts Adventure Park" | "Paulton's Park" | "American Adventure" | "Great Yarmouth Pleasure Beach" | "Tivoli Gardens";
 };
 
 export const rollercoasterHistory: Rollercoaster[] = [
@@ -217,4 +217,40 @@ export const rollercoasterHistory: Rollercoaster[] = [
     name: "Rocky Rollercoaster",
     park: "Pettitts Adventure Park",
   },
+  {
+    name: "Cobra",
+    park: "Paulton's Park",
+  },
+  {
+    name: "Farmyard Flyer",
+    park: "Paulton's Park",
+  },
+  {
+    name: "Flight of the Pterosaur",
+    park: "Paulton's Park",
+  },
+  {
+    name: "Storm Chaser",
+    park: "Paulton's Park",
+  },
+  {
+    name: "Velociraptor",
+    park: "Paulton's Park",
+  },
+  {
+    name: "Buffalo Ride",
+    park: "American Adventure",
+  },
+  {
+    name: "Runaway Train",
+    park: "American Adventure",
+  },
+  {
+    name: "Roller Coaster",
+    park: "Great Yarmouth Pleasure Beach",
+  },
+  {
+    name: "Rutschebanen",
+    park: "Tivoli Gardens",
+  }
 ];
