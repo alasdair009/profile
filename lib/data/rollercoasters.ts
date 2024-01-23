@@ -18,18 +18,18 @@ type Rollercoaster = {
     | "American Adventure"
     | "Great Yarmouth Pleasure Beach"
     | "Tivoli Gardens"
-  | "Clarence Pier"
-  | "Dorney Park"
-  | "Walt Disney World - Magic Kingdom"
-  | "Walt Disney World - Disney's Hollywood Studios"
-  | "Walt Disney World - Disney's Animal Kingdom"
-  | "Universal Studios Islands of Adventure"
-  | "Universal Studios Florida"
-      | "Universal Studios Hollywood"
-  | "Busch Gardens Tampa"
-  | "Knott's Berry Farm"
-  | "Six Flags Magic Mountain"
-  | "Six Flags Great Adventure";
+    | "Clarence Pier"
+    | "Dorney Park"
+    | "Walt Disney World - Magic Kingdom"
+    | "Walt Disney World - Disney's Hollywood Studios"
+    | "Walt Disney World - Disney's Animal Kingdom"
+    | "Universal Studios Islands of Adventure"
+    | "Universal Studios Florida"
+    | "Universal Studios Hollywood"
+    | "Busch Gardens Tampa"
+    | "Knott's Berry Farm"
+    | "Six Flags Magic Mountain"
+    | "Six Flags Great Adventure";
 };
 
 export const rollercoasterHistory: Rollercoaster[] = [
@@ -301,7 +301,7 @@ export const rollercoasterHistory: Rollercoaster[] = [
     name: "Alpenexpress Enzian",
     park: "Europa Park",
   },
-  {name: "Skyways", park: "Clarence Pier"},
+  { name: "Skyways", park: "Clarence Pier" },
   {
     name: "Hydra the Revenge",
     park: "Dorney Park",
@@ -517,5 +517,5 @@ export const rollercoasterHistory: Rollercoaster[] = [
   {
     name: "Rolling Thunder",
     park: "Six Flags Great Adventure",
-  }
+  },
 ];
