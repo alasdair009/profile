@@ -13,7 +13,23 @@ type Rollercoaster = {
     | "Legoland Billund"
     | "Blackpool Pleasurebeach"
     | "Europa Park"
-    | "Pettitts Adventure Park" | "Paulton's Park" | "American Adventure" | "Great Yarmouth Pleasure Beach" | "Tivoli Gardens";
+    | "Pettitts Adventure Park"
+    | "Paulton's Park"
+    | "American Adventure"
+    | "Great Yarmouth Pleasure Beach"
+    | "Tivoli Gardens"
+  | "Clarence Pier"
+  | "Dorney Park"
+  | "Walt Disney World - Magic Kingdom"
+  | "Walt Disney World - Disney's Hollywood Studios"
+  | "Walt Disney World - Disney's Animal Kingdom"
+  | "Universal Studios Islands of Adventure"
+  | "Universal Studios Florida"
+      | "Universal Studios Hollywood"
+  | "Busch Gardens Tampa"
+  | "Knott's Berry Farm"
+  | "Six Flags Magic Mountain"
+  | "Six Flags Great Adventure";
 };
 
 export const rollercoasterHistory: Rollercoaster[] = [
@@ -252,5 +268,254 @@ export const rollercoasterHistory: Rollercoaster[] = [
   {
     name: "Rutschebanen",
     park: "Tivoli Gardens",
+  },
+  {
+    name: "Atlantica SuperSplash",
+    park: "Europa Park",
+  },
+  {
+    name: "Euro Mir",
+    park: "Europa Park",
+  },
+  {
+    name: "Eurosat",
+    park: "Europa Park",
+  },
+  {
+    name: "Matterhorn Blitz",
+    park: "Europa Park",
+  },
+  {
+    name: "Poseidon",
+    park: "Europa Park",
+  },
+  {
+    name: "Schweizer Bobbahn",
+    park: "Europa Park",
+  },
+  {
+    name: "Silver Star",
+    park: "Europa Park",
+  },
+  {
+    name: "Alpenexpress Enzian",
+    park: "Europa Park",
+  },
+  {name: "Skyways", park: "Clarence Pier"},
+  {
+    name: "Hydra the Revenge",
+    park: "Dorney Park",
+  },
+  {
+    name: "Possessed",
+    park: "Dorney Park",
+  },
+  {
+    name: "Steel Force",
+    park: "Dorney Park",
+  },
+  {
+    name: "Talon",
+    park: "Dorney Park",
+  },
+  {
+    name: "Thunderhawk",
+    park: "Dorney Park",
+  },
+  {
+    name: "Big Thunder Mountain Railroad",
+    park: "Walt Disney World - Magic Kingdom",
+  },
+  {
+    name: "Space Mountain",
+    park: "Walt Disney World - Magic Kingdom",
+  },
+  {
+    name: "Rock 'n' Roller Coaster",
+    park: "Walt Disney World - Magic Kingdom",
+  },
+  {
+    name: "Expedition Everest",
+    park: "Walt Disney World - Disney's Animal Kingdom",
+  },
+  {
+    name: "Dueling Dragons",
+    park: "Universal Studios Islands of Adventure",
+  },
+  {
+    name: "Incredible Hulk",
+    park: "Universal Studios Islands of Adventure",
+  },
+  {
+    name: "Harry Potter and the Escape from Gringotts",
+    park: "Universal Studios Florida",
+  },
+  {
+    name: "Hollywood Rip, Ride, Rockit",
+    park: "Universal Studios Florida",
+  },
+  {
+    name: "Revenge of the Mummy",
+    park: "Universal Studios Florida",
+  },
+  {
+    name: "Woody Woodpecker's Nuthouse Coaster",
+    park: "Universal Studios Florida",
+  },
+  {
+    name: "Cheetah Hunt",
+    park: "Busch Gardens Tampa",
+  },
+  {
+    name: "Cobra's Curse",
+    park: "Busch Gardens Tampa",
+  },
+  {
+    name: "Gwazi",
+    park: "Busch Gardens Tampa",
+  },
+  {
+    name: "Python",
+    park: "Busch Gardens Tampa",
+  },
+  {
+    name: "Kumba",
+    park: "Busch Gardens Tampa",
+  },
+  {
+    name: "Montu",
+    park: "Busch Gardens Tampa",
+  },
+  {
+    name: "Scorpion",
+    park: "Busch Gardens Tampa",
+  },
+  {
+    name: "SheiKra",
+    park: "Busch Gardens Tampa",
+  },
+  {
+    name: "SheiKra",
+    park: "Busch Gardens Tampa",
+  },
+  {
+    name: "Flight of the Hippogriff",
+    park: "Universal Studios Hollywood",
+  },
+  {
+    name: "Revenge of the Mummy the Ride",
+    park: "Universal Studios Hollywood",
+  },
+  {
+    name: "GhostRider",
+    park: "Knott's Berry Farm",
+  },
+  {
+    name: "Jaguar!",
+    park: "Knott's Berry Farm",
+  },
+  {
+    name: "Silver Bullet",
+    park: "Knott's Berry Farm",
+  },
+  {
+    name: "Xcelerator",
+    park: "Knott's Berry Farm",
+  },
+  {
+    name: "Montezooma's Revenge",
+    park: "Knott's Berry Farm",
+  },
+  {
+    name: "Boomerang",
+    park: "Knott's Berry Farm",
+  },
+  {
+    name: "Pony Express",
+    park: "Knott's Berry Farm",
+  },
+  {
+    name: "Terminator Salvation: The Ride",
+    park: "Six Flags Magic Mountain",
+  },
+  {
+    name: "Batman The Ride",
+    park: "Six Flags Magic Mountain",
+  },
+  {
+    name: "Goliath",
+    park: "Six Flags Magic Mountain",
+  },
+  {
+    name: "New Revolution",
+    park: "Six Flags Magic Mountain",
+  },
+  {
+    name: "Ninja",
+    park: "Six Flags Magic Mountain",
+  },
+  {
+    name: "Riddler's Revenge",
+    park: "Six Flags Magic Mountain",
+  },
+  {
+    name: "Scream!",
+    park: "Six Flags Magic Mountain",
+  },
+  {
+    name: "Superman: Escape from Krypton",
+    park: "Six Flags Magic Mountain",
+  },
+  {
+    name: "Tatsu",
+    park: "Six Flags Magic Mountain",
+  },
+  {
+    name: "Viper",
+    park: "Six Flags Magic Mountain",
+  },
+  {
+    name: "Colossus",
+    park: "Six Flags Magic Mountain",
+  },
+  {
+    name: "Déjà Vu",
+    park: "Six Flags Magic Mountain",
+  },
+  {
+    name: "Batman The Ride",
+    park: "Six Flags Great Adventure",
+  },
+  {
+    name: "Dark Knight",
+    park: "Six Flags Great Adventure",
+  },
+  {
+    name: "Green Lantern",
+    park: "Six Flags Great Adventure",
+  },
+  {
+    name: "Kingda Ka",
+    park: "Six Flags Great Adventure",
+  },
+  {
+    name: "Medusa",
+    park: "Six Flags Great Adventure",
+  },
+  {
+    name: "Nitro",
+    park: "Six Flags Great Adventure",
+  },
+  {
+    name: "Superman - Ultimate Flight",
+    park: "Six Flags Great Adventure",
+  },
+  {
+    name: "Great American Scream Machine",
+    park: "Six Flags Great Adventure",
+  },
+  {
+    name: "Rolling Thunder",
+    park: "Six Flags Great Adventure",
   }
 ];
