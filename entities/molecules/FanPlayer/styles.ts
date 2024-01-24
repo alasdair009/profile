@@ -1,7 +1,7 @@
-"use client"
-import styled, {keyframes} from "styled-components";
+"use client";
+import styled, { keyframes } from "styled-components";
 import fanSvg from "./assets/fan.svg";
-import {colors} from "@/entities";
+import { colors } from "@/entities";
 
 const rotate = keyframes`
     0% {
@@ -24,26 +24,26 @@ const rotate = keyframes`
     }
 `;
 export const Root = styled.div`
-    align-items: center;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    position: relative;
-    width: 100vw;
-    
-    &::before {
-        animation: ${rotate} 6s infinite linear;
-        aspect-ratio: 1;
-        background: ${colors.greenGrass};
-        mask: url(${fanSvg.src}) no-repeat center;
-        max-height: 100%;
-        max-width: 100%;
-        content: "";
-        left: 50%;
-        opacity: 0.5;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-    }
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+
+  &::before {
+    animation: ${rotate} 6s infinite linear;
+    aspect-ratio: 1;
+    background: ${colors.greenGrass};
+    mask: url(${fanSvg.src}) no-repeat center;
+    max-height: 100%;
+    max-width: 100%;
+    content: "";
+    left: 50%;
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
 `;

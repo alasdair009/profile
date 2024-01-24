@@ -5,6 +5,7 @@ import StyledComponentsRegistry from "@/lib/registry";
 import { Analytics } from "@vercel/analytics/react";
 import { generateMetaData } from "@/lib/metadata";
 import ServiceWorker from "@/app/ServiceWorker";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,6 +41,7 @@ export default function RootLayout({
           <main>{children}</main>
         </StyledComponentsRegistry>
         <ServiceWorker />
+        <SpeedInsights />
       </body>
     </html>
   );
