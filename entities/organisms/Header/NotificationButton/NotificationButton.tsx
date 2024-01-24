@@ -50,7 +50,7 @@ export function NotificationButton({
         $isSubscribed={isSubscribed}
         style={{
           background: notificationState === "granted" ? "green" : "red",
-          display: "none"
+          display: "none",
         }}
       />
     </Root>

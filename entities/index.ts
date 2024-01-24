@@ -22,6 +22,7 @@ export {
   sizes,
 } from "./design-tokens/dimensions";
 
+export { Audio } from "./atoms/Audio";
 export { BaseInput } from "./atoms/BaseInput";
 export { BaseTextArea } from "./atoms/BaseTextArea";
 export { BlockQuote } from "./atoms/BlockQuote";
