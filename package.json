@@ -17,9 +17,9 @@
   "dependencies": {
     "@vercel/analytics": "^1.1.1",
     "@vercel/og": "^0.5.20",
-    "next": "13.5.6",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "^14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-scroll-parallax": "^3.4.3",
     "three": "^0.157.0"
   },
@@ -43,7 +43,7 @@
     "chromatic": "^9.0.0",
     "dotenv": "^16.3.1",
     "eslint": "^8",
-    "eslint-config-next": "13.5.6",
+    "eslint-config-next": "^14.1.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-storybook": "^0.6.15",
     "husky": "^8.0.3",
