@@ -9,6 +9,7 @@ import {
   HorizontalRule,
   Lightning,
   Link,
+  MorphingText,
   Paragraph,
   SocialMediaBar,
   Spacer,
@@ -47,6 +48,14 @@ export default function Home() {
       <HorizontalRule margin="none" />
       <FixedPlate />
       <HorizontalRule margin="none" />
+      <Lightning>
+        <Heading level="h1" as="h2" align="center" textShadow={true}>
+          Bringing the web to life...
+        </Heading>
+      </Lightning>
+      <HorizontalRule margin="none" />
+      <MorphingText values={["The", "Possibilities", "Are", "Endless"]} />
+      <HorizontalRule margin="bottom" />
       <CopyBlock>
         <Heading level="h2">Get in touch</Heading>
         <Paragraph>
@@ -63,11 +72,6 @@ export default function Home() {
       <Spacer multiplier={2} />
       <ContactForm />
       <HorizontalRule margin="top" />
-      <Lightning>
-        <Heading level="h1" as="h2" align="center" textShadow={true}>
-          Bringing the web to life...
-        </Heading>
-      </Lightning>
     </>
   );
 }

@@ -55,6 +55,7 @@ export { ContentPlate } from "./organisms/ContentPlate";
 export { FixedPlate } from "./organisms/FixedPlate";
 export { Header } from "./organisms/Header";
 export { Lightning } from "./organisms/Lightning";
+export { MorphingText } from "./organisms/MorphingText";
 export { SocialMediaBar } from "./organisms/SocialMediaBar";
 // export { Splash } from "./organisms/Splash"; //TODO Causes an intermittent undefined Splash error
 export { Trampoline } from "./organisms/Trampoline";
