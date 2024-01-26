@@ -24,18 +24,30 @@ type HeadingProps = {
    * Color of the text
    */
   color?: Property.Color;
+  /**
+   * Apply a subtle shadow behind the text
+   */
+  textShadow?: boolean;
 } & HTMLAttributes<HTMLHeadingElement>;
 export function Heading({
   level = "h1",
   as,
   align = "left",
   color = colors.whiteGhost,
+  textShadow = false,
   children,
   ...rest
 }: HeadingProps) {
   const headingAs = as ? as : level;
   return (
-    <Root $color={color} $level={level} as={headingAs} $align={align} {...rest}>
+    <Root
+      $color={color}
+      $level={level}
+      as={headingAs}
+      $align={align}
+      $textShadow={textShadow}
+      {...rest}
+    >
       {children}
     </Root>
   );

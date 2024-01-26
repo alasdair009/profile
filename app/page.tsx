@@ -7,6 +7,7 @@ import {
   FixedPlate,
   Heading,
   HorizontalRule,
+  Lightning,
   Link,
   Paragraph,
   SocialMediaBar,
@@ -61,8 +62,12 @@ export default function Home() {
       <SocialMediaBar />
       <Spacer multiplier={2} />
       <ContactForm />
-      <HorizontalRule margin="none" />
-      <Trampoline />
+      <HorizontalRule margin="top" />
+      <Lightning>
+        <Heading level="h1" as="h2" align="center" textShadow={true}>
+          Bringing the web to life...
+        </Heading>
+      </Lightning>
     </>
   );
 }

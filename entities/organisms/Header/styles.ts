@@ -4,6 +4,7 @@ import { rem, rgba } from "polished";
 import {
   Button,
   colors,
+  device,
   globalContentMaxWidth,
   globalDecorationMaxWidth,
   Link,
@@ -27,6 +28,7 @@ export const Root = styled.header`
 
 export const Inner = styled.nav`
   display: flex;
+  height: 100%;
   margin: 0 auto;
   max-width: ${rem(globalContentMaxWidth)};
   width: 100%;
@@ -47,13 +49,18 @@ export const HeaderLinks = styled.div`
   justify-content: flex-end;
 `;
 
-export const HeaderLink = styled(Link)`
+export const HeaderLink = styled(Link)<{ $hideOnNarrow: boolean }>`
   align-items: center;
-  display: flex;
+  display: ${({ $hideOnNarrow }) => ($hideOnNarrow ? "none" : "flex")};
   flex-direction: row-reverse;
   height: 100%;
   justify-content: center;
   padding-top: ${sizes.s4.rem};
+  white-space: nowrap;
+
+  @media (${device.xsmall}) {
+    display: flex;
+  }
 `;
 
 export const NotificationButton = styled(Button)``;

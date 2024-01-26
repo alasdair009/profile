@@ -21,7 +21,9 @@ export function Header({ children, ...rest }: HeaderProps) {
           <HeaderLogo src={amLogo} alt="AM logo" height={sizes.s32.raw} />
         </Link>
         <HeaderLinks>
-          <HeaderLink href="/">Home</HeaderLink>
+          <HeaderLink href="/" $hideOnNarrow={true}>
+            Home
+          </HeaderLink>
           <HeaderLink href="/portfolio">Portfolio</HeaderLink>
           <HeaderLink href="/about-me">About Me</HeaderLink>
           <Header.NotificationButton

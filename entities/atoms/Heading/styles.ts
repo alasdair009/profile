@@ -1,15 +1,20 @@
 "use client";
 import styled from "styled-components";
-import { globalTextMaxWidth, sizes } from "../../design-tokens/dimensions";
-import { colors } from "../../design-tokens/colors";
 import { rem } from "polished";
-import { headingSizes, HeadingTypes } from "../../design-tokens/typography";
+import {
+  colors,
+  headingSizes,
+  HeadingTypes,
+  globalTextMaxWidth,
+  sizes,
+} from "@/entities";
 import { Property } from "csstype";
 
 export const Root = styled.h1<{
   $color: Property.Color;
   $level: HeadingTypes;
   $align: Property.TextAlign;
+  $textShadow: boolean;
 }>`
   color: ${({ $color }) => $color};
   font-size: ${({ $level }) => headingSizes[$level]};
@@ -18,6 +23,8 @@ export const Root = styled.h1<{
   padding-bottom: ${({ $level }) => ($level === "h1" ? sizes.s8.rem : 0)};
   position: relative;
   text-align: ${({ $align }) => $align};
+  text-shadow: ${({ $textShadow }) =>
+    $textShadow ? `0 0 ${rem(4)} ${colors.blackEvil}` : "none"};
   width: fit-content;
 
   &::after {
