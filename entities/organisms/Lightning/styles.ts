@@ -7,13 +7,7 @@ import {
   sizes,
 } from "@/entities";
 import { rem, rgba } from "polished";
-import Image, { getImageProps } from "next/image";
-import rainImage from "./assets/rain.png";
-import { getBackgroundImage } from "@/lib/getBackgroundImage";
-
-const {
-  props: { src: rainImageSrc, srcSet: rainImageSourceSet },
-} = getImageProps({ alt: "", height: 320, width: 480, src: rainImage.src });
+import Image from "next/image";
 
 const rain = keyframes`
     from {
@@ -58,7 +52,7 @@ export const Inner = styled.div<{ $rainSpeedDuration: number }>`
   &::before {
     animation: ${rain} ${({ $rainSpeedDuration }) => $rainSpeedDuration}s linear
       infinite;
-    background-image: ${getBackgroundImage(rainImageSourceSet)};
+
     content: "";
     height: 100%;
     left: 0;
@@ -68,6 +62,19 @@ export const Inner = styled.div<{ $rainSpeedDuration: number }>`
     width: 100%;
     z-index: 1;
   }
+`;
+
+export const RainCanvasWrapper = styled.div`
+  height: 100%;
+  min-height: ${sizes.s128.rem};
+  position: absolute;
+  width: 100%;
+`;
+
+export const RainCanvas = styled.canvas`
+  height: 100%;
+  position: absolute;
+  width: 100%;
 `;
 
 export const Background = styled(Image)<{ $frequency: number }>`

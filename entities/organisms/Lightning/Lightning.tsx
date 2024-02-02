@@ -2,9 +2,7 @@ import { HTMLAttributes } from "react";
 import { Background, Content, Inner, Root, Strike } from "./styles";
 import backgroundImage from "./assets/background.jpg";
 import strikeImage from "./assets/lightining.png";
-import { getImageProps } from "next/image";
-import rainImage from "./assets/rain.png";
-import { getBackgroundImage } from "@/lib/getBackgroundImage";
+import { Rain } from "./Rain";
 
 type LightningProps = {
   frequency?: number;
@@ -16,20 +14,15 @@ export function Lightning({
   children,
   ...rest
 }: LightningProps) {
-  const {
-    props: { src: rainImageSrc, srcSet: rainImageSourceSet },
-  } = getImageProps({ alt: "", height: 320, width: 480, src: rainImage.src });
   return (
     <Root {...rest}>
-      <Inner
-        $rainSpeedDuration={rainSpeedDuration}
-        style={{ backgroundImage: getBackgroundImage(rainImageSourceSet) }}
-      >
+      <Inner $rainSpeedDuration={rainSpeedDuration}>
         <Background
           src={backgroundImage}
           alt={"Park background"}
           $frequency={frequency}
         />
+        <Rain />
         <Strike
           src={strikeImage}
           alt={"Rain"}
@@ -41,3 +34,5 @@ export function Lightning({
     </Root>
   );
 }
+
+Lightning.Rain = Rain;
