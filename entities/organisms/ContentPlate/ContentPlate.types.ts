@@ -9,5 +9,6 @@ export type ContentPlateProps = {
   backgroundImageAlt?: string;
   foregroundImage?: StaticImageData;
   foregroundImageAlt?: string;
+  embedUrl?: string;
   children: ReactNode;
 } & HTMLAttributes<HTMLDivElement>;

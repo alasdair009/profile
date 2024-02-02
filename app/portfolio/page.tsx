@@ -320,10 +320,9 @@ export default function Portfolio() {
         </Paragraph>
       </ContentPlate>
       <ContentPlate
-        foregroundImage={runeFestPanelImage}
-        foregroundImageAlt="The web team at RuneFest 2018 on stage"
         backgroundCss={`linear-gradient(#101d23,black)`}
         orientation="right"
+        embedUrl="https://www.youtube.com/embed/JbVKUi9wezo?si=M2ZfSmqERR2hwzmV"
       >
         <Heading level="h3">RuneFest Panel</Heading>
         <Paragraph>
@@ -331,7 +330,6 @@ export default function Portfolio() {
           one of the stages at the event explaining the work that goes into
           managing Jagex&apos;s web services.
         </Paragraph>
-        <IFrame src="https://www.youtube.com/embed/JbVKUi9wezo?si=M2ZfSmqERR2hwzmV" />
       </ContentPlate>
     </>
   );

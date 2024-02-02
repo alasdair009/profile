@@ -5,6 +5,7 @@ import {
   device,
   globalContentMaxWidth,
   globalDecorationMaxWidth,
+  IFrame,
   sizes,
 } from "@/entities";
 import { rem } from "polished";
@@ -71,6 +72,18 @@ export const ForegroundImage = styled(Image)`
   max-width: 100%;
   object-fit: contain;
   width: ${rem(400)};
+`;
+
+export const FrameBoxWrapper = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: ${sizes.s16.rem};
+  width: 100%;
+
+  @media (${flipPoint}) {
+    width: 50%;
+  }
 `;
 
 export const CopyBox = styled.div`

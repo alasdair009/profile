@@ -2,6 +2,7 @@
 import { ProgressRing, Root } from "./styles";
 import { HTMLAttributes, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { sizes } from "@/entities";
 
 type ScoreCounterProps = {
   value?: number;
@@ -10,7 +11,7 @@ type ScoreCounterProps = {
 export function ScoreCounter({ value = 100, ...rest }: ScoreCounterProps) {
   const [progressValue, setProgressValue] = useState(0);
 
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({ threshold: 1 });
 
   useEffect(() => {
     if (inView) {

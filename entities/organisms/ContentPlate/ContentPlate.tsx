@@ -5,15 +5,18 @@ import {
   ForegroundWrapper,
   CopyBox,
   ForegroundImage,
+  FrameBoxWrapper,
 } from "./styles";
 import Image from "next/image";
 import { ContentPlateProps } from "./ContentPlate.types";
+import { IFrame } from "@/entities";
 
 export function ContentPlate({
   orientation = "left",
   backgroundCss = "none",
   backgroundImage,
   backgroundImageAlt,
+  embedUrl,
   foregroundImage,
   foregroundImageAlt,
   children,
@@ -30,6 +33,11 @@ export function ContentPlate({
       )}
       <Inner $orientation={orientation}>
         <CopyBox>{children}</CopyBox>
+        {embedUrl && (
+          <FrameBoxWrapper>
+            <IFrame src={embedUrl} />
+          </FrameBoxWrapper>
+        )}
         {foregroundImage && foregroundImageAlt && (
           <ForegroundWrapper>
             <ForegroundImage src={foregroundImage} alt={foregroundImageAlt} />
