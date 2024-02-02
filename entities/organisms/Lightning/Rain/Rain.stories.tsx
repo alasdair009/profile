@@ -13,6 +13,7 @@ const meta: Meta<typeof Rain> = {
   args: {
     rainDrops: 200,
     rainColor: "rgb(174,194,224)",
+    speedRainTrough: 25,
   },
   argTypes: {
     rainDrops: {
@@ -24,6 +25,9 @@ const meta: Meta<typeof Rain> = {
         presetColors: ["rgb(174,194,224)", colors.greenGrass],
       },
     },
+    speedRainTrough: {
+      control: { type: "range", min: 1, max: 25, step: 1 },
+    }
   },
 };
 export default meta;

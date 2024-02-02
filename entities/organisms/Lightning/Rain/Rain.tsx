@@ -4,7 +4,7 @@ import {
   RainCanvasWrapper as Root,
   RainCanvas,
 } from "@/entities/organisms/Lightning/styles";
-import { rgba } from "polished";
+import {lighten, rgba} from "polished";
 
 type RainProps = {
   rainDrops?: number;
@@ -46,6 +46,7 @@ export function Rain({
   const rainTroughCanvasRef = useRef<HTMLCanvasElement | null>(null);
   const rain: RainDrop[] = [];
   const rainTrough: RainTrough[] = [];
+  const troughColor = lighten(0.02, rainColor);
 
   const drawRain = (ctx: CanvasRenderingContext2D, i: number) => {
     ctx.beginPath();
@@ -68,8 +69,8 @@ export function Rain({
       0,
       rainTrough[i].y + rainTrough[i].length
     );
-    grd.addColorStop(0, "rgba(255,255,255,0)");
-    grd.addColorStop(1, "rgba(255,255,255," + rainTrough[i].opacity + ")");
+    grd.addColorStop(0, rgba(troughColor, 0));
+    grd.addColorStop(1, rgba(troughColor, rainTrough[i].opacity));
 
     ctx.fillStyle = grd;
     ctx.fillRect(rainTrough[i].x, rainTrough[i].y, 1, rainTrough[i].length);
@@ -124,7 +125,7 @@ export function Rain({
     h: number
   ) => {
     clear(ctx, w, h);
-    for (var i = 0; i < rainDrops; i++) {
+    for (let i = 0; i < rainDrops; i++) {
       if (rainTrough[i].y >= h) {
         rainTrough[i].y = h - rainTrough[i].y - rainTrough[i].length * 5;
       } else {
