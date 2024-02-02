@@ -4,12 +4,12 @@ import {
   RainCanvasWrapper as Root,
   RainCanvas,
 } from "@/entities/organisms/Lightning/styles";
-import {lighten, rgba} from "polished";
+import { lighten, rgba } from "polished";
 
 type RainProps = {
   rainDrops?: number;
   rainColor?: string;
-  speedRainTrough: number;
+  speedRainTrough?: number;
 } & HTMLAttributes<HTMLDivElement>;
 
 type RainDrop = {

@@ -4,12 +4,6 @@ import { colors } from "@/entities";
 
 const meta: Meta<typeof Rain> = {
   component: Rain,
-  parameters: {
-    docs: {
-      inlineStories: false,
-      iframeHeight: 400,
-    },
-  },
   args: {
     rainDrops: 200,
     rainColor: "rgb(174,194,224)",
@@ -27,7 +21,7 @@ const meta: Meta<typeof Rain> = {
     },
     speedRainTrough: {
       control: { type: "range", min: 1, max: 25, step: 1 },
-    }
+    },
   },
 };
 export default meta;
