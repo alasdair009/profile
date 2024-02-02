@@ -6,17 +6,15 @@ import { Rain } from "./Rain";
 
 type LightningProps = {
   frequency?: number;
-  rainSpeedDuration?: number;
 } & HTMLAttributes<HTMLDivElement>;
 export function Lightning({
   frequency = 2,
-  rainSpeedDuration = 0.3,
   children,
   ...rest
 }: LightningProps) {
   return (
     <Root {...rest}>
-      <Inner $rainSpeedDuration={rainSpeedDuration}>
+      <Inner>
         <Background
           src={backgroundImage}
           alt={"Park background"}

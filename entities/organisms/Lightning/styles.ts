@@ -9,16 +9,6 @@ import {
 import { rem, rgba } from "polished";
 import Image from "next/image";
 
-const rain = keyframes`
-    from {
-        background-position: 0 0;
-    }
-
-    to {
-        background-position: -20% -100%;
-    }
-`;
-
 const strikeAnimation = keyframes`
     0%, 49%, 55%, 100% {
         opacity: 0;
@@ -40,7 +30,7 @@ export const Root = styled.section`
   position: relative;
 `;
 
-export const Inner = styled.div<{ $rainSpeedDuration: number }>`
+export const Inner = styled.div`
   display: flex;
   height: 100vh;
   margin: 0 auto;
@@ -48,20 +38,6 @@ export const Inner = styled.div<{ $rainSpeedDuration: number }>`
   overflow: hidden;
   position: relative;
   width: 100%;
-
-  &::before {
-    animation: ${rain} ${({ $rainSpeedDuration }) => $rainSpeedDuration}s linear
-      infinite;
-
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transform: rotate(180deg);
-    width: 100%;
-    z-index: 1;
-  }
 `;
 
 export const RainCanvasWrapper = styled.div`
