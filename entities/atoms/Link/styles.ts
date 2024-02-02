@@ -43,12 +43,14 @@ export const Root = styled(Link)<{ $variant: LinkVariant }>`
   font-size: ${({ $variant }) =>
     $variant === "large" ? fontSizes.large.rem : "inherit"};
   font-weight: ${fontWeights.bold};
+  overflow-x: hidden;
   padding-bottom: ${({ $variant }) =>
     $variant === "large" ? sizes.s16.rem : sizes.s8.rem};
   position: relative;
   text-decoration: none;
   text-transform: ${({ $variant }) =>
     $variant === "large" ? "uppercase" : null};
+  word-break: break-word;
 
   &:hover {
     filter: brightness(1.3);

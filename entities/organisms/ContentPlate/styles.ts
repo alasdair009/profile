@@ -52,11 +52,14 @@ export const ForegroundWrapper = styled.figure`
   align-items: center;
   display: flex;
   justify-content: center;
+  margin: 0;
   overflow: hidden;
+  padding: ${sizes.s16.rem};
   position: relative;
   width: 100%;
 
   @media (${flipPoint}) {
+    padding: 0;
     width: 50%;
   }
 `;
