@@ -43,7 +43,6 @@ export function Rain({
   ...rest
 }: RainProps) {
   const rainCanvasRef = useRef<HTMLCanvasElement | null>(null);
-  const rainTroughCanvasRef = useRef<HTMLCanvasElement | null>(null);
   const rain: RainDrop[] = [];
   const rainTrough: RainTrough[] = [];
   const troughColor = lighten(0.02, rainColor);
@@ -63,7 +62,7 @@ export function Rain({
 
   const drawRainTrough = (ctx: CanvasRenderingContext2D, i: number) => {
     ctx.beginPath();
-    var grd = ctx.createLinearGradient(
+    const grd = ctx.createLinearGradient(
       0,
       rainTrough[i].y,
       0,
@@ -106,8 +105,9 @@ export function Rain({
     }
   };
 
-  const animateRain = (ctx: CanvasRenderingContext2D, w: number, h: number) => {
+  const animate = (ctx: CanvasRenderingContext2D, w: number, h: number) => {
     clear(ctx, w, h);
+
     for (let i = 0; i < rainDrops; i++) {
       rain[i].x += rain[i].xs;
       rain[i].y += rain[i].ys;
@@ -116,16 +116,7 @@ export function Rain({
         rain[i].y = -20;
       }
       drawRain(ctx, i);
-    }
-  };
 
-  const animateRainTrough = (
-    ctx: CanvasRenderingContext2D,
-    w: number,
-    h: number
-  ) => {
-    clear(ctx, w, h);
-    for (let i = 0; i < rainDrops; i++) {
       if (rainTrough[i].y >= h) {
         rainTrough[i].y = h - rainTrough[i].y - rainTrough[i].length * 5;
       } else {
@@ -137,14 +128,12 @@ export function Rain({
 
   useEffect(() => {
     const rainCanvas = rainCanvasRef.current;
-    const rainTroughCanvas = rainTroughCanvasRef.current;
-    if (!rainCanvas || !rainTroughCanvas) {
+    if (!rainCanvas) {
       return;
     }
 
     const rainContext = rainCanvas.getContext("2d");
-    const rainTroughContext = rainTroughCanvas.getContext("2d");
-    if (!rainContext || !rainTroughContext) {
+    if (!rainContext) {
       return;
     }
 
@@ -160,8 +149,7 @@ export function Rain({
     createRainTrough(w, h);
 
     const animloop = () => {
-      animateRain(rainContext, w, h);
-      animateRainTrough(rainTroughContext, w, h);
+      animate(rainContext, w, h);
       requestAnimationFrame(animloop);
     };
     animloop();
@@ -170,7 +158,6 @@ export function Rain({
   return (
     <Root {...rest}>
       <RainCanvas ref={rainCanvasRef} />
-      <RainCanvas ref={rainTroughCanvasRef} />
     </Root>
   );
 }
