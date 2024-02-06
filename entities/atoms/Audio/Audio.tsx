@@ -12,7 +12,7 @@ export function Audio({
   src,
   controls = true,
   autoPlay = true,
-    loop = true,
+  loop = true,
   ...rest
 }: AudioProps) {
   return (
