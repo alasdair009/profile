@@ -8,6 +8,7 @@ export function SocialMediaBar({ ...rest }: SocialMediaBarProps) {
     <Root {...rest}>
       <SocialMediaLink variant="x">X</SocialMediaLink>
       <SocialMediaLink variant="linkedin">LinkedIn</SocialMediaLink>
+      <SocialMediaLink variant="github">GitHub</SocialMediaLink>
     </Root>
   );
 }

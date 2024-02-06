@@ -17,3 +17,9 @@ export const LinkedIn: StoryObj<typeof SocialMediaLink> = {
     variant: "linkedin",
   },
 };
+
+export const GitHub: StoryObj<typeof SocialMediaLink> = {
+  args: {
+    variant: "github",
+  },
+};

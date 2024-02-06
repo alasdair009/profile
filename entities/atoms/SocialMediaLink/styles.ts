@@ -5,9 +5,12 @@ import { SocialMediaLinkVariant } from "./SocialMediaLinks.types";
 import { colors, sizes } from "@/entities";
 import xIcon from "./assets/x.svg";
 import linkedInIcon from "./assets/linkedin.svg";
+import gitHubIcon from "./assets/github.svg";
 
 const getMaskIcon = (variant: SocialMediaLinkVariant) => {
   switch (variant) {
+    case "github":
+      return gitHubIcon.src;
     case "linkedin":
       return linkedInIcon.src;
     case "x":

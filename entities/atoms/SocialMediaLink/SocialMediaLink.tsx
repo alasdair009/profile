@@ -8,6 +8,8 @@ type SocialMediaProps = {
 
 const getSocialMediaUrl = (variant: SocialMediaLinkVariant) => {
   switch (variant) {
+    case "github":
+      return "https://github.com/alasdair009";
     case "linkedin":
       return "https://www.linkedin.com/in/alasdairmacrae/";
     case "x":
