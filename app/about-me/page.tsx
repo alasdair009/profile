@@ -1,17 +1,19 @@
 import {
-    BlockQuote, colors,
-    ContactForm, ContentPlate,
-    CopyBlock,
-    FixedPlate,
-    globalContentMaxWidth,
-    globalDecorationMaxWidth,
-    Heading,
-    HorizontalRule,
-    Paragraph,
-    sizes,
-    SocialMediaBar,
-    Spacer,
-    Video,
+  BlockQuote,
+  colors,
+  ContactForm,
+  ContentPlate,
+  CopyBlock,
+  FixedPlate,
+  globalContentMaxWidth,
+  globalDecorationMaxWidth,
+  Heading,
+  HorizontalRule,
+  Paragraph,
+  sizes,
+  SocialMediaBar,
+  Spacer,
+  Video,
 } from "@/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
@@ -93,13 +95,37 @@ export default function AboutMe() {
           being <strong>Tatsu</strong> at Six Flags Magic Mountain closely
           followed by <strong>Kingda Ka</strong> at Six Flags Great Adventure.
         </Paragraph>
-          <Paragraph>I enjoy playing computer games especially construction and management simulators such as City Skylines and Planet Coaster. I am also partial to the occasional game of Rocket League - nice shot!</Paragraph>
+        <Paragraph>
+          I enjoy playing computer games especially construction and management
+          simulators such as City Skylines and Planet Coaster. I am also partial
+          to the occasional game of Rocket League - nice shot!
+        </Paragraph>
       </CopyBlock>
-        <figure style={{borderBottom: `${rem(1)} solid ${colors.greenGrass}`, borderTop: `${rem(1)} solid ${colors.greenGrass}`, margin: "0 auto", maxWidth: rem(globalDecorationMaxWidth), position: "relative", width: "100%"}}>
-      <Image src={skylinesImage} alt="An ariel view of a city in the City Skyliens game" style={{display: "block", objectFit: "cover", opacity: 0.5, height: "auto", maxHeight: sizes.s512.rem, width: "100%"}} />
-        </figure>
+      <figure
+        style={{
+          borderBottom: `${rem(1)} solid ${colors.greenGrass}`,
+          borderTop: `${rem(1)} solid ${colors.greenGrass}`,
+          margin: "0 auto",
+          maxWidth: rem(globalDecorationMaxWidth),
+          position: "relative",
+          width: "100%",
+        }}
+      >
+        <Image
+          src={skylinesImage}
+          alt="An ariel view of a city in the City Skyliens game"
+          style={{
+            display: "block",
+            objectFit: "cover",
+            opacity: 0.5,
+            height: "auto",
+            maxHeight: sizes.s512.rem,
+            width: "100%",
+          }}
+        />
+      </figure>
       <CopyBlock>
-          <Spacer multiplier={4} />
+        <Spacer multiplier={4} />
         <Paragraph>
           When at home I am a smart-home enthusiast having been playing around
           with Apple&apos;s HomeKit platform for many years. I have been
