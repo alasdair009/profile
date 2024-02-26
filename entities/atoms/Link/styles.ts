@@ -43,9 +43,11 @@ export const Root = styled(Link)<{ $variant: LinkVariant }>`
   font-size: ${({ $variant }) =>
     $variant === "large" ? fontSizes.large.rem : "inherit"};
   font-weight: ${fontWeights.bold};
-  overflow-x: hidden;
+  overflow: hidden;
   padding-bottom: ${({ $variant }) =>
-    $variant === "large" ? sizes.s16.rem : sizes.s8.rem};
+    $variant === "large"
+      ? `calc(${sizes.s16.rem} + 2px)`
+      : `calc(${sizes.s8.rem} + 2px)`};
   position: relative;
   text-decoration: none;
   text-transform: ${({ $variant }) =>

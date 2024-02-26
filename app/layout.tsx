@@ -34,7 +34,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Analytics />
         <StyledComponentsRegistry>
           <GlobalStyle />
           <Header />
@@ -42,6 +41,7 @@ export default function RootLayout({
         </StyledComponentsRegistry>
         <ServiceWorker />
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

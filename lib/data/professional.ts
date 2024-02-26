@@ -101,7 +101,7 @@ export const careerHistory: CareerHistoryData = {
     {
       company: "codemasters",
       position: "Technical Level Designer",
-      startDate: new Date("2015-11-02"),
+      startDate: new Date("2011-02-01"),
       field: "design",
       responsibilities: [
         "Spline and asset placement on F1 2011 tracks",
