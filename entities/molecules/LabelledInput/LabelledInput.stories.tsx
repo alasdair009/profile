@@ -11,7 +11,7 @@ const meta: Meta<typeof LabelledInput> = {
     label: "Text entry",
     type: "text",
     errorText: "",
-  }
+  },
 };
 export default meta;
 

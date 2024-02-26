@@ -20,6 +20,8 @@ export function ErrorText({ shown = true, children, ...rest }: ErrorTextProps) {
       fontSize="small"
       $shown={shown}
       {...rest}
-    >{children}</Root>
+    >
+      {children}
+    </Root>
   );
 }

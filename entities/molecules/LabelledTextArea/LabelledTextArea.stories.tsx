@@ -9,7 +9,7 @@ const meta: Meta<typeof LabelledTextArea> = {
     isInvalid: false,
     value: "hello world!",
     name: "textareainput",
-  }
+  },
 };
 export default meta;
 

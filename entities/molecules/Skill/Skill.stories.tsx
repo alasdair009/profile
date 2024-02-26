@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Skill } from "./Skill";
-import {colors} from "@/entities";
+import { colors } from "@/entities";
 
 const meta: Meta<typeof Skill> = {
   component: Skill,
@@ -15,13 +15,9 @@ const meta: Meta<typeof Skill> = {
     copy: "How awesome is this?",
     background: colors.greenGrass,
     grid: {
-      xsmall: {
-
-      },
-      small: {
-
-      }
-    }
+      xsmall: {},
+      small: {},
+    },
   },
 };
 export default meta;

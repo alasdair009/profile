@@ -14,7 +14,7 @@ export const Root = styled.div`
   display: flex;
   height: ${sizes.s96.rem};
   justify-content: center;
-    position: relative;
+  position: relative;
 
   &::before {
     background: radial-gradient(
