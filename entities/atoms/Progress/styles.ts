@@ -14,13 +14,14 @@ export const Root = styled.div`
   display: flex;
   height: ${sizes.s96.rem};
   justify-content: center;
+    position: relative;
 
   &::before {
     background: radial-gradient(
       transparent,
       transparent 30%,
       ${rgba(colors.blackEvil, 0.5)} 30%,
-      ${rgba(colors.blackEvil, 0.5)} 50%,
+      ${rgba(colors.blackEvil, 0.5)} 70%,
       transparent 50%
     );
     border-radius: 50%;

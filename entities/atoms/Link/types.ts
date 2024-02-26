@@ -4,7 +4,7 @@ export type LinkVariant = "large" | "regular";
 
 export type LinkProps = {
   /**
-   *
+   * Visual variant of the link.
    */
   variant?: LinkVariant;
   /**

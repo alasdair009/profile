@@ -4,7 +4,7 @@ import { sizes } from "@/entities";
 
 type HeadingProps = {
   /**
-   * Base color of the particles
+   * Base color of the particles.
    */
   baseColor?: CSSProperties["color"];
   /**
@@ -12,11 +12,11 @@ type HeadingProps = {
    */
   numberOfParticles?: number;
   /**
-   * Diameter of each particle
+   * Diameter of each particle.
    */
   particleSize?: number;
   /**
-   * Time in seconds for the particles to complete their journey
+   * Time in seconds for the particles to complete their journey.
    */
   duration?: number;
 } & HTMLAttributes<HTMLDivElement>;

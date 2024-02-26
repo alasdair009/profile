@@ -4,17 +4,17 @@ import { Property } from "csstype";
 
 type TextMaskProps = {
   /**
-   * The fill colour around the text
+   * Fill colour around the text.
    */
   maskFill: Property.Fill;
   /**
-   * The text for the mask
+   * Text for the mask.
    */
   text: string;
 } & HTMLAttributes<HTMLDivElement>;
 
 /**
- * A mask formed from text to place over a background
+ * Mask formed from text to place over a background.
  */
 export function TextMask({ maskFill, text, ...rest }: TextMaskProps) {
   return (

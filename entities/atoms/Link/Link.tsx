@@ -4,7 +4,7 @@ import { isExternalDomain } from "@/lib/domains";
 import newTabIcon from "../../assets/new-tab-icon.svg";
 
 /**
- * Link to a new path or url
+ * Link to a new path or url.
  */
 export function Link({
   variant = "regular",

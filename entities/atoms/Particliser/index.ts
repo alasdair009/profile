@@ -1,1 +1,0 @@
-export { Particliser } from "./Particliser";

@@ -3,13 +3,31 @@ import { HTMLAttributes, ReactNode } from "react";
 import { StaticImageData } from "next/image";
 
 type FlurryProps = {
+  /**
+   * Amount of particles per plate.
+   */
   particlesPerPlate?: number;
+  /**
+   * Base duration of the animation other blocks are based on.
+   */
   particleBaseDuration?: number;
+  /**
+   * Amount of particle blocks.
+   */
   particleBlocks?: number;
+  /**
+   * Background image to display.
+   */
   background?: StaticImageData;
+  /**
+   * Alt text for the background image.
+   */
   backgroundAlt?: string;
 } & HTMLAttributes<HTMLDivElement>;
 
+/**
+ * Background animation with floating orbs.
+ */
 export function Flurry({
   particlesPerPlate = 500,
   particleBaseDuration = 30,

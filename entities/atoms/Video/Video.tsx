@@ -3,13 +3,35 @@ import { HTMLAttributes } from "react";
 import { StaticImageData } from "next/image";
 
 type VideoProps = {
+  /**
+   * Repeat the video after it finishes.
+   */
   loop?: boolean;
+  /**
+   * Autoplay on load (note this has browser limitations).
+   */
   autoPlay?: boolean;
+  /**
+   * Mute the video.
+   */
   muted?: boolean;
+  /**
+   * Url or path to the mp4 file (needed for iOS).
+   */
   mp4Src?: string;
+  /**
+   * Url or path to the webm file.
+   */
   webmSrc: string;
+  /**
+   * Graphic to display when the video is not available.
+   */
   poster: StaticImageData;
 } & HTMLAttributes<HTMLVideoElement>;
+
+/**
+ * Play a video within the interface.
+ */
 export function Video({
   mp4Src,
   webmSrc,

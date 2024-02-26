@@ -33,7 +33,6 @@ export { Heading } from "./atoms/Heading";
 export { HorizontalRule } from "./atoms/HorizontalRule";
 export { IFrame } from "./atoms/IFrame";
 export { Link } from "./atoms/Link";
-export { Orb } from "./atoms/Orb";
 export { Paragraph } from "./atoms/Paragraph";
 export { SocialMediaLink } from "./atoms/SocialMediaLink";
 export { Spacer } from "./atoms/Spacer";

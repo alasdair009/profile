@@ -2,7 +2,7 @@ import { Source } from "@storybook/blocks";
 import type { HTMLAttributes } from "react";
 
 import { ObjectViewer } from "./ObjectViewer";
-import {colors} from "@/entities";
+import { colors } from "@/entities";
 
 export type DimensionViewerProps = {
   /**
@@ -43,8 +43,8 @@ export function DimensionViewer({
     <div data-testid={DimensionViewer.name}>
       <ObjectViewer object={units} title={objectName} />
       <p>
-        To use these values import the <strong>{objectName}</strong> object and reference the
-        required key.
+        To use these values import the <strong>{objectName}</strong> object and
+        reference the required key.
       </p>
       <Source code={sourceExample} dark={true} language="css" />
       <DimensionBarWrapper title={title}>
@@ -81,7 +81,10 @@ const DimensionBarWrapper = ({ children }: HTMLAttributes<HTMLDivElement>) => (
   </div>
 );
 
-const DimensionBar = ({ children, width }: { width: string } & HTMLAttributes<HTMLDivElement>) => (
+const DimensionBar = ({
+  children,
+  width,
+}: { width: string } & HTMLAttributes<HTMLDivElement>) => (
   <div
     style={{
       background: colors.greenGrass,

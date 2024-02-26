@@ -5,9 +5,15 @@ import { useInView } from "react-intersection-observer";
 import { sizes } from "@/entities";
 
 type ScoreCounterProps = {
+  /**
+   * Score as a percentage.
+   */
   value?: number;
 } & HTMLAttributes<HTMLDivElement>;
 
+/**
+ * Animated score counter that displays indicated percentage progress.
+ */
 export function ScoreCounter({ value = 100, ...rest }: ScoreCounterProps) {
   const [progressValue, setProgressValue] = useState(0);
 

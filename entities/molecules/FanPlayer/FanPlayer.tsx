@@ -2,6 +2,9 @@ import { Root } from "./styles";
 import { HTMLAttributes } from "react";
 import { Audio } from "@/entities";
 
+/**
+ * Animated fan that can play a deep turbine noise.
+ */
 export function FanPlayer({ ...rest }: HTMLAttributes<HTMLDivElement>) {
   return (
     <Root {...rest}>

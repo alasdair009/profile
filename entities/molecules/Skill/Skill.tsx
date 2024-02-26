@@ -5,13 +5,31 @@ import { Property } from "csstype";
 import { SkillGridConfig } from "@/entities/molecules/Skill/Skill.types";
 
 type SkillProps = {
+  /**
+   * Percentage value for the skill.
+   */
   value: number;
+  /**
+   * Name of the skill.
+   */
   heading: string;
+  /**
+   * Copy about the skill.
+   */
   copy: string;
+  /**
+   * Background for the skill.
+   */
   background?: Property.BackgroundColor;
+  /**
+   * Grid config for the skill.
+   */
   grid: SkillGridConfig;
 } & HTMLAttributes<HTMLDivElement>;
 
+/**
+ * Grid box to display information about a skill.
+ */
 export function Skill({
   heading,
   copy,

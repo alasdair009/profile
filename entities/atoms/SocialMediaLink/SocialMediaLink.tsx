@@ -3,6 +3,9 @@ import { HTMLAttributes } from "react";
 import { SocialMediaLinkVariant } from "./SocialMediaLinks.types";
 
 type SocialMediaProps = {
+  /**
+   * Network to link to.
+   */
   variant: SocialMediaLinkVariant;
 } & HTMLAttributes<HTMLAnchorElement>;
 
@@ -17,6 +20,9 @@ const getSocialMediaUrl = (variant: SocialMediaLinkVariant) => {
   }
 };
 
+/**
+ * Icon that links to the requested social media network.
+ */
 export function SocialMediaLink({
   variant,
   children,

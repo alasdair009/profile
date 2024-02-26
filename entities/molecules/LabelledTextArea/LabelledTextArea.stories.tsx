@@ -3,6 +3,13 @@ import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof LabelledTextArea> = {
   component: LabelledTextArea,
+  args: {
+    label: "Text area input",
+    required: true,
+    isInvalid: false,
+    value: "hello world!",
+    name: "textareainput",
+  }
 };
 export default meta;
 

@@ -4,17 +4,38 @@ import { TextInputType } from "../../atoms/BaseInput/BaseInput.types";
 import { BaseInput, ErrorText } from "@/entities";
 
 type LabelledInputProps = {
+  /**
+   * Text for the label.
+   */
   label: string;
+  /**
+   * Type of HTML Text input field
+   */
   type: TextInputType;
+  /**
+   * Name of the field.
+   */
   name: string;
+  /**
+   * Default value of the field.
+   */
   value?: string;
+  /**
+   * Field requires a value to be valid.
+   */
   required?: boolean;
+  /**
+   * Field displays as an invalid input.
+   */
   isInvalid?: boolean;
+  /**
+   * Error text the field should display.
+   */
   errorText?: string;
 } & HTMLAttributes<HTMLInputElement>;
 
 /**
- * Base input type
+ * Labelled text input field for forms.
  */
 export function LabelledInput({
   isInvalid,

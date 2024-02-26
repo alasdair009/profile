@@ -21,14 +21,18 @@ type HeadingProps = {
    */
   align?: TextAlignment;
   /**
-   * Color of the text
+   * Color of the text.
    */
   color?: Property.Color;
   /**
-   * Apply a subtle shadow behind the text
+   * Apply a subtle shadow behind the text.
    */
   textShadow?: boolean;
 } & HTMLAttributes<HTMLHeadingElement>;
+
+/**
+ * Text displayed in a heading at a customisable level visually and semantically.
+ */
 export function Heading({
   level = "h1",
   as,
