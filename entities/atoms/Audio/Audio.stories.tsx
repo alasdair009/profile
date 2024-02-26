@@ -6,6 +6,7 @@ const meta: Meta<typeof Audio> = {
   args: {
     controls: true,
     src: "https://www.w3schools.com/tags/horse.mp3",
+    autoPlay: false,
   },
 };
 export default meta;
