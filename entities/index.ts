@@ -42,6 +42,7 @@ export { ErrorText } from "./atoms/ErrorText";
 export { UnorderedList } from "./atoms/UnorderedList";
 export { Video } from "./atoms/Video";
 
+export { Card } from "./molecules/Card";
 export { LabelledInput } from "./molecules/LabelledInput";
 export { LabelledTextArea } from "./molecules/LabelledTextArea";
 export { ScoreCounter } from "./molecules/ScoreCounter";
