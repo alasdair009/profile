@@ -49,6 +49,7 @@ export default function ArticlePage({ params }: any) {
       <Heading>{props.frontMatter.title}</Heading>
       <MDXRemote
         source={props.content}
+        // @ts-ignore
         components={{ a: Link, p: Paragraph, h1: Heading }}
       />
     </article>
