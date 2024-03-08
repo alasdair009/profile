@@ -65,7 +65,8 @@ export const Root = styled(Link)<{ $variant: LinkVariant }>`
 
   &:visited,
   &:active {
-    color: ${colors.greenGrass};
+    color: ${({ $variant }) =>
+        $variant === "large" ? colors.greenGrass : colors.whiteGhost};
   }
 
   &::after {
