@@ -1,9 +1,10 @@
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
-import { Heading, Link, Paragraph } from "@/entities";
+import {Card, globalContentMaxWidth, Heading, Link, Paragraph, sizes} from "@/entities";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import {rem} from "polished";
 
 export const metadata: Metadata = generateMetaData(
   "Blog",
@@ -22,23 +23,25 @@ export default function BlogPage() {
       meta: frontMatter,
       slug: filename.replace(".mdx", ""),
     };
-  });
+  }).sort((a, b) => Date.parse(b.meta.date) - Date.parse(a.meta.date));
   return (
     <>
       <Heading>Blog</Heading>
-      <div>
+      <Paragraph>A cocktail of thoughts and projects from my years of web development, trampoline coaching and general adventures.</Paragraph>
+      <div style={{
+        alignItems: "center",
+        display: "flex",
+        flexWrap: "wrap",
+        gap: sizes.s8.rem,
+        justifyContent: "space-between",
+        margin: "0 auto",
+        maxWidth: rem(globalContentMaxWidth),
+        padding: sizes.s8.rem,
+        width: "100%",
+      }}>
         {blogs.map((blog) => (
-          <article key={blog.slug}>
-            <Heading level="h3" as="h2">
-              {blog.meta.title}
-            </Heading>
-            <Paragraph>
-              {blog.meta.description}{" "}
-              <Link href={`/blog/${blog.slug}`}>Read more...</Link>
-            </Paragraph>
-          </article>
+            <Card key={blog.slug} href={`/blog/${blog.slug}`} title={blog.meta.title} date={new Date(blog.meta.date)} />
         ))}
-        ;
       </div>
     </>
   );

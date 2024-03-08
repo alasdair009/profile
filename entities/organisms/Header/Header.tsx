@@ -25,7 +25,8 @@ export function Header({ children, ...rest }: HeaderProps) {
             Home
           </HeaderLink>
           <HeaderLink href="/portfolio">Portfolio</HeaderLink>
-          <HeaderLink href="/about-me">About Me</HeaderLink>
+          <HeaderLink href="/about-me">About</HeaderLink>
+          <HeaderLink href="/blog">Blog</HeaderLink>
           <Header.NotificationButton
             isSubscribed={false}
             style={{ display: "none" }}
