@@ -33,7 +33,13 @@ export function Card({
           <Heading level="h3" as="h2" align="center">
             {title}
           </Heading>
-          <Date dateTime={date.toISOString()}>{date.toLocaleDateString("en-GB", {year:"numeric", month:"short", day:"numeric"})}</Date>
+          <Date dateTime={date.toISOString()}>
+            {date.toLocaleDateString("en-GB", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })}
+          </Date>
         </Content>
       </CardLink>
     </Root>

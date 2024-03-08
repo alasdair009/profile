@@ -52,8 +52,8 @@ export const CardImage = styled(Image)`
 export const Content = styled.div``;
 
 export const Date = styled.time`
-    color: ${colors.whiteGhost};
-    display: block;
-    font-style: italic;
-    text-align: center;
+  color: ${colors.whiteGhost};
+  display: block;
+  font-style: italic;
+  text-align: center;
 `;

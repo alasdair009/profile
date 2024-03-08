@@ -5,7 +5,7 @@ const meta: Meta<typeof Card> = {
   component: Card,
   args: {
     title: "Article title",
-    date: "1st January 1980",
+    date: new Date("1 January 1980"),
     href: "#",
     imageAlt: "Image alt text",
   },
