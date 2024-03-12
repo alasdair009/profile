@@ -4,6 +4,7 @@ import matter from "gray-matter";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
 import {
+  Article,
   BlockQuote,
   Heading,
   IFrame,
@@ -46,15 +47,15 @@ export async function generateMetadata({ params }: any) {
   return generateMetaData(
     blog.frontMatter.title,
     blog.frontMatter.description,
-    `blog/${blog.slug}`
+    `blog/${blog.slug}`,
+    blog.frontMatter.previewImage
   );
 }
 
 export default function ArticlePage({ params }: any) {
   const props = getPost(params);
   return (
-    <article>
-      <Heading>{props.frontMatter.title}</Heading>
+    <Article heading={`${props.frontMatter.title}`}>
       <MDXRemote
         source={props.content}
         components={{
@@ -95,8 +96,9 @@ export default function ArticlePage({ params }: any) {
               {props.children}
             </Heading>
           ),
+          IFrame,
         }}
       />
-    </article>
+    </Article>
   );
 }

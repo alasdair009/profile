@@ -6,7 +6,8 @@ export const siteDescription = "The home of exciting web adventures";
 export const generateMetaData = (
   pageTitle = "Home",
   pageDescription = siteDescription,
-  pagePath = ""
+  pagePath = "",
+  pageImage = `${siteOrigin}/og?title=${pageTitle}`
 ): Metadata => {
   return {
     title: `${pageTitle} | ${siteName}`,
@@ -15,14 +16,14 @@ export const generateMetaData = (
     metadataBase: new URL(`${siteOrigin}/${pagePath}`),
     openGraph: {
       title: `${pageTitle} | ${siteName}`,
-      images: `${siteOrigin}/og?title=${pageTitle}`,
+      images: pageImage,
       description: pageDescription,
       url: `${siteOrigin}/${pagePath}`,
     },
     twitter: {
       site: "@alasdair009",
       card: "summary_large_image",
-      images: `${siteOrigin}/og?title=${pageTitle}`,
+      images: pageImage,
       title: `${pageTitle} | ${siteName}`,
       description: pageDescription,
     },

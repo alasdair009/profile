@@ -48,6 +48,7 @@ export { LabelledTextArea } from "./molecules/LabelledTextArea";
 export { ScoreCounter } from "./molecules/ScoreCounter";
 export { Skill } from "./molecules/Skill";
 
+export { Article } from "./organisms/Article";
 export { ContactForm } from "./organisms/ContactForm";
 export { Container } from "./organisms/Container";
 export { CopyBlock } from "./organisms/CopyBlock";

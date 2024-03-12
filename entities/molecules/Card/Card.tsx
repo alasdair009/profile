@@ -27,7 +27,7 @@ export function Card({
     <Root {...rest}>
       <CardLink href={href}>
         <Figure>
-          <CardImage src={image} alt={imageAlt} />
+          <CardImage src={image} alt={imageAlt} fill={true} />
         </Figure>
         <Content>
           <Heading level="h3" as="h2" align="center">

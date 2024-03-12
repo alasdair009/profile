@@ -62,6 +62,7 @@ export default function BlogPage() {
             href={`/blog/${blog.slug}`}
             title={blog.meta.title}
             date={new Date(blog.meta.date)}
+            image={blog.meta.previewImage}
           />
         ))}
       </div>

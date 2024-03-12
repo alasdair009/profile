@@ -1,12 +1,12 @@
 "use client";
 import styled from "styled-components";
 import { colors, Link, sizes } from "@/entities";
-import { rem } from "polished";
+import { rem, rgba } from "polished";
 import Image from "next/image";
 
 export const Root = styled.article`
   background: ${colors.greyDark};
-  box-shadow: 0 0 ${rem(3)} ${rem(3)} ${colors.blackEvil};
+  box-shadow: 0 0 ${rem(10)} ${rem(6)} ${rgba(colors.whiteGhost, 0.35)};
   display: flex;
   height: ${rem(300)};
   margin: 0 auto;
@@ -35,6 +35,7 @@ export const CardLink = styled(Link)`
 export const Figure = styled.figure`
   display: flex;
   margin: 0;
+  position: relative;
   width: 100%;
 `;
 
@@ -44,7 +45,7 @@ export const CardImage = styled(Image)`
   display: flex;
   min-height: ${sizes.s96.rem};
   justify-content: center;
-  object-fit: contain;
+  object-fit: cover;
   text-align: center;
   width: 100%;
 `;
