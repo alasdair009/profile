@@ -3,6 +3,7 @@ import { siteDescription, siteName } from "@/lib/metadata";
 import { colors } from "@/entities";
 import screenshotNarrow from "../entities/assets/screenshot-narrow.png";
 import screenshotWide from "../entities/assets/screenshot-wide.png";
+import {siteOrigin} from "@/lib/domains";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -10,7 +11,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: siteName,
     description: siteDescription,
     display_override: ["window-controls-overlay"],
-    id: "https://www.alasdairmacrae.co.uk",
+    id: `${siteOrigin}`,
     start_url: "/",
     display: "standalone",
     background_color: colors.blackEvil,
