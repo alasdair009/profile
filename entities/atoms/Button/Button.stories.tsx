@@ -1,6 +1,6 @@
 import { Button } from "./Button";
 import { Meta, StoryObj } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
+import { fn } from '@storybook/test';
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -17,7 +17,7 @@ const meta: Meta<typeof Button> = {
   },
   args: {
     children: "Button",
-    onClick: action("Button Clicked"),
+    onClick: fn(),
   },
 };
 export default meta;
