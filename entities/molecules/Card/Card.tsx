@@ -7,7 +7,7 @@ import amLogo from "../../assets/am.svg";
 type CardProps = {
   href: string;
   title: string;
-  image?: StaticImageData;
+  image?: StaticImageData | string;
   imageAlt?: string;
   date: Date;
 } & HTMLAttributes<HTMLDivElement>;

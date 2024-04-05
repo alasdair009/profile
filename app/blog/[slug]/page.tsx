@@ -1,104 +1,68 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-
-import { MDXRemote } from "next-mdx-remote/rsc";
 import {
   Article,
-  BlockQuote,
-  Heading,
   IFrame,
   Link,
-  Paragraph,
-  Spacer,
-  UnorderedList,
 } from "@/entities";
-import Image from "next/image";
 import { generateMetaData } from "@/lib/metadata";
+import {sanityClient, urlFor} from "@/lib/sanity/client";
+import {SanityDocument} from "next-sanity";
+import {PortableText, PortableTextReactComponents} from "@portabletext/react";
 
-export async function generateStaticParams() {
-  const files = fs.readdirSync(path.join("_posts"));
-
-  const paths = files.map((filename) => ({
-    slug: filename.replace(".mdx", ""),
-  }));
-
-  return paths;
-}
-
-function getPost({ slug }: { slug: string }) {
-  const markdownFile = fs.readFileSync(
-    path.join("_posts", `${slug}.mdx`),
-    "utf-8"
-  );
-
-  const { data: frontMatter, content } = matter(markdownFile);
-
-  return {
-    frontMatter,
-    slug,
-    content,
-  };
+async function getPost(slug: string) {
+  return sanityClient.fetch<SanityDocument>(`
+    *[_type == "post" && slug.current == $slug][0]{title, body}
+  `, { slug });
 }
 
 export async function generateMetadata({ params }: any) {
-  const blog = getPost(params);
+  const post = await getPost(params.slug);
 
   return generateMetaData(
-    blog.frontMatter.title,
-    blog.frontMatter.description,
-    `blog/${blog.slug}`,
-    blog.frontMatter.previewImage
+      post.title,
+    "",
+    `blog/${post.slug}`,
   );
 }
 
-export default function ArticlePage({ params }: any) {
-  const props = getPost(params);
+const ptComponents: Partial<PortableTextReactComponents> = {
+    types: {
+        image: ({ value }) => {
+            if (!value?.asset?._ref) {
+                return null
+            }
+            return (
+                <img
+                    alt={value.alt || ' '}
+                    loading="lazy"
+                    src={urlFor(value).width(320).height(240).fit('max').auto('format').url()}
+                />
+            )
+        },
+        youtube: ({value}) => {
+            return (
+                <IFrame src={value.url} />
+            )
+        }
+    },
+    marks: {
+        link: ({children, value}) => {
+            const rel = !value.href.startsWith('/') ? 'noreferrer noopener' : undefined
+            return (
+                <Link href={value.href} rel={rel}>{children}</Link>
+            )
+        },
+    }
+}
+
+
+export default async function ArticlePage({ params }: any) {
+  const post = await getPost(params.slug);
   return (
-    <Article heading={`${props.frontMatter.title}`}>
-      <MDXRemote
-        source={props.content}
-        components={{
-          a: (props) => (
-            <Link href={`${props.href}`} {...props}>
-              {props.children}
-            </Link>
-          ),
-          blockquote: BlockQuote,
-          p: (props) => <Paragraph {...props}>{props.children}</Paragraph>,
-          br: Spacer,
-          ul: (props) => (
-            <UnorderedList {...props}>{props.children}</UnorderedList>
-          ),
-          h1: (props) => <Heading {...props}>{props.children}</Heading>,
-          h2: (props) => (
-            <Heading level="h2" {...props}>
-              {props.children}
-            </Heading>
-          ),
-          h3: (props) => (
-            <Heading level="h3" {...props}>
-              {props.children}
-            </Heading>
-          ),
-          h4: (props) => (
-            <Heading level="h4" {...props}>
-              {props.children}
-            </Heading>
-          ),
-          h5: (props) => (
-            <Heading level="h5" {...props}>
-              {props.children}
-            </Heading>
-          ),
-          h6: (props) => (
-            <Heading level="h6" {...props}>
-              {props.children}
-            </Heading>
-          ),
-          IFrame,
-        }}
-      />
+    <Article heading={`${post.title}`}>
+        <PortableText
+            value={post.body}
+            components={ptComponents}
+        />
     </Article>
   );
 }

@@ -8,10 +8,10 @@ import {
   Paragraph,
   sizes,
 } from "@/entities";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import { rem } from "polished";
+import {SanityDocument} from "next-sanity";
+import {sanityClient} from "@/lib/sanity/client";
+import imageUrlBuilder from '@sanity/image-url'
 
 export const metadata: Metadata = generateMetaData(
   "Blog",
@@ -19,23 +19,25 @@ export const metadata: Metadata = generateMetaData(
   "blog"
 );
 
-export default function BlogPage() {
-  const files = fs.readdirSync(path.join("_posts"));
-  const blogs = files
-    .map((filename) => {
-      const fileContent = fs.readFileSync(
-        path.join("_posts", filename),
-        "utf-8"
-      );
+const EVENTS_QUERY = `*[_type == "post"] {
+  _id,
+  _type,
+  _createdAt,
+  _updatedAt,
+  title,
+  slug,
+  author->,
+  mainImage {
+    ...,
+    asset->
+  },
+  categories[]->,
+  publishedAt,
+  body
+}`;
 
-      const { data: frontMatter } = matter(fileContent);
-
-      return {
-        meta: frontMatter,
-        slug: filename.replace(".mdx", ""),
-      };
-    })
-    .sort((a, b) => Date.parse(b.meta.date) - Date.parse(a.meta.date));
+export default async function BlogPage() {
+  const posts = await sanityClient.fetch<SanityDocument[]>(EVENTS_QUERY);
   return (
     <>
       <Heading>Blog</Heading>
@@ -56,13 +58,13 @@ export default function BlogPage() {
           width: "100%",
         }}
       >
-        {blogs.map((blog) => (
+          {posts.map((post) => (
           <Card
-            key={blog.slug}
-            href={`/blog/${blog.slug}`}
-            title={blog.meta.title}
-            date={new Date(blog.meta.date)}
-            image={blog.meta.previewImage}
+            key={post.title}
+            href={`/blog/${post.slug.current}`}
+            title={post.title}
+            date={new Date(post.publishedAt)}
+            image={imageUrlBuilder(sanityClient).image(post.mainImage.asset).url()}
           />
         ))}
       </div>
