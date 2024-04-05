@@ -12,7 +12,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky install",
-    "chromatic": "npx chromatic --project-token=chpt_15397914f82ec8a"
+    "chromatic": "npx chromatic --project-token=chpt_15397914f82ec8a",
+    "depcheck": "npx depcheck"
   },
   "dependencies": {
     "@portabletext/react": "^3.0.17",
