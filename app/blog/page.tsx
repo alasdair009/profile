@@ -9,9 +9,9 @@ import {
   sizes,
 } from "@/entities";
 import { rem } from "polished";
-import {SanityDocument} from "next-sanity";
-import {sanityClient} from "@/lib/sanity/client";
-import imageUrlBuilder from '@sanity/image-url'
+import { SanityDocument } from "next-sanity";
+import { sanityClient } from "@/lib/sanity/client";
+import imageUrlBuilder from "@sanity/image-url";
 
 export const metadata: Metadata = generateMetaData(
   "Blog",
@@ -58,13 +58,15 @@ export default async function BlogPage() {
           width: "100%",
         }}
       >
-          {posts.map((post) => (
+        {posts.map((post) => (
           <Card
             key={post.title}
             href={`/blog/${post.slug.current}`}
             title={post.title}
             date={new Date(post.publishedAt)}
-            image={imageUrlBuilder(sanityClient).image(post.mainImage.asset).url()}
+            image={imageUrlBuilder(sanityClient)
+              .image(post.mainImage.asset)
+              .url()}
           />
         ))}
       </div>
