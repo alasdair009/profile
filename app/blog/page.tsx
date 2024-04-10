@@ -19,7 +19,7 @@ export const metadata: Metadata = generateMetaData(
   "blog"
 );
 
-const EVENTS_QUERY = `*[_type == "post"] {
+const EVENTS_QUERY = `*[_type == "post"] | order(publishedAt desc) {
   _id,
   _type,
   _createdAt,
@@ -41,7 +41,7 @@ export default async function BlogPage() {
   return (
     <>
       <Heading>Blog</Heading>
-      <Paragraph>
+      <Paragraph align="center" style={{padding: `0 ${sizes.s8.rem}`}} textWrap="balance">
         A cocktail of thoughts and projects from my years of web development,
         trampoline coaching and general adventures.
       </Paragraph>
@@ -50,7 +50,7 @@ export default async function BlogPage() {
           alignItems: "center",
           display: "flex",
           flexWrap: "wrap",
-          gap: sizes.s8.rem,
+          gap: sizes.s32.rem,
           justifyContent: "space-between",
           margin: "0 auto",
           maxWidth: rem(globalContentMaxWidth),

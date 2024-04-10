@@ -9,12 +9,15 @@ import {
   sizes,
 } from "@/entities";
 import { Property } from "csstype";
+import {lineClamp} from "@/lib/line-clamp";
+import {lineHeights} from "@/entities/design-tokens/typography/typography";
 
 export const Root = styled.h1<{
   $color: Property.Color;
   $level: HeadingTypes;
   $align: Property.TextAlign;
   $textShadow: boolean;
+  $lines: number | undefined;
 }>`
   color: ${({ $color }) => $color};
   font-size: ${({ $level }) => headingSizes[$level]};
@@ -26,6 +29,7 @@ export const Root = styled.h1<{
   text-shadow: ${({ $textShadow }) =>
     $textShadow ? `0 0 ${rem(4)} ${colors.blackEvil}` : "none"};
   width: fit-content;
+  ${({$level, $lines}) => lineClamp(`${lineHeights[$level]}`, $lines)}
 
   &::after {
     background: ${colors.greenGrass};

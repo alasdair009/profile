@@ -43,6 +43,16 @@ export const headingSizes: Record<HeadingTypes, Property.FontSize> = {
   h6: fontSizes.mlarge.rem,
 };
 
+export const lineHeights: Record<HeadingTypes | "p", Property.LineHeight> = {
+  h1: "1.4em",
+  h2: "1.3em",
+  h3: "1.2em",
+  h4: "1.2em",
+  h5: "1.2em",
+  h6: "1.2em",
+  p: "1.3em",
+}
+
 type FontWeights = "regular" | "bold" | "black";
 export const fontWeights: Record<FontWeights, number> = {
   regular: 400,

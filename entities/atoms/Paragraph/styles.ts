@@ -10,12 +10,15 @@ import {
   globalTextMaxWidth,
   sizes,
 } from "@/entities";
+import {lineHeights} from "@/entities/design-tokens/typography/typography";
+import {lineClamp} from "@/lib/line-clamp";
 
 export const Root = styled.p<{
   $color: Property.Color;
   $fontSize: FontSizes;
   $align: Property.TextAlign;
   $textWrap: "wrap" | "balance";
+  $lines: number | undefined;
 }>`
   color: ${({ $color }) => $color};
   display: block;
@@ -26,4 +29,5 @@ export const Root = styled.p<{
   text-align: ${({ $align }) => $align};
   text-wrap: ${({ $textWrap }) => $textWrap};
   width: 100%;
+  ${({$lines}) => lineClamp(`${lineHeights.p}`, $lines)}
 `;

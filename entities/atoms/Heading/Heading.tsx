@@ -28,6 +28,10 @@ type HeadingProps = {
    * Apply a subtle shadow behind the text.
    */
   textShadow?: boolean;
+  /**
+   * Number of lines the text is restricted to.
+   */
+  lines?: number;
 } & HTMLAttributes<HTMLHeadingElement>;
 
 /**
@@ -39,6 +43,7 @@ export function Heading({
   align = "left",
   color = colors.whiteGhost,
   textShadow = false,
+  lines,
   children,
   ...rest
 }: HeadingProps) {
@@ -50,6 +55,7 @@ export function Heading({
       as={headingAs}
       $align={align}
       $textShadow={textShadow}
+      $lines={lines}
       {...rest}
     >
       {children}

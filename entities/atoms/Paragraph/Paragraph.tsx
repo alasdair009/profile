@@ -21,6 +21,10 @@ type ParagraphProps = {
    */
   textWrap?: "wrap" | "balance";
   /**
+   * Number of lines the text is restricted to.
+   */
+  lines?: number;
+  /**
    * Content to show
    */
   children: ReactNode;
@@ -34,6 +38,7 @@ export function Paragraph({
   color = colors.whiteGhost,
   fontSize = "medium",
   textWrap = "wrap",
+  lines,
   children,
   ...rest
 }: ParagraphProps) {
@@ -43,6 +48,7 @@ export function Paragraph({
       $color={color}
       $fontSize={fontSize}
       $textWrap={textWrap}
+      $lines={lines}
       {...rest}
     >
       {children}

@@ -38,8 +38,10 @@ const release = keyframes`
 `;
 
 export const Root = styled(Link)<{ $variant: LinkVariant }>`
+  align-items: center;
   color: ${({ $variant }) =>
     $variant === "large" ? colors.greenGrass : colors.whiteGhost};
+  display: inline-flex;
   font-size: ${({ $variant }) =>
     $variant === "large" ? fontSizes.large.rem : "inherit"};
   font-weight: ${fontWeights.bold};

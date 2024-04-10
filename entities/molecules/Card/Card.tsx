@@ -30,7 +30,7 @@ export function Card({
           <CardImage src={image} alt={imageAlt} fill={true} />
         </Figure>
         <Content>
-          <Heading level="h3" as="h2" align="center">
+          <Heading level="h3" as="h2" align="center" lines={3}>
             {title}
           </Heading>
           <Date dateTime={date.toISOString()}>
