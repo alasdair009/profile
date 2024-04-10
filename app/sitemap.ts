@@ -1,7 +1,16 @@
 import { MetadataRoute } from "next";
 import { siteOrigin } from "@/lib/domains";
+import {sanityClient} from "@/lib/sanity/client";
+import {GET_ALL_POSTS, Post} from "@/lib/sanity/queries";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const posts = await sanityClient.fetch<Post[]>(GET_ALL_POSTS);
+  const postsMap: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${siteOrigin}/blog/${post.slug.current}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.6
+  }));
   return [
     {
       url: `${siteOrigin}`,
@@ -21,5 +30,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${siteOrigin}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    ...postsMap
   ];
 }

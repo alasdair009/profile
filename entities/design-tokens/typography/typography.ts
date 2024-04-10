@@ -51,7 +51,7 @@ export const lineHeights: Record<HeadingTypes | "p", Property.LineHeight> = {
   h5: "1.2em",
   h6: "1.2em",
   p: "1.3em",
-}
+};
 
 type FontWeights = "regular" | "bold" | "black";
 export const fontWeights: Record<FontWeights, number> = {

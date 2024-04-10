@@ -12,36 +12,24 @@ import { rem } from "polished";
 import { SanityDocument } from "next-sanity";
 import { sanityClient } from "@/lib/sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
+import {GET_ALL_POSTS, Post} from "@/lib/sanity/queries";
 
 export const metadata: Metadata = generateMetaData(
   "Blog",
   "Some thoughts",
-  "blog"
+  "blog",
 );
 
-const EVENTS_QUERY = `*[_type == "post"] | order(publishedAt desc) {
-  _id,
-  _type,
-  _createdAt,
-  _updatedAt,
-  title,
-  slug,
-  author->,
-  mainImage {
-    ...,
-    asset->
-  },
-  categories[]->,
-  publishedAt,
-  body
-}`;
-
 export default async function BlogPage() {
-  const posts = await sanityClient.fetch<SanityDocument[]>(EVENTS_QUERY);
+  const posts = await sanityClient.fetch<Post[]>(GET_ALL_POSTS);
   return (
     <>
       <Heading>Blog</Heading>
-      <Paragraph align="center" style={{padding: `0 ${sizes.s8.rem}`}} textWrap="balance">
+      <Paragraph
+        align="center"
+        style={{ padding: `0 ${sizes.s8.rem}` }}
+        textWrap="balance"
+      >
         A cocktail of thoughts and projects from my years of web development,
         trampoline coaching and general adventures.
       </Paragraph>

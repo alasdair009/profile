@@ -1,4 +1,4 @@
-import {css} from "styled-components";
+import { css } from "styled-components";
 
 /**
  * Set the maximum number of lines of text an element can show.
@@ -20,7 +20,9 @@ export const lineClamp = (
 
   return css`
     line-height: ${lineHeight};
-    max-height: calc(${lineHeight} * ${numberOfLines} + (${verticalPadding} * 2));
+    max-height: calc(
+      ${lineHeight} * ${numberOfLines} + (${verticalPadding} * 2)
+    );
     overflow: hidden;
     border-bottom: ${verticalPadding} solid transparent;
     border-top: ${verticalPadding} solid transparent;

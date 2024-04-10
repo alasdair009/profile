@@ -1,16 +1,24 @@
-import {Article, colors, globalContentMaxWidth, globalTextMaxWidth, IFrame, Link, sizes} from "@/entities";
+import {
+  Article,
+  colors,
+  globalContentMaxWidth,
+  globalTextMaxWidth,
+  IFrame,
+  Link,
+  sizes,
+} from "@/entities";
 import { generateMetaData } from "@/lib/metadata";
 import { sanityClient, urlFor } from "@/lib/sanity/client";
-import { SanityDocument } from "next-sanity";
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
-import {rem} from "polished";
+import { rem } from "polished";
 import imageUrlBuilder from "@sanity/image-url";
 import Image from "next/image";
+import {Post} from "@/lib/sanity/queries";
 
 async function getPost(slug: string) {
-  return sanityClient.fetch<SanityDocument>(
+  return sanityClient.fetch<Post>(
     `
-    *[_type == "post" && slug.current == $slug][0]{title, body, mainImage}
+    *[_type == "post" && slug.current == $slug][0]{title, body, mainImage, publishedAt}
   `,
     { slug }
   );
@@ -19,9 +27,18 @@ async function getPost(slug: string) {
 export async function generateMetadata({ params }: any) {
   const post = await getPost(params.slug);
 
-  return generateMetaData(post.title, "", `blog/${post.slug}`, imageUrlBuilder(sanityClient)
-      .image(post.mainImage.asset)
-      .url());
+  return generateMetaData(
+    post.title,
+    "",
+    `blog/${post.slug}`,
+    imageUrlBuilder(sanityClient).image(post.mainImage.asset).url(),
+      "article",
+      {
+        publishedTime: new Date(post.publishedAt).toISOString(),
+        authors: "Alasdair Macrae",
+        tags: undefined
+      }
+  );
 }
 
 const ptComponents: Partial<PortableTextReactComponents> = {
@@ -64,18 +81,47 @@ const ptComponents: Partial<PortableTextReactComponents> = {
 export default async function ArticlePage({ params }: any) {
   const post = await getPost(params.slug);
   return (
-      <>
-      <nav style={{margin: `${sizes.s16.rem} auto ${sizes.s32.rem}`, maxWidth: rem(globalTextMaxWidth)}}>
-        <Link href={"/blog"}><span style={{aspectRatio: 1, background: colors.whiteGhost, clipPath: "polygon(0 50%, 100% 0, 100% 100%)", display: "inline-blocks", marginRight: sizes.s8.rem, width: sizes.s8.rem}}></span>Back to blog</Link>
+    <>
+      <nav
+        style={{
+          margin: `${sizes.s16.rem} auto ${sizes.s32.rem}`,
+          maxWidth: rem(globalTextMaxWidth),
+        }}
+      >
+        <Link href={"/blog"}>
+          <span
+            style={{
+              aspectRatio: 1,
+              background: colors.whiteGhost,
+              clipPath: "polygon(0 50%, 100% 0, 100% 100%)",
+              display: "inline-blocks",
+              marginRight: sizes.s8.rem,
+              width: sizes.s8.rem,
+            }}
+          ></span>
+          Back to blog
+        </Link>
       </nav>
-    <Article heading={`${post.title}`}>
-      <figure style={{height: 320, margin: "0 auto", maxWidth: rem(globalTextMaxWidth), position: "relative"}}>
-        <Image src={imageUrlBuilder(sanityClient)
-            .image(post.mainImage.asset)
-            .url()} alt={post.title} fill={true} style={{objectFit: "cover"}} />
-      </figure>
-      <PortableText value={post.body} components={ptComponents} />
-    </Article>
-      </>
+      <Article heading={`${post.title}`}>
+        <figure
+          style={{
+            height: 320,
+            margin: "0 auto",
+            maxWidth: rem(globalTextMaxWidth),
+            position: "relative",
+          }}
+        >
+          <Image
+            src={imageUrlBuilder(sanityClient)
+              .image(post.mainImage.asset)
+              .url()}
+            alt={post.title}
+            fill={true}
+            style={{ objectFit: "cover" }}
+          />
+        </figure>
+        <PortableText value={post.body} components={ptComponents} />
+      </Article>
+    </>
   );
 }
