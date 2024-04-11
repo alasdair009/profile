@@ -1,5 +1,5 @@
-import {SanityImageSource} from "@sanity/asset-utils";
-import {PortableTextBlock} from "@sanity/types";
+import { SanityImageSource } from "@sanity/asset-utils";
+import { PortableTextBlock } from "@sanity/types";
 
 export const GET_ALL_POSTS = `*[_type == "post"] | order(publishedAt desc) {
   _id,
@@ -19,14 +19,14 @@ export const GET_ALL_POSTS = `*[_type == "post"] | order(publishedAt desc) {
 }`;
 
 export type Post = {
-    title: string;
-    slug: {
-        current: string;
-    },
-    categories: string[];
-    publishedAt: string;
-    mainImage: {
-        asset: SanityImageSource
-    },
-    body: PortableTextBlock;
-}
+  title: string;
+  slug: {
+    current: string;
+  };
+  categories: string[];
+  publishedAt: string;
+  mainImage: {
+    asset: SanityImageSource;
+  };
+  body: PortableTextBlock;
+};

@@ -13,7 +13,7 @@ import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 import { rem } from "polished";
 import imageUrlBuilder from "@sanity/image-url";
 import Image from "next/image";
-import {Post} from "@/lib/sanity/queries";
+import { Post } from "@/lib/sanity/queries";
 
 async function getPost(slug: string) {
   return sanityClient.fetch<Post>(
@@ -32,12 +32,12 @@ export async function generateMetadata({ params }: any) {
     "",
     `blog/${post.slug}`,
     imageUrlBuilder(sanityClient).image(post.mainImage.asset).url(),
-      "article",
-      {
-        publishedTime: new Date(post.publishedAt).toISOString(),
-        authors: "Alasdair Macrae",
-        tags: undefined
-      }
+    "article",
+    {
+      publishedTime: new Date(post.publishedAt).toISOString(),
+      authors: "Alasdair Macrae",
+      tags: undefined,
+    }
   );
 }
 

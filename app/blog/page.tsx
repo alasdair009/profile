@@ -12,12 +12,12 @@ import { rem } from "polished";
 import { SanityDocument } from "next-sanity";
 import { sanityClient } from "@/lib/sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
-import {GET_ALL_POSTS, Post} from "@/lib/sanity/queries";
+import { GET_ALL_POSTS, Post } from "@/lib/sanity/queries";
 
 export const metadata: Metadata = generateMetaData(
   "Blog",
   "Some thoughts",
-  "blog",
+  "blog"
 );
 
 export default async function BlogPage() {
