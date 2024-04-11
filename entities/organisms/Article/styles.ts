@@ -20,6 +20,21 @@ export const ArticleHeading = styled(Heading)`
   max-width: ${sizes.s512.rem};
 `;
 
+export const ArticleDate = styled.time`
+  display: block;
+  font-style: italic;
+  margin: 0 auto;
+  max-width: ${rem(globalTextMaxWidth)};
+  text-align: center;
+`;
+
+export const ArticleFigure = styled.figure`
+  height: ${rem(320)};
+  margin: 0 auto;
+  max-width: ${rem(globalTextMaxWidth)};
+  position: relative;
+`;
+
 export const Content = styled.div`
   margin: 0 auto;
   max-width: ${rem(globalTextMaxWidth)};

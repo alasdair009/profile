@@ -14,6 +14,7 @@ import { rem } from "polished";
 import imageUrlBuilder from "@sanity/image-url";
 import Image from "next/image";
 import { Post } from "@/lib/sanity/queries";
+import { notFound } from "next/navigation";
 
 async function getPost(slug: string) {
   return sanityClient.fetch<Post>(
@@ -25,20 +26,30 @@ async function getPost(slug: string) {
 }
 
 export async function generateMetadata({ params }: any) {
-  const post = await getPost(params.slug);
+  try {
+    const post = await getPost(params.slug);
 
-  return generateMetaData(
-    post.title,
-    "",
-    `blog/${post.slug}`,
-    imageUrlBuilder(sanityClient).image(post.mainImage.asset).url(),
-    "article",
-    {
-      publishedTime: new Date(post.publishedAt).toISOString(),
-      authors: "Alasdair Macrae",
-      tags: undefined,
-    }
-  );
+    return generateMetaData(
+      post.title,
+      "",
+      `blog/${post.slug}`,
+      imageUrlBuilder(sanityClient).image(post.mainImage.asset).url(),
+      "article",
+      {
+        publishedTime: new Date(post.publishedAt).toISOString(),
+        authors: "Alasdair Macrae",
+        tags: undefined,
+      }
+    );
+  } catch (e) {
+    return generateMetaData(
+      "Blog article not found",
+      "We could not find the article",
+      `blog/${params.slug}`,
+      undefined,
+      "website"
+    );
+  }
 }
 
 const ptComponents: Partial<PortableTextReactComponents> = {
@@ -79,49 +90,42 @@ const ptComponents: Partial<PortableTextReactComponents> = {
 };
 
 export default async function ArticlePage({ params }: any) {
-  const post = await getPost(params.slug);
-  return (
-    <>
-      <nav
-        style={{
-          margin: `${sizes.s16.rem} auto ${sizes.s32.rem}`,
-          maxWidth: rem(globalTextMaxWidth),
-        }}
-      >
-        <Link href={"/blog"}>
-          <span
-            style={{
-              aspectRatio: 1,
-              background: colors.whiteGhost,
-              clipPath: "polygon(0 50%, 100% 0, 100% 100%)",
-              display: "inline-blocks",
-              marginRight: sizes.s8.rem,
-              width: sizes.s8.rem,
-            }}
-          ></span>
-          Back to blog
-        </Link>
-      </nav>
-      <Article heading={`${post.title}`}>
-        <figure
+  try {
+    const post = await getPost(params.slug);
+    return (
+      <>
+        <nav
           style={{
-            height: 320,
-            margin: "0 auto",
+            margin: `${sizes.s16.rem} auto ${sizes.s32.rem}`,
             maxWidth: rem(globalTextMaxWidth),
-            position: "relative",
           }}
         >
-          <Image
-            src={imageUrlBuilder(sanityClient)
-              .image(post.mainImage.asset)
-              .url()}
-            alt={post.title}
-            fill={true}
-            style={{ objectFit: "cover" }}
-          />
-        </figure>
-        <PortableText value={post.body} components={ptComponents} />
-      </Article>
-    </>
-  );
+          <Link href={"/blog"}>
+            <span
+              style={{
+                aspectRatio: 1,
+                background: colors.whiteGhost,
+                clipPath: "polygon(0 50%, 100% 0, 100% 100%)",
+                display: "inline-blocks",
+                marginRight: sizes.s8.rem,
+                width: sizes.s8.rem,
+              }}
+            ></span>
+            Back to blog
+          </Link>
+        </nav>
+        <Article
+          heading={`${post.title}`}
+          date={new Date(post.publishedAt)}
+          image={imageUrlBuilder(sanityClient)
+            .image(post.mainImage.asset)
+            .url()}
+        >
+          <PortableText value={post.body} components={ptComponents} />
+        </Article>
+      </>
+    );
+  } catch (e) {
+    return notFound();
+  }
 }
