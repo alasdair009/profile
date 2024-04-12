@@ -30,3 +30,15 @@ export type Post = {
   };
   body: PortableTextBlock;
 };
+
+export const GET_ALL_ROLLERCOASTERS = `*[_type == "rollercoasters"] | order(firstRidden desc) {
+  _id,
+  _type,
+  _createdAt,
+  _updatedAt,
+  title,
+  firstRidden,
+  themeparks,
+  "themeparkTitle": themeparks->title,
+  "themeparkCountry": themeparks->country,
+}`;

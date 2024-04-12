@@ -37,6 +37,7 @@ export { Paragraph } from "./atoms/Paragraph";
 export { SocialMediaLink } from "./atoms/SocialMediaLink";
 export { Spacer } from "./atoms/Spacer";
 export { Spinner } from "./atoms/Spinner";
+export { Table } from "./atoms/Table";
 export { TextMask } from "./atoms/TextMask";
 export { ErrorText } from "./atoms/ErrorText";
 export { UnorderedList } from "./atoms/UnorderedList";
