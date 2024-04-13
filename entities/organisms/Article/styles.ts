@@ -2,12 +2,14 @@
 
 import styled from "styled-components";
 import {
+  colors,
   globalContentMaxWidth,
   globalTextMaxWidth,
   Heading,
   sizes,
 } from "@/entities";
 import { rem } from "polished";
+import Image from "next/image";
 
 export const Root = styled.article`
   margin: 0 auto;
@@ -35,10 +37,16 @@ export const ArticleFigure = styled.figure`
   position: relative;
 `;
 
+export const ArticleImage = styled(Image)`
+    box-shadow: -${sizes.s48.rem} -${sizes.s48.rem} 0 -${sizes.s40.rem} ${colors.greenGrass}, ${sizes.s48.rem} ${sizes.s48.rem} 0 -${sizes.s40.rem} ${colors.greenGrass};
+  margin: ${sizes.s8.rem};
+`;
+
 export const Content = styled.div`
   margin: 0 auto;
   max-width: ${rem(globalTextMaxWidth)};
   overflow: hidden;
+  padding: ${sizes.s8.rem};
   position: relative;
   width: 100%;
   word-break: break-word;

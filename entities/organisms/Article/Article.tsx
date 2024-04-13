@@ -1,9 +1,9 @@
 import {
-  ArticleDate,
-  ArticleFigure,
-  ArticleHeading,
-  Content,
-  Root,
+    ArticleDate,
+    ArticleFigure,
+    ArticleHeading, ArticleImage,
+    Content,
+    Root,
 } from "./styles";
 import { HTMLAttributes, ReactNode } from "react";
 import { globalTextMaxWidth, Spacer } from "@/entities";
@@ -40,7 +40,7 @@ export function Article({
       </ArticleDate>
       <Spacer multiplier={6} />
       <ArticleFigure>
-        <Image
+        <ArticleImage
           src={image}
           alt={heading}
           fill={true}
