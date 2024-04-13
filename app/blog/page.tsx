@@ -6,7 +6,7 @@ import { Suspense } from "react";
 
 export const metadata: Metadata = generateMetaData(
   "Blog",
-  "Some thoughts",
+  "A cocktail of thoughts and projects from my years of web development, trampoline coaching and general adventures.",
   "blog"
 );
 
