@@ -1,9 +1,10 @@
 import {
-    ArticleDate,
-    ArticleFigure,
-    ArticleHeading, ArticleImage,
-    Content,
-    Root,
+  ArticleDate,
+  ArticleFigure,
+  ArticleHeading,
+  ArticleImage,
+  Content,
+  Root,
 } from "./styles";
 import { HTMLAttributes, ReactNode } from "react";
 import { globalTextMaxWidth, Spacer } from "@/entities";

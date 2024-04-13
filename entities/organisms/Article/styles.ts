@@ -38,7 +38,9 @@ export const ArticleFigure = styled.figure`
 `;
 
 export const ArticleImage = styled(Image)`
-    box-shadow: -${sizes.s48.rem} -${sizes.s48.rem} 0 -${sizes.s40.rem} ${colors.greenGrass}, ${sizes.s48.rem} ${sizes.s48.rem} 0 -${sizes.s40.rem} ${colors.greenGrass};
+  box-shadow:
+    -${sizes.s48.rem} -${sizes.s48.rem} 0 -${sizes.s40.rem} ${colors.greenGrass},
+    ${sizes.s48.rem} ${sizes.s48.rem} 0 -${sizes.s40.rem} ${colors.greenGrass};
   margin: ${sizes.s8.rem};
 `;
 
