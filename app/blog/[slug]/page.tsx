@@ -81,7 +81,7 @@ const ptComponents: Partial<PortableTextReactComponents> = {
         ? "noreferrer noopener"
         : undefined;
       return (
-            <Link href={value.href} rel={rel}>
+        <Link href={value.href} rel={rel}>
           {children}
         </Link>
       );
