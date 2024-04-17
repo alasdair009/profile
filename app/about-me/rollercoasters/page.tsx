@@ -10,6 +10,9 @@ export const metadata: Metadata = generateMetaData(
   "My rollercoaster history",
   "rollercoasters"
 );
+
+export const revalidate = 600; // revalidate at most every 10mins
+
 export default async function Rollercoasters() {
   const rollercoasters = await sanityClient.fetch<SanityDocument[]>(
     GET_ALL_ROLLERCOASTERS
