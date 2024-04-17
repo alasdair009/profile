@@ -38,7 +38,9 @@ export default async function Rollercoasters() {
     <>
       <Heading>Rollercoasters</Heading>
       <Paragraph>
-        A history of my rollerocaster experiences around the world.
+        I love themeparks and naturally therefore also rollercoasters. The page
+        serves as a history of my {rollercoasters.length} unique rollerocaster
+        experiences around the world.
       </Paragraph>
       <div
         style={{
@@ -96,7 +98,7 @@ export default async function Rollercoasters() {
             <td>Rollercoaster</td>
             <td>Theme park</td>
             <td>Country</td>
-            <td>Date</td>
+            <td>Year first ridden</td>
           </tr>
         </thead>
         <tbody>
@@ -110,8 +112,6 @@ export default async function Rollercoasters() {
                   "en-GB",
                   {
                     year: "numeric",
-                    month: "short",
-                    day: "numeric",
                   }
                 )}
               </td>
