@@ -1,6 +1,13 @@
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
-import { Heading, Paragraph, Table } from "@/entities";
+import {
+  globalContentMaxWidth,
+  Heading,
+  Paragraph,
+  sizes,
+  Spacer,
+  Table,
+} from "@/entities";
 import { GET_ALL_ROLLERCOASTERS } from "@/lib/sanity/queries";
 import { sanityClient } from "@/lib/sanity/client";
 import { SanityDocument } from "next-sanity";
@@ -17,13 +24,72 @@ export default async function Rollercoasters() {
   const rollercoasters = await sanityClient.fetch<SanityDocument[]>(
     GET_ALL_ROLLERCOASTERS
   );
-  console.log(rollercoasters);
+
+  const fastestRollercoaster = rollercoasters.reduce((prev, current) => {
+    return prev && prev.speed > current.speed ? prev : current;
+  });
+  const tallestRollercoaster = rollercoasters.reduce((prev, current) => {
+    return prev && prev.height > current.height ? prev : current;
+  });
+  const longestRollercoaster = rollercoasters.reduce((prev, current) => {
+    return prev && prev.length > current.length ? prev : current;
+  });
   return (
     <>
       <Heading>Rollercoasters</Heading>
       <Paragraph>
         A history of my rollerocaster experiences around the world.
       </Paragraph>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          maxWidth: globalContentMaxWidth,
+          gap: sizes.s24.rem,
+          margin: "0 auto",
+          width: "100%",
+        }}
+      >
+        <article
+          style={{
+            alignItems: "center",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <h2>Fastest</h2>
+          <span>{fastestRollercoaster.title}</span>
+          <Spacer />
+          <span>{fastestRollercoaster.speed}km/h</span>
+        </article>
+        <article
+          style={{
+            alignItems: "center",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <h2>Tallest</h2>
+          <span>{tallestRollercoaster.title}</span>
+          <Spacer />
+          <span>{tallestRollercoaster.height}m</span>
+        </article>
+        <article
+          style={{
+            alignItems: "center",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <h2>Longest</h2>
+          <span>{longestRollercoaster.title}</span>
+          <Spacer />
+          <span>{longestRollercoaster.length}m</span>
+        </article>
+      </div>
       <Table>
         <thead>
           <tr>
