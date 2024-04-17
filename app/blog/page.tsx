@@ -10,6 +10,8 @@ export const metadata: Metadata = generateMetaData(
   "blog"
 );
 
+export const revalidate = 600; // revalidate at most every 10mins
+
 export default async function BlogPage() {
   return (
     <>
