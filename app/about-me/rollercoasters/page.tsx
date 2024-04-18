@@ -11,6 +11,8 @@ import {
 import { GET_ALL_ROLLERCOASTERS } from "@/lib/sanity/queries";
 import { sanityClient } from "@/lib/sanity/client";
 import { SanityDocument } from "next-sanity";
+import Image from "next/image";
+import imageUrlBuilder from "@sanity/image-url";
 
 export const metadata: Metadata = generateMetaData(
   "Rollercoasters",
@@ -105,7 +107,30 @@ export default async function Rollercoasters() {
           {rollercoasters.map((rollercoaster) => (
             <tr key={`${rollercoaster.title}${rollercoaster.themeparkTitle}`}>
               <td>{rollercoaster.title}</td>
-              <td>{rollercoaster.themeparkTitle}</td>
+              <td>
+                <span>{rollercoaster.themeparkTitle}</span>
+                {rollercoaster.themeparkLogo && (
+                  <figure
+                    style={{
+                      aspectRatio: 1,
+                      display: "inline-block",
+                      height: sizes.s24.rem,
+                      margin: `0 0 0 ${sizes.s8.rem}`,
+                      position: "relative",
+                    }}
+                  >
+                    <Image
+                      src={imageUrlBuilder(sanityClient)
+                        .image(rollercoaster.themeparkLogo.asset)
+                        .url()}
+                      alt={`${rollercoaster.themeparkTitle} logo`}
+                      width={sizes.s24.raw}
+                      height={sizes.s24.raw}
+                      style={{ objectFit: "contain" }}
+                    />
+                  </figure>
+                )}
+              </td>
               <td>{rollercoaster.themeparkCountry}</td>
               <td>
                 {new Date(rollercoaster.firstRidden).toLocaleDateString(

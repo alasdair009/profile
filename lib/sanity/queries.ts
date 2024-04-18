@@ -44,4 +44,5 @@ export const GET_ALL_ROLLERCOASTERS = `*[_type == "rollercoasters"] | order(firs
   themeparks,
   "themeparkTitle": themeparks->title,
   "themeparkCountry": themeparks->country,
+  "themeparkLogo": themeparks->logo,
 }`;
