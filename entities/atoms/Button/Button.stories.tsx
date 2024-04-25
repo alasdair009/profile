@@ -1,6 +1,6 @@
 import { Button } from "./Button";
 import { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
+import { expect, fn, userEvent, waitFor, within } from "@storybook/test";
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -22,4 +22,14 @@ const meta: Meta<typeof Button> = {
 };
 export default meta;
 
-export const Default: StoryObj<typeof Button> = {};
+export const Default: StoryObj<typeof Button> = {
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await expect(canvas.getByText("Button")).toBeInTheDocument();
+
+    await userEvent.click(canvas.getByTestId(Button.name));
+
+    await waitFor(() => expect(args.onClick).toHaveBeenCalled());
+  },
+};

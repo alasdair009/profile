@@ -31,8 +31,14 @@ export function Audio({
   ...rest
 }: AudioProps) {
   return (
-    <Root controls={controls} autoPlay={autoPlay} loop={loop} {...rest}>
-      <source src={src} type="audio/mpeg" />
+    <Root
+      controls={controls}
+      autoPlay={autoPlay}
+      loop={loop}
+      data-testid={Audio.name}
+      {...rest}
+    >
+      <source src={src} type="audio/mpeg" data-testid={`${Audio.name}Source`} />
     </Root>
   );
 }
