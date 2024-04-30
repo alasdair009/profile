@@ -5,10 +5,9 @@ import {
   MarkerProps,
   useJsApiLoader,
 } from "@react-google-maps/api";
-import { HTMLAttributes, useCallback, useState } from "react";
+import { HTMLAttributes } from "react";
 import { colors, globalContentMaxWidth, Heading } from "@/entities";
 import { rem } from "polished";
-import LatLngLiteral = google.maps.LatLngLiteral;
 
 const center = {
   lat: 51.5072479362636,
@@ -26,20 +25,6 @@ export function Map({ mapApiKey, markers, children }: MapProps) {
     googleMapsApiKey: mapApiKey,
   });
 
-  const [map, setMap] = useState(null);
-
-  const onLoad = useCallback(function callback(map: unknown) {
-    // This is just an example of getting and using the map instance!!! don't just blindly copy!
-    const bounds = new window.google.maps.LatLngBounds(center);
-    map.fitBounds(bounds);
-
-    setMap(map);
-  }, []);
-
-  const onUnmount = useCallback(function callback() {
-    setMap(null);
-  }, []);
-
   return isLoaded ? (
     <GoogleMap
       mapContainerStyle={{
@@ -52,8 +37,6 @@ export function Map({ mapApiKey, markers, children }: MapProps) {
       }}
       center={center}
       zoom={3}
-      onLoad={onLoad}
-      onUnmount={onUnmount}
     >
       <>
         {markers.map((marker, i) => {
