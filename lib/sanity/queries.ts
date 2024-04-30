@@ -41,6 +41,7 @@ export const GET_ALL_ROLLERCOASTERS = `*[_type == "rollercoasters"] | order(firs
   height,
   length,
   firstRidden,
+  inversions,
   themeparks,
   "themeparkTitle": themeparks->title,
   "themeparkCountry": themeparks->country,

@@ -9,6 +9,7 @@ import {
   globalDecorationMaxWidth,
   Heading,
   HorizontalRule,
+  Link,
   Paragraph,
   sizes,
   SocialMediaBar,
@@ -22,15 +23,20 @@ import trampolinePosterImage from "../../entities/assets/trampoline-poster.png";
 import skylinesImage from "../../entities/assets/city-skylines.png";
 import rollercoasterImage from "../../entities/assets/rollercoaster.svg";
 import homekitImage from "../../entities/assets/homekit.svg";
-import { rollercoasterHistory } from "@/lib/data/rollercoasters";
 import Image from "next/image";
+import { sanityClient } from "@/lib/sanity/client";
+import { SanityDocument } from "next-sanity";
+import { GET_ALL_ROLLERCOASTERS } from "@/lib/sanity/queries";
 
 export const metadata: Metadata = generateMetaData(
   "About Me",
   "A little bit of information about me",
   "about-me"
 );
-export default function AboutMe() {
+export default async function AboutMe() {
+  const rollercoasters = await sanityClient.fetch<SanityDocument[]>(
+    GET_ALL_ROLLERCOASTERS
+  );
   return (
     <>
       <section
@@ -90,10 +96,13 @@ export default function AboutMe() {
         <Paragraph>
           I reside in Suffolk UK and am a rollercoaster fanatic and always like
           to take a few days per year to visit theme parks up and down the
-          country. I have over <strong>{rollercoasterHistory.length}</strong>{" "}
-          credits from coasters around the world with my personal favourite ride
-          being <strong>Tatsu</strong> at Six Flags Magic Mountain closely
-          followed by <strong>Kingda Ka</strong> at Six Flags Great Adventure.
+          country. I have over{" "}
+          <Link href="/about-me/rollercoasters">
+            {rollercoasters.length} credits from coasters around the world
+          </Link>{" "}
+          with my personal favourite ride being <strong>Tatsu</strong> at Six
+          Flags Magic Mountain closely followed by <strong>Kingda Ka</strong> at
+          Six Flags Great Adventure.
         </Paragraph>
         <Paragraph>
           I enjoy playing computer games especially construction and management

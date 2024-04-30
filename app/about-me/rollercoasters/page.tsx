@@ -36,6 +36,9 @@ export default async function Rollercoasters() {
   const longestRollercoaster = rollercoasters.reduce((prev, current) => {
     return prev && prev.length > current.length ? prev : current;
   });
+  const mostInvertedRollercoaster = rollercoasters.reduce((prev, current) => {
+    return prev && prev.inversions > current.inversions ? prev : current;
+  });
   return (
     <>
       <Heading>Rollercoasters</Heading>
@@ -92,6 +95,19 @@ export default async function Rollercoasters() {
           <span>{longestRollercoaster.title}</span>
           <Spacer />
           <span>{longestRollercoaster.length}m</span>
+        </article>
+        <article
+          style={{
+            alignItems: "center",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <h2>Most Inversions</h2>
+          <span>{mostInvertedRollercoaster.title}</span>
+          <Spacer />
+          <span>{mostInvertedRollercoaster.inversions}</span>
         </article>
       </div>
       <Table>
