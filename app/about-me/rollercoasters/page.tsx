@@ -3,6 +3,7 @@ import { generateMetaData } from "@/lib/metadata";
 import {
   globalContentMaxWidth,
   Heading,
+  Map,
   Paragraph,
   sizes,
   Spacer,
@@ -13,6 +14,7 @@ import { sanityClient } from "@/lib/sanity/client";
 import { SanityDocument } from "next-sanity";
 import Image from "next/image";
 import imageUrlBuilder from "@sanity/image-url";
+import { MarkerProps } from "@react-google-maps/api";
 
 export const metadata: Metadata = generateMetaData(
   "Rollercoasters",
@@ -38,6 +40,14 @@ export default async function Rollercoasters() {
   });
   const mostInvertedRollercoaster = rollercoasters.reduce((prev, current) => {
     return prev && prev.inversions > current.inversions ? prev : current;
+  });
+  let latLangs: MarkerProps[] = [];
+  rollercoasters.forEach((rollercoaster) => {
+    const latLng = rollercoaster.themeparkcoords.split(",");
+    latLangs.push({
+      title: `${rollercoaster.title} - ${rollercoaster.themeparkTitle}`,
+      position: { lat: parseFloat(latLng[0]), lng: parseFloat(latLng[1]) },
+    });
   });
   return (
     <>
@@ -160,6 +170,15 @@ export default async function Rollercoasters() {
           ))}
         </tbody>
       </Table>
+      <Spacer multiplier={6} />
+      <Heading level="h2">Coaster Map</Heading>
+      <Paragraph align="center">
+        Around the world in {rollercoasters.length} coasters.
+      </Paragraph>
+      <Map
+        mapApiKey={`${process.env.GOOGLE_MAPS_API_KEY}`}
+        markers={latLangs}
+      />
     </>
   );
 }
