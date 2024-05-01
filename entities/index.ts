@@ -21,6 +21,7 @@ export {
   globalDecorationMaxWidth,
   sizes,
 } from "./design-tokens/dimensions";
+export type { Breakpoint, Dimension } from "./design-tokens/dimensions";
 
 export { Audio } from "./atoms/Audio";
 export { BaseInput } from "./atoms/BaseInput";

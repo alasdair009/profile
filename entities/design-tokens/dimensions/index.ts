@@ -6,4 +6,4 @@ export {
   globalDecorationMaxWidth,
   sizes,
 } from "./dimensions";
-export type { Dimension } from "./dimensions";
+export type { Breakpoint, Dimension } from "./dimensions";

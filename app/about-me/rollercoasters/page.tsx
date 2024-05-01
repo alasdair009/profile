@@ -120,7 +120,7 @@ export default async function Rollercoasters() {
           <span>{mostInvertedRollercoaster.inversions}</span>
         </article>
       </div>
-      <Table>
+      <Table breakAt="medium">
         <thead>
           <tr>
             <td>Rollercoaster</td>
@@ -132,8 +132,8 @@ export default async function Rollercoasters() {
         <tbody>
           {rollercoasters.map((rollercoaster) => (
             <tr key={`${rollercoaster.title}${rollercoaster.themeparkTitle}`}>
-              <td>{rollercoaster.title}</td>
-              <td>
+              <td data-title="title">{rollercoaster.title}</td>
+              <td data-title="theme park">
                 <span>{rollercoaster.themeparkTitle}</span>
                 {rollercoaster.themeparkLogo && (
                   <figure
@@ -157,8 +157,8 @@ export default async function Rollercoasters() {
                   </figure>
                 )}
               </td>
-              <td>{rollercoaster.themeparkCountry}</td>
-              <td>
+              <td data-title="country">{rollercoaster.themeparkCountry}</td>
+              <td data-title="first ridden">
                 {new Date(rollercoaster.firstRidden).toLocaleDateString(
                   "en-GB",
                   {

@@ -4,6 +4,7 @@ import { rem } from "polished";
 import { Property } from "csstype";
 import {
   colors,
+  device,
   fonts,
   fontSizes,
   FontSizes,
@@ -25,9 +26,13 @@ export const Root = styled.p<{
   font-family: ${fonts.body};
   font-size: ${({ $fontSize }) => fontSizes[$fontSize].rem};
   margin: 0 auto ${sizes.s24.rem};
-  max-width: ${rem(globalTextMaxWidth)};
+  max-width: calc(100% - ${sizes.s16.rem});
   text-align: ${({ $align }) => $align};
   text-wrap: ${({ $textWrap }) => $textWrap};
   width: 100%;
-  ${({ $lines }) => lineClamp(`${lineHeights.p}`, $lines)}
+  ${({ $lines }) => lineClamp(`${lineHeights.p}`, $lines)};
+
+  @media (min-width: ${globalTextMaxWidth}px) {
+    max-width: ${rem(globalTextMaxWidth)};
+  }
 `;
