@@ -59,7 +59,9 @@ export default async function Rollercoasters() {
       </Paragraph>
       <div
         style={{
+          alignItems: "center",
           display: "flex",
+          flexWrap: "wrap",
           justifyContent: "center",
           maxWidth: globalContentMaxWidth,
           gap: sizes.s24.rem,

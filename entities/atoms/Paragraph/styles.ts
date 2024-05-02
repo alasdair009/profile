@@ -26,7 +26,7 @@ export const Root = styled.p<{
   font-family: ${fonts.body};
   font-size: ${({ $fontSize }) => fontSizes[$fontSize].rem};
   margin: 0 auto ${sizes.s24.rem};
-  max-width: calc(100% - ${sizes.s16.rem});
+  max-width: calc(100vw - ${sizes.s16.rem});
   text-align: ${({ $align }) => $align};
   text-wrap: ${({ $textWrap }) => $textWrap};
   width: 100%;
