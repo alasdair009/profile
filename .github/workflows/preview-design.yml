@@ -1,6 +1,6 @@
 name: Vercel Preview Design Deployment
 env:
-  VERCEL_ORG_ID: team_mqbAW02uQQFbwifTJZQZG31H
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: prj_Cl4YNpOKsGIXGkohkQ4SBmMDvP8h
 on:
   workflow_call:
