@@ -8,7 +8,7 @@ on:
       vercel-token:
         required: true
 jobs:
-  Deploy-Production:
+  Deploy-Design-Production:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
