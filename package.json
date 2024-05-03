@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "check": "npx tsc --noEmit",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ixgnore-path .gitignore .",
     "storybook": "storybook dev -p 6006",
