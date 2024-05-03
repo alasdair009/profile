@@ -9,5 +9,7 @@ on:
 jobs:
   static-analysis:
     uses: ./.github/workflows/static-analysis.yml
-  test:
+  chromatic:
     uses: ./.github/workflows/chromatic.yml
+    secrets:
+      npmrc-token: ${{ secrets.JX_GITHUB_BOT_PKG_READ_PAT }}
