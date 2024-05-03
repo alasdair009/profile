@@ -6,10 +6,14 @@ jobs:
   static-analysis:
     uses: ./.github/workflows/static-analysis.yml
   deploy-site-production:
-    uses: ./.github/workflows/production-site.yml
+    uses: ./.github/workflows/deploy-production.yml
     secrets:
       vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      vercel-project-id: ${{ secrets.VERCEL_SITE_PROJECT_ID }}
+      vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
   deploy-design-production:
-    uses: ./.github/workflows/production-design.yml
+    uses: ./.github/workflows/deploy-production.yml
     secrets:
       vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      vercel-project-id: ${{ secrets.VERCEL_DESIGN_PROJECT_ID }}
+      vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}

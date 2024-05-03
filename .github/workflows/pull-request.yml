@@ -1,8 +1,5 @@
 name: Pull request
 
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-
 on:
   pull_request:
     branches:
@@ -16,12 +13,14 @@ jobs:
     uses: ./.github/workflows/chromatic.yml
     secrets:
       chromatic-token: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-  #  deploy-site-preview:
-  #    uses: ./.github/workflows/preview-site.yml
-  #    secrets:
-  #      vercel-token: ${{ secrets.VERCEL_TOKEN }}
+  deploy-site-preview:
+    uses: ./.github/workflows/deploy-preview.yml
+    secrets:
+      vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      vercel-project-id: ${{ secrets.VERCEL_SITE_PROJECT_ID }}
+      vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
   deploy-design-preview:
-    uses: ./.github/workflows/preview-design.yml
+    uses: ./.github/workflows/deploy-preview.yml
     secrets:
       vercel-token: ${{ secrets.VERCEL_TOKEN }}
       vercel-project-id: ${{ secrets.VERCEL_DESIGN_PROJECT_ID }}

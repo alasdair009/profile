@@ -1,14 +1,21 @@
-name: Vercel Production Site Deployment
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-#  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_SITE_PROJECT_ID }}
+name: Vercel Production Deployment
+
 on:
   workflow_call:
     secrets:
       vercel-token:
         required: true
+      vercel-project-id:
+        required: true
+      vercel-org-id:
+        required: true
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.vercel-org-id }}
+  VERCEL_PROJECT_ID: ${{ secrets.vercel-project-id }}
+
 jobs:
-  Deploy-Site-Production:
+  Deploy-Design-Production:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
