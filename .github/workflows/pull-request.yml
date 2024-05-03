@@ -16,7 +16,7 @@ jobs:
   deploy-site-preview:
     uses: ./.github/workflows/preview.yml
     secrets:
-      vercel-token: ${{ secrets.VERCEL_SITE_PROJECT_ID }}
+      vercel-token: ${{ secrets.VERCEL_TOKEN }}
   deploy-design-preview:
     uses: ./.github/workflows/preview.yml
     secrets:
