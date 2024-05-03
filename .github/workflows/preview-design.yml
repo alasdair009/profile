@@ -5,6 +5,15 @@ on:
     secrets:
       vercel-token:
         required: true
+      vercel-project-id:
+        required: true
+      vercel-org-id:
+        required: true
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.vercel-org-id }}
+  VERCEL_PROJECT_ID: ${{ secrets.vercel-project-id }}
+
 jobs:
   Deploy-Design-Preview:
     runs-on: ubuntu-latest
