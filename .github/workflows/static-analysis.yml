@@ -43,4 +43,4 @@ jobs:
         run: npm ci
 
       - name: Check
-        run: npm run check --workspaces --if-present
+        run: npm run check
