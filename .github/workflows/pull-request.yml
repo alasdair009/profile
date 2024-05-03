@@ -10,4 +10,4 @@ jobs:
   static-analysis:
     uses: ./.github/workflows/static-analysis.yml
   test:
-    uses: ./.github/workflows/storybook-test.yml
+    uses: ./.github/workflows/test.yml
