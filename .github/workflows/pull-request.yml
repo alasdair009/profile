@@ -19,9 +19,15 @@ jobs:
       vercel-token: ${{ secrets.VERCEL_TOKEN }}
       vercel-project-id: ${{ secrets.VERCEL_SITE_PROJECT_ID }}
       vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+    needs:
+      - static-analysis
+      - chromatic
   deploy-design-preview:
     uses: ./.github/workflows/deploy-preview.yml
     secrets:
       vercel-token: ${{ secrets.VERCEL_TOKEN }}
       vercel-project-id: ${{ secrets.VERCEL_DESIGN_PROJECT_ID }}
       vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+    needs:
+      - static-analysis
+      - chromatic
