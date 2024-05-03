@@ -14,7 +14,7 @@ type TableProps = {
  */
 export function Table({ breakAt = "base", children, ...rest }: TableProps) {
   return (
-    <Root $breakAt={breakAt} {...rest}>
+    <Root $breakAt={breakAt} data-testid={Table.name} {...rest}>
       {children}
     </Root>
   );

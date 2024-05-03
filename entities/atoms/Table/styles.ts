@@ -12,6 +12,7 @@ import { breakpoints } from "@/entities/design-tokens/dimensions/dimensions";
 import { typography } from "@storybook/theming";
 
 export const Root = styled.table<{ $breakAt: Breakpoint }>`
+  background: ${colors.blackEvil};
   border-collapse: collapse;
   margin: ${sizes.s16.rem} auto;
   max-width: ${rem(globalContentMaxWidth)};
@@ -29,6 +30,10 @@ export const Root = styled.table<{ $breakAt: Breakpoint }>`
     position: relative;
   }
 
+  th {
+    font-weight: ${typography.weight.bold};
+  }
+
   @media (max-width: ${({ $breakAt }) => breakpoints[$breakAt]}px) {
     table,
     thead,
@@ -38,6 +43,11 @@ export const Root = styled.table<{ $breakAt: Breakpoint }>`
     td,
     tr {
       display: block;
+    }
+
+    thead,
+    tfoot {
+      background: none;
     }
 
     thead tr {
@@ -50,14 +60,17 @@ export const Root = styled.table<{ $breakAt: Breakpoint }>`
       border: ${rem(1)} solid ${lighten(0.5, colors.greyDark)};
     }
 
-    td {
+    td,
+    th {
       border: none;
       border-bottom: ${rem(1)} solid ${colors.greyDark};
       padding-left: 50%;
       position: relative;
+      text-align: left;
     }
 
-    td:before {
+    td::before,
+    th::before {
       content: attr(data-title) ":";
       font-weight: ${typography.weight.bold};
       left: ${sizes.s8.rem};
