@@ -57,6 +57,7 @@
     "polished": "^4.2.2",
     "prettier": "^3.0.3",
     "react-vertical-timeline-component": "^3.6.0",
+    "sharp": "^0.33.3",
     "storybook": "^8.0.5",
     "styled-components": "^6.1.0",
     "typescript": "^5"
