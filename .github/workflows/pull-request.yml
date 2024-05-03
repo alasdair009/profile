@@ -14,10 +14,10 @@ jobs:
     secrets:
       chromatic-token: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
   deploy-site-preview:
-    uses: ./.github/workflows/preview.yml
+    uses: ./.github/workflows/preview-site.yml
     secrets:
       vercel-token: ${{ secrets.VERCEL_TOKEN }}
   deploy-design-preview:
-    uses: ./.github/workflows/preview.yml
+    uses: ./.github/workflows/preview-design.yml
     secrets:
       vercel-token: ${{ secrets.VERCEL_TOKEN }}

@@ -1,0 +1,15 @@
+on:
+  push:
+    branches:
+      - main
+jobs:
+  static-analysis:
+    uses: ./.github/workflows/static-analysis.yml
+  deploy-site-production:
+    uses: ./.github/workflows/production-site.yml
+    secrets:
+      vercel-token: ${{ secrets.VERCEL_TOKEN }}
+  deploy-design-production:
+    uses: ./.github/workflows/production-design.yml
+    secrets:
+      vercel-token: ${{ secrets.VERCEL_TOKEN }}
