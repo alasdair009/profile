@@ -20,4 +20,4 @@ jobs:
   deploy-design-preview:
     uses: ./.github/workflows/preview.yml
     secrets:
-      vercel-token: ${{ secrets.VERCEL_DESIGN_PROJECT_ID }}
+      vercel-token: ${{ secrets.VERCEL_TOKEN }}
