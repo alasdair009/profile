@@ -13,3 +13,15 @@ jobs:
     uses: ./.github/workflows/chromatic.yml
     secrets:
       chromatic-token: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+  deploy-site:
+    uses: ./.github/workflows/preview.yml
+    secrets:
+      vercel-token: ${{ secrets.VERCEL_SITE_PROJECT_ID }}
+  deploy-site-preview:
+    uses: ./.github/workflows/preview.yml
+    secrets:
+      vercel-token: ${{ secrets.VERCEL_SITE_PROJECT_ID }}
+  deploy-design-preview:
+    uses: ./.github/workflows/preview.yml
+    secrets:
+      vercel-token: ${{ secrets.VERCEL_DESIGN_PROJECT_ID }}
