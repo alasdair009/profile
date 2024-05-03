@@ -7,12 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "check": "npx tsc --noEmit",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ixgnore-path .gitignore .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky install",
-    "chromatic": "npx chromatic --project-token=chpt_15397914f82ec8a",
+    "chromatic": "chromatic --exit-zero-on-changes",
     "depcheck": "npx depcheck",
     "test-storybook": "test-storybook"
   },
@@ -26,10 +27,10 @@
     "react-intersection-observer": "^9.8.1"
   },
   "devDependencies": {
+    "@sanity/image-url": "^1.0.2",
     "@storybook/addon-essentials": "^8.0.5",
     "@storybook/addon-interactions": "^8.0.9",
     "@storybook/addon-links": "^8.0.5",
-    "@storybook/addon-mdx-gfm": "^8.0.5",
     "@storybook/addon-onboarding": "^8.0.5",
     "@storybook/blocks": "^8.0.5",
     "@storybook/nextjs": "^8.0.5",

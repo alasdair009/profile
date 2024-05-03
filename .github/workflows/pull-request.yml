@@ -1,0 +1,33 @@
+name: Pull request
+
+on:
+  pull_request:
+    branches:
+      - main
+      - rc/**
+
+jobs:
+  static-analysis:
+    uses: ./.github/workflows/static-analysis.yml
+  chromatic:
+    uses: ./.github/workflows/chromatic.yml
+    secrets:
+      chromatic-token: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+  deploy-site-preview:
+    uses: ./.github/workflows/deploy-preview.yml
+    secrets:
+      vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      vercel-project-id: ${{ secrets.VERCEL_SITE_PROJECT_ID }}
+      vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+    needs:
+      - static-analysis
+      - chromatic
+  deploy-design-preview:
+    uses: ./.github/workflows/deploy-preview.yml
+    secrets:
+      vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      vercel-project-id: ${{ secrets.VERCEL_DESIGN_PROJECT_ID }}
+      vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+    needs:
+      - static-analysis
+      - chromatic

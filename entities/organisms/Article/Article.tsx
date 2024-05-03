@@ -7,10 +7,7 @@ import {
   Root,
 } from "./styles";
 import { HTMLAttributes, ReactNode } from "react";
-import { globalTextMaxWidth, Spacer } from "@/entities";
-import Image from "next/image";
-import { rem } from "polished";
-import { Date } from "@/entities/molecules/Card/styles";
+import { Spacer } from "@/entities";
 
 type ArticleProps = {
   heading: string;

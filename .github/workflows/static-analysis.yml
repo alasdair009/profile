@@ -1,0 +1,46 @@
+name: Static analysis
+
+on:
+  workflow_call:
+
+jobs:
+  eslint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.17.0"
+          cache: "npm"
+
+      - name: NPM install
+        run: npm ci
+
+      - name: ESLint
+        run: npm run lint
+
+      - name: Stylelint
+        run: npm run format
+
+  check:
+    name: TypeScript compile check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.17.0"
+          cache: "npm"
+
+      - name: NPM install
+        run: npm ci
+
+      - name: Check
+        run: npm run check
