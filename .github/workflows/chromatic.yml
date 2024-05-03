@@ -3,7 +3,7 @@ name: Chromatic
 on:
   workflow_call:
     secrets:
-      CHROMATIC_PROJECT_TOKEN:
+      chromatic-token:
         required: true
 
 jobs:
@@ -21,4 +21,4 @@ jobs:
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          projectToken: ${{ secrets.chromatic-token }}

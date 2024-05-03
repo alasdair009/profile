@@ -12,4 +12,4 @@ jobs:
   chromatic:
     uses: ./.github/workflows/chromatic.yml
     secrets:
-      npmrc-token: ${{ secrets.JX_GITHUB_BOT_PKG_READ_PAT }}
+      chromatic-token: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
