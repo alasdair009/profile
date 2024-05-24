@@ -49,6 +49,7 @@ export function Paragraph({
       $fontSize={fontSize}
       $textWrap={textWrap}
       $lines={lines}
+      data-testid={Paragraph.name}
       {...rest}
     >
       {children}

@@ -1,5 +1,7 @@
-import { Heading } from "./Heading";
+import { Heading, HeadingProps } from "./Heading";
 import { Meta, StoryObj } from "@storybook/react";
+import { expect, within } from "@storybook/test";
+import { Flurry } from "@/entities";
 
 const meta: Meta<typeof Heading> = {
   component: Heading,
@@ -26,43 +28,59 @@ const meta: Meta<typeof Heading> = {
 };
 export default meta;
 
-export const h1: StoryObj<typeof Heading> = {
+export const H1: StoryObj<typeof Heading> = {
   args: {
     children: "Heading 1",
   },
+  play: async ({ args, canvasElement }) => headerTest(args, canvasElement),
 };
 
-export const h2: StoryObj<typeof Heading> = {
+export const H2: StoryObj<typeof Heading> = {
   args: {
     level: "h2",
     children: "Heading 2",
   },
+  play: async ({ args, canvasElement }) => headerTest(args, canvasElement),
 };
 
-export const h3: StoryObj<typeof Heading> = {
+export const H3: StoryObj<typeof Heading> = {
   args: {
     level: "h3",
     children: "Heading 3",
   },
+  play: async ({ args, canvasElement }) => headerTest(args, canvasElement),
 };
 
-export const h4: StoryObj<typeof Heading> = {
+export const H4: StoryObj<typeof Heading> = {
   args: {
     level: "h4",
     children: "Heading 4",
   },
+  play: async ({ args, canvasElement }) => headerTest(args, canvasElement),
 };
 
-export const h5: StoryObj<typeof Heading> = {
+export const H5: StoryObj<typeof Heading> = {
   args: {
     level: "h5",
     children: "Heading 5",
   },
+  play: async ({ args, canvasElement }) => headerTest(args, canvasElement),
 };
 
-export const h6: StoryObj<typeof Heading> = {
+export const H6: StoryObj<typeof Heading> = {
   args: {
     level: "h6",
     children: "Heading 6",
   },
+  play: async ({ args, canvasElement }) => headerTest(args, canvasElement),
+};
+
+const headerTest = async (args: HeadingProps, canvasElement: HTMLElement) => {
+  const canvas = within(canvasElement);
+  const headingElement = canvas.getByTestId(Heading.name);
+
+  await expect(headingElement).toBeInTheDocument();
+  await expect(headingElement).toHaveTextContent(`${args.children}`);
+  await expect(headingElement).toHaveStyle(`text-align: ${args.align}`);
+  await expect(headingElement.tagName.toLowerCase()).toBe(args.level);
 };

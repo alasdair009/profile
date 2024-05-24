@@ -19,6 +19,7 @@ export function Link({
       href={href}
       target={isExternalURL ? "_blank" : "_self"}
       rel={isExternalURL ? "noopener" : undefined}
+      data-testid={Link.name}
       {...rest}
     >
       {children ? children : href}

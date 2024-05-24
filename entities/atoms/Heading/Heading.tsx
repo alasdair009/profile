@@ -3,7 +3,7 @@ import { HTMLAttributes, ReactNode } from "react";
 import { colors, HeadingTypes, TextAlignment } from "@/entities";
 import { Property } from "csstype";
 
-type HeadingProps = {
+export type HeadingProps = {
   /**
    * Visual style of the Heading.
    */
@@ -56,6 +56,7 @@ export function Heading({
       $align={align}
       $textShadow={textShadow}
       $lines={lines}
+      data-testid={Heading.name}
       {...rest}
     >
       {children}

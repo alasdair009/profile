@@ -25,8 +25,10 @@ export default meta;
 export const Default: StoryObj<typeof Button> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
+    const buttonElement = canvas.getByText("Button");
 
-    await expect(canvas.getByText("Button")).toBeInTheDocument();
+    await expect(buttonElement).toBeInTheDocument();
+    await expect(buttonElement).toHaveTextContent(`${args.children}`);
 
     await userEvent.click(canvas.getByTestId(Button.name));
 

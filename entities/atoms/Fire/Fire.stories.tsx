@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Fire } from "./Fire";
+import { expect, within } from "@storybook/test";
 
 const meta: Meta<typeof Fire> = {
   component: Fire,
@@ -32,5 +33,15 @@ export default meta;
 export const Default: StoryObj<typeof Fire> = {
   args: {
     style: { height: 200 },
+  },
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const fireElement = canvas.getByTestId(Fire.name);
+    const emberElements = canvas.getAllByTestId(`${Fire.name}Ember`);
+
+    await expect(fireElement).toBeInTheDocument();
+    await expect(emberElements).toHaveLength(
+      args.numberOfParticles ? args.numberOfParticles : 0
+    );
   },
 };

@@ -1,5 +1,6 @@
 import { Flurry } from "./Flurry";
 import { Meta, StoryObj } from "@storybook/react";
+import { expect, within } from "@storybook/test";
 
 const meta: Meta<typeof Flurry> = {
   component: Flurry,
@@ -23,4 +24,13 @@ const meta: Meta<typeof Flurry> = {
 };
 export default meta;
 
-export const Default: StoryObj<typeof Flurry> = {};
+export const Default: StoryObj<typeof Flurry> = {
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const flurryElement = canvas.getByTestId(Flurry.name);
+    const content = canvas.getByText("Flurry");
+
+    await expect(flurryElement).toBeInTheDocument();
+    await expect(content).toBeInTheDocument();
+  },
+};

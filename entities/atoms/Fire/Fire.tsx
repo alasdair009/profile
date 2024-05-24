@@ -45,6 +45,7 @@ export function Fire({
     embers.push(
       <Ember
         key={`ember${baseColor}${particleSize}${numberOfParticles}${duration}${i}`}
+        data-testid={`${Fire.name}Ember`}
       />
     );
   }
@@ -55,6 +56,7 @@ export function Fire({
       $particleSize={particleSize}
       $numberOfParticles={numberOfParticles}
       $duration={duration}
+      data-testid={Fire.name}
       {...rest}
     >
       {embers}

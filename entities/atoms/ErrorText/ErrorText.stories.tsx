@@ -1,5 +1,6 @@
 import { ErrorText } from "./ErrorText";
 import { Meta, StoryObj } from "@storybook/react";
+import { expect, within } from "@storybook/test";
 
 const meta: Meta<typeof ErrorText> = {
   component: ErrorText,
@@ -10,4 +11,12 @@ const meta: Meta<typeof ErrorText> = {
 };
 export default meta;
 
-export const Default: StoryObj<typeof ErrorText> = {};
+export const Default: StoryObj<typeof ErrorText> = {
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const errorTextElement = canvas.getByTestId(ErrorText.name);
+
+    await expect(errorTextElement).toBeInTheDocument();
+    await expect(errorTextElement).toHaveTextContent(`${args.children}`);
+  },
+};

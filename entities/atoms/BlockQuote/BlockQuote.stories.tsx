@@ -1,5 +1,6 @@
 import { BlockQuote } from "./BlockQuote";
 import { Meta, StoryObj } from "@storybook/react";
+import { expect, within } from "@storybook/test";
 
 const meta: Meta<typeof BlockQuote> = {
   component: BlockQuote,
@@ -9,4 +10,12 @@ const meta: Meta<typeof BlockQuote> = {
 };
 export default meta;
 
-export const Default: StoryObj<typeof BlockQuote> = {};
+export const Default: StoryObj<typeof BlockQuote> = {
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const blockQuoteElement = canvas.getByTestId(BlockQuote.name);
+
+    await expect(blockQuoteElement).toBeInTheDocument();
+    await expect(blockQuoteElement).toHaveTextContent(`${args.children}`);
+  },
+};

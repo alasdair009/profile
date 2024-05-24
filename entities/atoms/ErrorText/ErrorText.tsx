@@ -7,6 +7,10 @@ type ErrorTextProps = {
    * Show the error
    */
   shown?: boolean;
+  /**
+   * Contents of the message
+   */
+  children: ReactNode;
 } & HTMLAttributes<HTMLParagraphElement>;
 
 /**
@@ -19,6 +23,7 @@ export function ErrorText({ shown = true, children, ...rest }: ErrorTextProps) {
       as="span"
       fontSize="small"
       $shown={shown}
+      data-testid={ErrorText.name}
       {...rest}
     >
       {children}

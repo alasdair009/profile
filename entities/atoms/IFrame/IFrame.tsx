@@ -12,5 +12,5 @@ type IFrameProps = {
  * An HTML iframe for external content
  */
 export function IFrame({ ...rest }: IFrameProps) {
-  return <Root {...rest} allowFullScreen={true} />;
+  return <Root {...rest} allowFullScreen={true} data-testid={IFrame.name} />;
 }

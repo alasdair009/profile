@@ -21,5 +21,12 @@ export function HorizontalRule({
   margin = "both",
   ...rest
 }: HorizontalRuleProps) {
-  return <Root $decoration={decoration} $margin={margin} {...rest} />;
+  return (
+    <Root
+      $decoration={decoration}
+      $margin={margin}
+      data-testid={HorizontalRule.name}
+      {...rest}
+    />
+  );
 }

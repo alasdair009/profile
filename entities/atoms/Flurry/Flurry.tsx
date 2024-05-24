@@ -50,7 +50,7 @@ export function Flurry({
   }
 
   return (
-    <Root {...rest}>
+    <Root data-testid={Flurry.name} {...rest}>
       <Inner>{effectBoxes}</Inner>
       {background && backgroundAlt && (
         <Silhouette src={background} alt={backgroundAlt} />
