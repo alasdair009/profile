@@ -43,7 +43,7 @@ export default async function Rollercoasters() {
   });
   let latLangs: MarkerProps[] = [];
   rollercoasters.forEach((rollercoaster) => {
-    const latLng = rollercoaster.themeparkcoords.split(",");
+    const latLng = rollercoaster.coords.split(",");
     latLangs.push({
       title: `${rollercoaster.title} - ${rollercoaster.themeparkTitle}`,
       position: { lat: parseFloat(latLng[0]), lng: parseFloat(latLng[1]) },
