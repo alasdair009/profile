@@ -7,6 +7,7 @@ import { generateMetaData } from "@/lib/metadata";
 import ServiceWorker from "@/app/ServiceWorker";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ViewTransitions } from "next-view-transitions";
+import { siteConfig } from "@/app/app.config";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,20 +33,36 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  if (siteConfig.ALLOW_TRANSITIONS) {
+    return (
+      <ViewTransitions>
+        <html lang="en">
+          <body className={inter.className}>
+            <StyledComponentsRegistry>
+              <GlobalStyle />
+              <Header />
+              <main>{children}</main>
+            </StyledComponentsRegistry>
+            <ServiceWorker />
+            <SpeedInsights />
+            <Analytics />
+          </body>
+        </html>
+      </ViewTransitions>
+    );
+  }
   return (
-    <ViewTransitions>
-      <html lang="en">
-        <body className={inter.className}>
-          <StyledComponentsRegistry>
-            <GlobalStyle />
-            <Header />
-            <main>{children}</main>
-          </StyledComponentsRegistry>
-          <ServiceWorker />
-          <SpeedInsights />
-          <Analytics />
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang="en">
+      <body className={inter.className}>
+        <StyledComponentsRegistry>
+          <GlobalStyle />
+          <Header />
+          <main>{children}</main>
+        </StyledComponentsRegistry>
+        <ServiceWorker />
+        <SpeedInsights />
+        <Analytics />
+      </body>
+    </html>
   );
 }

@@ -2,6 +2,7 @@ import { NewTabIcon, StaticLink, TransitionLink } from "./styles";
 import type { LinkProps } from "./types";
 import { isExternalDomain } from "@/lib/domains";
 import newTabIcon from "../../assets/new-tab-icon.svg";
+import { siteConfig } from "../../../app/app.config";
 
 /**
  * Link to a new path or url.
@@ -22,6 +23,7 @@ export function Link({
         target={isExternalURL ? "_blank" : "_self"}
         rel={isExternalURL ? "noopener" : undefined}
         data-testid={Link.name}
+        data-transition={`${process.env.ALLOW_TRANSITIONS}`}
         {...rest}
       >
         {children ? children : href}
@@ -43,6 +45,7 @@ export function Link({
       target={isExternalURL ? "_blank" : "_self"}
       rel={isExternalURL ? "noopener" : undefined}
       data-testid={Link.name}
+      data-transition={`${siteConfig.ALLOW_TRANSITIONS}`}
       {...rest}
     >
       {children ? children : href}

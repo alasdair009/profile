@@ -59,6 +59,7 @@
     "react-vertical-timeline-component": "^3.6.0",
     "storybook": "^8.0.5",
     "styled-components": "^6.1.0",
+    "superstruct": "^1.0.4",
     "typescript": "^5"
   },
   "readme": "ERROR: No README data found!",
