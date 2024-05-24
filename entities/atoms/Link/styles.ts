@@ -1,5 +1,6 @@
 "use client";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "next-view-transitions";
 import styled, { keyframes } from "styled-components";
 import { colors, fontSizes, fontWeights, sizes } from "@/entities";
 import { LinkVariant } from "./types";

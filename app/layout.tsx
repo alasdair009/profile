@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { generateMetaData } from "@/lib/metadata";
 import ServiceWorker from "@/app/ServiceWorker";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ViewTransitions } from "next-view-transitions";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,17 +33,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <StyledComponentsRegistry>
-          <GlobalStyle />
-          <Header />
-          <main>{children}</main>
-        </StyledComponentsRegistry>
-        <ServiceWorker />
-        <SpeedInsights />
-        <Analytics />
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body className={inter.className}>
+          <StyledComponentsRegistry>
+            <GlobalStyle />
+            <Header />
+            <main>{children}</main>
+          </StyledComponentsRegistry>
+          <ServiceWorker />
+          <SpeedInsights />
+          <Analytics />
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
