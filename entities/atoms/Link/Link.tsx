@@ -1,4 +1,4 @@
-import { NewTabIcon, Root } from "./styles";
+import { NewTabIcon, StaticLink, TransitionLink } from "./styles";
 import type { LinkProps } from "./types";
 import { isExternalDomain } from "@/lib/domains";
 import newTabIcon from "../../assets/new-tab-icon.svg";
@@ -13,8 +13,31 @@ export function Link({
   ...rest
 }: LinkProps) {
   const isExternalURL = isExternalDomain(href);
+
+  if (process.env.ALLOW_TRANSITIONS) {
+    return (
+      <TransitionLink
+        $variant={variant}
+        href={href}
+        target={isExternalURL ? "_blank" : "_self"}
+        rel={isExternalURL ? "noopener" : undefined}
+        data-testid={Link.name}
+        {...rest}
+      >
+        {children ? children : href}
+        {isExternalURL && (
+          <NewTabIcon
+            src={newTabIcon}
+            title="Third party site, opens in a new tab."
+            alt="Icon to represent this opens in a new tab"
+          />
+        )}
+      </TransitionLink>
+    );
+  }
+
   return (
-    <Root
+    <StaticLink
       $variant={variant}
       href={href}
       target={isExternalURL ? "_blank" : "_self"}
@@ -30,6 +53,6 @@ export function Link({
           alt="Icon to represent this opens in a new tab"
         />
       )}
-    </Root>
+    </StaticLink>
   );
 }
