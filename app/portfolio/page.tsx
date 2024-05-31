@@ -307,7 +307,7 @@ export default function Portfolio() {
         backgroundCss={`linear-gradient(#101d23,black)`}
       >
         <Heading level="h3">RuneFest</Heading>
-        <pre>(URL not public)</pre>
+        <Link href="https://www.runefest.com" />
         <Paragraph>
           RuneScape and Old School RuneScape&apos;s player event runs most years
           and requires a large input from teams across the studio. For this

@@ -15,4 +15,8 @@ export type LinkProps = {
    * Url or path to link to.
    */
   href: string;
+  /**
+   * Display an iframe preview of the href
+   */
+  hoverFrame?: boolean;
 } & HTMLAttributes<HTMLAnchorElement>;

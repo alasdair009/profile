@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Link as ViewTransitionLink } from "next-view-transitions";
 import styled, { css, keyframes } from "styled-components";
-import { colors, fontSizes, fontWeights, sizes } from "@/entities";
+import { colors, fontSizes, fontWeights, IFrame, sizes } from "@/entities";
 import { LinkVariant } from "./types";
 import Image from "next/image";
 
@@ -45,7 +45,6 @@ const getLinkStyles = (variant: LinkVariant) => {
     display: inline-flex;
     font-size: ${variant === "large" ? fontSizes.large.rem : "inherit"};
     font-weight: ${fontWeights.bold};
-    overflow: hidden;
     padding-bottom: ${variant === "large"
       ? `calc(${sizes.s16.rem} + 2px)`
       : `calc(${sizes.s8.rem} + 2px)`};
@@ -60,6 +59,10 @@ const getLinkStyles = (variant: LinkVariant) => {
       &::after {
         animation: ${pressDown} 0.1s;
         animation-fill-mode: forwards;
+      }
+
+      ${HoverIFrameWrapper} {
+        //height: ${sizes.s128.rem};
       }
     }
 
@@ -83,13 +86,9 @@ const getLinkStyles = (variant: LinkVariant) => {
   `;
 };
 
-export const TransitionLink = styled(ViewTransitionLink)<{
+export const Root = styled(ViewTransitionLink)<{
   $variant: LinkVariant;
 }>`
-  ${({ $variant }) => getLinkStyles($variant)}
-`;
-
-export const StaticLink = styled(Link)<{ $variant: LinkVariant }>`
   ${({ $variant }) => getLinkStyles($variant)}
 `;
 
@@ -98,4 +97,22 @@ export const NewTabIcon = styled(Image)`
   height: ${sizes.s16.rem};
   margin-left: ${sizes.s4.rem};
   width: ${sizes.s16.rem};
+`;
+
+export const HoverIFrameWrapper = styled.div`
+  aspect-ratio: 16 / 9;
+  background: ${colors.greyDark};
+  height: 150px;
+  overflow: hidden;
+  padding: ${sizes.s8.rem};
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0);
+  transition: height 1s;
+`;
+
+export const HoverIFrame = styled(IFrame)`
+  aspect-ratio: 16/9;
+  height: ${sizes.s128.rem};
 `;
