@@ -11,6 +11,7 @@ export function Link({
   hoverFrame = false,
   children,
   href,
+  lines,
   ...rest
 }: LinkProps) {
   const isExternalURL = isExternalDomain(href);
@@ -18,6 +19,7 @@ export function Link({
   return (
     <Root
       $variant={variant}
+      $lines={lines}
       href={href}
       target={isExternalURL ? "_blank" : "_self"}
       rel={isExternalURL ? "noopener" : undefined}

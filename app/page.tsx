@@ -13,7 +13,6 @@ import {
   Paragraph,
   SocialMediaBar,
   Spacer,
-  Trampoline,
 } from "@/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";

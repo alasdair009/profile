@@ -1,0 +1,1 @@
+export { PortfolioPlate } from "./PortfolioPlate";

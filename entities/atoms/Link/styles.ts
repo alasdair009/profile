@@ -5,6 +5,8 @@ import styled, { css, keyframes } from "styled-components";
 import { colors, fontSizes, fontWeights, IFrame, sizes } from "@/entities";
 import { LinkVariant } from "./types";
 import Image from "next/image";
+import { lineHeights } from "@/entities/design-tokens/typography/typography";
+import { lineClamp } from "@/lib/line-clamp";
 
 const generatePolygonLine = (yOffset = 0) => {
   return `polygon(0 0, 30% ${yOffset * 0.9}%, 50% ${yOffset}%, 70% ${
@@ -38,13 +40,14 @@ const release = keyframes`
   }
 `;
 
-const getLinkStyles = (variant: LinkVariant) => {
+const getLinkStyles = (variant: LinkVariant, lines: number | undefined) => {
   return css`
     align-items: center;
     color: ${variant === "large" ? colors.greenGrass : colors.whiteGhost};
     display: inline-flex;
     font-size: ${variant === "large" ? fontSizes.large.rem : "inherit"};
     font-weight: ${fontWeights.bold};
+    max-width: ${sizes.s512.rem};
     padding-bottom: ${variant === "large"
       ? `calc(${sizes.s16.rem} + 2px)`
       : `calc(${sizes.s8.rem} + 2px)`};
@@ -52,6 +55,7 @@ const getLinkStyles = (variant: LinkVariant) => {
     text-decoration: none;
     text-transform: ${variant === "large" ? "uppercase" : null};
     word-break: break-word;
+    ${lineClamp(`${lineHeights.p}`, lines)};
 
     &:hover {
       filter: brightness(1.3);
@@ -62,7 +66,7 @@ const getLinkStyles = (variant: LinkVariant) => {
       }
 
       ${HoverIFrameWrapper} {
-        //height: ${sizes.s128.rem};
+        height: calc(${sizes.s128.rem} + ${sizes.s16.rem});
       }
     }
 
@@ -88,8 +92,9 @@ const getLinkStyles = (variant: LinkVariant) => {
 
 export const Root = styled(ViewTransitionLink)<{
   $variant: LinkVariant;
+  $lines: number | undefined;
 }>`
-  ${({ $variant }) => getLinkStyles($variant)}
+  ${({ $variant, $lines }) => getLinkStyles($variant, $lines)}
 `;
 
 export const NewTabIcon = styled(Image)`
@@ -102,17 +107,22 @@ export const NewTabIcon = styled(Image)`
 export const HoverIFrameWrapper = styled.div`
   aspect-ratio: 16 / 9;
   background: ${colors.greyDark};
-  height: 150px;
+  height: 0;
   overflow: hidden;
-  padding: ${sizes.s8.rem};
   position: absolute;
   left: 50%;
   top: 100%;
   transform: translate(-50%, 0);
-  transition: height 1s;
+  transition: height 0.2s;
+  user-select: none;
 `;
 
 export const HoverIFrame = styled(IFrame)`
-  aspect-ratio: 16/9;
-  height: ${sizes.s128.rem};
+  aspect-ratio: unset;
+  height: calc(1000% - ${sizes.s16.rem});
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  width: calc(1000% - ${sizes.s16.rem});
 `;

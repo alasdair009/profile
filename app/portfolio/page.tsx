@@ -11,6 +11,7 @@ import {
   IFrame,
   Link,
   Paragraph,
+  PortfolioPlate,
   sizes,
   Skill,
   Timeline,
@@ -28,7 +29,6 @@ import jdsLogo from "../../entities/assets/jds-logo.svg";
 import jagexCorporateImage from "../../entities/assets/jagex-corporate.png";
 import jagexLauncherImage from "../../entities/assets/launcher.png";
 import runeFestImage from "../../entities/assets/runefest.png";
-import runeFestPanelImage from "../../entities/assets/runefest-recipe-for-faster.png";
 import runeScapeNewsImage from "../../entities/assets/runescape-news.png";
 import { rem, rgba } from "polished";
 import amLogo from "../../entities/assets/am.svg";
@@ -239,13 +239,14 @@ export default function Portfolio() {
           the owner / business.
         </Paragraph>
       </section>
-      <ContentPlate
-        foregroundImage={jdsLogo}
-        foregroundImageAlt="White Jagex logo part-way through being drawn"
-        backgroundCss={`linear-gradient(#1c1c1c,black)`}
+      <PortfolioPlate
+        contentPlateProps={{
+          foregroundImageAlt: "White Jagex logo part-way through being drawn",
+          foregroundImage: jdsLogo,
+          backgroundCss: `linear-gradient(#1c1c1c,${colors.blackEvil})`,
+        }}
+        heading="Jagex Design System"
       >
-        <Heading level="h3">Jagex Design System</Heading>
-        <pre>(URL not public)</pre>
         <Paragraph>
           Responsible for constructing a large design system to style and
           maintain consistent branding across all Jagex Publishing Platform
@@ -257,15 +258,18 @@ export default function Portfolio() {
           colours, animation, typography, sizing, components and is all
           structured using atomic design principles.
         </Paragraph>
-      </ContentPlate>
-      <ContentPlate
-        foregroundImage={jagexLauncherImage}
-        foregroundImageAlt="The opening UI from the Jagex Launcher displaying RuneScape"
-        backgroundCss={`linear-gradient(#07111b,black)`}
-        orientation="right"
+      </PortfolioPlate>
+      <PortfolioPlate
+        contentPlateProps={{
+          foregroundImage: jagexLauncherImage,
+          foregroundImageAlt:
+            "The opening UI from the Jagex Launcher displaying RuneScape",
+          backgroundCss: `linear-gradient(#07111b,black)`,
+          orientation: "right",
+        }}
+        heading="Jagex Launcher"
+        url="https://www.jagex.com/launcher"
       >
-        <Heading level="h3">Jagex Launcher</Heading>
-        <Link href="https://www.jagex.com/launcher" />
         <Paragraph>
           The Jagex Launcher is an application that is used to run all Jagex
           products. I was responsible for maintaining the{" "}
@@ -273,41 +277,47 @@ export default function Portfolio() {
           that delivered the visual aesthetics and functionality for the
           front-end.
         </Paragraph>
-      </ContentPlate>
-      <ContentPlate
-        foregroundImage={runeScapeNewsImage}
-        foregroundImageAlt="A RuneScape news article"
-        backgroundCss={`linear-gradient(#101d23,black)`}
+      </PortfolioPlate>
+      <PortfolioPlate
+        contentPlateProps={{
+          foregroundImage: runeScapeNewsImage,
+          foregroundImageAlt: "A RuneScape news article",
+          backgroundCss: `linear-gradient(#101d23,black)`,
+        }}
+        heading="RuneScape News"
+        url="https://secure.runescape.com/m=news/vorkath-battle-for-forinthry---this-week-in-runescape"
       >
-        <Heading level="h3">RuneScape News</Heading>
-        <Link href="https://secure.runescape.com/m=news/vorkath-battle-for-forinthry---this-week-in-runescape" />
         <Paragraph>
           Rebuilt the RuneScape news article view hosted on proprietary
           technology to work better on modern browsers and be ready for the
           launch of RuneScape Mobile.
         </Paragraph>
-      </ContentPlate>
-      <ContentPlate
-        foregroundImage={jagexCorporateImage}
-        foregroundImageAlt="The Jagex corporate website homepage"
-        backgroundCss={`linear-gradient(#4b4c01,black)`}
-        orientation="right"
+      </PortfolioPlate>
+      <PortfolioPlate
+        contentPlateProps={{
+          foregroundImage: jagexCorporateImage,
+          foregroundImageAlt: "The Jagex corporate website homepage",
+          backgroundCss: `linear-gradient(#4b4c01,black)`,
+          orientation: "right",
+        }}
+        heading="Jagex Corporate website"
+        url="https://www.jagex.com"
       >
-        <Heading level="h3">Jagex Corporate website</Heading>
-        <Link href="https://www.jagex.com" />
         <Paragraph>
           The corporate website for Jagex Games Ltd. This site content was
           powered by Contentful CMS and later migrated to a fixed code driven
           version. The site is driven via Express with EJS for page templating.
         </Paragraph>
-      </ContentPlate>
-      <ContentPlate
-        foregroundImage={runeFestImage}
-        foregroundImageAlt="The golden dragon RuneFest logo"
-        backgroundCss={`linear-gradient(#101d23,black)`}
+      </PortfolioPlate>
+      <PortfolioPlate
+        contentPlateProps={{
+          foregroundImage: runeFestImage,
+          foregroundImageAlt: "The golden dragon RuneFest logo",
+          backgroundCss: `linear-gradient(#101d23,black)`,
+        }}
+        heading="RuneFest"
+        url="https://www.runefest.com"
       >
-        <Heading level="h3">RuneFest</Heading>
-        <Link href="https://www.runefest.com" />
         <Paragraph>
           RuneScape and Old School RuneScape&apos;s player event runs most years
           and requires a large input from teams across the studio. For this
@@ -318,19 +328,22 @@ export default function Portfolio() {
           I also built my first ever Progressive Web App for RuneFest 2017 that
           was used to assist players throughout their visit to the event.
         </Paragraph>
-      </ContentPlate>
-      <ContentPlate
-        backgroundCss={`linear-gradient(#101d23,black)`}
-        orientation="right"
-        embedUrl="https://www.youtube.com/embed/JbVKUi9wezo?si=M2ZfSmqERR2hwzmV"
+      </PortfolioPlate>
+      <PortfolioPlate
+        contentPlateProps={{
+          embedUrl:
+            "https://www.youtube.com/embed/JbVKUi9wezo?si=M2ZfSmqERR2hwzmV",
+          backgroundCss: `linear-gradient(#101d23,black)`,
+          orientation: "right",
+        }}
+        heading="RuneFest Panel"
       >
-        <Heading level="h3">RuneFest Panel</Heading>
         <Paragraph>
           At RuneFest 2018 myself and other members of the team hosted a talk on
           one of the stages at the event explaining the work that goes into
           managing Jagex&apos;s web services.
         </Paragraph>
-      </ContentPlate>
+      </PortfolioPlate>
     </>
   );
 }

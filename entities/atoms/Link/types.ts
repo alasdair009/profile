@@ -19,4 +19,8 @@ export type LinkProps = {
    * Display an iframe preview of the href
    */
   hoverFrame?: boolean;
+  /**
+   * Number of lines the text is restricted to.
+   */
+  lines?: number;
 } & HTMLAttributes<HTMLAnchorElement>;
