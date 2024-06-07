@@ -7,6 +7,7 @@ import { LinkVariant } from "./types";
 import Image from "next/image";
 import { lineHeights } from "@/entities/design-tokens/typography/typography";
 import { lineClamp } from "@/lib/line-clamp";
+import { rem } from "polished";
 
 const generatePolygonLine = (yOffset = 0) => {
   return `polygon(0 0, 30% ${yOffset * 0.9}%, 50% ${yOffset}%, 70% ${
@@ -66,7 +67,7 @@ const getLinkStyles = (variant: LinkVariant, lines: number | undefined) => {
       }
 
       ${HoverIFrameWrapper} {
-        height: calc(${sizes.s128.rem} + ${sizes.s16.rem});
+        display: block;
       }
     }
 
@@ -107,13 +108,16 @@ export const NewTabIcon = styled(Image)`
 export const HoverIFrameWrapper = styled.div`
   aspect-ratio: 16 / 9;
   background: ${colors.greyDark};
-  height: 0;
+  border: ${sizes.s8.rem} solid ${colors.greyDark};
+  box-shadow: 0 0 ${rem(2)} ${rem(2)} ${colors.blackEvil};
+  display: none;
+  height: calc(${sizes.s128.rem} + ${sizes.s16.rem});
   overflow: hidden;
   position: absolute;
   left: 50%;
   top: 100%;
   transform: translate(-50%, 0);
-  transition: height 0.2s;
+  transition: all 0.2s;
   user-select: none;
 `;
 

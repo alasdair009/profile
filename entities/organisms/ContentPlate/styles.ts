@@ -1,5 +1,5 @@
 "use client";
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { Property } from "csstype";
 import {
   device,
@@ -13,6 +13,26 @@ import { ContentPlateProps } from "./ContentPlate.types";
 import Image from "next/image";
 
 const flipPoint = device.medium;
+
+const turnAmount = 0.05;
+const threeDRotate = keyframes`
+    0%, 100% {
+      transform: perspective(1000px) rotateX(-${turnAmount}turn) rotateY(0);
+    }
+  25% {
+    transform: perspective(1000px) rotateX(0) rotateY(-${turnAmount}turn);
+  }
+  50% {
+    transform: perspective(1000px) rotateX(${turnAmount}turn) rotateY(0);
+  }
+  75% {
+    transform: perspective(1000px) rotateX(0) rotateY(${turnAmount}turn);
+  }
+`;
+
+const foregroundAnimation = css`
+  animation: ${threeDRotate} 3s infinite linear;
+`;
 
 export const Root = styled.section`
   margin: 0 auto;
@@ -49,8 +69,12 @@ export const BackgroundWrapper = styled.figure<{
   width: 100%;
 `;
 
-export const ForegroundWrapper = styled.figure`
+export const ForegroundWrapper = styled.figure<{
+  $foregroundAnimate: ContentPlateProps["foregroundAnimate"];
+}>`
   align-items: center;
+  ${({ $foregroundAnimate }) =>
+    $foregroundAnimate ? foregroundAnimation : "none"};
   display: flex;
   justify-content: center;
   margin: 0;

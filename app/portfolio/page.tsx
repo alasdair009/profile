@@ -243,6 +243,7 @@ export default function Portfolio() {
         contentPlateProps={{
           foregroundImageAlt: "White Jagex logo part-way through being drawn",
           foregroundImage: jdsLogo,
+          foregroundAnimate: "3drotate",
           backgroundCss: `linear-gradient(#1c1c1c,${colors.blackEvil})`,
         }}
         heading="Jagex Design System"
@@ -264,6 +265,7 @@ export default function Portfolio() {
           foregroundImage: jagexLauncherImage,
           foregroundImageAlt:
             "The opening UI from the Jagex Launcher displaying RuneScape",
+          foregroundAnimate: "3drotate",
           backgroundCss: `linear-gradient(#07111b,black)`,
           orientation: "right",
         }}
@@ -282,6 +284,7 @@ export default function Portfolio() {
         contentPlateProps={{
           foregroundImage: runeScapeNewsImage,
           foregroundImageAlt: "A RuneScape news article",
+          foregroundAnimate: "3drotate",
           backgroundCss: `linear-gradient(#101d23,black)`,
         }}
         heading="RuneScape News"
@@ -297,6 +300,7 @@ export default function Portfolio() {
         contentPlateProps={{
           foregroundImage: jagexCorporateImage,
           foregroundImageAlt: "The Jagex corporate website homepage",
+          foregroundAnimate: "3drotate",
           backgroundCss: `linear-gradient(#4b4c01,black)`,
           orientation: "right",
         }}
@@ -313,6 +317,7 @@ export default function Portfolio() {
         contentPlateProps={{
           foregroundImage: runeFestImage,
           foregroundImageAlt: "The golden dragon RuneFest logo",
+          foregroundAnimate: "3drotate",
           backgroundCss: `linear-gradient(#101d23,black)`,
         }}
         heading="RuneFest"

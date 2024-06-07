@@ -19,6 +19,7 @@ export function ContentPlate({
   embedUrl,
   foregroundImage,
   foregroundImageAlt,
+  foregroundAnimate,
   children,
   ...rest
 }: ContentPlateProps) {
@@ -39,7 +40,7 @@ export function ContentPlate({
           </FrameBoxWrapper>
         )}
         {foregroundImage && foregroundImageAlt && (
-          <ForegroundWrapper>
+          <ForegroundWrapper $foregroundAnimate={foregroundAnimate}>
             <ForegroundImage src={foregroundImage} alt={foregroundImageAlt} />
           </ForegroundWrapper>
         )}
