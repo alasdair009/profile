@@ -19,7 +19,7 @@ import { MarkerProps } from "@react-google-maps/api";
 export const metadata: Metadata = generateMetaData(
   "Rollercoasters",
   "My rollercoaster history",
-  "rollercoasters"
+  "about-me/rollercoasters"
 );
 
 export const revalidate = 600; // revalidate at most every 10mins
