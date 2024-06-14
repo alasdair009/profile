@@ -21,7 +21,7 @@ export const Root = styled.textarea<{
   resize: none;
   width: 100%;
 
-  &:invalid {
+  &:user-invalid {
     background: ${({ $hasBeenFocussed }) =>
       $hasBeenFocussed ? inValidStyles.background : undefined};
   }

@@ -23,7 +23,7 @@ export const Root = styled.input<{
   padding: ${sizes.s8.rem};
   width: 100%;
 
-  &:invalid {
+  &:user-invalid {
     background: ${({ $hasBeenFocussed }) =>
       $hasBeenFocussed ? inValidStyles.background : undefined};
   }
