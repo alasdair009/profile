@@ -10,6 +10,7 @@ import {
   Lightning,
   Link,
   MorphingText,
+  Orbit,
   Paragraph,
   SocialMediaBar,
   Spacer,
@@ -52,7 +53,9 @@ export default function Home() {
           Bringing the web to life...
         </Heading>
       </Lightning>
-      <HorizontalRule margin="none" />
+      <HorizontalRule margin="bottom" />
+      <Orbit />
+      <HorizontalRule margin="top" decoration={true} />
       <MorphingText values={["The", "Possibilities", "Are", "Endless"]} />
       <HorizontalRule margin="bottom" />
       <CopyBlock>
