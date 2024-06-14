@@ -5,6 +5,7 @@ import {
   borderRadii,
   colors,
   device,
+  fontSizes,
   globalContentMaxWidth,
   sizes,
 } from "@/entities";
@@ -66,6 +67,7 @@ export const Stage = styled.div`
 export const Particle = styled.span<{
   $color: CSSProperties["backgroundColor"];
   $position: number;
+  $content?: string;
 }>`
   ${({ $position }) => generateAnim($position)};
   left: -16%;
@@ -78,13 +80,17 @@ export const Particle = styled.span<{
   transition: animation-duration 1s;
 
   &::before {
+    align-items: center;
     background-color: ${({ $color }) => $color};
     border-radius: ${borderRadii.round};
     bottom: 0;
     box-shadow:
       inset ${rem(5)} ${rem(5)} ${rem(10)} ${rgba(colors.whiteGhost, 0.2)},
       inset ${rem(-5)} ${rem(-5)} ${rem(10)} ${rgba(colors.whiteGhost, 0.2)};
-    content: "";
+    content: "${({ $content }) => ($content ? $content : "")}";
+    display: flex;
+    font-size: ${fontSizes.small.rem};
+    justify-content: center;
     left: 0;
     position: absolute;
     top: 0;

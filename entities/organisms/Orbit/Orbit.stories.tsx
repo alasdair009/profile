@@ -8,6 +8,7 @@ const meta: Meta<typeof Orbit> = {
   args: {
     color: colors.greenGrass,
     numberOfParticles: 5,
+    showText: false,
   },
   argTypes: {
     numberOfParticles: {

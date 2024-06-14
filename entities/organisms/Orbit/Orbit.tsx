@@ -11,6 +11,10 @@ type OrbitProps = {
    * Colour of the particles.
    */
   particleColour?: CSSProperties["backgroundColor"];
+  /**
+   * Show text inside the particles.
+   */
+  showText?: boolean;
 } & HTMLAttributes<HTMLDivElement>;
 
 /**
@@ -19,6 +23,7 @@ type OrbitProps = {
 export function Orbit({
   numberOfParticles = 5,
   particleColour = colors.greenGrass,
+  showText = false,
   ...rest
 }: OrbitProps) {
   const particles = [];
@@ -29,6 +34,7 @@ export function Orbit({
         data-testid={`${Orbit.name}Particle`}
         $color={particleColour}
         $position={i}
+        $content={showText ? "AM" : undefined}
       />
     );
   }
