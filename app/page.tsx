@@ -54,6 +54,24 @@ export default function Home() {
         </Heading>
       </Lightning>
       <HorizontalRule margin="bottom" />
+      <CopyBlock>
+        <Heading level="h2">Challenging what browsers can do!</Heading>
+        <Spacer />
+        <Paragraph>
+          Thinking up creative solutions to problems and projects has been the
+          driving force behind my career. I have worked on a prodigious variety
+          of projects including gaming websites, progressive web apps, desktop
+          applications, internal company tools and even take on the occasional
+          volunteer projects for local sports clubs!
+        </Paragraph>
+        <Paragraph>
+          I am fervent to hear of any opportunities that allow me to construct
+          spectacular experiences for visitors to applications and websites
+          across the world! I am based in the UK and have a preference for
+          remote-first working.
+        </Paragraph>
+      </CopyBlock>
+      <HorizontalRule margin="both" />
       <Orbit />
       <HorizontalRule margin="top" decoration={true} />
       <MorphingText values={["The", "Possibilities", "Are", "Endless"]} />
@@ -61,10 +79,9 @@ export default function Home() {
       <CopyBlock>
         <Heading level="h2">Get in touch</Heading>
         <Paragraph>
-          I am always keen to hear about exciting opportunities that allow me to
-          push the boundaries of what front-end technology can deliver.
-          Throughout my career I have built a wide variety of systems across a
-          huge range of tech stacks.
+          I would love to hear of any ideas you might wish to discuss with me. I
+          am always open to learning new skills, and throughout my career I have
+          built a wide variety of systems across a huge range of tech stacks.
         </Paragraph>
         <Paragraph>
           You can contact me using the form below or find me on social media.
@@ -72,7 +89,7 @@ export default function Home() {
       </CopyBlock>
       <SocialMediaBar />
       <Spacer multiplier={2} />
-      <ContactForm />
+      <ContactForm submitEndpoint="https://formspree.io/f/myyrgerj" />
       <HorizontalRule margin="top" />
     </>
   );

@@ -61,7 +61,7 @@ export const Root = styled.button<{ $variant: ButtonVariant }>`
     }
   }
 
-  &:active {
+  &:active::before {
     background: ${darken(0.05, colors.greenGrass)};
   }
 `;

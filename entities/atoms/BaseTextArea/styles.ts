@@ -8,7 +8,6 @@ const inValidStyles = {
 };
 export const Root = styled.textarea<{
   $isInvalid: boolean;
-  $hasBeenFocussed: boolean;
 }>`
   background: ${({ $isInvalid }) =>
     $isInvalid ? inValidStyles.background : colors.greyDark};
@@ -22,7 +21,6 @@ export const Root = styled.textarea<{
   width: 100%;
 
   &:user-invalid {
-    background: ${({ $hasBeenFocussed }) =>
-      $hasBeenFocussed ? inValidStyles.background : undefined};
+    background: ${inValidStyles.background};
   }
 `;

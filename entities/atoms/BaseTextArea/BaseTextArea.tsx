@@ -14,18 +14,15 @@ export function BaseTextArea({
   isInvalid = false,
   ...rest
 }: BaseTextAreaProps) {
-  const [hasBeenFocussed, setHasBeenFocussed] = useState(false);
   const [isInvalidState, setIsInvalidState] = useState(isInvalid);
 
   const handleOnChange = () => {
-    setHasBeenFocussed(true);
     setIsInvalidState(false);
   };
 
   return (
     <Root
       $isInvalid={isInvalidState}
-      $hasBeenFocussed={hasBeenFocussed}
       onChange={() => handleOnChange()}
       {...rest}
     />

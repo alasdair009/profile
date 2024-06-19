@@ -7,11 +7,9 @@ import { useEffect, useState } from "react";
  * Base input type
  */
 export function BaseInput({ isInvalid = false, ...rest }: BaseInputProps) {
-  const [hasBeenFocussed, setHasBeenFocussed] = useState(false);
   const [isInvalidState, setIsInvalidState] = useState(isInvalid);
 
   const handleOnChange = () => {
-    setHasBeenFocussed(true);
     setIsInvalidState(false);
   };
 
@@ -26,8 +24,8 @@ export function BaseInput({ isInvalid = false, ...rest }: BaseInputProps) {
   return (
     <Root
       $isInvalid={isInvalidState}
-      $hasBeenFocussed={hasBeenFocussed}
       onChange={() => handleOnChange()}
+      data-testid={BaseInput.name}
       {...rest}
     />
   );

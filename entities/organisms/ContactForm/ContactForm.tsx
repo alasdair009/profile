@@ -1,5 +1,5 @@
 "use client";
-import { Root } from "./styles";
+import { InputWrapper, Root, SubmittedMessage } from "./styles";
 import { FormEvent, HTMLAttributes, useState } from "react";
 import {
   Button,
@@ -7,15 +7,29 @@ import {
   LabelledInput,
   LabelledTextArea,
   Paragraph,
+  Spacer,
 } from "@/entities";
 import axios from "axios";
 
-type ContactFormProps = {} & HTMLAttributes<HTMLFormElement>;
+type ContactFormProps = {
+  /**
+   * URL to post the submission to.
+   */
+  submitEndpoint: string;
+  /**
+   * Function to call on submit
+   */
+  onFormSubmitted?: () => void;
+} & Exclude<HTMLAttributes<HTMLFormElement>, "onSubmit">;
 
 /**
  * Standard contact form
  */
-export function ContactForm({ ...rest }: ContactFormProps) {
+export function ContactForm({
+  submitEndpoint,
+  onFormSubmitted,
+  ...rest
+}: ContactFormProps) {
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
@@ -25,7 +39,7 @@ export function ContactForm({ ...rest }: ContactFormProps) {
     email: "",
     message: "",
   });
-  const handleServerResponse = (ok: boolean, msg: string) => {
+  const handleServerResponse = (ok: boolean, msg = "Something went wrong") => {
     if (ok) {
       setStatus({
         submitted: true,
@@ -64,7 +78,7 @@ export function ContactForm({ ...rest }: ContactFormProps) {
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
     axios({
       method: "POST",
-      url: "https://formspree.io/f/myyrgerj",
+      url: submitEndpoint,
       data: inputs,
     })
       .then(() => {
@@ -76,37 +90,52 @@ export function ContactForm({ ...rest }: ContactFormProps) {
       .catch((error) => {
         handleServerResponse(false, error.response.data.error);
       });
+    if (onFormSubmitted) {
+      onFormSubmitted();
+    }
   };
+
   return (
-    <Root onSubmit={handleOnSubmit} {...rest}>
-      <LabelledInput
-        label="Your email:"
-        name="email"
-        type="email"
-        id="email"
-        required={true}
-        onChange={handleOnChange}
-        defaultValue={inputs.email}
-        data-lpignore={true}
-      />
-      <LabelledTextArea
-        label="Your message"
-        name="message"
-        id="message"
-        required={true}
-        onChange={handleOnChange}
-        defaultValue={inputs.message}
-      />
-      <Button type="submit">
-        {!status.submitting
-          ? !status.submitted
-            ? "Send"
-            : "Sent"
-          : "Sending..."}
-      </Button>
-      {status.info.error && <ErrorText>Error: {status.info.msg}</ErrorText>}
+    <Root data-testid={ContactForm.name} onSubmit={handleOnSubmit} {...rest}>
+      <InputWrapper $hasSubmitted={status.submitted}>
+        <LabelledInput
+          label="Your email:"
+          name="email"
+          type="email"
+          id="email"
+          required={true}
+          onChange={handleOnChange}
+          defaultValue={inputs.email}
+          data-lpignore={true}
+          data-testid={`${ContactForm.name}Email`}
+        />
+        <LabelledTextArea
+          label="Your message"
+          name="message"
+          id="message"
+          required={true}
+          onChange={handleOnChange}
+          defaultValue={inputs.message}
+          data-testid={`${ContactForm.name}Message`}
+        />
+        <Button type="submit" data-testid={`${ContactForm.name}Submit`}>
+          {!status.submitting
+            ? !status.submitted
+              ? "Send"
+              : "Sent"
+            : "Sending..."}
+        </Button>
+        {status.info.error && (
+          <>
+            <Spacer />
+            <ErrorText>Error: {status.info.msg}</ErrorText>
+          </>
+        )}
+      </InputWrapper>
       {!status.info.error && status.info.msg && (
-        <Paragraph>{status.info.msg}</Paragraph>
+        <SubmittedMessage align="center" fontSize="large">
+          {status.info.msg}
+        </SubmittedMessage>
       )}
     </Root>
   );
