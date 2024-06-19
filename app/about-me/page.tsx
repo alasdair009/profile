@@ -147,7 +147,9 @@ export default async function AboutMe() {
       <HorizontalRule margin="bottom" />
       <SocialMediaBar />
       <Spacer multiplier={2} />
-      <ContactForm />
+      <ContactForm
+        submitEndpoint={`${process.env.NEXT_FORMSPREE_CONTACT_ENDPOINT}`}
+      />
     </>
   );
 }

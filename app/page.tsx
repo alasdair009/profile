@@ -89,7 +89,9 @@ export default function Home() {
       </CopyBlock>
       <SocialMediaBar />
       <Spacer multiplier={2} />
-      <ContactForm submitEndpoint="https://formspree.io/f/myyrgerj" />
+      <ContactForm
+        submitEndpoint={`${process.env.NEXT_FORMSPREE_CONTACT_ENDPOINT}`}
+      />
       <HorizontalRule margin="top" />
     </>
   );
