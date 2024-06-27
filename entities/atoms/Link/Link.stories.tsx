@@ -25,7 +25,7 @@ export const Default: StoryObj<typeof Link> = {
     const linkElement = canvas.getByTestId(Link.name);
 
     await expect(linkElement).toBeInTheDocument();
-    await expect(linkElement).toHaveAttribute("href", `/${args.href}`);
+    await expect(linkElement).toHaveAttribute("href", `${args.href}`);
     await expect(linkElement).toHaveTextContent(`${args.children}`);
   },
 };
@@ -40,7 +40,7 @@ export const HoverFrame: StoryObj<typeof Link> = {
     const linkElement = canvas.getByTestId(Link.name);
 
     await expect(linkElement).toBeInTheDocument();
-    await expect(linkElement).toHaveAttribute("href", `/${args.href}`);
+    await expect(linkElement).toHaveAttribute("href", `${args.href}`);
     await expect(linkElement).toHaveTextContent(`${args.children}`);
   },
 };
