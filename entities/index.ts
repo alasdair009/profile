@@ -25,6 +25,7 @@ export type { Breakpoint, Dimension } from "./design-tokens/dimensions";
 
 export { Audio } from "./atoms/Audio";
 export { BaseInput } from "./atoms/BaseInput";
+export { BaseSelect } from "./atoms/BaseSelect";
 export { BaseTextArea } from "./atoms/BaseTextArea";
 export { BlockQuote } from "./atoms/BlockQuote";
 export { Button } from "./atoms/Button";
@@ -46,6 +47,7 @@ export { Video } from "./atoms/Video";
 
 export { Card } from "./molecules/Card";
 export { LabelledInput } from "./molecules/LabelledInput";
+export { LabelledSelect } from "./molecules/LabelledSelect";
 export { LabelledTextArea } from "./molecules/LabelledTextArea";
 export { ScoreCounter } from "./molecules/ScoreCounter";
 export { Skill } from "./molecules/Skill";

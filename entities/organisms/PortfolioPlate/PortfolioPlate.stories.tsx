@@ -2,14 +2,14 @@ import { Meta, StoryObj } from "@storybook/react";
 import { PortfolioPlate } from "./PortfolioPlate";
 import jdsLogo from "../../assets/jds-logo.svg";
 import jagexLauncherImage from "../../assets/launcher.png";
-import { Button, colors, Link, Paragraph } from "@/entities";
-import { expect, userEvent, waitFor, within } from "@storybook/test";
+import { colors, Link, Paragraph } from "@/entities";
+import { expect, within } from "@storybook/test";
 
 const meta: Meta<typeof PortfolioPlate> = {
   component: PortfolioPlate,
   argTypes: {
     children: {
-      control: "string",
+      control: { type: "text" },
     },
   },
 };
