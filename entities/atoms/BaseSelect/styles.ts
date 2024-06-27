@@ -1,3 +1,5 @@
+"use client";
+
 import styled from "styled-components";
 import { colors, fontSizes, globalInputMaxWidth, sizes } from "@/entities";
 import { rem, rgba } from "polished";
