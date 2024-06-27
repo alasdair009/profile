@@ -49,7 +49,9 @@ const preview: Preview = {
       viewports: customViewports,
     },
   },
+
   decorators: [withGlobalStyles],
+  tags: ["autodocs"],
 };
 
 export default preview;
