@@ -1,5 +1,5 @@
-import { Content, Root, Summary, SummaryInner } from "./styles";
-import { HTMLAttributes, ReactNode } from "react";
+import { Content, Root, Summary } from "./styles";
+import { HTMLAttributes } from "react";
 
 type DetailsProps = {
   /**
