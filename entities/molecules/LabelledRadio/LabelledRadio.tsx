@@ -20,7 +20,7 @@ export function LabelledRadio({
   ...rest
 }: LabelledInputProps) {
   return (
-    <Root>
+    <Root data-testid={LabelledRadio.name}>
       <BaseLabel as="span">{label}</BaseLabel>
       <BaseRadio isInvalid={isInvalid} {...rest} />
     </Root>

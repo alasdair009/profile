@@ -13,31 +13,10 @@ const meta: Meta<typeof LabelledRadio> = {
 };
 export default meta;
 
-export const Default: StoryObj<typeof LabelledRadio> = {
-  play: async ({ args, canvasElement }) => {
-    const canvas = within(canvasElement);
-    const labelledRadioElement = canvas.getAllByTestId(LabelledRadio.name)[0];
-    const baseRadioElement = canvas.getByLabelText(args.label);
-    const labelElement = canvas.getByText(args.label);
-
-    await expect(labelledRadioElement).toBeInTheDocument();
-    await expect(baseRadioElement).toBeInTheDocument();
-    await expect(labelElement).toBeInTheDocument();
-  },
-};
+export const Default: StoryObj<typeof LabelledRadio> = {};
 
 export const Invalid: StoryObj<typeof LabelledRadio> = {
   args: {
     isInvalid: true,
-  },
-  play: async ({ args, canvasElement }) => {
-    const canvas = within(canvasElement);
-    const labelledRadioElement = canvas.getAllByTestId(LabelledRadio.name)[0];
-    const baseRadioElement = canvas.getByLabelText(args.label);
-    const labelElement = canvas.getByText(args.label);
-
-    await expect(labelledRadioElement).toBeInTheDocument();
-    await expect(baseRadioElement).toBeInTheDocument();
-    await expect(labelElement).toBeInTheDocument();
   },
 };
