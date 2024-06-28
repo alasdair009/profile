@@ -4,6 +4,10 @@ import { HTMLAttributes, useState } from "react";
 
 export type BaseRadioProps = {
   /**
+   * If checking one of the radios is required.
+   */
+  required?: boolean;
+  /**
    * If the radio should be displayed as invalid.
    */
   isInvalid?: boolean;
