@@ -12,10 +12,3 @@ export const Root = styled.label`
   max-width: ${rem(globalInputMaxWidth)};
   width: 100%;
 `;
-
-export const LabelText = styled.span`
-  display: block;
-  max-width: ${rem(globalInputMaxWidth)};
-  text-align: center;
-  width: 100%;
-`;

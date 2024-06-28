@@ -1,6 +1,6 @@
-import { LabelText, Root } from "./styles";
+import { Root } from "./styles";
 import { HTMLAttributes } from "react";
-import { ErrorText } from "@/entities";
+import { BaseLabel, ErrorText } from "@/entities";
 import { BaseSelect } from "@/entities/atoms/BaseSelect";
 
 type LabelledSelectProps = {
@@ -43,7 +43,7 @@ export function LabelledSelect({
 }: LabelledSelectProps) {
   return (
     <Root data-testid={LabelledSelect.name}>
-      <LabelText>{label}</LabelText>
+      <BaseLabel as="span">{label}</BaseLabel>
       <BaseSelect isInvalid={isInvalid} {...rest}>
         {children}
       </BaseSelect>

@@ -1,7 +1,7 @@
-import { LabelText, Root } from "./styles";
+import { Root } from "./styles";
 import { HTMLAttributes } from "react";
 import { TextInputType } from "../../atoms/BaseInput/BaseInput.types";
-import { BaseInput, ErrorText } from "@/entities";
+import { BaseInput, BaseLabel, ErrorText } from "@/entities";
 
 type LabelledInputProps = {
   /**
@@ -47,7 +47,7 @@ export function LabelledInput({
 }: LabelledInputProps) {
   return (
     <Root>
-      <LabelText>{label}</LabelText>
+      <BaseLabel as="span">{label}</BaseLabel>
       <BaseInput type={type} isInvalid={isInvalid} {...rest} />
       <ErrorText shown={isInvalid || false}>{errorText}</ErrorText>
     </Root>
