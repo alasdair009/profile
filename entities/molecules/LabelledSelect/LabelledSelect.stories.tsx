@@ -1,15 +1,14 @@
 import { LabelledSelect } from "./LabelledSelect";
 import { Meta, StoryObj } from "@storybook/react";
-import { expect, userEvent, waitFor, within } from "@storybook/test";
-import { BaseSelect, Button } from "@/entities";
+import { expect, userEvent, within } from "@storybook/test";
 
 const meta: Meta<typeof LabelledSelect> = {
   component: LabelledSelect,
   args: {
-    name: "textentry",
+    name: "selectentry",
     required: true,
     isInvalid: false,
-    label: "Text entry",
+    label: "Select entry",
     errorText: "",
     children: (
       <>
@@ -29,6 +28,42 @@ const meta: Meta<typeof LabelledSelect> = {
 export default meta;
 
 export const Default: StoryObj<typeof LabelledSelect> = {
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const labelledSelectElement = canvas.getAllByTestId(LabelledSelect.name)[0];
+    const baseSelectElement = canvas.getByLabelText(args.label);
+    const labelElement = canvas.getByText(args.label);
+
+    await expect(labelledSelectElement).toBeInTheDocument();
+    await expect(baseSelectElement).toBeInTheDocument();
+    await expect(labelElement).toBeInTheDocument();
+
+    await userEvent.click(baseSelectElement);
+  },
+};
+
+export const Multiple: StoryObj<typeof LabelledSelect> = {
+  args: {
+    multiple: true,
+  },
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const labelledSelectElement = canvas.getAllByTestId(LabelledSelect.name)[0];
+    const baseSelectElement = canvas.getByLabelText(args.label);
+    const labelElement = canvas.getByText(args.label);
+
+    await expect(labelledSelectElement).toBeInTheDocument();
+    await expect(baseSelectElement).toBeInTheDocument();
+    await expect(labelElement).toBeInTheDocument();
+
+    await userEvent.click(baseSelectElement);
+  },
+};
+
+export const Invalid: StoryObj<typeof LabelledSelect> = {
+  args: {
+    isInvalid: true,
+  },
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
     const labelledSelectElement = canvas.getAllByTestId(LabelledSelect.name)[0];

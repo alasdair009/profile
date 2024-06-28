@@ -1,19 +1,14 @@
 "use client";
 
 import styled from "styled-components";
-import { colors, fontSizes, globalInputMaxWidth, sizes } from "@/entities";
-import { rem, rgba } from "polished";
-
-const fieldHeight = sizes.s40.rem;
-
-const inValidStyles = {
-  background: rgba(colors.redHeat, 0.15),
-};
+import { colors, sizes } from "@/entities";
+import {
+  defaultFieldStyles,
+  fieldHeight,
+} from "@/entities/atoms/BaseInput/styles";
 
 export const Root = styled.select<{ $isInvalid: boolean; multiple?: boolean }>`
-  appearance: none;
-  background-color: ${({ $isInvalid }) =>
-    $isInvalid ? inValidStyles.background : colors.greyDark};
+  ${({ $isInvalid }) => defaultFieldStyles($isInvalid)}
   background-image: ${({ multiple }) =>
     multiple
       ? "none"
@@ -24,28 +19,5 @@ export const Root = styled.select<{ $isInvalid: boolean; multiple?: boolean }>`
   background-position: right ${sizes.s8.rem} top 50%;
   background-repeat: no-repeat;
   background-size: ${sizes.s16.rem} auto;
-  border: ${rem(1)} solid ${colors.greenGrass};
-  color: ${colors.whiteGhost};
-  display: block;
-  font-size: ${fontSizes.medium.rem};
   height: ${({ multiple }) => (multiple ? "auto" : fieldHeight)};
-  margin: ${sizes.s2.rem} auto 0;
-  max-width: ${rem(globalInputMaxWidth)};
-  padding: ${sizes.s8.rem};
-  position: relative;
-  width: 100%;
-
-  &:-webkit-autofill,
-  &:-webkit-autofill:hover,
-  &:-webkit-autofill:focus {
-    -webkit-text-fill-color: ${colors.whiteGhost};
-    -webkit-box-shadow: 0 0 0 ${fieldHeight}
-      ${({ $isInvalid }) =>
-        $isInvalid ? inValidStyles.background : colors.greyDark}
-      inset;
-  }
-
-  &:user-invalid {
-    background: ${inValidStyles.background};
-  }
 `;

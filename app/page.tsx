@@ -55,7 +55,9 @@ export default function Home() {
       </Lightning>
       <HorizontalRule margin="bottom" />
       <CopyBlock>
-        <Heading level="h2">Challenging what browsers can do!</Heading>
+        <Heading level="h2" align="center">
+          Challenging what browsers can do!
+        </Heading>
         <Spacer />
         <Paragraph>
           Thinking up creative solutions to problems and projects has been the

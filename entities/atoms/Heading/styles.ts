@@ -22,12 +22,16 @@ export const Root = styled.h1<{
   color: ${({ $color }) => $color};
   font-size: ${({ $level }) => headingSizes[$level]};
   margin: 0 auto ${sizes.s24.rem};
-  max-width: ${rem(globalTextMaxWidth)};
+  max-width: ${({ $level }) =>
+    $level === "h1" || $level === "h2"
+      ? sizes.s512.rem
+      : rem(globalTextMaxWidth)};
   padding-bottom: ${({ $level }) => ($level === "h1" ? sizes.s8.rem : 0)};
   position: relative;
   text-align: ${({ $align }) => $align};
   text-shadow: ${({ $textShadow }) =>
     $textShadow ? `0 0 ${rem(4)} ${colors.blackEvil}` : "none"};
+  text-wrap: balance;
   width: fit-content;
   ${({ $level, $lines }) => lineClamp(`${lineHeights[$level]}`, $lines)}
 

@@ -7,7 +7,7 @@ import {
   globalDecorationMaxWidth,
 } from "@/entities/design-tokens/dimensions";
 import maskImg from "@/entities/organisms/Splash/ali-flight.svg";
-import { device, sizes } from "../../design-tokens/dimensions";
+import { device, sizes } from "@/entities";
 import { Paragraph } from "@/entities";
 import { headerHeight } from "@/entities/organisms/Header/styles";
 
@@ -22,6 +22,7 @@ export const Root = styled.section`
 
   @media (${device.small}) {
     height: calc(100vh - ${headerHeight});
+    min-height: ${rem(320)};
 
     &::before,
     &::after {
