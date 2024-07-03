@@ -6,6 +6,7 @@ import {
   ErrorText,
   LabelledInput,
   LabelledTextArea,
+  Link,
   Paragraph,
   Spacer,
 } from "@/entities";
@@ -139,6 +140,19 @@ export function ContactForm({
               : "Sent"
             : "Sending..."}
         </Button>
+        <Spacer multiplier={2} />
+        <Paragraph fontSize="small" style={{ fontStyle: "italic" }}>
+          This site is protected by reCAPTCHA and the Google&nbsp;
+          <Link href="https://policies.google.com/privacy">
+            Privacy Policy
+          </Link>{" "}
+          and&nbsp;
+          <Link href="https://policies.google.com/terms">
+            Terms of Service
+          </Link>{" "}
+          apply.
+        </Paragraph>
+        <Spacer multiplier={2} />
         {status.info.error && (
           <>
             <Spacer />
