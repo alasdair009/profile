@@ -45,6 +45,18 @@ const preview: Preview = {
     docs: {
       theme: theme,
     },
+    options: {
+      storySort: {
+        order: [
+          "Alasdair Macrae Design",
+          "Design Tokens",
+          "Atoms",
+          "Molecules",
+          "Organisms",
+          "Experimental",
+        ],
+      },
+    },
     viewport: {
       viewports: customViewports,
     },
