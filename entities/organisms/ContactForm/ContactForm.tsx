@@ -24,6 +24,7 @@ type ContactFormProps = {
 } & Exclude<HTMLAttributes<HTMLFormElement>, "onSubmit">;
 
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY;
+declare var grecaptcha: any;
 
 /**
  * Standard contact form
@@ -79,6 +80,7 @@ export function ContactForm({
   const handleOnSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
+
     grecaptcha.ready(function () {
       grecaptcha.execute(SITE_KEY, { action: "submit" }).then(function (
         token: string
