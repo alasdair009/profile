@@ -10,6 +10,7 @@ import {
   Spacer,
 } from "@/entities";
 import axios from "axios";
+import Script from "next/script";
 
 type ContactFormProps = {
   /**
@@ -21,6 +22,8 @@ type ContactFormProps = {
    */
   onFormSubmitted?: () => void;
 } & Exclude<HTMLAttributes<HTMLFormElement>, "onSubmit">;
+
+const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY;
 
 /**
  * Standard contact form
@@ -76,27 +79,36 @@ export function ContactForm({
   const handleOnSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
-    axios({
-      method: "POST",
-      url: submitEndpoint,
-      data: inputs,
-    })
-      .then(() => {
-        handleServerResponse(
-          true,
-          "Thank you, your message has been submitted."
-        );
-      })
-      .catch((error) => {
-        handleServerResponse(false, error.response.data.error);
+    grecaptcha.ready(function () {
+      grecaptcha.execute(SITE_KEY, { action: "submit" }).then(function (
+        token: string
+      ) {
+        axios({
+          method: "POST",
+          url: submitEndpoint,
+          data: { ...inputs, "g-recaptcha-response": token },
+        })
+          .then(() => {
+            handleServerResponse(
+              true,
+              "Thank you, your message has been submitted."
+            );
+          })
+          .catch((error) => {
+            handleServerResponse(false, error.response.data.error);
+          });
+        if (onFormSubmitted) {
+          onFormSubmitted();
+        }
       });
-    if (onFormSubmitted) {
-      onFormSubmitted();
-    }
+    });
   };
 
   return (
     <Root data-testid={ContactForm.name} onSubmit={handleOnSubmit} {...rest}>
+      <Script
+        src={`https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`}
+      ></Script>
       <InputWrapper $hasSubmitted={status.submitted}>
         <LabelledInput
           label="Your email:"
