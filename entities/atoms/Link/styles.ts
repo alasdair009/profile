@@ -49,9 +49,7 @@ const getLinkStyles = (variant: LinkVariant, lines: number | undefined) => {
     font-size: ${variant === "large" ? fontSizes.large.rem : "inherit"};
     font-weight: ${fontWeights.bold};
     max-width: ${sizes.s512.rem};
-    padding-bottom: ${variant === "large"
-      ? `calc(${sizes.s16.rem} + 2px)`
-      : `calc(${sizes.s8.rem} + 2px)`};
+    padding-bottom: ${variant === "large" ? `calc(${sizes.s16.rem} + 2px)` : 0};
     position: relative;
     text-decoration: none;
     text-transform: ${variant === "large" ? "uppercase" : null};
@@ -80,7 +78,7 @@ const getLinkStyles = (variant: LinkVariant, lines: number | undefined) => {
       animation: ${release} 0.2s;
       animation-fill-mode: forwards;
       background: ${colors.whiteGhost};
-      bottom: 0;
+      bottom: -${variant === "large" ? 0 : rem(7)};
       clip-path: ${() => generatePolygonLine()};
       content: "";
       height: ${variant === "large" ? sizes.s16.rem : sizes.s8.rem};
