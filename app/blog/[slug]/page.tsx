@@ -2,7 +2,6 @@ import {
   Article,
   BlockQuote,
   colors,
-  globalContentMaxWidth,
   globalTextMaxWidth,
   Heading,
   IFrame,
@@ -88,6 +87,7 @@ const ptComponents: Partial<PortableTextReactComponents> = {
         <div
           style={{
             aspectRatio: "16 / 9",
+            boxShadow: `0 0 ${sizes.s4.rem} ${sizes.s2.rem} ${colors.greenGrass}`,
             margin: `${sizes.s16.rem} auto`,
             position: "relative",
             width: "100%",
