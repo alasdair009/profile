@@ -4,8 +4,10 @@ import {
   colors,
   globalContentMaxWidth,
   globalTextMaxWidth,
+  Heading,
   IFrame,
   Link,
+  Paragraph,
   sizes,
 } from "@/entities";
 import { generateMetaData } from "@/lib/metadata";
@@ -58,6 +60,24 @@ const ptComponents: Partial<PortableTextReactComponents> = {
     blockquote: ({ children }) => {
       return <BlockQuote>{children}</BlockQuote>;
     },
+    h1: ({ children }) => {
+      return <Heading level="h1">{children}</Heading>;
+    },
+    h2: ({ children }) => {
+      return <Heading level="h2">{children}</Heading>;
+    },
+    h3: ({ children }) => {
+      return <Heading level="h3">{children}</Heading>;
+    },
+    h4: ({ children }) => {
+      return <Heading level="h4">{children}</Heading>;
+    },
+    h5: ({ children }) => {
+      return <Heading level="h5">{children}</Heading>;
+    },
+    normal: ({ children }) => {
+      return <Paragraph>{children}</Paragraph>;
+    },
   },
   types: {
     image: ({ value }) => {
@@ -66,7 +86,12 @@ const ptComponents: Partial<PortableTextReactComponents> = {
       }
       return (
         <div
-          style={{ aspectRatio: "16 / 9", position: "relative", width: "100%" }}
+          style={{
+            aspectRatio: "16 / 9",
+            margin: `${sizes.s16.rem} auto`,
+            position: "relative",
+            width: "100%",
+          }}
         >
           <Image
             alt={value.alt || " "}
