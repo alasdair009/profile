@@ -1,5 +1,6 @@
 import {
   Article,
+  BlockQuote,
   colors,
   globalContentMaxWidth,
   globalTextMaxWidth,
@@ -53,22 +54,33 @@ export async function generateMetadata({ params }: any) {
 }
 
 const ptComponents: Partial<PortableTextReactComponents> = {
+  block: {
+    blockquote: ({ children }) => {
+      return <BlockQuote>{children}</BlockQuote>;
+    },
+  },
   types: {
     image: ({ value }) => {
       if (!value?.asset?._ref) {
         return null;
       }
       return (
-        <img
-          alt={value.alt || " "}
-          loading="lazy"
-          src={urlFor(value)
-            .width(320)
-            .height(240)
-            .fit("max")
-            .auto("format")
-            .url()}
-        />
+        <div
+          style={{ aspectRatio: "16 / 9", position: "relative", width: "100%" }}
+        >
+          <Image
+            alt={value.alt || " "}
+            loading="lazy"
+            src={urlFor(value)
+              .width(1024)
+              .height(576)
+              .fit("max")
+              .auto("format")
+              .url()}
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
       );
     },
     youtube: ({ value }) => {
