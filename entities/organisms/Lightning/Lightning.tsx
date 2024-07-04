@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 import { Background, Content, Inner, Root, Strike } from "./styles";
-import backgroundImage from "./assets/background.jpg";
+import backgroundImage from "./assets/background.webp";
 import strikeImage from "./assets/lightining.png";
 import { Rain } from "./Rain";
 
