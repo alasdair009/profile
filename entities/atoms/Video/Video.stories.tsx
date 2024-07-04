@@ -1,6 +1,6 @@
 import { Video } from "./Video";
 import { Meta, StoryObj } from "@storybook/react";
-import trampolinePosterImage from "../../assets/trampoline-poster.png";
+import trampolinePosterImage from "../../assets/trampoline-poster.webp";
 
 const meta: Meta<typeof Video> = {
   component: Video,

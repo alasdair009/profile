@@ -1,8 +1,8 @@
 import { MetadataRoute } from "next";
 import { siteDescription, siteName } from "@/lib/metadata";
 import { colors } from "@/entities";
-import screenshotNarrow from "../entities/assets/screenshot-narrow.png";
-import screenshotWide from "../entities/assets/screenshot-wide.png";
+import screenshotNarrow from "../entities/assets/screenshot-narrow.webp";
+import screenshotWide from "../entities/assets/screenshot-wide.webp";
 import { siteOrigin } from "@/lib/domains";
 
 export default function manifest(): MetadataRoute.Manifest {

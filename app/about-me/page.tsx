@@ -19,8 +19,8 @@ import {
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
 import { rem } from "polished";
-import trampolinePosterImage from "../../entities/assets/trampoline-poster.png";
-import skylinesImage from "../../entities/assets/city-skylines.png";
+import trampolinePosterImage from "../../entities/assets/trampoline-poster.webp";
+import skylinesImage from "../../entities/assets/city-skylines.webp";
 import rollercoasterImage from "../../entities/assets/rollercoaster.svg";
 import homekitImage from "../../entities/assets/homekit.svg";
 import Image from "next/image";

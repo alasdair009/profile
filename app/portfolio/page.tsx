@@ -24,12 +24,12 @@ import {
   getCurrentEmployer,
   getTotalExperienceYears,
 } from "@/lib/data/professional";
-import jagexLogo from "../../entities/assets/jagex-square.png";
+import jagexLogo from "../../entities/assets/jagex-square.webp";
 import jdsLogo from "../../entities/assets/jds-logo.svg";
-import jagexCorporateImage from "../../entities/assets/jagex-corporate.png";
-import jagexLauncherImage from "../../entities/assets/launcher.png";
-import runeFestImage from "../../entities/assets/runefest.png";
-import runeScapeNewsImage from "../../entities/assets/runescape-news.png";
+import jagexCorporateImage from "../../entities/assets/jagex-corporate.webp";
+import jagexLauncherImage from "../../entities/assets/launcher.webp";
+import runeFestImage from "../../entities/assets/runefest.webp";
+import runeScapeNewsImage from "../../entities/assets/runescape-news.webp";
 import { rem, rgba } from "polished";
 import amLogo from "../../entities/assets/am.svg";
 import { GridLogo, SkillGrid } from "@/app/portfolio/styles";
