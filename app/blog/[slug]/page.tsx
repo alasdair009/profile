@@ -137,7 +137,7 @@ export default async function ArticlePage({ params }: any) {
             maxWidth: rem(globalTextMaxWidth),
           }}
         >
-          <Link href={"/blog"}>
+          <Link href={"/blog"} style={{ marginLeft: sizes.s8.rem }}>
             <span
               style={{
                 aspectRatio: 1,

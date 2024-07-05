@@ -3,6 +3,7 @@
 import styled from "styled-components";
 import {
   colors,
+  device,
   globalContentMaxWidth,
   globalTextMaxWidth,
   Heading,
@@ -31,10 +32,15 @@ export const ArticleDate = styled.time`
 `;
 
 export const ArticleFigure = styled.figure`
+  box-sizing: border-box;
   height: ${rem(320)};
   margin: 0 auto;
-  max-width: ${rem(globalTextMaxWidth)};
+  max-width: calc(100% - ${sizes.s16.rem});
   position: relative;
+
+  @media (${device.large}) {
+    max-width: ${rem(globalTextMaxWidth)};
+  }
 `;
 
 export const ArticleImage = styled(Image)`
@@ -42,6 +48,7 @@ export const ArticleImage = styled(Image)`
     -${sizes.s48.rem} -${sizes.s48.rem} 0 -${sizes.s40.rem} ${colors.greenGrass},
     ${sizes.s48.rem} ${sizes.s48.rem} 0 -${sizes.s40.rem} ${colors.greenGrass};
   margin: ${sizes.s8.rem};
+  max-width: calc(100% - ${sizes.s16.rem});
 `;
 
 export const Content = styled.div`
