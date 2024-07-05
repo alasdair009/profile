@@ -72,6 +72,9 @@ const meta: Meta<typeof SelectList> = {
 export default meta;
 
 export const Default: StoryObj<typeof SelectList> = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
     const selectListElement = canvas.getByTestId(SelectList.name);

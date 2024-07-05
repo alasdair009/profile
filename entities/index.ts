@@ -24,6 +24,7 @@ export {
 export type { Breakpoint, Dimension } from "./design-tokens/dimensions";
 
 export { Audio } from "./atoms/Audio";
+export { BaseCheckbox } from "./atoms/BaseCheckbox";
 export { BaseInput } from "./atoms/BaseInput";
 export { BaseLabel } from "./atoms/BaseLabel";
 export { BaseRadio } from "./atoms/BaseRadio";
@@ -49,6 +50,7 @@ export { UnorderedList } from "./atoms/UnorderedList";
 export { Video } from "./atoms/Video";
 
 export { Card } from "./molecules/Card";
+export { LabelledCheckbox } from "./molecules/LabelledCheckbox";
 export { LabelledInput } from "./molecules/LabelledInput";
 export { LabelledRadio } from "./molecules/LabelledRadio";
 export { LabelledSelect } from "./molecules/LabelledSelect";
