@@ -35,6 +35,7 @@ export const generateMetaData = (
       images: pageImage,
       description: pageDescription,
       url: `${siteOrigin}/${pagePath}`,
+      siteName: siteName,
       type: ogType,
       ...ogArticle,
     },
