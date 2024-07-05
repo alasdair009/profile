@@ -55,7 +55,6 @@ export const HeaderLink = styled(Link)<{ $hideOnNarrow: boolean }>`
   flex-direction: row-reverse;
   height: 100%;
   justify-content: center;
-  padding-top: ${sizes.s4.rem};
   white-space: nowrap;
 
   @media (${device.xsmall}) {
