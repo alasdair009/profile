@@ -8,6 +8,7 @@ export const GET_ALL_POSTS = `*[_type == "post"] | order(publishedAt desc) {
   _updatedAt,
   title,
   slug,
+  description,
   author->,
   mainImage {
     ...,
@@ -23,6 +24,7 @@ export type Post = {
   slug: {
     current: string;
   };
+  description: string;
   categories: string[];
   publishedAt: string;
   mainImage: {

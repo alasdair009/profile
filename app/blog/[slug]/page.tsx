@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: any) {
 
     return generateMetaData(
       post.title,
-      "",
+      post.description,
       `blog/${post.slug}`,
       imageUrlBuilder(sanityClient).image(post.mainImage.asset).url(),
       "article",
