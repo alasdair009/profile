@@ -30,6 +30,9 @@ export const generateMetaData = (
     manifest: "/manifest.webmanifest",
     metadataBase: new URL(`${siteOrigin}/${pagePath}`),
     authors: { name: "Alasdair Macrae" },
+    alternates: {
+      canonical: `${siteOrigin}/${pagePath}`,
+    },
     openGraph: {
       title: `${pageTitle} | ${siteName}`,
       images: pageImage,

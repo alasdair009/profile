@@ -21,7 +21,7 @@ import { notFound } from "next/navigation";
 async function getPost(slug: string) {
   return sanityClient.fetch<Post>(
     `
-    *[_type == "post" && slug.current == $slug][0]{title, description, body, mainImage, publishedAt}
+    *[_type == "post" && slug.current == $slug][0]{title, description, body, slug, mainImage, publishedAt}
   `,
     { slug }
   );
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: any) {
     return generateMetaData(
       post.title,
       post.description,
-      `blog/${post.slug}`,
+      `blog/${post.slug.current}`,
       imageUrlBuilder(sanityClient).image(post.mainImage.asset).url(),
       "article",
       {
