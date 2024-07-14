@@ -8,7 +8,7 @@ export const colorsGrey = {
 export const colorsBrand = {
   blueSea: "#3487F5",
   greenGrass: "#2E9B26",
-  redHeat: "#ff0000",
+  redHeat: "#df1c41",
 };
 
 export const colors = {
