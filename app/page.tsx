@@ -1,4 +1,5 @@
 import portraitImage from "../entities/assets/ali-portrait.svg";
+import trampolineImage from "../entities/assets/trampoline.svg";
 
 import {
   ContactForm,
@@ -32,9 +33,9 @@ export default function Home() {
         foregroundImageAlt="Headshot photo of Ali"
         orientation="right"
       >
-        <Heading level="h2">Hello there!</Heading>
+        <Heading level="h2">Building the awesome!</Heading>
         <Paragraph>
-          My name is Alasdair (Ali). I am a
+          My name is Alasdair (Ali). I am a&nbsp;
           <strong>front-end web engineer</strong> with over{" "}
           {getTotalExperienceYears()} years experience working in the games
           industry.
@@ -43,10 +44,25 @@ export default function Home() {
           I have a passion for all things front-end and am focussed on pushing
           the limits of CSS on high fidelity web pages.
         </Paragraph>
-        <Link href="about-me">About me</Link>
+        <Link href="portfolio">Web engineering</Link>
       </ContentPlate>
       <HorizontalRule margin="none" />
       <FixedPlate />
+      <HorizontalRule margin="none" />
+      <ContentPlate
+        foregroundImage={trampolineImage}
+        foregroundImageAlt="A gymnast on a trampoline"
+        orientation="left"
+      >
+        <Heading level="h2">Jumping above!</Heading>
+        <Paragraph>
+          I am also a British Gymnastics trampoline gymnast, coach and judge
+          having been involved in the sport for over three decades. I currently
+          coach at Cambridge Cangaroos trampoline club and hold the Performance
+          Coach qualification.
+        </Paragraph>
+        <Link href="about-me">About me</Link>
+      </ContentPlate>
       <HorizontalRule margin="none" />
       <Lightning>
         <Heading level="h1" as="h2" align="center" textShadow={true}>

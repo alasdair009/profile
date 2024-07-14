@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <svg id="a" xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+        <defs>
+            <style>
+                @keyframes rotate {
+                    0% {
+                        transform: scale(0.75) rotate(0deg);
+                    }
+                    50% {
+                        transform: scale(0.75) rotate(180deg);
+                    }
+                    100% {
+                        transform: scale(0.75) rotate(360deg);
+                    }
+                }
+                @keyframes depression {
+                    0%, 10% {
+                        transform: scaleX(1) scaleY(1);
+                    }
+                    5% {
+                        transform: scaleX(0.5) scaleY(0.9);
+                    }
+                }
+                .crossx, .crossy, .trampoline{
+                    fill:none;
+                    stroke: #fff;
+                    stroke-miterlimit:10;
+                    stroke-width:6px;
+                }
+                .crossx, .crossy {
+                    stroke: #df1c41;
+                }
+                .cross {
+                    animation: depression 5s infinite linear;
+                    transform-origin: 50% 80%;
+                }
+                .trampoline {
+                    stroke: #fff
+                }
+                .legs, .body{
+                    fill: #fff;
+                    stroke-width:0px;
+                }
+                .body{
+                    fill: #fff;
+                }
+                .gymnast {
+                    animation: rotate 5s infinite linear;
+                    transform-origin: 50% 30%;
+                }
+            </style>
+        </defs>
+    <polyline class="trampoline" points="-.36 300 69.644 200 229.635 200 299.64 300"/>
+    <g class="cross">
+    <line class="crossy" x1="149.64" y1="235.628" x2="149.64" y2="259.628"/>
+    <line class="crossx" x1="122.64" y1="247.628" x2="176.64" y2="247.628"/>
+    </g>
+    <g class="gymnast">
+        <path class="legs" d="m82.066,162.277c8.639-35.016,19.837-69.311,34.86-102.114,6.48-13.64,14.317-26.964,24.393-38.343,1.266-1.458,2.658-2.811,3.968-4.226,11.62-11.562,29.212,3.307,19.867,16.71-10.943,14.531-21.701,30.574-31.716,46.119-13.741,21.179-26.973,44.219-40.172,65.784-3.393,5.511-6.71,11.063-10.195,16.538-.166.26-.511.337-.771.171-.218-.142-.305-.402-.234-.639h0Z"/>
+        <path class="body" d="m186.394,93.265c-2.725-5.435-4.851-10.493-7.803-15.463-1.889-3.269-3.95-6.281-6.808-8.563-3.635-2.977-8.473-4.039-13.181-4.6-18.989-1.553-38.263,2.778-57.128,5.284-.354.053-.683-.191-.735-.545-.042-.308.129-.579.397-.701,12.784-7.19,25.887-12.84,39.82-17.282,10.327-3.182,21.241-5.557,32.068-3.022,17.734,3.843,27.584,21.61,32.156,37.574,3.074,11.939-13.047,18.123-18.784,7.318h0Z"/>
+        <circle class="body" cx="169.747" cy="112.547" r="21.5"/>
+    </g>
+</svg>

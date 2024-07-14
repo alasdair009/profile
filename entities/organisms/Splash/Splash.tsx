@@ -7,7 +7,7 @@ import {
   Inner,
   Root,
 } from "./styles";
-import { colors, Link } from "@/entities";
+import { colors, Heading, Link } from "@/entities";
 
 export function Splash({ ...rest }: HTMLAttributes<HTMLDivElement>) {
   return (
@@ -15,8 +15,13 @@ export function Splash({ ...rest }: HTMLAttributes<HTMLDivElement>) {
       <Inner>
         <FeetSection>
           <Copy>
-            <CopyParagraph color={colors.whiteGhost} fontSize="large">
-              Hello I am Ali, a front-end web developer and trampolinist!
+            <Heading>Ali Macrae</Heading>
+            <CopyParagraph
+              color={colors.whiteGhost}
+              fontSize="large"
+              textWrap="balance"
+            >
+              The gravity defying blend of web developer and trampolinist.
             </CopyParagraph>
             <CopyParagraph fontSize="large">
               Always seeking adventures!
