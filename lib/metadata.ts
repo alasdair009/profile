@@ -50,5 +50,8 @@ export const generateMetaData = (
       title: `${pageTitle} | ${siteName}`,
       description: pageDescription,
     },
+    verification: {
+      google: "vCDInKApeebRzehtS7SHeh9W-s40E09dUeHozKRSRHs",
+    },
   };
 };
