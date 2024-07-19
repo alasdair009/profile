@@ -52,6 +52,7 @@ export const generateMetaData = (
     },
     verification: {
       google: "vCDInKApeebRzehtS7SHeh9W-s40E09dUeHozKRSRHs",
+      other: { "msvalidate.01": "0BE65EA398167BA7055ED2FEE79A4C7A" },
     },
   };
 };
