@@ -1,5 +1,3 @@
-/** @type {import('next').NextConfig} */
-
 const {
   VERCEL_ENV,
   VERCEL_URL,
@@ -7,6 +5,7 @@ const {
   NEXT_FORMSPREE_CONTACT_ENDPOINT,
 } = process.env;
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
     VERCEL_ENV,
@@ -22,6 +21,35 @@ const nextConfig = {
         port: "",
       },
     ],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/work",
+        destination: "/portfolio",
+        permanent: false,
+      },
+      {
+        source: "/contact",
+        destination: "/#contact",
+        permanent: false,
+      },
+      {
+        source: "/contact.php",
+        destination: "/#contact",
+        permanent: false,
+      },
+      {
+        source: "/trampoline",
+        destination: "/about-me",
+        permanent: false,
+      },
+      {
+        source: "/docs/Alasdair Macrae - CV.pdf",
+        destination: "/portfolio",
+        permanent: false,
+      },
+    ];
   },
 };
 

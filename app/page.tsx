@@ -94,7 +94,7 @@ export default function Home() {
       <HorizontalRule margin="top" decoration={true} />
       <MorphingText values={["The", "Possibilities", "Are", "Endless"]} />
       <HorizontalRule margin="bottom" />
-      <CopyBlock>
+      <CopyBlock id="contact">
         <Heading level="h2">Get in touch</Heading>
         <Paragraph>
           I would love to hear of any ideas you might wish to discuss with me. I
