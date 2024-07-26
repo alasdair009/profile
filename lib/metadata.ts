@@ -1,9 +1,6 @@
 import { Metadata } from "next";
 import { siteOrigin } from "@/lib/domains";
-import {
-  OpenGraph,
-  OpenGraphType,
-} from "next/dist/lib/metadata/types/opengraph-types";
+import { OpenGraphType } from "next/dist/lib/metadata/types/opengraph-types";
 
 export const siteName = "Alasdair Macrae";
 export const siteDescription =
@@ -57,7 +54,6 @@ export const generateMetaData = (
     robots: {
       index: true,
       follow: true,
-      nocache: true,
       googleBot: {
         index: true,
         follow: true,

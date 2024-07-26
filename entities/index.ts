@@ -65,6 +65,7 @@ export { Container } from "./organisms/Container";
 export { CopyBlock } from "./organisms/CopyBlock";
 export { ContentPlate } from "./organisms/ContentPlate";
 export { FixedPlate } from "./organisms/FixedPlate";
+export { Footer } from "./organisms/Footer";
 export { Header } from "./organisms/Header";
 export { Lightning } from "./organisms/Lightning";
 export { Map } from "./organisms/Map";

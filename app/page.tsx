@@ -110,7 +110,6 @@ export default function Home() {
       <ContactForm
         submitEndpoint={`${process.env.NEXT_FORMSPREE_CONTACT_ENDPOINT}`}
       />
-      <HorizontalRule margin="top" />
     </>
   );
 }
