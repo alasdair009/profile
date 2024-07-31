@@ -1,0 +1,1 @@
+export { ThreeDLogo } from "./ThreeDLogo";
