@@ -57,6 +57,7 @@ export { LabelledSelect } from "./molecules/LabelledSelect";
 export { LabelledTextArea } from "./molecules/LabelledTextArea";
 export { ScoreCounter } from "./molecules/ScoreCounter";
 export { Skill } from "./molecules/Skill";
+export { StatBox } from "./molecules/StatBox";
 
 export { Article } from "./organisms/Article";
 export { BlogList } from "./organisms/BlogList";

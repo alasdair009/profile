@@ -51,3 +51,13 @@ export const GET_ALL_ROLLERCOASTERS = `*[_type == "rollercoasters"] | order(firs
   "themeparkLogo": themeparks->logo,
   "themeparkcoords": themeparks->coords,
 }`;
+
+export const GET_ALL_PARKS = `*[_type == "themeparks"] | order(title asc) {
+  _id,
+  _type,
+  _createdAt,
+  _updatedAt,
+  title,
+  country,
+  coords,
+}`;
