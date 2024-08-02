@@ -24,7 +24,7 @@ export function Lightning({
         <Strike
           src={strikeImage}
           alt={"Rain"}
-          layout={"cover"}
+          fill={true}
           $frequency={frequency}
         />
         <Content>{children}</Content>
