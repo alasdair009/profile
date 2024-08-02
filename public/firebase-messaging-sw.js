@@ -1,4 +1,3 @@
-// service-worker.js
 importScripts(
   "https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"
 );
@@ -6,6 +5,7 @@ importScripts(
   "https://www.gstatic.com/firebasejs/10.5.0/firebase-messaging-compat.js"
 );
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "YOUR_API_KEY",
   authDomain: "YOUR_AUTH_DOMAIN",
@@ -71,7 +71,7 @@ messaging.onBackgroundMessage((payload) => {
   const { title, body, image, icon, ...restPayload } = payload.data;
   const notificationOptions = {
     body,
-    icon: image || "/am.svg", // path to your "fallback" firebase notification logo
+    icon: image || "/icons/firebase-logo.png", // path to your "fallback" firebase notification logo
     data: restPayload,
   };
   return self.registration.showNotification(title, notificationOptions);

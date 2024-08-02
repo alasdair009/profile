@@ -29,7 +29,7 @@ export function Header({ children, ...rest }: HeaderProps) {
           <HeaderLink href="/blog">Blog</HeaderLink>
           <Header.NotificationButton
             isSubscribed={false}
-            style={{ display: "none" }}
+            // style={{ display: "none" }}
           />
         </HeaderLinks>
       </Inner>

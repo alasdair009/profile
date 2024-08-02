@@ -20,6 +20,7 @@
   "dependencies": {
     "@portabletext/react": "^3.0.17",
     "@react-google-maps/api": "^2.19.3",
+    "firebase": "^10.12.5",
     "next": "^14.1.0",
     "next-sanity": "^7.1.4",
     "next-view-transitions": "^0.1.1",

@@ -9,6 +9,7 @@ import { ViewTransitions } from "next-view-transitions";
 import { siteConfig } from "@/app/app.config";
 import { headerHeight } from "@/entities/organisms/Header/styles";
 import { footerHeight } from "@/entities/organisms/Footer/styles";
+import FcmTokenComp from "@/lib/notifications/firebaseForeground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,6 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <FcmTokenComp />
         <StyledComponentsRegistry>
           <GlobalStyle />
           <Header />
