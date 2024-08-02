@@ -32,11 +32,14 @@ export default function Home() {
         foregroundImage={portraitImage}
         foregroundImageAlt="Headshot photo of Ali"
         orientation="right"
+        itemScope={true}
+        itemType="https://schema.org/Person"
       >
         <Heading level="h2">Building the awesome!</Heading>
         <Paragraph>
-          My name is Alasdair (Ali). I am a&nbsp;
-          <strong>front-end web engineer</strong> with over{" "}
+          My name is <span itemProp="givenName">Alasdair</span> (Ali). I am
+          a&nbsp;
+          <strong itemProp="jobTitle">front-end web engineer</strong> with over{" "}
           {getTotalExperienceYears()} years experience working in the games
           industry.
         </Paragraph>

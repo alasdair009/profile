@@ -11,17 +11,20 @@ import { colors, Heading, Link } from "@/entities";
 
 export function Splash({ ...rest }: HTMLAttributes<HTMLDivElement>) {
   return (
-    <Root {...rest}>
+    <Root itemScope={true} itemType="https://schema.org/Person" {...rest}>
       <Inner>
         <FeetSection>
           <Copy>
-            <Heading>Ali Macrae</Heading>
+            <Heading>
+              <span itemProp="givenName">Ali</span> Macrae
+            </Heading>
             <CopyParagraph
               color={colors.whiteGhost}
               fontSize="large"
               textWrap="balance"
             >
-              The gravity defying blend of web developer and trampolinist.
+              The gravity defying blend of{" "}
+              <span itemProp="jobTitle">web developer</span> and trampolinist.
             </CopyParagraph>
             <CopyParagraph fontSize="large">
               Always seeking adventures!
