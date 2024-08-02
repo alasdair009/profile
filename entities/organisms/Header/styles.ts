@@ -49,7 +49,7 @@ export const HeaderLinks = styled.div`
   justify-content: flex-end;
 `;
 
-export const HeaderLink = styled(Link)<{ $hideOnNarrow: boolean }>`
+export const HeaderLink = styled(Link)<{ $hideOnNarrow?: boolean }>`
   align-items: center;
   display: ${({ $hideOnNarrow }) => ($hideOnNarrow ? "none" : "flex")};
   flex-direction: row-reverse;
