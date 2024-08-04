@@ -14,6 +14,7 @@ const connectionOptions: ConnectionOptions = {
 const getMoveData = async () => {
   let nodes: GraphNode[] = [];
   let edges: GraphEdge[] = [];
+  let error = "ok";
   try {
     const connection = await mysql.createConnection(connectionOptions);
     const [movesResults, movesFields] = await connection.query<RowDataPacket[]>(
@@ -40,13 +41,15 @@ const getMoveData = async () => {
       };
       edges.push(edge);
     });
-  } catch {}
+  } catch (e) {
+    error = `${e}`;
+  }
 
-  return { nodes, edges };
+  return { nodes, edges, error };
 };
 
 export default async function TrampolineMoveNetwork() {
-  const { nodes, edges } = await getMoveData();
+  const { nodes, edges, error } = await getMoveData();
   return (
     <Root>
       <Heading level="h2">Move Network</Heading>
@@ -61,7 +64,7 @@ export default async function TrampolineMoveNetwork() {
       {nodes.length && edges.length ? (
         <Chart nodes={nodes} edges={edges} />
       ) : (
-        <ErrorText>Could not connect to move database</ErrorText>
+        <ErrorText>Could not connect to move database: {error}</ErrorText>
       )}
     </Root>
   );
