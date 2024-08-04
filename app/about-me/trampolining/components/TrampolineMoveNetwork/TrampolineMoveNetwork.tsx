@@ -1,8 +1,12 @@
 import mysql, { ConnectionOptions, RowDataPacket } from "mysql2/promise";
 import { Root } from "./styles";
 import { ErrorText, Heading, Paragraph } from "@/entities";
-import Chart from "./Chart/Chart";
 import { GraphEdge, GraphNode } from "reagraph";
+import dynamic from "next/dynamic";
+
+const Chart = dynamic(() => import("./Chart/Chart"), {
+  ssr: false,
+});
 
 const connectionOptions: ConnectionOptions = {
   host: `${process.env.CANGAROOS_DB_HOST}`,
