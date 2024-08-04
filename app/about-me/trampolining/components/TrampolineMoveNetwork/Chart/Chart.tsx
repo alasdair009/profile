@@ -3,7 +3,6 @@ import { GraphCanvas, GraphEdge, GraphNode, Theme, darkTheme } from "reagraph";
 import { colors, sizes } from "@/entities";
 import { HTMLAttributes } from "react";
 import { darken, rem } from "polished";
-import { useSearchParams } from "next/navigation";
 
 type ChartProps = {
   nodes: GraphNode[];
@@ -31,8 +30,6 @@ const chartTheme: Theme = {
 };
 
 export default function Chart({ nodes, edges, ...rest }: ChartProps) {
-  const searchParams = useSearchParams();
-  const search = searchParams.get("search");
   return (
     <div
       style={{

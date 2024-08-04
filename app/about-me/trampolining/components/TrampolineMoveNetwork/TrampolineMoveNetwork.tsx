@@ -17,11 +17,11 @@ const getMoveData = async () => {
   try {
     const connection = await mysql.createConnection(connectionOptions);
     const [movesResults, movesFields] = await connection.query<RowDataPacket[]>(
-      "SELECT * FROM `trampmoves` WHERE id > 0 AND active = 1"
+      "SELECT * FROM `VU_moves` WHERE id > 0 AND active = 1"
     );
 
     const [edgesResults, edgesFields] = await connection.query<RowDataPacket[]>(
-      "SELECT * FROM `moves_links` WHERE id > 0"
+      "SELECT * FROM `VU_moves_links` WHERE id > 0"
     );
 
     movesResults.forEach((row) => {
