@@ -1,8 +1,4 @@
-import mysql, {
-  Connection,
-  ConnectionOptions,
-  RowDataPacket,
-} from "mysql2/promise";
+import mysql, { ConnectionOptions, RowDataPacket } from "mysql2/promise";
 import { Root } from "./styles";
 import { ErrorText, Heading, Paragraph } from "@/entities";
 import Chart from "./Chart/Chart";
@@ -15,13 +11,11 @@ const connectionOptions: ConnectionOptions = {
   database: `${process.env.CANGAROOS_DB_NAME}`,
 };
 
-export default async function TrampolineMoveNetwork() {
-  let connection: Connection;
-  const nodes: GraphNode[] = [];
-  const edges: GraphEdge[] = [];
+const getMoveData = async () => {
+  let nodes: GraphNode[] = [];
+  let edges: GraphEdge[] = [];
   try {
-    connection = await mysql.createConnection(connectionOptions);
-
+    const connection = await mysql.createConnection(connectionOptions);
     const [movesResults, movesFields] = await connection.query<RowDataPacket[]>(
       "SELECT * FROM `trampmoves` WHERE id > 0 AND active = 1"
     );
@@ -46,10 +40,13 @@ export default async function TrampolineMoveNetwork() {
       };
       edges.push(edge);
     });
-  } catch (e) {
-    console.log(`Trouble connecting to database: ${e}`);
-  }
+  } catch {}
 
+  return { nodes, edges };
+};
+
+export default async function TrampolineMoveNetwork() {
+  const { nodes, edges } = await getMoveData();
   return (
     <Root>
       <Heading level="h2">Move Network</Heading>
@@ -61,7 +58,7 @@ export default async function TrampolineMoveNetwork() {
       <Paragraph>
         Use the mouse or your touch controls to zoom in to see more detail.
       </Paragraph>
-      {nodes && edges ? (
+      {nodes.length && edges.length ? (
         <Chart nodes={nodes} edges={edges} />
       ) : (
         <ErrorText>Could not connect to move database</ErrorText>
