@@ -4,9 +4,15 @@ import { ErrorText, Heading, Paragraph } from "@/entities";
 import { GraphEdge, GraphNode } from "reagraph";
 import dynamic from "next/dynamic";
 
-const Chart = dynamic(() => import("./Chart/Chart"), {
-  ssr: false,
-});
+const NetworkChart = dynamic(
+  () =>
+    import("@/entities/molecules/NetworkChart/").then(
+      (mod) => mod.NetworkChart
+    ),
+  {
+    ssr: false,
+  }
+);
 
 const connectionOptions: ConnectionOptions = {
   host: `${process.env.CANGAROOS_DB_HOST}`,
@@ -21,11 +27,11 @@ const getMoveData = async () => {
   let error = "ok";
   try {
     const connection = await mysql.createConnection(connectionOptions);
-    const [movesResults, movesFields] = await connection.query<RowDataPacket[]>(
+    const [movesResults] = await connection.query<RowDataPacket[]>(
       "SELECT * FROM `VU_moves` WHERE id > 0 AND active = 1"
     );
 
-    const [edgesResults, edgesFields] = await connection.query<RowDataPacket[]>(
+    const [edgesResults] = await connection.query<RowDataPacket[]>(
       "SELECT * FROM `VU_moves_links` WHERE id > 0"
     );
 
@@ -33,6 +39,13 @@ const getMoveData = async () => {
       const node: GraphNode = {
         id: `${row.id}`,
         label: row.title,
+        subLabel: `${row.altnames}`,
+        data: {
+          qualification: `${row.coachlevelid}`,
+          description: `${row.description}`,
+          difficulty: parseFloat(row.tarif),
+          difficultyPS: parseFloat(row.pstarif),
+        },
       };
       nodes.push(node);
     });
@@ -66,7 +79,7 @@ export default async function TrampolineMoveNetwork() {
         Use the mouse or your touch controls to zoom in to see more detail.
       </Paragraph>
       {nodes.length && edges.length ? (
-        <Chart nodes={nodes} edges={edges} />
+        <NetworkChart nodes={nodes} edges={edges} contextMenu={<></>} />
       ) : (
         <ErrorText>Could not connect to move database: {error}</ErrorText>
       )}
