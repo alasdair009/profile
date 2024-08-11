@@ -55,7 +55,7 @@ export { LabelledInput } from "./molecules/LabelledInput";
 export { LabelledRadio } from "./molecules/LabelledRadio";
 export { LabelledSelect } from "./molecules/LabelledSelect";
 export { LabelledTextArea } from "./molecules/LabelledTextArea";
-export { NetworkChart } from "./molecules/NetworkChart";
+// export { NetworkChart } from "./molecules/NetworkChart"; This can only be imported dynamically
 export { ScoreCounter } from "./molecules/ScoreCounter";
 export { Skill } from "./molecules/Skill";
 export { StatBox } from "./molecules/StatBox";
