@@ -79,7 +79,7 @@ export default async function TrampolineMoveNetwork() {
         Use the mouse or your touch controls to zoom in to see more detail.
       </Paragraph>
       {nodes.length && edges.length ? (
-        <NetworkChart nodes={nodes} edges={edges} contextMenu={<></>} />
+        <NetworkChart nodes={nodes} edges={edges} />
       ) : (
         <ErrorText>Could not connect to move database: {error}</ErrorText>
       )}
