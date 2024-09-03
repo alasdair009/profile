@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 import { rem } from "polished";
 import { colors, sizes } from "@/entities";
