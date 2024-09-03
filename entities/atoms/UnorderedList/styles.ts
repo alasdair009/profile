@@ -10,6 +10,7 @@ export const Root = styled.ul<{ $align: UnorderedListProps["align"] }>`
   flex-direction: column;
   gap: ${sizes.s8.rem};
   list-style: none;
+  margin: 0 auto;
   max-width: ${rem(globalTextMaxWidth)};
   text-align: ${({ $align }) => $align};
   width: 100%;

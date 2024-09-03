@@ -77,8 +77,9 @@ export default async function AboutMe() {
             visual sites and pushing the boundaries of CSS.
           </Paragraph>
           <Paragraph fontSize="mlarge">
-            In my spare time I am a trampoline gymnast, judge and coach for
-            Cambridge Cangaroos trampoline club.
+            In my spare time I am a{" "}
+            <Link href="/about-me/trampolining">trampoline</Link> gymnast, judge
+            and coach for Cambridge Cangaroos trampoline club.
           </Paragraph>
         </div>
       </section>

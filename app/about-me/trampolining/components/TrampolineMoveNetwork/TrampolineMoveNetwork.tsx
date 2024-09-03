@@ -45,6 +45,9 @@ const getMoveData = async () => {
           description: `${row.description}`,
           difficulty: parseFloat(row.tarif),
           difficultyPS: parseFloat(row.pstarif),
+          fig: row.fig,
+          altnames: row.altnames,
+          coachleveltitle: row.coachleveltitle,
         },
       };
       nodes.push(node);
@@ -76,7 +79,8 @@ export default async function TrampolineMoveNetwork() {
         ones.
       </Paragraph>
       <Paragraph>
-        Use the mouse or your touch controls to zoom in to see more detail.
+        Use the mouse or your touch controls to zoom in to see more detail and
+        right click on a node to view information about the skill.
       </Paragraph>
       {nodes.length && edges.length ? (
         <NetworkChart nodes={nodes} edges={edges} />

@@ -3,6 +3,10 @@ import { HTMLAttributes, ReactNode } from "react";
 
 type BlockQuoteProps = {
   /**
+   * The citation for the quote
+   */
+  cite?: string;
+  /**
    * Content of the quote
    */
   children: ReactNode;

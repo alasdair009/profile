@@ -101,12 +101,20 @@ export function NetworkChart({
             <Heading level="h6">{data.label}</Heading>
             <Paragraph>{data.data.description}</Paragraph>
             <UnorderedList>
+              <li>Alt names: {data.data.altnames}</li>
+              <li>
+                FIG:{" "}
+                <pre style={{ display: "inline-block", margin: 0 }}>
+                  {data.data.fig}
+                </pre>
+              </li>
               <li>Difficulty: {data.data.difficulty}</li>
               {data.data.difficultyPS &&
                 data.data.difficultyPS > 0 &&
                 data.data.difficultyPS !== data.data.difficulty && (
-                  <li>Difficulty (P/S): {data.data.difficulty}</li>
+                  <li>Difficulty (P/S): {data.data.difficultyPS}</li>
                 )}
+              <li>Coach level: {data.data.coachleveltitle}</li>
             </UnorderedList>
           </div>
         )}
