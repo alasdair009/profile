@@ -110,10 +110,12 @@ export function NetworkChart({
               </li>
               <li>Difficulty: {data.data.difficulty}</li>
               {data.data.difficultyPS &&
-                data.data.difficultyPS > 0 &&
-                data.data.difficultyPS !== data.data.difficulty && (
-                  <li>Difficulty (P/S): {data.data.difficultyPS}</li>
-                )}
+              data.data.difficultyPS > 0 &&
+              data.data.difficultyPS !== data.data.difficulty ? (
+                <li>Difficulty (P/S): {data.data.difficultyPS}</li>
+              ) : (
+                <></>
+              )}
               <li>Coach level: {data.data.coachleveltitle}</li>
             </UnorderedList>
           </div>
