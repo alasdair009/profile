@@ -9,7 +9,7 @@ import {
   Paragraph,
   sizes,
 } from "@/entities";
-import { generateMetaData } from "@/lib/metadata";
+import { generateMetaData, myName } from "@/lib/metadata";
 import { sanityClient, urlFor } from "@/lib/sanity/client";
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 import { rem } from "polished";

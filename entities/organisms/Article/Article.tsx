@@ -61,6 +61,7 @@ export function Article({
           alt={heading}
           fill={true}
           style={{ objectFit: "cover" }}
+          priority={true}
         />
       </ArticleFigure>
       <Spacer multiplier={8} />

@@ -3,6 +3,7 @@ import { siteOrigin } from "@/lib/domains";
 import { OpenGraphType } from "next/dist/lib/metadata/types/opengraph-types";
 
 export const siteName = "Alasdair Macrae";
+export const myName = "Alasdair Macrae";
 export const siteDescription =
   "I am a front-end web engineer with a passion for pushing the limits of CSS to new heights. I have experience across a multitude of different languages and infrastructures and am always looking for exciting new challenges.";
 export const generateMetaData = (
@@ -27,7 +28,7 @@ export const generateMetaData = (
     description: pageDescription,
     manifest: "/manifest.webmanifest",
     metadataBase: new URL(`${siteOrigin}/${pagePath}`),
-    authors: { name: "Alasdair Macrae" },
+    authors: { name: myName },
     alternates: {
       canonical: `${siteOrigin}/${pagePath}`,
     },
@@ -63,5 +64,11 @@ export const generateMetaData = (
         "max-snippet": -1,
       },
     },
+    other: ogArticle
+      ? {
+          "twitter:label1": "Written by",
+          "twitter:data": myName,
+        }
+      : undefined,
   };
 };
