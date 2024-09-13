@@ -21,7 +21,7 @@ import { notFound } from "next/navigation";
 async function getPost(slug: string) {
   return sanityClient.fetch<Post>(
     `
-    *[_type == "post" && slug.current == $slug][0]{title, description, body, slug, mainImage, publishedAt}
+    *[_type == "post" && slug.current == $slug][0]{title, description, body, slug, mainImage, publishedAt, categories, "categoriesTitle": categories->title}
   `,
     { slug }
   );
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: any) {
       {
         publishedTime: new Date(post.publishedAt).toISOString(),
         authors: "Alasdair Macrae",
-        tags: undefined,
+        tags: "web",
       }
     );
   } catch (e) {

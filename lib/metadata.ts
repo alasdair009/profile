@@ -68,6 +68,8 @@ export const generateMetaData = (
       ? {
           "twitter:label1": "Written by",
           "twitter:data": myName,
+          "twitter:label2": "Tagged under",
+          "twitter:data2": `${ogArticle.tags}`,
         }
       : undefined,
   };
