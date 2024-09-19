@@ -7,15 +7,8 @@ import {
   darkTheme,
   GraphSceneProps,
 } from "reagraph";
-import {
-  Button,
-  colors,
-  Heading,
-  Paragraph,
-  sizes,
-  UnorderedList,
-} from "@/entities";
-import { HTMLAttributes, ReactNode } from "react";
+import { colors } from "@/entities";
+import { HTMLAttributes, ReactNode, useEffect, useState } from "react";
 import { darken } from "polished";
 import { Root } from "./styles";
 import { ContextMenu } from "@/entities/molecules/NetworkChart/ContextMenu";
@@ -66,33 +59,40 @@ export function NetworkChart({
   contextMenu,
   ...rest
 }: NetworkChartProps) {
-  if (typeof document === "undefined") {
+  const [isBrowser, setIsBrowser] = useState(false);
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof document !== "undefined") {
+      setIsBrowser(true);
+    }
+  }, []);
+
+  if (!isBrowser) {
     return <>Loading...</>;
   }
   return (
     <Root {...rest}>
-      {/*<GraphCanvas*/}
-      {/*  nodes={nodes}*/}
-      {/*  edges={edges}*/}
-      {/*  theme={chartTheme}*/}
-      {/*  layoutType="treeTd3d"*/}
-      {/*  onNodeClick={onNodeClick}*/}
-      {/*  sizingType="centrality"*/}
-      {/*  draggable={true}*/}
-      {/*  edgeInterpolation="curved"*/}
-      {/*  contextMenu={({ data, onClose }) => (*/}
-      {/*    <ContextMenu*/}
-      {/*      onClose={onClose}*/}
-      {/*      label={`${data.label}`}*/}
-      {/*      description={data.data.description}*/}
-      {/*      altnames={data.data.altnames}*/}
-      {/*      fig={data.data.fig}*/}
-      {/*      difficulty={data.data.difficulty}*/}
-      {/*      difficultyPS={data.data.difficultyPS}*/}
-      {/*      coachLevelTitle={data.data.coachleveltitle}*/}
-      {/*    />*/}
-      {/*  )}*/}
-      {/*/>*/}
+      <GraphCanvas
+        nodes={nodes}
+        edges={edges}
+        theme={chartTheme}
+        layoutType="treeTd3d"
+        onNodeClick={onNodeClick}
+        sizingType="centrality"
+        draggable={true}
+        edgeInterpolation="curved"
+        contextMenu={({ data, onClose }) => (
+          <ContextMenu
+            onClose={onClose}
+            label={`${data.label}`}
+            description={data.data.description}
+            altnames={data.data.altnames}
+            fig={data.data.fig}
+            difficulty={data.data.difficulty}
+            difficultyPS={data.data.difficultyPS}
+            coachLevelTitle={data.data.coachleveltitle}
+          />
+        )}
+      />
     </Root>
   );
 }
