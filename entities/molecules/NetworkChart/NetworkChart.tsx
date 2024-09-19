@@ -80,18 +80,18 @@ export function NetworkChart({
         sizingType="centrality"
         draggable={true}
         edgeInterpolation="curved"
-        contextMenu={({ data, onClose }) => (
-          <ContextMenu
-            onClose={onClose}
-            label={`${data.label}`}
-            description={data.data.description}
-            altnames={data.data.altnames}
-            fig={data.data.fig}
-            difficulty={data.data.difficulty}
-            difficultyPS={data.data.difficultyPS}
-            coachLevelTitle={data.data.coachleveltitle}
-          />
-        )}
+        // contextMenu={({ data, onClose }) => (
+        //   <ContextMenu
+        //     onClose={onClose}
+        //     label={`${data.label}`}
+        //     description={data.data.description}
+        //     altnames={data.data.altnames}
+        //     fig={data.data.fig}
+        //     difficulty={data.data.difficulty}
+        //     difficultyPS={data.data.difficultyPS}
+        //     coachLevelTitle={data.data.coachleveltitle}
+        //   />
+        // )}
       />
     </Root>
   );
