@@ -3,7 +3,6 @@ import { Root } from "./styles";
 import { ErrorText, Heading, Paragraph } from "@/entities";
 import { GraphEdge, GraphNode } from "reagraph";
 import dynamic from "next/dynamic";
-// import { NetworkChart } from "@/entities/molecules/NetworkChart";
 
 const NetworkChart = dynamic(
   () =>
