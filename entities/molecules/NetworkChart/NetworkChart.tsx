@@ -12,6 +12,7 @@ import { HTMLAttributes, ReactNode, useEffect, useState } from "react";
 import { darken } from "polished";
 import { Root } from "./styles";
 import { ContextMenu } from "./ContextMenu";
+import { useMounted } from "@/lib/useMounted";
 
 type NetworkChartProps = {
   /**
@@ -59,12 +60,18 @@ export function NetworkChart({
   contextMenu,
   ...rest
 }: NetworkChartProps) {
+  const mounted = useMounted();
+
   const [isBrowser, setIsBrowser] = useState(false);
   useEffect(() => {
     if (typeof window !== "undefined" && typeof document !== "undefined") {
       setIsBrowser(true);
     }
   }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   if (!isBrowser) {
     return <>Loading...</>;
