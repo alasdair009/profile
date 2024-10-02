@@ -3,17 +3,17 @@ import { Root } from "./styles";
 import { ErrorText, Heading, Paragraph } from "@/entities";
 import { GraphEdge, GraphNode } from "reagraph";
 import dynamic from "next/dynamic";
-// import { NetworkChart } from "@/entities/molecules/NetworkChart";
+import { NetworkChart } from "@/entities/molecules/NetworkChart";
 
-const NetworkChart = dynamic(
-  () =>
-    import("@/entities/molecules/NetworkChart/").then(
-      (mod) => mod.NetworkChart
-    ),
-  {
-    ssr: false,
-  }
-);
+// const NetworkChart = dynamic(
+//   () =>
+//     import("@/entities/molecules/NetworkChart/").then(
+//       (mod) => mod.NetworkChart
+//     ),
+//   {
+//     ssr: false,
+//   }
+// );
 
 const connectionOptions: ConnectionOptions = {
   host: `${process.env.CANGAROOS_DB_HOST}`,
@@ -86,7 +86,6 @@ export default async function TrampolineMoveNetwork() {
       {nodes.length && edges.length ? (
         <NetworkChart nodes={nodes} edges={edges} />
       ) : (
-        // <>aaa</>
         <ErrorText>Could not connect to move database: {error}</ErrorText>
       )}
     </Root>
