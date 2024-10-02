@@ -11,7 +11,7 @@ import { colors } from "@/entities";
 import { HTMLAttributes, ReactNode, useEffect, useState } from "react";
 import { darken } from "polished";
 import { Root } from "./styles";
-import { ContextMenu } from "@/entities/molecules/NetworkChart/ContextMenu";
+import { ContextMenu } from "./ContextMenu";
 
 type NetworkChartProps = {
   /**
@@ -71,28 +71,28 @@ export function NetworkChart({
   }
   return (
     <Root {...rest}>
-      {/*<GraphCanvas*/}
-      {/*  nodes={nodes}*/}
-      {/*  edges={edges}*/}
-      {/*  theme={chartTheme}*/}
-      {/*  layoutType="treeTd3d"*/}
-      {/*  onNodeClick={onNodeClick}*/}
-      {/*  sizingType="centrality"*/}
-      {/*  draggable={true}*/}
-      {/*  edgeInterpolation="curved"*/}
-      {/*  contextMenu={({ data, onClose }) => (*/}
-      {/*    <ContextMenu*/}
-      {/*      onClose={onClose}*/}
-      {/*      label={`${data.label}`}*/}
-      {/*      description={data.data.description}*/}
-      {/*      altnames={data.data.altnames}*/}
-      {/*      fig={data.data.fig}*/}
-      {/*      difficulty={data.data.difficulty}*/}
-      {/*      difficultyPS={data.data.difficultyPS}*/}
-      {/*      coachLevelTitle={data.data.coachleveltitle}*/}
-      {/*    />*/}
-      {/*  )}*/}
-      {/*/>*/}
+      <GraphCanvas
+        nodes={nodes}
+        edges={edges}
+        theme={chartTheme}
+        layoutType="treeTd3d"
+        onNodeClick={onNodeClick}
+        sizingType="centrality"
+        draggable={true}
+        edgeInterpolation="curved"
+        contextMenu={({ data, onClose }) => (
+          <ContextMenu
+            onClose={onClose}
+            label={`${data.label}`}
+            description={data.data.description}
+            altnames={data.data.altnames}
+            fig={data.data.fig}
+            difficulty={data.data.difficulty}
+            difficultyPS={data.data.difficultyPS}
+            coachLevelTitle={data.data.coachleveltitle}
+          />
+        )}
+      />
     </Root>
   );
 }
