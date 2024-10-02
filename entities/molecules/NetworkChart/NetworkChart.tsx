@@ -62,20 +62,20 @@ export function NetworkChart({
 }: NetworkChartProps) {
   const mounted = useMounted();
 
-  const [isBrowser, setIsBrowser] = useState(false);
-  useEffect(() => {
-    if (typeof window !== "undefined" && typeof document !== "undefined") {
-      setIsBrowser(true);
-    }
-  }, []);
+  // const [isBrowser, setIsBrowser] = useState(false);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined" && typeof document !== "undefined") {
+  //     setIsBrowser(true);
+  //   }
+  // }, []);
 
   if (!mounted) {
     return null;
   }
 
-  if (!isBrowser) {
-    return <>Loading...</>;
-  }
+  // if (!isBrowser) {
+  //   return <>Loading...</>;
+  // }
   return (
     <Root {...rest}>
       <GraphCanvas
