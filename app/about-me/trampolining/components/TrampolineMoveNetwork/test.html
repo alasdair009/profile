@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <style>
+      .videos {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+      }
+      .videos div {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+      }
+      iframe {
+        aspect-ratio: 16/9;
+        width: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="videos">
+      <div>
+        <iframe
+          id="standard"
+          src=""
+          data-src="https://www.youtube.com/embed/NpEaa2P7qZI?si=uJjK4C2TLWivF5BX"
+          title="Standard Embed"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <button id="goStandard">Standard</button>
+      </div>
+      <div>
+        <iframe
+          id="privacy"
+          src=""
+          data-src="https://www.youtube-nocookie.com/embed/NpEaa2P7qZI?si=uJjK4C2TLWivF5BX"
+          title="Enhanced privacy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <button id="goPrivacy">Privacy</button>
+      </div>
+    </div>
+    <script>
+      const goStandard = document.getElementById("goStandard");
+      const standardIFrame = document.getElementById("standard");
+      const goPrivacy = document.getElementById("goPrivacy");
+      const privacyIFrame = document.getElementById("privacy");
+      goStandard.addEventListener(
+        "click",
+        function () {
+          standardIFrame.setAttribute(
+            "src",
+            standardIFrame.getAttribute("data-src")
+          );
+        },
+        false
+      );
+      goPrivacy.addEventListener(
+        "click",
+        function () {
+          privacyIFrame.setAttribute(
+            "src",
+            privacyIFrame.getAttribute("data-src")
+          );
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

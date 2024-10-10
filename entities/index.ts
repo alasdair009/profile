@@ -32,6 +32,7 @@ export { BaseSelect } from "./atoms/BaseSelect";
 export { BaseTextArea } from "./atoms/BaseTextArea";
 export { BlockQuote } from "./atoms/BlockQuote";
 export { Button } from "./atoms/Button";
+export { Cloud } from "./atoms/Cloud";
 export { Details } from "./atoms/Details";
 export { Fire } from "./atoms/Fire";
 export { Flurry } from "./atoms/Flurry";
