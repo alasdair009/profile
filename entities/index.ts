@@ -1,6 +1,7 @@
 export { GlobalStyle } from "./design-tokens/GlobalStyle";
 
 export { borderRadii } from "./design-tokens/effects";
+export { clipPaths } from "./design-tokens/clipPaths";
 export { colors } from "./design-tokens/colors";
 export {
   fonts,

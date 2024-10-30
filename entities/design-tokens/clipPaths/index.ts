@@ -1,0 +1,1 @@
+export { clipPaths } from "./clipPaths";
