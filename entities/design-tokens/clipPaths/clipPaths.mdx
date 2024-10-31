@@ -8,16 +8,20 @@ import { clipPaths } from "./clipPaths";
 Basic iconography can be created without the need for a net request using a css clip-path.
 Below is a gallery of icons I have created for use across my site.
 
-<div style={{ display: "flex", width: "100%" }}>
-  <article style={{ textAlign: "center", width: 125 }}>
-    <h2>Star</h2>
-    <div
-      style={{
-        aspectRatio: 1,
-        background: "white",
-        clipPath: clipPaths.star,
-        width: 100,
-      }}
-    />
-  </article>
+<div style={{ display: "flex", gap: 8, width: "100%" }}>
+  {Object.keys(clipPaths).map((clipPathKey) => {
+    return (
+      <article style={{ textAlign: "center", width: 125 }}>
+        <h2>{clipPathKey}</h2>
+        <div
+          style={{
+            aspectRatio: 1,
+            background: "white",
+            clipPath: clipPaths[clipPathKey],
+            width: 100,
+          }}
+        />
+      </article>
+    );
+  })}
 </div>
