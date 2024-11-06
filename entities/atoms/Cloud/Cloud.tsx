@@ -1,7 +1,10 @@
 import { CloudCircle, Root } from "./styles";
-import { HTMLAttributes } from "react";
+import { CSSProperties, HTMLAttributes } from "react";
+import { colors } from "@/entities";
 
 type CloudProps = {
+  cloudColor: CSSProperties["color"];
+  skyColor?: CSSProperties["background"];
   scale?: number;
   dispersion: number;
 } & HTMLAttributes<HTMLDivElement>;
@@ -9,10 +12,16 @@ type CloudProps = {
 /**
  * Sky and cloud generated using CSS.
  */
-export function Cloud({ dispersion = 60, scale = 180, ...rest }: CloudProps) {
+export function Cloud({
+  cloudColor = colors.whiteGhost,
+  dispersion = 60,
+  scale = 180,
+  skyColor = "linear-gradient(165deg, #527785 0%, #7fb4c7 100%)",
+  ...rest
+}: CloudProps) {
   return (
-    <Root data-testid={Cloud.name} {...rest}>
-      <CloudCircle $dispersion={dispersion} />
+    <Root $skyColor={skyColor} data-testid={Cloud.name} {...rest}>
+      <CloudCircle $cloudColor={cloudColor} $dispersion={dispersion} />
       <svg width="0" height="0">
         <filter id="cloudFilter">
           <feTurbulence

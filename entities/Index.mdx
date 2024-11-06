@@ -1,18 +1,150 @@
 import { Meta } from "@storybook/blocks";
 import Image from "next/image";
 import amLogo from "./assets/am.svg";
+import {
+  colors,
+  Cloud,
+  fontSizes,
+  Heading,
+  sizes,
+  Spacer,
+  Paragraph,
+  Link,
+} from "./";
 import { rem } from "polished";
 
 <Meta title="Alasdair Macrae Design" />
 
-# Alasdair Macrae Design
-
-<Image
-  src={amLogo}
-  alt="Green and white AM letters"
-  width={0}
-  height={0}
-  style={{ maxWidth: rem(240), width: "100%", height: "auto" }}
-/>
-
-I am a keen supported of Storybook js using it across the majority of projects I build from websites, web-apps and even desktop applications.
+<section
+  style={{
+    boxShadow: `0 0 ${sizes.s24.rem} ${sizes.s8.rem} ${colors.blackEvil}`,
+  }}
+>
+  <div
+    style={{
+      alignItems: "center",
+      background: colors.blackEvil,
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      minHeight: 500,
+      position: "relative",
+      overflow: "hidden",
+      width: "100%",
+    }}
+  >
+    <Cloud
+      dispersion={10}
+      cloudColor={colors.greenGrass}
+      skyColor="transparent"
+      style={{
+        height: "100%",
+        opacity: 0.4,
+        position: "absolute",
+        width: "100%",
+      }}
+    />
+    <Cloud
+      dispersion={30}
+      cloudColor={colors.greenGrass}
+      skyColor="transparent"
+      style={{
+        height: "100%",
+        left: -250,
+        opacity: 0.4,
+        position: "absolute",
+        top: -250,
+        width: "100%",
+      }}
+    />
+    <Cloud
+      dispersion={50}
+      cloudColor={colors.greenGrass}
+      skyColor="transparent"
+      style={{
+        height: "100%",
+        left: 150,
+        opacity: 0.4,
+        position: "absolute",
+        top: 150,
+        width: "100%",
+      }}
+    />
+    <Cloud
+      dispersion={70}
+      cloudColor={colors.greenGrass}
+      skyColor="transparent"
+      style={{
+        height: "100%",
+        left: -200,
+        opacity: 0.4,
+        position: "absolute",
+        top: 150,
+        width: "100%",
+      }}
+    />
+    <Cloud
+      dispersion={90}
+      cloudColor={colors.greenGrass}
+      skyColor="transparent"
+      style={{
+        height: "100%",
+        left: 200,
+        opacity: 0.4,
+        position: "absolute",
+        top: -100,
+        width: "100%",
+      }}
+    />
+    <Heading align="center" style={{ margin: "0 auto" }}>
+      Alasdair Macrae Design
+    </Heading>
+    <Spacer multiplier={4} />
+    <Image
+      src={amLogo}
+      alt="Green and white AM letters"
+      width={0}
+      height={0}
+      style={{
+        maxWidth: rem(200),
+        position: "relative",
+        width: "100%",
+        height: "auto",
+      }}
+    />
+    <Paragraph
+      align="center"
+      fontSize="mlarge"
+      style={{ position: "relative" }}
+    >
+      I am a keen supported of Storybook js using it across the majority of
+      projects I build including websites, web-apps and even desktop
+      applications.
+    </Paragraph>
+    <div
+      style={{
+        boxShadow: `inset 0 0 ${sizes.s32.rem} ${sizes.s16.rem} ${colors.blackEvil}`,
+        height: "100%",
+        position: "absolute",
+        width: "100%",
+      }}
+    />
+  </div>
+</section>
+<Spacer multiplier={4} />
+<Heading level="h2">Like what you see?</Heading>
+<Paragraph>
+  This Storybook instance is a playground for all my front-end creativity and
+  experiments. I try wherever possible to build everything in CSS and SVG to
+  make the UI very light and slick. You will find that now most visual effects
+  can be achieved in CSS but just remember just becuase you can does not mean
+  you should!
+</Paragraph>
+<Paragraph>
+  If you like what you see here and feel I could add value to your project
+  please{" "}
+  <a href="https://www.alasdairmacrae.co.uk/#contact" target="_blank">
+    get in contact with me
+  </a>
+  .
+</Paragraph>
