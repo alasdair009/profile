@@ -10,11 +10,7 @@ import { lineClamp } from "@/lib/line-clamp";
 import { rem } from "polished";
 
 const generatePolygonLine = (yOffset = 0) => {
-  return `polygon(0 0, 30% ${yOffset * 0.9}%, 50% ${yOffset}%, 70% ${
-    yOffset * 0.9
-  }%, 100% 0, 100% 25%, 70% ${25 + yOffset * 0.9}%, 50% ${25 + yOffset}%, 30% ${
-    25 + yOffset * 0.9
-  }%, 0 25%)`;
+  return `polygon(0 0, 30% ${yOffset * 0.9}%, 50% ${yOffset}%, 70% ${yOffset * 0.9}%, 100% 0, 100% 25%, 70% ${25 + yOffset * 0.9}%, 50% ${25 + yOffset}%, 30% ${25 + yOffset * 0.9}%, 0 25%)`;
 };
 
 const pressDown = keyframes`

@@ -57,11 +57,7 @@ const SVGWrapper = styled.div<{ curve: string; offsetPath: string }>`
  */
 export function CurveViewer({ curves, title }: CurveViewerProps): JSX.Element {
   return (
-    <Root
-      title={title}
-      data-testid={CurveViewer.name}
-      style={{ display: "flex", gap: sizes.s8.rem }}
-    >
+    <Root title={title} data-testid={CurveViewer.name} style={{ display: "flex", gap: sizes.s8.rem }}>
       {Object.keys(curves).map((key) => {
         // Get the values from inside the brackets as an array
         const curve = curves[key];
@@ -78,17 +74,8 @@ export function CurveViewer({ curves, title }: CurveViewerProps): JSX.Element {
           return (
             <CurveWrapper key={key}>
               <SVGWrapper offsetPath={cubicPath} curve={curves[key]}>
-                <svg
-                  width="100"
-                  height="100"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d={cubicPath}
-                    stroke={colors.greenGrass}
-                    strokeWidth={3}
-                    fill="transparent"
-                  />
+                <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                  <path d={cubicPath} stroke={colors.greenGrass} strokeWidth={3} fill="transparent" />
                 </svg>
               </SVGWrapper>
               <h4 style={{ textAlign: "center" }}>{key}</h4>

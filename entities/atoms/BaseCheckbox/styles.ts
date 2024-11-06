@@ -8,8 +8,7 @@ export const Root = styled.input<{ $isInvalid: boolean }>`
   appearance: none;
   aspect-ratio: 1;
   background: ${colors.blackEvil};
-  border-color: ${({ $isInvalid }) =>
-    $isInvalid ? colors.redHeat : colors.greenGrass};
+  border-color: ${({ $isInvalid }) => ($isInvalid ? colors.redHeat : colors.greenGrass)};
   border-style: solid;
   border-width: ${rem(1)};
   position: relative;

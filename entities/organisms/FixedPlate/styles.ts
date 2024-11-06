@@ -1,11 +1,6 @@
 "use client";
 import styled from "styled-components";
-import {
-  colors,
-  globalContentMaxWidth,
-  globalDecorationMaxWidth,
-  sizes,
-} from "@/entities";
+import { colors, globalContentMaxWidth, globalDecorationMaxWidth, sizes } from "@/entities";
 import Image from "next/image";
 import { rem } from "polished";
 

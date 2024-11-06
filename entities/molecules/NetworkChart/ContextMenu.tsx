@@ -1,9 +1,5 @@
 import { Heading, Paragraph, UnorderedList } from "@/entities";
-import {
-  ContextMenuButton,
-  ContextMenuFig,
-  ContextMenuRoot as Root,
-} from "./styles";
+import { ContextMenuButton, ContextMenuFig, ContextMenuRoot as Root } from "./styles";
 
 type ContextMenuProps = {
   onClose: any;
@@ -16,16 +12,7 @@ type ContextMenuProps = {
   coachLevelTitle: string;
 };
 
-export function ContextMenu({
-  onClose,
-  label,
-  description,
-  altnames,
-  fig,
-  difficulty,
-  difficultyPS,
-  coachLevelTitle,
-}: ContextMenuProps) {
+export function ContextMenu({ onClose, label, description, altnames, fig, difficulty, difficultyPS, coachLevelTitle }: ContextMenuProps) {
   return (
     <Root>
       <ContextMenuButton onClick={onClose} type="button">
@@ -39,11 +26,7 @@ export function ContextMenu({
           FIG: <ContextMenuFig>{fig}</ContextMenuFig>
         </li>
         <li>Difficulty: {difficulty}</li>
-        {difficultyPS && difficultyPS > 0 && difficultyPS !== difficulty ? (
-          <li>Difficulty (P/S): {difficultyPS}</li>
-        ) : (
-          <></>
-        )}
+        {difficultyPS && difficultyPS > 0 && difficultyPS !== difficulty ? <li>Difficulty (P/S): {difficultyPS}</li> : <></>}
         <li>Coach level: {coachLevelTitle}</li>
       </UnorderedList>
     </Root>

@@ -13,13 +13,7 @@ type TimelineElementProps = {
   alt: string;
 } & HTMLAttributes<HTMLDivElement>;
 
-export function TimelineElement({
-  date,
-  icon,
-  alt,
-  children,
-  ...rest
-}: TimelineElementProps) {
+export function TimelineElement({ date, icon, alt, children, ...rest }: TimelineElementProps) {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });

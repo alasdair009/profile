@@ -31,30 +31,18 @@ export type DimensionViewerProps = {
   objectName: string;
 };
 
-export function DimensionViewer({
-  units,
-  title,
-  sourceExample,
-  objectName,
-  barUnits,
-  suffix = "",
-}: DimensionViewerProps): JSX.Element {
+export function DimensionViewer({ units, title, sourceExample, objectName, barUnits, suffix = "" }: DimensionViewerProps): JSX.Element {
   return (
     <div data-testid={DimensionViewer.name}>
       <ObjectViewer object={units} title={objectName} />
       <p>
-        To use these values import the <strong>{objectName}</strong> object and
-        reference the required key.
+        To use these values import the <strong>{objectName}</strong> object and reference the required key.
       </p>
       <Source code={sourceExample} dark={true} language="css" />
       <DimensionBarWrapper title={title}>
         {Object.keys(barUnits).map((key, index) => {
           return (
-            <DimensionBar
-              key={`${title}${index}`}
-              data-testid={DimensionViewer.name}
-              width={`${barUnits[key]}${suffix}`}
-            >
+            <DimensionBar key={`${title}${index}`} data-testid={DimensionViewer.name} width={`${barUnits[key]}${suffix}`}>
               <DimensionBarLabel>
                 {barUnits[key]}
                 {suffix}
@@ -81,10 +69,7 @@ const DimensionBarWrapper = ({ children }: HTMLAttributes<HTMLDivElement>) => (
   </div>
 );
 
-const DimensionBar = ({
-  children,
-  width,
-}: { width: string } & HTMLAttributes<HTMLDivElement>) => (
+const DimensionBar = ({ children, width }: { width: string } & HTMLAttributes<HTMLDivElement>) => (
   <div
     style={{
       background: colors.greenGrass,

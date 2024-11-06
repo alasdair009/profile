@@ -15,14 +15,11 @@ export const Root = styled.button<{ $variant: ButtonVariant }>`
   display: flex;
   font-size: ${fontSizes.medium.rem};
   font-weight: ${fontWeights.bold};
-  height: ${({ $variant }) =>
-    $variant === "standard" ? sizes.s48.rem : "auto"};
+  height: ${({ $variant }) => ($variant === "standard" ? sizes.s48.rem : "auto")};
   justify-content: center;
-  min-width: ${({ $variant }) =>
-    $variant === "standard" ? sizes.s64.rem : "0"};
+  min-width: ${({ $variant }) => ($variant === "standard" ? sizes.s64.rem : "0")};
   max-width: ${sizes.s256.rem};
-  padding: 0
-    ${({ $variant }) => ($variant === "standard" ? sizes.s48.rem : "0")};
+  padding: 0 ${({ $variant }) => ($variant === "standard" ? sizes.s48.rem : "0")};
   position: relative;
   transition: padding 0.5s;
   z-index: 0;

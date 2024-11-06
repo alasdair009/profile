@@ -24,15 +24,7 @@ export const globalDecorationMaxWidth = 3440;
 /**
  * Key names for screen width sizes
  */
-export type Breakpoint =
-  | "base"
-  | "min"
-  | "xsmall"
-  | "small"
-  | "medium"
-  | "large"
-  | "xlarge"
-  | "wide";
+export type Breakpoint = "base" | "min" | "xsmall" | "small" | "medium" | "large" | "xlarge" | "wide";
 
 /**
  * Breakpoints (px value) for JDS dimensions of viewport.
@@ -57,10 +49,7 @@ export type DeviceConfig<T> = {
 /**
  * Breakpoints as defined in {@link @jagex/jds#device}, for use in styles.
  */
-export const device: Record<
-  Breakpoint,
-  `min-width: ${(typeof breakpoints)[Breakpoint]}px`
-> = {
+export const device: Record<Breakpoint, `min-width: ${(typeof breakpoints)[Breakpoint]}px`> = {
   base: `min-width: ${breakpoints.base}px`,
   min: `min-width: ${breakpoints.min}px`,
   xsmall: `min-width: ${breakpoints.xsmall}px`,
@@ -99,10 +88,7 @@ const sizeEntries: Record<string, number> = {
  */
 export type Dimension = Exclude<CSSProperties["width"], number | undefined>;
 
-export const sizes: Record<
-  keyof typeof sizeEntries,
-  { raw: number; px: Dimension; rem: Dimension }
-> = {
+export const sizes: Record<keyof typeof sizeEntries, { raw: number; px: Dimension; rem: Dimension }> = {
   s2: {
     raw: sizeEntries.s2,
     px: `${sizeEntries.s2}px`,

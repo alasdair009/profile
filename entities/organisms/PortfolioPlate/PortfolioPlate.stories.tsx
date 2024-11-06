@@ -25,17 +25,8 @@ export const Default: StoryObj<typeof PortfolioPlate> = {
     heading: "JDS",
     children: (
       <>
-        <Paragraph>
-          Responsible for constructing a large design system to style and
-          maintain consistent branding across all Jagex Publishing Platform
-          products including websites and apps. This library was written in
-          React and displayed via Storybook.js.
-        </Paragraph>
-        <Paragraph>
-          The system covers all areas of visual implementation including
-          colours, animation, typography, sizing, components and is all
-          structured using atomic design principles.
-        </Paragraph>
+        <Paragraph>Responsible for constructing a large design system to style and maintain consistent branding across all Jagex Publishing Platform products including websites and apps. This library was written in React and displayed via Storybook.js.</Paragraph>
+        <Paragraph>The system covers all areas of visual implementation including colours, animation, typography, sizing, components and is all structured using atomic design principles.</Paragraph>
       </>
     ),
   },
@@ -53,19 +44,14 @@ export const WithUrl: StoryObj<typeof PortfolioPlate> = {
   args: {
     contentPlateProps: {
       foregroundImage: jagexLauncherImage,
-      foregroundImageAlt:
-        "The opening UI from the Jagex Launcher displaying RuneScape",
+      foregroundImageAlt: "The opening UI from the Jagex Launcher displaying RuneScape",
       backgroundCss: `linear-gradient(#07111b,${colors.blackEvil})`,
     },
     heading: "Jagex Launcher",
     url: "https://www.jagex.com/launcher",
     children: (
       <Paragraph>
-        The Jagex Launcher is an application that is used to run all Jagex
-        products. I was responsible for maintaining the{" "}
-        <abbr title="Jagex Design System">JDS</abbr> (see above) integration
-        that delivered the visual aesthetics and functionality for the
-        front-end.
+        The Jagex Launcher is an application that is used to run all Jagex products. I was responsible for maintaining the <abbr title="Jagex Design System">JDS</abbr> (see above) integration that delivered the visual aesthetics and functionality for the front-end.
       </Paragraph>
     ),
   },

@@ -2,10 +2,7 @@
 import styled from "styled-components";
 import { rem } from "polished";
 import { colors } from "@/entities/design-tokens/colors";
-import {
-  globalContentMaxWidth,
-  globalDecorationMaxWidth,
-} from "@/entities/design-tokens/dimensions";
+import { globalContentMaxWidth, globalDecorationMaxWidth } from "@/entities/design-tokens/dimensions";
 import maskImg from "@/entities/organisms/Splash/ali-flight.svg";
 import { device, sizes } from "@/entities";
 import { Paragraph } from "@/entities";
@@ -81,12 +78,7 @@ export const FeetSection = styled.div`
   }
 `;
 export const HeadSection = styled.div`
-  background: linear-gradient(
-    to right,
-    ${colors.whiteGhost},
-    ${colors.whiteGhost} 50%,
-    ${colors.blackEvil} 50%
-  );
+  background: linear-gradient(to right, ${colors.whiteGhost}, ${colors.whiteGhost} 50%, ${colors.blackEvil} 50%);
   height: ${rem(480)};
   position: relative;
   width: 100%;
@@ -98,12 +90,7 @@ export const HeadSection = styled.div`
   }
 
   &::before {
-    background: linear-gradient(
-      to right,
-      ${colors.blackEvil},
-      ${colors.blackEvil} 50%,
-      ${colors.whiteGhost} 50%
-    );
+    background: linear-gradient(to right, ${colors.blackEvil}, ${colors.blackEvil} 50%, ${colors.whiteGhost} 50%);
     content: "";
     height: 100%;
     left: 0;

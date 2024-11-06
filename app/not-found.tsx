@@ -1,24 +1,10 @@
-import {
-  colors,
-  Container,
-  Fire,
-  Heading,
-  Link,
-  Paragraph,
-  sizes,
-  Spacer,
-  TextMask,
-} from "@/entities";
+import { colors, Container, Fire, Heading, Link, Paragraph, sizes, Spacer, TextMask } from "@/entities";
 import { rgba } from "polished";
 import { FirePadding, FireWrapper } from "@/app/lib/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
 
-export const metadata: Metadata = generateMetaData(
-  "Not Found",
-  "You bounced out of my orbit and I could not find where you were heading!",
-  "404"
-);
+export const metadata: Metadata = generateMetaData("Not Found", "You bounced out of my orbit and I could not find where you were heading!", "404");
 export default function NotFound() {
   return (
     <Container
@@ -54,17 +40,11 @@ export default function NotFound() {
         />
         <FireWrapper>
           <FirePadding $backgroundColor={rgba(colors.blackEvil, 0.5)} />
-          <TextMask
-            style={{ height: "75%", left: 0 }}
-            text="404"
-            maskFill={rgba(colors.blackEvil, 0.7)}
-          />
+          <TextMask style={{ height: "75%", left: 0 }} text="404" maskFill={rgba(colors.blackEvil, 0.7)} />
           <FirePadding $backgroundColor={rgba(colors.blackEvil, 0.5)} />
         </FireWrapper>
       </div>
-      <Paragraph align="center">
-        Could not find the page you were looking
-      </Paragraph>
+      <Paragraph align="center">Could not find the page you were looking</Paragraph>
       <Spacer />
       <Link href="/" style={{ margin: "0 auto" }}>
         Return Home

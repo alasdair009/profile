@@ -37,10 +37,7 @@ export const Fifty: StoryObj<typeof Progress> = {
   play: async ({ args, canvasElement }) => progressTest(args, canvasElement),
 };
 
-const progressTest = async (
-  args: ProgressProps,
-  canvasElement: HTMLElement
-) => {
+const progressTest = async (args: ProgressProps, canvasElement: HTMLElement) => {
   const canvas = within(canvasElement);
   const progressWrapper = canvas.getByTestId(Progress.name);
   const progressElement = canvas.getByTestId(`${Progress.name}Element`);

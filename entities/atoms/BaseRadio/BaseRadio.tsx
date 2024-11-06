@@ -31,13 +31,5 @@ export function BaseRadio({ isInvalid = false, ...rest }: BaseRadioProps) {
     setIsInvalidState(false);
   };
 
-  return (
-    <Root
-      type="radio"
-      $isInvalid={isInvalidState}
-      onChange={() => handleOnChange()}
-      data-testid={BaseRadio.name}
-      {...rest}
-    />
-  );
+  return <Root type="radio" $isInvalid={isInvalidState} onChange={() => handleOnChange()} data-testid={BaseRadio.name} {...rest} />;
 }

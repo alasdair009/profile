@@ -23,21 +23,9 @@ type AudioProps = {
 /**
  * Play a local or external audio file.
  */
-export function Audio({
-  src,
-  controls = true,
-  autoPlay = true,
-  loop = true,
-  ...rest
-}: AudioProps) {
+export function Audio({ src, controls = true, autoPlay = true, loop = true, ...rest }: AudioProps) {
   return (
-    <Root
-      controls={controls}
-      autoPlay={autoPlay}
-      loop={loop}
-      data-testid={Audio.name}
-      {...rest}
-    >
+    <Root controls={controls} autoPlay={autoPlay} loop={loop} data-testid={Audio.name} {...rest}>
       <source src={src} type="audio/mpeg" data-testid={`${Audio.name}Source`} />
     </Root>
   );

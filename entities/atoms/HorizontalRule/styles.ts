@@ -6,19 +6,12 @@ import { colors, globalDecorationMaxWidth, sizes } from "@/entities";
 import styled from "styled-components";
 import amLogo from "../../assets/am.svg";
 
-const getMarginStyle = (
-  margin: HorizontalRuleMarginOptions,
-  decoration: boolean
-): string => {
+const getMarginStyle = (margin: HorizontalRuleMarginOptions, decoration: boolean): string => {
   switch (margin) {
     case "top":
-      return `${sizes.s32.rem} auto ${
-        decoration ? `calc(-${sizes.s24.rem} - ${rem(2)})` : 0
-      }`;
+      return `${sizes.s32.rem} auto ${decoration ? `calc(-${sizes.s24.rem} - ${rem(2)})` : 0}`;
     case "bottom":
-      return `${decoration ? `calc(-${sizes.s24.rem} - ${rem(2)})` : 0} auto ${
-        sizes.s32.rem
-      }`;
+      return `${decoration ? `calc(-${sizes.s24.rem} - ${rem(2)})` : 0} auto ${sizes.s32.rem}`;
     case "both":
       return `${sizes.s32.rem} auto`;
     case "none":
@@ -32,9 +25,7 @@ export const Root = styled.hr<{
   border: none;
   margin: ${({ $margin, $decoration }) => getMarginStyle($margin, $decoration)};
   max-width: ${rem(globalDecorationMaxWidth)};
-  padding: ${({ $decoration }) =>
-      $decoration ? `calc(${sizes.s24.rem} + ${rem(2)})` : rem(1)}
-    0;
+  padding: ${({ $decoration }) => ($decoration ? `calc(${sizes.s24.rem} + ${rem(2)})` : rem(1))} 0;
   position: relative;
   width: 100%;
   z-index: 1;

@@ -33,14 +33,7 @@ type LabelledSelectProps = {
 /**
  * Labelled text input field for forms.
  */
-export function LabelledSelect({
-  isInvalid,
-  name,
-  label,
-  errorText = `Please enter a valid ${label}`,
-  children,
-  ...rest
-}: LabelledSelectProps) {
+export function LabelledSelect({ isInvalid, name, label, errorText = `Please enter a valid ${label}`, children, ...rest }: LabelledSelectProps) {
   return (
     <Root data-testid={LabelledSelect.name}>
       <BaseLabel as="span">{label}</BaseLabel>

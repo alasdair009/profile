@@ -1,14 +1,4 @@
-import {
-  Article,
-  BlockQuote,
-  colors,
-  globalTextMaxWidth,
-  Heading,
-  IFrame,
-  Link,
-  Paragraph,
-  sizes,
-} from "@/entities";
+import { Article, BlockQuote, colors, globalTextMaxWidth, Heading, IFrame, Link, Paragraph, sizes } from "@/entities";
 import { generateMetaData, myName } from "@/lib/metadata";
 import { sanityClient, urlFor } from "@/lib/sanity/client";
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
@@ -31,26 +21,13 @@ export async function generateMetadata({ params }: any) {
   try {
     const post = await getPost(params.slug);
 
-    return generateMetaData(
-      post.title,
-      post.description,
-      `blog/${post.slug.current}`,
-      imageUrlBuilder(sanityClient).image(post.mainImage.asset).url(),
-      "article",
-      {
-        publishedTime: new Date(post.publishedAt).toISOString(),
-        authors: "Alasdair Macrae",
-        tags: "web",
-      }
-    );
+    return generateMetaData(post.title, post.description, `blog/${post.slug.current}`, imageUrlBuilder(sanityClient).image(post.mainImage.asset).url(), "article", {
+      publishedTime: new Date(post.publishedAt).toISOString(),
+      authors: "Alasdair Macrae",
+      tags: "web",
+    });
   } catch (e) {
-    return generateMetaData(
-      "Blog article not found",
-      "We could not find the article",
-      `blog/${params.slug}`,
-      undefined,
-      "website"
-    );
+    return generateMetaData("Blog article not found", "We could not find the article", `blog/${params.slug}`, undefined, "website");
   }
 }
 
@@ -93,18 +70,7 @@ const ptComponents: Partial<PortableTextReactComponents> = {
             width: "100%",
           }}
         >
-          <Image
-            alt={value.alt || " "}
-            loading="lazy"
-            src={urlFor(value)
-              .width(1024)
-              .height(576)
-              .fit("max")
-              .auto("format")
-              .url()}
-            layout="fill"
-            objectFit="cover"
-          />
+          <Image alt={value.alt || " "} loading="lazy" src={urlFor(value).width(1024).height(576).fit("max").auto("format").url()} layout="fill" objectFit="cover" />
         </div>
       );
     },
@@ -114,9 +80,7 @@ const ptComponents: Partial<PortableTextReactComponents> = {
   },
   marks: {
     link: ({ children, value }) => {
-      const rel = !value.href.startsWith("/")
-        ? "noreferrer noopener"
-        : undefined;
+      const rel = !value.href.startsWith("/") ? "noreferrer noopener" : undefined;
       return (
         <Link href={value.href} rel={rel}>
           {children}
@@ -151,13 +115,7 @@ export default async function ArticlePage({ params }: any) {
             Back to blog
           </Link>
         </nav>
-        <Article
-          heading={`${post.title}`}
-          date={new Date(post.publishedAt)}
-          image={imageUrlBuilder(sanityClient)
-            .image(post.mainImage.asset)
-            .url()}
-        >
+        <Article heading={`${post.title}`} date={new Date(post.publishedAt)} image={imageUrlBuilder(sanityClient).image(post.mainImage.asset).url()}>
           <PortableText value={post.body} components={ptComponents} />
         </Article>
       </>

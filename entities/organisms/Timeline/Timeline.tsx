@@ -22,12 +22,7 @@ export function Timeline({ entries, ...rest }: TimelineProps) {
     <Root {...rest}>
       <VerticalTimeline>
         {entries.map((entry, index) => (
-          <TimelineElement
-            key={`${entry.date}${entry.icon}${index}`}
-            date={entry.date}
-            icon={entry.icon}
-            alt={entry.alt}
-          >
+          <TimelineElement key={`${entry.date}${entry.icon}${index}`} date={entry.date} icon={entry.icon} alt={entry.alt}>
             {entry.content}
           </TimelineElement>
         ))}

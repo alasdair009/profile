@@ -1,12 +1,5 @@
 "use client";
-import {
-  GraphCanvas,
-  GraphEdge,
-  GraphNode,
-  Theme,
-  darkTheme,
-  GraphSceneProps,
-} from "reagraph";
+import { GraphCanvas, GraphEdge, GraphNode, Theme, darkTheme, GraphSceneProps } from "reagraph";
 import { colors } from "@/entities";
 import { HTMLAttributes, ReactNode, useEffect, useState } from "react";
 import { darken } from "polished";
@@ -53,13 +46,7 @@ const chartTheme: Theme = {
   },
 };
 
-export function NetworkChart({
-  nodes,
-  edges,
-  onNodeClick,
-  contextMenu,
-  ...rest
-}: NetworkChartProps) {
+export function NetworkChart({ nodes, edges, onNodeClick, contextMenu, ...rest }: NetworkChartProps) {
   const mounted = useMounted();
 
   const [isBrowser, setIsBrowser] = useState(false);
@@ -88,16 +75,7 @@ export function NetworkChart({
         draggable={true}
         edgeInterpolation="curved"
         contextMenu={({ data, onClose }) => (
-          <ContextMenu
-            onClose={onClose}
-            label={`${data.label}`}
-            description={data.data.description}
-            altnames={data.data.altnames}
-            fig={data.data.fig}
-            difficulty={data.data.difficulty}
-            difficultyPS={data.data.difficultyPS}
-            coachLevelTitle={data.data.coachleveltitle}
-          />
+          <ContextMenu onClose={onClose} label={`${data.label}`} description={data.data.description} altnames={data.data.altnames} fig={data.data.fig} difficulty={data.data.difficulty} difficultyPS={data.data.difficultyPS} coachLevelTitle={data.data.coachleveltitle} />
         )}
       />
     </Root>

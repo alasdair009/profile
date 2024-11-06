@@ -11,10 +11,7 @@ export type ObjectViewerProps = {
   title: string;
 };
 
-export function ObjectViewer({
-  object,
-  title,
-}: ObjectViewerProps): JSX.Element {
+export function ObjectViewer({ object, title }: ObjectViewerProps): JSX.Element {
   // Format the object as JSON with indentation
   const objectAsString = JSON.stringify(object, null, 4);
 

@@ -18,9 +18,7 @@ const meta: Meta<typeof ContentPlate> = {
     children: (
       <>
         <Heading level="h3">Children</Heading>
-        <Paragraph>
-          This is my content plate, there are many like it but this one is mine!
-        </Paragraph>
+        <Paragraph>This is my content plate, there are many like it but this one is mine!</Paragraph>
       </>
     ),
   },

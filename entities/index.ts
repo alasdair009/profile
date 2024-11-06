@@ -3,25 +3,9 @@ export { GlobalStyle } from "./design-tokens/GlobalStyle";
 export { borderRadii } from "./design-tokens/effects";
 export { clipPaths } from "./design-tokens/clipPaths";
 export { colors } from "./design-tokens/colors";
-export {
-  fonts,
-  fontSizes,
-  fontWeights,
-  headingSizes,
-} from "./design-tokens/typography";
-export type {
-  FontSizes,
-  HeadingTypes,
-  TextAlignment,
-} from "./design-tokens/typography";
-export {
-  device,
-  globalInputMaxWidth,
-  globalContentMaxWidth,
-  globalTextMaxWidth,
-  globalDecorationMaxWidth,
-  sizes,
-} from "./design-tokens/dimensions";
+export { fonts, fontSizes, fontWeights, headingSizes } from "./design-tokens/typography";
+export type { FontSizes, HeadingTypes, TextAlignment } from "./design-tokens/typography";
+export { device, globalInputMaxWidth, globalContentMaxWidth, globalTextMaxWidth, globalDecorationMaxWidth, sizes } from "./design-tokens/dimensions";
 export type { Breakpoint, Dimension } from "./design-tokens/dimensions";
 
 export { Audio } from "./atoms/Audio";

@@ -14,10 +14,6 @@ export const Root = styled.input<{ $isInvalid: boolean }>`
   width: ${sizes.s32.rem};
 
   &:checked {
-    background: radial-gradient(
-      ${colors.greenGrass} ${sizes.s8.rem},
-      ${colors.whiteGhost} ${sizes.s8.rem},
-      ${colors.whiteGhost}
-    );
+    background: radial-gradient(${colors.greenGrass} ${sizes.s8.rem}, ${colors.whiteGhost} ${sizes.s8.rem}, ${colors.whiteGhost});
   }
 `;

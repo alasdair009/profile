@@ -2,10 +2,7 @@
 
 import styled from "styled-components";
 import { colors, sizes } from "@/entities";
-import {
-  defaultFieldStyles,
-  fieldHeight,
-} from "@/entities/atoms/BaseInput/styles";
+import { defaultFieldStyles, fieldHeight } from "@/entities/atoms/BaseInput/styles";
 
 export const Root = styled.select<{ $isInvalid: boolean; multiple?: boolean }>`
   ${({ $isInvalid }) => defaultFieldStyles($isInvalid)}

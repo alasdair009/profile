@@ -4,15 +4,9 @@ import { ErrorText, Heading, Paragraph } from "@/entities";
 import { GraphEdge, GraphNode } from "reagraph";
 import dynamic from "next/dynamic";
 
-const NetworkChart = dynamic(
-  () =>
-    import("@/entities/molecules/NetworkChart/").then(
-      (mod) => mod.NetworkChart
-    ),
-  {
-    ssr: false,
-  }
-);
+const NetworkChart = dynamic(() => import("@/entities/molecules/NetworkChart/").then((mod) => mod.NetworkChart), {
+  ssr: false,
+});
 
 const connectionOptions: ConnectionOptions = {
   host: `${process.env.CANGAROOS_DB_HOST}`,
@@ -27,13 +21,9 @@ const getMoveData = async () => {
   let error = "ok";
   try {
     const connection = await mysql.createConnection(connectionOptions);
-    const [movesResults] = await connection.query<RowDataPacket[]>(
-      "SELECT * FROM `VU_moves` WHERE id > 0 AND active = 1"
-    );
+    const [movesResults] = await connection.query<RowDataPacket[]>("SELECT * FROM `VU_moves` WHERE id > 0 AND active = 1");
 
-    const [edgesResults] = await connection.query<RowDataPacket[]>(
-      "SELECT * FROM `VU_moves_links` WHERE id > 0"
-    );
+    const [edgesResults] = await connection.query<RowDataPacket[]>("SELECT * FROM `VU_moves_links` WHERE id > 0");
 
     movesResults.forEach((row) => {
       const node: GraphNode = {
@@ -73,20 +63,9 @@ export default async function TrampolineMoveNetwork() {
   return (
     <Root>
       <Heading level="h2">Move Network</Heading>
-      <Paragraph>
-        Over time I have created a move network graph that is a visual
-        representation of trampoline moves and how they progress to more complex
-        ones.
-      </Paragraph>
-      <Paragraph>
-        Use the mouse or your touch controls to zoom in to see more detail and
-        right click on a node to view information about the skill.
-      </Paragraph>
-      {nodes.length && edges.length ? (
-        <NetworkChart nodes={nodes} edges={edges} />
-      ) : (
-        <ErrorText>Could not connect to move database: {error}</ErrorText>
-      )}
+      <Paragraph>Over time I have created a move network graph that is a visual representation of trampoline moves and how they progress to more complex ones.</Paragraph>
+      <Paragraph>Use the mouse or your touch controls to zoom in to see more detail and right click on a node to view information about the skill.</Paragraph>
+      {nodes.length && edges.length ? <NetworkChart nodes={nodes} edges={edges} /> : <ErrorText>Could not connect to move database: {error}</ErrorText>}
     </Root>
   );
 }

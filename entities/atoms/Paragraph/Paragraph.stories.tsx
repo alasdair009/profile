@@ -31,9 +31,7 @@ export const Default: StoryObj<typeof Paragraph> = {
     await expect(paragraphElement).toHaveTextContent(`${args.children}`);
     await expect(paragraphElement).toHaveStyle(`text-align: ${args.align}`);
     await expect(paragraphElement).toHaveStyle(`color: ${args.color}`);
-    await expect(paragraphElement).toHaveStyle(
-      `font-size: ${fontSizes[args.fontSize ? args.fontSize : "medium"].px}`
-    );
+    await expect(paragraphElement).toHaveStyle(`font-size: ${fontSizes[args.fontSize ? args.fontSize : "medium"].px}`);
     await expect(paragraphElement).toHaveStyle(`text-wrap: ${args.textWrap}`);
   },
 };

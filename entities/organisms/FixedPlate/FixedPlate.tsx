@@ -9,12 +9,7 @@ type FixedPlateProps = {
   placeholder?: "blur" | "empty";
 } & HTMLAttributes<HTMLDivElement>;
 
-export function FixedPlate({
-  image = skyImage,
-  placeholder = "blur",
-  alt = "Ali trampolining outside somersaulting in the air",
-  ...rest
-}: FixedPlateProps) {
+export function FixedPlate({ image = skyImage, placeholder = "blur", alt = "Ali trampolining outside somersaulting in the air", ...rest }: FixedPlateProps) {
   return (
     <Root {...rest}>
       <FixedImage placeholder={placeholder} src={image} alt={alt} />

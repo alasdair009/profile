@@ -27,8 +27,7 @@ export const defaultFieldStyles = (isInvalid: boolean) => {
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus {
       -webkit-text-fill-color: ${colors.whiteGhost};
-      -webkit-box-shadow: 0 0 0 ${fieldHeight}
-        ${isInvalid ? inValidStyles.background : colors.greyDark} inset;
+      -webkit-box-shadow: 0 0 0 ${fieldHeight} ${isInvalid ? inValidStyles.background : colors.greyDark} inset;
     }
 
     &:user-invalid {

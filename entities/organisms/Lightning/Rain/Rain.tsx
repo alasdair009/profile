@@ -1,9 +1,6 @@
 "use client";
 import { HTMLAttributes, useEffect, useRef } from "react";
-import {
-  RainCanvasWrapper as Root,
-  RainCanvas,
-} from "@/entities/organisms/Lightning/styles";
+import { RainCanvasWrapper as Root, RainCanvas } from "@/entities/organisms/Lightning/styles";
 import { lighten, rgba } from "polished";
 
 type RainProps = {
@@ -36,12 +33,7 @@ function random(min: number, max: number) {
 /**
  * A canvas playing a rain animation
  */
-export function Rain({
-  rainColor = "rgb(174,194,224)",
-  rainDrops = 200,
-  speedRainTrough = 25,
-  ...rest
-}: RainProps) {
+export function Rain({ rainColor = "rgb(174,194,224)", rainDrops = 200, speedRainTrough = 25, ...rest }: RainProps) {
   const rainCanvasRef = useRef<HTMLCanvasElement | null>(null);
   const rain: RainDrop[] = [];
   const rainTrough: RainTrough[] = [];
@@ -50,10 +42,7 @@ export function Rain({
   const drawRain = (ctx: CanvasRenderingContext2D, i: number) => {
     ctx.beginPath();
     ctx.moveTo(rain[i].x, rain[i].y);
-    ctx.lineTo(
-      rain[i].x + rain[i].l * rain[i].xs,
-      rain[i].y + rain[i].l * rain[i].ys
-    );
+    ctx.lineTo(rain[i].x + rain[i].l * rain[i].xs, rain[i].y + rain[i].l * rain[i].ys);
     ctx.strokeStyle = rgba(rainColor, 0.5);
     ctx.lineWidth = 1;
     ctx.lineCap = "round";
@@ -62,12 +51,7 @@ export function Rain({
 
   const drawRainTrough = (ctx: CanvasRenderingContext2D, i: number) => {
     ctx.beginPath();
-    const grd = ctx.createLinearGradient(
-      0,
-      rainTrough[i].y,
-      0,
-      rainTrough[i].y + rainTrough[i].length
-    );
+    const grd = ctx.createLinearGradient(0, rainTrough[i].y, 0, rainTrough[i].y + rainTrough[i].length);
     grd.addColorStop(0, rgba(troughColor, 0));
     grd.addColorStop(1, rgba(troughColor, rainTrough[i].opacity));
 

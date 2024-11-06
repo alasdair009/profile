@@ -1,9 +1,4 @@
-const {
-  VERCEL_ENV,
-  VERCEL_URL,
-  ALLOW_TRANSITIONS,
-  NEXT_FORMSPREE_CONTACT_ENDPOINT,
-} = process.env;
+const { VERCEL_ENV, VERCEL_URL, ALLOW_TRANSITIONS, NEXT_FORMSPREE_CONTACT_ENDPOINT } = process.env;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

@@ -16,17 +16,6 @@ type HorizontalRuleProps = {
 /**
  * Horizontal rule on the page used to separate content.
  */
-export function HorizontalRule({
-  decoration = false,
-  margin = "both",
-  ...rest
-}: HorizontalRuleProps) {
-  return (
-    <Root
-      $decoration={decoration}
-      $margin={margin}
-      data-testid={HorizontalRule.name}
-      {...rest}
-    />
-  );
+export function HorizontalRule({ decoration = false, margin = "both", ...rest }: HorizontalRuleProps) {
+  return <Root $decoration={decoration} $margin={margin} data-testid={HorizontalRule.name} {...rest} />;
 }

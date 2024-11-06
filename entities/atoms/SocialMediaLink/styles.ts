@@ -25,8 +25,7 @@ export const Root = styled(Link)<{ $variant: SocialMediaLinkVariant }>`
   color: transparent;
   display: flex;
   justify-content: center;
-  -webkit-mask: url(${({ $variant }) =>
-    getMaskIcon($variant)}) no-repeat center;
+  -webkit-mask: url(${({ $variant }) => getMaskIcon($variant)}) no-repeat center;
   mask: url(${({ $variant }) => getMaskIcon($variant)}) no-repeat center;
   -webkit-mask-size: contain;
   mask-size: contain;
@@ -35,9 +34,7 @@ export const Root = styled(Link)<{ $variant: SocialMediaLinkVariant }>`
   width: ${sizes.s64.rem};
   
   &::before {
-    background: linear-gradient(${colors.whiteGhost} 50%, ${
-      colors.greenGrass
-    } 50%, ${colors.greenGrass} 100%) 0 0;
+    background: linear-gradient(${colors.whiteGhost} 50%, ${colors.greenGrass} 50%, ${colors.greenGrass} 100%) 0 0;
     content: '';
     height: 200%;
     left: 0;

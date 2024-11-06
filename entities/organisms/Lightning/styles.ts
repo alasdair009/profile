@@ -1,11 +1,6 @@
 "use client";
 import styled, { keyframes } from "styled-components";
-import {
-  colors,
-  globalContentMaxWidth,
-  globalDecorationMaxWidth,
-  sizes,
-} from "@/entities";
+import { colors, globalContentMaxWidth, globalDecorationMaxWidth, sizes } from "@/entities";
 import { rem, rgba } from "polished";
 import Image from "next/image";
 
@@ -64,8 +59,7 @@ export const Background = styled(Image)<{ $frequency: number }>`
 `;
 
 export const Strike = styled(Image)<{ $frequency: number }>`
-  animation: ${strikeAnimation} ${({ $frequency }) => $frequency}s linear
-    infinite;
+  animation: ${strikeAnimation} ${({ $frequency }) => $frequency}s linear infinite;
   height: 100%;
   left: 0;
   object-fit: cover;
@@ -77,12 +71,7 @@ export const Strike = styled(Image)<{ $frequency: number }>`
 
 export const Content = styled.div`
   align-items: center;
-  background: linear-gradient(
-    to left,
-    transparent,
-    ${rgba(colors.blackEvil, 0.2)},
-    transparent
-  );
+  background: linear-gradient(to left, transparent, ${rgba(colors.blackEvil, 0.2)}, transparent);
   display: flex;
   justify-content: center;
   margin: 0 auto;
