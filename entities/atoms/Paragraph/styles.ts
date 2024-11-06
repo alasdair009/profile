@@ -2,7 +2,15 @@
 import styled from "styled-components";
 import { rem } from "polished";
 import { Property } from "csstype";
-import { colors, device, fonts, fontSizes, FontSizes, globalTextMaxWidth, sizes } from "@/entities";
+import {
+  colors,
+  device,
+  fonts,
+  fontSizes,
+  FontSizes,
+  globalTextMaxWidth,
+  sizes,
+} from "@/entities";
 import { lineHeights } from "@/entities/design-tokens/typography/typography";
 import { lineClamp } from "@/lib/line-clamp";
 

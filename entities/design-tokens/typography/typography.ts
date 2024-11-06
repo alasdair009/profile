@@ -15,8 +15,17 @@ export const fonts: Record<FontAreas, CSSProperties["fontFamily"]> = {
   cta: OPEN_SANS,
 };
 
-export type FontSizes = "small" | "medium" | "mlarge" | "large" | "xlarge" | "xxlarge";
-export const fontSizes: Record<FontSizes, { raw: number; px: Dimension; rem: Dimension }> = {
+export type FontSizes =
+  | "small"
+  | "medium"
+  | "mlarge"
+  | "large"
+  | "xlarge"
+  | "xxlarge";
+export const fontSizes: Record<
+  FontSizes,
+  { raw: number; px: Dimension; rem: Dimension }
+> = {
   small: sizes.s12,
   medium: sizes.s16,
   mlarge: sizes.s24,

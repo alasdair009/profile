@@ -24,19 +24,41 @@ type HeadingProps = {
 /**
  * CSS Rendered Fire animation that can have the colour, size and intensity customised.
  */
-export function Fire({ baseColor = "#ff5000", particleSize = sizes.s80.raw, numberOfParticles = 50, duration = 1, ...rest }: HeadingProps) {
+export function Fire({
+  baseColor = "#ff5000",
+  particleSize = sizes.s80.raw,
+  numberOfParticles = 50,
+  duration = 1,
+  ...rest
+}: HeadingProps) {
   const particles = [];
   for (let i = 0; i < numberOfParticles; i++) {
-    particles.push(<span key={`particle${baseColor}${particleSize}${numberOfParticles}${duration}${i}`}></span>);
+    particles.push(
+      <span
+        key={`particle${baseColor}${particleSize}${numberOfParticles}${duration}${i}`}
+      ></span>
+    );
   }
 
   const embers = [];
   for (let i = 0; i < numberOfParticles; i++) {
-    embers.push(<Ember key={`ember${baseColor}${particleSize}${numberOfParticles}${duration}${i}`} data-testid={`${Fire.name}Ember`} />);
+    embers.push(
+      <Ember
+        key={`ember${baseColor}${particleSize}${numberOfParticles}${duration}${i}`}
+        data-testid={`${Fire.name}Ember`}
+      />
+    );
   }
 
   return (
-    <Root $baseColor={baseColor} $particleSize={particleSize} $numberOfParticles={numberOfParticles} $duration={duration} data-testid={Fire.name} {...rest}>
+    <Root
+      $baseColor={baseColor}
+      $particleSize={particleSize}
+      $numberOfParticles={numberOfParticles}
+      $duration={duration}
+      data-testid={Fire.name}
+      {...rest}
+    >
       {embers}
     </Root>
   );

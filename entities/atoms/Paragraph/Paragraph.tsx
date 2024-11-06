@@ -33,9 +33,25 @@ type ParagraphProps = {
 /**
  * Paragraph of text
  */
-export function Paragraph({ align = "left", color = colors.whiteGhost, fontSize = "medium", textWrap = "wrap", lines, children, ...rest }: ParagraphProps) {
+export function Paragraph({
+  align = "left",
+  color = colors.whiteGhost,
+  fontSize = "medium",
+  textWrap = "wrap",
+  lines,
+  children,
+  ...rest
+}: ParagraphProps) {
   return (
-    <Root $align={align} $color={color} $fontSize={fontSize} $textWrap={textWrap} $lines={lines} data-testid={Paragraph.name} {...rest}>
+    <Root
+      $align={align}
+      $color={color}
+      $fontSize={fontSize}
+      $textWrap={textWrap}
+      $lines={lines}
+      data-testid={Paragraph.name}
+      {...rest}
+    >
       {children}
     </Root>
   );

@@ -1,6 +1,11 @@
 "use client";
 import styled, { css, keyframes } from "styled-components";
-import { colors, globalDecorationMaxWidth, globalTextMaxWidth, sizes } from "@/entities";
+import {
+  colors,
+  globalDecorationMaxWidth,
+  globalTextMaxWidth,
+  sizes,
+} from "@/entities";
 import { rem, rgba } from "polished";
 import Image from "next/image";
 
@@ -24,7 +29,11 @@ const generateParticles = (size: number, numberOfParticles: number) => {
   return particleString;
 };
 
-const generateBlockStyles = (particleBaseDuration: number, particleBlocks: number, numberOfParticles: number) => {
+const generateBlockStyles = (
+  particleBaseDuration: number,
+  particleBlocks: number,
+  numberOfParticles: number
+) => {
   let blockStyles = "";
   for (let i = 0; i < particleBlocks; i++) {
     blockStyles += `
@@ -48,7 +57,11 @@ const generateBlockStyles = (particleBaseDuration: number, particleBlocks: numbe
 
 export const Root = styled.div`
   align-items: center;
-  background: linear-gradient(207deg, ${rgba(colors.greenGrass, 0.35)} 35%, transparent);
+  background: linear-gradient(
+    207deg,
+    ${rgba(colors.greenGrass, 0.35)} 35%,
+    transparent
+  );
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -59,7 +72,13 @@ export const Root = styled.div`
   width: 100%;
 
   &::before {
-    background: linear-gradient(117deg, ${colors.blackEvil} 15%, transparent 50%, transparent 65%, ${colors.blackEvil} 95%);
+    background: linear-gradient(
+      117deg,
+      ${colors.blackEvil} 15%,
+      transparent 50%,
+      transparent 65%,
+      ${colors.blackEvil} 95%
+    );
     content: "";
     height: 100%;
     left: 0;
@@ -105,7 +124,12 @@ export const EffectBox = styled.span<{
     width: ${rem(1)};
   }
 
-  ${({ $particleBaseDuration, $particleBlocks, $particlesPerPlate }) => generateBlockStyles($particleBaseDuration, $particleBlocks, $particlesPerPlate)}
+  ${({ $particleBaseDuration, $particleBlocks, $particlesPerPlate }) =>
+    generateBlockStyles(
+      $particleBaseDuration,
+      $particleBlocks,
+      $particlesPerPlate
+    )}
 `;
 
 export const Content = styled.div`

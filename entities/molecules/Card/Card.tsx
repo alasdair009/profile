@@ -15,7 +15,14 @@ type CardProps = {
 /**
  * Box with image and copy that links to another page
  */
-export function Card({ href, title, image = amLogo, imageAlt = "AM Logo", date, ...rest }: CardProps) {
+export function Card({
+  href,
+  title,
+  image = amLogo,
+  imageAlt = "AM Logo",
+  date,
+  ...rest
+}: CardProps) {
   return (
     <Root {...rest}>
       <CardLink href={href}>

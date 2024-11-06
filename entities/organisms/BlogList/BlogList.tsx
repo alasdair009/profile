@@ -18,7 +18,17 @@ export async function BlogList({ sanityClient, ...rest }: BlogListProps) {
     <Root {...rest}>
       {posts.map((post) => {
         const postDate = new Date(post.publishedAt);
-        return <Card key={post.title} href={`/blog/${post.slug.current}`} title={post.title} date={postDate} image={imageUrlBuilder(sanityClient).image(post.mainImage.asset).url()} />;
+        return (
+          <Card
+            key={post.title}
+            href={`/blog/${post.slug.current}`}
+            title={post.title}
+            date={postDate}
+            image={imageUrlBuilder(sanityClient)
+              .image(post.mainImage.asset)
+              .url()}
+          />
+        );
       })}
     </Root>
   );

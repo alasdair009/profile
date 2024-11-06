@@ -1,4 +1,11 @@
-import { ArticleDate, ArticleFigure, ArticleHeading, ArticleImage, Content, Root } from "./styles";
+import {
+  ArticleDate,
+  ArticleFigure,
+  ArticleHeading,
+  ArticleImage,
+  Content,
+  Root,
+} from "./styles";
 import { HTMLAttributes, ReactNode } from "react";
 import { Spacer } from "@/entities";
 
@@ -26,7 +33,13 @@ const nthNumber = (number: number) => {
 /**
  * Large content box with heading
  */
-export function Article({ heading, image, date, children, ...rest }: ArticleProps) {
+export function Article({
+  heading,
+  image,
+  date,
+  children,
+  ...rest
+}: ArticleProps) {
   const dayNumber = date.toLocaleDateString("en-GB", {
     day: "numeric",
   });
@@ -43,7 +56,13 @@ export function Article({ heading, image, date, children, ...rest }: ArticleProp
       </ArticleDate>
       <Spacer multiplier={6} />
       <ArticleFigure>
-        <ArticleImage src={image} alt={heading} fill={true} style={{ objectFit: "cover" }} priority={true} />
+        <ArticleImage
+          src={image}
+          alt={heading}
+          fill={true}
+          style={{ objectFit: "cover" }}
+          priority={true}
+        />
       </ArticleFigure>
       <Spacer multiplier={8} />
       <Content>{children}</Content>

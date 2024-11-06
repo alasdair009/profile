@@ -37,10 +37,28 @@ export type HeadingProps = {
 /**
  * Text displayed in a heading at a customisable level visually and semantically.
  */
-export function Heading({ level = "h1", as, align = "left", color = colors.whiteGhost, textShadow = false, lines, children, ...rest }: HeadingProps) {
+export function Heading({
+  level = "h1",
+  as,
+  align = "left",
+  color = colors.whiteGhost,
+  textShadow = false,
+  lines,
+  children,
+  ...rest
+}: HeadingProps) {
   const headingAs = as ? as : level;
   return (
-    <Root $color={color} $level={level} as={headingAs} $align={align} $textShadow={textShadow} $lines={lines} data-testid={Heading.name} {...rest}>
+    <Root
+      $color={color}
+      $level={level}
+      as={headingAs}
+      $align={align}
+      $textShadow={textShadow}
+      $lines={lines}
+      data-testid={Heading.name}
+      {...rest}
+    >
       {children}
     </Root>
   );

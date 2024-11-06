@@ -6,7 +6,11 @@ import { useState } from "react";
 /**
  * Base select field
  */
-export function BaseSelect({ isInvalid = false, children, ...rest }: BaseSelectProps) {
+export function BaseSelect({
+  isInvalid = false,
+  children,
+  ...rest
+}: BaseSelectProps) {
   const [isInvalidState, setIsInvalidState] = useState(isInvalid);
 
   const handleOnChange = () => {
@@ -14,7 +18,12 @@ export function BaseSelect({ isInvalid = false, children, ...rest }: BaseSelectP
   };
 
   return (
-    <Root $isInvalid={isInvalidState} onChange={() => handleOnChange()} data-testid={BaseSelect.name} {...rest}>
+    <Root
+      $isInvalid={isInvalidState}
+      onChange={() => handleOnChange()}
+      data-testid={BaseSelect.name}
+      {...rest}
+    >
       {children}
     </Root>
   );

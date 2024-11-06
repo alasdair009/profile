@@ -1,7 +1,13 @@
 "use client";
 import styled, { css, keyframes } from "styled-components";
 import { Property } from "csstype";
-import { device, globalContentMaxWidth, globalDecorationMaxWidth, IFrame, sizes } from "@/entities";
+import {
+  device,
+  globalContentMaxWidth,
+  globalDecorationMaxWidth,
+  IFrame,
+  sizes,
+} from "@/entities";
 import { rem } from "polished";
 import { ContentPlateProps } from "./ContentPlate.types";
 import Image from "next/image";
@@ -46,7 +52,8 @@ export const Inner = styled.div<{
   width: 100%;
 
   @media (${flipPoint}) {
-    flex-direction: ${({ $orientation }) => ($orientation === "left" ? "row" : "row-reverse")};
+    flex-direction: ${({ $orientation }) =>
+      $orientation === "left" ? "row" : "row-reverse"};
   }
 `;
 
@@ -66,7 +73,8 @@ export const ForegroundWrapper = styled.figure<{
   $foregroundAnimate: ContentPlateProps["foregroundAnimate"];
 }>`
   align-items: center;
-  ${({ $foregroundAnimate }) => ($foregroundAnimate ? foregroundAnimation : "none")};
+  ${({ $foregroundAnimate }) =>
+    $foregroundAnimate ? foregroundAnimation : "none"};
   display: flex;
   justify-content: center;
   margin: 0;

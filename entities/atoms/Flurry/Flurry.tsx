@@ -28,16 +28,33 @@ type FlurryProps = {
 /**
  * Background animation with floating orbs.
  */
-export function Flurry({ particlesPerPlate = 500, particleBaseDuration = 30, particleBlocks = 4, children, background, backgroundAlt, ...rest }: FlurryProps) {
+export function Flurry({
+  particlesPerPlate = 500,
+  particleBaseDuration = 30,
+  particleBlocks = 4,
+  children,
+  background,
+  backgroundAlt,
+  ...rest
+}: FlurryProps) {
   const effectBoxes: ReactNode[] = [];
   for (let i = 0; i < particleBlocks; i++) {
-    effectBoxes.push(<EffectBox key={`Flurry${particlesPerPlate}${particleBaseDuration}${particleBlocks}${particleBlocks}${i}`} $particleBaseDuration={particleBaseDuration} $particleBlocks={particleBlocks} $particlesPerPlate={particlesPerPlate} />);
+    effectBoxes.push(
+      <EffectBox
+        key={`Flurry${particlesPerPlate}${particleBaseDuration}${particleBlocks}${particleBlocks}${i}`}
+        $particleBaseDuration={particleBaseDuration}
+        $particleBlocks={particleBlocks}
+        $particlesPerPlate={particlesPerPlate}
+      />
+    );
   }
 
   return (
     <Root data-testid={Flurry.name} {...rest}>
       <Inner>{effectBoxes}</Inner>
-      {background && backgroundAlt && <Silhouette src={background} alt={backgroundAlt} />}
+      {background && backgroundAlt && (
+        <Silhouette src={background} alt={backgroundAlt} />
+      )}
       <Content>{children}</Content>
     </Root>
   );

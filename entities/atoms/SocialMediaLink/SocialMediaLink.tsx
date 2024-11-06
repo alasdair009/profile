@@ -23,9 +23,19 @@ const getSocialMediaUrl = (variant: SocialMediaLinkVariant) => {
 /**
  * Icon that links to the requested social media network.
  */
-export function SocialMediaLink({ variant, children, ...rest }: SocialMediaProps) {
+export function SocialMediaLink({
+  variant,
+  children,
+  ...rest
+}: SocialMediaProps) {
   return (
-    <Root href={getSocialMediaUrl(variant)} target="_blank" rel="noopener" $variant={variant} {...rest}>
+    <Root
+      href={getSocialMediaUrl(variant)}
+      target="_blank"
+      rel="noopener"
+      $variant={variant}
+      {...rest}
+    >
       {children}
     </Root>
   );

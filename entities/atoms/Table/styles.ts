@@ -1,6 +1,12 @@
 "use client";
 import styled from "styled-components";
-import { Breakpoint, colors, device, globalContentMaxWidth, sizes } from "@/entities";
+import {
+  Breakpoint,
+  colors,
+  device,
+  globalContentMaxWidth,
+  sizes,
+} from "@/entities";
 import { lighten, rem } from "polished";
 import { breakpoints } from "@/entities/design-tokens/dimensions/dimensions";
 import { typography } from "@storybook/theming";

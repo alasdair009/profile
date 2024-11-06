@@ -1,5 +1,29 @@
-import { BlockQuote, colors, ContentPlate, CopyBlock, FixedPlate, Flurry, globalContentMaxWidth, Heading, HorizontalRule, IFrame, Link, Paragraph, PortfolioPlate, sizes, Skill, Timeline, TimelineEntry, UnorderedList } from "@/entities";
-import { careerHistory, companyDetails, getCurrentEmployer, getTotalExperienceYears } from "@/lib/data/professional";
+import {
+  BlockQuote,
+  colors,
+  ContentPlate,
+  CopyBlock,
+  FixedPlate,
+  Flurry,
+  globalContentMaxWidth,
+  Heading,
+  HorizontalRule,
+  IFrame,
+  Link,
+  Paragraph,
+  PortfolioPlate,
+  sizes,
+  Skill,
+  Timeline,
+  TimelineEntry,
+  UnorderedList,
+} from "@/entities";
+import {
+  careerHistory,
+  companyDetails,
+  getCurrentEmployer,
+  getTotalExperienceYears,
+} from "@/lib/data/professional";
 import jagexLogo from "../../entities/assets/jagex-square.webp";
 import jdsLogo from "../../entities/assets/jds-logo.svg";
 import jagexCorporateImage from "../../entities/assets/jagex-corporate.webp";
@@ -31,7 +55,9 @@ careerHistory.roles.forEach((employment, index) => {
         </Paragraph>
         <UnorderedList>
           {employment.responsibilities.map((responsibility, index) => {
-            return <li key={`${employment.company}${index}`}>{responsibility}</li>;
+            return (
+              <li key={`${employment.company}${index}`}>{responsibility}</li>
+            );
           })}
         </UnorderedList>
       </>
@@ -39,7 +65,11 @@ careerHistory.roles.forEach((employment, index) => {
   });
 });
 
-export const metadata: Metadata = generateMetaData("Portfolio", "My professional work history and portfolio of work.", "portfolio");
+export const metadata: Metadata = generateMetaData(
+  "Portfolio",
+  "My professional work history and portfolio of work.",
+  "portfolio"
+);
 
 export default function Portfolio() {
   return (
@@ -47,15 +77,20 @@ export default function Portfolio() {
       <Flurry background={aliSvg} backgroundAlt="SVG portrait of Ali">
         <Heading>Portfolio</Heading>
         <Paragraph align="center" fontSize="large" textWrap="balance">
-          I am a front-end web engineer with a passion for solving complex problems with elegant solutions.
+          I am a front-end web engineer with a passion for solving complex
+          problems with elegant solutions.
         </Paragraph>
         <Paragraph align="center" fontSize="mlarge" textWrap="balance">
-          I have over <strong>{getTotalExperienceYears("web")}</strong> years experience in web development building sites and apps for games studios and volunteer projects.
+          I have over <strong>{getTotalExperienceYears("web")}</strong> years
+          experience in web development building sites and apps for games
+          studios and volunteer projects.
         </Paragraph>
       </Flurry>
       <HorizontalRule margin="none" />
       <CopyBlock>
-        <BlockQuote>We are alive, for a moment, one second in the great abyss of time...</BlockQuote>
+        <BlockQuote>
+          We are alive, for a moment, one second in the great abyss of time...
+        </BlockQuote>
       </CopyBlock>
       <HorizontalRule margin="none" />
       <FixedPlate image={jagexLogo} alt="Green Jagex logo" />
@@ -63,12 +98,25 @@ export default function Portfolio() {
       <CopyBlock>
         <Heading level="h2">Employment</Heading>
         <Paragraph>
-          I have worked in the games industry for <strong>{getTotalExperienceYears()} years</strong> with <strong>{getTotalExperienceYears("web")}</strong> of those working in web development. I am currently employed at{" "}
-          <Link href={companyDetails[currentEmployer.company].url}>{companyDetails[currentEmployer.company].name}</Link> as a {getCurrentEmployer().position}. I currently work predominantly remote and am mostly interested in roles that offer hybrid or remote-first employment. References are
-          available upon request.
+          I have worked in the games industry for{" "}
+          <strong>{getTotalExperienceYears()} years</strong> with{" "}
+          <strong>{getTotalExperienceYears("web")}</strong> of those working in
+          web development. I am currently employed at{" "}
+          <Link href={companyDetails[currentEmployer.company].url}>
+            {companyDetails[currentEmployer.company].name}
+          </Link>{" "}
+          as a {getCurrentEmployer().position}. I currently work predominantly
+          remote and am mostly interested in roles that offer hybrid or
+          remote-first employment. References are available upon request.
         </Paragraph>
         <Paragraph>
-          Below is my Games Industry employment timeline at companies across the UK. Before working in games I have also worked in the USA as a Recreation Director at the <Link href="https://internationalgymnastics.com/">Internation Gymnastics Camp</Link>, Pennsylvania.
+          Below is my Games Industry employment timeline at companies across the
+          UK. Before working in games I have also worked in the USA as a
+          Recreation Director at the{" "}
+          <Link href="https://internationalgymnastics.com/">
+            Internation Gymnastics Camp
+          </Link>
+          , Pennsylvania.
         </Paragraph>
       </CopyBlock>
       <Timeline entries={employmentHistory} />
@@ -83,10 +131,18 @@ export default function Portfolio() {
       >
         <Heading level="h2">Skills</Heading>
         <Paragraph>
-          Throughout my career and personal projects I have a wide exposure to many frameworks and languages both industry standard and proprietary. Whilst my passion is predominantly front-end I also have many years of experience supporting back-end implementations across multiple platforms and am
-          able to quickly adapt to support the needs of my team.
+          Throughout my career and personal projects I have a wide exposure to
+          many frameworks and languages both industry standard and proprietary.
+          Whilst my passion is predominantly front-end I also have many years of
+          experience supporting back-end implementations across multiple
+          platforms and am able to quickly adapt to support the needs of my
+          team.
         </Paragraph>
-        <Paragraph>I have also been passionate about blogging myself and other team&apos;s work to improve company cohesion and help identify value delivered to the business.</Paragraph>
+        <Paragraph>
+          I have also been passionate about blogging myself and other
+          team&apos;s work to improve company cohesion and help identify value
+          delivered to the business.
+        </Paragraph>
         <SkillGrid>
           <Skill
             background={rgba(colors.redHeat, 0.25)}
@@ -95,7 +151,13 @@ export default function Portfolio() {
             copy="I am an avid supporter of design system delivered through Storybook.js for display, maintenace and testing. I have planned and delivered progresiively more ambitious implementations of these that have been of high value to the business."
             grid={{ xsmall: { columnStart: 1, rowStart: 1 }, small: {} }}
           />
-          <Skill background={rgba(colors.greenGrass, 0.25)} value={100} heading="CSS" copy="Passionate about pushing the boundaries of what CSS can achieve in a browser." grid={{ xsmall: { columnStart: 2, rowStart: 1 }, small: {} }} />
+          <Skill
+            background={rgba(colors.greenGrass, 0.25)}
+            value={100}
+            heading="CSS"
+            copy="Passionate about pushing the boundaries of what CSS can achieve in a browser."
+            grid={{ xsmall: { columnStart: 2, rowStart: 1 }, small: {} }}
+          />
           <Skill
             background={rgba(colors.blueSea, 0.25)}
             value={100}
@@ -112,7 +174,11 @@ export default function Portfolio() {
               small: { columnStart: 2, rowStart: 2 },
             }}
           >
-            <Image src={amLogo} alt="Am Logo" style={{ maxWidth: sizes.s256.rem }} />
+            <Image
+              src={amLogo}
+              alt="Am Logo"
+              style={{ maxWidth: sizes.s256.rem }}
+            />
           </GridLogo>
           <Skill
             background={rgba(colors.redHeat, 0.25)}
@@ -166,7 +232,12 @@ export default function Portfolio() {
         }}
       >
         <Heading level="h2">Work portfolio</Heading>
-        <Paragraph>Below you will find a collection of projects I have worked on throughout my career and in my personal time. Referees for projects are available upon request but technical details may be withheld by the owner / business.</Paragraph>
+        <Paragraph>
+          Below you will find a collection of projects I have worked on
+          throughout my career and in my personal time. Referees for projects
+          are available upon request but technical details may be withheld by
+          the owner / business.
+        </Paragraph>
       </section>
       <PortfolioPlate
         contentPlateProps={{
@@ -177,13 +248,23 @@ export default function Portfolio() {
         }}
         heading="Jagex Design System"
       >
-        <Paragraph>Responsible for constructing a large design system to style and maintain consistent branding across all Jagex Publishing Platform products including websites and apps. This library was written in React and displayed via Storybook.js.</Paragraph>
-        <Paragraph>The system covers all areas of visual implementation including colours, animation, typography, sizing, components and is all structured using atomic design principles.</Paragraph>
+        <Paragraph>
+          Responsible for constructing a large design system to style and
+          maintain consistent branding across all Jagex Publishing Platform
+          products including websites and apps. This library was written in
+          React and displayed via Storybook.js.
+        </Paragraph>
+        <Paragraph>
+          The system covers all areas of visual implementation including
+          colours, animation, typography, sizing, components and is all
+          structured using atomic design principles.
+        </Paragraph>
       </PortfolioPlate>
       <PortfolioPlate
         contentPlateProps={{
           foregroundImage: jagexLauncherImage,
-          foregroundImageAlt: "The opening UI from the Jagex Launcher displaying RuneScape",
+          foregroundImageAlt:
+            "The opening UI from the Jagex Launcher displaying RuneScape",
           foregroundAnimate: "3drotate",
           backgroundCss: `linear-gradient(#07111b,black)`,
           orientation: "right",
@@ -192,7 +273,11 @@ export default function Portfolio() {
         url="https://www.jagex.com/launcher"
       >
         <Paragraph>
-          The Jagex Launcher is an application that is used to run all Jagex products. I was responsible for maintaining the <abbr title="Jagex Design System">JDS</abbr> (see above) integration that delivered the visual aesthetics and functionality for the front-end.
+          The Jagex Launcher is an application that is used to run all Jagex
+          products. I was responsible for maintaining the{" "}
+          <abbr title="Jagex Design System">JDS</abbr> (see above) integration
+          that delivered the visual aesthetics and functionality for the
+          front-end.
         </Paragraph>
       </PortfolioPlate>
       <PortfolioPlate
@@ -205,7 +290,11 @@ export default function Portfolio() {
         heading="RuneScape News"
         url="https://secure.runescape.com/m=news/vorkath-battle-for-forinthry---this-week-in-runescape"
       >
-        <Paragraph>Rebuilt the RuneScape news article view hosted on proprietary technology to work better on modern browsers and be ready for the launch of RuneScape Mobile.</Paragraph>
+        <Paragraph>
+          Rebuilt the RuneScape news article view hosted on proprietary
+          technology to work better on modern browsers and be ready for the
+          launch of RuneScape Mobile.
+        </Paragraph>
       </PortfolioPlate>
       <PortfolioPlate
         contentPlateProps={{
@@ -218,7 +307,11 @@ export default function Portfolio() {
         heading="Jagex Corporate website"
         url="https://www.jagex.com"
       >
-        <Paragraph>The corporate website for Jagex Games Ltd. This site content was powered by Contentful CMS and later migrated to a fixed code driven version. The site is driven via Express with EJS for page templating.</Paragraph>
+        <Paragraph>
+          The corporate website for Jagex Games Ltd. This site content was
+          powered by Contentful CMS and later migrated to a fixed code driven
+          version. The site is driven via Express with EJS for page templating.
+        </Paragraph>
       </PortfolioPlate>
       <PortfolioPlate
         contentPlateProps={{
@@ -230,18 +323,31 @@ export default function Portfolio() {
         heading="RuneFest"
         url="https://www.runefest.com"
       >
-        <Paragraph>RuneScape and Old School RuneScape&apos;s player event runs most years and requires a large input from teams across the studio. For this event I have built multiple versions of this site on many different tech stacks.</Paragraph>
-        <Paragraph>I also built my first ever Progressive Web App for RuneFest 2017 that was used to assist players throughout their visit to the event.</Paragraph>
+        <Paragraph>
+          RuneScape and Old School RuneScape&apos;s player event runs most years
+          and requires a large input from teams across the studio. For this
+          event I have built multiple versions of this site on many different
+          tech stacks.
+        </Paragraph>
+        <Paragraph>
+          I also built my first ever Progressive Web App for RuneFest 2017 that
+          was used to assist players throughout their visit to the event.
+        </Paragraph>
       </PortfolioPlate>
       <PortfolioPlate
         contentPlateProps={{
-          embedUrl: "https://www.youtube.com/embed/JbVKUi9wezo?si=M2ZfSmqERR2hwzmV",
+          embedUrl:
+            "https://www.youtube.com/embed/JbVKUi9wezo?si=M2ZfSmqERR2hwzmV",
           backgroundCss: `linear-gradient(#101d23,black)`,
           orientation: "right",
         }}
         heading="RuneFest Panel"
       >
-        <Paragraph>At RuneFest 2018 myself and other members of the team hosted a talk on one of the stages at the event explaining the work that goes into managing Jagex&apos;s web services.</Paragraph>
+        <Paragraph>
+          At RuneFest 2018 myself and other members of the team hosted a talk on
+          one of the stages at the event explaining the work that goes into
+          managing Jagex&apos;s web services.
+        </Paragraph>
       </PortfolioPlate>
     </>
   );

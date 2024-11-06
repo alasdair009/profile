@@ -9,7 +9,8 @@ const inValidStyles = {
 export const Root = styled.textarea<{
   $isInvalid: boolean;
 }>`
-  background: ${({ $isInvalid }) => ($isInvalid ? inValidStyles.background : colors.greyDark)};
+  background: ${({ $isInvalid }) =>
+    $isInvalid ? inValidStyles.background : colors.greyDark};
   border: ${rem(1)} solid ${colors.greenGrass};
   color: ${colors.whiteGhost};
   display: block;

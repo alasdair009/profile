@@ -15,7 +15,8 @@ export const InputWrapper = styled.div<{ $hasSubmitted: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transform: ${({ $hasSubmitted }) => ($hasSubmitted ? "translateX(100vw)" : "none")};
+  transform: ${({ $hasSubmitted }) =>
+    $hasSubmitted ? "translateX(100vw)" : "none"};
   transition: transform 0.5s;
   width: 100%;
 `;

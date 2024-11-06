@@ -24,12 +24,23 @@ export type BaseCheckboxProps = {
 /**
  * Base checkbox input element
  */
-export function BaseCheckbox({ isInvalid = false, ...rest }: BaseCheckboxProps) {
+export function BaseCheckbox({
+  isInvalid = false,
+  ...rest
+}: BaseCheckboxProps) {
   const [isInvalidState, setIsInvalidState] = useState(isInvalid);
 
   const handleOnChange = () => {
     setIsInvalidState(false);
   };
 
-  return <Root type="checkbox" $isInvalid={isInvalidState} onChange={() => handleOnChange()} data-testid={BaseCheckbox.name} {...rest} />;
+  return (
+    <Root
+      type="checkbox"
+      $isInvalid={isInvalidState}
+      onChange={() => handleOnChange()}
+      data-testid={BaseCheckbox.name}
+      {...rest}
+    />
+  );
 }

@@ -32,9 +32,24 @@ type VideoProps = {
 /**
  * Play a video within the interface.
  */
-export function Video({ mp4Src, webmSrc, loop = true, autoPlay = true, muted = true, poster, ...rest }: VideoProps) {
+export function Video({
+  mp4Src,
+  webmSrc,
+  loop = true,
+  autoPlay = true,
+  muted = true,
+  poster,
+  ...rest
+}: VideoProps) {
   return (
-    <Root loop={loop} autoPlay={autoPlay} playsInline={autoPlay} muted={muted} poster={poster.src} {...rest}>
+    <Root
+      loop={loop}
+      autoPlay={autoPlay}
+      playsInline={autoPlay}
+      muted={muted}
+      poster={poster.src}
+      {...rest}
+    >
       <source type="video/webm" src={webmSrc} />
       {mp4Src && <source type="video/mp4" src={mp4Src} />}
     </Root>

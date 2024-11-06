@@ -1,5 +1,10 @@
 "use client";
-import { GoogleMap, Marker, MarkerProps, useJsApiLoader } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  Marker,
+  MarkerProps,
+  useJsApiLoader,
+} from "@react-google-maps/api";
 import { HTMLAttributes } from "react";
 import { colors, globalContentMaxWidth, Heading } from "@/entities";
 import { rem } from "polished";
@@ -35,7 +40,12 @@ export function Map({ mapApiKey, markers, children }: MapProps) {
     >
       <>
         {markers.map((marker, i) => {
-          return <Marker key={`${marker.position.lat}${marker.position.lng}${i}`} {...marker} />;
+          return (
+            <Marker
+              key={`${marker.position.lat}${marker.position.lng}${i}`}
+              {...marker}
+            />
+          );
         })}
 
         {children}

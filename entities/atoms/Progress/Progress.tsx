@@ -19,7 +19,11 @@ export function Progress({ max = 100, value = 100, ...rest }: ProgressProps) {
   const safeValue = value > max ? max : value;
   return (
     <Root data-testid={Progress.name} {...rest}>
-      <ProgressElement max={100} value={safeValue} data-testid={`${Progress.name}Element`} />
+      <ProgressElement
+        max={100}
+        value={safeValue}
+        data-testid={`${Progress.name}Element`}
+      />
     </Root>
   );
 }

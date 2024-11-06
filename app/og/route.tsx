@@ -21,29 +21,53 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
 
     const hasTitle = searchParams.has("title");
-    const title = hasTitle ? searchParams.get("title")?.slice(0, 100) : "Online Portfolio";
+    const title = hasTitle
+      ? searchParams.get("title")?.slice(0, 100)
+      : "Online Portfolio";
 
-    const image = await fetch(new URL("./icon.png", import.meta.url)).then((res) => res.arrayBuffer());
+    const image = await fetch(new URL("./icon.png", import.meta.url)).then(
+      (res) => res.arrayBuffer()
+    );
 
-    const clouds = await fetch(new URL("./clouds.jpg", import.meta.url)).then((res) => res.arrayBuffer());
+    const clouds = await fetch(new URL("./clouds.jpg", import.meta.url)).then(
+      (res) => res.arrayBuffer()
+    );
 
-    const trampoline = await fetch(new URL("./trampoline.png", import.meta.url)).then((res) => res.arrayBuffer());
+    const trampoline = await fetch(
+      new URL("./trampoline.png", import.meta.url)
+    ).then((res) => res.arrayBuffer());
 
-    const jagex = await fetch(new URL("./jagex.png", import.meta.url)).then((res) => res.arrayBuffer());
+    const jagex = await fetch(new URL("./jagex.png", import.meta.url)).then(
+      (res) => res.arrayBuffer()
+    );
 
-    const nemesis = await fetch(new URL("./nemesis.png", import.meta.url)).then((res) => res.arrayBuffer());
+    const nemesis = await fetch(new URL("./nemesis.png", import.meta.url)).then(
+      (res) => res.arrayBuffer()
+    );
 
-    const runefest = await fetch(new URL("./runefest.png", import.meta.url)).then((res) => res.arrayBuffer());
+    const runefest = await fetch(
+      new URL("./runefest.png", import.meta.url)
+    ).then((res) => res.arrayBuffer());
 
-    const skylines = await fetch(new URL("./skylines.png", import.meta.url)).then((res) => res.arrayBuffer());
+    const skylines = await fetch(
+      new URL("./skylines.png", import.meta.url)
+    ).then((res) => res.arrayBuffer());
 
-    const talk = await fetch(new URL("./talk.png", import.meta.url)).then((res) => res.arrayBuffer());
+    const talk = await fetch(new URL("./talk.png", import.meta.url)).then(
+      (res) => res.arrayBuffer()
+    );
 
-    const css = await fetch(new URL("./css.png", import.meta.url)).then((res) => res.arrayBuffer());
+    const css = await fetch(new URL("./css.png", import.meta.url)).then((res) =>
+      res.arrayBuffer()
+    );
 
-    const vercel = await fetch(new URL("./vercel.png", import.meta.url)).then((res) => res.arrayBuffer());
+    const vercel = await fetch(new URL("./vercel.png", import.meta.url)).then(
+      (res) => res.arrayBuffer()
+    );
 
-    const rain = await fetch(new URL("./rain.png", import.meta.url)).then((res) => res.arrayBuffer());
+    const rain = await fetch(new URL("./rain.png", import.meta.url)).then(
+      (res) => res.arrayBuffer()
+    );
 
     return new ImageResponse(
       (
@@ -61,7 +85,11 @@ export async function GET(request: Request) {
             width: 1200,
           }}
         >
-          <img src={clouds as unknown as string} alt="" style={{ opacity: 0.15, position: "absolute" }} />
+          <img
+            src={clouds as unknown as string}
+            alt=""
+            style={{ opacity: 0.15, position: "absolute" }}
+          />
           <div
             style={{
               alignItems: "center",
@@ -72,7 +100,11 @@ export async function GET(request: Request) {
               position: "relative",
             }}
           >
-            <img src={image as unknown as string} style={{ height: 200 }} alt="AM logo" />
+            <img
+              src={image as unknown as string}
+              style={{ height: 200 }}
+              alt="AM logo"
+            />
             <h1>alasdairmacrae.co.uk</h1>
             <h2>{title}</h2>
           </div>
@@ -84,14 +116,38 @@ export async function GET(request: Request) {
               marginBottom: "auto",
             }}
           >
-            <img src={jagex as unknown as string} alt="" style={galleryStyles} />
-            <img src={nemesis as unknown as string} alt="" style={galleryStyles} />
-            <img src={runefest as unknown as string} alt="" style={galleryStyles} />
-            <img src={skylines as unknown as string} alt="" style={galleryStyles} />
-            <img src={trampoline as unknown as string} alt="" style={galleryStyles} />
+            <img
+              src={jagex as unknown as string}
+              alt=""
+              style={galleryStyles}
+            />
+            <img
+              src={nemesis as unknown as string}
+              alt=""
+              style={galleryStyles}
+            />
+            <img
+              src={runefest as unknown as string}
+              alt=""
+              style={galleryStyles}
+            />
+            <img
+              src={skylines as unknown as string}
+              alt=""
+              style={galleryStyles}
+            />
+            <img
+              src={trampoline as unknown as string}
+              alt=""
+              style={galleryStyles}
+            />
             <img src={talk as unknown as string} alt="" style={galleryStyles} />
             <img src={css as unknown as string} alt="" style={galleryStyles} />
-            <img src={vercel as unknown as string} alt="" style={galleryStyles} />
+            <img
+              src={vercel as unknown as string}
+              alt=""
+              style={galleryStyles}
+            />
             <img src={rain as unknown as string} alt="" style={galleryStyles} />
           </div>
         </div>

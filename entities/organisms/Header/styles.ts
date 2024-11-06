@@ -1,7 +1,15 @@
 "use client";
 import styled from "styled-components";
 import { rem, rgba } from "polished";
-import { Button, colors, device, globalContentMaxWidth, globalDecorationMaxWidth, Link, sizes } from "@/entities";
+import {
+  Button,
+  colors,
+  device,
+  globalContentMaxWidth,
+  globalDecorationMaxWidth,
+  Link,
+  sizes,
+} from "@/entities";
 import Image from "next/image";
 
 export const headerHeight = sizes.s48.rem;

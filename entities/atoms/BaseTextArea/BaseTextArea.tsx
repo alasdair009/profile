@@ -10,12 +10,21 @@ type BaseTextAreaProps = {
 /**
  * Base input type
  */
-export function BaseTextArea({ isInvalid = false, ...rest }: BaseTextAreaProps) {
+export function BaseTextArea({
+  isInvalid = false,
+  ...rest
+}: BaseTextAreaProps) {
   const [isInvalidState, setIsInvalidState] = useState(isInvalid);
 
   const handleOnChange = () => {
     setIsInvalidState(false);
   };
 
-  return <Root $isInvalid={isInvalidState} onChange={() => handleOnChange()} {...rest} />;
+  return (
+    <Root
+      $isInvalid={isInvalidState}
+      onChange={() => handleOnChange()}
+      {...rest}
+    />
+  );
 }

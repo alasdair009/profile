@@ -1,6 +1,12 @@
 "use client";
 import styled from "styled-components";
-import { colors, fontSizes, fontWeights, globalTextMaxWidth, sizes } from "@/entities";
+import {
+  colors,
+  fontSizes,
+  fontWeights,
+  globalTextMaxWidth,
+  sizes,
+} from "@/entities";
 import { rem } from "polished";
 
 export const Root = styled.blockquote`

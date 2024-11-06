@@ -8,8 +8,12 @@ type NotificationButtonProps = {
   isSubscribed: boolean;
 } & HTMLAttributes<HTMLButtonElement>;
 
-export function NotificationButton({ isSubscribed, ...rest }: NotificationButtonProps) {
-  const [notificationState, setNotificationState] = useState<NotificationPermission>("denied");
+export function NotificationButton({
+  isSubscribed,
+  ...rest
+}: NotificationButtonProps) {
+  const [notificationState, setNotificationState] =
+    useState<NotificationPermission>("denied");
 
   const permissionRequest = useCallback(() => {
     console.log("checking...");
@@ -34,7 +38,12 @@ export function NotificationButton({ isSubscribed, ...rest }: NotificationButton
   }, []);
 
   return (
-    <Root type="button" variant="transparent" onClick={() => permissionRequest()} {...rest}>
+    <Root
+      type="button"
+      variant="transparent"
+      onClick={() => permissionRequest()}
+      {...rest}
+    >
       <NotificationIcon
         src={notificationIcon}
         alt="Notifications icon"

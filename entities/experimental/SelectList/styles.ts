@@ -74,7 +74,20 @@ export const ListBox = styled.div`
 export const MenuIcon = styled.span`
   aspect-ratio: 1;
   background: ${colors.whiteGhost};
-  clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%, 0 40%, 100% 40%, 100% 60%, 0 60%, 0 80%, 100% 80%, 100% 100%, 0 100%);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 20%,
+    0 20%,
+    0 40%,
+    100% 40%,
+    100% 60%,
+    0 60%,
+    0 80%,
+    100% 80%,
+    100% 100%,
+    0 100%
+  );
   display: flex;
   width: ${sizes.s24.rem};
 `;

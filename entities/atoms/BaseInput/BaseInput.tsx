@@ -21,5 +21,12 @@ export function BaseInput({ isInvalid = false, ...rest }: BaseInputProps) {
 
   if (!isClient) return null;
 
-  return <Root $isInvalid={isInvalidState} onChange={() => handleOnChange()} data-testid={BaseInput.name} {...rest} />;
+  return (
+    <Root
+      $isInvalid={isInvalidState}
+      onChange={() => handleOnChange()}
+      data-testid={BaseInput.name}
+      {...rest}
+    />
+  );
 }

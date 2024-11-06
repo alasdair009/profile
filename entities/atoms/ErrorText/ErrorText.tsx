@@ -18,7 +18,14 @@ type ErrorTextProps = {
  */
 export function ErrorText({ shown = true, children, ...rest }: ErrorTextProps) {
   return (
-    <Root color={colors.redHeat} as="span" fontSize="small" $shown={shown} data-testid={ErrorText.name} {...rest}>
+    <Root
+      color={colors.redHeat}
+      as="span"
+      fontSize="small"
+      $shown={shown}
+      data-testid={ErrorText.name}
+      {...rest}
+    >
       {children}
     </Root>
   );

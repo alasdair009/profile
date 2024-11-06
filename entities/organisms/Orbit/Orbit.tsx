@@ -20,10 +20,23 @@ type OrbitProps = {
 /**
  * A white circle with orbiting particles.
  */
-export function Orbit({ numberOfParticles = 5, particleColour = colors.greenGrass, showText = false, ...rest }: OrbitProps) {
+export function Orbit({
+  numberOfParticles = 5,
+  particleColour = colors.greenGrass,
+  showText = false,
+  ...rest
+}: OrbitProps) {
   const particles = [];
   for (let i = 0; i < numberOfParticles; i++) {
-    particles.push(<Particle key={`particle${numberOfParticles}${i}`} data-testid={`${Orbit.name}Particle`} $color={particleColour} $position={i} $content={showText ? "AM" : undefined} />);
+    particles.push(
+      <Particle
+        key={`particle${numberOfParticles}${i}`}
+        data-testid={`${Orbit.name}Particle`}
+        $color={particleColour}
+        $position={i}
+        $content={showText ? "AM" : undefined}
+      />
+    );
   }
   return (
     <Root data-testid={Orbit.name} {...rest}>

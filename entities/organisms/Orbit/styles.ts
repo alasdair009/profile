@@ -1,7 +1,14 @@
 "use client";
 
 import styled, { css, keyframes } from "styled-components";
-import { borderRadii, colors, device, fontSizes, globalContentMaxWidth, sizes } from "@/entities";
+import {
+  borderRadii,
+  colors,
+  device,
+  fontSizes,
+  globalContentMaxWidth,
+  sizes,
+} from "@/entities";
 import { rem, rgba } from "polished";
 import { CSSProperties } from "react";
 import amLogo from "../../assets/am.svg";
@@ -93,7 +100,12 @@ export const Particle = styled.span<{
 
 export const Core = styled.div`
   aspect-ratio: 1;
-  background-image: radial-gradient(transparent 40%, ${colors.whiteGhost}), linear-gradient(${rgba(colors.whiteGhost, 0.8)}, ${rgba(colors.whiteGhost, 0.8)}), radial-gradient(${colors.whiteGhost} 10%, transparent 50%);
+  background-image: radial-gradient(transparent 40%, ${colors.whiteGhost}),
+    linear-gradient(
+      ${rgba(colors.whiteGhost, 0.8)},
+      ${rgba(colors.whiteGhost, 0.8)}
+    ),
+    radial-gradient(${colors.whiteGhost} 10%, transparent 50%);
   background-position:
     0 0,
     50% 50%,
@@ -127,7 +139,10 @@ export const Core = styled.div`
   }
 
   &::before {
-    background: radial-gradient(${colors.greenGrass}, ${rgba(colors.greenGrass, 0.15)});
+    background: radial-gradient(
+      ${colors.greenGrass},
+      ${rgba(colors.greenGrass, 0.15)}
+    );
     mask: url(${amLogo.src}) no-repeat center;
     opacity: 0.1;
   }

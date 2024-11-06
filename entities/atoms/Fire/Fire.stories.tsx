@@ -40,6 +40,8 @@ export const Default: StoryObj<typeof Fire> = {
     const emberElements = canvas.getAllByTestId(`${Fire.name}Ember`);
 
     await expect(fireElement).toBeInTheDocument();
-    await expect(emberElements).toHaveLength(args.numberOfParticles ? args.numberOfParticles : 0);
+    await expect(emberElements).toHaveLength(
+      args.numberOfParticles ? args.numberOfParticles : 0
+    );
   },
 };

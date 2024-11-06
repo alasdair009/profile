@@ -4,7 +4,11 @@ import { UnorderedListProps } from "@/entities/atoms/UnorderedList/UnorderedList
 /**
  * HTML unordered list.
  */
-export function UnorderedList({ align = "left", children, ...rest }: UnorderedListProps) {
+export function UnorderedList({
+  align = "left",
+  children,
+  ...rest
+}: UnorderedListProps) {
   return (
     <Root $align={align} {...rest}>
       {children}

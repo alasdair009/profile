@@ -16,7 +16,10 @@ const meta: Meta<typeof Details> = {
     children: (
       <>
         <Heading>Content</Heading>
-        <Paragraph>Some copy to display with the Heading and whatever else takes your fancy.</Paragraph>
+        <Paragraph>
+          Some copy to display with the Heading and whatever else takes your
+          fancy.
+        </Paragraph>
       </>
     ),
   },

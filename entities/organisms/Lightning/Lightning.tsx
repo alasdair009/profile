@@ -7,13 +7,26 @@ import { Rain } from "./Rain";
 type LightningProps = {
   frequency?: number;
 } & HTMLAttributes<HTMLDivElement>;
-export function Lightning({ frequency = 2, children, ...rest }: LightningProps) {
+export function Lightning({
+  frequency = 2,
+  children,
+  ...rest
+}: LightningProps) {
   return (
     <Root {...rest}>
       <Inner>
-        <Background src={backgroundImage} alt={"Park background"} $frequency={frequency} />
+        <Background
+          src={backgroundImage}
+          alt={"Park background"}
+          $frequency={frequency}
+        />
         <Rain />
-        <Strike src={strikeImage} alt={"Rain"} fill={true} $frequency={frequency} />
+        <Strike
+          src={strikeImage}
+          alt={"Rain"}
+          fill={true}
+          $frequency={frequency}
+        />
         <Content>{children}</Content>
       </Inner>
     </Root>

@@ -1,4 +1,20 @@
-import { BlockQuote, colors, ContactForm, CopyBlock, FixedPlate, globalContentMaxWidth, globalDecorationMaxWidth, Heading, HorizontalRule, Link, Paragraph, sizes, SocialMediaBar, Spacer, Video } from "@/entities";
+import {
+  BlockQuote,
+  colors,
+  ContactForm,
+  CopyBlock,
+  FixedPlate,
+  globalContentMaxWidth,
+  globalDecorationMaxWidth,
+  Heading,
+  HorizontalRule,
+  Link,
+  Paragraph,
+  sizes,
+  SocialMediaBar,
+  Spacer,
+  Video,
+} from "@/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
 import { rem } from "polished";
@@ -11,9 +27,15 @@ import { sanityClient } from "@/lib/sanity/client";
 import { SanityDocument } from "next-sanity";
 import { GET_ALL_ROLLERCOASTERS } from "@/lib/sanity/queries";
 
-export const metadata: Metadata = generateMetaData("About Me", "A little bit of information about me", "about-me");
+export const metadata: Metadata = generateMetaData(
+  "About Me",
+  "A little bit of information about me",
+  "about-me"
+);
 export default async function AboutMe() {
-  const rollercoasters = await sanityClient.fetch<SanityDocument[]>(GET_ALL_ROLLERCOASTERS);
+  const rollercoasters = await sanityClient.fetch<SanityDocument[]>(
+    GET_ALL_ROLLERCOASTERS
+  );
   return (
     <>
       <section
@@ -49,24 +71,44 @@ export default async function AboutMe() {
           }}
         >
           <Heading>About Me</Heading>
-          <Paragraph fontSize="mlarge">I am a keen front-end web developer with a passion for high-fidelity visual sites and pushing the boundaries of CSS.</Paragraph>
           <Paragraph fontSize="mlarge">
-            In my spare time I am a <Link href="/about-me/trampolining">trampoline</Link> gymnast, judge and coach for Cambridge Cangaroos trampoline club.
+            I am a keen front-end web developer with a passion for high-fidelity
+            visual sites and pushing the boundaries of CSS.
+          </Paragraph>
+          <Paragraph fontSize="mlarge">
+            In my spare time I am a{" "}
+            <Link href="/about-me/trampolining">trampoline</Link> gymnast, judge
+            and coach for Cambridge Cangaroos trampoline club.
           </Paragraph>
         </div>
       </section>
       <HorizontalRule margin="none" />
       <BlockQuote>Because life is too short not to jump</BlockQuote>
       <HorizontalRule margin="none" />
-      <FixedPlate image={rollercoasterImage} alt="Rollercoaster" placeholder="empty" />
+      <FixedPlate
+        image={rollercoasterImage}
+        alt="Rollercoaster"
+        placeholder="empty"
+      />
       <HorizontalRule margin="bottom" />
       <CopyBlock>
         <Heading level="h2">When i&apos;m on the ground...</Heading>
         <Paragraph>
-          I reside in Suffolk UK and am a rollercoaster fanatic and always like to take a few days per year to visit theme parks up and down the country. I have over <Link href="/about-me/rollercoasters">{rollercoasters.length} credits from coasters around the world</Link> with my personal favourite
-          ride being <strong>Tatsu</strong> at Six Flags Magic Mountain closely followed by <strong>Kingda Ka</strong> at Six Flags Great Adventure.
+          I reside in Suffolk UK and am a rollercoaster fanatic and always like
+          to take a few days per year to visit theme parks up and down the
+          country. I have over{" "}
+          <Link href="/about-me/rollercoasters">
+            {rollercoasters.length} credits from coasters around the world
+          </Link>{" "}
+          with my personal favourite ride being <strong>Tatsu</strong> at Six
+          Flags Magic Mountain closely followed by <strong>Kingda Ka</strong> at
+          Six Flags Great Adventure.
         </Paragraph>
-        <Paragraph>I enjoy playing computer games especially construction and management simulators such as City Skylines and Planet Coaster. I am also partial to the occasional game of Rocket League - nice shot!</Paragraph>
+        <Paragraph>
+          I enjoy playing computer games especially construction and management
+          simulators such as City Skylines and Planet Coaster. I am also partial
+          to the occasional game of Rocket League - nice shot!
+        </Paragraph>
       </CopyBlock>
       <figure
         style={{
@@ -93,14 +135,21 @@ export default async function AboutMe() {
       </figure>
       <CopyBlock>
         <Spacer multiplier={4} />
-        <Paragraph>When at home I am a smart-home enthusiast having been playing around with Apple&apos;s HomeKit platform for many years. I have been configuring custom plugins for HomeBride via Hoobs to increase the number of appliances manageable via my HomeKit installation.</Paragraph>
+        <Paragraph>
+          When at home I am a smart-home enthusiast having been playing around
+          with Apple&apos;s HomeKit platform for many years. I have been
+          configuring custom plugins for HomeBride via Hoobs to increase the
+          number of appliances manageable via my HomeKit installation.
+        </Paragraph>
       </CopyBlock>
       <HorizontalRule margin="top" />
       <FixedPlate image={homekitImage} alt="HomeKit" placeholder="empty" />
       <HorizontalRule margin="bottom" />
       <SocialMediaBar />
       <Spacer multiplier={2} />
-      <ContactForm submitEndpoint={`${process.env.NEXT_FORMSPREE_CONTACT_ENDPOINT}`} />
+      <ContactForm
+        submitEndpoint={`${process.env.NEXT_FORMSPREE_CONTACT_ENDPOINT}`}
+      />
     </>
   );
 }

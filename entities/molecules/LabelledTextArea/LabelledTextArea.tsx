@@ -29,7 +29,11 @@ type LabelledTextAreaProps = {
 /**
  * HTML textarea input field.
  */
-export function LabelledTextArea({ label, name, ...rest }: LabelledTextAreaProps) {
+export function LabelledTextArea({
+  label,
+  name,
+  ...rest
+}: LabelledTextAreaProps) {
   return (
     <Root>
       <LabelText>{label}</LabelText>

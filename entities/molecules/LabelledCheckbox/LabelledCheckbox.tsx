@@ -12,7 +12,12 @@ type LabelledCheckboxProps = {
 /**
  * Labelled checkbox.
  */
-export function LabelledCheckbox({ isInvalid, name, label, ...rest }: LabelledCheckboxProps) {
+export function LabelledCheckbox({
+  isInvalid,
+  name,
+  label,
+  ...rest
+}: LabelledCheckboxProps) {
   return (
     <Root data-testid={LabelledCheckbox.name}>
       <BaseLabel as="span">{label}</BaseLabel>

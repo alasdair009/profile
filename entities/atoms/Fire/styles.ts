@@ -18,7 +18,11 @@ const rise = keyframes`
   }
 `;
 
-const spreadParticles = (particleSize: number, numberOfParticles: number, duration: number) => {
+const spreadParticles = (
+  particleSize: number,
+  numberOfParticles: number,
+  duration: number
+) => {
   let particleSpread = "";
   for (let i = 0; i < numberOfParticles; i++) {
     particleSpread += `
@@ -52,8 +56,12 @@ export const Root = styled.div<{
 
   ${Ember} {
     animation: ${rise} ${({ $duration }) => $duration}s ease-in infinite;
-    background-image: radial-gradient(${({ $baseColor }) => $baseColor} 20%, ${({ $baseColor }) => rgba($baseColor, 0)} 70%);
+    background-image: radial-gradient(
+      ${({ $baseColor }) => $baseColor} 20%,
+      ${({ $baseColor }) => rgba($baseColor, 0)} 70%
+    );
     width: ${({ $particleSize }) => rem($particleSize)};
-    ${({ $particleSize, $numberOfParticles, $duration }) => spreadParticles($particleSize, $numberOfParticles, $duration)}
+    ${({ $particleSize, $numberOfParticles, $duration }) =>
+      spreadParticles($particleSize, $numberOfParticles, $duration)}
   }
 `;

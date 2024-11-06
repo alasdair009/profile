@@ -14,26 +14,46 @@ const meta: Meta<typeof SelectList> = {
       <>
         <option value="1">
           <Figure>
-            <Image src={amLogo} alt="am Logo" height={sizes.s16.raw} width={sizes.s16.raw} />
+            <Image
+              src={amLogo}
+              alt="am Logo"
+              height={sizes.s16.raw}
+              width={sizes.s16.raw}
+            />
           </Figure>
           <Paragraph>Option 1</Paragraph>
         </option>
         <option value="2">
           <Figure>
-            <Image src={amLogo} alt="am Logo" height={sizes.s16.raw} width={sizes.s16.raw} />
+            <Image
+              src={amLogo}
+              alt="am Logo"
+              height={sizes.s16.raw}
+              width={sizes.s16.raw}
+            />
           </Figure>
           <Paragraph>Option 2</Paragraph>
         </option>
         <option value="3">
           <Figure>
-            <Image src={amLogo} alt="am Logo" height={sizes.s16.raw} width={sizes.s16.raw} />
+            <Image
+              src={amLogo}
+              alt="am Logo"
+              height={sizes.s16.raw}
+              width={sizes.s16.raw}
+            />
           </Figure>
           <Paragraph>Option 3</Paragraph>
         </option>
         <HorizontalRule margin="none" />
         <option value="all">
           <Figure>
-            <Image src={amLogo} alt="am Logo" height={sizes.s16.raw} width={sizes.s16.raw} />
+            <Image
+              src={amLogo}
+              alt="am Logo"
+              height={sizes.s16.raw}
+              width={sizes.s16.raw}
+            />
           </Figure>
           <Paragraph>All Options</Paragraph>
         </option>
@@ -43,7 +63,8 @@ const meta: Meta<typeof SelectList> = {
   parameters: {
     docs: {
       description: {
-        component: "An experimental new spec for a standardised styled dropdown box. \n\n _Please note to view this you must be viewing this story in Edge or Chrome with experimental features turned on._",
+        component:
+          "An experimental new spec for a standardised styled dropdown box. \n\n _Please note to view this you must be viewing this story in Edge or Chrome with experimental features turned on._",
       },
     },
   },
@@ -57,7 +78,8 @@ export const Default: StoryObj<typeof SelectList> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
     const selectListElement = canvas.getByTestId(SelectList.name);
-    const firstElement = canvas.getByText("Option 1").parentElement as HTMLElement;
+    const firstElement = canvas.getByText("Option 1")
+      .parentElement as HTMLElement;
 
     await expect(selectListElement).toBeInTheDocument();
 

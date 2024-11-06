@@ -7,7 +7,11 @@ import { css } from "styled-components";
  * @param numberOfLines - the number of lines to restrict to. Will not apply any if left undefined
  * @param verticalPadding - vertical padding of the element (top/bottom) in any unit (pixel, em, rem etc)
  */
-export const lineClamp = (lineHeight: string, numberOfLines: number | undefined, verticalPadding = "0rem") => {
+export const lineClamp = (
+  lineHeight: string,
+  numberOfLines: number | undefined,
+  verticalPadding = "0rem"
+) => {
   if (!numberOfLines) {
     return css`
       line-height: ${lineHeight};
@@ -16,7 +20,9 @@ export const lineClamp = (lineHeight: string, numberOfLines: number | undefined,
 
   return css`
     line-height: ${lineHeight};
-    max-height: calc(${lineHeight} * ${numberOfLines} + (${verticalPadding} * 2));
+    max-height: calc(
+      ${lineHeight} * ${numberOfLines} + (${verticalPadding} * 2)
+    );
     overflow: hidden;
     border-bottom: ${verticalPadding} solid transparent;
     border-top: ${verticalPadding} solid transparent;

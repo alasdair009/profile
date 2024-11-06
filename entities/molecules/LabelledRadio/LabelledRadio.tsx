@@ -13,7 +13,12 @@ type LabelledInputProps = {
 /**
  * Labelled text input field for forms.
  */
-export function LabelledRadio({ isInvalid, name, label, ...rest }: LabelledInputProps) {
+export function LabelledRadio({
+  isInvalid,
+  name,
+  label,
+  ...rest
+}: LabelledInputProps) {
   return (
     <Root data-testid={LabelledRadio.name}>
       <BaseLabel as="span">{label}</BaseLabel>

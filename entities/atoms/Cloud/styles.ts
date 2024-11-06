@@ -16,7 +16,9 @@ export const CloudCircle = styled.div<{
   $dispersion: number;
 }>`
   border-radius: 50%;
-  box-shadow: 0 ${rem(sizes.s256.raw * 1.5)} ${({ $dispersion }) => rem($dispersion)} 0 ${({ $cloudColor }) => $cloudColor};
+  box-shadow: 0 ${rem(sizes.s256.raw * 1.5)}
+    ${({ $dispersion }) => rem($dispersion)} 0
+    ${({ $cloudColor }) => $cloudColor};
   filter: url(#cloudFilter);
   height: ${sizes.s256.rem};
   position: absolute;

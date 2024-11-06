@@ -6,7 +6,8 @@ const meta: Meta<typeof Video> = {
   component: Video,
   args: {
     poster: trampolinePosterImage,
-    webmSrc: "https://ftjjvjgljna2ohz8.public.blob.vercel-storage.com/trampoline-cambs.webm",
+    webmSrc:
+      "https://ftjjvjgljna2ohz8.public.blob.vercel-storage.com/trampoline-cambs.webm",
   },
 };
 export default meta;

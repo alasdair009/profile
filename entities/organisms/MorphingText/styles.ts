@@ -25,8 +25,10 @@ export const Root = styled.section`
 `;
 
 export const Text = styled.span<{ $wordIndex: number; $wordCount: number }>`
-  animation: ${wordAnim} ${({ $wordCount }) => getSpeed($wordCount)}s infinite ease-in-out;
-  animation-delay: ${({ $wordIndex, $wordCount }) => getDelay($wordCount, $wordIndex)}s;
+  animation: ${wordAnim} ${({ $wordCount }) => getSpeed($wordCount)}s infinite
+    ease-in-out;
+  animation-delay: ${({ $wordIndex, $wordCount }) =>
+    getDelay($wordCount, $wordIndex)}s;
   display: inline-block;
   font-size: ${fontSizes.xxlarge.rem};
   left: 50%;

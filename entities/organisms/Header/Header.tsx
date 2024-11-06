@@ -1,4 +1,11 @@
-import { Inner, Root, HeaderLogo, headerHeight, HeaderLinks, HeaderLink } from "./styles";
+import {
+  Inner,
+  Root,
+  HeaderLogo,
+  headerHeight,
+  HeaderLinks,
+  HeaderLink,
+} from "./styles";
 import { HTMLAttributes } from "react";
 import amLogo from "../../assets/am.svg";
 import { sizes } from "@/entities";
@@ -20,7 +27,10 @@ export function Header({ children, ...rest }: HeaderProps) {
           <HeaderLink href="/portfolio">Portfolio</HeaderLink>
           <HeaderLink href="/about-me">About</HeaderLink>
           <HeaderLink href="/blog">Blog</HeaderLink>
-          <Header.NotificationButton isSubscribed={false} style={{ display: "none" }} />
+          <Header.NotificationButton
+            isSubscribed={false}
+            style={{ display: "none" }}
+          />
         </HeaderLinks>
       </Inner>
     </Root>
