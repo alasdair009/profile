@@ -28,6 +28,7 @@ import { rem } from "polished";
       flexDirection: "column",
       justifyContent: "center",
       minHeight: 500,
+      padding: sizes.s16.rem,
       position: "relative",
       overflow: "hidden",
       width: "100%",
@@ -114,17 +115,17 @@ import { rem } from "polished";
     />
     <Paragraph
       align="center"
-      fontSize="mlarge"
+      fontSize="medium"
       style={{ position: "relative" }}
     >
       I am a keen supported of Storybook js using it across the majority of
-      projects I build including websites, web-apps and even desktop
-      applications.
+      projects I build including websites, web-apps and desktop applications.
     </Paragraph>
     <div
       style={{
         boxShadow: `inset 0 0 ${sizes.s32.rem} ${sizes.s16.rem} ${colors.blackEvil}`,
         height: "100%",
+        pointerEvents: "none",
         position: "absolute",
         width: "100%",
       }}
