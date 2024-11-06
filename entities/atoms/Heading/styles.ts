@@ -20,9 +20,9 @@ export const Root = styled.h1<{
   $lines: number | undefined;
 }>`
   border: none !important;
-  color: ${({ $color }) => $color};
-  font-size: ${({ $level }) => headingSizes[$level]};
-  margin: 0 auto ${sizes.s24.rem};
+  color: ${({ $color }) => $color} !important;
+  font-size: ${({ $level }) => headingSizes[$level]} !important;
+  margin: 0 auto ${sizes.s24.rem} !important;
   max-width: ${({ $level }) =>
     $level === "h1" || $level === "h2"
       ? sizes.s512.rem
