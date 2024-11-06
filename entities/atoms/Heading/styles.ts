@@ -19,6 +19,7 @@ export const Root = styled.h1<{
   $textShadow: boolean;
   $lines: number | undefined;
 }>`
+  border: none !important;
   color: ${({ $color }) => $color};
   font-size: ${({ $level }) => headingSizes[$level]};
   margin: 0 auto ${sizes.s24.rem};
