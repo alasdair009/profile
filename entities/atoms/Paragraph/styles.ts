@@ -21,11 +21,11 @@ export const Root = styled.p<{
   $textWrap: "wrap" | "balance";
   $lines: number | undefined;
 }>`
-  color: ${({ $color }) => $color};
+  color: ${({ $color }) => $color} !important;
   display: block;
-  font-family: ${fonts.body};
-  font-size: ${({ $fontSize }) => fontSizes[$fontSize].rem};
-  margin: 0 auto ${sizes.s24.rem};
+  font-family: ${fonts.body} !important;
+  font-size: ${({ $fontSize }) => fontSizes[$fontSize].rem} !important;
+  margin: 0 auto ${sizes.s24.rem} !important;
   max-width: calc(100vw - ${sizes.s16.rem});
   text-align: ${({ $align }) => $align};
   text-wrap: ${({ $textWrap }) => $textWrap};
