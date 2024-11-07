@@ -1,6 +1,7 @@
 import { Video } from "./Video";
 import { Meta, StoryObj } from "@storybook/react";
 import trampolinePosterImage from "../../assets/trampoline-poster.webp";
+import { expect, within } from "@storybook/test";
 
 const meta: Meta<typeof Video> = {
   component: Video,
@@ -12,4 +13,16 @@ const meta: Meta<typeof Video> = {
 };
 export default meta;
 
-export const Default: StoryObj<typeof Video> = {};
+export const Default: StoryObj<typeof Video> = {
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const videoElement = canvas.getByTestId(Video.name);
+
+    await expect(videoElement).toBeInTheDocument();
+    await expect(videoElement).toHaveAttribute(
+      "poster",
+      trampolinePosterImage.src
+    );
+    await expect(videoElement.children[0]).toHaveAttribute("src", args.webmSrc);
+  },
+};

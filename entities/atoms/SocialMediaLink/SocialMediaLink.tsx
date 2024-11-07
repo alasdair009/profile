@@ -34,6 +34,7 @@ export function SocialMediaLink({
       target="_blank"
       rel="noopener"
       $variant={variant}
+      data-testid={SocialMediaLink.name}
       {...rest}
     >
       {children}

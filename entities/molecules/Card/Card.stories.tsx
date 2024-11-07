@@ -1,5 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Card } from "@/entities/molecules/Card";
+import { expect, within } from "@storybook/test";
+import { Link } from "@/entities";
 
 const meta: Meta<typeof Card> = {
   component: Card,
@@ -12,4 +14,15 @@ const meta: Meta<typeof Card> = {
 };
 export default meta;
 
-export const Default: StoryObj<typeof Card> = {};
+export const Default: StoryObj<typeof Card> = {
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const cardElement = canvas.getByTestId(Card.name);
+
+    await expect(cardElement).toBeInTheDocument();
+    await expect(canvas.getByText(args.title)).toBeInTheDocument();
+    await expect(canvas.getByText("1 Jan 1980")).toBeInTheDocument();
+    await expect(canvas.getByTestId(Link.name)).toHaveAttribute("href", "#");
+    await expect(canvas.getByAltText(`${args.imageAlt}`)).toBeInTheDocument();
+  },
+};

@@ -48,6 +48,7 @@ export function Video({
       playsInline={autoPlay}
       muted={muted}
       poster={poster.src}
+      data-testid={Video.name}
       {...rest}
     >
       <source type="video/webm" src={webmSrc} />

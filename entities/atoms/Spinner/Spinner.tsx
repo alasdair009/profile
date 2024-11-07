@@ -9,7 +9,7 @@ type SpinnerProps = HTMLAttributes<HTMLDivElement>;
  */
 export function Spinner({ ...rest }: SpinnerProps) {
   return (
-    <Root {...rest}>
+    <Root data-testid={Spinner.name} {...rest}>
       <SpinnerImage src={pikeSvg} alt="A gymnast in a pike shape" />
     </Root>
   );

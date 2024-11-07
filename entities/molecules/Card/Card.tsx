@@ -24,7 +24,7 @@ export function Card({
   ...rest
 }: CardProps) {
   return (
-    <Root {...rest}>
+    <Root data-testid={Card.name} {...rest}>
       <CardLink href={href}>
         <Figure>
           <CardImage src={image} alt={imageAlt} fill={true} />

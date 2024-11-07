@@ -10,7 +10,7 @@ export function UnorderedList({
   ...rest
 }: UnorderedListProps) {
   return (
-    <Root $align={align} {...rest}>
+    <Root $align={align} data-testid={UnorderedList.name} {...rest}>
       {children}
     </Root>
   );

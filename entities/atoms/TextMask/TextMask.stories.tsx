@@ -1,6 +1,7 @@
 import { TextMask } from "./TextMask";
 import { Meta, StoryObj } from "@storybook/react";
 import { colors } from "@/entities";
+import { expect, within } from "@storybook/test";
 
 const meta: Meta<typeof TextMask> = {
   component: TextMask,
@@ -19,4 +20,12 @@ const meta: Meta<typeof TextMask> = {
 };
 export default meta;
 
-export const Default: StoryObj<typeof TextMask> = {};
+export const Default: StoryObj<typeof TextMask> = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const textMaskElement = canvas.getByTestId(TextMask.name);
+
+    await expect(textMaskElement).toBeInTheDocument();
+    await expect(textMaskElement).toHaveTextContent("hello");
+  },
+};

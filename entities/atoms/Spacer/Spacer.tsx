@@ -12,5 +12,5 @@ type SpacerProps = {
  * Break to increase vertical space.
  */
 export function Spacer({ multiplier = 1, ...rest }: SpacerProps) {
-  return <Root $multiplier={multiplier} {...rest} />;
+  return <Root $multiplier={multiplier} data-testid={Spacer.name} {...rest} />;
 }
