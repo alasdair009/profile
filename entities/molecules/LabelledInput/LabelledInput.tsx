@@ -46,7 +46,7 @@ export function LabelledInput({
   ...rest
 }: LabelledInputProps) {
   return (
-    <Root>
+    <Root data-testid={LabelledInput.name}>
       <BaseLabel as="span">{label}</BaseLabel>
       <BaseInput type={type} isInvalid={isInvalid} {...rest} />
       <ErrorText shown={isInvalid || false}>{errorText}</ErrorText>

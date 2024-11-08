@@ -1,5 +1,7 @@
 import { LabelledInput } from "./LabelledInput";
 import { Meta, StoryObj } from "@storybook/react";
+import { expect, within } from "@storybook/test";
+import { BaseInput } from "@/entities";
 
 const meta: Meta<typeof LabelledInput> = {
   component: LabelledInput,
@@ -20,6 +22,18 @@ export const Text: StoryObj<typeof LabelledInput> = {
     label: "Text entry",
     type: "text",
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const labelledInputElement = canvas.getByTestId(LabelledInput.name);
+    await canvas.findByTestId(BaseInput.name);
+
+    await expect(labelledInputElement).toBeInTheDocument();
+    await expect(canvas.getByText("Text entry")).toBeInTheDocument();
+    await expect(canvas.getByTestId(BaseInput.name)).toHaveAttribute(
+      "type",
+      "text"
+    );
+  },
 };
 
 export const Email: StoryObj<typeof LabelledInput> = {
@@ -27,12 +41,36 @@ export const Email: StoryObj<typeof LabelledInput> = {
     label: "Email entry",
     type: "email",
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const labelledInputElement = canvas.getByTestId(LabelledInput.name);
+    await canvas.findByTestId(BaseInput.name);
+
+    await expect(labelledInputElement).toBeInTheDocument();
+    await expect(canvas.getByText("Email entry")).toBeInTheDocument();
+    await expect(canvas.getByTestId(BaseInput.name)).toHaveAttribute(
+      "type",
+      "email"
+    );
+  },
 };
 
-export const Passowrd: StoryObj<typeof LabelledInput> = {
+export const Password: StoryObj<typeof LabelledInput> = {
   args: {
     label: "Password entry",
     type: "password",
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const labelledInputElement = canvas.getByTestId(LabelledInput.name);
+    await canvas.findByTestId(BaseInput.name);
+
+    await expect(labelledInputElement).toBeInTheDocument();
+    await expect(canvas.getByText("Password entry")).toBeInTheDocument();
+    await expect(canvas.getByTestId(BaseInput.name)).toHaveAttribute(
+      "type",
+      "password"
+    );
   },
 };
 
@@ -41,6 +79,17 @@ export const Required: StoryObj<typeof LabelledInput> = {
     label: "Required entry",
     required: true,
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const labelledInputElement = canvas.getByTestId(LabelledInput.name);
+    await canvas.findByTestId(BaseInput.name);
+
+    await expect(labelledInputElement).toBeInTheDocument();
+    await expect(canvas.getByText("Required entry")).toBeInTheDocument();
+    await expect(canvas.getByTestId(BaseInput.name)).toHaveAttribute(
+      "required"
+    );
+  },
 };
 
 export const IsInvalid: StoryObj<typeof LabelledInput> = {
@@ -48,5 +97,13 @@ export const IsInvalid: StoryObj<typeof LabelledInput> = {
     label: "isInvalid entry",
     required: true,
     isInvalid: true,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await canvas.findByTestId(BaseInput.name);
+
+    await expect(canvas.getByTestId(BaseInput.name)).toHaveStyle(
+      "background-color: rgba(223,28,65,0.15)"
+    );
   },
 };

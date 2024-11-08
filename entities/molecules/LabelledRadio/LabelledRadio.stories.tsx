@@ -1,5 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { LabelledRadio } from "./LabelledRadio";
+import { expect, within } from "@storybook/test";
+import { BaseRadio } from "@/entities";
 
 const meta: Meta<typeof LabelledRadio> = {
   component: LabelledRadio,
@@ -12,10 +14,24 @@ const meta: Meta<typeof LabelledRadio> = {
 };
 export default meta;
 
-export const Default: StoryObj<typeof LabelledRadio> = {};
+export const Default: StoryObj<typeof LabelledRadio> = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const labelledRadio = canvas.getByTestId(LabelledRadio.name);
 
-export const Invalid: StoryObj<typeof LabelledRadio> = {
+    await expect(labelledRadio).toBeInTheDocument();
+  },
+};
+
+export const Checked: StoryObj<typeof LabelledRadio> = {
   args: {
-    isInvalid: true,
+    checked: true,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const labelledRadio = canvas.getByTestId(LabelledRadio.name);
+    const baseRadioElement = canvas.getByTestId(BaseRadio.name);
+
+    await expect(baseRadioElement).toHaveAttribute("checked");
   },
 };

@@ -20,4 +20,8 @@ export const Root = styled.input<{ $isInvalid: boolean }>`
       ${colors.whiteGhost}
     );
   }
+
+  &:invalid {
+    border: ${rem(2)} solid ${colors.redHeat};
+  }
 `;
