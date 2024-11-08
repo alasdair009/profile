@@ -1,6 +1,7 @@
 import {
   BlockQuote,
   colors,
+  ContactForm,
   ContentPlate,
   CopyBlock,
   FixedPlate,
@@ -50,7 +51,7 @@ careerHistory.roles.forEach((employment, index) => {
     content: (
       <>
         <Heading level="h3">{companyDetails[employment.company].name}</Heading>
-        <Paragraph align="center" fontSize="xxlarge">
+        <Paragraph align="center" fontSize="medium">
           {employment.position}
         </Paragraph>
         <UnorderedList>
@@ -349,6 +350,10 @@ export default function Portfolio() {
           managing Jagex&apos;s web services.
         </Paragraph>
       </PortfolioPlate>
+      <HorizontalRule decoration={true} />
+      <ContactForm
+        submitEndpoint={`${process.env.NEXT_FORMSPREE_CONTACT_ENDPOINT}`}
+      />
     </>
   );
 }
