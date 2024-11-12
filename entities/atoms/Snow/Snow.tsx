@@ -22,7 +22,7 @@ type SnowProps = {
 export function Snow({
   numberOfFlakes = 50,
   size = 16,
-  duration = 3,
+  duration = 4,
   ...rest
 }: SnowProps) {
   const flakes = [];

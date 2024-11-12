@@ -6,28 +6,28 @@ import { rem } from "polished";
 const fall = keyframes`
   0% {
       opacity: 0;
-      transform: rotate(0deg) translateX(0);
+      transform: translateX(0) rotate(0);
     top: 0;
   }
     10% {
         opacity: 1;
     }
     25% {
-        transform: rotate(90deg) translateX(-${sizes.s16.rem});
+        transform: translateX(-${sizes.s16.rem}) rotate(90deg);
     }
     50% {
-        transform: rotate(180deg) translateX(0);
+        transform: translateX(0) rotate(180deg);
     }
     75% {
-        transform: rotate(270deg) translateX(${sizes.s16.rem});
+        transform: translateX(${sizes.s16.rem}) rotate(270deg);
     }
     90% {
         opacity: 1;
     }
   100% {
-      opacity: 0;
-    top: 100%;
-      transform: rotate(360deg);
+        opacity: 0;
+        top: 100%;
+        transform: rotate(360deg) translateX(0);
   }
 `;
 
@@ -124,7 +124,7 @@ export const Flake = styled.span`
   );
   opacity: 0;
   position: absolute;
-  top: -10%;
+  transform-origin: center center;
 `;
 
 export const Root = styled.div<{

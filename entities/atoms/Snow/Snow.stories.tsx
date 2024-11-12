@@ -5,7 +5,7 @@ import { Snow } from "./Snow";
 const meta: Meta<typeof Snow> = {
   component: Snow,
   args: {
-    duration: 3,
+    duration: 4,
     size: 20,
     numberOfFlakes: 50,
     style: {
