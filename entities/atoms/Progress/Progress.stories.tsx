@@ -1,8 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Progress, ProgressProps } from "@/entities/atoms/Progress/Progress";
 import { expect, within } from "@storybook/test";
-import { Heading, Link } from "@/entities";
-import { HeadingProps } from "@/entities/atoms/Heading/Heading";
 
 const meta: Meta<typeof Progress> = {
   component: Progress,

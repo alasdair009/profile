@@ -42,6 +42,7 @@ export { HorizontalRule } from "./atoms/HorizontalRule";
 export { IFrame } from "./atoms/IFrame";
 export { Link } from "./atoms/Link";
 export { Paragraph } from "./atoms/Paragraph";
+export { Snow } from "./atoms/Snow";
 export { SocialMediaLink } from "./atoms/SocialMediaLink";
 export { Spacer } from "./atoms/Spacer";
 export { Spinner } from "./atoms/Spinner";
