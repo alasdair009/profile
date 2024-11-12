@@ -5,6 +5,7 @@ import { Snow } from "./Snow";
 const meta: Meta<typeof Snow> = {
   component: Snow,
   args: {
+    duration: 3,
     size: 20,
     numberOfFlakes: 50,
     style: {
@@ -12,6 +13,9 @@ const meta: Meta<typeof Snow> = {
     },
   },
   argTypes: {
+    duration: {
+      control: { type: "range", min: 1, max: 5, step: 0.1 },
+    },
     size: {
       control: { type: "range", min: 1, max: 30, step: 1 },
     },
