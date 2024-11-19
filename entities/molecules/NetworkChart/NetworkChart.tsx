@@ -69,6 +69,12 @@ export function NetworkChart({
     }
   }, []);
 
+  if (typeof window === "undefined") {
+    return null;
+  } else {
+    console.log("Ali hates CSS");
+  }
+
   if (!mounted) {
     return null;
   }
@@ -76,6 +82,7 @@ export function NetworkChart({
   if (!isBrowser) {
     return <>Loading...</>;
   }
+
   return (
     <Root {...rest}>
       <GraphCanvas
