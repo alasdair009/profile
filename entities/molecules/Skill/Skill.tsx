@@ -39,7 +39,12 @@ export function Skill({
   ...rest
 }: SkillProps) {
   return (
-    <Root $background={background} $grid={grid} {...rest}>
+    <Root
+      data-testid={Skill.name}
+      $background={background}
+      $grid={grid}
+      {...rest}
+    >
       <Heading level="h3">{heading}</Heading>
       <ScoreCounter value={value} />
       <Paragraph>{copy}</Paragraph>

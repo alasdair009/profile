@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { NetworkChart } from "./NetworkChart";
-import { fn } from "@storybook/test";
+import { expect, fn, waitFor, within } from "@storybook/test";
 
 const meta: Meta<typeof NetworkChart> = {
   component: NetworkChart,
@@ -37,4 +37,17 @@ const meta: Meta<typeof NetworkChart> = {
 };
 export default meta;
 
-export const Default: StoryObj<typeof NetworkChart> = {};
+export const Default: StoryObj<typeof NetworkChart> = {
+  play: async ({ args, canvasElement, step }) => {
+    const canvas = within(canvasElement);
+
+    await waitFor(() =>
+      expect(canvas.getByTestId(NetworkChart.name)).toBeInTheDocument()
+    );
+
+    const networkChartElement = canvas.getByTestId(NetworkChart.name);
+    const htmlCanvasElement =
+      networkChartElement.children[0].children[0].children[0].children[0];
+    await expect(htmlCanvasElement.tagName).toBe("CANVAS");
+  },
+};

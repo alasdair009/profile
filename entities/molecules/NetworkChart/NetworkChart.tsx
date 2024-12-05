@@ -77,7 +77,7 @@ export function NetworkChart({
     return <>Loading...</>;
   }
   return (
-    <Root {...rest}>
+    <Root data-testid={NetworkChart.name} {...rest}>
       <GraphCanvas
         nodes={nodes}
         edges={edges}

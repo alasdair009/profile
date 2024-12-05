@@ -43,7 +43,12 @@ export function ScoreCounter({ value = 100, ...rest }: ScoreCounterProps) {
   }, [inView]);
 
   return (
-    <Root $value={progressValue} ref={ref} {...rest}>
+    <Root
+      data-testid={ScoreCounter.name}
+      $value={progressValue}
+      ref={ref}
+      {...rest}
+    >
       <ProgressRing max={100} value={progressValue} />
     </Root>
   );

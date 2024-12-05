@@ -1,5 +1,7 @@
 import { LabelledTextArea } from "./LabelledTextArea";
 import { Meta, StoryObj } from "@storybook/react";
+import { expect, userEvent, within } from "@storybook/test";
+import { colors } from "@/entities";
 
 const meta: Meta<typeof LabelledTextArea> = {
   component: LabelledTextArea,
@@ -13,11 +15,43 @@ const meta: Meta<typeof LabelledTextArea> = {
 };
 export default meta;
 
-export const Default: StoryObj<typeof LabelledTextArea> = {};
+export const Default: StoryObj<typeof LabelledTextArea> = {
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const labelledTextAreaElement = canvas.getAllByTestId(
+      LabelledTextArea.name
+    )[0];
+    const baseTextAreaElement = canvas.getByLabelText(args.label);
+    const labelElement = canvas.getByText(args.label);
+
+    await expect(labelledTextAreaElement).toBeInTheDocument();
+    await expect(baseTextAreaElement).toBeInTheDocument();
+    await expect(labelElement).toBeInTheDocument();
+
+    await userEvent.type(baseTextAreaElement, "bye world");
+
+    await expect(baseTextAreaElement).toHaveTextContent("bye world");
+  },
+};
 
 export const Invalid: StoryObj<typeof LabelledTextArea> = {
   args: {
     required: true,
     isInvalid: true,
+  },
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const baseTextAreaElement = canvas.getByLabelText(args.label);
+
+    await expect(baseTextAreaElement).toBeInTheDocument();
+    await expect(baseTextAreaElement).toHaveStyle(
+      "background-color: rgba(223,28,65,0.15)"
+    );
+
+    await userEvent.type(baseTextAreaElement, "bye world");
+
+    await expect(baseTextAreaElement).toHaveStyle(
+      `background-color: ${colors.greyDark}`
+    );
   },
 };

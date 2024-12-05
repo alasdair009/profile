@@ -35,7 +35,7 @@ export function LabelledTextArea({
   ...rest
 }: LabelledTextAreaProps) {
   return (
-    <Root>
+    <Root data-testid={LabelledTextArea.name}>
       <LabelText>{label}</LabelText>
       <BaseTextArea {...rest} />
     </Root>

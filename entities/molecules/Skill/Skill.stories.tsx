@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Skill } from "./Skill";
 import { colors } from "@/entities";
+import { expect, within } from "@storybook/test";
 
 const meta: Meta<typeof Skill> = {
   component: Skill,
@@ -22,4 +23,16 @@ const meta: Meta<typeof Skill> = {
 };
 export default meta;
 
-export const Default: StoryObj<typeof Skill> = {};
+export const Default: StoryObj<typeof Skill> = {
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const skillElement = canvas.getByTestId(Skill.name);
+
+    await expect(skillElement).toBeInTheDocument();
+    await expect(canvas.getByText(args.heading)).toBeInTheDocument();
+    await expect(canvas.getByText(args.copy)).toBeInTheDocument();
+    await expect(skillElement).toHaveStyle(
+      `background-color: ${args.background}`
+    );
+  },
+};

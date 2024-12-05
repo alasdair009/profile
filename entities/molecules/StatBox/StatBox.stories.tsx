@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { StatBox } from "./StatBox";
+import { expect, within } from "@storybook/test";
 
 const meta: Meta<typeof StatBox> = {
   component: StatBox,
@@ -11,4 +12,14 @@ const meta: Meta<typeof StatBox> = {
 };
 export default meta;
 
-export const Default: StoryObj<typeof StatBox> = {};
+export const Default: StoryObj<typeof StatBox> = {
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const statBoxElement = canvas.getByTestId(StatBox.name);
+
+    await expect(statBoxElement).toBeInTheDocument();
+    await expect(canvas.getByText(args.heading)).toBeInTheDocument();
+    await expect(canvas.getByText(args.name)).toBeInTheDocument();
+    await expect(canvas.getByText(args.value)).toBeInTheDocument();
+  },
+};
