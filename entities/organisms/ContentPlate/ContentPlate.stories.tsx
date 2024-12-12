@@ -1,12 +1,18 @@
 import { ContentPlate } from "./ContentPlate";
 import { Meta, StoryObj } from "@storybook/react";
-import { colors, Heading, Paragraph } from "@/entities";
+import { colors, Container, Heading, Paragraph } from "@/entities";
 import amLogo from "../../assets/am.svg";
+import { expect, within } from "@storybook/test";
 
 const meta: Meta<typeof ContentPlate> = {
   component: ContentPlate,
   argTypes: {
-    backgroundCss: {},
+    backgroundCss: {
+      control: {
+        type: "color",
+        presetColors: Object.values(colors),
+      },
+    },
     children: {
       type: "string",
     },
@@ -27,4 +33,19 @@ const meta: Meta<typeof ContentPlate> = {
 };
 export default meta;
 
-export const Default: StoryObj<typeof ContentPlate> = {};
+export const Default: StoryObj<typeof ContentPlate> = {
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const contentPlateElement: HTMLDivElement = canvas.getByTestId(
+      ContentPlate.name
+    );
+
+    await expect(contentPlateElement).toBeInTheDocument();
+    await expect(
+      canvas.getByAltText(args.foregroundImageAlt as string)
+    ).toBeInTheDocument();
+    await expect(contentPlateElement.children[0]).toHaveStyle(
+      `background-color: ${args.backgroundCss}`
+    );
+  },
+};

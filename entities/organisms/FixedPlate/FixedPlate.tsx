@@ -16,7 +16,7 @@ export function FixedPlate({
   ...rest
 }: FixedPlateProps) {
   return (
-    <Root {...rest}>
+    <Root data-testid={FixedPlate} {...rest}>
       <FixedImage placeholder={placeholder} src={image} alt={alt} />
     </Root>
   );

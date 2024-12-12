@@ -5,6 +5,13 @@ type CopyBlockProps = HTMLAttributes<HTMLDivElement> & {
   children: ReactNode;
 };
 
+/**
+ * Renders text content inside a container.
+ */
 export function CopyBlock({ children, ...rest }: CopyBlockProps) {
-  return <Root {...rest}>{children}</Root>;
+  return (
+    <Root data-testid={CopyBlock.name} {...rest}>
+      {children}
+    </Root>
+  );
 }
