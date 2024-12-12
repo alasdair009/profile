@@ -45,6 +45,7 @@ export function Flurry({
         $particleBaseDuration={particleBaseDuration}
         $particleBlocks={particleBlocks}
         $particlesPerPlate={particlesPerPlate}
+        data-chromatic="ignore"
       />
     );
   }

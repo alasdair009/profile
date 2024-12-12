@@ -157,7 +157,7 @@ export function Rain({
 
   return (
     <Root {...rest}>
-      <RainCanvas ref={rainCanvasRef} />
+      <RainCanvas ref={rainCanvasRef} data-chromatic="ignore" />
     </Root>
   );
 }
