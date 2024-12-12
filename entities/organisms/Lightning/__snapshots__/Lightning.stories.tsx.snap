@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`organisms/Lightning Default smoke-test 1`] = `
+<section class="sc-dKsqdn hYkMkV">
+  <div class="sc-eowDPD cBJDOg">
+    <img alt="Park background"
+         loading="lazy"
+         width="1348"
+         height="654"
+         decoding="async"
+         data-nimg="1"
+         class="sc-ezTrPE gApgwz"
+         srcset="/static/media/entities/organisms/Lightning/assets/background.webp?w=1920&amp;q=75 1x, /static/media/entities/organisms/Lightning/assets/background.webp?w=3840&amp;q=75 2x"
+         src="/static/media/entities/organisms/Lightning/assets/background.webp?w=3840&amp;q=75"
+         style="color: transparent;"
+    >
+    <div class="sc-iAlELC gRILcD">
+      <canvas class="sc-oeqTF hjFjiZ">
+      </canvas>
+    </div>
+    <img alt="Rain"
+         loading="lazy"
+         decoding="async"
+         data-nimg="fill"
+         class="sc-drnuxz jnPhzL"
+         sizes="100vw"
+         srcset="/static/media/entities/organisms/Lightning/assets/lightining.png?w=640&amp;q=75 640w, /static/media/entities/organisms/Lightning/assets/lightining.png?w=750&amp;q=75 750w, /static/media/entities/organisms/Lightning/assets/lightining.png?w=828&amp;q=75 828w, /static/media/entities/organisms/Lightning/assets/lightining.png?w=1080&amp;q=75 1080w, /static/media/entities/organisms/Lightning/assets/lightining.png?w=1200&amp;q=75 1200w, /static/media/entities/organisms/Lightning/assets/lightining.png?w=1920&amp;q=75 1920w, /static/media/entities/organisms/Lightning/assets/lightining.png?w=2048&amp;q=75 2048w, /static/media/entities/organisms/Lightning/assets/lightining.png?w=3840&amp;q=75 3840w"
+         src="/static/media/entities/organisms/Lightning/assets/lightining.png?w=3840&amp;q=75"
+         style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+    >
+    <div class="sc-hDcvty elwTpw">
+    </div>
+  </div>
+</section>
+`;

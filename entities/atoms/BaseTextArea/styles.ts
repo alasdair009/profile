@@ -1,6 +1,7 @@
 "use client";
 import styled from "styled-components";
-import { colors, globalInputMaxWidth, sizes } from "@/entities";
+import { globalInputMaxWidth, sizes } from "../../design-tokens/dimensions";
+import { colors } from "../../design-tokens/colors";
 import { rem, rgba } from "polished";
 
 const inValidStyles = {

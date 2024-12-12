@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/Video Default play-test 1`] = `
+<video loop
+       autoplay
+       playsinline
+       poster="static/media/entities/assets/trampoline-poster.webp"
+       data-testid="Video"
+       class="sc-braxZu jSTinX"
+>
+  <source type="video/webm"
+          src="https://ftjjvjgljna2ohz8.public.blob.vercel-storage.com/trampoline-cambs.webm"
+  >
+</video>
+`;

@@ -1,7 +1,9 @@
 "use client";
 
 import styled from "styled-components";
-import { borderRadii, colors, sizes } from "@/entities";
+import { sizes } from "../../design-tokens/dimensions";
+import { colors } from "../../design-tokens/colors";
+import { borderRadii } from "../../design-tokens/effects";
 import { rem } from "polished";
 
 export const Root = styled.input<{ $isInvalid: boolean }>`

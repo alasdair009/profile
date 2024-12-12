@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/ErrorText Default play-test 1`] = `
+<span color="#df1c41"
+      font-size="small"
+      data-testid="ErrorText"
+      class="sc-hDcvty dOVzab"
+>
+  Please fix the mistake.
+</span>
+`;

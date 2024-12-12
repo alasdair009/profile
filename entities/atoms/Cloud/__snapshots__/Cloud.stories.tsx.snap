@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/Cloud Default play-test 1`] = `
+<div data-testid="Cloud"
+     class="sc-drnuxz hHgRlH"
+     style="height: 500px;"
+>
+  <div class="sc-hDcvty foLBEi">
+  </div>
+  <svg width="0"
+       height="0"
+  >
+    <filter id="cloudFilter">
+      <feTurbulence type="fractalNoise"
+                    basefrequency="0.01"
+                    numoctaves="10"
+      >
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic"
+                         scale="180"
+      >
+      </feDisplacementMap>
+    </filter>
+  </svg>
+</div>
+`;

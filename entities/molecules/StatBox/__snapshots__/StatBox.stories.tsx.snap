@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`molecules/StatBox Default play-test 1`] = `
+<article data-testid="StatBox"
+         class="sc-hDcvty fGIVZb"
+>
+  <h2 data-testid="Heading"
+      class="sc-hfvVTD iPMJRx"
+  >
+    Record
+  </h2>
+  <p data-testid="Paragraph"
+     class="sc-gLXSEc jKmJic"
+  >
+    name of holder
+  </p>
+  <br data-testid="Spacer"
+      class="sc-pFPEP zdPYW"
+  >
+  <p data-testid="Paragraph"
+     class="sc-gLXSEc jKmJic"
+  >
+    10
+  </p>
+</article>
+`;

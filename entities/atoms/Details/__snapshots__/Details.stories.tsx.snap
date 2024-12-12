@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/Details Accordion play-test 1`] = `
+<details data-testid="Details"
+         name="accordion"
+         class="sc-ezTrPE gcihre"
+>
+  <summary class="sc-drnuxz lcxFEB">
+    First details
+  </summary>
+  <div class="sc-hDcvty dBapbO">
+    <h1 data-testid="Heading"
+        class="sc-eJgwjL eUOrbm"
+    >
+      Content
+    </h1>
+    <p data-testid="Paragraph"
+       class="sc-gutikT beCvGK"
+    >
+      Some copy to display with the Heading and whatever else takes your fancy.
+    </p>
+  </div>
+</details>
+<details data-testid="Details"
+         name="accordion"
+         class="sc-ezTrPE gcihre"
+>
+  <summary class="sc-drnuxz lcxFEB">
+    Second details
+  </summary>
+  <div class="sc-hDcvty dBapbO">
+    <h1 data-testid="Heading"
+        class="sc-eJgwjL eUOrbm"
+    >
+      Content
+    </h1>
+    <p data-testid="Paragraph"
+       class="sc-gutikT beCvGK"
+    >
+      Some copy to display with the Heading and whatever else takes your fancy.
+    </p>
+  </div>
+</details>
+<details data-testid="Details"
+         name="accordion"
+         class="sc-ezTrPE gcihre"
+>
+  <summary class="sc-drnuxz lcxFEB">
+    Third details
+  </summary>
+  <div class="sc-hDcvty dBapbO">
+    <h1 data-testid="Heading"
+        class="sc-eJgwjL eUOrbm"
+    >
+      Content
+    </h1>
+    <p data-testid="Paragraph"
+       class="sc-gutikT beCvGK"
+    >
+      Some copy to display with the Heading and whatever else takes your fancy.
+    </p>
+  </div>
+</details>
+`;
+
+exports[`atoms/Details Default play-test 1`] = `
+<details data-testid="Details"
+         class="sc-ezTrPE gcihre"
+>
+  <summary class="sc-drnuxz lcxFEB">
+    Title for the details element
+  </summary>
+  <div class="sc-hDcvty dBapbO">
+    <h1 data-testid="Heading"
+        class="sc-eJgwjL eUOrbm"
+    >
+      Content
+    </h1>
+    <p data-testid="Paragraph"
+       class="sc-gutikT beCvGK"
+    >
+      Some copy to display with the Heading and whatever else takes your fancy.
+    </p>
+  </div>
+</details>
+`;

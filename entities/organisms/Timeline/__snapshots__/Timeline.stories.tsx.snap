@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`organisms/Timeline Default smoke-test 1`] = `
+<section class="sc-braxZu">
+  <div class="vertical-timeline vertical-timeline--animate vertical-timeline--two-columns">
+    <div class="sc-drnuxz vertical-timeline-element">
+      <div id
+           class="vertical-timeline-element"
+      >
+        <span class="vertical-timeline-element-icon bounce-in"
+              style="background: rgb(46, 155, 38); color: rgb(255, 255, 255);"
+        >
+          <img alt
+               loading="lazy"
+               width="46"
+               height="42"
+               decoding="async"
+               data-nimg="1"
+               class="sc-hDcvty gtuqAY"
+               srcset="/static/media/entities/assets/jagex-logo.svg?w=48&amp;q=75 1x, /static/media/entities/assets/jagex-logo.svg?w=96&amp;q=75 2x"
+               src="/static/media/entities/assets/jagex-logo.svg?w=96&amp;q=75"
+               style="color: transparent;"
+          >
+        </span>
+        <div class="vertical-timeline-element-content bounce-in"
+             style="background: rgb(46, 155, 38); color: rgb(255, 255, 255);"
+        >
+          <div class="vertical-timeline-element-content-arrow"
+               style="border-right: 0.5rem solid rgb(46, 155, 38);"
+          >
+          </div>
+          abc
+          <span class="vertical-timeline-element-date">
+            2011 - present
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="sc-drnuxz vertical-timeline-element">
+      <div id
+           class="vertical-timeline-element"
+      >
+        <span class="vertical-timeline-element-icon bounce-in"
+              style="background: rgb(46, 155, 38); color: rgb(255, 255, 255);"
+        >
+          <img alt
+               loading="lazy"
+               width="46"
+               height="42"
+               decoding="async"
+               data-nimg="1"
+               class="sc-hDcvty gtuqAY"
+               srcset="/static/media/entities/assets/jagex-logo.svg?w=48&amp;q=75 1x, /static/media/entities/assets/jagex-logo.svg?w=96&amp;q=75 2x"
+               src="/static/media/entities/assets/jagex-logo.svg?w=96&amp;q=75"
+               style="color: transparent;"
+          >
+        </span>
+        <div class="vertical-timeline-element-content bounce-in"
+             style="background: rgb(46, 155, 38); color: rgb(255, 255, 255);"
+        >
+          <div class="vertical-timeline-element-content-arrow"
+               style="border-right: 0.5rem solid rgb(46, 155, 38);"
+          >
+          </div>
+          abc
+          <span class="vertical-timeline-element-date">
+            2011
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="sc-drnuxz vertical-timeline-element">
+      <div id
+           class="vertical-timeline-element"
+      >
+        <span class="vertical-timeline-element-icon bounce-in"
+              style="background: rgb(46, 155, 38); color: rgb(255, 255, 255);"
+        >
+          <img alt
+               loading="lazy"
+               width="46"
+               height="42"
+               decoding="async"
+               data-nimg="1"
+               class="sc-hDcvty gtuqAY"
+               srcset="/static/media/entities/assets/jagex-logo.svg?w=48&amp;q=75 1x, /static/media/entities/assets/jagex-logo.svg?w=96&amp;q=75 2x"
+               src="/static/media/entities/assets/jagex-logo.svg?w=96&amp;q=75"
+               style="color: transparent;"
+          >
+        </span>
+        <div class="vertical-timeline-element-content bounce-in"
+             style="background: rgb(46, 155, 38); color: rgb(255, 255, 255);"
+        >
+          <div class="vertical-timeline-element-content-arrow"
+               style="border-right: 0.5rem solid rgb(46, 155, 38);"
+          >
+          </div>
+          abc
+          <span class="vertical-timeline-element-date">
+            2011
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

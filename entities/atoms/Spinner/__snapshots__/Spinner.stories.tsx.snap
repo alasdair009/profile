@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/Spinner Default play-test 1`] = `
+<div data-testid="Spinner"
+     class="sc-drnuxz guAkRS"
+>
+  <img alt="A gymnast in a pike shape"
+       loading="lazy"
+       width="183"
+       height="258"
+       decoding="async"
+       data-nimg="1"
+       class="sc-hDcvty gQRnHp"
+       srcset="/static/media/entities/atoms/Spinner/pike.svg?w=256&amp;q=75 1x, /static/media/entities/atoms/Spinner/pike.svg?w=384&amp;q=75 2x"
+       src="/static/media/entities/atoms/Spinner/pike.svg?w=384&amp;q=75"
+       style="color: transparent;"
+  >
+</div>
+`;

@@ -27,6 +27,7 @@ const meta: Meta<typeof Fire> = {
       control: { type: "range", min: 0.1, max: 5, step: 0.1 },
     },
   },
+  tags: ["no-snaps"],
 };
 export default meta;
 

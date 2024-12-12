@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`organisms/Container Default play-test 1`] = `
+<section data-testid="Container"
+         class="sc-hDcvty gYfxhu"
+>
+  <h1 data-testid="Heading"
+      class="sc-hfvVTD difGzd"
+  >
+    Container
+  </h1>
+</section>
+`;

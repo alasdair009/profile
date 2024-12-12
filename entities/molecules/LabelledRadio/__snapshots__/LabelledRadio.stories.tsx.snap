@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`molecules/LabelledRadio Checked play-test 1`] = `
+<div data-testid="LabelledRadio"
+     class="sc-braxZu ldDAHa"
+>
+  <span data-testid="BaseLabel"
+        class="sc-elDIKY bvcFdL"
+  >
+    Radio entry
+  </span>
+  <input data-testid="BaseRadio"
+         required
+         class="sc-gJhJTp hddwbN"
+         type="radio"
+         checked
+  >
+</div>
+`;
+
+exports[`molecules/LabelledRadio Default play-test 1`] = `
+<div data-testid="LabelledRadio"
+     class="sc-braxZu ldDAHa"
+>
+  <span data-testid="BaseLabel"
+        class="sc-elDIKY bvcFdL"
+  >
+    Radio entry
+  </span>
+  <input data-testid="BaseRadio"
+         required
+         class="sc-gJhJTp hddwbN"
+         type="radio"
+  >
+</div>
+`;

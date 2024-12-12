@@ -21,6 +21,7 @@ const meta: Meta<typeof Flurry> = {
   args: {
     children: <h1>Flurry</h1>,
   },
+  tags: ["no-snaps"],
 };
 export default meta;
 

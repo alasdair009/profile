@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`molecules/Card Default play-test 1`] = `
+<article data-testid="Card"
+         class="sc-eowDPD fZITNq"
+>
+  <a target="_self"
+     data-testid="Link"
+     class="sc-eEPDDI gughtU sc-iAlELC bmQRoO"
+     href="#"
+  >
+    <figure class="sc-oeqTF coCVHF">
+      <img alt="Image alt text"
+           loading="lazy"
+           decoding="async"
+           data-nimg="fill"
+           class="sc-ezTrPE jyxelm"
+           sizes="100vw"
+           srcset="/static/media/entities/assets/am.svg?w=640&amp;q=75 640w, /static/media/entities/assets/am.svg?w=750&amp;q=75 750w, /static/media/entities/assets/am.svg?w=828&amp;q=75 828w, /static/media/entities/assets/am.svg?w=1080&amp;q=75 1080w, /static/media/entities/assets/am.svg?w=1200&amp;q=75 1200w, /static/media/entities/assets/am.svg?w=1920&amp;q=75 1920w, /static/media/entities/assets/am.svg?w=2048&amp;q=75 2048w, /static/media/entities/assets/am.svg?w=3840&amp;q=75 3840w"
+           src="/static/media/entities/assets/am.svg?w=3840&amp;q=75"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+      >
+    </figure>
+    <div class="sc-drnuxz">
+      <h2 data-testid="Heading"
+          class="sc-hfvVTD uqbXt"
+      >
+        Article title
+      </h2>
+      <time datetime="1980-01-01T00:00:00.000Z"
+            class="sc-hDcvty WhVSS"
+      >
+        1 Jan 1980
+      </time>
+    </div>
+  </a>
+</article>
+`;

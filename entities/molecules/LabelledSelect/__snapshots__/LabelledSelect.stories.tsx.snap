@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`molecules/LabelledSelect Default play-test 1`] = `
+<label data-testid="LabelledSelect"
+       class="sc-hDcvty eRBMpz"
+>
+  <span data-testid="BaseLabel"
+        class="sc-fQpRED fajILV"
+  >
+    Select entry
+  </span>
+  <select data-testid="BaseSelect"
+          required
+          class="sc-iKTcqh dLFXfh"
+  >
+    <option value="value 1"
+            data-testid="option"
+    >
+      option 1
+    </option>
+    <option value="value 2"
+            data-testid="option"
+    >
+      option 2
+    </option>
+    <option value="value 3"
+            data-testid="option"
+    >
+      option 3
+    </option>
+  </select>
+  <span color="#df1c41"
+        font-size="small"
+        data-testid="ErrorText"
+        class="sc-dwYcXH kKOlQN"
+  >
+  </span>
+</label>
+`;
+
+exports[`molecules/LabelledSelect Invalid play-test 1`] = `
+<label data-testid="LabelledSelect"
+       class="sc-hDcvty eRBMpz"
+>
+  <span data-testid="BaseLabel"
+        class="sc-fQpRED fajILV"
+  >
+    Select entry
+  </span>
+  <select data-testid="BaseSelect"
+          required
+          class="sc-iKTcqh fpeCBF"
+  >
+    <option value="value 1"
+            data-testid="option"
+    >
+      option 1
+    </option>
+    <option value="value 2"
+            data-testid="option"
+    >
+      option 2
+    </option>
+    <option value="value 3"
+            data-testid="option"
+    >
+      option 3
+    </option>
+  </select>
+  <span color="#df1c41"
+        font-size="small"
+        data-testid="ErrorText"
+        class="sc-dwYcXH cfxBNa"
+  >
+  </span>
+</label>
+`;
+
+exports[`molecules/LabelledSelect Multiple play-test 1`] = `
+<label data-testid="LabelledSelect"
+       class="sc-hDcvty eRBMpz"
+>
+  <span data-testid="BaseLabel"
+        class="sc-fQpRED fajILV"
+  >
+    Select entry
+  </span>
+  <select multiple
+          data-testid="BaseSelect"
+          required
+          class="sc-iKTcqh kLQcNu"
+  >
+    <option value="value 1"
+            data-testid="option"
+    >
+      option 1
+    </option>
+    <option value="value 2"
+            data-testid="option"
+    >
+      option 2
+    </option>
+    <option value="value 3"
+            data-testid="option"
+    >
+      option 3
+    </option>
+  </select>
+  <span color="#df1c41"
+        font-size="small"
+        data-testid="ErrorText"
+        class="sc-dwYcXH kKOlQN"
+  >
+  </span>
+</label>
+`;

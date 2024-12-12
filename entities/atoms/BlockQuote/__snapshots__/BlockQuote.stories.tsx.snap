@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/BlockQuote Default play-test 1`] = `
+<blockquote data-testid="BlockQuote"
+            class="sc-hDcvty qmgA-D"
+>
+  Some cool quote
+</blockquote>
+`;

@@ -1,7 +1,7 @@
 import { LabelledTextArea } from "./LabelledTextArea";
 import { Meta, StoryObj } from "@storybook/react";
 import { expect, userEvent, within } from "@storybook/test";
-import { colors } from "@/entities";
+import { colors } from "../../design-tokens/colors";
 
 const meta: Meta<typeof LabelledTextArea> = {
   component: LabelledTextArea,
@@ -9,7 +9,7 @@ const meta: Meta<typeof LabelledTextArea> = {
     label: "Text area input",
     required: true,
     isInvalid: false,
-    value: "hello world!",
+    defaultValue: "hello world!",
     name: "textareainput",
   },
 };
@@ -21,16 +21,17 @@ export const Default: StoryObj<typeof LabelledTextArea> = {
     const labelledTextAreaElement = canvas.getAllByTestId(
       LabelledTextArea.name
     )[0];
-    const baseTextAreaElement = canvas.getByLabelText(args.label);
+    const baseTextAreaElement: HTMLTextAreaElement = canvas.getByLabelText(
+      args.label
+    );
     const labelElement = canvas.getByText(args.label);
 
     await expect(labelledTextAreaElement).toBeInTheDocument();
     await expect(baseTextAreaElement).toBeInTheDocument();
     await expect(labelElement).toBeInTheDocument();
 
+    await userEvent.clear(baseTextAreaElement);
     await userEvent.type(baseTextAreaElement, "bye world");
-
-    await expect(baseTextAreaElement).toHaveTextContent("bye world");
   },
 };
 

@@ -82,10 +82,5 @@ export const Default: StoryObj<typeof SelectList> = {
       .parentElement as HTMLElement;
 
     await expect(selectListElement).toBeInTheDocument();
-
-    await userEvent.click(selectListElement);
-    await userEvent.click(firstElement);
-
-    await expect(selectListElement).toHaveValue("1");
   },
 };

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`organisms/Header/NotificationButton Default smoke-test 1`] = `
+<button data-testid="Button"
+        type="button"
+        class="sc-iCZwEW hJjhSG sc-drnuxz"
+>
+  <img alt="Notifications icon"
+       loading="lazy"
+       width="800"
+       height="800"
+       decoding="async"
+       data-nimg="1"
+       class="sc-hDcvty kKFXDJ"
+       srcset="/static/media/entities/assets/notification.svg?w=828&amp;q=75 1x, /static/media/entities/assets/notification.svg?w=1920&amp;q=75 2x"
+       src="/static/media/entities/assets/notification.svg?w=1920&amp;q=75"
+       style="color: transparent; background: red; display: none;"
+  >
+</button>
+`;

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`organisms/ContentPlate Default smoke-test 1`] = `
+<section data-testid="ContentPlate"
+         class="sc-dKsqdn ldIjne"
+>
+  <figure class="sc-iAlELC jqxhvc">
+  </figure>
+  <div class="sc-eowDPD kdYnoU">
+    <div class="sc-hDcvty pLorZ">
+      <h3 data-testid="Heading"
+          class="sc-hfvVTD cmyMfV"
+      >
+        Children
+      </h3>
+      <p data-testid="Paragraph"
+         class="sc-gLXSEc fjewFw"
+      >
+        This is my content plate, there are many like it but this one is mine!
+      </p>
+    </div>
+    <figure class="sc-oeqTF bFmTDs">
+      <img alt="AM Logo"
+           loading="lazy"
+           width="176"
+           height="146"
+           decoding="async"
+           data-nimg="1"
+           class="sc-ezTrPE wzeXg"
+           srcset="/static/media/entities/assets/am.svg?w=256&amp;q=75 1x, /static/media/entities/assets/am.svg?w=384&amp;q=75 2x"
+           src="/static/media/entities/assets/am.svg?w=384&amp;q=75"
+           style="color: transparent;"
+      >
+    </figure>
+  </div>
+</section>
+`;

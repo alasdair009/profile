@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/Spacer Default play-test 1`] = `
+<br data-testid="Spacer"
+    class="sc-hDcvty llUJuV"
+>
+`;
+
+exports[`atoms/Spacer Eight play-test 1`] = `
+<br data-testid="Spacer"
+    class="sc-hDcvty cnEEcO"
+>
+`;

@@ -1,7 +1,7 @@
 import { Root } from "./styles";
-import { BaseRadio } from "@/entities/atoms/BaseRadio";
-import { BaseLabel } from "@/entities";
-import { BaseRadioProps } from "@/entities/atoms/BaseRadio/BaseRadio";
+import { BaseRadio } from "../../atoms/BaseRadio";
+import { BaseLabel } from "../../atoms/BaseLabel";
+import type { BaseRadioProps } from "../../atoms/BaseRadio";
 
 type LabelledInputProps = {
   /**

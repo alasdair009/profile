@@ -30,6 +30,14 @@ const nthNumber = (number: number) => {
   }
 };
 
+export const getNiceDate = (date: Date) => {
+  const dayNumber = date.toLocaleDateString("en-GB", {
+    day: "numeric",
+  });
+
+  return `${dayNumber}${nthNumber(parseInt(dayNumber))} ${date.toLocaleDateString("en-GB", { year: "numeric", month: "long" })}`;
+};
+
 /**
  * Large content box with heading
  */
@@ -44,15 +52,10 @@ export function Article({
     day: "numeric",
   });
   return (
-    <Root {...rest}>
+    <Root data-testid={Article.name} {...rest}>
       <ArticleHeading align="center">{heading}</ArticleHeading>
       <ArticleDate dateTime={date.toISOString()}>
-        {dayNumber}
-        {nthNumber(parseInt(dayNumber))}&nbsp;
-        {date.toLocaleDateString("en-GB", {
-          year: "numeric",
-          month: "long",
-        })}
+        {getNiceDate(date)}
       </ArticleDate>
       <Spacer multiplier={6} />
       <ArticleFigure>

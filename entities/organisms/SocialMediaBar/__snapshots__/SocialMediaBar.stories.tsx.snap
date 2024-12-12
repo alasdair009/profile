@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`organisms/SocialMediaBar Default smoke-test 1`] = `
+<nav class="sc-hDcvty hXbJQq">
+  <a target="_blank"
+     rel="noopener"
+     data-testid="SocialMediaLink"
+     class="sc-euGpHm iBLaxx"
+     href="https://twitter.com/alasdair009"
+  >
+    X
+  </a>
+  <a target="_blank"
+     rel="noopener"
+     data-testid="SocialMediaLink"
+     class="sc-euGpHm joEhIl"
+     href="https://www.linkedin.com/in/alasdairmacrae/"
+  >
+    LinkedIn
+  </a>
+  <a target="_blank"
+     rel="noopener"
+     data-testid="SocialMediaLink"
+     class="sc-euGpHm hKfaBN"
+     href="https://github.com/alasdair009"
+  >
+    GitHub
+  </a>
+</nav>
+`;

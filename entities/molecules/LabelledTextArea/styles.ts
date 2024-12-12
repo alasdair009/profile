@@ -1,7 +1,7 @@
 "use client";
 import styled from "styled-components";
 import { rem } from "polished";
-import { globalInputMaxWidth, sizes } from "@/entities";
+import { globalInputMaxWidth, sizes } from "../../design-tokens/dimensions";
 
 export const Root = styled.label`
   align-items: center;

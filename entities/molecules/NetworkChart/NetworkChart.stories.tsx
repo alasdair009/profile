@@ -34,6 +34,7 @@ const meta: Meta<typeof NetworkChart> = {
     ],
     onNodeClick: fn(),
   },
+  tags: ["no-snaps"],
 };
 export default meta;
 

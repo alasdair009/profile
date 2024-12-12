@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`experimental/SelectList Default play-test 1`] = `
+<selectlist data-testid="SelectList"
+            class="sc-kGqRax iIDRRV"
+>
+  <button type="selectlist"
+          class="sc-dCKixA hrsSZ"
+  >
+    <selectedoption class="sc-giOWAb gXVkfv">
+    </selectedoption>
+  </button>
+  <listbox class="sc-kuDXwa hwzoru">
+    <option value
+            hidden
+            class="sc-catHVh hKOVEB"
+    >
+      <span class="sc-llIhno kmzfQL">
+      </span>
+      <p data-testid="Paragraph"
+         class="sc-gLXSEc fjewFw"
+      >
+        Select an option
+      </p>
+    </option>
+    <option value="1">
+      <figure class="sc-eiLgtK cxDvHx">
+        <img alt="am Logo"
+             loading="lazy"
+             width="16"
+             height="16"
+             decoding="async"
+             data-nimg="1"
+             srcset="/static/media/entities/assets/am.svg?w=16&amp;q=75 1x, /static/media/entities/assets/am.svg?w=32&amp;q=75 2x"
+             src="/static/media/entities/assets/am.svg?w=32&amp;q=75"
+             style="color: transparent;"
+        >
+      </figure>
+      <p data-testid="Paragraph"
+         class="sc-gLXSEc fjewFw"
+      >
+        Option 1
+      </p>
+    </option>
+    <option value="2">
+      <figure class="sc-eiLgtK cxDvHx">
+        <img alt="am Logo"
+             loading="lazy"
+             width="16"
+             height="16"
+             decoding="async"
+             data-nimg="1"
+             srcset="/static/media/entities/assets/am.svg?w=16&amp;q=75 1x, /static/media/entities/assets/am.svg?w=32&amp;q=75 2x"
+             src="/static/media/entities/assets/am.svg?w=32&amp;q=75"
+             style="color: transparent;"
+        >
+      </figure>
+      <p data-testid="Paragraph"
+         class="sc-gLXSEc fjewFw"
+      >
+        Option 2
+      </p>
+    </option>
+    <option value="3">
+      <figure class="sc-eiLgtK cxDvHx">
+        <img alt="am Logo"
+             loading="lazy"
+             width="16"
+             height="16"
+             decoding="async"
+             data-nimg="1"
+             srcset="/static/media/entities/assets/am.svg?w=16&amp;q=75 1x, /static/media/entities/assets/am.svg?w=32&amp;q=75 2x"
+             src="/static/media/entities/assets/am.svg?w=32&amp;q=75"
+             style="color: transparent;"
+        >
+      </figure>
+      <p data-testid="Paragraph"
+         class="sc-gLXSEc fjewFw"
+      >
+        Option 3
+      </p>
+    </option>
+    <hr data-testid="HorizontalRule"
+        class="sc-ifyrTC jazMDl"
+    >
+    <option value="all">
+      <figure class="sc-eiLgtK cxDvHx">
+        <img alt="am Logo"
+             loading="lazy"
+             width="16"
+             height="16"
+             decoding="async"
+             data-nimg="1"
+             srcset="/static/media/entities/assets/am.svg?w=16&amp;q=75 1x, /static/media/entities/assets/am.svg?w=32&amp;q=75 2x"
+             src="/static/media/entities/assets/am.svg?w=32&amp;q=75"
+             style="color: transparent;"
+        >
+      </figure>
+      <p data-testid="Paragraph"
+         class="sc-gLXSEc fjewFw"
+      >
+        All Options
+      </p>
+    </option>
+  </listbox>
+</selectlist>
+`;

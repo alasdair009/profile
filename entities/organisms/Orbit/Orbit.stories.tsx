@@ -21,6 +21,7 @@ const meta: Meta<typeof Orbit> = {
       },
     },
   },
+  tags: ["no-snaps"],
 };
 export default meta;
 

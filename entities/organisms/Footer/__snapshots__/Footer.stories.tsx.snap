@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`organisms/Footer Default play-test 1`] = `
+<footer data-testid="Footer"
+        class="sc-dKsqdn bqWmUS"
+>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       xmlns:xlink="http://www.w3.org/1999/xlink"
+       viewbox="0 24 150 28"
+       preserveaspectratio="none"
+       shape-rendering="auto"
+       class="sc-eowDPD dZMiOJ"
+  >
+    <defs>
+      <path id="gentle-wave"
+            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+      >
+      </path>
+    </defs>
+    <g class="sc-iAlELC kDzrcj">
+      <use xlink:href="#gentle-wave"
+           x="48"
+           y="0"
+           class="sc-oeqTF eaZGlS"
+      >
+      </use>
+      <use xlink:href="#gentle-wave"
+           x="48"
+           y="3"
+           class="sc-ezTrPE braYQM"
+      >
+      </use>
+      <use xlink:href="#gentle-wave"
+           x="48"
+           y="5"
+           class="sc-drnuxz ijdAcY"
+      >
+      </use>
+      <use xlink:href="#gentle-wave"
+           x="48"
+           y="7"
+           class="sc-hDcvty jFZNhr"
+      >
+      </use>
+    </g>
+  </svg>
+</footer>
+`;

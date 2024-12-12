@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`organisms/PortfolioPlate Default play-test 1`] = `
+<section data-testid="ContentPlate"
+         class="sc-crribH bXfjUx"
+>
+  <figure class="sc-gpSXuZ hLiPLT">
+  </figure>
+  <div class="sc-kuTxxw gZGEOM">
+    <div class="sc-blcnQh enYcrv">
+      <h3 data-testid="Heading"
+          class="sc-hfvVTD cmyMfV"
+      >
+        JDS
+      </h3>
+      <pre>
+        (URL not public)
+      </pre>
+      <p data-testid="Paragraph"
+         class="sc-gLXSEc fjewFw"
+      >
+        Responsible for constructing a large design system to style and maintain consistent branding across all Jagex Publishing Platform products including websites and apps. This library was written in React and displayed via Storybook.js.
+      </p>
+      <p data-testid="Paragraph"
+         class="sc-gLXSEc fjewFw"
+      >
+        The system covers all areas of visual implementation including colours, animation, typography, sizing, components and is all structured using atomic design principles.
+      </p>
+    </div>
+    <figure class="sc-bHSjBK dUnWvr">
+      <img alt="White Jagex logo part-way through being drawn"
+           loading="lazy"
+           width="350"
+           height="333"
+           decoding="async"
+           data-nimg="1"
+           class="sc-iSnsYj hHkmHU"
+           srcset="/static/media/entities/assets/jds-logo.svg?w=384&amp;q=75 1x, /static/media/entities/assets/jds-logo.svg?w=750&amp;q=75 2x"
+           src="/static/media/entities/assets/jds-logo.svg?w=750&amp;q=75"
+           style="color: transparent;"
+      >
+    </figure>
+  </div>
+</section>
+`;
+
+exports[`organisms/PortfolioPlate WithUrl play-test 1`] = `
+<section data-testid="ContentPlate"
+         class="sc-crribH bXfjUx"
+>
+  <figure class="sc-gpSXuZ fijHNR">
+  </figure>
+  <div class="sc-kuTxxw gZGEOM">
+    <div class="sc-blcnQh enYcrv">
+      <h3 data-testid="Heading"
+          class="sc-hfvVTD cmyMfV"
+      >
+        Jagex Launcher
+      </h3>
+      <a target="_blank"
+         rel="noopener"
+         data-testid="Link"
+         class="sc-eEPDDI gughtU"
+         href="https://www.jagex.com/launcher"
+      >
+        https://www.jagex.com/launcher
+        <img title="Third party site, opens in a new tab."
+             alt="Icon to represent this opens in a new tab"
+             loading="lazy"
+             width="128"
+             height="128"
+             decoding="async"
+             data-nimg="1"
+             class="sc-gutikT BEgvF"
+             srcset="/static/media/entities/assets/new-tab-icon.svg?w=128&amp;q=75 1x, /static/media/entities/assets/new-tab-icon.svg?w=256&amp;q=75 2x"
+             src="/static/media/entities/assets/new-tab-icon.svg?w=256&amp;q=75"
+             style="color: transparent;"
+        >
+      </a>
+      <p data-testid="Paragraph"
+         class="sc-gLXSEc fjewFw"
+      >
+        The Jagex Launcher is an application that is used to run all Jagex products. I was responsible for maintaining the
+        <abbr title="Jagex Design System">
+          JDS
+        </abbr>
+        (see above) integration that delivered the visual aesthetics and functionality for the front-end.
+      </p>
+    </div>
+    <figure class="sc-bHSjBK dUnWvr">
+      <img alt="The opening UI from the Jagex Launcher displaying RuneScape"
+           loading="lazy"
+           width="1280"
+           height="717"
+           decoding="async"
+           data-nimg="1"
+           class="sc-iSnsYj hHkmHU"
+           srcset="/static/media/entities/assets/launcher.webp?w=1920&amp;q=75 1x, /static/media/entities/assets/launcher.webp?w=3840&amp;q=75 2x"
+           src="/static/media/entities/assets/launcher.webp?w=3840&amp;q=75"
+           style="color: transparent;"
+      >
+    </figure>
+  </div>
+</section>
+`;

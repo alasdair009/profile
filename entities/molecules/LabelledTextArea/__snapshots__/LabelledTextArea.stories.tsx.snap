@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`molecules/LabelledTextArea Default play-test 1`] = `
+<label data-testid="LabelledTextArea"
+       class="sc-braxZu jKGkOx"
+>
+  <span class="sc-gJhJTp oKJJG">
+    Text area input
+  </span>
+  <textarea required
+            class="sc-elDIKY jEuff"
+  >
+    hello world!
+  </textarea>
+</label>
+`;
+
+exports[`molecules/LabelledTextArea Invalid play-test 1`] = `
+<label data-testid="LabelledTextArea"
+       class="sc-braxZu jKGkOx"
+>
+  <span class="sc-gJhJTp oKJJG">
+    Text area input
+  </span>
+  <textarea required
+            class="sc-elDIKY jEuff"
+  >
+    hello world!
+  </textarea>
+</label>
+`;

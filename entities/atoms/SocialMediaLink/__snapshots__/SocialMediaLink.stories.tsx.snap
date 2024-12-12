@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/SocialMediaLink GitHub play-test 1`] = `
+<a target="_blank"
+   rel="noopener"
+   data-testid="SocialMediaLink"
+   class="sc-hDcvty kFHYFj"
+   href="https://github.com/alasdair009"
+>
+</a>
+`;
+
+exports[`atoms/SocialMediaLink LinkedIn play-test 1`] = `
+<a target="_blank"
+   rel="noopener"
+   data-testid="SocialMediaLink"
+   class="sc-hDcvty hrIVTH"
+   href="https://www.linkedin.com/in/alasdairmacrae/"
+>
+</a>
+`;
+
+exports[`atoms/SocialMediaLink X play-test 1`] = `
+<a target="_blank"
+   rel="noopener"
+   data-testid="SocialMediaLink"
+   class="sc-hDcvty kQMZGL"
+   href="https://twitter.com/alasdair009"
+>
+</a>
+`;

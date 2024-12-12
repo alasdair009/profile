@@ -1,6 +1,6 @@
 import { Root } from "./styles";
 import { HTMLAttributes } from "react";
-import { BaseTextArea } from "@/entities";
+import { BaseTextArea } from "../../atoms/BaseTextArea";
 import { LabelText } from "./styles";
 
 type LabelledTextAreaProps = {

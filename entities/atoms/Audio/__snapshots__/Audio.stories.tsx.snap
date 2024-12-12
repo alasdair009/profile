@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/Audio Default play-test 1`] = `
+<audio controls
+       loop
+       data-testid="Audio"
+       class="sc-hDcvty flgSKf"
+>
+  <source src="https://www.w3schools.com/tags/horse.mp3"
+          type="audio/mpeg"
+          data-testid="AudioSource"
+  >
+</audio>
+`;

@@ -23,6 +23,7 @@ const meta: Meta<typeof Snow> = {
       control: { type: "range", min: 10, max: 100, step: 1 },
     },
   },
+  tags: ["no-snaps"],
 };
 export default meta;
 

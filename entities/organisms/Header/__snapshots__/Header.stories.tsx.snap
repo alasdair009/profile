@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`organisms/Header Default smoke-test 1`] = `
+<header class="sc-dKsqdn idjsjM">
+  <nav class="sc-eowDPD cdvzBf">
+    <a href="/">
+      <img alt="AM logo"
+           loading="lazy"
+           width="39"
+           height="32"
+           decoding="async"
+           data-nimg="1"
+           class="sc-iAlELC fNPfQt"
+           srcset="/static/media/entities/assets/am.svg?w=48&amp;q=75 1x, /static/media/entities/assets/am.svg?w=96&amp;q=75 2x"
+           src="/static/media/entities/assets/am.svg?w=96&amp;q=75"
+           style="color: transparent;"
+      >
+    </a>
+    <div class="sc-oeqTF hHgCDm">
+      <a target="_self"
+         data-testid="Link"
+         class="sc-eEPDDI gughtU sc-ezTrPE bcttwp"
+         href="/"
+      >
+        Home
+      </a>
+      <a target="_self"
+         data-testid="Link"
+         class="sc-eEPDDI gughtU sc-ezTrPE fZeUfM"
+         href="/portfolio"
+      >
+        Portfolio
+      </a>
+      <a target="_self"
+         data-testid="Link"
+         class="sc-eEPDDI gughtU sc-ezTrPE fZeUfM"
+         href="/about-me"
+      >
+        About
+      </a>
+      <a target="_self"
+         data-testid="Link"
+         class="sc-eEPDDI gughtU sc-ezTrPE fZeUfM"
+         href="/blog"
+      >
+        Blog
+      </a>
+      <button data-testid="Button"
+              type="button"
+              class="sc-iCZwEW hJjhSG sc-drnuxz"
+              style="display: none;"
+      >
+        <img alt="Notifications icon"
+             loading="lazy"
+             width="800"
+             height="800"
+             decoding="async"
+             data-nimg="1"
+             class="sc-hDcvty kKFXDJ"
+             srcset="/static/media/entities/assets/notification.svg?w=828&amp;q=75 1x, /static/media/entities/assets/notification.svg?w=1920&amp;q=75 2x"
+             src="/static/media/entities/assets/notification.svg?w=1920&amp;q=75"
+             style="color: transparent; background: red; display: none;"
+        >
+      </button>
+    </div>
+  </nav>
+</header>
+`;

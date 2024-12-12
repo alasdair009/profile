@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/Button Default play-test 1`] = `
+<button data-testid="Button"
+        class="sc-hDcvty jPmyol"
+>
+  Button
+</button>
+`;

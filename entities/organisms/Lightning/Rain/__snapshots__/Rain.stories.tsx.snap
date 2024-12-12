@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`organisms/Lightning/Rain Default smoke-test 1`] = `
+<div class="sc-iAlELC gRILcD">
+  <canvas class="sc-oeqTF hjFjiZ">
+  </canvas>
+</div>
+`;

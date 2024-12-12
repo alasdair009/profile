@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { globalInputMaxWidth } from "@/entities";
+import { globalInputMaxWidth } from "../../design-tokens/dimensions";
 import { rem } from "polished";
 
 export const Root = styled.label`

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/HorizontalRule Decoration play-test 1`] = `
+<hr data-testid="HorizontalRule"
+    class="sc-hDcvty kbmuZx"
+>
+`;
+
+exports[`atoms/HorizontalRule Default play-test 1`] = `
+<hr data-testid="HorizontalRule"
+    class="sc-hDcvty cbbhpu"
+>
+`;

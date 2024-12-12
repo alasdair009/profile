@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/Paragraph Default play-test 1`] = `
+<p data-testid="Paragraph"
+   class="sc-hDcvty hzQlZe"
+>
+  Paragraph of text
+</p>
+`;

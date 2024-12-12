@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`molecules/LabelledCheckbox Default play-test 1`] = `
+<div data-testid="LabelledCheckbox"
+     class="sc-braxZu ldDAHa"
+>
+  <span data-testid="BaseLabel"
+        class="sc-dsLQwm likJvJ"
+  >
+    Checkbox entry
+  </span>
+  <input data-testid="BaseCheckbox"
+         required
+         class="sc-elDIKY HOnpQ"
+         type="checkbox"
+  >
+</div>
+`;
+
+exports[`molecules/LabelledCheckbox Invalid play-test 1`] = `
+<div data-testid="LabelledCheckbox"
+     class="sc-braxZu ldDAHa"
+>
+  <span data-testid="BaseLabel"
+        class="sc-dsLQwm likJvJ"
+  >
+    Checkbox entry
+  </span>
+  <input data-testid="BaseCheckbox"
+         required
+         class="sc-elDIKY dKDQel"
+         type="checkbox"
+  >
+</div>
+`;

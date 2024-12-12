@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`organisms/MorphingText Default smoke-test 1`] = `
+<section class="sc-ezTrPE dnqBjY">
+  <h2 class="sc-hDcvty YRVwn">
+    <span class="sc-drnuxz kEkKRK">
+      The
+    </span>
+    <span class="sc-drnuxz iBrPjB">
+      possibilities
+    </span>
+    <span class="sc-drnuxz kHjzAg">
+      are
+    </span>
+    <span class="sc-drnuxz emCIDl">
+      endless
+    </span>
+    <span class="sc-drnuxz ksVpvZ">
+      1
+    </span>
+    <span class="sc-drnuxz jZfYls">
+      2
+    </span>
+    <span class="sc-drnuxz jIUDvF">
+      3
+    </span>
+  </h2>
+</section>
+`;

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/Progress Default play-test 1`] = `
+<div data-testid="Progress"
+     class="sc-drnuxz bSYNxs"
+>
+  <progress max="100"
+            value="100"
+            data-testid="ProgressElement"
+            class="sc-hDcvty iyrkTb"
+  >
+  </progress>
+</div>
+`;
+
+exports[`atoms/Progress Fifty play-test 1`] = `
+<div data-testid="Progress"
+     class="sc-drnuxz bSYNxs"
+>
+  <progress max="100"
+            value="50"
+            data-testid="ProgressElement"
+            class="sc-hDcvty jkmjkn"
+  >
+  </progress>
+</div>
+`;
+
+exports[`atoms/Progress Zero play-test 1`] = `
+<div data-testid="Progress"
+     class="sc-drnuxz bSYNxs"
+>
+  <progress max="100"
+            value="0"
+            data-testid="ProgressElement"
+            class="sc-hDcvty cuXiGL"
+  >
+  </progress>
+</div>
+`;

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/Link Default play-test 1`] = `
+<a target="_self"
+   data-testid="Link"
+   class="sc-oeqTF cFwkOt"
+   href="#"
+>
+  Go to page
+</a>
+`;
+
+exports[`atoms/Link HoverFrame play-test 1`] = `
+<a target="_self"
+   data-testid="Link"
+   class="sc-oeqTF cFwkOt"
+   href="https://www.alasdairmacrae.co.uk"
+>
+  Go to page
+  <div class="sc-drnuxz gQjKNO">
+    <iframe src="https://www.alasdairmacrae.co.uk"
+            class="sc-dENhDJ hcyAeG sc-hDcvty jDAvkM"
+            allowfullscreen
+            data-testid="IFrame"
+    >
+    </iframe>
+  </div>
+</a>
+`;

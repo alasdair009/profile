@@ -11,6 +11,7 @@ const meta: Meta<typeof ContactForm> = {
     submitEndpoint: "#",
     onFormSubmitted: onFormSubmittedSpy,
   },
+  tags: ["no-snaps"],
 };
 export default meta;
 

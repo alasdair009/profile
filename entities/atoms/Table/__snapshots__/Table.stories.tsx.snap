@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/Table Default play-test 1`] = `
+<table data-testid="Table"
+       class="sc-hDcvty cQUvcm"
+>
+  <thead>
+    <tr>
+      <th>
+        col 1 heading
+      </th>
+      <th>
+        col 2 heading
+      </th>
+      <th>
+        col 3 heading
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-title="col 1 heading">
+        col 1 row 1
+      </td>
+      <td data-title="col 2 heading">
+        col 2 row 1
+      </td>
+      <td data-title="col 3 heading">
+        col 3 row 1
+      </td>
+    </tr>
+    <tr>
+      <td data-title="col 1 heading">
+        col 1 row 2
+      </td>
+      <td data-title="col 2 heading">
+        col 2 row 2
+      </td>
+      <td data-title="col 3 heading">
+        col 3 row 2
+      </td>
+    </tr>
+    <tr>
+      <td data-title="col 1 heading">
+        col 1 row 3
+      </td>
+      <td data-title="col 2 heading">
+        col 2 row 3
+      </td>
+      <td data-title="col 3 heading">
+        col 3 row 3
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th data-title="col 1 foot label">
+        col 1 foot
+      </th>
+      <th data-title="col 2 foot label">
+        col 2 foot
+      </th>
+      <th data-title="col 3 foot label">
+        col 3 foot
+      </th>
+    </tr>
+  </tfoot>
+</table>
+`;
+
+exports[`atoms/Table Responsive play-test 1`] = `
+<table data-testid="Table"
+       class="sc-hDcvty jdgvWd"
+>
+  <thead>
+    <tr>
+      <th>
+        col 1 heading
+      </th>
+      <th>
+        col 2 heading
+      </th>
+      <th>
+        col 3 heading
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-title="col 1 heading">
+        col 1 row 1
+      </td>
+      <td data-title="col 2 heading">
+        col 2 row 1
+      </td>
+      <td data-title="col 3 heading">
+        col 3 row 1
+      </td>
+    </tr>
+    <tr>
+      <td data-title="col 1 heading">
+        col 1 row 2
+      </td>
+      <td data-title="col 2 heading">
+        col 2 row 2
+      </td>
+      <td data-title="col 3 heading">
+        col 3 row 2
+      </td>
+    </tr>
+    <tr>
+      <td data-title="col 1 heading">
+        col 1 row 3
+      </td>
+      <td data-title="col 2 heading">
+        col 2 row 3
+      </td>
+      <td data-title="col 3 heading">
+        col 3 row 3
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th data-title="col 1 foot label">
+        col 1 foot
+      </th>
+      <th data-title="col 2 foot label">
+        col 2 foot
+      </th>
+      <th data-title="col 3 foot label">
+        col 3 foot
+      </th>
+    </tr>
+  </tfoot>
+</table>
+`;

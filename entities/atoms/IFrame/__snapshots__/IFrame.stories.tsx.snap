@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/IFrame Default play-test 1`] = `
+<iframe src="https://www.alasdairmacrae.co.uk"
+        allowfullscreen
+        data-testid="IFrame"
+        class="sc-hDcvty jZCWOT"
+>
+</iframe>
+`;

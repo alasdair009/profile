@@ -17,6 +17,7 @@ const meta: Meta<typeof ScoreCounter> = {
       },
     },
   },
+  tags: ["no-snaps"],
 };
 export default meta;
 

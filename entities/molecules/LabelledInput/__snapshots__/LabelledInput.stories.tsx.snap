@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`molecules/LabelledInput Email play-test 1`] = `
+<label data-testid="LabelledInput"
+       class="sc-hDcvty eRBMpz"
+>
+  <span data-testid="BaseLabel"
+        class="sc-fQpRED fajILV"
+  >
+    Email entry
+  </span>
+  <input data-testid="BaseInput"
+         required
+         class="sc-elDIKY fBsEuy"
+         type="email"
+         value="hello"
+  >
+  <span color="#df1c41"
+        font-size="small"
+        data-testid="ErrorText"
+        class="sc-dwYcXH kKOlQN"
+  >
+  </span>
+</label>
+`;
+
+exports[`molecules/LabelledInput IsInvalid play-test 1`] = `
+<label data-testid="LabelledInput"
+       class="sc-hDcvty eRBMpz"
+>
+  <span data-testid="BaseLabel"
+        class="sc-fQpRED fajILV"
+  >
+    isInvalid entry
+  </span>
+  <input data-testid="BaseInput"
+         required
+         class="sc-elDIKY gPWKCy"
+         type="text"
+         value="hello"
+  >
+  <span color="#df1c41"
+        font-size="small"
+        data-testid="ErrorText"
+        class="sc-dwYcXH cfxBNa"
+  >
+  </span>
+</label>
+`;
+
+exports[`molecules/LabelledInput Password play-test 1`] = `
+<label data-testid="LabelledInput"
+       class="sc-hDcvty eRBMpz"
+>
+  <span data-testid="BaseLabel"
+        class="sc-fQpRED fajILV"
+  >
+    Password entry
+  </span>
+  <input data-testid="BaseInput"
+         required
+         class="sc-elDIKY fBsEuy"
+         type="password"
+         value="hello"
+  >
+  <span color="#df1c41"
+        font-size="small"
+        data-testid="ErrorText"
+        class="sc-dwYcXH kKOlQN"
+  >
+  </span>
+</label>
+`;
+
+exports[`molecules/LabelledInput Required play-test 1`] = `
+<label data-testid="LabelledInput"
+       class="sc-hDcvty eRBMpz"
+>
+  <span data-testid="BaseLabel"
+        class="sc-fQpRED fajILV"
+  >
+    Required entry
+  </span>
+  <input data-testid="BaseInput"
+         required
+         class="sc-elDIKY fBsEuy"
+         type="text"
+         value="hello"
+  >
+  <span color="#df1c41"
+        font-size="small"
+        data-testid="ErrorText"
+        class="sc-dwYcXH kKOlQN"
+  >
+  </span>
+</label>
+`;
+
+exports[`molecules/LabelledInput Text play-test 1`] = `
+<label data-testid="LabelledInput"
+       class="sc-hDcvty eRBMpz"
+>
+  <span data-testid="BaseLabel"
+        class="sc-fQpRED fajILV"
+  >
+    Text entry
+  </span>
+  <input data-testid="BaseInput"
+         required
+         class="sc-elDIKY fBsEuy"
+         type="text"
+         value="hello"
+  >
+  <span color="#df1c41"
+        font-size="small"
+        data-testid="ErrorText"
+        class="sc-dwYcXH kKOlQN"
+  >
+  </span>
+</label>
+`;

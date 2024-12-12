@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/UnorderedList Default play-test 1`] = `
+<ul data-testid="UnorderedList"
+    class="sc-hDcvty eHmOfp"
+>
+  <li>
+    First item
+  </li>
+  <li>
+    Second item
+  </li>
+  <li>
+    Third item
+  </li>
+</ul>
+`;

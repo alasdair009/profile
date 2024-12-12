@@ -20,6 +20,7 @@ const meta: Meta<typeof Skill> = {
       small: {},
     },
   },
+  tags: ["no-snaps"],
 };
 export default meta;
 
