@@ -16,7 +16,9 @@ export default meta;
 export const Default: StoryObj<typeof FixedPlate> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
+    const fixedPlateElement = canvas.getByTestId(FixedPlate.name);
 
+    await expect(fixedPlateElement).toBeInTheDocument();
     await expect(canvas.getByAltText(args.alt as string)).toBeInTheDocument();
   },
 };

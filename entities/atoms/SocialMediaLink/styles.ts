@@ -6,9 +6,12 @@ import { colors, sizes } from "@/entities";
 import xIcon from "./assets/x.svg";
 import linkedInIcon from "./assets/linkedin.svg";
 import gitHubIcon from "./assets/github.svg";
+import facebookIcon from "./assets/facebook.svg";
 
 const getMaskIcon = (variant: SocialMediaLinkVariant) => {
   switch (variant) {
+    case "facebook":
+      return facebookIcon.src;
     case "github":
       return gitHubIcon.src;
     case "linkedin":

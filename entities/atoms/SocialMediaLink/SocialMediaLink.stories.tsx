@@ -54,3 +54,19 @@ export const GitHub: StoryObj<typeof SocialMediaLink> = {
     );
   },
 };
+
+export const Facebook: StoryObj<typeof SocialMediaLink> = {
+  args: {
+    variant: "facebook",
+  },
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const socialMediaElement = canvas.getByTestId(SocialMediaLink.name);
+
+    await expect(socialMediaElement).toBeInTheDocument();
+    await expect(socialMediaElement).toHaveAttribute(
+      "href",
+      "https://www.facebook.com/alasdair009"
+    );
+  },
+};

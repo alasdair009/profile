@@ -1,1 +1,1 @@
-export type SocialMediaLinkVariant = "github" | "linkedin" | "x";
+export type SocialMediaLinkVariant = "facebook" | "github" | "linkedin" | "x";

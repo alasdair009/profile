@@ -9,6 +9,7 @@ export function SocialMediaBar({ ...rest }: SocialMediaBarProps) {
       <SocialMediaLink variant="x">X</SocialMediaLink>
       <SocialMediaLink variant="linkedin">LinkedIn</SocialMediaLink>
       <SocialMediaLink variant="github">GitHub</SocialMediaLink>
+      <SocialMediaLink variant="facebook">Facebook</SocialMediaLink>
     </Root>
   );
 }
