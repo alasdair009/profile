@@ -1,13 +1,47 @@
-import { Meta, Story } from "@storybook/blocks";
+import { Meta, Source } from "@storybook/blocks";
 import { CurveViewer } from "./CurveViewer";
 import { curves } from "./curves";
+import { animationRhythmVariableName } from "./motion";
 
 <Meta title="Design Tokens/Animations" />
 
 # Animations
+
+I use a variety of animations across my site. CSS animations are powerful tools but using them cleanly and consistently is essential.
+
+It should also be possible to opt out of animations on a web page but maintain a consistent cognitive load (see prefers reduced motion below).
 
 ## Curves
 
 Transitions and animations use curves to define the rate of change of animation. We use the following curves in the JDS:
 
 <CurveViewer curves={curves} title="curves" />
+
+## Prefers reduce motion
+
+When the user has opted out of animations in their OS the website should respect this and remove any animation that it reasonably can.
+
+Inside styled components the function `animationDurationCSS` uses the css variable <code>--{animationRhythmVariableName}</code> inside a calc to control animation duration.
+When the user has opted out of animation the variable is equal to 0 making all animations instant.
+
+<Source
+  language="typescript"
+  code={`animation-duration: \${animationDurationCSS(1.2)};`}
+  dark={true}
+/>
+
+creates...
+
+<Source
+  language="css"
+  code={`animation-duration: calc(1.2s * var(--${animationRhythmVariableName}));`}
+  dark={true}
+/>
+
+When using JavaScript to setup animations you can import the `prefersReducedMotion` boolean to easily check the user's preference.
+
+<Source
+  language="ts"
+  code={`const animOptions = {duration: prefersReducedMotion ? 0 : 1s}`}
+  dark={true}
+/>

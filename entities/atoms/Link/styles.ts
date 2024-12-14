@@ -2,7 +2,14 @@
 import Link from "next/link";
 import { Link as ViewTransitionLink } from "next-view-transitions";
 import styled, { css, keyframes } from "styled-components";
-import { colors, fontSizes, fontWeights, IFrame, sizes } from "@/entities";
+import {
+  animationDurationCSS,
+  colors,
+  fontSizes,
+  fontWeights,
+  IFrame,
+  sizes,
+} from "@/entities";
 import { LinkVariant } from "./types";
 import Image from "next/image";
 import { lineHeights } from "@/entities/design-tokens/typography/typography";
@@ -56,7 +63,7 @@ const getLinkStyles = (variant: LinkVariant, lines: number | undefined) => {
       filter: brightness(1.3);
 
       &::after {
-        animation: ${pressDown} 0.1s;
+        animation: ${pressDown} ${animationDurationCSS(0.1)};
         animation-fill-mode: forwards;
       }
 
@@ -71,7 +78,7 @@ const getLinkStyles = (variant: LinkVariant, lines: number | undefined) => {
     }
 
     &::after {
-      animation: ${release} 0.2s;
+      animation: ${release} ${animationDurationCSS(0.2)};
       animation-fill-mode: forwards;
       background: ${colors.whiteGhost};
       bottom: -${variant === "large" ? 0 : rem(7)};

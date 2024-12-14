@@ -2,6 +2,8 @@
 import styled, { css, keyframes } from "styled-components";
 import { Property } from "csstype";
 import {
+  animationDurationCSS,
+  curves,
   device,
   globalContentMaxWidth,
   globalDecorationMaxWidth,
@@ -31,7 +33,8 @@ const threeDRotate = keyframes`
 `;
 
 const foregroundAnimation = css`
-  animation: ${threeDRotate} 3s infinite linear;
+  animation: ${threeDRotate} ${animationDurationCSS(3)} infinite
+    ${curves.linear};
 `;
 
 export const Root = styled.section`

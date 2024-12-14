@@ -1,6 +1,6 @@
 "use client";
 import styled, { keyframes } from "styled-components";
-import { sizes } from "@/entities";
+import { animationDurationCSS, curves, sizes } from "@/entities";
 import Image from "next/image";
 
 const rotate = keyframes`
@@ -17,7 +17,7 @@ export const Root = styled.div`
 `;
 
 export const SpinnerImage = styled(Image)`
-  animation: ${rotate} 1s linear infinite;
+  animation: ${rotate} ${animationDurationCSS(1)} ${curves.linear} infinite;
   height: 100%;
   object-fit: contain;
   width: 100%;

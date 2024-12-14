@@ -1,6 +1,6 @@
 "use client";
 import styled, { keyframes } from "styled-components";
-import { colors, sizes } from "@/entities";
+import { animationDurationCSS, colors, curves, sizes } from "@/entities";
 import { rem } from "polished";
 
 const fall = keyframes`
@@ -42,7 +42,7 @@ const spreadFlakes = (
             &:nth-of-type(${i}) {
                 animation-delay: calc(${duration}s * ${Math.random()});
                 left: calc((100% - ${rem(flakeSize)}) * ${(i - 1) / numberOfFlakes});
-                animation-duration: ${Math.random() * (duration - duration * 0.5) + duration * 0.8}s;
+                animation-duration: ${animationDurationCSS(Math.random() * (duration - duration * 0.5) + duration * 0.8)};
             }
         `;
   }
@@ -51,7 +51,7 @@ const spreadFlakes = (
 };
 
 export const Flake = styled.span`
-  animation: ${fall} infinite linear;
+  animation: ${fall} infinite ${curves.linear};
   aspect-ratio: 1;
   background: ${colors.whiteGhost};
   clip-path: polygon(

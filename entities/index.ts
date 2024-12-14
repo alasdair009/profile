@@ -1,5 +1,11 @@
 export { GlobalStyle } from "./design-tokens/GlobalStyle";
 
+export {
+  animationDurationCSS,
+  prefersReducedMotion,
+  curves,
+  motionStyles,
+} from "./design-tokens/animations";
 export { borderRadii } from "./design-tokens/effects";
 export { clipPaths } from "./design-tokens/clipPaths";
 export { colors } from "./design-tokens/colors";

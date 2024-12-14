@@ -1,7 +1,7 @@
 "use client";
 
 import styled, { keyframes } from "styled-components";
-import { colors, sizes } from "@/entities";
+import { animationDurationCSS, colors, sizes } from "@/entities";
 import { darken } from "polished";
 
 export const footerHeight = sizes.s128.rem;
@@ -30,7 +30,8 @@ export const Waves = styled.svg`
 
 export const Parallax = styled.g`
   > use {
-    animation: ${waving} 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    animation: ${waving} ${animationDurationCSS(25)}
+      cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
   }
   > use:nth-child(1) {
     animation-delay: -2s;

@@ -1,7 +1,9 @@
 "use client";
 import styled, { css, keyframes } from "styled-components";
 import {
+  animationDurationCSS,
   colors,
+  curves,
   globalDecorationMaxWidth,
   globalTextMaxWidth,
   sizes,
@@ -102,7 +104,8 @@ export const EffectBox = styled.span<{
   $particleBlocks: number;
   $particlesPerPlate: number;
 }>`
-  animation: ${orbitAnimation} 21s infinite linear;
+  animation: ${orbitAnimation} ${animationDurationCSS(21)} infinite
+    ${curves.linear};
   height: 25%;
   left: 50%;
   position: absolute;

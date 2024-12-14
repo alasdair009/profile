@@ -2,8 +2,10 @@
 
 import styled, { css, keyframes } from "styled-components";
 import {
+  animationDurationCSS,
   borderRadii,
   colors,
+  curves,
   device,
   fontSizes,
   globalContentMaxWidth,
@@ -38,10 +40,12 @@ const generateAnim = (index: number) => {
   const delay = index * -2;
 
   return css`
-    animation: ${rotating(index)} ${time}s ${delay}s linear infinite;
+    animation: ${rotating(index)} ${animationDurationCSS(time)} ${delay}s
+      ${curves.linear} infinite;
 
     &::before {
-      animation: ${baseRotate} ${time}s ${delay}s linear infinite reverse;
+      animation: ${baseRotate} ${animationDurationCSS(time)} ${delay}s
+        ${curves.linear} infinite reverse;
     }
   `;
 };

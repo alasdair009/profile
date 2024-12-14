@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import { Progress } from "@/entities/atoms/Progress";
-import { colors, fontSizes, sizes } from "@/entities";
+import {
+  animationDurationCSS,
+  colors,
+  curves,
+  fontSizes,
+  sizes,
+} from "@/entities";
 
 export const Root = styled.div<{ $value: number }>`
   @property --integer {
@@ -21,7 +27,8 @@ export const Root = styled.div<{ $value: number }>`
 
   &::before {
     align-items: center;
-    animation: counter 5s linear infinite alternate;
+    animation: counter ${animationDurationCSS(5)} ${curves.linear} infinite
+      alternate;
     color: ${colors.whiteGhost};
     content: counter(num);
     display: flex;
