@@ -15,10 +15,14 @@ const getSocialMediaUrl = (variant: SocialMediaLinkVariant) => {
       return "https://www.facebook.com/alasdair009";
     case "github":
       return "https://github.com/alasdair009";
+    case "instagram":
+      return "https://www.instagram.com/alasdair009";
     case "linkedin":
       return "https://www.linkedin.com/in/alasdairmacrae/";
     case "x":
       return "https://twitter.com/alasdair009";
+    case "youtube":
+      return "https://www.youtube.com/alasdair009";
   }
 };
 

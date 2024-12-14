@@ -70,3 +70,35 @@ export const Facebook: StoryObj<typeof SocialMediaLink> = {
     );
   },
 };
+
+export const Instagram: StoryObj<typeof SocialMediaLink> = {
+  args: {
+    variant: "instagram",
+  },
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const socialMediaElement = canvas.getByTestId(SocialMediaLink.name);
+
+    await expect(socialMediaElement).toBeInTheDocument();
+    await expect(socialMediaElement).toHaveAttribute(
+      "href",
+      "https://www.instagram.com/alasdair009"
+    );
+  },
+};
+
+export const YouTube: StoryObj<typeof SocialMediaLink> = {
+  args: {
+    variant: "youtube",
+  },
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const socialMediaElement = canvas.getByTestId(SocialMediaLink.name);
+
+    await expect(socialMediaElement).toBeInTheDocument();
+    await expect(socialMediaElement).toHaveAttribute(
+      "href",
+      "https://www.youtube.com/alasdair009"
+    );
+  },
+};

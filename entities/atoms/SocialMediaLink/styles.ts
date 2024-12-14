@@ -4,20 +4,26 @@ import Link from "next/link";
 import { SocialMediaLinkVariant } from "./SocialMediaLinks.types";
 import { colors, sizes } from "@/entities";
 import xIcon from "./assets/x.svg";
+import instagramIcon from "./assets/instagram.svg";
 import linkedInIcon from "./assets/linkedin.svg";
 import gitHubIcon from "./assets/github.svg";
 import facebookIcon from "./assets/facebook.svg";
+import youTubeIcon from "./assets/youtube.svg";
 
-const getMaskIcon = (variant: SocialMediaLinkVariant) => {
+const getMaskIcon = (variant: SocialMediaLinkVariant): string => {
   switch (variant) {
     case "facebook":
       return facebookIcon.src;
     case "github":
       return gitHubIcon.src;
+    case "instagram":
+      return instagramIcon.src;
     case "linkedin":
       return linkedInIcon.src;
     case "x":
       return xIcon.src;
+    case "youtube":
+      return youTubeIcon.src;
   }
 };
 
@@ -34,7 +40,7 @@ export const Root = styled(Link)<{ $variant: SocialMediaLinkVariant }>`
   mask-size: contain;
   overflow: hidden;
   position: relative;
-  width: ${sizes.s64.rem};
+  width: ${sizes.s48.rem};
   
   &::before {
     background: linear-gradient(${colors.whiteGhost} 50%, ${colors.greenGrass} 50%, ${colors.greenGrass} 100%) 0 0;
