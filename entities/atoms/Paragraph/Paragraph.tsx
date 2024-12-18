@@ -1,6 +1,6 @@
 import { Root } from "./styles";
-import { HTMLAttributes, ReactNode } from "react";
-import { colors, FontSizes, TextAlignment } from "@/entities";
+import { CSSProperties, HTMLAttributes, ReactNode } from "react";
+import { colors, FontSizes, sizes, TextAlignment } from "@/entities";
 import { Property } from "csstype";
 
 type ParagraphProps = {
@@ -28,6 +28,10 @@ type ParagraphProps = {
    * Content to show
    */
   children: ReactNode;
+  /**
+   *
+   */
+  margin?: CSSProperties["margin"];
 } & HTMLAttributes<HTMLParagraphElement>;
 
 /**
@@ -40,6 +44,7 @@ export function Paragraph({
   textWrap = "wrap",
   lines,
   children,
+  margin = `0 auto ${sizes.s24.rem}`,
   ...rest
 }: ParagraphProps) {
   return (
@@ -49,6 +54,7 @@ export function Paragraph({
       $fontSize={fontSize}
       $textWrap={textWrap}
       $lines={lines}
+      $margin={margin}
       data-testid={Paragraph.name}
       {...rest}
     >

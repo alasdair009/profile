@@ -13,6 +13,7 @@ import {
 } from "@/entities";
 import { lineHeights } from "@/entities/design-tokens/typography/typography";
 import { lineClamp } from "@/lib/line-clamp";
+import { CSSProperties } from "react";
 
 export const Root = styled.p<{
   $color: Property.Color;
@@ -20,12 +21,13 @@ export const Root = styled.p<{
   $align: Property.TextAlign;
   $textWrap: "wrap" | "balance";
   $lines: number | undefined;
+  $margin: CSSProperties["margin"];
 }>`
   color: ${({ $color }) => $color} !important;
   display: block;
   font-family: ${fonts.body} !important;
   font-size: ${({ $fontSize }) => fontSizes[$fontSize].rem} !important;
-  margin: 0 auto ${sizes.s24.rem} !important;
+  margin: ${({ $margin }) => $margin} !important;
   max-width: calc(100vw - ${sizes.s16.rem});
   text-align: ${({ $align }) => $align};
   text-wrap: ${({ $textWrap }) => $textWrap};
