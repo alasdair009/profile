@@ -3,6 +3,7 @@ import { CSSProperties } from "react";
 export const clipPaths: Record<string, CSSProperties["clipPath"]> = {
   blinds:
     "polygon(0% 5%,100% 5%,100% 25%,0% 25%,0% 40%,100% 40%,100% 60%,0% 60%,0% 75%,100% 75%,100% 95%,0% 95%)",
+  check: "polygon(28% 38%, 41% 53%, 75% 24%, 86% 38%, 40% 78%, 15% 50%)",
   chevronDown: "polygon(25% 25%, 50% 50%, 75% 25%, 75% 35%, 50% 60%, 25% 35%)",
   cross:
     "polygon(0 40%, 40% 40%, 40% 0, 60% 0, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%)",

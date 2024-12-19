@@ -1,5 +1,6 @@
 import { Meta } from "@storybook/blocks";
 import { clipPaths } from "./clipPaths";
+import { colors } from "../colors";
 
 <Meta title="Design Tokens/Clip Paths" />
 
@@ -8,7 +9,15 @@ import { clipPaths } from "./clipPaths";
 Basic iconography can be created without the need for a net request using a css clip-path.
 Below is a gallery of icons I have created for use across my site.
 
-<div style={{ display: "flex", gap: 8, width: "100%" }}>
+<div
+  style={{
+    display: "flex",
+    flexWrap: "wrap",
+    gap: 8,
+    justifyContent: "space-between",
+    width: "100%",
+  }}
+>
   {Object.keys(clipPaths).map((clipPathKey) => {
     return (
       <article style={{ textAlign: "center", overflow: "hidden", width: 125 }}>
@@ -16,7 +25,7 @@ Below is a gallery of icons I have created for use across my site.
         <div
           style={{
             aspectRatio: 1,
-            background: "white",
+            background: colors.whiteGhost,
             clipPath: clipPaths[clipPathKey],
             margin: "0 auto",
             width: 100,
