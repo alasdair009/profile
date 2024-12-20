@@ -24,7 +24,7 @@ export const generateMetaData = (
     | undefined = undefined
 ): Metadata => {
   return {
-    title: `${pageTitle} | ${siteName}`,
+    title: `${pageTitle} | ${siteName} | front end web engineer trampolinist`,
     description: pageDescription,
     manifest: "/manifest.webmanifest",
     metadataBase: new URL(`${siteOrigin}/${pagePath}`),
