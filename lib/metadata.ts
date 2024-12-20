@@ -5,7 +5,7 @@ import { OpenGraphType } from "next/dist/lib/metadata/types/opengraph-types";
 export const siteName = "Alasdair Macrae";
 export const myName = "Alasdair Macrae";
 export const siteDescription =
-  "I am a front-end web engineer with a passion for pushing the limits of CSS to new heights. I have experience across a multitude of different languages and infrastructures and am always looking for exciting new challenges.";
+  "Front-end web engineer with a passion for pushing the limits of CSS to new heights. I have experience as a developer with different languages & infrastructures to build awesome web experiences.";
 export const generateMetaData = (
   pageTitle = "Home",
   pageDescription = siteDescription,

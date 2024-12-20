@@ -79,11 +79,17 @@ export default function Home() {
         </Heading>
         <Spacer />
         <Paragraph>
-          Thinking up creative solutions to problems and projects has been the
-          driving force behind my career. I have worked on a prodigious variety
-          of projects including gaming websites, progressive web apps, desktop
-          applications, internal company tools and even take on the occasional
-          volunteer projects for local sports clubs!
+          Thinking up creative solutions to front-end web problems and projects
+          has been the driving force behind my career. I have worked on a
+          prodigious variety of projects including gaming websites, progressive
+          web apps, desktop applications, internal company tools and even take
+          on the occasional volunteer projects for local sports clubs!
+        </Paragraph>
+        <Paragraph>
+          I can develop well on my own or as part of a team. I formed high
+          perming teams to develop software that supports computer games
+          including RuneScape and Scum. I often mentor other members of my team
+          to maximise the potential of the front-end deliverable.
         </Paragraph>
         <Paragraph>
           I am fervent to hear of any opportunities that allow me to construct
