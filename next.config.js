@@ -20,6 +20,11 @@ const nextConfig = {
         hostname: "cdn.sanity.io",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "secure.runescape.com",
+        port: "",
+      },
     ],
   },
   async redirects() {
