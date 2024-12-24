@@ -30,7 +30,7 @@ export const Root = styled.button<{ $variant: ButtonVariant }>`
   padding: 0
     ${({ $variant }) => ($variant === "standard" ? sizes.s48.rem : "0")};
   position: relative;
-  transition: padding ${animationDurationCSS(0.5)}s;
+  transition: padding ${animationDurationCSS(0.5)};
   z-index: 0;
 
   &::before,
@@ -44,7 +44,7 @@ export const Root = styled.button<{ $variant: ButtonVariant }>`
     position: absolute;
     top: 0;
     transform: translateX(-50%);
-    transition: all ${animationDurationCSS(0.5)}s;
+    transition: all ${animationDurationCSS(0.5)};
     width: calc(100% - ${sizes.s32.rem});
     z-index: -1;
   }

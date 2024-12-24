@@ -49,7 +49,7 @@ export const Root = styled(Link)<{ $variant: SocialMediaLinkVariant }>`
     left: 0;
     position: absolute;
     top: 0;
-    transition: all ${animationDurationCSS(0.25)}s;
+    transition: all ${animationDurationCSS(0.25)};
     width: 100%;
   }
 

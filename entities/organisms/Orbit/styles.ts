@@ -81,7 +81,7 @@ export const Particle = styled.span<{
   right: -16%;
   top: 50%;
   transform-style: preserve-3d;
-  transition: animation-duration ${animationDurationCSS(1)}s;
+  transition: animation-duration ${animationDurationCSS(1)};
 
   &::before {
     align-items: center;
@@ -154,7 +154,7 @@ export const Core = styled.div`
   &::after {
     background: url(${amLogo.src}) no-repeat center;
     opacity: 0;
-    transition: opacity ${animationDurationCSS(0.5)}s;
+    transition: opacity ${animationDurationCSS(0.5)};
 
     @media (prefers-reduced-motion) {
       opacity: 1;
@@ -167,7 +167,7 @@ export const Core = styled.div`
     }
 
     ${Particle} {
-      animation-duration: ${animationDurationCSS(10)}s;
+      animation-duration: ${animationDurationCSS(10)};
     }
   }
 `;

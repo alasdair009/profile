@@ -63,7 +63,7 @@ export const Root = styled.hr<{
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    transition: transform ${animationDurationCSS(1)}s;
+    transition: transform ${animationDurationCSS(1)};
 
     &:hover {
       transform: translate(-50%, -50%) rotateX(360deg);

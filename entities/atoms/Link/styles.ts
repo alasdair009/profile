@@ -117,7 +117,7 @@ export const HoverIFrameWrapper = styled.div`
   left: 50%;
   top: 100%;
   transform: translate(-50%, 0);
-  transition: all ${animationDurationCSS(0.2)}s;
+  transition: all ${animationDurationCSS(0.2)};
   user-select: none;
 `;
 

@@ -22,7 +22,7 @@ export const InputWrapper = styled.div<{ $hasSubmitted: boolean }>`
   justify-content: center;
   transform: ${({ $hasSubmitted }) =>
     $hasSubmitted ? "translateX(100vw)" : "none"};
-  transition: transform ${animationDurationCSS(0.5)}s;
+  transition: transform ${animationDurationCSS(0.5)};
   width: 100%;
 `;
 
