@@ -5,6 +5,7 @@ import {
   RainCanvas,
 } from "@/entities/organisms/Lightning/styles";
 import { lighten, rgba } from "polished";
+import { prefersReducedMotion } from "@/entities";
 
 type RainProps = {
   rainDrops?: number;
@@ -109,18 +110,22 @@ export function Rain({
     clear(ctx, w, h);
 
     for (let i = 0; i < rainDrops; i++) {
-      rain[i].x += rain[i].xs;
-      rain[i].y += rain[i].ys;
-      if (rain[i].x > w || rain[i].y > h) {
-        rain[i].x = Math.random() * w;
-        rain[i].y = -20;
+      if (!prefersReducedMotion) {
+        rain[i].x += rain[i].xs;
+        rain[i].y += rain[i].ys;
+        if (rain[i].x > w || rain[i].y > h) {
+          rain[i].x = Math.random() * w;
+          rain[i].y = -20;
+        }
       }
       drawRain(ctx, i);
 
-      if (rainTrough[i].y >= h) {
-        rainTrough[i].y = h - rainTrough[i].y - rainTrough[i].length * 5;
-      } else {
-        rainTrough[i].y += speedRainTrough;
+      if (!prefersReducedMotion) {
+        if (rainTrough[i].y >= h) {
+          rainTrough[i].y = h - rainTrough[i].y - rainTrough[i].length * 5;
+        } else {
+          rainTrough[i].y += speedRainTrough;
+        }
       }
       drawRainTrough(ctx, i);
     }

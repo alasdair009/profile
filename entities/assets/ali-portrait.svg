@@ -26,6 +26,13 @@
                 animation: draw 8s infinite linear;
                 stroke-width: 4px;
             }
+            @media (prefers-reduced-motion) {
+                .strokePoint {
+                    animation: none;
+                    fill: #fff;
+                    stroke-dasharray: 10000;
+                }
+            }
         </style>
     </defs>
 <g transform="translate(0.000000,1200.000000) scale(0.100000,-0.100000)"

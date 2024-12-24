@@ -48,6 +48,11 @@
                     animation: rotate 5s infinite linear;
                     transform-origin: 50% 30%;
                 }
+                @media (prefers-reduced-motion) {
+                    .gymnast {
+                        animation: none;
+                    }
+                }
             </style>
         </defs>
     <polyline class="trampoline" points="-.36 300 69.644 200 229.635 200 299.64 300"/>

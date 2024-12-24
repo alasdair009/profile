@@ -2,7 +2,7 @@
 import { ProgressRing, Root } from "./styles";
 import { HTMLAttributes, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { sizes } from "@/entities";
+import { prefersReducedMotion, sizes } from "@/entities";
 
 type ScoreCounterProps = {
   /**
@@ -15,11 +15,17 @@ type ScoreCounterProps = {
  * Animated score counter that displays indicated percentage progress.
  */
 export function ScoreCounter({ value = 100, ...rest }: ScoreCounterProps) {
-  const [progressValue, setProgressValue] = useState(0);
+  const [progressValue, setProgressValue] = useState(
+    prefersReducedMotion ? value : 0
+  );
 
   const { ref, inView } = useInView({ threshold: 1 });
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+
     if (inView) {
       let start = 0;
       if (start >= value) {

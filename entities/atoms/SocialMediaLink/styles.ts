@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { SocialMediaLinkVariant } from "./SocialMediaLinks.types";
-import { colors, sizes } from "@/entities";
+import { animationDurationCSS, colors, sizes } from "@/entities";
 import xIcon from "./assets/x.svg";
 import instagramIcon from "./assets/instagram.svg";
 import linkedInIcon from "./assets/linkedin.svg";
@@ -49,7 +49,7 @@ export const Root = styled(Link)<{ $variant: SocialMediaLinkVariant }>`
     left: 0;
     position: absolute;
     top: 0;
-    transition: all 0.25s;
+    transition: all ${animationDurationCSS(0.25)}s;
     width: 100%;
   }
 

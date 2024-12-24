@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { Link as ViewTransitionLink } from "next-view-transitions";
 import styled, { css, keyframes } from "styled-components";
 import {
@@ -118,7 +117,7 @@ export const HoverIFrameWrapper = styled.div`
   left: 50%;
   top: 100%;
   transform: translate(-50%, 0);
-  transition: all 0.2s;
+  transition: all ${animationDurationCSS(0.2)}s;
   user-select: none;
 `;
 

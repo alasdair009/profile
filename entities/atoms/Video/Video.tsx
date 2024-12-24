@@ -1,6 +1,8 @@
+"use client";
 import { Root } from "./styles";
 import { HTMLAttributes } from "react";
 import { StaticImageData } from "next/image";
+import { prefersReducedMotion } from "@/entities";
 
 type VideoProps = {
   /**
@@ -44,7 +46,7 @@ export function Video({
   return (
     <Root
       loop={loop}
-      autoPlay={autoPlay}
+      autoPlay={!prefersReducedMotion}
       playsInline={autoPlay}
       muted={muted}
       poster={poster.src}

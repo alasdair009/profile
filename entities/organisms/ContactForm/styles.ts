@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { globalInputMaxWidth, Paragraph, sizes } from "@/entities";
+import {
+  animationDurationCSS,
+  globalInputMaxWidth,
+  Paragraph,
+  sizes,
+} from "@/entities";
 import { rem } from "polished";
 
 export const Root = styled.form`
@@ -17,7 +22,7 @@ export const InputWrapper = styled.div<{ $hasSubmitted: boolean }>`
   justify-content: center;
   transform: ${({ $hasSubmitted }) =>
     $hasSubmitted ? "translateX(100vw)" : "none"};
-  transition: transform 0.5s;
+  transition: transform ${animationDurationCSS(0.5)}s;
   width: 100%;
 `;
 

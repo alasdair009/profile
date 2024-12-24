@@ -41,7 +41,7 @@ const generateBlockStyles = (
     blockStyles += `
           &:nth-child(${i}) {
             animation-delay: -${i * (particleBaseDuration / i)}s;
-            animation-duration: ${particleBaseDuration + (particleBaseDuration / 2) * i}s;
+            animation-duration: ${animationDurationCSS(particleBaseDuration + (particleBaseDuration / 2) * i)};
             animation-direction: reverse;
 
             &::before {

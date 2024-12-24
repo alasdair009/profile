@@ -2,7 +2,12 @@
 import { rem } from "polished";
 
 import { HorizontalRuleMarginOptions } from "./HorizontalRule.types";
-import { colors, globalDecorationMaxWidth, sizes } from "@/entities";
+import {
+  animationDurationCSS,
+  colors,
+  globalDecorationMaxWidth,
+  sizes,
+} from "@/entities";
 import styled from "styled-components";
 import amLogo from "../../assets/am.svg";
 
@@ -58,7 +63,7 @@ export const Root = styled.hr<{
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 1s;
+    transition: transform ${animationDurationCSS(1)}s;
 
     &:hover {
       transform: translate(-50%, -50%) rotateX(360deg);

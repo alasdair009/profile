@@ -5,6 +5,7 @@ import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { StaticImageData } from "next/image";
 import { TimelineElement } from "./TimelineElement";
+import { prefersReducedMotion } from "@/entities";
 
 export type TimelineEntry = {
   date: string;
@@ -20,7 +21,7 @@ export type TimelineProps = {
 export function Timeline({ entries, ...rest }: TimelineProps) {
   return (
     <Root {...rest}>
-      <VerticalTimeline>
+      <VerticalTimeline animate={!prefersReducedMotion}>
         {entries.map((entry, index) => (
           <TimelineElement
             key={`${entry.date}${entry.icon}${index}`}

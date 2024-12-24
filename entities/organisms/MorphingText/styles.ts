@@ -37,6 +37,14 @@ export const Text = styled.span<{ $wordIndex: number; $wordCount: number }>`
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+
+  @media (prefers-reduced-motion) {
+    animation: none;
+    left: auto;
+    position: relative;
+    top: auto;
+    transform: none;
+  }
 `;
 
 export const Morpher = styled.h2`
@@ -44,4 +52,10 @@ export const Morpher = styled.h2`
   position: relative;
   min-height: ${rem(480)};
   width: 100%;
+
+  @media (prefers-reduced-motion) {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
 `;

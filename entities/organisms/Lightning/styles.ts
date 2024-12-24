@@ -61,6 +61,10 @@ export const Background = styled(Image)<{ $frequency: number }>`
   position: absolute;
   top: 0;
   width: 100%;
+
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
 `;
 
 export const Strike = styled(Image)<{ $frequency: number }>`
@@ -73,6 +77,11 @@ export const Strike = styled(Image)<{ $frequency: number }>`
   position: absolute;
   top: 0;
   width: 100%;
+
+  @media (prefers-reduced-motion) {
+    animation: none;
+    opacity: 1;
+  }
 `;
 
 export const Content = styled.div`

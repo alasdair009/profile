@@ -1,6 +1,12 @@
 "use client";
 import styled from "styled-components";
-import { colors, fontSizes, fontWeights, sizes } from "@/entities";
+import {
+  animationDurationCSS,
+  colors,
+  fontSizes,
+  fontWeights,
+  sizes,
+} from "@/entities";
 import { darken, rem } from "polished";
 import { ButtonVariant } from "@/entities/atoms/Button/Button.types";
 
@@ -24,7 +30,7 @@ export const Root = styled.button<{ $variant: ButtonVariant }>`
   padding: 0
     ${({ $variant }) => ($variant === "standard" ? sizes.s48.rem : "0")};
   position: relative;
-  transition: padding 0.5s;
+  transition: padding ${animationDurationCSS(0.5)}s;
   z-index: 0;
 
   &::before,
@@ -38,7 +44,7 @@ export const Root = styled.button<{ $variant: ButtonVariant }>`
     position: absolute;
     top: 0;
     transform: translateX(-50%);
-    transition: all 0.5s;
+    transition: all ${animationDurationCSS(0.5)}s;
     width: calc(100% - ${sizes.s32.rem});
     z-index: -1;
   }

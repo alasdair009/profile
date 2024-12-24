@@ -2,7 +2,6 @@ import {
   BlockQuote,
   colors,
   ContactForm,
-  ContentPlate,
   CopyBlock,
   FixedPlate,
   Flurry,

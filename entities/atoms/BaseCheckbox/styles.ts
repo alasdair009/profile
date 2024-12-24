@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { colors, sizes } from "@/entities";
+import { animationDurationCSS, colors, sizes } from "@/entities";
 import { rem } from "polished";
 
 export const Root = styled.input<{ $isInvalid: boolean }>`
@@ -23,7 +23,8 @@ export const Root = styled.input<{ $isInvalid: boolean }>`
     margin: 50%;
     position: absolute;
     transform: translateY(-50%) translateX(-100%) rotate(90deg) scale(0);
-    transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform ${animationDurationCSS(0.3)}s
+      cubic-bezier(0.175, 0.885, 0.32, 1.275);
     width: 75%;
   }
 
