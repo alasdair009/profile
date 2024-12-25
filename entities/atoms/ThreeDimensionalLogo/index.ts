@@ -1,0 +1,1 @@
+export { ThreeDimensionalLogo } from "./ThreeDimensionalLogo";
