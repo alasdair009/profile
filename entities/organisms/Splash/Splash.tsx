@@ -11,7 +11,12 @@ import { colors, Heading, Link } from "@/entities";
 
 export function Splash({ ...rest }: HTMLAttributes<HTMLDivElement>) {
   return (
-    <Root itemScope={true} itemType="https://schema.org/Person" {...rest}>
+    <Root
+      itemScope={true}
+      itemType="https://schema.org/Person"
+      data-testid={Splash.name}
+      {...rest}
+    >
       <Inner>
         <FeetSection>
           <Copy>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+    <defs>
+        <style>
+            .front {
+                fill: #b00;
+            }
+            .side {
+                fill: darkred;
+            }
+            .back-roof {
+                fill: #901900;
+            }
+            .front-roof {
+                fill: #a62f20;
+            }
+            .path {
+                fill: brown;
+            }
+            .front-window {
+                fill: white;
+                height: 50px;
+                width: 100px;
+            }
+            .tree-branches {
+                fill: darkgreen;
+            }
+            .tree-trunk {
+                fill: brown;
+            }
+            .grass {
+                fill: green;
+            }
+        </style>
+    </defs>
+    <title>Talihouse</title>
+    <rect class="front" width="500" height="300" x="100" y="450" />
+    <rect class="door" width="50" height="100" fill="black" x="330" y="650" />
+    <polygon class="back-roof" points="600,450 550,350 650,250 700,300" />
+    <polygon class="front-roof" points="600,450 550,350 150,350 100,450" />
+    <polygon class="side" points="600,750 600,450, 700,300 700,500" />
+    <polygon class="grass" points="100,750 50,900 600,900 740,500 700,500 600,750 " />
+    <polygon class="path" points="320,750 300,800 83,800 66,850 350,850 390,750" />
+    <g class="front-windows">
+        <rect class="front-window" x="150" y="650" />
+        <rect class="front-window" x="150" y="500" />
+        <rect class="front-window" x="450" y="500" />
+        <rect class="front-window" x="450" y="650" />
+    </g>
+    <g class="trees">
+        <polygon class="tree-branches" points="700,700 750,500 800,700" />
+        <rect x="725" y="700" height="100" width="50" />
+    </g>
+</svg>

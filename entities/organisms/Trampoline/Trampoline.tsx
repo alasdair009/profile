@@ -5,7 +5,7 @@ import { Heading, Spacer } from "@/entities";
 
 export function Trampoline({ ...rest }: HTMLAttributes<HTMLDivElement>) {
   return (
-    <Root {...rest}>
+    <Root data-testid={Trampoline.name} {...rest}>
       <Spacer multiplier={4} />
       <Heading level="h2">Trampoline</Heading>
       <Heading level="h3">Gymnast & Coach</Heading>

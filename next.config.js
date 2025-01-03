@@ -3,6 +3,7 @@ const {
   VERCEL_URL,
   ALLOW_TRANSITIONS,
   NEXT_FORMSPREE_CONTACT_ENDPOINT,
+  NETATMO_WEATHER_TOKEN,
 } = process.env;
 
 /** @type {import('next').NextConfig} */
@@ -12,6 +13,7 @@ const nextConfig = {
     VERCEL_URL,
     ALLOW_TRANSITIONS,
     NEXT_FORMSPREE_CONTACT_ENDPOINT,
+    NETATMO_WEATHER_TOKEN,
   },
   images: {
     remotePatterns: [
