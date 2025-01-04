@@ -1,6 +1,12 @@
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
-import { ErrorText, Heading, HorizontalRule, Paragraph } from "@/entities";
+import {
+  Container,
+  ErrorText,
+  Heading,
+  HorizontalRule,
+  Paragraph,
+} from "@/entities";
 import { WeatherStation } from "@/entities/organisms/WeatherStation";
 
 export const metadata: Metadata = generateMetaData(
@@ -94,9 +100,10 @@ export default async function WeatherPage() {
           {/*<pre>{JSON.stringify(station, null, 4)}</pre>*/}
         </>
       ) : (
-        <>
+        <Container>
           <ErrorText>There was a problem communicating with Netatmo.</ErrorText>
-        </>
+          <pre>{JSON.stringify(stationResponse)}</pre>
+        </Container>
       )}
     </>
   );
