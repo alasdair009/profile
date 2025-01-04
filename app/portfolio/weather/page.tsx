@@ -73,12 +73,12 @@ export default async function WeatherPage() {
       return obj.module_name === "Anemometer";
     })[0].dashboard_data;
   } else {
-    console.error(
-      `Could not get response from Netatmo using token: ${process.env.NETATMO_WEATHER_TOKEN}`
+    console.log(
+      `Warning: Could not get response from Netatmo using token: ${process.env.NETATMO_WEATHER_TOKEN}`
     );
 
     // TODO: remove
-    console.error(stationResponse.json());
+    console.log(stationResponse.json());
   }
 
   return (
