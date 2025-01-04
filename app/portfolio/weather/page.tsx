@@ -77,6 +77,7 @@ export default async function WeatherPage() {
       `Could not get response from Netatmo using token: ${process.env.NETATMO_WEATHER_TOKEN}`
     );
 
+    // TODO: remove
     console.error(stationResponse.json());
   }
 
