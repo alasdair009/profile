@@ -48,6 +48,11 @@ export default async function WeatherPage() {
     windData = station.modules.filter((obj) => {
       return obj.module_name === "Anemometer";
     })[0].dashboard_data;
+  } else {
+    console.error(
+      `Could not get response from Netatmo using token: ${process.env.NETATMO_WEATHER_TOKEN}`,
+      stationResponse.json()
+    );
   }
 
   return (
