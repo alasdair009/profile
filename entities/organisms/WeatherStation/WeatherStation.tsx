@@ -9,6 +9,7 @@ type WeatherStationProps = {
   windStrength?: number;
   windAngle?: number;
   temperature?: number;
+  pressure?: number;
 } & HTMLAttributes<HTMLDivElement>;
 
 const directions = [
@@ -35,6 +36,7 @@ export function WeatherStation({
   windStrength,
   windAngle,
   temperature,
+  pressure,
   ...rest
 }: WeatherStationProps) {
   return (
@@ -53,6 +55,7 @@ export function WeatherStation({
           <li>windStrength: {windStrength}kph</li>
           <li>windAngle: {getDirection(windAngle)}</li>
           <li>temperature: {temperature}&deg;C</li>
+          <li>pressure: {temperature}</li>
         </UnorderedList>
       </Inner>
     </Root>

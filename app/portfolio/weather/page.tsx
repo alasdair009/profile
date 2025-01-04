@@ -12,6 +12,21 @@ export const metadata: Metadata = generateMetaData(
 type WeatherStationData = {
   body: {
     devices: {
+      dashboard_data: {
+        time_utc: number;
+        Temperature: number;
+        CO2: number;
+        Humidity: number;
+        Noise: number;
+        Pressure: number;
+        AbsolutePressure: number;
+        min_temp: number;
+        max_temp: number;
+        date_max_temp: number;
+        date_min_temp: number;
+        temp_trend: "stable";
+        pressure_trend: "stable";
+      };
       modules: {
         module_name: string;
         dashboard_data: {
@@ -27,7 +42,7 @@ type WeatherStationData = {
 
 export default async function WeatherPage() {
   const query = `https://api.netatmo.com/api/getstationsdata?get_favorites=false`;
-  let outdoorData, rainData, windData;
+  let station, indoorData, outdoorData, rainData, windData;
   const stationResponse = await fetch(query, {
     headers: {
       Authorization: `Bearer ${process.env.NETATMO_WEATHER_TOKEN}`,
@@ -36,7 +51,10 @@ export default async function WeatherPage() {
 
   if (stationResponse.ok) {
     const data: WeatherStationData = await stationResponse.json();
-    const station = data.body.devices[0];
+    station = data.body.devices[0];
+
+    indoorData = station.dashboard_data;
+
     outdoorData = station.modules.filter((obj) => {
       return obj.module_name === "Outdoor Weather Station";
     })[0].dashboard_data;
@@ -71,7 +89,9 @@ export default async function WeatherPage() {
             windStrength={windData ? windData.WindStrength : undefined}
             windAngle={windData ? windData.WindAngle : undefined}
             temperature={outdoorData ? outdoorData.Temperature : undefined}
+            pressure={indoorData ? indoorData.Pressure : undefined}
           />
+          {/*<pre>{JSON.stringify(station, null, 4)}</pre>*/}
         </>
       ) : (
         <>
