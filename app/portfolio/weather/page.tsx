@@ -48,16 +48,24 @@ type WeatherStationData = {
 
 export default async function WeatherPage() {
   const query = `https://api.netatmo.com/api/getstationsdata?get_favorites=false`;
-  let station, indoorData, outdoorData, rainData, windData;
+  let station,
+    allData: WeatherStationData,
+    indoorData,
+    outdoorData,
+    rainData,
+    windData;
   const stationResponse = await fetch(query, {
     headers: {
       Authorization: `Bearer ${process.env.NETATMO_WEATHER_TOKEN}`,
     },
   });
 
+  // const stationJson = await stationResponse.json();
+  let stationJson;
+
   if (stationResponse.ok) {
-    const data: WeatherStationData = await stationResponse.json();
-    station = data.body.devices[0];
+    allData = await stationResponse.json();
+    station = allData.body.devices[0];
 
     indoorData = station.dashboard_data;
 
@@ -77,8 +85,10 @@ export default async function WeatherPage() {
       `Warning: Could not get response from Netatmo using token: ${process.env.NETATMO_WEATHER_TOKEN}`
     );
 
+    allData = await stationResponse.json();
+
     // TODO: remove
-    console.log(stationResponse.json());
+    console.log(allData);
   }
 
   return (
@@ -99,12 +109,12 @@ export default async function WeatherPage() {
             temperature={outdoorData ? outdoorData.Temperature : undefined}
             pressure={indoorData ? indoorData.Pressure : undefined}
           />
-          {/*<pre>{JSON.stringify(station, null, 4)}</pre>*/}
+          <pre>{JSON.stringify(allData, null, 4)}</pre>
         </>
       ) : (
         <Container>
           <ErrorText>There was a problem communicating with Netatmo.</ErrorText>
-          <pre>{JSON.stringify(stationResponse)}</pre>
+          <pre>{JSON.stringify(allData)}</pre>
         </Container>
       )}
     </>
