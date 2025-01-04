@@ -60,9 +60,6 @@ export default async function WeatherPage() {
     },
   });
 
-  // const stationJson = await stationResponse.json();
-  let stationJson;
-
   if (stationResponse.ok) {
     allData = await stationResponse.json();
     station = allData.body.devices[0];
@@ -85,10 +82,9 @@ export default async function WeatherPage() {
       `Warning: Could not get response from Netatmo using token: ${process.env.NETATMO_WEATHER_TOKEN}`
     );
 
-    allData = await stationResponse.json();
-
-    // TODO: remove
-    console.log(allData);
+    stationResponse.text().then((text) => {
+      throw new Error(text);
+    });
   }
 
   return (
@@ -109,12 +105,12 @@ export default async function WeatherPage() {
             temperature={outdoorData ? outdoorData.Temperature : undefined}
             pressure={indoorData ? indoorData.Pressure : undefined}
           />
-          <pre>{JSON.stringify(allData, null, 4)}</pre>
+          {/*<pre>{JSON.stringify(allData, null, 4)}</pre>*/}
         </>
       ) : (
         <Container>
           <ErrorText>There was a problem communicating with Netatmo.</ErrorText>
-          <pre>{JSON.stringify(allData)}</pre>
+          {/*<pre>{JSON.stringify(allData)}</pre>*/}
         </Container>
       )}
     </>
