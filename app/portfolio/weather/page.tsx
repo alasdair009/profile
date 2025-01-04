@@ -34,7 +34,7 @@ type WeatherStationData = {
         pressure_trend: "stable";
       };
       modules: {
-        module_name: string;
+        module_name: "Outdoor Weather Station" | "Rain Gauge" | "Anemometer";
         dashboard_data: {
           Rain?: number;
           WindAngle?: number;
