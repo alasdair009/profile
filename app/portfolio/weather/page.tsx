@@ -79,7 +79,7 @@ export default async function WeatherPage() {
     })[0].dashboard_data;
   } else {
     console.log(
-      `Warning: Could not get response from Netatmo using token: ${process.env.NETATMO_WEATHER_TOKEN}`
+      `Warning: Could not get response from Netatmo using token of: ${process.env.NETATMO_WEATHER_TOKEN}`
     );
 
     stationResponse.text().then((text) => {
