@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 import { Frame, House, Inner, Root } from "./styles";
-import { UnorderedList } from "@/entities";
+import { Spinner, UnorderedList } from "@/entities";
 import talihouse from "./house.svg";
 import { StaticImageData } from "next/image";
 
@@ -52,13 +52,18 @@ export function WeatherStation({
             height={1000}
           />
         </Frame>
-        {isPending && <span>Requesting new data...</span>}
+        {isPending && (
+          <span>
+            Requesting new data...
+            <Spinner style={{ display: "inline-block" }} />
+          </span>
+        )}
         <UnorderedList>
           <li>rain: {rain}mm</li>
           <li>windStrength: {windStrength}kph</li>
           <li>windAngle: {getDirection(windAngle)}</li>
           <li>temperature: {temperature}&deg;C</li>
-          <li>pressure: {temperature}</li>
+          <li>pressure: {temperature}mbar</li>
         </UnorderedList>
       </Inner>
     </Root>

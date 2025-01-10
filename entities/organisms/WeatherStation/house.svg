@@ -23,9 +23,13 @@
             }
             .tree-branches {
                 fill: darkgreen;
+                stroke: #38682d;
+                stroke-width: 5px;
             }
             .tree-trunk {
                 fill: brown;
+                stroke: #552222;
+                stroke-width: 5px;
             }
             .grass {
                 fill: green;
@@ -47,7 +51,19 @@
         <rect class="front-window" x="450" y="650" />
     </g>
     <g class="trees">
+        <rect class="tree-trunk" x="775" y="650" height="100" width="50" />
+        <polygon class="tree-branches" points="750,650 800,450 850,650" />
+    </g>
+    <g class="trees">
+        <rect class="tree-trunk" x="725" y="700" height="100" width="50" />
         <polygon class="tree-branches" points="700,700 750,500 800,700" />
-        <rect x="725" y="700" height="100" width="50" />
+    </g>
+    <g class="trees">
+        <rect class="tree-trunk" x="650" y="750" height="100" width="50" />
+        <polygon class="tree-branches" points="625,750 675,550 725,750" />
+    </g>
+    <g class="trees">
+        <rect class="tree-trunk" x="740" y="800" height="100" width="50" />
+        <polygon class="tree-branches" points="715,800 765,600 815,800" />
     </g>
 </svg>
