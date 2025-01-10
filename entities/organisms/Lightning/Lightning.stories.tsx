@@ -1,5 +1,7 @@
 import { Lightning } from "./Lightning";
 import { Meta, StoryObj } from "@storybook/react";
+import { expect, within } from "@storybook/test";
+import { Rain } from ".//Rain";
 
 const meta: Meta<typeof Lightning> = {
   component: Lightning,
@@ -14,7 +16,18 @@ const meta: Meta<typeof Lightning> = {
       control: { type: "range", min: 1, max: 3, step: 0.1 },
     },
   },
+  subcomponents: {
+    //@ts-ignore
+    Rain: Rain,
+  },
 };
 export default meta;
 
-export const Default: StoryObj<typeof Lightning> = {};
+export const Default: StoryObj<typeof Lightning> = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const lightningElement = canvas.getByTestId(Lightning.name);
+
+    await expect(lightningElement).toBeInTheDocument();
+  },
+};

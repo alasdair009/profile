@@ -24,7 +24,12 @@ export function TimelineElement({
     triggerOnce: true,
   });
   return (
-    <Root ref={ref} className="vertical-timeline-element" {...rest}>
+    <Root
+      ref={ref}
+      className="vertical-timeline-element"
+      data-testid={TimelineElement.name}
+      {...rest}
+    >
       <VerticalTimelineElement
         visible={inView}
         contentStyle={{

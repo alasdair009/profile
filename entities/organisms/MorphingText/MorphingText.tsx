@@ -5,13 +5,18 @@ type MorphingTextProps = {
   values: string[];
 } & HTMLAttributes<HTMLDivElement>;
 
-export function MorphingText({ values }: MorphingTextProps) {
+export function MorphingText({ values, ...rest }: MorphingTextProps) {
   return (
-    <Root>
+    <Root data-testid={MorphingText.name} {...rest}>
       <Morpher>
         {values.map((value, index) => {
           return (
-            <Text $wordCount={values.length} $wordIndex={index} key={value}>
+            <Text
+              $wordCount={values.length}
+              $wordIndex={index}
+              key={value}
+              data-testid={`${MorphingText.name}Text`}
+            >
               {value}
             </Text>
           );

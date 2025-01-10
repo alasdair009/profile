@@ -20,7 +20,7 @@ export type TimelineProps = {
 
 export function Timeline({ entries, ...rest }: TimelineProps) {
   return (
-    <Root {...rest}>
+    <Root data-testid={Timeline.name} {...rest}>
       <VerticalTimeline animate={!prefersReducedMotion}>
         {entries.map((entry, index) => (
           <TimelineElement

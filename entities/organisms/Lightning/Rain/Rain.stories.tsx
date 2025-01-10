@@ -1,6 +1,7 @@
 import { Rain } from "./Rain";
 import { Meta, StoryObj } from "@storybook/react";
 import { colors } from "@/entities";
+import { expect, within } from "@storybook/test";
 
 const meta: Meta<typeof Rain> = {
   component: Rain,
@@ -26,4 +27,11 @@ const meta: Meta<typeof Rain> = {
 };
 export default meta;
 
-export const Default: StoryObj<typeof Rain> = {};
+export const Default: StoryObj<typeof Rain> = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const rainElement = canvas.getByTestId(Rain.name);
+
+    await expect(rainElement).toBeInTheDocument();
+  },
+};

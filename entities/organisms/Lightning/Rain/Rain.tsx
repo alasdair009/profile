@@ -161,7 +161,7 @@ export function Rain({
   }, [drawRain]);
 
   return (
-    <Root {...rest}>
+    <Root data-testid={Rain.name} {...rest}>
       <RainCanvas ref={rainCanvasRef} data-chromatic="ignore" />
     </Root>
   );

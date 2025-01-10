@@ -10,6 +10,7 @@ type WeatherStationProps = {
   windAngle?: number;
   temperature?: number;
   pressure?: number;
+  isPending?: boolean;
 } & HTMLAttributes<HTMLDivElement>;
 
 const directions = [
@@ -37,6 +38,7 @@ export function WeatherStation({
   windAngle,
   temperature,
   pressure,
+  isPending = false,
   ...rest
 }: WeatherStationProps) {
   return (
@@ -50,6 +52,7 @@ export function WeatherStation({
             height={1000}
           />
         </Frame>
+        {isPending && <span>Requesting new data...</span>}
         <UnorderedList>
           <li>rain: {rain}mm</li>
           <li>windStrength: {windStrength}kph</li>

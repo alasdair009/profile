@@ -15,7 +15,7 @@ import { NotificationButton } from "./NotificationButton";
 type HeaderProps = {} & HTMLAttributes<HTMLDivElement>;
 export function Header({ children, ...rest }: HeaderProps) {
   return (
-    <Root {...rest}>
+    <Root data-testid={Header.name} {...rest}>
       <Inner>
         <Link href="/">
           <HeaderLogo src={amLogo} alt="AM logo" height={sizes.s32.raw} />

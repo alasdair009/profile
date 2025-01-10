@@ -13,7 +13,7 @@ export function Lightning({
   ...rest
 }: LightningProps) {
   return (
-    <Root {...rest}>
+    <Root data-testid={Lightning.name} {...rest}>
       <Inner>
         <Background
           src={backgroundImage}
