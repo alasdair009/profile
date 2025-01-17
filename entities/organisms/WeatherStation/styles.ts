@@ -44,7 +44,6 @@ export const Frame = styled.div`
     0 ${rem(5)} ${rem(10)} ${rem(5)} ${rgba(colors.blackEvil, 0.25)};
   display: flex;
   margin: 10vh 10vw;
-  padding: 8vmin;
   position: relative;
 
   &::before {

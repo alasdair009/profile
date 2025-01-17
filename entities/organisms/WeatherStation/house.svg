@@ -1,6 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
     <defs>
         <style>
+            .ground {
+                fill: #073605;
+            }
+            .sky {
+                fill: #7fb4c7;
+            }
+            .fence {
+                fill: #480d0d;
+            }
             .front {
                 fill: #b00;
             }
@@ -37,6 +46,9 @@
         </style>
     </defs>
     <title>Talihouse</title>
+    <rect class="ground" height="1000" width="1000" />
+    <rect class="sky" height="450" width="1000" />
+    <rect class="fence" height="100" y="400" width="1000" />
     <rect class="front" width="500" height="300" x="100" y="450" />
     <rect class="door" width="50" height="100" fill="black" x="330" y="650" />
     <polygon class="back-roof" points="600,450 550,350 650,250 700,300" />

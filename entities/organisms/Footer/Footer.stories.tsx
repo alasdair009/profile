@@ -1,7 +1,6 @@
 import { Footer } from "./Footer";
 import { Meta, StoryObj } from "@storybook/react";
-import { expect, userEvent, waitFor, within } from "@storybook/test";
-import { Button } from "@/entities";
+import { expect, within } from "@storybook/test";
 
 const meta: Meta<typeof Footer> = {
   component: Footer,
