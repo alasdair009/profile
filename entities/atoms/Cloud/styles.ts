@@ -11,14 +11,8 @@ export const Root = styled.div<{ $skyColor: CSSProperties["background"] }>`
   position: relative;
 `;
 
-export const CloudCircle = styled.div<{
-  $cloudColor: CSSProperties["color"];
-  $dispersion: number;
-}>`
+export const CloudCircle = styled.div`
   border-radius: 50%;
-  box-shadow: 0 ${rem(sizes.s256.raw * 1.5)}
-    ${({ $dispersion }) => rem($dispersion)} 0
-    ${({ $cloudColor }) => $cloudColor};
   filter: url(#cloudFilter);
   height: ${sizes.s256.rem};
   position: absolute;

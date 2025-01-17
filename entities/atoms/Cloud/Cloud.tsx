@@ -1,6 +1,7 @@
 import { CloudCircle, Root } from "./styles";
 import { CSSProperties, HTMLAttributes } from "react";
-import { colors } from "@/entities";
+import { colors, sizes } from "@/entities";
+import { rem } from "polished";
 
 type CloudProps = {
   cloudColor: CSSProperties["color"];
@@ -21,7 +22,11 @@ export function Cloud({
 }: CloudProps) {
   return (
     <Root $skyColor={skyColor} data-testid={Cloud.name} {...rest}>
-      <CloudCircle $cloudColor={cloudColor} $dispersion={dispersion} />
+      <CloudCircle
+        style={{
+          boxShadow: `0 ${rem(sizes.s256.raw * 1.5)} ${rem(dispersion)} 0 ${cloudColor}`,
+        }}
+      />
       <svg width="0" height="0">
         <filter id="cloudFilter">
           <feTurbulence

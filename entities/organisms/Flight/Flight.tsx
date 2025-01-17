@@ -30,10 +30,16 @@ export function Flight({
         data-testid={`${Flight.name}Cloud`}
         cloudColor={colors.whiteGhost}
         skyColor="transparent"
-        dispersion={60}
-        $x={x}
-        $delay={Math.random() * 6}
-        style={{ "--moveTo": `${x - 100}%` } as CSSProperties}
+        dispersion={Math.random() * (80 - 40) + 40}
+        scale={Math.random() * (200 - 180) + 180}
+        style={
+          {
+            "--moveTo": `${x - 100}%`,
+            animationDelay: `-${Math.random() * 6}s`,
+            filter: `brightness(${Math.random() * (1 - 0.87) + 0.87})`,
+            left: `${x}%`,
+          } as CSSProperties
+        }
       />
     );
   }

@@ -7,18 +7,21 @@ import { rgba } from "polished";
 
 const cloudMove = keyframes`
     0% {
-      opacity: 0;
+        opacity: 0;
         top: 50%;
         transform: translate(-50%, -50%) scale(0.4);
     }
-  10% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-      top: 100%;
-      transform: translate(var(--moveTo), -50%) scale(0.7);
-  }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 100%;
+        transform: translate(var(--moveTo), -50%) scale(0.7);
+    }
 `;
 
 export const Root = styled.div<{ $skyColor: CSSProperties["backgroundColor"] }>`
@@ -60,13 +63,8 @@ export const Root = styled.div<{ $skyColor: CSSProperties["backgroundColor"] }>`
   }
 `;
 
-export const Cloud = styled(CloudEntity)<{
-  $x: number;
-  $delay: number;
-}>`
+export const Cloud = styled(CloudEntity)`
   animation: ${cloudMove} 5s infinite linear;
-  animation-delay: -${({ $delay }) => $delay}s;
-  left: ${({ $x }) => $x}%;
   position: absolute;
   height: 100%;
   top: 75%;
