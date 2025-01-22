@@ -9,7 +9,7 @@ const cloudMove = keyframes`
     0% {
         opacity: 0;
         top: 50%;
-        transform: translate(-50%, -50%) scale(0.4);
+        transform: translateZ(1px) translate(-50%, -50%) scale(0.4);
     }
     10% {
         opacity: 1;
@@ -20,7 +20,7 @@ const cloudMove = keyframes`
     100% {
         opacity: 0;
         top: 100%;
-        transform: translate(var(--moveTo), -50%) scale(0.7);
+        transform: translateZ(1px) translate(var(--moveTo), -50%) scale(0.7);
     }
 `;
 
@@ -68,6 +68,7 @@ export const Cloud = styled(CloudEntity)`
   position: absolute;
   height: 100%;
   top: 75%;
-  transform: translate(-50%, -50%);
+  transform: translateZ(1px) translate(-50%, -50%);
   width: 100%;
+  will-change: transform, opacity, top;
 `;

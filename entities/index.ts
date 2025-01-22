@@ -54,6 +54,7 @@ export { Spacer } from "./atoms/Spacer";
 export { Spinner } from "./atoms/Spinner";
 export { Table } from "./atoms/Table";
 export { TextMask } from "./atoms/TextMask";
+export { Tree } from "./atoms/Tree";
 export { ErrorText } from "./atoms/ErrorText";
 export { UnorderedList } from "./atoms/UnorderedList";
 export { Video } from "./atoms/Video";
