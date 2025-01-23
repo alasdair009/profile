@@ -33,7 +33,9 @@ export const Root = styled.div<{ $skyColor: CSSProperties["backgroundColor"] }>`
   &::before {
     background: linear-gradient(
       transparent 35%,
-      ${rgba(colors.whiteGhost, 0.5)} 45%
+      ${rgba(colors.whiteGhost, 0.5)} 45%,
+      ${rgba(colors.whiteGhost, 0.5)} 80%,
+      ${colors.whiteGhost}
     );
     content: "";
     height: 100%;
