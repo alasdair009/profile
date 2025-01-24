@@ -1,5 +1,5 @@
 import { Source } from "@storybook/blocks";
-import type { HTMLAttributes } from "react";
+import type { HTMLAttributes, JSX } from "react";
 
 import { ObjectViewer } from "./ObjectViewer";
 import { colors } from "@/entities";

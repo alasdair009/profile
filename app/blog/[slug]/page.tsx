@@ -27,7 +27,8 @@ async function getPost(slug: string) {
   );
 }
 
-export async function generateMetadata({ params }: any) {
+export async function generateMetadata(props: any) {
+  const params = await props.params;
   try {
     const post = await getPost(params.slug);
 
@@ -126,7 +127,8 @@ const ptComponents: Partial<PortableTextReactComponents> = {
   },
 };
 
-export default async function ArticlePage({ params }: any) {
+export default async function ArticlePage(props: any) {
+  const params = await props.params;
   try {
     const post = await getPost(params.slug);
     return (

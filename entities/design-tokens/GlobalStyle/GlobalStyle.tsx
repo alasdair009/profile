@@ -5,6 +5,8 @@ import { recaptcha } from "./recaptcha";
 import { motionStyles } from "../animations";
 import { scrollbar } from "../scrollbar";
 
+import type { JSX } from "react";
+
 /**
  * Global style setup for JDS.
  */

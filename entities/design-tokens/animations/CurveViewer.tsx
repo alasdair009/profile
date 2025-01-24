@@ -3,6 +3,8 @@ import styled, { keyframes } from "styled-components";
 import { borderRadii, colors, sizes } from "@/entities";
 import { rem } from "polished";
 
+import type { JSX } from "react";
+
 type CurveViewerProps = {
   /**
    * Object of values for the css property.

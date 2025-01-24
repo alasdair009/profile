@@ -26,29 +26,14 @@ const baseRotate = keyframes`
     }
 `;
 
-const rotating = (index: number) => keyframes`
+const rotating = keyframes`
     0% {
-        transform: rotateZ(${index * 40}grad) rotateY(0);
+        transform: rotateZ(calc(var(--position) * 40 * 1grad)) rotateY(0);
     }
     100% {
-        transform:rotateZ(${index * 40}grad) rotateY(400grad);
+        transform:rotateZ(calc(var(--position) * 40  * 1grad)) rotateY(400grad);
     }
 `;
-
-const generateAnim = (index: number) => {
-  const time = 1.5 - (Math.random() * 30 - 30) / 10;
-  const delay = index * -2;
-
-  return css`
-    animation: ${rotating(index)} ${animationDurationCSS(time)} ${delay}s
-      ${curves.linear} infinite;
-
-    &::before {
-      animation: ${baseRotate} ${animationDurationCSS(time)} ${delay}s
-        ${curves.linear} infinite reverse;
-    }
-  `;
-};
 
 export const Root = styled.div`
   margin: 0 auto;
@@ -68,12 +53,9 @@ export const Stage = styled.div`
   width: 100%;
 `;
 
-export const Particle = styled.span<{
-  $color: CSSProperties["backgroundColor"];
-  $position: number;
-  $content?: string;
-}>`
-  ${({ $position }) => generateAnim($position)};
+export const Particle = styled.span`
+  animation: ${rotating} var(--time) calc(var(--position) * -2 * 1s)
+    ${curves.linear} infinite;
   left: -16%;
   margin-top: -5%;
   padding-bottom: 10%;
@@ -85,13 +67,15 @@ export const Particle = styled.span<{
 
   &::before {
     align-items: center;
-    background-color: ${({ $color }) => $color};
+    animation: ${baseRotate} var(--time) calc(var(--position) * -2 * 1s)
+      ${curves.linear} infinite reverse;
+    background-color: var(--color);
     border-radius: ${borderRadii.round};
     bottom: 0;
     box-shadow:
       inset ${rem(5)} ${rem(5)} ${rem(10)} ${rgba(colors.whiteGhost, 0.2)},
       inset ${rem(-5)} ${rem(-5)} ${rem(10)} ${rgba(colors.whiteGhost, 0.2)};
-    content: "${({ $content }) => ($content ? $content : "")}";
+    content: var(--content);
     display: flex;
     font-size: ${fontSizes.small.rem};
     justify-content: center;

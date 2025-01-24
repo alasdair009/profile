@@ -1,5 +1,7 @@
 import { Source } from "@storybook/blocks";
 
+import type { JSX } from "react";
+
 export type ObjectViewerProps = {
   /**
    * The object to display

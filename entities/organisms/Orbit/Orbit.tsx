@@ -32,9 +32,14 @@ export function Orbit({
       <Particle
         key={`particle${numberOfParticles}${i}`}
         data-testid={`${Orbit.name}Particle`}
-        $color={particleColour}
-        $position={i}
-        $content={showText ? "AM" : undefined}
+        style={
+          {
+            "--color": particleColour,
+            "--content": showText ? "'AM'" : "''",
+            "--position": i,
+            "--time": `${1.5 - (Math.random() * 30 - 30) / 10}s`,
+          } as CSSProperties
+        }
       />
     );
   }
