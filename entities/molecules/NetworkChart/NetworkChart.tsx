@@ -12,15 +12,18 @@ type NetworkChartProps = {
   /**
    * Entries into the chart.
    */
-  nodes: GraphNode[];
+  // nodes: GraphNode[];
+  nodes: unknown[];
   /**
    * Lines connecting entries on the chart.
    */
-  edges: GraphEdge[];
+  // edges: GraphEdge[];
+  edges: unknown[];
   /**
    * Action to occur when a node is clicked.
    */
-  onNodeClick?: GraphSceneProps["onNodeClick"];
+  // onNodeClick?: GraphSceneProps["onNodeClick"];
+  onNodeClick?: unknown;
   /**
    * Menu to display when a node is clicked.
    */
