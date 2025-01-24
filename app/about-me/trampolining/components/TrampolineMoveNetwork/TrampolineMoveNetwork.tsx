@@ -1,7 +1,7 @@
 import mysql, { ConnectionOptions, RowDataPacket } from "mysql2/promise";
 import { Root } from "./styles";
 import { ErrorText, Heading, Paragraph } from "@/entities";
-import { GraphEdge, GraphNode } from "reagraph";
+// import { GraphEdge, GraphNode } from "reagraph";
 import dynamic from "next/dynamic";
 import { NetworkChart } from "@/entities/molecules/NetworkChart";
 
@@ -23,8 +23,10 @@ const connectionOptions: ConnectionOptions = {
 };
 
 const getMoveData = async () => {
-  let nodes: GraphNode[] = [];
-  let edges: GraphEdge[] = [];
+  // let nodes: GraphNode[] = [];
+  // let edges: GraphEdge[] = [];
+  let nodes: unknown[] = [];
+  let edges: unknown[] = [];
   let error = "ok";
   try {
     const connection = await mysql.createConnection(connectionOptions);
@@ -37,7 +39,7 @@ const getMoveData = async () => {
     );
 
     movesResults.forEach((row) => {
-      const node: GraphNode = {
+      const node: unknown = {
         id: `${row.id}`,
         label: row.title,
         subLabel: `${row.altnames}`,
@@ -55,7 +57,7 @@ const getMoveData = async () => {
     });
 
     edgesResults.forEach((row) => {
-      const edge: GraphEdge = {
+      const edge: unknown = {
         id: `${row.move2}->${row.move1}`,
         source: `${row.move2}`,
         target: `${row.move1}`,
