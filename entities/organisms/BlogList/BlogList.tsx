@@ -27,6 +27,7 @@ export async function BlogList({ sanityClient, ...rest }: BlogListProps) {
             image={imageUrlBuilder(sanityClient)
               .image(post.mainImage.asset)
               .url()}
+            imageAlt={`Image for the ${post.title} article`}
           />
         );
       })}

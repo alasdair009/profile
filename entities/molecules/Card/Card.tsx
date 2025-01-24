@@ -3,6 +3,8 @@ import { HTMLAttributes } from "react";
 import { Heading } from "@/entities";
 import { StaticImageData } from "next/image";
 import amLogo from "../../assets/am.svg";
+import { breakpoints } from "@/entities/design-tokens/dimensions/dimensions";
+import { rem } from "polished";
 
 type CardProps = {
   href: string;
@@ -27,7 +29,12 @@ export function Card({
     <Root data-testid={Card.name} {...rest}>
       <CardLink href={href}>
         <Figure>
-          <CardImage src={image} alt={imageAlt} fill={true} />
+          <CardImage
+            src={image}
+            alt={imageAlt}
+            fill={true}
+            sizes={`(max-width: ${breakpoints.xsmall}px) ${rem(312)}, ${rem(240)}`}
+          />
         </Figure>
         <Content>
           <Heading level="h3" as="h2" align="center" lines={3}>
