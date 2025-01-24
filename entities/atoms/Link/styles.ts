@@ -1,5 +1,6 @@
 "use client";
-import { Link as ViewTransitionLink } from "next-view-transitions";
+// import { Link as ViewTransitionLink } from "next-view-transitions";
+import Link from "next/link";
 import styled, { css, keyframes } from "styled-components";
 import {
   animationDurationCSS,
@@ -91,7 +92,7 @@ const getLinkStyles = (variant: LinkVariant, lines: number | undefined) => {
   `;
 };
 
-export const Root = styled(ViewTransitionLink)<{
+export const Root = styled(Link)<{
   $variant: LinkVariant;
   $lines: number | undefined;
 }>`
