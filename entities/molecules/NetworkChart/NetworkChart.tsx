@@ -1,13 +1,7 @@
 "use client";
-import {
-  GraphCanvas,
-  GraphEdge,
-  GraphNode,
-  Theme,
-  darkTheme,
-  GraphSceneProps,
-} from "reagraph";
-import { colors } from "@/entities";
+// import { GraphCanvas, darkTheme } from "reagraph";
+// import type { GraphEdge, GraphNode, Theme, GraphSceneProps } from "reagraph";
+import { colors, ErrorText } from "@/entities";
 import { HTMLAttributes, ReactNode, useEffect, useState } from "react";
 import { darken } from "polished";
 import { Root } from "./styles";
@@ -33,25 +27,25 @@ type NetworkChartProps = {
   contextMenu?: ReactNode;
 } & HTMLAttributes<HTMLDivElement>;
 
-const chartTheme: Theme = {
-  ...darkTheme,
-  canvas: { background: colors.blackEvil },
-  node: {
-    ...darkTheme.node,
-    fill: colors.greenGrass,
-    activeFill: darken(0.05, colors.greenGrass),
-    label: {
-      color: colors.whiteGhost,
-      stroke: colors.blackEvil,
-      activeColor: colors.whiteGhost,
-    },
-  },
-  edge: {
-    ...darkTheme.edge,
-    fill: colors.greyLight,
-    activeFill: colors.whiteGhost,
-  },
-};
+// const chartTheme: Theme = {
+//   ...darkTheme,
+//   canvas: { background: colors.blackEvil },
+//   node: {
+//     ...darkTheme.node,
+//     fill: colors.greenGrass,
+//     activeFill: darken(0.05, colors.greenGrass),
+//     label: {
+//       color: colors.whiteGhost,
+//       stroke: colors.blackEvil,
+//       activeColor: colors.whiteGhost,
+//     },
+//   },
+//   edge: {
+//     ...darkTheme.edge,
+//     fill: colors.greyLight,
+//     activeFill: colors.whiteGhost,
+//   },
+// };
 
 export function NetworkChart({
   nodes,
@@ -60,46 +54,49 @@ export function NetworkChart({
   contextMenu,
   ...rest
 }: NetworkChartProps) {
-  const mounted = useMounted();
+  // const mounted = useMounted();
 
-  const [isBrowser, setIsBrowser] = useState(false);
-  useEffect(() => {
-    if (typeof window !== "undefined" && typeof document !== "undefined") {
-      setIsBrowser(true);
-    }
-  }, []);
+  // const [isBrowser, setIsBrowser] = useState(false);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined" && typeof document !== "undefined") {
+  //     setIsBrowser(true);
+  //   }
+  // }, []);
 
-  if (!mounted) {
-    return null;
-  }
+  // if (!mounted) {
+  //   return null;
+  // }
 
-  if (!isBrowser) {
-    return <>Loading...</>;
-  }
+  // if (!isBrowser) {
+  //   return <>Loading...</>;
+  // }
   return (
     <Root data-testid={NetworkChart.name} {...rest}>
-      <GraphCanvas
-        nodes={nodes}
-        edges={edges}
-        theme={chartTheme}
-        layoutType="treeTd3d"
-        onNodeClick={onNodeClick}
-        sizingType="centrality"
-        draggable={true}
-        edgeInterpolation="curved"
-        contextMenu={({ data, onClose }) => (
-          <ContextMenu
-            onClose={onClose}
-            label={`${data.label}`}
-            description={data.data.description}
-            altnames={data.data.altnames}
-            fig={data.data.fig}
-            difficulty={data.data.difficulty}
-            difficultyPS={data.data.difficultyPS}
-            coachLevelTitle={data.data.coachleveltitle}
-          />
-        )}
-      />
+      {/*<GraphCanvas*/}
+      {/*  nodes={nodes}*/}
+      {/*  edges={edges}*/}
+      {/*  theme={chartTheme}*/}
+      {/*  layoutType="treeTd3d"*/}
+      {/*  onNodeClick={onNodeClick}*/}
+      {/*  sizingType="centrality"*/}
+      {/*  draggable={true}*/}
+      {/*  edgeInterpolation="curved"*/}
+      {/*  contextMenu={({ data, onClose }) => (*/}
+      {/*    <ContextMenu*/}
+      {/*      onClose={onClose}*/}
+      {/*      label={`${data.label}`}*/}
+      {/*      description={data.data.description}*/}
+      {/*      altnames={data.data.altnames}*/}
+      {/*      fig={data.data.fig}*/}
+      {/*      difficulty={data.data.difficulty}*/}
+      {/*      difficultyPS={data.data.difficultyPS}*/}
+      {/*      coachLevelTitle={data.data.coachleveltitle}*/}
+      {/*    />*/}
+      {/*  )}*/}
+      {/*/>*/}
+      <ErrorText>
+        Graph is not currently compatible with this site - check back later.
+      </ErrorText>
     </Root>
   );
 }
