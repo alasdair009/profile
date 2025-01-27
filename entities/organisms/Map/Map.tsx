@@ -44,6 +44,7 @@ export function Map({ mapApiKey, markers, children }: MapProps) {
       center={center}
       zoom={3}
       options={{ streetViewControl: false }}
+      tilt={0}
     >
       <>
         {markers.map((marker, i) => {
