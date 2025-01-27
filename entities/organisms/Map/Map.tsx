@@ -15,7 +15,13 @@ const center = {
 };
 
 type MapProps = {
+  /**
+   * API key from Google
+   */
   mapApiKey: string;
+  /**
+   * Markers to display locations around the world.
+   */
   markers: MarkerProps[];
 } & HTMLAttributes<HTMLDivElement>;
 
