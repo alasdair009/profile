@@ -1,6 +1,7 @@
 import { Root, Ember } from "./styles";
 import { CSSProperties, HTMLAttributes } from "react";
 import { sizes } from "@/entities";
+import { rem } from "polished";
 
 type HeadingProps = {
   /**
@@ -29,6 +30,7 @@ export function Fire({
   particleSize = sizes.s80.raw,
   numberOfParticles = 50,
   duration = 1,
+  style,
   ...rest
 }: HeadingProps) {
   const particles = [];
@@ -46,17 +48,28 @@ export function Fire({
       <Ember
         key={`ember${baseColor}${particleSize}${numberOfParticles}${duration}${i}`}
         data-testid={`${Fire.name}Ember`}
+        style={
+          {
+            "--animationDelay": Math.random(),
+            "--index": i,
+          } as CSSProperties
+        }
       />
     );
   }
 
   return (
     <Root
-      $baseColor={baseColor}
-      $particleSize={particleSize}
-      $numberOfParticles={numberOfParticles}
-      $duration={duration}
       data-testid={Fire.name}
+      style={
+        {
+          "--baseColor": baseColor,
+          "--duration": duration,
+          "--numberOfParticles": numberOfParticles,
+          "--particleSize": rem(particleSize),
+          ...style,
+        } as CSSProperties
+      }
       {...rest}
     >
       {embers}

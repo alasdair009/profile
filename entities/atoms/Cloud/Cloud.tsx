@@ -18,14 +18,22 @@ export function Cloud({
   dispersion = 60,
   scale = 180,
   skyColor = "linear-gradient(165deg, #527785 0%, #7fb4c7 100%)",
+  style,
   ...rest
 }: CloudProps) {
   return (
-    <Root $skyColor={skyColor} data-testid={Cloud.name} {...rest}>
+    <Root
+      data-testid={Cloud.name}
+      style={{ "--skyColor": skyColor, ...style } as CSSProperties}
+      {...rest}
+    >
       <CloudCircle
-        style={{
-          boxShadow: `0 ${rem(sizes.s256.raw * 1.5)} ${rem(dispersion)} 0 ${cloudColor}`,
-        }}
+        style={
+          {
+            "--dispersion": rem(dispersion),
+            "--cloudColor": cloudColor,
+          } as CSSProperties
+        }
       />
       <svg width="0" height="0">
         <filter id="cloudFilter">
