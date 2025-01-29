@@ -20,9 +20,7 @@ const rise = keyframes`
 
 export const Ember = styled.span`
   animation: ${rise} calc(var(--duration) * 1s) ease-in infinite;
-  animation-delay: calc(
-    var(--animationDelay) * var(--duration) * 1s
-  ) !important;
+  animation-delay: calc(var(--animationDelay) * var(--duration) * 1s);
   aspect-ratio: 1;
   background-image: radial-gradient(var(--baseColor) 20%, transparent 70%);
   border-radius: 50%;
