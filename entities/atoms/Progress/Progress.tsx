@@ -1,5 +1,5 @@
 import { ProgressElement, Root } from "./styles";
-import { HTMLAttributes, ReactNode } from "react";
+import { CSSProperties, HTMLAttributes, ReactNode } from "react";
 
 export type ProgressProps = {
   /**
@@ -23,6 +23,12 @@ export function Progress({ max = 100, value = 100, ...rest }: ProgressProps) {
         max={100}
         value={safeValue}
         data-testid={`${Progress.name}Element`}
+        style={
+          {
+            "--max": 100,
+            "--value": safeValue,
+          } as CSSProperties
+        }
       />
     </Root>
   );

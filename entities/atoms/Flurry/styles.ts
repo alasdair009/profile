@@ -20,43 +20,6 @@ const orbitAnimation = keyframes`
     }
 `;
 
-const randomPosition = () => {
-  return (Math.floor(Math.random() * 100) - 50) * 2;
-};
-const generateParticles = (size: number, numberOfParticles: number) => {
-  let particleString = "";
-  for (let i = 0; i < numberOfParticles; i++) {
-    particleString += `${randomPosition()}vw ${randomPosition()}vh ${rem(size * 5)} ${rem(size * 3)} ${rgba(255, 255, 255, 0.5)}${i < numberOfParticles - 1 ? "," : ""} `;
-  }
-  return particleString;
-};
-
-const generateBlockStyles = (
-  particleBaseDuration: number,
-  particleBlocks: number,
-  numberOfParticles: number
-) => {
-  let blockStyles = "";
-  for (let i = 0; i < particleBlocks; i++) {
-    blockStyles += `
-          &:nth-child(${i}) {
-            animation-delay: -${i * (particleBaseDuration / i)}s;
-            animation-duration: ${animationDurationCSS(particleBaseDuration + (particleBaseDuration / 2) * i)};
-            animation-direction: reverse;
-
-            &::before {
-              animation-direction: normal;
-              box-shadow: ${generateParticles(i, numberOfParticles)};
-            }
-          }
-        `;
-  }
-
-  return css`
-    ${blockStyles}
-  `;
-};
-
 export const Root = styled.div`
   align-items: center;
   background: linear-gradient(
@@ -99,13 +62,17 @@ export const Inner = styled.div`
   width: 100%;
 `;
 
-export const EffectBox = styled.span<{
-  $particleBaseDuration: number;
-  $particleBlocks: number;
-  $particlesPerPlate: number;
-}>`
+export const EffectBox = styled.span`
   animation: ${orbitAnimation} ${animationDurationCSS(21)} infinite
     ${curves.linear};
+  animation-direction: reverse;
+  animation-duration: calc(
+    (var(--particleBaseDuration) + (var(--particleBaseDuration) / 2)) *
+      var(--index) * 1s
+  );
+  animation-delay: calc(
+    (var(--index) * (var(--particleBaseDuration) / var(--index))) * -1s
+  );
   height: 25%;
   left: 50%;
   position: absolute;
@@ -115,8 +82,9 @@ export const EffectBox = styled.span<{
 
   &::before {
     animation: inherit;
-    animation-direction: reverse;
+    animation-direction: normal;
     border-radius: 50%;
+    box-shadow: var(--shadows);
     content: "";
     height: 1px;
     left: 50%;
@@ -126,13 +94,6 @@ export const EffectBox = styled.span<{
     transform: translate(-50%, -50%);
     width: ${rem(1)};
   }
-
-  ${({ $particleBaseDuration, $particleBlocks, $particlesPerPlate }) =>
-    generateBlockStyles(
-      $particleBaseDuration,
-      $particleBlocks,
-      $particlesPerPlate
-    )}
 `;
 
 export const Content = styled.div`

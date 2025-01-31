@@ -3,10 +3,6 @@ import { colors, sizes } from "@/entities";
 import dialIcon from "./assets/dial.svg";
 import { rgba } from "polished";
 
-const getCutPoint = (value: number, max: number) => {
-  return (value / max) * 100;
-};
-
 export const Root = styled.div`
   align-items: center;
   aspect-ratio: 1;
@@ -33,13 +29,13 @@ export const Root = styled.div`
     width: 100%;
   }
 `;
-export const ProgressElement = styled.progress<{ max: number; value: number }>`
+export const ProgressElement = styled.progress`
   appearance: none;
   background: conic-gradient(
     ${colors.greenGrass},
     ${colors.whiteGhost},
-    ${colors.whiteGhost} ${({ max, value }) => getCutPoint(value, max)}%,
-    transparent ${({ max, value }) => getCutPoint(value, max)}%
+    ${colors.whiteGhost} calc((var(--value) / var(--max)) * 100%),
+    transparent calc((var(--value) / var(--max)) * 100%)
   );
   height: 100%;
   mask: url(${dialIcon.src}) no-repeat center;

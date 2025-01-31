@@ -3,22 +3,40 @@ import styled from "styled-components";
 import { fonts, fontSizes, fontWeights } from "@/entities";
 import { Property } from "csstype";
 
-export const Root = styled.div<{ $maskFill: Property.Fill }>`
+export const Root = styled.div`
   display: flex;
   height: 100%;
   width: 100%;
 
   &::before,
   &::after {
-    background: ${({ $maskFill }) => $maskFill};
+    background: var(--maskFill);
     content: "";
     flex: 1;
   }
 `;
 
-export const Rect = styled.rect<{ $maskFill: Property.Fill }>`
-  fill: ${({ $maskFill }) => $maskFill};
+export const Inner = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &::before,
+  &::after {
+    background: var(--maskFill);
+    content: "";
+    flex: 1;
+  }
+`;
+
+export const Rect = styled.rect`
+  fill: var(--maskFill);
   mask: url(#mask);
+`;
+
+export const SVG = styled.svg`
+  height: 100%;
+  width: 100%;
 `;
 
 export const Text = styled.text`

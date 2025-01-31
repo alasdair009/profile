@@ -33,15 +33,6 @@ export function Fire({
   style,
   ...rest
 }: HeadingProps) {
-  const particles = [];
-  for (let i = 0; i < numberOfParticles; i++) {
-    particles.push(
-      <span
-        key={`particle${baseColor}${particleSize}${numberOfParticles}${duration}${i}`}
-      ></span>
-    );
-  }
-
   const embers = [];
   for (let i = 0; i < numberOfParticles; i++) {
     embers.push(

@@ -49,6 +49,7 @@ const preview: Preview = {
           "atoms",
           "molecules",
           "organisms",
+          "templates",
           "experimental",
         ],
       },

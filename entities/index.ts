@@ -65,7 +65,6 @@ export { LabelledInput } from "./molecules/LabelledInput";
 export { LabelledRadio } from "./molecules/LabelledRadio";
 export { LabelledSelect } from "./molecules/LabelledSelect";
 export { LabelledTextArea } from "./molecules/LabelledTextArea";
-// export { NetworkChart } from "./molecules/NetworkChart"; This can only be imported dynamically
 export { ScoreCounter } from "./molecules/ScoreCounter";
 export { Skill } from "./molecules/Skill";
 export { StatBox } from "./molecules/StatBox";
@@ -85,7 +84,9 @@ export { MorphingText } from "./organisms/MorphingText";
 export { Orbit } from "./organisms/Orbit";
 export { PortfolioPlate } from "./organisms/PortfolioPlate";
 export { SocialMediaBar } from "./organisms/SocialMediaBar";
-// export { Splash } from "./organisms/Splash"; //TODO Causes an intermittent undefined Splash error
+export { Splash } from "./organisms/Splash";
 export { Trampoline } from "./organisms/Trampoline";
 export { Timeline } from "./organisms/Timeline";
 export type { TimelineEntry } from "./organisms/Timeline";
+
+export { Error } from "./templates/Error";
