@@ -6,6 +6,7 @@ type SocialMediaBarProps = HTMLAttributes<HTMLDivElement>;
 export function SocialMediaBar({ ...rest }: SocialMediaBarProps) {
   return (
     <Root data-testid={SocialMediaBar.name} {...rest}>
+      <SocialMediaLink variant="bluesky">Bluesky</SocialMediaLink>
       <SocialMediaLink variant="facebook">Facebook</SocialMediaLink>
       <SocialMediaLink variant="github">GitHub</SocialMediaLink>
       <SocialMediaLink variant="instagram">Instagram</SocialMediaLink>

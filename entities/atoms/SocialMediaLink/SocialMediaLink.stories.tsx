@@ -7,6 +7,22 @@ const meta: Meta<typeof SocialMediaLink> = {
 };
 export default meta;
 
+export const Bluesky: StoryObj<typeof SocialMediaLink> = {
+  args: {
+    variant: "bluesky",
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const socialMediaElement = canvas.getByTestId(SocialMediaLink.name);
+
+    await expect(socialMediaElement).toBeInTheDocument();
+    await expect(socialMediaElement).toHaveAttribute(
+      "href",
+      "https://bsky.app/profile/alasdair009.bsky.social"
+    );
+  },
+};
+
 export const X: StoryObj<typeof SocialMediaLink> = {
   args: {
     variant: "x",

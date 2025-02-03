@@ -11,6 +11,8 @@ type SocialMediaProps = {
 
 const getSocialMediaUrl = (variant: SocialMediaLinkVariant) => {
   switch (variant) {
+    case "bluesky":
+      return "https://bsky.app/profile/alasdair009.bsky.social";
     case "facebook":
       return "https://www.facebook.com/alasdair009";
     case "github":

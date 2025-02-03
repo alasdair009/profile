@@ -9,9 +9,12 @@ import linkedInIcon from "./assets/linkedin.svg";
 import gitHubIcon from "./assets/github.svg";
 import facebookIcon from "./assets/facebook.svg";
 import youTubeIcon from "./assets/youtube.svg";
+import blueskyIcon from "./assets/bluesky.svg";
 
 const getMaskIcon = (variant: SocialMediaLinkVariant): string => {
   switch (variant) {
+    case "bluesky":
+      return blueskyIcon.src;
     case "facebook":
       return facebookIcon.src;
     case "github":
