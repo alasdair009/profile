@@ -2,6 +2,7 @@ import { Root, Ember } from "./styles";
 import { CSSProperties, HTMLAttributes } from "react";
 import { sizes } from "@/entities";
 import { rem } from "polished";
+import { lcgNextRand, makeLCG } from "@/lib/random";
 
 type HeadingProps = {
   /**
@@ -33,6 +34,7 @@ export function Fire({
   style,
   ...rest
 }: HeadingProps) {
+  const fireLCG = makeLCG(1);
   const embers = [];
   for (let i = 0; i < numberOfParticles; i++) {
     embers.push(
@@ -41,7 +43,7 @@ export function Fire({
         data-testid={`${Fire.name}Ember`}
         style={
           {
-            "--animationDelay": Math.random(),
+            "--animationDelay": lcgNextRand(fireLCG),
             "--index": i,
           } as CSSProperties
         }
