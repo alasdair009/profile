@@ -37,45 +37,23 @@ const fall = keyframes`
   }
 `;
 
-const spreadFlakes = (
-  flakeSize: number,
-  numberOfFlakes: number,
-  duration: number
-) => {
-  let particleSpread = "";
-  for (let i = 0; i < numberOfFlakes; i++) {
-    particleSpread += `
-            &:nth-of-type(${i}) {
-                animation-delay: calc(${duration}s * ${Math.random()});
-                left: calc((100% - ${rem(flakeSize)}) * ${(i - 1) / numberOfFlakes});
-                animation-duration: ${animationDurationCSS(Math.random() * (duration - duration * 0.5) + duration * 0.8)};
-            }
-        `;
-  }
-
-  return particleSpread;
-};
-
 export const Flake = styled.span`
   animation: ${fall} infinite ${curves.linear};
+  animation-delay: calc(var(--duration) * var(--delay) * 1s);
+  animation-duration: calc(var(--flakeDuration) * 1s);
   aspect-ratio: 1;
   background: ${colors.whiteGhost};
   clip-path: ${clipPaths.snowflake};
+  left: calc(
+    (100% - var(--size)) * ((var(--index) - 1) / var(--numberOfFlakes))
+  );
   opacity: 0;
   position: absolute;
   transform-origin: center center;
+  width: var(--size);
 `;
 
-export const Root = styled.div<{
-  $numberOfFlakes: number;
-  $size: number;
-  $duration: number;
-}>`
+export const Root = styled.div`
+  overflow: hidden;
   position: relative;
-
-  ${Flake} {
-    width: ${({ $size }) => rem($size)};
-    ${({ $size, $numberOfFlakes, $duration }) =>
-      spreadFlakes($size, $numberOfFlakes, $duration)}
-  }
 `;

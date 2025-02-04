@@ -1,6 +1,7 @@
-import { CSSProperties, HTMLAttributes } from "react";
+import { CSSProperties, HTMLAttributes, ReactNode } from "react";
 import { Root, Cloud } from "./styles";
 import { colors } from "@/entities";
+import { lcgNextRand, makeLCG } from "@/lib/random";
 
 type FlightProps = {
   /**
@@ -21,7 +22,8 @@ export function Flight({
   numberOfClouds = 30,
   ...rest
 }: FlightProps) {
-  const clouds = [];
+  const flightLCG = makeLCG();
+  const clouds: ReactNode[] = [];
   for (let i = 0; i < numberOfClouds; i++) {
     const x = (100 / numberOfClouds) * i;
     clouds.push(
@@ -30,13 +32,13 @@ export function Flight({
         data-testid={`${Flight.name}Cloud`}
         cloudColor={colors.whiteGhost}
         skyColor="transparent"
-        dispersion={Math.random() * (80 - 40) + 40}
-        scale={Math.random() * (200 - 180) + 180}
+        dispersion={lcgNextRand(flightLCG) * (80 - 40) + 40}
+        scale={lcgNextRand(flightLCG) * (200 - 180) + 180}
         style={
           {
             "--moveTo": `${x - 100}%`,
-            animationDelay: `-${Math.random() * 6}s`,
-            filter: `brightness(${Math.random() * (1 - 0.87) + 0.87})`,
+            animationDelay: `-${lcgNextRand(flightLCG) * 6}s`,
+            filter: `brightness(${lcgNextRand(flightLCG) * (1 - 0.87) + 0.87})`,
             left: `${x}%`,
           } as CSSProperties
         }

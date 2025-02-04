@@ -1,6 +1,7 @@
 import { Core, Particle, Root, Stage } from "./styles";
-import { CSSProperties, HTMLAttributes } from "react";
+import { CSSProperties, HTMLAttributes, ReactNode } from "react";
 import { colors } from "@/entities";
+import { lcgNextRand, makeLCG } from "@/lib/random";
 
 type OrbitProps = {
   /**
@@ -26,7 +27,8 @@ export function Orbit({
   showText = false,
   ...rest
 }: OrbitProps) {
-  const particles = [];
+  const particles: ReactNode[] = [];
+  const orbitLCG = makeLCG();
   for (let i = 0; i < numberOfParticles; i++) {
     particles.push(
       <Particle
@@ -37,7 +39,7 @@ export function Orbit({
             "--color": particleColour,
             "--content": showText ? "'AM'" : "''",
             "--position": i,
-            "--time": `${1.5 - (Math.random() * 30 - 30) / 10}s`,
+            "--time": `${1.5 - (lcgNextRand(orbitLCG) * 30 - 30) / 10}s`,
           } as CSSProperties
         }
       />

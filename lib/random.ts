@@ -5,7 +5,7 @@ const LCG_M = 4294967296;
 const LCG_A = 22695477;
 const LCG_C = 1;
 
-type LCG = {
+export type LCG = {
   m: number;
   a: number;
   c: number;

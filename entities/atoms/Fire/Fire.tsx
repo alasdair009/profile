@@ -34,7 +34,7 @@ export function Fire({
   style,
   ...rest
 }: HeadingProps) {
-  const fireLCG = makeLCG(1);
+  const fireLCG = makeLCG();
   const embers = [];
   for (let i = 0; i < numberOfParticles; i++) {
     embers.push(
