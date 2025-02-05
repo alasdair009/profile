@@ -1,6 +1,7 @@
 import { Root, Leaves, Trunk, sway } from "./styles";
 import { CSSProperties, HTMLAttributes } from "react";
 import type { TreeWindDirection } from "./types";
+import { lcgNextRand, makeLCG } from "@/lib/random";
 
 const getAnimationValues = (
   windDirection: TreeWindDirection
@@ -34,6 +35,7 @@ export function Tree({
   swayAmount = 3,
   ...rest
 }: TreeProps) {
+  const treeLCG = makeLCG();
   return (
     <Root
       xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +68,7 @@ export function Tree({
         style={
           {
             "--swayAmount": swayAmount,
-            animationDelay: `-${Math.random()}s`,
+            animationDelay: `-${lcgNextRand(treeLCG)}s`,
             ...getAnimationValues(windDirection),
           } as CSSProperties
         }

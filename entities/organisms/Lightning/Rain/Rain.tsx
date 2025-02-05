@@ -6,6 +6,7 @@ import {
 } from "@/entities/organisms/Lightning/styles";
 import { lighten, rgba } from "polished";
 import { prefersReducedMotion } from "@/entities";
+import { LCG, lcgNextRand, makeLCG } from "@/lib/random";
 
 type RainProps = {
   rainDrops?: number;
@@ -30,8 +31,8 @@ type RainTrough = {
   ys: number;
 };
 
-function random(min: number, max: number) {
-  return Math.random() * (max - min + 1) + min;
+function random(lcg: LCG, min: number, max: number) {
+  return lcgNextRand(lcg) * (max - min + 1) + min;
 }
 
 /**
@@ -43,6 +44,7 @@ export function Rain({
   speedRainTrough = 25,
   ...rest
 }: RainProps) {
+  const rainLCG = makeLCG();
   const rainCanvasRef = useRef<HTMLCanvasElement | null>(null);
   const rain: RainDrop[] = [];
   const rainTrough: RainTrough[] = [];
@@ -84,11 +86,11 @@ export function Rain({
   const createRain = (w: number, h: number) => {
     for (let i = 0; i < rainDrops; i++) {
       rain[i] = {
-        x: Math.random() * w,
-        y: Math.random() * h,
-        l: Math.random(),
-        xs: -4 + Math.random() * 4 + 2,
-        ys: Math.random() * 10 + 10,
+        x: lcgNextRand(rainLCG) * w,
+        y: lcgNextRand(rainLCG) * h,
+        l: lcgNextRand(rainLCG),
+        xs: -4 + lcgNextRand(rainLCG) * 4 + 2,
+        ys: lcgNextRand(rainLCG) * 10 + 10,
       };
     }
   };
@@ -96,12 +98,12 @@ export function Rain({
   const createRainTrough = (w: number, h: number) => {
     for (let i = 0; i < rainDrops; i++) {
       rainTrough[i] = {
-        x: random(0, w),
-        y: random(0, h),
-        length: Math.floor(random(1, 830)),
-        opacity: Math.random() * 0.2,
-        xs: random(-2, 2),
-        ys: random(10, 20),
+        x: random(rainLCG, 0, w),
+        y: random(rainLCG, 0, h),
+        length: Math.floor(random(rainLCG, 1, 830)),
+        opacity: lcgNextRand(rainLCG) * 0.2,
+        xs: random(rainLCG, -2, 2),
+        ys: random(rainLCG, 10, 20),
       };
     }
   };
@@ -114,7 +116,7 @@ export function Rain({
         rain[i].x += rain[i].xs;
         rain[i].y += rain[i].ys;
         if (rain[i].x > w || rain[i].y > h) {
-          rain[i].x = Math.random() * w;
+          rain[i].x = lcgNextRand(rainLCG) * w;
           rain[i].y = -20;
         }
       }
