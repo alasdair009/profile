@@ -51,6 +51,11 @@ export const Flake = styled.span`
   position: absolute;
   transform-origin: center center;
   width: var(--size);
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-delay: calc(var(--duration) * var(--delay) * -1s);
+    animation-play-state: paused;
+  }
 `;
 
 export const Root = styled.div`
