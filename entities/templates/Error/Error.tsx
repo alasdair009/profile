@@ -22,6 +22,7 @@ export function Error({
   errorCode,
   errorHeading,
   errorText,
+  children,
   ...rest
 }: ErrorProps) {
   return (
@@ -43,9 +44,7 @@ export function Error({
       </Inner>
       <Paragraph align="center">{errorText}</Paragraph>
       <Spacer />
-      <Link href="/" style={{ margin: "0 auto" }}>
-        Return Home
-      </Link>
+      {children}
       <Spacer multiplier={8} />
     </Root>
   );

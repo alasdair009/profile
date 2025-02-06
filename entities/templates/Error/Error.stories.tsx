@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Error } from "./Error";
 import { expect, within } from "@storybook/test";
+import { Link } from "@/entities";
 
 const meta: Meta<typeof Error> = {
   component: Error,
@@ -8,6 +9,11 @@ const meta: Meta<typeof Error> = {
     errorCode: 404,
     errorHeading: "Whoops!",
     errorText: "Could not find the page you were looking",
+    children: (
+      <Link href="/" style={{ margin: "0 auto" }}>
+        Return Home
+      </Link>
+    ),
   },
 };
 export default meta;

@@ -1,4 +1,4 @@
-import { Error } from "@/entities";
+import { Error, Link } from "@/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
 
@@ -13,6 +13,10 @@ export default function NotFound() {
       errorCode={404}
       errorText={"We could not find the page you were looking for."}
       errorHeading={"Whoops!"}
-    />
+    >
+      <Link href="/" style={{ margin: "0 auto" }}>
+        Return Home
+      </Link>
+    </Error>
   );
 }

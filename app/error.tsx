@@ -1,6 +1,14 @@
 "use client";
-import { Button, Container, Heading, Paragraph, Spacer } from "@/entities";
+import { Button, Error as ErrorEntity } from "@/entities";
 import { useEffect } from "react";
+import { Metadata } from "next";
+import { generateMetaData } from "@/lib/metadata";
+
+export const metadata: Metadata = generateMetaData(
+  "Error",
+  "Something went a bit wrong here!",
+  "error"
+);
 
 export default function Error({
   error,
@@ -13,20 +21,14 @@ export default function Error({
     console.error(error);
   }, [error]);
   return (
-    <Container
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        height: "calc(100vh - 48px)",
-      }}
+    <ErrorEntity
+      errorCode={500}
+      errorText={"Something went a bit wrong here!"}
+      errorHeading={"Error!"}
     >
-      <Spacer multiplier={4} />
-      <Heading align="center">Error!</Heading>
-      <Spacer multiplier={4} />
-      <Paragraph align="center">Something went a bit wrong here!</Paragraph>
       <Button type="button" onClick={() => reset} style={{ margin: "0 auto" }}>
         Try again
       </Button>
-    </Container>
+    </ErrorEntity>
   );
 }

@@ -1,5 +1,5 @@
 import { Root } from "./styles";
-import { HTMLAttributes } from "react";
+import { CSSProperties, HTMLAttributes } from "react";
 
 type SpacerProps = {
   /**
@@ -11,6 +11,12 @@ type SpacerProps = {
 /**
  * Break to increase vertical space.
  */
-export function Spacer({ multiplier = 1, ...rest }: SpacerProps) {
-  return <Root $multiplier={multiplier} data-testid={Spacer.name} {...rest} />;
+export function Spacer({ multiplier = 1, style, ...rest }: SpacerProps) {
+  return (
+    <Root
+      data-testid={Spacer.name}
+      style={{ "--multiplier": multiplier, ...style } as CSSProperties}
+      {...rest}
+    />
+  );
 }

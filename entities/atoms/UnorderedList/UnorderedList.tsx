@@ -1,5 +1,6 @@
 import { Root } from "./styles";
-import { UnorderedListProps } from "@/entities/atoms/UnorderedList/UnorderedList.types";
+import { UnorderedListProps } from "./UnorderedList.types";
+import { CSSProperties } from "react";
 
 /**
  * HTML unordered list.
@@ -7,10 +8,15 @@ import { UnorderedListProps } from "@/entities/atoms/UnorderedList/UnorderedList
 export function UnorderedList({
   align = "left",
   children,
+  style,
   ...rest
 }: UnorderedListProps) {
   return (
-    <Root $align={align} data-testid={UnorderedList.name} {...rest}>
+    <Root
+      data-testid={UnorderedList.name}
+      style={{ "--align": align, ...style } as CSSProperties}
+      {...rest}
+    >
       {children}
     </Root>
   );

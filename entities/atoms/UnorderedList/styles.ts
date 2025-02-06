@@ -5,14 +5,14 @@ import { colors, fontSizes, globalTextMaxWidth, sizes } from "@/entities";
 import { rem } from "polished";
 import { UnorderedListProps } from "@/entities/atoms/UnorderedList/UnorderedList.types";
 
-export const Root = styled.ul<{ $align: UnorderedListProps["align"] }>`
+export const Root = styled.ul`
   display: flex;
   flex-direction: column;
   gap: ${sizes.s8.rem};
   list-style: none;
   margin: 0 auto;
   max-width: ${rem(globalTextMaxWidth)};
-  text-align: ${({ $align }) => $align};
+  text-align: var(--align);
   width: 100%;
 
   li {
