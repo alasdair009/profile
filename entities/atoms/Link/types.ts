@@ -23,4 +23,8 @@ export type LinkProps = {
    * Number of lines the text is restricted to.
    */
   lines?: number;
+  /**
+   * How the anchor impacts the view.
+   */
+  target?: "_blank" | "_self" | "_parent";
 } & HTMLAttributes<HTMLAnchorElement>;

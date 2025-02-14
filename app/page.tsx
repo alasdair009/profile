@@ -1,5 +1,8 @@
+import addValueImage from "../entities/assets/addValue.svg";
 import portraitImage from "../entities/assets/ali-portrait.svg";
+import storybookImage from "../entities/assets/storybook.svg";
 import trampolineImage from "../entities/assets/trampoline.svg";
+import challengeImage from "../entities/assets/challenge.svg";
 
 import {
   ContactForm,
@@ -53,6 +56,76 @@ export default function Home() {
       <FixedPlate />
       <HorizontalRule margin="none" />
       <ContentPlate
+        foregroundImage={challengeImage}
+        foregroundImageAlt="Two swords moving back and forth"
+      >
+        <Heading level="h2" align="center">
+          Challenging the web!
+        </Heading>
+        <Paragraph>
+          Thinking up creative solutions to front-end web problems and projects
+          has been the driving force behind my career. I have worked on a
+          prodigious variety of projects including gaming websites, progressive
+          web apps, desktop applications, internal company tools and even take
+          on the occasional volunteer projects for local sports clubs!
+        </Paragraph>
+      </ContentPlate>
+      <ContentPlate
+        orientation="right"
+        foregroundImage={storybookImage}
+        foregroundImageAlt="Storybook Logo: White S on a pink rectangle"
+      >
+        <Heading level="h2" align="center">
+          Design systems
+        </Heading>
+        <Paragraph>
+          Design systems are a particular passion of mine. For many years I
+          found them cumbersome and a burden to maintain but once I discovered
+          Storybook my point of view shifted.
+        </Paragraph>
+        <Paragraph>
+          I have built design systems for use cross-platform for websites and
+          programs. I have a focussed goal to make the system both capable of
+          delivering high quality visuals whilst maintaining the developer
+          experience.
+        </Paragraph>
+        <Paragraph>
+          This site also has its own design system that you can view at{" "}
+          <Link target="_blank" href="https://design.alasdairmacrae.co.uk">
+            design.alasdairmacrae.co.uk
+          </Link>
+          .
+        </Paragraph>
+      </ContentPlate>
+      <ContentPlate
+        foregroundImage={addValueImage}
+        foregroundImageAlt="A hand raising plus symbols"
+      >
+        <Heading level="h2" align="center">
+          How I add value
+        </Heading>
+        <Paragraph>
+          I can develop well on my own or as part of a team. Throughout my
+          career I have formed high perming teams to develop software that
+          supports computer games including RuneScape, Old School RuneScape, and
+          Scum. I often mentor other members of my team to maximise the
+          potential of the front-end deliverable.
+        </Paragraph>
+        <Paragraph>
+          I am fervent to hear of any opportunities that allow me to construct
+          spectacular experiences for visitors to applications and websites
+          across the world! I am based in the UK and have a preference for
+          remote-first working.
+        </Paragraph>
+      </ContentPlate>
+      <HorizontalRule margin="none" />
+      <Lightning>
+        <Heading level="h1" as="h2" align="center" textShadow={true}>
+          Bringing the web to life...
+        </Heading>
+      </Lightning>
+      <HorizontalRule margin="bottom" />
+      <ContentPlate
         foregroundImage={trampolineImage}
         foregroundImageAlt="A gymnast on a trampoline"
         orientation="left"
@@ -66,38 +139,6 @@ export default function Home() {
         </Paragraph>
         <Link href="about-me">About me</Link>
       </ContentPlate>
-      <HorizontalRule margin="none" />
-      <Lightning>
-        <Heading level="h1" as="h2" align="center" textShadow={true}>
-          Bringing the web to life...
-        </Heading>
-      </Lightning>
-      <HorizontalRule margin="bottom" />
-      <CopyBlock>
-        <Heading level="h2" align="center">
-          Challenging what browsers can do!
-        </Heading>
-        <Spacer />
-        <Paragraph>
-          Thinking up creative solutions to front-end web problems and projects
-          has been the driving force behind my career. I have worked on a
-          prodigious variety of projects including gaming websites, progressive
-          web apps, desktop applications, internal company tools and even take
-          on the occasional volunteer projects for local sports clubs!
-        </Paragraph>
-        <Paragraph>
-          I can develop well on my own or as part of a team. I formed high
-          perming teams to develop software that supports computer games
-          including RuneScape and Scum. I often mentor other members of my team
-          to maximise the potential of the front-end deliverable.
-        </Paragraph>
-        <Paragraph>
-          I am fervent to hear of any opportunities that allow me to construct
-          spectacular experiences for visitors to applications and websites
-          across the world! I am based in the UK and have a preference for
-          remote-first working.
-        </Paragraph>
-      </CopyBlock>
       <HorizontalRule margin="both" />
       <Orbit />
       <HorizontalRule margin="top" decoration={true} />
