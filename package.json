@@ -1,5 +1,7 @@
 {
   "name": "profile",
+  "description": "A website built using React/Next to act as my portfolio and playground.",
+  "homepage": "https://www.alasdairmacrae.co.uk",
   "version": "0.1.0",
   "private": true,
   "scripts": {
