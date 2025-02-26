@@ -8,6 +8,8 @@ const {
   NETATMO_CLIENT_SECRET,
   EDGE_WRITE,
   EDGE_STORE_ID,
+  HOME_ASSISTANT_TOKEN,
+  HOME_ASSISTANT_URL,
 } = process.env;
 
 /** @type {import('next').NextConfig} */
@@ -22,6 +24,8 @@ const nextConfig = {
     NETATMO_CLIENT_SECRET,
     EDGE_WRITE,
     EDGE_STORE_ID,
+    HOME_ASSISTANT_TOKEN,
+    HOME_ASSISTANT_URL,
   },
   images: {
     remotePatterns: [

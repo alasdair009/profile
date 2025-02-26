@@ -1,14 +1,7 @@
 "use client";
 import { WeatherStation } from "@/entities/organisms/WeatherStation";
 import { Root } from "./styles";
-import {
-  AllWeatherData,
-  IndoorData,
-  OutdoorData,
-  RainData,
-  WeatherStationData,
-  WindData,
-} from "../../types";
+import { WeatherData } from "../../types";
 import { useEffect, useState } from "react";
 
 type WeatherWrapperProps = {};
@@ -17,68 +10,38 @@ type WeatherWrapperProps = {};
  * TypeGuard to verify successful Netatmo response.
  * @param response
  */
-function isWeatherStationData(
-  response: WeatherStationData | { error: string }
-): response is WeatherStationData {
-  return (response as WeatherStationData).dashboard_data !== undefined;
+function isWeatherData(
+  response: WeatherData | { error: string }
+): response is WeatherData {
+  return (response as WeatherData).temperature !== undefined;
 }
 
 const getData = async () => {
-  const weatherFetch = await fetch("/api/weather/data");
+  const weatherFetch = await fetch("/api/weather");
   if (weatherFetch.ok) {
-    const jsonOutput: AllWeatherData = await weatherFetch.json();
-    const allData = jsonOutput.data.body.devices;
-    console.log({ allData });
-    const station = allData[0];
-    console.log({ station });
-    return station;
+    const jsonOutput: WeatherData = await weatherFetch.json();
+    return jsonOutput;
   } else {
     return { error: "could not get data" };
   }
 };
 
 export function WeatherWrapper({ ...rest }: WeatherWrapperProps) {
-  const [currentIndoorData, setCurrentIndoorData] = useState<
-    IndoorData | undefined
-  >(undefined);
-  const [currentOutdoorData, setCurrentOutdoorData] = useState<
-    OutdoorData | undefined
-  >(undefined);
-  const [currentRainData, setCurrentRainData] = useState<RainData | undefined>(
-    undefined
-  );
-  const [currentWindData, setCurrentWindData] = useState<WindData | undefined>(
+  const [currentData, setCurrentData] = useState<WeatherData | undefined>(
     undefined
   );
   const [isPending, setIsPending] = useState(true);
   useEffect(() => {
     const updateUi = async () => {
       setIsPending(true);
-      const station = await getData();
+      const weatherResponseData = await getData();
 
-      if (!isWeatherStationData(station)) {
+      if (!isWeatherData(weatherResponseData)) {
         return;
       }
 
-      setCurrentIndoorData(station.dashboard_data);
+      setCurrentData(weatherResponseData);
 
-      setCurrentOutdoorData(
-        station.modules.filter((obj) => {
-          return obj.module_name === "Outdoor Weather Station";
-        })[0].dashboard_data as OutdoorData
-      );
-
-      setCurrentRainData(
-        station.modules.filter((obj) => {
-          return obj.module_name === "Rain Gauge";
-        })[0].dashboard_data as RainData
-      );
-
-      setCurrentWindData(
-        station.modules.filter((obj) => {
-          return obj.module_name === "Anemometer";
-        })[0].dashboard_data as WindData
-      );
       setIsPending(false);
     };
     const weatherCallInterval = setInterval(async () => {
@@ -86,26 +49,16 @@ export function WeatherWrapper({ ...rest }: WeatherWrapperProps) {
     }, 10000);
 
     return () => clearInterval(weatherCallInterval);
-  }, [
-    currentIndoorData,
-    currentOutdoorData,
-    currentRainData,
-    currentWindData,
-    isPending,
-  ]);
+  }, [currentData, isPending]);
 
   return (
     <Root data-testid={WeatherWrapper.name} {...rest}>
       <WeatherStation
-        rain={currentRainData ? currentRainData.Rain : undefined}
-        windStrength={
-          currentWindData ? currentWindData.WindStrength : undefined
-        }
-        windAngle={currentWindData ? currentWindData.WindAngle : undefined}
-        temperature={
-          currentOutdoorData ? currentOutdoorData.Temperature : undefined
-        }
-        pressure={currentIndoorData ? currentIndoorData.Pressure : undefined}
+        rain={currentData ? currentData.rain.value : undefined}
+        windStrength={currentData ? currentData.wind.value : undefined}
+        windAngle={currentData ? currentData.wind.direction : undefined}
+        temperature={currentData ? currentData.temperature.value : undefined}
+        pressure={currentData ? currentData.pressure.value : undefined}
         isPending={isPending}
       />
     </Root>

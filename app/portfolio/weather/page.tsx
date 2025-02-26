@@ -1,13 +1,6 @@
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
 import { Container, ErrorText, Heading, Paragraph } from "@/entities";
-import {
-  IndoorData,
-  OutdoorData,
-  RainData,
-  WeatherStationData,
-  WindData,
-} from "./types";
 import { WeatherWrapper } from "@/app/portfolio/weather/components/WeatherWrapper";
 
 export const metadata: Metadata = generateMetaData(

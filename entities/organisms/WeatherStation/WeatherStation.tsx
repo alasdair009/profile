@@ -13,25 +13,6 @@ type WeatherStationProps = {
   isPending?: boolean;
 } & HTMLAttributes<HTMLDivElement>;
 
-const directions = [
-  "North",
-  "North-East",
-  "East",
-  "South-East",
-  "South",
-  "South-West",
-  "West",
-  "North-West",
-];
-
-const getDirection = (angle?: number) => {
-  if (typeof angle === "undefined") {
-    return "";
-  }
-  const index = Math.round(((angle %= 360) < 0 ? angle + 360 : angle) / 45) % 8;
-  return directions[index];
-};
-
 export function WeatherStation({
   rain,
   windStrength,
@@ -61,7 +42,7 @@ export function WeatherStation({
         <UnorderedList>
           <li>rain: {rain}mm</li>
           <li>windStrength: {windStrength}kph</li>
-          <li>windAngle: {getDirection(windAngle)}</li>
+          <li>windAngle: {windAngle}</li>
           <li>temperature: {temperature}&deg;C</li>
           <li>pressure: {temperature}mbar</li>
         </UnorderedList>
