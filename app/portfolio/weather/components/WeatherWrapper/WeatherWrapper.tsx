@@ -37,6 +37,7 @@ export function WeatherWrapper({ ...rest }: WeatherWrapperProps) {
       const weatherResponseData = await getData();
 
       if (!isWeatherData(weatherResponseData)) {
+        console.warn(weatherResponseData);
         return;
       }
 

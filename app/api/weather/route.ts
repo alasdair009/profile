@@ -32,6 +32,11 @@ export async function GET() {
       Authorization: `Bearer ${process.env.HOME_ASSISTANT_TOKEN}`,
     },
   });
+  if (!res.ok) {
+    return Response.json({
+      error: `API error (${res.status}) - ${res.statusText}`,
+    });
+  }
   const data: EntityData[] = await res.json();
 
   const weatherData = data.filter((obj) => {
