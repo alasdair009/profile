@@ -32,7 +32,7 @@ export type TreeProps = {
  */
 export function Tree({
   windDirection = "none",
-  swayAmount = 3,
+  swayAmount = 5,
   ...rest
 }: TreeProps) {
   const treeLCG = makeLCG();

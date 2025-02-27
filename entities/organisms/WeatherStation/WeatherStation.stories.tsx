@@ -1,6 +1,7 @@
 import { WeatherStation } from "./WeatherStation";
 import { Meta, StoryObj } from "@storybook/react";
 import { expect, within } from "@storybook/test";
+import { windDirections } from "@/app/api/weather/route";
 
 const meta: Meta<typeof WeatherStation> = {
   component: WeatherStation,
@@ -11,7 +12,7 @@ const meta: Meta<typeof WeatherStation> = {
     rain: 0,
     temperature: 0,
     windStrength: 0,
-    windAngle: 0,
+    windAngle: "e",
   },
   argTypes: {
     rain: {
@@ -30,7 +31,8 @@ const meta: Meta<typeof WeatherStation> = {
       },
     },
     windAngle: {
-      control: { type: "range", min: 0, max: 360 },
+      control: { type: "select" },
+      options: windDirections,
     },
     windStrength: {
       control: {

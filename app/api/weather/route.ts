@@ -13,8 +13,17 @@ type EntityData = {
   attributes: Record<string, unknown>;
 };
 
-const windDirections = ["n", "ne", "e", "se", "s", "sw", "w", "nw"] as const;
-type WindDirection = (typeof windDirections)[number];
+export const windDirections = [
+  "n",
+  "ne",
+  "e",
+  "se",
+  "s",
+  "sw",
+  "w",
+  "nw",
+] as const;
+export type WindDirection = (typeof windDirections)[number];
 
 function isWindDirection(
   maybeDirection: unknown

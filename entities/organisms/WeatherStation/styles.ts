@@ -6,6 +6,7 @@ import {
   globalContentMaxWidth,
   globalDecorationMaxWidth,
   sizes,
+  Tree,
 } from "@/entities";
 import { rem, rgba } from "polished";
 import Image from "next/image";
@@ -66,4 +67,12 @@ export const Frame = styled.div`
     right: -2.5vmin;
     top: -2.5vmin;
   }
+`;
+
+export const HouseTree = styled(Tree)`
+  height: ${sizes.s64.rem};
+  position: absolute;
+  right: var(--right);
+  top: var(--top);
+  width: ${sizes.s64.rem};
 `;
