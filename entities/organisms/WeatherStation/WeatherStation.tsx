@@ -3,10 +3,21 @@ import { Frame, House, HouseTree, Inner, Root } from "./styles";
 import { Spinner, Tree, UnorderedList } from "@/entities";
 import talihouse from "./house.svg";
 import { StaticImageData } from "next/image";
-import { WindDirection } from "@/app/api/weather/route";
 import { Rain } from "@/entities/organisms/Lightning/Rain";
 import { Thermometer } from "./Thermometer/Thermometer";
 import { Barometer } from "@/entities/organisms/WeatherStation/Barometer";
+
+export const windDirections = [
+  "n",
+  "ne",
+  "e",
+  "se",
+  "s",
+  "sw",
+  "w",
+  "nw",
+] as const;
+export type WindDirection = (typeof windDirections)[number];
 
 type WeatherStationProps = {
   rain?: number;

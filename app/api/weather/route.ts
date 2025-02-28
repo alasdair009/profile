@@ -1,29 +1,5 @@
-import { WeatherData } from "@/app/portfolio/weather/types";
-
-type EntityData = {
-  entity_id:
-    | "sensor.weather_station_atmospheric_pressure"
-    | "sensor.weather_station_outdoor_weather_station_humidity"
-    | "sensor.weather_station_outdoor_weather_station_temperature"
-    | "sensor.weather_station_rain_gauge_precipitation"
-    | "sensor.weather_station_anemometer_wind_direction"
-    | "sensor.weather_station_anemometer_wind_speed";
-  state: string;
-  last_updated: string;
-  attributes: Record<string, unknown>;
-};
-
-export const windDirections = [
-  "n",
-  "ne",
-  "e",
-  "se",
-  "s",
-  "sw",
-  "w",
-  "nw",
-] as const;
-export type WindDirection = (typeof windDirections)[number];
+import { WeatherData, WeatherEntityData } from "@/app/portfolio/weather/types";
+import { WindDirection } from "@/entities/organisms/WeatherStation/WeatherStation";
 
 function isWindDirection(
   maybeDirection: unknown
@@ -46,7 +22,7 @@ export async function GET() {
       error: `API error (${res.status}) - ${res.statusText}`,
     });
   }
-  const data: EntityData[] = await res.json();
+  const data: WeatherEntityData[] = await res.json();
 
   const weatherData = data.filter((obj) => {
     return obj.entity_id.includes("weather_station");

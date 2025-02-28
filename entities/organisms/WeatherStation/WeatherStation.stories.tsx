@@ -1,7 +1,6 @@
-import { WeatherStation } from "./WeatherStation";
+import { WeatherStation, windDirections } from "./WeatherStation";
 import { Meta, StoryObj } from "@storybook/react";
 import { expect, within } from "@storybook/test";
-import { windDirections } from "@/app/api/weather/route";
 
 const meta: Meta<typeof WeatherStation> = {
   component: WeatherStation,

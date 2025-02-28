@@ -1,3 +1,16 @@
+export type WeatherEntityData = {
+  entity_id:
+    | "sensor.weather_station_atmospheric_pressure"
+    | "sensor.weather_station_outdoor_weather_station_humidity"
+    | "sensor.weather_station_outdoor_weather_station_temperature"
+    | "sensor.weather_station_rain_gauge_precipitation"
+    | "sensor.weather_station_anemometer_wind_direction"
+    | "sensor.weather_station_anemometer_wind_speed";
+  state: string;
+  last_updated: string;
+  attributes: Record<string, unknown>;
+};
+
 export type WeatherData = {
   pressure: {
     value: number;
