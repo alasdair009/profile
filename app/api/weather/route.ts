@@ -1,5 +1,8 @@
 import { WeatherData, WeatherEntityData } from "@/app/portfolio/weather/types";
-import { WindDirection } from "@/entities/organisms/WeatherStation/WeatherStation";
+import {
+  WindDirection,
+  windDirections,
+} from "@/entities/organisms/WeatherStation/WeatherStation";
 
 function isWindDirection(
   maybeDirection: unknown
