@@ -28,7 +28,10 @@ export async function GET() {
   const data: WeatherEntityData[] = await res.json();
 
   const weatherData = data.filter((obj) => {
-    return obj.entity_id.includes("weather_station");
+    return (
+      obj.entity_id.includes("weather_station") ||
+      obj.entity_id === "sensor.sun_solar_elevation"
+    );
   });
 
   const pressureData = weatherData.filter((obj) => {
@@ -61,6 +64,10 @@ export async function GET() {
     return obj.entity_id === "sensor.weather_station_anemometer_wind_speed";
   })[0];
 
+  const sunData = weatherData.filter((obj) => {
+    return obj.entity_id === "sensor.sun_solar_elevation";
+  })[0];
+
   const responseData: WeatherData = {
     pressure: {
       value: parseFloat(pressureData.state),
@@ -89,6 +96,11 @@ export async function GET() {
       value: parseFloat(windSpeedData.state),
       unit: `${windSpeedData.attributes.unit_of_measurement}`,
       lastUpdated: `${windSpeedData.last_updated}`,
+    },
+    sun: {
+      value: parseFloat(sunData.state),
+      unit: `${sunData.attributes.unit_of_measurement}`,
+      lastUpdated: `${sunData.last_updated}`,
     },
   };
 

@@ -36,6 +36,7 @@ export const House = styled(Image)`
 `;
 
 export const Frame = styled.div`
+  background: var(--background);
   border-radius: 2px;
   border-color: #ddd #eee #fff #eee;
   border-style: solid;
@@ -44,7 +45,7 @@ export const Frame = styled.div`
     0 0 ${rem(5)} 0 ${rgba(colors.whiteGhost, 0.25)} inset,
     0 ${rem(5)} ${rem(10)} ${rem(5)} ${rgba(colors.blackEvil, 0.25)};
   display: flex;
-  margin: 10vh 10vw;
+  margin: 10vh 10vw 5vh;
   position: relative;
 
   &::before {

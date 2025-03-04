@@ -31,26 +31,32 @@ export function WeatherWrapper({ ...rest }: WeatherWrapperProps) {
     undefined
   );
   const [isPending, setIsPending] = useState(true);
+
+  const updateUi2 = async () => {
+    setIsPending(true);
+    const weatherResponseData = await getData();
+
+    if (!isWeatherData(weatherResponseData)) {
+      console.warn(weatherResponseData);
+      return;
+    }
+
+    setCurrentData(weatherResponseData);
+
+    setIsPending(false);
+  };
+
   useEffect(() => {
-    const updateUi = async () => {
-      setIsPending(true);
-      const weatherResponseData = await getData();
-
-      if (!isWeatherData(weatherResponseData)) {
-        console.warn(weatherResponseData);
-        return;
-      }
-
-      setCurrentData(weatherResponseData);
-
-      setIsPending(false);
-    };
     const weatherCallInterval = setInterval(async () => {
-      await updateUi();
+      await updateUi2();
     }, 10000);
 
     return () => clearInterval(weatherCallInterval);
   }, [currentData, isPending]);
+
+  useEffect(() => {
+    updateUi2();
+  }, []);
 
   return (
     <Root data-testid={WeatherWrapper.name} {...rest}>
@@ -60,6 +66,12 @@ export function WeatherWrapper({ ...rest }: WeatherWrapperProps) {
         windAngle={currentData ? currentData.wind.direction : undefined}
         temperature={currentData ? currentData.temperature.value : undefined}
         pressure={currentData ? currentData.pressure.value : undefined}
+        sunAngle={currentData ? currentData.sun.value : undefined}
+        lastUpdated={
+          currentData
+            ? new Date(currentData?.temperature.lastUpdated)
+            : undefined
+        }
         isPending={isPending}
       />
     </Root>

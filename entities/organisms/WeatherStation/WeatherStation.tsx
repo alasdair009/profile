@@ -1,11 +1,12 @@
 import { ComponentProps, CSSProperties, HTMLAttributes } from "react";
 import { Frame, House, HouseTree, Inner, Root } from "./styles";
-import { Spinner, Tree, UnorderedList } from "@/entities";
+import { colors, Spinner, Tree, UnorderedList } from "@/entities";
 import talihouse from "./house.svg";
 import { StaticImageData } from "next/image";
 import { Rain } from "@/entities/organisms/Lightning/Rain";
 import { Thermometer } from "./Thermometer/Thermometer";
-import { Barometer } from "@/entities/organisms/WeatherStation/Barometer";
+import { Barometer } from "./Barometer";
+import { Plaque } from "./Plaque";
 
 export const windDirections = [
   "n",
@@ -25,7 +26,9 @@ type WeatherStationProps = {
   windAngle?: WindDirection;
   temperature?: number;
   pressure?: number;
+  sunAngle?: number;
   isPending?: boolean;
+  lastUpdated?: Date;
 } & HTMLAttributes<HTMLDivElement>;
 
 const treePositions = [
@@ -40,12 +43,28 @@ const treePositions = [
   { r: 3, t: 75 },
 ];
 
+const getSkyColor = (
+  angle: number | undefined
+): Exclude<CSSProperties["backgroundColor"], undefined> => {
+  if (typeof angle === "undefined") {
+    return "#7fb4c7";
+  }
+
+  if (angle < 0) {
+    return colors.blackEvil;
+  }
+
+  return "#7fb4c7";
+};
+
 export function WeatherStation({
-  rain = 0,
+  rain,
   windStrength,
   windAngle,
   temperature,
   pressure,
+  sunAngle,
+  lastUpdated,
   isPending = false,
   ...rest
 }: WeatherStationProps) {
@@ -55,11 +74,14 @@ export function WeatherStation({
   } else if (windAngle && ["sw", "w", "nw"].includes(windAngle)) {
     treeDirection = "left";
   }
+  const showRain = typeof rain !== "undefined" && rain > 0;
   return (
     <Root data-testid={WeatherStation.name} {...rest}>
       <Inner>
-        <Frame>
-          {rain > 0 && <Rain rainDrops={20} />}
+        <Frame
+          style={{ "--background": getSkyColor(sunAngle) } as CSSProperties}
+        >
+          {showRain && <Rain rainDrops={20} />}
           <House
             src={talihouse as StaticImageData}
             alt="Talihouse"
@@ -83,19 +105,15 @@ export function WeatherStation({
           )}
           {typeof pressure !== "undefined" && <Barometer pressure={pressure} />}
         </Frame>
-        {isPending && (
-          <span>
-            Requesting new data...
-            <Spinner style={{ display: "inline-block" }} />
-          </span>
-        )}
-        <UnorderedList>
-          <li>rain: {rain}mm</li>
-          <li>windStrength: {windStrength}kph</li>
-          <li>windAngle: {windAngle}</li>
-          <li>temperature: {temperature}&deg;C</li>
-          <li>pressure: {temperature}mbar</li>
-        </UnorderedList>
+        <Plaque
+          windAngle={windAngle}
+          windStrength={windStrength}
+          rain={rain}
+          pressure={pressure}
+          sunAngle={sunAngle}
+          lastUpdated={lastUpdated}
+          isPending={isPending}
+        />
       </Inner>
     </Root>
   );

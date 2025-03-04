@@ -5,7 +5,8 @@ export type WeatherEntityData = {
     | "sensor.weather_station_outdoor_weather_station_temperature"
     | "sensor.weather_station_rain_gauge_precipitation"
     | "sensor.weather_station_anemometer_wind_direction"
-    | "sensor.weather_station_anemometer_wind_speed";
+    | "sensor.weather_station_anemometer_wind_speed"
+    | "sensor.sun_solar_elevation";
   state: string;
   last_updated: string;
   attributes: Record<string, unknown>;
@@ -34,6 +35,11 @@ export type WeatherData = {
   };
   wind: {
     direction: WindDirection | "";
+    value: number;
+    unit: string;
+    lastUpdated: string;
+  };
+  sun: {
     value: number;
     unit: string;
     lastUpdated: string;
