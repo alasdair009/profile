@@ -13,12 +13,16 @@ import { rem } from "polished";
 export const Root = styled.article<{ $isPending: boolean }>`
   box-shadow: -${sizes.s4.rem} ${sizes.s4.rem} ${sizes.s8.rem} ${rem(1)}
     rgba(0, 0, 0, 0.5);
-  color: ${({ $isPending }) =>
-    $isPending ? "transparent" : colors.whiteGhost};
+  color: ${colors.whiteGhost};
   padding: ${sizes.s8.rem};
   position: relative;
   transition: color ${animationDurationCSS(0.25)} ${curves.default};
   width: ${sizes.s256.rem};
+
+  dd {
+    color: ${({ $isPending }) =>
+      $isPending ? "transparent" : colors.whiteGhost};
+  }
 
   &::before {
     background:
