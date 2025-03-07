@@ -20,6 +20,7 @@ export const GET_ALL_POSTS = `*[_type == "post"] | order(publishedAt desc) {
 }`;
 
 export type Post = {
+  _id: string;
   title: string;
   slug: {
     current: string;
