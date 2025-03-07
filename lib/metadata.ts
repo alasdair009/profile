@@ -21,7 +21,8 @@ export const generateMetaData = (
         section?: null | string;
         tags?: null | string | Array<string>;
       }
-    | undefined = undefined
+    | undefined = undefined,
+  alternates: {} | undefined = undefined
 ): Metadata => {
   return {
     title: `${pageTitle} | ${siteName} | front end web engineer trampolinist`,
@@ -31,6 +32,7 @@ export const generateMetaData = (
     authors: { name: myName },
     alternates: {
       canonical: `${siteOrigin}/${pagePath}`,
+      ...alternates,
     },
     openGraph: {
       title: `${pageTitle} | ${siteName}`,

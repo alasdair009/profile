@@ -3,11 +3,20 @@ import { generateMetaData } from "@/lib/metadata";
 import { BlogList, Heading, Paragraph, sizes } from "@/entities";
 import { sanityClient } from "@/lib/sanity/client";
 import { Suspense } from "react";
+import { siteOrigin } from "@/lib/domains";
 
 export const metadata: Metadata = generateMetaData(
   "Blog",
   "A cocktail of thoughts and projects from my years of web development, trampoline coaching and general adventures.",
-  "blog"
+  "blog",
+  undefined,
+  undefined,
+  undefined,
+  {
+    types: {
+      "application/rss+xml": `${siteOrigin}/blog/rss.xml`,
+    },
+  }
 );
 
 export const revalidate = 600; // revalidate at most every 10mins
