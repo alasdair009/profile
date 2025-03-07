@@ -14,6 +14,11 @@ const meta: Meta<typeof WeatherStation> = {
     windAngle: "e",
     nextRising: new Date("2025-01-01 09:00:00"),
     nextSetting: new Date("2025-01-01 17:00:00"),
+    nextNoon: new Date("2025-01-01 12:00:00"),
+    sunAngle: 20,
+    pressure: 1000,
+    isPending: false,
+    sunState: "above_horizon",
   },
   argTypes: {
     rain: {
@@ -26,8 +31,15 @@ const meta: Meta<typeof WeatherStation> = {
     nextRising: {
       control: "date",
     },
+    nextNoon: {
+      control: "date",
+    },
     nextSetting: {
       control: "date",
+    },
+    sunState: {
+      control: { type: "select" },
+      options: ["below_horizon", "above_horizon"],
     },
     temperature: {
       control: {

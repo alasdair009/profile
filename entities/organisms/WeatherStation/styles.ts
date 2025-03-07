@@ -1,8 +1,10 @@
 "use client";
 import styled from "styled-components";
 import {
+  animationDurationCSS,
   borderRadii,
   colors,
+  curves,
   globalContentMaxWidth,
   globalDecorationMaxWidth,
   sizes,
@@ -86,6 +88,7 @@ export const SunAnchor = styled.span`
   position: absolute;
   top: 0;
   transform: rotate(calc(var(--rotation) * 1deg));
+  transition: transform ${animationDurationCSS(1)} ${curves.default};
   width: 100%;
 `;
 
