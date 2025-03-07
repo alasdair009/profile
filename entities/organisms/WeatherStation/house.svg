@@ -44,7 +44,7 @@
     </defs>
     <title>Talihouse</title>
     <rect class="ground" height="500" width="1000" y="500" />
-    <rect class="fence" height="100" y="400" width="1000" />
+    <rect class="fence" height="20" y="480" width="1000" />
     <rect class="front" width="500" height="300" x="100" y="450" />
     <rect class="door" width="50" height="100" fill="black" x="330" y="650" />
     <polygon class="back-roof" points="600,450 550,350 650,250 700,300" />

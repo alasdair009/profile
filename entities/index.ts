@@ -52,6 +52,7 @@ export { Snow } from "./atoms/Snow";
 export { SocialMediaLink } from "./atoms/SocialMediaLink";
 export { Spacer } from "./atoms/Spacer";
 export { Spinner } from "./atoms/Spinner";
+export { Sun } from "./atoms/Sun";
 export { Table } from "./atoms/Table";
 export { TextMask } from "./atoms/TextMask";
 export { Tree } from "./atoms/Tree";

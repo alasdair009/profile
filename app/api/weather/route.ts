@@ -1,4 +1,8 @@
-import { WeatherData, WeatherEntityData } from "@/app/portfolio/weather/types";
+import {
+  SunState,
+  WeatherData,
+  WeatherEntityData,
+} from "@/app/portfolio/weather/types";
 import {
   WindDirection,
   windDirections,
@@ -29,8 +33,7 @@ export async function GET() {
 
   const weatherData = data.filter((obj) => {
     return (
-      obj.entity_id.includes("weather_station") ||
-      obj.entity_id === "sensor.sun_solar_elevation"
+      obj.entity_id.includes("weather_station") || obj.entity_id === "sun.sun"
     );
   });
 
@@ -65,7 +68,7 @@ export async function GET() {
   })[0];
 
   const sunData = weatherData.filter((obj) => {
-    return obj.entity_id === "sensor.sun_solar_elevation";
+    return obj.entity_id === "sun.sun";
   })[0];
 
   const responseData: WeatherData = {
@@ -98,8 +101,17 @@ export async function GET() {
       lastUpdated: `${windSpeedData.last_updated}`,
     },
     sun: {
-      value: parseFloat(sunData.state),
-      unit: `${sunData.attributes.unit_of_measurement}`,
+      value: parseFloat(sunData.attributes.elevation as string),
+      azimuth: parseFloat(sunData.attributes.azimuth as string),
+      rising: sunData.attributes.rising as boolean,
+      state: sunData.state as SunState,
+      nextDawn: sunData.attributes.next_dawn as string,
+      nextDusk: sunData.attributes.next_dusk as string,
+      nextMidnight: sunData.attributes.next_midnight as string,
+      nextNoon: sunData.attributes.next_noon as string,
+      nextRising: sunData.attributes.next_rising as string,
+      nextSetting: sunData.attributes.next_setting as string,
+      unit: `°`,
       lastUpdated: `${sunData.last_updated}`,
     },
   };

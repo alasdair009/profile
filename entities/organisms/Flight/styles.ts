@@ -4,6 +4,7 @@ import { CSSProperties } from "react";
 import { borderRadii, colors, sizes } from "@/entities";
 import { Cloud as CloudEntity } from "../../atoms/Cloud";
 import { rgba } from "polished";
+import { Sun as SunEntity } from "@/entities/atoms/Sun";
 
 const cloudMove = keyframes`
     0% {
@@ -43,26 +44,13 @@ export const Root = styled.div<{ $skyColor: CSSProperties["backgroundColor"] }>`
     top: 0;
     width: 100%;
   }
+`;
 
-  &::after {
-    aspect-ratio: 1;
-    background: radial-gradient(
-      closest-side circle at center,
-      hsl(4 5% 100% / 100%) 0%,
-      hsl(4 5% 100% / 100%) 15%,
-      hsl(4 10% 70% / 70%) 30%,
-      hsl(4 0% 50% / 30%) 55%,
-      hsl(4 0% 10% / 5%) 75%,
-      transparent 99%
-    );
-    border-radius: ${borderRadii.round};
-    content: "";
-    filter: blur(4px);
-    left: 7%;
-    position: absolute;
-    top: 7%;
-    width: 10%;
-  }
+export const Sun = styled(SunEntity)`
+  left: 7%;
+  position: absolute;
+  top: 7%;
+  width: 10%;
 `;
 
 export const Cloud = styled(CloudEntity)`

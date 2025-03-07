@@ -6,6 +6,7 @@ import {
   globalContentMaxWidth,
   globalDecorationMaxWidth,
   sizes,
+  Sun as SunEntity,
   Tree,
 } from "@/entities";
 import { rem, rgba } from "polished";
@@ -32,6 +33,7 @@ export const House = styled(Image)`
   aspect-ratio: 1;
   height: auto;
   max-width: ${rem(900)};
+  position: relative;
   width: 100%;
 `;
 
@@ -76,4 +78,20 @@ export const HouseTree = styled(Tree)`
   right: var(--right);
   top: var(--top);
   width: ${sizes.s64.rem};
+`;
+
+export const SunAnchor = styled.span`
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(calc(var(--rotation) * 1deg));
+  width: 100%;
+`;
+
+export const Sun = styled(SunEntity)`
+  left: ${sizes.s24.rem};
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 `;

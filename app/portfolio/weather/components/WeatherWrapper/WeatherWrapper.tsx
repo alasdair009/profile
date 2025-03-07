@@ -32,7 +32,7 @@ export function WeatherWrapper({ ...rest }: WeatherWrapperProps) {
   );
   const [isPending, setIsPending] = useState(true);
 
-  const updateUi2 = async () => {
+  const updateUi = async () => {
     setIsPending(true);
     const weatherResponseData = await getData();
 
@@ -48,14 +48,14 @@ export function WeatherWrapper({ ...rest }: WeatherWrapperProps) {
 
   useEffect(() => {
     const weatherCallInterval = setInterval(async () => {
-      await updateUi2();
+      await updateUi();
     }, 10000);
 
     return () => clearInterval(weatherCallInterval);
   }, [currentData, isPending]);
 
   useEffect(() => {
-    updateUi2();
+    updateUi();
   }, []);
 
   return (
@@ -67,6 +67,14 @@ export function WeatherWrapper({ ...rest }: WeatherWrapperProps) {
         temperature={currentData ? currentData.temperature.value : undefined}
         pressure={currentData ? currentData.pressure.value : undefined}
         sunAngle={currentData ? currentData.sun.value : undefined}
+        sunState={currentData ? currentData.sun.state : undefined}
+        nextRising={
+          currentData ? new Date(currentData.sun.nextRising) : undefined
+        }
+        nextNoon={currentData ? new Date(currentData.sun.nextNoon) : undefined}
+        nextSetting={
+          currentData ? new Date(currentData.sun.nextSetting) : undefined
+        }
         lastUpdated={
           currentData
             ? new Date(currentData?.temperature.lastUpdated)

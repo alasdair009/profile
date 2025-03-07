@@ -1,5 +1,5 @@
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
-import { Root, Cloud } from "./styles";
+import { Root, Cloud, Sun } from "./styles";
 import { colors } from "@/entities";
 import { lcgNextRand, makeLCG } from "@/lib/random";
 
@@ -48,6 +48,7 @@ export function Flight({
 
   return (
     <Root data-testid={Flight.name} $skyColor={skyColor} {...rest}>
+      <Sun />
       {clouds}
     </Root>
   );

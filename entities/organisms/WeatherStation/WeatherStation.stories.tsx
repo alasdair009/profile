@@ -12,6 +12,8 @@ const meta: Meta<typeof WeatherStation> = {
     temperature: 0,
     windStrength: 0,
     windAngle: "e",
+    nextRising: new Date("2025-01-01 09:00:00"),
+    nextSetting: new Date("2025-01-01 17:00:00"),
   },
   argTypes: {
     rain: {
@@ -20,6 +22,12 @@ const meta: Meta<typeof WeatherStation> = {
         min: 0,
         step: 0.1,
       },
+    },
+    nextRising: {
+      control: "date",
+    },
+    nextSetting: {
+      control: "date",
     },
     temperature: {
       control: {

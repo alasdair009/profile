@@ -6,11 +6,13 @@ export type WeatherEntityData = {
     | "sensor.weather_station_rain_gauge_precipitation"
     | "sensor.weather_station_anemometer_wind_direction"
     | "sensor.weather_station_anemometer_wind_speed"
-    | "sensor.sun_solar_elevation";
+    | "sun.sun";
   state: string;
   last_updated: string;
   attributes: Record<string, unknown>;
 };
+
+export type SunState = "above_horizon" | "below_horizon";
 
 export type WeatherData = {
   pressure: {
@@ -41,6 +43,15 @@ export type WeatherData = {
   };
   sun: {
     value: number;
+    azimuth: number;
+    rising: boolean;
+    state: SunState;
+    nextDawn: string;
+    nextDusk: string;
+    nextMidnight: string;
+    nextNoon: string;
+    nextRising: string;
+    nextSetting: string;
     unit: string;
     lastUpdated: string;
   };
