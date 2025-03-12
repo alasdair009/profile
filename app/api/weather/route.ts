@@ -1,4 +1,5 @@
 import {
+  CloudState,
   SunState,
   WeatherData,
   WeatherEntityData,
@@ -33,7 +34,9 @@ export async function GET() {
 
   const weatherData = data.filter((obj) => {
     return (
-      obj.entity_id.includes("weather_station") || obj.entity_id === "sun.sun"
+      obj.entity_id.includes("weather_station") ||
+      obj.entity_id === "sun.sun" ||
+      obj.entity_id === "weather.forecast_home"
     );
   });
 
@@ -69,6 +72,10 @@ export async function GET() {
 
   const sunData = weatherData.filter((obj) => {
     return obj.entity_id === "sun.sun";
+  })[0];
+
+  const cloudData = weatherData.filter((obj) => {
+    return obj.entity_id === "weather.forecast_home";
   })[0];
 
   const responseData: WeatherData = {
@@ -113,6 +120,10 @@ export async function GET() {
       nextSetting: sunData.attributes.next_setting as string,
       unit: `°`,
       lastUpdated: `${sunData.last_updated}`,
+    },
+    cloud: {
+      value: parseInt(cloudData.attributes.cloud_coverage as string),
+      state: cloudData.state as CloudState,
     },
   };
 

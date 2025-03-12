@@ -1,5 +1,14 @@
 import { ComponentProps, CSSProperties, HTMLAttributes } from "react";
-import { Frame, House, HouseTree, Inner, Root, Sun, SunAnchor } from "./styles";
+import {
+  Frame,
+  House,
+  HouseTree,
+  Inner,
+  Moon,
+  Root,
+  Sun,
+  SunAnchor,
+} from "./styles";
 import { colors, Tree } from "@/entities";
 import talihouse from "./house.svg";
 import { StaticImageData } from "next/image";
@@ -34,6 +43,7 @@ type WeatherStationProps = {
   nextRising?: Date;
   nextNoon?: Date;
   nextSetting?: Date;
+  now?: Date;
 } & HTMLAttributes<HTMLDivElement>;
 
 const treePositions = [
@@ -67,8 +77,11 @@ const getSkyColor = (
  * @param nextRiseHour - the hour the sun next rises
  * @param nextSettingHour - the hour the sun next sets
  */
-const getSunTransform = (nextRiseHour: number, nextSettingHour: number) => {
-  const nowHour = new Date().getHours();
+const getSunTransform = (
+  nowHour: number,
+  nextRiseHour: number,
+  nextSettingHour: number
+) => {
   const progressIntoDaylight = nowHour - nextRiseHour;
   const dayLightHours = nextSettingHour - nextRiseHour;
   const anglePerDaylightHour = 180 / dayLightHours;
@@ -88,6 +101,7 @@ export function WeatherStation({
   nextRising,
   nextNoon,
   nextSetting,
+  now = new Date(),
   ...rest
 }: WeatherStationProps) {
   let treeDirection: ComponentProps<typeof Tree>["windDirection"] = "none";
@@ -99,6 +113,8 @@ export function WeatherStation({
   const showRain = typeof rain !== "undefined" && rain > 0;
   const showSun = nextRising && nextSetting;
 
+  const nowHour =
+    typeof now === "object" ? now.getHours() : new Date(`${now}`).getHours();
   const risingHour =
     typeof nextRising === "object"
       ? nextRising.getHours()
@@ -119,10 +135,15 @@ export function WeatherStation({
             <SunAnchor
               style={
                 {
-                  "--rotation": getSunTransform(risingHour, settingHour),
+                  "--rotation": getSunTransform(
+                    nowHour,
+                    risingHour,
+                    settingHour
+                  ),
                 } as CSSProperties
               }
             >
+              <Moon />
               <Sun />
             </SunAnchor>
           )}

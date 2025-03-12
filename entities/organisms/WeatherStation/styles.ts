@@ -7,6 +7,7 @@ import {
   curves,
   globalContentMaxWidth,
   globalDecorationMaxWidth,
+  Moon as MoonEntity,
   sizes,
   Sun as SunEntity,
   Tree,
@@ -95,6 +96,13 @@ export const SunAnchor = styled.span`
 export const Sun = styled(SunEntity)`
   left: ${sizes.s24.rem};
   position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+export const Moon = styled(MoonEntity)`
+  position: absolute;
+  right: ${sizes.s8.rem};
   top: 50%;
   transform: translate(-50%, -50%);
 `;

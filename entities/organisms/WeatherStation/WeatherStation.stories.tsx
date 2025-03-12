@@ -2,6 +2,11 @@ import { WeatherStation, windDirections } from "./WeatherStation";
 import { Meta, StoryObj } from "@storybook/react";
 import { expect, within } from "@storybook/test";
 
+const midnight = new Date("2025-01-01 00:00:00");
+const dawn = new Date("2025-01-01 07:00:00");
+const noon = new Date("2025-01-01 12:00:00");
+const dusk = new Date("2025-01-01 17:00:00");
+
 const meta: Meta<typeof WeatherStation> = {
   component: WeatherStation,
   parameters: {
@@ -12,9 +17,10 @@ const meta: Meta<typeof WeatherStation> = {
     temperature: 0,
     windStrength: 0,
     windAngle: "e",
-    nextRising: new Date("2025-01-01 09:00:00"),
-    nextSetting: new Date("2025-01-01 17:00:00"),
-    nextNoon: new Date("2025-01-01 12:00:00"),
+    nextRising: dawn,
+    nextSetting: dusk,
+    nextNoon: noon,
+    now: noon,
     sunAngle: 20,
     pressure: 1000,
     isPending: false,
@@ -35,6 +41,9 @@ const meta: Meta<typeof WeatherStation> = {
       control: "date",
     },
     nextSetting: {
+      control: "date",
+    },
+    now: {
       control: "date",
     },
     sunState: {
@@ -65,6 +74,44 @@ const meta: Meta<typeof WeatherStation> = {
 export default meta;
 
 export const Default: StoryObj<typeof WeatherStation> = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const weatherStationElement = canvas.getByTestId(WeatherStation.name);
+
+    await expect(weatherStationElement).toBeInTheDocument();
+  },
+};
+
+export const Rise: StoryObj<typeof WeatherStation> = {
+  args: {
+    now: dawn,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const weatherStationElement = canvas.getByTestId(WeatherStation.name);
+
+    await expect(weatherStationElement).toBeInTheDocument();
+  },
+};
+
+export const Set: StoryObj<typeof WeatherStation> = {
+  args: {
+    now: dusk,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const weatherStationElement = canvas.getByTestId(WeatherStation.name);
+
+    await expect(weatherStationElement).toBeInTheDocument();
+  },
+};
+
+export const Midnight: StoryObj<typeof WeatherStation> = {
+  args: {
+    now: midnight,
+    nextRising: new Date("2025-01-02 07:00:00"),
+    sunState: "below_horizon",
+  },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const weatherStationElement = canvas.getByTestId(WeatherStation.name);
