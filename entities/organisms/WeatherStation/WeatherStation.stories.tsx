@@ -23,6 +23,7 @@ const meta: Meta<typeof WeatherStation> = {
     now: noon,
     sunAngle: 20,
     pressure: 1000,
+    cloudCover: 66,
     isPending: false,
     sunState: "above_horizon",
   },
@@ -56,6 +57,14 @@ const meta: Meta<typeof WeatherStation> = {
         min: -20,
         max: 50,
         step: 0.1,
+      },
+    },
+    cloudCover: {
+      control: {
+        type: "range",
+        min: 0,
+        max: 100,
+        step: 1,
       },
     },
     windAngle: {

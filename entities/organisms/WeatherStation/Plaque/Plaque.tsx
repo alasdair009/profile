@@ -7,6 +7,7 @@ type PlaqueProps = {
   rain?: number;
   pressure?: number;
   sunAngle?: number;
+  cloudCover?: number;
   lastUpdated?: Date;
   isPending: boolean;
 } & HTMLAttributes<HTMLDivElement>;
@@ -22,6 +23,7 @@ export function Plaque({
   rain,
   pressure,
   sunAngle,
+  cloudCover,
   lastUpdated,
   isPending,
   ...rest
@@ -49,6 +51,8 @@ export function Plaque({
           {sunAngle}
           <sub>&deg;</sub>
         </DD>
+        <DT>Cloud cover:</DT>
+        <DD>{cloudCover}%</DD>
         <DT>Last updated:</DT>
         {lastUpdated ? (
           <DD>{lastUpdated.toLocaleString("en-GB", timeFormat)}</DD>

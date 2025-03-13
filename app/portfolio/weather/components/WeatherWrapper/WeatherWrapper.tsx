@@ -75,6 +75,7 @@ export function WeatherWrapper({ ...rest }: WeatherWrapperProps) {
         nextSetting={
           currentData ? new Date(currentData.sun.nextSetting) : undefined
         }
+        cloudCover={currentData ? currentData.cloud.value : undefined}
         lastUpdated={
           currentData
             ? new Date(currentData?.temperature.lastUpdated)

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {
   animationDurationCSS,
   borderRadii,
+  Cloud as CloudEntity,
   colors,
   curves,
   globalContentMaxWidth,
@@ -105,4 +106,23 @@ export const Moon = styled(MoonEntity)`
   right: ${sizes.s8.rem};
   top: 50%;
   transform: translate(-50%, -50%);
+`;
+
+export const CloudWrapper = styled.div`
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+`;
+
+export const Cloud = styled(CloudEntity)`
+  height: ${sizes.s512.rem};
+  left: var(--xPos);
+  opacity: 0.65;
+  position: absolute;
+  top: var(--yPos);
+  transform: translate(-50%, -50%) scale(0.2);
+  width: ${sizes.s1024.rem};
 `;

@@ -1,5 +1,7 @@
 import { ComponentProps, CSSProperties, HTMLAttributes } from "react";
 import {
+  Cloud,
+  CloudWrapper,
   Frame,
   House,
   HouseTree,
@@ -43,6 +45,7 @@ type WeatherStationProps = {
   nextRising?: Date;
   nextNoon?: Date;
   nextSetting?: Date;
+  cloudCover?: number;
   now?: Date;
 } & HTMLAttributes<HTMLDivElement>;
 
@@ -101,6 +104,7 @@ export function WeatherStation({
   nextRising,
   nextNoon,
   nextSetting,
+  cloudCover,
   now = new Date(),
   ...rest
 }: WeatherStationProps) {
@@ -112,6 +116,8 @@ export function WeatherStation({
   }
   const showRain = typeof rain !== "undefined" && rain > 0;
   const showSun = nextRising && nextSetting;
+  const cloudCoverPercentage =
+    cloudCover && cloudCover >= 0 && cloudCover <= 100 ? cloudCover : 0;
 
   const nowHour =
     typeof now === "object" ? now.getHours() : new Date(`${now}`).getHours();
@@ -147,6 +153,32 @@ export function WeatherStation({
               <Sun />
             </SunAnchor>
           )}
+          <CloudWrapper>
+            {cloudCoverPercentage > 0 && (
+              <Cloud
+                cloudColor={colors.whiteGhost}
+                dispersion={50}
+                skyColor="transparent"
+                style={{ "--xPos": "20%", "--yPos": "15%" } as CSSProperties}
+              />
+            )}
+            {cloudCoverPercentage > 33 && (
+              <Cloud
+                cloudColor={colors.whiteGhost}
+                dispersion={50}
+                skyColor="transparent"
+                style={{ "--xPos": "80%", "--yPos": "10%" } as CSSProperties}
+              />
+            )}
+            {cloudCoverPercentage > 66 && (
+              <Cloud
+                cloudColor={colors.whiteGhost}
+                dispersion={50}
+                skyColor="transparent"
+                style={{ "--xPos": "50%", "--yPos": "20%" } as CSSProperties}
+              />
+            )}
+          </CloudWrapper>
           <House
             src={talihouse as StaticImageData}
             alt="Talihouse"
@@ -178,6 +210,7 @@ export function WeatherStation({
           sunAngle={sunAngle}
           lastUpdated={lastUpdated}
           isPending={isPending}
+          cloudCover={cloudCoverPercentage}
         />
       </Inner>
     </Root>
