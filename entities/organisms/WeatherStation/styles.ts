@@ -102,7 +102,7 @@ export const Sun = styled(SunEntity)`
 `;
 
 export const Moon = styled(MoonEntity)`
-  position: absolute;
+  position: absolute !important;
   right: ${sizes.s8.rem};
   top: 50%;
   transform: translate(-50%, -50%);
