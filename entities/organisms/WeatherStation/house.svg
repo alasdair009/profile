@@ -1,5 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
     <defs>
+        <linearGradient spreadMethod="repeat" id="brick1" x1="0%" y1="0%" x2="0%" y2="10%">
+            <stop class="mortar" offset="0"/>
+            <stop class="mortar" offset="1%"/>
+            <stop class="brick" offset="1%"/>
+            <stop class="brick" offset="9%"/>
+            <stop class="mortar" offset="9%"/>
+            <stop class="mortar" offset="10%"/>
+            <stop class="brick" offset="10%"/>
+            <stop class="brick" offset="17%"/>
+
+        </linearGradient>
+        <linearGradient id="brick2" spreadMethod="repeat" x1="0%" x2="11%">
+            <stop offset="0%" stop-color="transparent" />
+            <stop offset="10%" stop-color="transparent" />
+            <stop class="mortar" offset="10%" />
+            <stop class="mortar" offset="11%" />
+            <stop offset="11%" stop-color="transparent" />
+        </linearGradient>
+<!--        repeating-linear-gradient(-->
+<!--        to bottom, transparent 0 40%, #724518 40% 50%-->
+<!--        ) 0 0 / 200px 100px,-->
+<!--        repeating-linear-gradient(-->
+<!--        to right, #a4640e 0 45%, #724518 45% 50%-->
+<!--        ) 0 0 / 200px 100px-->
         <style>
             .ground {
                 fill: #073605;
@@ -8,7 +32,16 @@
                 fill: #480d0d;
             }
             .front {
-                fill: #b00;
+                fill: url(#brick1);
+            }
+            .front-mortar {
+                fill: url(#brick2);
+            }
+            .brick {
+                stop-color: #b00;
+            }
+            .mortar {
+                stop-color: #bbb;
             }
             .side {
                 fill: darkred;
@@ -46,6 +79,7 @@
     <rect class="ground" height="500" width="1000" y="500" />
     <rect class="fence" height="20" y="480" width="1000" />
     <rect class="front" width="500" height="300" x="100" y="450" />
+    <rect class="front-mortar" width="500" height="300" x="100" y="450" />
     <rect class="door" width="50" height="100" fill="black" x="330" y="650" />
     <polygon class="back-roof" points="600,450 550,350 650,250 700,300" />
     <polygon class="front-roof" points="600,450 550,350 150,350 100,450" />
