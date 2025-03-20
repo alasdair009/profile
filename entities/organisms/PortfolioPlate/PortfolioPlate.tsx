@@ -1,5 +1,6 @@
 import { ContentPlate, Heading, Link } from "@/entities";
 import { PortfolioPlateProps } from "./types";
+import { siteOrigin } from "@/lib/domains";
 
 export function PortfolioPlate({
   contentPlateProps,
@@ -8,6 +9,7 @@ export function PortfolioPlate({
   children,
   ...rest
 }: PortfolioPlateProps) {
+  const urlToShow = url?.startsWith("http") ? url : `${siteOrigin}${url}`;
   return (
     <ContentPlate
       {...contentPlateProps}
@@ -16,7 +18,7 @@ export function PortfolioPlate({
     >
       <Heading level="h3">{heading}</Heading>
       {url ? (
-        <Link href={url} />
+        <Link href={url}>{urlToShow}</Link>
       ) : !contentPlateProps.embedUrl ? (
         <pre>(URL not public)</pre>
       ) : (

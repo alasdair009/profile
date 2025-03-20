@@ -106,7 +106,7 @@ export default function Home() {
         </Heading>
         <Paragraph>
           I can develop well on my own or as part of a team. Throughout my
-          career I have formed high perming teams to develop software that
+          career I have formed high performing teams to develop software that
           supports computer games including RuneScape, Old School RuneScape, and
           Scum. I often mentor other members of my team to maximise the
           potential of the front-end deliverable.

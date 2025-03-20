@@ -8,7 +8,6 @@ import {
   globalContentMaxWidth,
   Heading,
   HorizontalRule,
-  IFrame,
   Link,
   Paragraph,
   PortfolioPlate,
@@ -30,6 +29,7 @@ import jagexCorporateImage from "../../entities/assets/jagex-corporate.webp";
 import jagexLauncherImage from "../../entities/assets/launcher.webp";
 import runeFestImage from "../../entities/assets/runefest.webp";
 import runeScapeNewsImage from "../../entities/assets/runescape-news.webp";
+import weatherImage from "../../entities/assets/weather.webp";
 import { rem, rgba } from "polished";
 import amLogo from "../../entities/assets/am.svg";
 import { GridLogo, SkillGrid } from "@/app/portfolio/styles";
@@ -37,6 +37,7 @@ import aliSvg from "../../entities/assets/ali-portrait.svg";
 import Image from "next/image";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
+import { siteOrigin } from "@/lib/domains";
 
 const currentEmployer = getCurrentEmployer();
 const employmentHistory: TimelineEntry[] = [];
@@ -347,6 +348,36 @@ export default function Portfolio() {
           At RuneFest 2018 myself and other members of the team hosted a talk on
           one of the stages at the event explaining the work that goes into
           managing Jagex&apos;s web services.
+        </Paragraph>
+      </PortfolioPlate>
+      <HorizontalRule />
+      <section
+        style={{
+          display: "block",
+          maxWidth: rem(globalContentMaxWidth),
+          margin: "0 auto",
+          padding: `0 ${sizes.s16.rem}`,
+        }}
+      >
+        <Heading level="h2">Personal Portfolio</Heading>
+        <Paragraph>
+          The following is a library of person projects I have undertaken
+          outside of my career and regular work. Most source code is available
+          on my GitHub for review but private projects are available on request.
+        </Paragraph>
+      </section>
+      <PortfolioPlate
+        contentPlateProps={{
+          foregroundImage: weatherImage,
+          foregroundImageAlt: "An SVG render of a house",
+        }}
+        heading="Weather Station"
+        url="/portfolio/weather"
+      >
+        <Paragraph>
+          I built a web app to read live data from my Netatmo Weather station.
+          The data from the station is read and used to adjust an SVG graphic
+          using CSS animations and transformations.
         </Paragraph>
       </PortfolioPlate>
       <HorizontalRule decoration={true} />

@@ -32,6 +32,7 @@ export type { Breakpoint, Dimension } from "./design-tokens/dimensions";
 
 export { Audio } from "./atoms/Audio";
 export { BaseCheckbox } from "./atoms/BaseCheckbox";
+export { BaseDate } from "./atoms/BaseDate";
 export { BaseInput } from "./atoms/BaseInput";
 export { BaseLabel } from "./atoms/BaseLabel";
 export { BaseRadio } from "./atoms/BaseRadio";
@@ -63,6 +64,7 @@ export { Video } from "./atoms/Video";
 
 export { Card } from "./molecules/Card";
 export { LabelledCheckbox } from "./molecules/LabelledCheckbox";
+export { LabelledDate } from "./molecules/LabelledDate";
 export { LabelledInput } from "./molecules/LabelledInput";
 export { LabelledRadio } from "./molecules/LabelledRadio";
 export { LabelledSelect } from "./molecules/LabelledSelect";
