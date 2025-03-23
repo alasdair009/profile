@@ -51,8 +51,8 @@ export default async function AboutMe() {
         }}
       >
         <Video
-          webmSrc="https://ftjjvjgljna2ohz8.public.blob.vercel-storage.com/trampoline-cambs.webm"
-          mp4Src="https://ftjjvjgljna2ohz8.public.blob.vercel-storage.com/trampoline-cambs.mp4"
+          webmSrc="https://files.alasdairmacrae.co.uk/trampoline-cambs.webm"
+          mp4Src="https://files.alasdairmacrae.co.uk/trampoline-cambs.mp4"
           poster={trampolinePosterImage}
           style={{
             height: "100%",
