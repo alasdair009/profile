@@ -29,10 +29,6 @@ export async function GET(request: Request) {
       (res) => res.arrayBuffer()
     );
 
-    const clouds = await fetch(new URL("./clouds.jpg", import.meta.url)).then(
-      (res) => res.arrayBuffer()
-    );
-
     const trampoline = await fetch(
       new URL("./trampoline.png", import.meta.url)
     ).then((res) => res.arrayBuffer());
