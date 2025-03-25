@@ -69,12 +69,15 @@ export async function GET(request: Request) {
       (res) => res.arrayBuffer()
     );
 
+    const trampolineBedColor1 = `#fff`;
+    const trampolineBedColor2 = `#bfbfbf`;
+
     return new ImageResponse(
       (
         <div
           style={{
             alignItems: "center",
-            background: `radial-gradient(${colors.blackEvil} 75%, ${darken(0.3, colors.greenGrass)})`,
+            background: `radial-gradient(ellipse at top, rgba(20, 44, 22, 0.5), rgba(36, 96, 44, 0.5)), radial-gradient(${colors.blackEvil} 75%, ${darken(0.3, colors.greenGrass)})`,
             color: colors.whiteGhost,
             display: "flex",
             flex: 1,
@@ -85,10 +88,17 @@ export async function GET(request: Request) {
             width: 1200,
           }}
         >
-          <img
-            src={clouds as unknown as string}
-            alt=""
-            style={{ opacity: 0.15, position: "absolute" }}
+          <span
+            style={{
+              background: `linear-gradient(90deg, ${trampolineBedColor1} 12%, transparent 0, transparent 88%, ${trampolineBedColor1} 0), linear-gradient(180deg, transparent 37%, ${trampolineBedColor2} 0, ${trampolineBedColor2} 63%, transparent 0), linear-gradient(90deg, transparent 37%, ${trampolineBedColor1} 0, ${trampolineBedColor1} 63%, transparent 0) transparent`,
+              backgroundSize: "25px 25px",
+              height: "100%",
+              opacity: 0.1,
+              position: "absolute",
+              left: 0,
+              top: 0,
+              width: "100%",
+            }}
           />
           <div
             style={{
@@ -100,13 +110,24 @@ export async function GET(request: Request) {
               position: "relative",
             }}
           >
-            <img
-              src={image as unknown as string}
-              style={{ height: 200 }}
-              alt="AM logo"
-            />
-            <h1>alasdairmacrae.co.uk</h1>
-            <h2>{title}</h2>
+            <div
+              style={{
+                alignItems: "center",
+                borderRadius: "50%",
+                background:
+                  "radial-gradient(rgba(46,135,38,0.3) 50%, transparent)",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <img
+                src={image as unknown as string}
+                style={{ height: 200 }}
+                alt="AM logo"
+              />
+              <h1>alasdairmacrae.co.uk</h1>
+              <h2>{title}</h2>
+            </div>
           </div>
           <div
             style={{
