@@ -1,7 +1,9 @@
 import {
   Article,
   BlockQuote,
+  Code,
   colors,
+  fontSizes,
   globalTextMaxWidth,
   Heading,
   IFrame,
@@ -60,6 +62,9 @@ const ptComponents: Partial<PortableTextReactComponents> = {
     blockquote: ({ children }) => {
       return <BlockQuote>{children}</BlockQuote>;
     },
+    code: ({ children }) => {
+      return <Code>{children}</Code>;
+    },
     h1: ({ children }) => {
       return <Heading level="h1">{children}</Heading>;
     },
@@ -85,28 +90,43 @@ const ptComponents: Partial<PortableTextReactComponents> = {
         return null;
       }
       return (
-        <div
-          style={{
-            aspectRatio: "16 / 9",
-            boxShadow: `0 0 ${sizes.s4.rem} ${sizes.s2.rem} ${colors.greenGrass}`,
-            margin: `${sizes.s16.rem} auto`,
-            position: "relative",
-            width: "100%",
-          }}
-        >
-          <Image
-            alt={value.alt || " "}
-            loading="lazy"
-            src={urlFor(value)
-              .width(1024)
-              .height(576)
-              .fit("max")
-              .auto("format")
-              .url()}
-            layout="fill"
-            objectFit="cover"
-          />
-        </div>
+        <figure style={{ margin: `${sizes.s16.rem} auto` }}>
+          <div
+            style={{
+              aspectRatio: "16 / 9",
+              boxShadow: `0 0 ${sizes.s4.rem} ${sizes.s2.rem} ${colors.greenGrass}`,
+              margin: `0 auto`,
+              position: "relative",
+              width: "100%",
+            }}
+          >
+            <Image
+              alt={value.alt || " "}
+              loading="lazy"
+              src={urlFor(value)
+                .width(1024)
+                .height(576)
+                .fit("max")
+                .auto("format")
+                .url()}
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+          {value.title && (
+            <figcaption
+              style={{
+                display: "block",
+                fontSize: fontSizes.small.rem,
+                fontStyle: "italic",
+                margin: `${sizes.s8.rem} auto`,
+                textAlign: "center",
+              }}
+            >
+              {value.title}
+            </figcaption>
+          )}
+        </figure>
       );
     },
     youtube: ({ value }) => {
