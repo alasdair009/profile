@@ -144,6 +144,9 @@ const ptComponents: Partial<PortableTextReactComponents> = {
         </Link>
       );
     },
+    code: ({ children, text }) => {
+      return <Code>{children}</Code>;
+    },
   },
 };
 

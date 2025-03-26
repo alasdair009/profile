@@ -9,7 +9,7 @@ export const Root = styled.code`
   display: block;
   font-family: monospace;
   -webkit-overflow-scrolling: touch;
-  overflow-x: scroll;
+  //overflow-x: scroll;
   padding: ${sizes.s8.rem};
-  white-space: pre;
+  //white-space: pre;
 `;
