@@ -1,13 +1,14 @@
 import { SanityImageSource } from "@sanity/asset-utils";
 import { PortableTextBlock } from "@sanity/types";
 
-export const GET_ALL_POSTS = `*[_type == "post"] | order(publishedAt desc) {
+export const GET_ALL_POSTS = `*[_type == "post" && listed == true] | order(publishedAt desc) {
   _id,
   _type,
   _createdAt,
   _updatedAt,
   title,
   slug,
+  listed,
   description,
   author->,
   mainImage {
@@ -25,6 +26,7 @@ export type Post = {
   slug: {
     current: string;
   };
+  listed: boolean;
   description: string;
   categories: string[];
   publishedAt: string;
