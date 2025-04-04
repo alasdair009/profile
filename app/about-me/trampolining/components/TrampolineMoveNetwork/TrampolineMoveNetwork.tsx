@@ -1,9 +1,11 @@
 import mysql, { ConnectionOptions, RowDataPacket } from "mysql2/promise";
 import { Root } from "./styles";
-import { ErrorText, Heading, Paragraph } from "@/entities";
+import { colors, ErrorText, Heading, Paragraph } from "@/entities";
 // import { GraphEdge, GraphNode } from "reagraph";
 import dynamic from "next/dynamic";
 import { NetworkChart } from "@/entities/molecules/NetworkChart";
+import { LinkObject, NodeObject } from "force-graph";
+import { ForceGraph } from "@/entities/molecules/ForceGraph";
 
 // const NetworkChart = dynamic(
 //   () =>
@@ -25,8 +27,8 @@ const connectionOptions: ConnectionOptions = {
 const getMoveData = async () => {
   // let nodes: GraphNode[] = [];
   // let edges: GraphEdge[] = [];
-  let nodes: unknown[] = [];
-  let edges: unknown[] = [];
+  let nodes: NodeObject[] = [];
+  let links: LinkObject[] = [];
   let error = "ok";
   try {
     const connection = await mysql.createConnection(connectionOptions);
@@ -39,40 +41,42 @@ const getMoveData = async () => {
     );
 
     movesResults.forEach((row) => {
-      const node: unknown = {
+      const node: NodeObject = {
         id: `${row.id}`,
         label: row.title,
-        subLabel: `${row.altnames}`,
-        data: {
-          qualification: `${row.coachlevelid}`,
-          description: `${row.description}`,
-          difficulty: parseFloat(row.tarif),
-          difficultyPS: parseFloat(row.pstarif),
-          fig: row.fig,
-          altnames: row.altnames,
-          coachleveltitle: row.coachleveltitle,
-        },
+        qualification: `red`,
+        // subLabel: `${row.altnames}`,
+        // data: {
+        //   qualification: `${row.coachlevelid}`,
+        //   description: `${row.description}`,
+        //   difficulty: parseFloat(row.tarif),
+        //   difficultyPS: parseFloat(row.pstarif),
+        //   fig: row.fig,
+        //   altnames: row.altnames,
+        //   coachleveltitle: row.coachleveltitle,
+        // },
       };
       nodes.push(node);
     });
 
     edgesResults.forEach((row) => {
-      const edge: unknown = {
-        id: `${row.move2}->${row.move1}`,
+      const edge: LinkObject = {
+        // id: `${row.move2}->${row.move1}`,
         source: `${row.move2}`,
         target: `${row.move1}`,
+        color: colors.greenGrass,
       };
-      edges.push(edge);
+      links.push(edge);
     });
   } catch (e) {
     error = `${e}`;
   }
 
-  return { nodes, edges, error };
+  return { nodes, links, error };
 };
 
 export default async function TrampolineMoveNetwork() {
-  const { nodes, edges, error } = await getMoveData();
+  const { nodes, links, error } = await getMoveData();
   return (
     <Root>
       <Heading level="h2">Move Network</Heading>
@@ -85,8 +89,8 @@ export default async function TrampolineMoveNetwork() {
         Use the mouse or your touch controls to zoom in to see more detail and
         right click on a node to view information about the skill.
       </Paragraph>
-      {nodes.length && edges.length ? (
-        <NetworkChart nodes={nodes} edges={edges} />
+      {nodes.length && links.length ? (
+        <ForceGraph nodes={nodes} links={links} />
       ) : (
         <ErrorText>Could not connect to move database: {error}</ErrorText>
       )}
