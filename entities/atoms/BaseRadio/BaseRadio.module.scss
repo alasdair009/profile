@@ -1,0 +1,26 @@
+@import "../../../app/styles/colors";
+@import "../../../app/styles/dimensions";
+@import "../../../app/styles/radii";
+@import "../../../app/styles/helpers/rem";
+
+.root {
+  appearance: none;
+  aspect-ratio: 1;
+  background: $colorWhiteGhost;
+  border: toRem(1) solid $colorblackEvil;
+  border-radius: map-get($borderRadii, round);
+  box-shadow: 0 0 toRem(2) toRem(3) $colorblackEvil;
+  width: toRem(map-get($sizes, s32));
+
+  &:checked {
+    background: radial-gradient(
+      $colorGreenGrass toRem(map-get($sizes, s8)),
+      $colorWhiteGhost toRem(map-get($sizes, s8)),
+      $colorWhiteGhost
+    );
+  }
+
+  &:invalid {
+    border: toRem(2) solid $colorRedHeat;
+  }
+}

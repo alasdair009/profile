@@ -1,0 +1,39 @@
+@import "../../../app/styles/colors";
+@import "../../../app/styles/dimensions";
+@import "../../../app/styles/typography";
+@import "../../../app/styles/helpers/rem";
+
+.root {
+  margin: 0 auto toRem(1);
+  max-width: toRem($globalContentMaxWidth);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.summary {
+  align-items: center;
+  background: $colorGreyLight;
+  cursor: pointer;
+  font-size: toRem(map-get($fontSizes, mlarge));
+  justify-content: flex-start;
+  padding: toRem(map-get($sizes, s8));
+  position: relative;
+  width: 100%;
+
+  &:hover {
+    filter: brightness(1.3);
+  }
+
+  &::marker {
+    color: $colorGreenGrass;
+  }
+}
+
+.content {
+  background: $colorGreyDark;
+  overflow: hidden;
+  padding: toRem(map-get($sizes, s8));
+  position: relative;
+  width: 100%;
+}

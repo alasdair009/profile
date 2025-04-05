@@ -1,0 +1,80 @@
+@import "../../../app/styles/animation";
+@import "../../../app/styles/colors";
+@import "../../../app/styles/typography";
+@import "../../../app/styles/helpers/rem";
+
+$buttonClipPath: polygon(
+  calc(0% + #{toRem(map-get($sizes, s8))}) 0,
+  100% 0,
+  calc(100% - #{toRem(map-get($sizes, s8))}) 100%,
+  0 100%
+);
+
+.root {
+  align-items: center;
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: $colorWhiteGhost;
+  cursor: pointer;
+  display: flex;
+  font-size: toRem(map-get($fontSizes, medium));
+  font-weight: map-get($fontWeights, bold);
+  height: toRem(map-get($sizes, s48));
+  justify-content: center;
+  max-width: toRem(map-get($sizes, s256));
+  min-width: toRem(map-get($sizes, s64));
+  padding: 0 toRem(map-get($sizes, s48));
+  position: relative;
+  transition: padding animationDuration(0.5);
+  z-index: 0;
+
+  &::before,
+  &::after {
+    background: $colorGreenGrass;
+    clip-path: $buttonClipPath;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    transition: all animationDuration(0.5);
+    width: calc(100% - #{toRem(map-get($sizes, s32))});
+    z-index: -1;
+  }
+
+  &::after {
+    background: $colorGreyDark;
+    left: calc(50% + #{toRem(5)});
+    top: toRem(5);
+    z-index: -2;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      width: calc(100% - #{toRem(map-get($sizes, s8))});
+    }
+
+    &::after {
+      background: $colorWhiteGhost;
+    }
+  }
+
+  &:active::before {
+    background: darken($colorGreenGrass, 0.05);
+  }
+
+  &Transparent {
+    height: auto;
+    min-width: 0;
+    padding: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}

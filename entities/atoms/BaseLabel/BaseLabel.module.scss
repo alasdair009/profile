@@ -1,0 +1,9 @@
+@import "../../../app/styles/dimensions";
+@import "../../../app/styles/helpers/rem";
+
+.root {
+  display: block;
+  max-width: toRem($globalInputMaxWidth);
+  text-align: center;
+  width: 100%;
+}

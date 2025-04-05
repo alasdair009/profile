@@ -1,0 +1,6 @@
+@import "../../../app/styles/radii";
+@import "../../../app/styles/helpers/json";
+
+:export {
+  borderRadii: json-stringify($borderRadii);
+}

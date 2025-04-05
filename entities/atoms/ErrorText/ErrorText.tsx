@@ -1,6 +1,6 @@
-import { Root } from "./styles";
-import { HTMLAttributes, ReactNode } from "react";
+import { CSSProperties, HTMLAttributes, ReactNode } from "react";
 import { colors } from "@/entities";
+import styles from "./ErrorText.module.scss";
 
 type ErrorTextProps = {
   /**
@@ -16,17 +16,26 @@ type ErrorTextProps = {
 /**
  * Text to display when there is a problem the user needs to address or be aware of.
  */
-export function ErrorText({ shown = true, children, ...rest }: ErrorTextProps) {
+export function ErrorText({
+  shown = true,
+  children,
+  style,
+  ...rest
+}: ErrorTextProps) {
   return (
-    <Root
-      color={colors.redHeat}
-      as="span"
-      fontSize="small"
-      $shown={shown}
+    <span
+      className={`${styles.root} ${shown ? "" : styles.rootHide}`}
       data-testid={ErrorText.name}
+      style={
+        {
+          "--color": colors.redHeat,
+          "--font-size": "small",
+          ...style,
+        } as CSSProperties
+      }
       {...rest}
     >
       {children}
-    </Root>
+    </span>
   );
 }

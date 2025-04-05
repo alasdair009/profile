@@ -1,0 +1,14 @@
+@import "../../../app/styles/colors";
+@import "../../../app/styles/paragraph";
+
+.root {
+  @include paragraphStyles;
+
+  color: $colorRedHeat;
+  font-style: italic;
+  display: block;
+
+  &Hide {
+    display: none;
+  }
+}

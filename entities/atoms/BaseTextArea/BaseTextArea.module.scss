@@ -1,0 +1,24 @@
+@import "../../../app/styles/colors";
+@import "../../../app/styles/dimensions";
+@import "../../../app/styles/input";
+@import "../../../app/styles/helpers/rem";
+
+.root {
+  background: $colorGreyDark;
+  border: toRem(1) solid $colorGreenGrass;
+  color: $colorWhiteGhost;
+  display: block;
+  min-height: toRem(map-get($sizes, s256));
+  margin: 0 auto;
+  max-width: toRem($globalInputMaxWidth);
+  resize: none;
+  width: 100%;
+
+  &:user-invalid {
+    background: $invalidColor;
+  }
+
+  &StateInvalid {
+    background: $invalidColor;
+  }
+}

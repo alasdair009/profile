@@ -1,6 +1,6 @@
 "use client";
-import { Root } from "./styles";
 import { HTMLAttributes, useState } from "react";
+import styles from "./BaseRadio.module.scss";
 
 export type BaseRadioProps = {
   /**
@@ -32,9 +32,9 @@ export function BaseRadio({ isInvalid = false, ...rest }: BaseRadioProps) {
   };
 
   return (
-    <Root
+    <input
       type="radio"
-      $isInvalid={isInvalidState}
+      className={`${styles.root} ${isInvalidState ? styles.rootStateInvalid : ""}`}
       onChange={() => handleOnChange()}
       data-testid={BaseRadio.name}
       {...rest}

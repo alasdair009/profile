@@ -1,0 +1,48 @@
+// Maximum width that inputs should be set to.
+$globalInputMaxWidth: 480;
+
+//Maximum width that text should be confined to.
+$globalTextMaxWidth: 1200;
+
+// Maximum width that content should extend to.
+$globalContentMaxWidth: 1600;
+
+// Maximum width decorative elements can stretch to on the screen.
+$globalDecorationMaxWidth: 3440;
+
+/**
+ * Breakpoints
+ */
+$breakpoints: (
+  base: 0,
+  min: 320,
+  xsmall: 640,
+  small: 768,
+  medium: 1024,
+  large: 1024,
+  xlarge: 1024,
+  wide: 1024,
+);
+
+$sizes: (
+  s2: 2,
+  s4: 4,
+  s8: 8,
+  s12: 12,
+  s16: 16,
+  s24: 24,
+  s32: 32,
+  s36: 36,
+  s40: 40,
+  s48: 48,
+  s56: 56,
+  s64: 64,
+  s72: 72,
+  s80: 80,
+  s96: 96,
+  s128: 128,
+  s192: 192,
+  s256: 256,
+  s512: 512,
+  s1024: 1024,
+);

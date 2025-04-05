@@ -1,0 +1,9 @@
+$animationCurveDefault: "cubic-bezier(0.25, 0.1, 0.25, 1.0)";
+$animationCurveEaseBoth: "cubic-bezier(.77,.25,0,.77)";
+$animationCurveLinear: "cubic-bezier(0, 0, 1, 1)";
+
+:export {
+  animationCurveDefault: $animationCurveDefault;
+  animationCurveEaseBoth: $animationCurveEaseBoth;
+  animationCurveLinear: $animationCurveLinear;
+}

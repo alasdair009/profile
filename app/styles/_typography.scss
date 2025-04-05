@@ -1,0 +1,28 @@
+@import "./_dimensions.scss";
+
+$fontOpenSans: "OpenSans", "Arial", sans-serif;
+
+$fontSizes: (
+  small: map-get($sizes, s12),
+  medium: map-get($sizes, s16),
+  mlarge: map-get($sizes, s24),
+  large: map-get($sizes, s32),
+  xlarge: map-get($sizes, s40),
+  xxlarge: map-get($sizes, s64),
+);
+
+$lineHeights: (
+  h1: 1.4em,
+  h2: 1.3em,
+  h3: 1.2em,
+  h4: 1.2em,
+  h5: 1.2em,
+  h6: 1.2em,
+  p: 1.3em,
+);
+
+$fontWeights: (
+  regular: 400,
+  bold: 700,
+  black: 900,
+);

@@ -1,0 +1,24 @@
+@import "../../../app/styles/colors";
+@import "../../../app/styles/dimensions";
+@import "../../../app/styles/typography";
+@import "../../../app/styles/helpers/rem";
+
+.root {
+  display: block;
+  font-size: toRem(map-get($fontSizes, large));
+  font-style: italic;
+  margin: toRem(map-get($sizes, s32)) auto;
+  max-width: toRem($globalTextMaxWidth);
+  padding: toRem(map-get($sizes, s8));
+  position: relative;
+  text-align: center;
+  text-wrap: balance;
+
+  &::before,
+  &::after {
+    color: $colorGreenGrass;
+    content: '"';
+    font-size: toRem(map-get($fontSizes, xxlarge));
+    font-weight: map-get($fontWeights, black);
+  }
+}

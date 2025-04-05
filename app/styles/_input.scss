@@ -1,0 +1,43 @@
+@import "./colors";
+@import "./dimensions";
+@import "./typography";
+@import "./helpers/rem";
+
+$fieldHeight: toRem(map-get($sizes, s40));
+$invalidColor: rgba($colorRedHeat, 0.15);
+
+@mixin baseInputStyles {
+  appearance: none;
+  background-color: $colorGreyDark;
+  border: 1px solid $colorGreenGrass;
+  color: $colorWhiteGhost;
+  display: block;
+  font-size: toRem(map-get($fontSizes, medium));
+  height: $fieldHeight;
+  margin: toRem(map-get($sizes, s2)) auto 0;
+  max-width: toRem($globalInputMaxWidth);
+  padding: toRem(map-get($sizes, s8));
+  width: 100%;
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: $colorWhiteGhost;
+    -webkit-box-shadow: 0 0 0 $fieldHeight $colorGreyDark inset;
+  }
+
+  &:user-invalid {
+    background-color: $invalidColor;
+  }
+
+  &StateInvalid {
+    background-color: $invalidColor;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-text-fill-color: $colorWhiteGhost;
+      -webkit-box-shadow: 0 0 0 $fieldHeight $invalidColor inset;
+    }
+  }
+}

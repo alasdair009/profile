@@ -1,0 +1,32 @@
+@import "./_colors.scss";
+@import "./typography.scss";
+
+:root {
+  --animation-rhythm: 1s;
+
+  @media (prefers-reduced-motion: reduce) {
+    --animation-rhythm: 0s;
+  }
+}
+
+html,
+body {
+  background: $colorblackEvil;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  color: $colorWhiteGhost;
+}
+
+body {
+  font-family: $fontOpenSans;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

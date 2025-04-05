@@ -36,9 +36,3 @@ export const defaultFieldStyles = (isInvalid: boolean) => {
     }
   `;
 };
-
-export const Root = styled.input<{
-  $isInvalid: boolean;
-}>`
-  ${({ $isInvalid }) => defaultFieldStyles($isInvalid)}
-`;

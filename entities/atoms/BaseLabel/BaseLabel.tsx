@@ -1,17 +1,29 @@
 "use client";
-import { Root } from "./styles";
-import { HTMLAttributes } from "react";
+import { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
+import styles from "./BaseLabel.module.scss";
 
-type BaseLabelProps = {
+type BaseLabelProps<T extends ElementType> = {
   as?: "label" | "span";
-} & HTMLAttributes<HTMLLabelElement>;
+  children: ReactNode;
+};
 
 /**
- * Base input type
+ * Base Label for input fields.
  */
-export function BaseLabel({ children, as = "label", ...rest }: BaseLabelProps) {
+export function BaseLabel<T extends ElementType = "button">({
+  children,
+  as,
+  ...rest
+}: BaseLabelProps<T> &
+  Omit<ComponentPropsWithoutRef<T>, keyof BaseLabelProps<T>>) {
+  const Root = as ?? "label";
   return (
-    <Root as={as} data-testid={BaseLabel.name} {...rest}>
+    <Root
+      as={as}
+      className={styles.root}
+      data-testid={BaseLabel.name}
+      {...rest}
+    >
       {children}
     </Root>
   );

@@ -1,0 +1,22 @@
+@import "../../../app/styles/dimensions";
+@import "../../../app/styles/radii";
+@import "../../../app/styles/helpers/rem";
+
+.root {
+  background: var(--skyColor);
+  overflow: hidden;
+  position: relative;
+}
+
+.cloudCircle {
+  border-radius: map-get($borderRadii, round);
+  box-shadow: 0 #{toRem(map-get($sizes, s256) * 1.5)} var(--dispersion) 0
+    var(--cloudColor);
+  filter: url(#cloudFilter);
+  height: toRem(map-get($sizes, s256));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%) translateZ(0);
+  width: toRem(map-get($sizes, s512));
+}

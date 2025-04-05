@@ -1,0 +1,23 @@
+@import "./lineClamp";
+@import "./typography";
+@import "./helpers/rem";
+
+@mixin paragraphStyles {
+  color: var(--color) !important;
+  display: block;
+  font-family: $fontOpenSans !important;
+  font-size: var(--font-size) !important;
+  margin: var(--margin) !important;
+  max-width: calc(100vw - #{toRem(map-get($sizes, s16))});
+  text-align: var(--text-align);
+  text-wrap: var(--text-wrap);
+  width: 100%;
+
+  @media (min-width: toRem($globalTextMaxWidth)) {
+    max-width: toRem($globalTextMaxWidth);
+  }
+
+  &Clamp {
+    @include lineClamp;
+  }
+}

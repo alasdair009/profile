@@ -1,0 +1,3 @@
+@function animationDuration($seconds) {
+  @return calc(var(--animation-rhythm) * #{$seconds});
+}
