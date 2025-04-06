@@ -1,11 +1,11 @@
-@import "../../../app/styles/dimensions";
-@import "../../../app/styles/helpers/_json";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/_json";
 
 :export {
-  globalInputMaxWidth: $globalInputMaxWidth;
-  globalTextMaxWidth: $globalTextMaxWidth;
-  globalContentMaxWidth: $globalContentMaxWidth;
-  globalDecorationMaxWidth: $globalDecorationMaxWidth;
-  breakpoints: json-stringify($breakpoints);
-  sizes: json-stringify($sizes);
+  globalInputMaxWidth: dimensions.$globalInputMaxWidth;
+  globalTextMaxWidth: dimensions.$globalTextMaxWidth;
+  globalContentMaxWidth: dimensions.$globalContentMaxWidth;
+  globalDecorationMaxWidth: dimensions.$globalDecorationMaxWidth;
+  breakpoints: json.json-stringify(dimensions.$breakpoints);
+  sizes: json.json-stringify(dimensions.$sizes);
 }

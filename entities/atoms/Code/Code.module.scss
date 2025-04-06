@@ -1,8 +1,8 @@
-@import "../../design-tokens/colors/Colors.module";
+@use "../../../app/styles/colors";
 
 .root {
-  background: $colorGreyDark;
-  border: 1px solid $colorGreenGrass;
+  background: colors.$colorGreyDark;
+  border: 1px solid colors.$colorGreenGrass;
   display: block;
   font-family: monospace;
   -webkit-overflow-scrolling: touch;

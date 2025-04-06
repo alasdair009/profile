@@ -1,9 +1,7 @@
-$animationCurveDefault: "cubic-bezier(0.25, 0.1, 0.25, 1.0)";
-$animationCurveEaseBoth: "cubic-bezier(.77,.25,0,.77)";
-$animationCurveLinear: "cubic-bezier(0, 0, 1, 1)";
+@use "../../../app/styles/animation";
 
 :export {
-  animationCurveDefault: $animationCurveDefault;
-  animationCurveEaseBoth: $animationCurveEaseBoth;
-  animationCurveLinear: $animationCurveLinear;
+  animationCurveDefault: map-get(animation.$curves, default);
+  animationCurveEaseBoth: map-get(animation.$curves, easeBoth);
+  animationCurveLinear: map-get(animation.$curves, linear);
 }

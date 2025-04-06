@@ -1,29 +1,29 @@
-@import "./colors";
-@import "./dimensions";
-@import "./typography";
-@import "./helpers/rem";
+@use "./colors";
+@use "./dimensions";
+@use "./typography";
+@use "./helpers/rem";
 
-$fieldHeight: toRem(map-get($sizes, s40));
-$invalidColor: rgba($colorRedHeat, 0.15);
+$fieldHeight: rem.toRem(map-get(dimensions.$sizes, s40));
+$invalidColor: rgba(colors.$colorRedHeat, 0.15);
 
 @mixin baseInputStyles {
   appearance: none;
-  background-color: $colorGreyDark;
-  border: 1px solid $colorGreenGrass;
-  color: $colorWhiteGhost;
+  background-color: colors.$colorGreyDark;
+  border: 1px solid colors.$colorGreenGrass;
+  color: colors.$colorWhiteGhost;
   display: block;
-  font-size: toRem(map-get($fontSizes, medium));
+  font-size: rem.toRem(map-get(typography.$fontSizes, medium));
   height: $fieldHeight;
-  margin: toRem(map-get($sizes, s2)) auto 0;
-  max-width: toRem($globalInputMaxWidth);
-  padding: toRem(map-get($sizes, s8));
+  margin: rem.toRem(map-get(dimensions.$sizes, s2)) auto 0;
+  max-width: rem.toRem(dimensions.$globalInputMaxWidth);
+  padding: rem.toRem(map-get(dimensions.$sizes, s8));
   width: 100%;
 
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus {
-    -webkit-text-fill-color: $colorWhiteGhost;
-    -webkit-box-shadow: 0 0 0 $fieldHeight $colorGreyDark inset;
+    -webkit-text-fill-color: colors.$colorWhiteGhost;
+    -webkit-box-shadow: 0 0 0 $fieldHeight colors.$colorGreyDark inset;
   }
 
   &:user-invalid {
@@ -36,7 +36,7 @@ $invalidColor: rgba($colorRedHeat, 0.15);
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus {
-      -webkit-text-fill-color: $colorWhiteGhost;
+      -webkit-text-fill-color: colors.$colorWhiteGhost;
       -webkit-box-shadow: 0 0 0 $fieldHeight $invalidColor inset;
     }
   }

@@ -1,23 +1,24 @@
-@import "./lineClamp";
-@import "./typography";
-@import "./helpers/rem";
+@use "./dimensions";
+@use "./lineClamp";
+@use "./typography";
+@use "./helpers/rem";
 
 @mixin paragraphStyles {
   color: var(--color) !important;
   display: block;
-  font-family: $fontOpenSans !important;
+  font-family: typography.$fontOpenSans !important;
   font-size: var(--font-size) !important;
   margin: var(--margin) !important;
-  max-width: calc(100vw - #{toRem(map-get($sizes, s16))});
+  max-width: calc(100vw - #{rem.toRem(map-get(dimensions.$sizes, s16))});
   text-align: var(--text-align);
   text-wrap: var(--text-wrap);
   width: 100%;
 
-  @media (min-width: toRem($globalTextMaxWidth)) {
-    max-width: toRem($globalTextMaxWidth);
+  @media (min-width: rem.toRem(dimensions.$globalTextMaxWidth)) {
+    max-width: rem.toRem(dimensions.$globalTextMaxWidth);
   }
 
   &Clamp {
-    @include lineClamp;
+    @include lineClamp.lineClamp;
   }
 }

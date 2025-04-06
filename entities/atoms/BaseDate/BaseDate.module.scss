@@ -1,11 +1,11 @@
-@import "../../../app/styles/colors";
-@import "../BaseInput/BaseInput.module";
+@use "../../../app/styles/colors";
+@use "../../../app/styles/input";
 
 .root {
-  @include baseInputStyles;
+  @include input.baseInputStyles;
 
   &::-webkit-calendar-picker-indicator {
-    background-color: $colorGreenGrass;
+    background-color: colors.$colorGreenGrass;
     cursor: pointer;
 
     &:hover {

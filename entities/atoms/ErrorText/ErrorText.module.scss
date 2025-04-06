@@ -1,10 +1,10 @@
-@import "../../../app/styles/colors";
-@import "../../../app/styles/paragraph";
+@use "../../../app/styles/colors";
+@use "../../../app/styles/paragraph";
 
 .root {
-  @include paragraphStyles;
+  @include paragraph.paragraphStyles;
 
-  color: $colorRedHeat;
+  color: colors.$colorRedHeat;
   font-style: italic;
   display: block;
 

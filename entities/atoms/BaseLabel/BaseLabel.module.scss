@@ -1,9 +1,9 @@
-@import "../../../app/styles/dimensions";
-@import "../../../app/styles/helpers/rem";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/rem";
 
 .root {
   display: block;
-  max-width: toRem($globalInputMaxWidth);
+  max-width: rem.toRem(dimensions.$globalInputMaxWidth);
   text-align: center;
   width: 100%;
 }

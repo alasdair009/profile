@@ -1,26 +1,26 @@
-@import "../../../app/styles/colors";
-@import "../../../app/styles/dimensions";
-@import "../../../app/styles/radii";
-@import "../../../app/styles/helpers/rem";
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/radii";
+@use "../../../app/styles/helpers/rem";
 
 .root {
   appearance: none;
   aspect-ratio: 1;
-  background: $colorWhiteGhost;
-  border: toRem(1) solid $colorblackEvil;
-  border-radius: map-get($borderRadii, round);
-  box-shadow: 0 0 toRem(2) toRem(3) $colorblackEvil;
-  width: toRem(map-get($sizes, s32));
+  background: colors.$colorWhiteGhost;
+  border: rem.toRem(1) solid colors.$colorblackEvil;
+  border-radius: map-get(radii.$borderRadii, round);
+  box-shadow: 0 0 rem.toRem(2) rem.toRem(3) colors.$colorblackEvil;
+  width: rem.toRem(map-get(dimensions.$sizes, s32));
 
   &:checked {
     background: radial-gradient(
-      $colorGreenGrass toRem(map-get($sizes, s8)),
-      $colorWhiteGhost toRem(map-get($sizes, s8)),
-      $colorWhiteGhost
+      colors.$colorGreenGrass rem.toRem(map-get(dimensions.$sizes, s8)),
+      colors.$colorWhiteGhost rem.toRem(map-get(dimensions.$sizes, s8)),
+      colors.$colorWhiteGhost
     );
   }
 
   &:invalid {
-    border: toRem(2) solid $colorRedHeat;
+    border: rem.toRem(2) solid colors.$colorRedHeat;
   }
 }

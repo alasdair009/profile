@@ -1,11 +1,11 @@
-@import "../../../app/styles/colors";
-@import "../../../app/styles/dimensions";
-@import "../../../app/styles/typography";
-@import "../../../app/styles/helpers/rem";
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/typography";
+@use "../../../app/styles/helpers/rem";
 
 .root {
-  margin: 0 auto toRem(1);
-  max-width: toRem($globalContentMaxWidth);
+  margin: 0 auto rem.toRem(1);
+  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -13,11 +13,11 @@
 
 .summary {
   align-items: center;
-  background: $colorGreyLight;
+  background: colors.$colorGreyLight;
   cursor: pointer;
-  font-size: toRem(map-get($fontSizes, mlarge));
+  font-size: rem.toRem(map-get(typography.$fontSizes, mlarge));
   justify-content: flex-start;
-  padding: toRem(map-get($sizes, s8));
+  padding: rem.toRem(map-get(dimensions.$sizes, s8));
   position: relative;
   width: 100%;
 
@@ -26,14 +26,14 @@
   }
 
   &::marker {
-    color: $colorGreenGrass;
+    color: colors.$colorGreenGrass;
   }
 }
 
 .content {
-  background: $colorGreyDark;
+  background: colors.$colorGreyDark;
   overflow: hidden;
-  padding: toRem(map-get($sizes, s8));
+  padding: rem.toRem(map-get(dimensions.$sizes, s8));
   position: relative;
   width: 100%;
 }

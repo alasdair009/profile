@@ -1,5 +1,5 @@
-@import "../../../app/styles/input";
+@use "../../../app/styles/input";
 
 .root {
-  @include baseInputStyles;
+  @include input.baseInputStyles;
 }

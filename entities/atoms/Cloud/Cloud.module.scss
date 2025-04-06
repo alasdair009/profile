@@ -1,6 +1,6 @@
-@import "../../../app/styles/dimensions";
-@import "../../../app/styles/radii";
-@import "../../../app/styles/helpers/rem";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/radii";
+@use "../../../app/styles/helpers/rem";
 
 .root {
   background: var(--skyColor);
@@ -9,14 +9,14 @@
 }
 
 .cloudCircle {
-  border-radius: map-get($borderRadii, round);
-  box-shadow: 0 #{toRem(map-get($sizes, s256) * 1.5)} var(--dispersion) 0
-    var(--cloudColor);
+  border-radius: map-get(radii.$borderRadii, round);
+  box-shadow: 0 #{rem.toRem(map-get(dimensions.$sizes, s256) * 1.5)}
+    var(--dispersion) 0 var(--cloudColor);
   filter: url(#cloudFilter);
-  height: toRem(map-get($sizes, s256));
+  height: rem.toRem(map-get(dimensions.$sizes, s256));
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -200%) translateZ(0);
-  width: toRem(map-get($sizes, s512));
+  width: rem.toRem(map-get(dimensions.$sizes, s512));
 }

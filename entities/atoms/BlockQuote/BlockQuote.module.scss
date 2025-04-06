@@ -1,24 +1,24 @@
-@import "../../../app/styles/colors";
-@import "../../../app/styles/dimensions";
-@import "../../../app/styles/typography";
-@import "../../../app/styles/helpers/rem";
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/typography";
+@use "../../../app/styles/helpers/rem";
 
 .root {
   display: block;
-  font-size: toRem(map-get($fontSizes, large));
+  font-size: rem.toRem(map-get(typography.$fontSizes, large));
   font-style: italic;
-  margin: toRem(map-get($sizes, s32)) auto;
-  max-width: toRem($globalTextMaxWidth);
-  padding: toRem(map-get($sizes, s8));
+  margin: rem.toRem(map-get(dimensions.$sizes, s32)) auto;
+  max-width: rem.toRem(dimensions.$globalTextMaxWidth);
+  padding: rem.toRem(map-get(dimensions.$sizes, s8));
   position: relative;
   text-align: center;
   text-wrap: balance;
 
   &::before,
   &::after {
-    color: $colorGreenGrass;
+    color: colors.$colorGreenGrass;
     content: '"';
-    font-size: toRem(map-get($fontSizes, xxlarge));
-    font-weight: map-get($fontWeights, black);
+    font-size: rem.toRem(map-get(typography.$fontSizes, xxlarge));
+    font-weight: map-get(typography.$fontWeights, black);
   }
 }

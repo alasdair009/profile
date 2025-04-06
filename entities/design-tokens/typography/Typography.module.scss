@@ -1,8 +1,8 @@
-@import "../../../app/styles/typography";
-@import "../../../app/styles/helpers/_json";
+@use "../../../app/styles/typography";
+@use "../../../app/styles/helpers/_json";
 
 :export {
-  fontSizes: json-stringify($fontSizes);
-  lineHeights: json-stringify($lineHeights);
-  fontWeights: json-stringify($fontWeights);
+  fontSizes: json.json-stringify(typography.$fontSizes);
+  lineHeights: json.json-stringify(typography.$lineHeights);
+  fontWeights: json.json-stringify(typography.$fontWeights);
 }

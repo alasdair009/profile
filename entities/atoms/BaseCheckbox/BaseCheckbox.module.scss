@@ -1,19 +1,19 @@
-@import "../../../app/styles/colors";
-@import "../../../app/styles/helpers/rem";
-@import "../../../app/styles/dimensions";
+@use "../../../app/styles/colors";
+@use "../../../app/styles/helpers/rem";
+@use "../../../app/styles/dimensions";
 
 .root {
   appearance: none;
   aspect-ratio: 1;
-  background: $colorblackEvil;
-  border-color: $colorGreenGrass;
+  background: colors.$colorblackEvil;
+  border-color: colors.$colorGreenGrass;
   border-style: solid;
   border-width: 1px;
   position: relative;
-  width: toRem(map-get($sizes, s32));
+  width: rem.toRem(map-get(dimensions.$sizes, s32));
 
   &::after {
-    background: $colorGreenGrass;
+    background: colors.$colorGreenGrass;
     clip-path: polygon(0 0, 100% 0, 100% 50%, 37.5% 50%, 37.5% 100%, 0 100%);
     content: "";
     height: 50%;
@@ -29,10 +29,10 @@
   }
 
   &:user-invalid {
-    border-color: $colorRedHeat;
+    border-color: colors.$colorRedHeat;
   }
 }
 
 .isInvalid {
-  border-color: $colorRedHeat;
+  border-color: colors.$colorRedHeat;
 }

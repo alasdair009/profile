@@ -1,12 +1,12 @@
-@import "../../../app/styles/colors";
+@use "../../../app/styles/colors";
 
 :export {
-  colorblackEvil: $colorblackEvil;
-  colorGreyLight: $colorGreyLight;
-  colorGreyDark: $colorGreyDark;
-  colorWhiteGhost: $colorWhiteGhost;
+  colorblackEvil: colors.$colorblackEvil;
+  colorGreyLight: colors.$colorGreyLight;
+  colorGreyDark: colors.$colorGreyDark;
+  colorWhiteGhost: colors.$colorWhiteGhost;
 
-  colorBlueSea: $colorBlueSea;
-  colorGreenGrass: $colorGreenGrass;
-  colorRedHeat: $colorRedHeat;
+  colorBlueSea: colors.$colorBlueSea;
+  colorGreenGrass: colors.$colorGreenGrass;
+  colorRedHeat: colors.$colorRedHeat;
 }

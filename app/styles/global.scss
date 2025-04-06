@@ -1,5 +1,5 @@
-@import "./_colors.scss";
-@import "./typography.scss";
+@use "./_colors.scss";
+@use "./typography.scss";
 
 :root {
   --animation-rhythm: 1s;
@@ -11,18 +11,18 @@
 
 html,
 body {
-  background: $colorblackEvil;
+  background: colors.$colorblackEvil;
   margin: 0;
   padding: 0;
 }
 
 html {
   box-sizing: border-box;
-  color: $colorWhiteGhost;
+  color: colors.$colorWhiteGhost;
 }
 
 body {
-  font-family: $fontOpenSans;
+  font-family: typography.$fontOpenSans;
 }
 
 *,
