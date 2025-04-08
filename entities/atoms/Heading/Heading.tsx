@@ -1,9 +1,16 @@
-import { Root } from "./styles";
-import { HTMLAttributes, ReactNode } from "react";
+import {
+  ComponentPropsWithoutRef,
+  CSSProperties,
+  ElementType,
+  HTMLAttributes,
+  ReactNode,
+} from "react";
 import { colors, HeadingTypes, TextAlignment } from "@/entities";
 import { Property } from "csstype";
+import styles from "./Heading.module.scss";
+import { lineHeights } from "@/entities/design-tokens/typography/typography";
 
-export type HeadingProps = {
+export type HeadingProps<T extends ElementType> = {
   /**
    * Visual style of the Heading.
    */
@@ -37,7 +44,7 @@ export type HeadingProps = {
 /**
  * Text displayed in a heading at a customisable level visually and semantically.
  */
-export function Heading({
+export function Heading<T extends ElementType = "h1">({
   level = "h1",
   as,
   align = "left",
@@ -45,18 +52,25 @@ export function Heading({
   textShadow = false,
   lines,
   children,
+  style,
   ...rest
-}: HeadingProps) {
-  const headingAs = as ? as : level;
+}: HeadingProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof HeadingProps<T>>) {
+  const Root = as ? as : level;
   return (
     <Root
-      $color={color}
-      $level={level}
-      as={headingAs}
-      $align={align}
-      $textShadow={textShadow}
+      className={`${styles.root} ${lines ? styles.rootClamp : ""} ${textShadow ? styles.Shadow : ""}`}
       $lines={lines}
       data-testid={Heading.name}
+      style={
+        {
+          ...style,
+          "--color": color,
+          "--align": align,
+          "--line-height": lineHeights.p,
+          "--number-of-lines": lines,
+          "--text-shadow": textShadow,
+        } as CSSProperties
+      }
       {...rest}
     >
       {children}

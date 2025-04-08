@@ -1,0 +1,68 @@
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/lineClamp";
+@use "../../../app/styles/typography";
+@use "../../../app/styles/helpers/rem";
+
+@mixin append-element($element-name) {
+  @at-root #{selector-append($element-name, &)} {
+    @content;
+  }
+}
+
+.root {
+  border: none !important;
+  color: var(--color) !important;
+  font-weight: map-get(typography.$fontWeights, bold);
+  margin: 0 auto rem.toRem(map-get(dimensions.$sizes, s24)) !important;
+  max-width: rem.toRem(dimensions.$globalTextMaxWidth);
+  padding-bottom: 0;
+  position: relative;
+  text-align: var(--align);
+  text-wrap: balance;
+  width: fit-content;
+
+  &Clamp {
+    @include lineClamp.lineClamp;
+  }
+
+  &.Shadow {
+    text-shadow: 0 0 rem.toRem(map-get(dimensions.$sizes, s4))
+      colors.$colorblackEvil;
+  }
+
+  &::after {
+    background: colors.$colorGreenGrass;
+    bottom: 0;
+    content: "";
+    display: none;
+    height: rem.toRem(3);
+    left: 0;
+    position: absolute;
+    transform: rotate(-2deg);
+    width: 100%;
+  }
+
+  @include append-element(h1) {
+    max-width: rem.toRem(map-get(dimensions.$sizes, s512));
+    padding-bottom: rem.toRem(map-get(dimensions.$sizes, s8));
+
+    &::after {
+      display: block;
+    }
+  }
+
+  @include append-element(h2) {
+    max-width: rem.toRem(map-get(dimensions.$sizes, s512));
+
+    &::after {
+      display: block;
+    }
+  }
+
+  @each $headerElement, $headerSize in typography.$headerSizes {
+    @include append-element($headerElement) {
+      font-size: rem.toRem($headerSize);
+    }
+  }
+}

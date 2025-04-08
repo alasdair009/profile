@@ -10,7 +10,7 @@ type BaseLabelProps<T extends ElementType> = {
 /**
  * Base Label for input fields.
  */
-export function BaseLabel<T extends ElementType = "button">({
+export function BaseLabel<T extends ElementType = "label">({
   children,
   as,
   ...rest

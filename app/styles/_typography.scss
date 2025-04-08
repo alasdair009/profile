@@ -11,6 +11,15 @@ $fontSizes: (
   xxlarge: map-get(dimensions.$sizes, s64),
 );
 
+$headerSizes: (
+  h1: map-get($fontSizes, xlarge),
+  h2: map-get($fontSizes, large),
+  h3: map-get($fontSizes, mlarge),
+  h4: map-get($fontSizes, mlarge),
+  h5: map-get($fontSizes, mlarge),
+  h6: map-get($fontSizes, mlarge),
+);
+
 $lineHeights: (
   h1: 1.4em,
   h2: 1.3em,
