@@ -1,6 +1,6 @@
-import { Root } from "./styles";
 import { HTMLAttributes } from "react";
-import { HorizontalRuleMarginOptions } from "@/entities/atoms/HorizontalRule/HorizontalRule.types";
+import { HorizontalRuleMarginOptions } from "./HorizontalRule.types";
+import styles from "./HorizontalRule.module.scss";
 
 type HorizontalRuleProps = {
   /**
@@ -13,6 +13,19 @@ type HorizontalRuleProps = {
   margin?: HorizontalRuleMarginOptions;
 } & HTMLAttributes<HTMLHRElement>;
 
+const getMarginClass = (margin: HorizontalRuleMarginOptions) => {
+  switch (margin) {
+    case "top":
+      return styles.Top;
+    case "bottom":
+      return styles.Bottom;
+    case "none":
+      return styles.None;
+    default:
+      return "";
+  }
+};
+
 /**
  * Horizontal rule on the page used to separate content.
  */
@@ -22,9 +35,8 @@ export function HorizontalRule({
   ...rest
 }: HorizontalRuleProps) {
   return (
-    <Root
-      $decoration={decoration}
-      $margin={margin}
+    <hr
+      className={`${styles.root} ${decoration ? styles.Decoration : ""} ${getMarginClass(margin)}`}
       data-testid={HorizontalRule.name}
       {...rest}
     />
