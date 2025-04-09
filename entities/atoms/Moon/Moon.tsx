@@ -1,11 +1,11 @@
-import { Root } from "./styles";
-import { CSSProperties, HTMLAttributes } from "react";
+import { HTMLAttributes } from "react";
+import styles from "./Moon.module.scss";
 
 type MoonProps = {} & HTMLAttributes<HTMLDivElement>;
 
 /**
- * Animation of a flight over clouds.
+ * Waxing moon rendered with CSS only.
  */
 export function Moon({ ...rest }: MoonProps) {
-  return <Root data-testid={Moon.name} {...rest} />;
+  return <span className={styles.root} data-testid={Moon.name} {...rest} />;
 }

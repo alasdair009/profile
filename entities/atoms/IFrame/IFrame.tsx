@@ -1,5 +1,5 @@
-import { Root } from "./styles";
 import { HTMLAttributes } from "react";
+import styles from "./IFrame.module.scss";
 
 type IFrameProps = {
   /**
@@ -12,5 +12,12 @@ type IFrameProps = {
  * An HTML iframe for external content
  */
 export function IFrame({ ...rest }: IFrameProps) {
-  return <Root {...rest} allowFullScreen={true} data-testid={IFrame.name} />;
+  return (
+    <iframe
+      className={styles.root}
+      {...rest}
+      allowFullScreen={true}
+      data-testid={IFrame.name}
+    />
+  );
 }

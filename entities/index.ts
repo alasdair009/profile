@@ -14,6 +14,7 @@ export {
   fontSizes,
   fontWeights,
   headingSizes,
+  lineHeights,
 } from "./design-tokens/typography";
 export type {
   FontSizes,
