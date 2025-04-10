@@ -1,0 +1,25 @@
+@use "../../../app/styles/animation";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/rem";
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.root {
+  content: "";
+  border-radius: 50%;
+  display: block;
+  height: rem.toRem(map-get(dimensions.$sizes, s48));
+  width: rem.toRem(map-get(dimensions.$sizes, s48));
+}
+
+.spinnerImage {
+  animation: rotate animation.animationDuration(1)
+    map-get(animation.$curves, linear) infinite;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}

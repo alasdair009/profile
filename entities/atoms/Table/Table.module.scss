@@ -1,0 +1,80 @@
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/typography";
+@use "../../../app/styles/helpers/rem";
+
+.root {
+  background: colors.$colorblackEvil;
+  border-collapse: collapse;
+  margin: rem.toRem(map-get(dimensions.$sizes, s16)) auto;
+  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  vertical-align: middle;
+  width: 100%;
+
+  thead,
+  tfoot {
+    background: colors.$colorGreenGrass;
+  }
+
+  td {
+    border: rem.toRem(1) solid colors.$colorGreyDark;
+    padding: rem.toRem(map-get(dimensions.$sizes, s8));
+    position: relative;
+  }
+
+  th {
+    font-weight: map-get(typography.$fontWeights, bold);
+  }
+
+  @each $key, $width in dimensions.$breakpoints {
+    &#{$key} {
+      @media (max-width: #{$width}px) {
+        table,
+        thead,
+        tbody,
+        tfoot,
+        th,
+        td,
+        tr {
+          display: block;
+        }
+
+        thead,
+        tfoot {
+          background: none;
+        }
+
+        thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+
+        tr {
+          border: rem.toRem(1) solid lighten(colors.$colorGreyDark, 0.5);
+        }
+
+        td,
+        th {
+          border: none;
+          border-bottom: rem.toRem(1) solid colors.$colorGreyDark;
+          padding-left: 50%;
+          position: relative;
+          text-align: left;
+        }
+
+        td::before,
+        th::before {
+          content: attr(data-title) ":";
+          font-weight: map-get(typography.$fontWeights, bold);
+          left: rem.toRem(map-get(dimensions.$sizes, s8));
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 45%;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
