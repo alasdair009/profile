@@ -41,6 +41,15 @@ export type HeadingProps<T extends ElementType> = {
   lines?: number;
 } & HTMLAttributes<HTMLHeadingElement>;
 
+const headerClasses: Record<HeadingTypes, string> = {
+  h1: styles.h1,
+  h2: styles.h2,
+  h3: styles.h3,
+  h4: styles.h4,
+  h5: styles.h5,
+  h6: styles.h6,
+};
+
 /**
  * Text displayed in a heading at a customisable level visually and semantically.
  */
@@ -58,7 +67,7 @@ export function Heading<T extends ElementType = "h1">({
   const Root = as ? as : level;
   return (
     <Root
-      className={`${styles.root} ${lines ? styles.rootClamp : ""} ${textShadow ? styles.Shadow : ""}`}
+      className={`${styles.root} ${headerClasses[level]} ${lines ? styles.rootClamp : ""} ${textShadow ? styles.Shadow : ""}`}
       $lines={lines}
       data-testid={Heading.name}
       style={

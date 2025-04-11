@@ -1,7 +1,6 @@
-import { Root } from "./styles";
 import { HTMLAttributes } from "react";
 import { BaseTextArea } from "../../atoms/BaseTextArea";
-import { LabelText } from "./styles";
+import styles from "./LabelledTextArea.module.scss";
 
 type LabelledTextAreaProps = {
   /**
@@ -35,9 +34,9 @@ export function LabelledTextArea({
   ...rest
 }: LabelledTextAreaProps) {
   return (
-    <Root data-testid={LabelledTextArea.name}>
-      <LabelText>{label}</LabelText>
+    <label className={styles.root} data-testid={LabelledTextArea.name}>
+      <span className={styles.labelText}>{label}</span>
       <BaseTextArea {...rest} />
-    </Root>
+    </label>
   );
 }

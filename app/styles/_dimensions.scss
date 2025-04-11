@@ -1,3 +1,5 @@
+@use "./helpers/rem";
+
 // Maximum width that inputs should be set to.
 $globalInputMaxWidth: 480;
 
@@ -19,9 +21,9 @@ $breakpoints: (
   xsmall: 640,
   small: 768,
   medium: 1024,
-  large: 1024,
-  xlarge: 1024,
-  wide: 1024,
+  large: $globalTextMaxWidth,
+  xlarge: $globalContentMaxWidth,
+  wide: $globalDecorationMaxWidth,
 );
 
 $sizes: (
@@ -45,4 +47,19 @@ $sizes: (
   s256: 256,
   s512: 512,
   s1024: 1024,
+);
+
+@function getSize($size) {
+  @return rem.toRem(map-get($sizes, $size));
+}
+
+$device: (
+  base: "min-width: #{map-get($breakpoints, base)}px",
+  min: "min-width: #{map-get($breakpoints, min)}px",
+  xsmall: "min-width: #{map-get($breakpoints, xsmall)}px",
+  small: "min-width: #{map-get($breakpoints, small)}px",
+  medium: "min-width: #{map-get($breakpoints, medium)}px",
+  large: "min-width: #{map-get($breakpoints, large)}px",
+  xlarge: "min-width: #{map-get($breakpoints, xlarge)}px",
+  wide: "min-width: #{map-get($breakpoints, wide)}px",
 );

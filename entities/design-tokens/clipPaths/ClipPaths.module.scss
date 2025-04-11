@@ -1,0 +1,6 @@
+@use "../../../app/styles/clipPaths";
+@use "../../../app/styles/helpers/json";
+
+:export {
+  clipPaths: json.json-stringify(clipPaths.$clipPaths);
+}

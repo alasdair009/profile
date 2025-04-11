@@ -1,6 +1,6 @@
-import { Root } from "./styles";
 import { UnorderedListProps } from "./UnorderedList.types";
 import { CSSProperties } from "react";
+import styles from "./UnorderedList.module.scss";
 
 /**
  * HTML unordered list.
@@ -12,12 +12,13 @@ export function UnorderedList({
   ...rest
 }: UnorderedListProps) {
   return (
-    <Root
+    <ul
+      className={styles.root}
       data-testid={UnorderedList.name}
       style={{ "--align": align, ...style } as CSSProperties}
       {...rest}
     >
       {children}
-    </Root>
+    </ul>
   );
 }

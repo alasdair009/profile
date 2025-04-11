@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import { DropButton, Root, SelectArea, SelectedContent } from "./styles";
+import styles from "./CustomizableSelect.module.scss";
 
 type SelectMenuProps = {
   /**
@@ -18,12 +18,13 @@ export function CustomizableSelect({
   ...rest
 }: SelectMenuProps) {
   return (
-    <Root {...rest}>
-      <SelectArea>
-        <SelectedContent as="selectedcontent" />
-        <DropButton />
-      </SelectArea>
+    <select className={styles.root} {...rest}>
+      <button className={styles.selectArea}>
+        {/*@ts-ignore*/}
+        <selectedcontent className={styles.selectedContent} />
+        <span className={styles.dropButton} />
+      </button>
       {children}
-    </Root>
+    </select>
   );
 }

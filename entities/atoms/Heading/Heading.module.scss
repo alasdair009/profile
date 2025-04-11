@@ -43,7 +43,7 @@
     width: 100%;
   }
 
-  @include append-element(h1) {
+  &.h1 {
     max-width: rem.toRem(map-get(dimensions.$sizes, s512));
     padding-bottom: rem.toRem(map-get(dimensions.$sizes, s8));
 
@@ -52,7 +52,7 @@
     }
   }
 
-  @include append-element(h2) {
+  &.h2 {
     max-width: rem.toRem(map-get(dimensions.$sizes, s512));
 
     &::after {
@@ -61,7 +61,7 @@
   }
 
   @each $headerElement, $headerSize in typography.$headerSizes {
-    @include append-element($headerElement) {
+    &.#{$headerElement} {
       font-size: rem.toRem($headerSize);
     }
   }

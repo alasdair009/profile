@@ -1,0 +1,64 @@
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/rem";
+
+.root {
+  background: colors.$colorGreyDark;
+  box-shadow: 0 0 rem.toRem(10) rem.toRem(6) rgba(colors.$colorWhiteGhost, 0.35);
+  display: flex;
+  height: rem.toRem(300);
+  margin: 0 auto;
+  padding: dimensions.getSize(s8);
+  position: relative;
+  width: 100%;
+
+  @media (map-get(dimensions.$device, xsmall)) {
+    max-width: dimensions.getSize(s256);
+  }
+}
+
+.cardLink {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+
+  &::after {
+    display: none;
+  }
+
+  &:hover {
+    filter: brightness(1.3);
+  }
+}
+
+.figure {
+  display: flex;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+
+.cardImage {
+  align-content: center;
+  background: colors.$colorblackEvil;
+  display: flex;
+  min-height: dimensions.getSize(s128);
+  justify-content: center;
+  object-fit: cover;
+  text-align: center;
+  width: 100%;
+
+  @media (map-get(dimensions.$device, xsmall)) {
+    min-height: dimensions.getSize(s96);
+  }
+}
+
+.date {
+  color: colors.$colorWhiteGhost;
+  display: block;
+  font-style: italic;
+  text-align: center;
+}

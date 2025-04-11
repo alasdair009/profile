@@ -18,13 +18,14 @@ export function Link({
   href,
   lines,
   style,
+  className,
   ...rest
 }: LinkProps) {
   const isExternalURL = isExternalDomain(href);
 
   return (
     <ViewTransitionLink
-      className={`${styles.root} ${variant === "large" ? styles.Large : ""} ${lines ? styles.rootClamp : ""}`}
+      className={`${className} ${styles.root} ${variant === "large" ? styles.Large : ""} ${lines ? styles.rootClamp : ""}`}
       href={href}
       target={isExternalURL ? "_blank" : "_self"}
       rel={isExternalURL ? "noopener" : undefined}
