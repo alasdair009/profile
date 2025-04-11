@@ -1,0 +1,81 @@
+@use "../../../app/styles/animation";
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/rem";
+
+.root {
+  border: none;
+  margin: rem.toRem(map-get(dimensions.$sizes, s32)) auto;
+  max-width: rem.toRem(dimensions.$globalDecorationMaxWidth);
+  padding: rem.toRem(1);
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  &::before {
+    background: colors.$colorGreenGrass;
+    content: "";
+    height: rem.toRem(2);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  &::after {
+    aspect-ratio: 1;
+    background: colors.$colorblackEvil url(../../assets/am.svg) no-repeat center;
+    border: rem.toRem(2) solid colors.$colorGreenGrass;
+    border-radius: 50%;
+    content: "";
+    display: none;
+    height: rem.toRem(map-get(dimensions.$sizes, s48));
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform animation.animationDuration(1);
+
+    &:hover {
+      transform: translate(-50%, -50%) rotateX(360deg);
+    }
+  }
+
+  &.Top {
+    margin: rem.toRem(map-get(dimensions.$sizes, s32)) auto 0;
+  }
+  &.Bottom {
+    margin: 0 auto rem.toRem(map-get(dimensions.$sizes, s32));
+  }
+  &.None {
+    margin: 0 auto;
+  }
+
+  &.Decoration {
+    padding: calc(rem.toRem(map-get(dimensions.$sizes, s24)) + rem.toRem(2));
+
+    &::after {
+      display: block;
+    }
+
+    &.Top {
+      margin-bottom: calc(
+        rem.toRem(map-get(dimensions.$sizes, s24)) - rem.toRem(2) * -1
+      );
+    }
+
+    &.Bottom {
+      margin-top: calc(
+        rem.toRem(map-get(dimensions.$sizes, s24)) - rem.toRem(2) * -1
+      );
+    }
+
+    &.None {
+      margin: calc(
+          rem.toRem(map-get(dimensions.$sizes, s24)) - rem.toRem(2) * -1
+        )
+        auto;
+    }
+  }
+}

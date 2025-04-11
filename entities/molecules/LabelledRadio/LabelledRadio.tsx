@@ -1,4 +1,4 @@
-import { Root } from "./styles";
+import styles from "./LabelledRadio.module.scss";
 import { BaseRadio } from "../../atoms/BaseRadio";
 import { BaseLabel } from "../../atoms/BaseLabel";
 import type { BaseRadioProps } from "../../atoms/BaseRadio";
@@ -20,9 +20,9 @@ export function LabelledRadio({
   ...rest
 }: LabelledInputProps) {
   return (
-    <Root data-testid={LabelledRadio.name}>
+    <div className={styles.root} data-testid={LabelledRadio.name}>
       <BaseLabel as="span">{label}</BaseLabel>
       <BaseRadio isInvalid={isInvalid} {...rest} />
-    </Root>
+    </div>
   );
 }

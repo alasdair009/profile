@@ -1,5 +1,5 @@
-import { Root } from "./styles";
 import { HTMLAttributes, ReactNode } from "react";
+import styles from "./BlockQuote.module.scss";
 
 type BlockQuoteProps = {
   /**
@@ -16,5 +16,11 @@ type BlockQuoteProps = {
  * A large highlight of a short string.
  */
 export function BlockQuote({ ...rest }: BlockQuoteProps) {
-  return <Root data-testid={BlockQuote.name} {...rest} />;
+  return (
+    <blockquote
+      className={styles.root}
+      data-testid={BlockQuote.name}
+      {...rest}
+    />
+  );
 }

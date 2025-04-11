@@ -1,7 +1,7 @@
 import { Heading, HeadingProps } from "./Heading";
 import { Meta, StoryObj } from "@storybook/react";
 import { expect, within } from "@storybook/test";
-import { Flurry } from "@/entities";
+import { colors, Flurry } from "@/entities";
 
 const meta: Meta<typeof Heading> = {
   component: Heading,
@@ -20,10 +20,17 @@ const meta: Meta<typeof Heading> = {
     as: {
       options: [undefined, "h1", "h2", "h3", "h4", "h5", "h6"],
     },
+    color: {
+      control: {
+        type: "color",
+        presetColors: Object.values(colors),
+      },
+    },
   },
   args: {
     align: "left",
     level: "h1",
+    textShadow: false,
   },
 };
 export default meta;
@@ -75,7 +82,10 @@ export const H6: StoryObj<typeof Heading> = {
   play: async ({ args, canvasElement }) => headerTest(args, canvasElement),
 };
 
-const headerTest = async (args: HeadingProps, canvasElement: HTMLElement) => {
+const headerTest = async (
+  args: HeadingProps<any>,
+  canvasElement: HTMLElement
+) => {
   const canvas = within(canvasElement);
   const headingElement = canvas.getByTestId(Heading.name);
 

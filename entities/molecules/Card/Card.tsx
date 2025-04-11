@@ -1,10 +1,12 @@
-import { CardImage, CardLink, Content, Date, Figure, Root } from "./styles";
+import Image from "next/image";
+import { Link } from "../../atoms/Link";
 import { HTMLAttributes } from "react";
 import { Heading } from "@/entities";
 import { StaticImageData } from "next/image";
 import amLogo from "../../assets/am.svg";
 import { breakpoints } from "@/entities/design-tokens/dimensions/dimensions";
 import { rem } from "polished";
+import styles from "./Card.module.scss";
 
 type CardProps = {
   href: string;
@@ -26,29 +28,30 @@ export function Card({
   ...rest
 }: CardProps) {
   return (
-    <Root data-testid={Card.name} {...rest}>
-      <CardLink href={href}>
-        <Figure>
-          <CardImage
+    <article className={styles.root} data-testid={Card.name} {...rest}>
+      <Link className={styles.cardLink} href={href}>
+        <figure className={styles.figure}>
+          <Image
+            className={styles.cardImage}
             src={image}
             alt={imageAlt}
             fill={true}
             sizes={`(max-width: ${breakpoints.xsmall}px) ${rem(312)}, ${rem(240)}`}
           />
-        </Figure>
-        <Content>
+        </figure>
+        <div>
           <Heading level="h3" as="h2" align="center" lines={3}>
             {title}
           </Heading>
-          <Date dateTime={date.toISOString()}>
+          <time className={styles.date} dateTime={date.toISOString()}>
             {date.toLocaleDateString("en-GB", {
               year: "numeric",
               month: "short",
               day: "numeric",
             })}
-          </Date>
-        </Content>
-      </CardLink>
-    </Root>
+          </time>
+        </div>
+      </Link>
+    </article>
   );
 }

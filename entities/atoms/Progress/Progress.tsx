@@ -1,5 +1,5 @@
-import { ProgressElement, Root } from "./styles";
-import { CSSProperties, HTMLAttributes, ReactNode } from "react";
+import { CSSProperties, HTMLAttributes } from "react";
+import styles from "./Progress.module.scss";
 
 export type ProgressProps = {
   /**
@@ -18,8 +18,9 @@ export type ProgressProps = {
 export function Progress({ max = 100, value = 100, ...rest }: ProgressProps) {
   const safeValue = value > max ? max : value;
   return (
-    <Root data-testid={Progress.name} {...rest}>
-      <ProgressElement
+    <div className={styles.root} data-testid={Progress.name} {...rest}>
+      <progress
+        className={styles.progressElement}
         max={100}
         value={safeValue}
         data-testid={`${Progress.name}Element`}
@@ -30,6 +31,6 @@ export function Progress({ max = 100, value = 100, ...rest }: ProgressProps) {
           } as CSSProperties
         }
       />
-    </Root>
+    </div>
   );
 }

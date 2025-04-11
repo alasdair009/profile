@@ -1,5 +1,5 @@
-import { Root } from "./styles";
-import { CSSProperties, HTMLAttributes } from "react";
+import { HTMLAttributes } from "react";
+import styles from "./Sun.module.scss";
 
 type SunProps = {
   /**
@@ -9,8 +9,8 @@ type SunProps = {
 } & HTMLAttributes<HTMLDivElement>;
 
 /**
- * Animation of a flight over clouds.
+ * Sun rendered in CSS.
  */
 export function Sun({ lenseFlare = false, ...rest }: SunProps) {
-  return <Root data-testid={Sun.name} {...rest} />;
+  return <span className={styles.root} data-testid={Sun.name} {...rest} />;
 }

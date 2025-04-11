@@ -1,0 +1,9 @@
+@function animationDuration($seconds) {
+  @return calc(var(--animation-rhythm) * #{$seconds});
+}
+
+$curves: (
+  default: cubic-bezier(0.25, 0.1, 0.25, 1),
+  easeBoth: cubic-bezier(0.77, 0.25, 0, 0.77),
+  linear: cubic-bezier(0, 0, 1, 1),
+);

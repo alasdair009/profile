@@ -1,4 +1,4 @@
-import { Root } from "./styles";
+import styles from "./LabelledCheckbox.module.scss";
 import { BaseCheckbox, BaseLabel } from "@/entities";
 import { BaseCheckboxProps } from "@/entities/atoms/BaseCheckbox/BaseCheckbox";
 
@@ -19,9 +19,9 @@ export function LabelledCheckbox({
   ...rest
 }: LabelledCheckboxProps) {
   return (
-    <Root data-testid={LabelledCheckbox.name}>
+    <div className={styles.root} data-testid={LabelledCheckbox.name}>
       <BaseLabel as="span">{label}</BaseLabel>
       <BaseCheckbox isInvalid={isInvalid} {...rest} />
-    </Root>
+    </div>
   );
 }

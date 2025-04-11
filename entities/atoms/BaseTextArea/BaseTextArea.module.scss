@@ -1,0 +1,24 @@
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/input";
+@use "../../../app/styles/helpers/rem";
+
+.root {
+  background: colors.$colorGreyDark;
+  border: rem.toRem(1) solid colors.$colorGreenGrass;
+  color: colors.$colorWhiteGhost;
+  display: block;
+  min-height: rem.toRem(map-get(dimensions.$sizes, s256));
+  margin: 0 auto;
+  max-width: rem.toRem(dimensions.$globalInputMaxWidth);
+  resize: none;
+  width: 100%;
+
+  &:user-invalid {
+    background: input.$invalidColor;
+  }
+
+  &StateInvalid {
+    background: input.$invalidColor;
+  }
+}

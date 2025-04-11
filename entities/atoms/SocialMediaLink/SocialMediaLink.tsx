@@ -1,6 +1,14 @@
-import { Root } from "./styles";
 import { HTMLAttributes } from "react";
 import { SocialMediaLinkVariant } from "./SocialMediaLinks.types";
+import Link from "next/link";
+import styles from "./SocialMediaLink.module.scss";
+import blueskyIcon from "@/entities/atoms/SocialMediaLink/assets/bluesky.svg";
+import facebookIcon from "@/entities/atoms/SocialMediaLink/assets/facebook.svg";
+import gitHubIcon from "@/entities/atoms/SocialMediaLink/assets/github.svg";
+import instagramIcon from "@/entities/atoms/SocialMediaLink/assets/instagram.svg";
+import linkedInIcon from "@/entities/atoms/SocialMediaLink/assets/linkedin.svg";
+import xIcon from "@/entities/atoms/SocialMediaLink/assets/x.svg";
+import youTubeIcon from "@/entities/atoms/SocialMediaLink/assets/youtube.svg";
 
 type SocialMediaProps = {
   /**
@@ -9,22 +17,27 @@ type SocialMediaProps = {
   variant: SocialMediaLinkVariant;
 } & HTMLAttributes<HTMLAnchorElement>;
 
-const getSocialMediaUrl = (variant: SocialMediaLinkVariant) => {
+const getSocialMediaDetails = (
+  variant: SocialMediaLinkVariant
+): [string, string] => {
   switch (variant) {
     case "bluesky":
-      return "https://bsky.app/profile/alasdair009.bsky.social";
+      return [
+        "https://bsky.app/profile/alasdair009.bsky.social",
+        blueskyIcon.src,
+      ];
     case "facebook":
-      return "https://www.facebook.com/alasdair009";
+      return ["https://www.facebook.com/alasdair009", facebookIcon.src];
     case "github":
-      return "https://github.com/alasdair009";
+      return ["https://github.com/alasdair009", gitHubIcon.src];
     case "instagram":
-      return "https://www.instagram.com/alasdair009";
+      return ["https://www.instagram.com/alasdair009", instagramIcon.src];
     case "linkedin":
-      return "https://www.linkedin.com/in/alasdairmacrae/";
+      return ["https://www.linkedin.com/in/alasdairmacrae/", linkedInIcon.src];
     case "x":
-      return "https://twitter.com/alasdair009";
+      return ["https://x.com/alasdair009", xIcon.src];
     case "youtube":
-      return "https://www.youtube.com/alasdair009";
+      return ["https://www.youtube.com/alasdair009", youTubeIcon.src];
   }
 };
 
@@ -34,18 +47,24 @@ const getSocialMediaUrl = (variant: SocialMediaLinkVariant) => {
 export function SocialMediaLink({
   variant,
   children,
+  style,
   ...rest
 }: SocialMediaProps) {
+  const [url, icon] = getSocialMediaDetails(variant);
   return (
-    <Root
-      href={getSocialMediaUrl(variant)}
+    <Link
+      className={styles.root}
+      href={url}
       target="_blank"
       rel="noopener"
-      $variant={variant}
       data-testid={SocialMediaLink.name}
+      style={{
+        ...style,
+        maskImage: `url(${icon})`,
+      }}
       {...rest}
     >
       {children}
-    </Root>
+    </Link>
   );
 }

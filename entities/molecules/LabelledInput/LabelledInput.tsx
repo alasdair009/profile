@@ -1,7 +1,7 @@
-import { Root } from "./styles";
 import { HTMLAttributes } from "react";
 import { TextInputType } from "../../atoms/BaseInput/BaseInput.types";
 import { BaseInput, BaseLabel, ErrorText } from "@/entities";
+import styles from "./LabelledInput.module.scss";
 
 type LabelledInputProps = {
   /**
@@ -46,10 +46,10 @@ export function LabelledInput({
   ...rest
 }: LabelledInputProps) {
   return (
-    <Root data-testid={LabelledInput.name}>
+    <label className={styles.root} data-testid={LabelledInput.name}>
       <BaseLabel as="span">{label}</BaseLabel>
       <BaseInput type={type} isInvalid={isInvalid} {...rest} />
       <ErrorText shown={isInvalid || false}>{errorText}</ErrorText>
-    </Root>
+    </label>
   );
 }

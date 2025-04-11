@@ -1,7 +1,7 @@
 import { CSSProperties, HTMLAttributes } from "react";
-import { EffectBox as Root } from "../styles";
 import { rem, rgba } from "polished";
 import { LCG, lcgNextRand, makeLCG } from "@/lib/random";
+import styles from "./EffectBox.module.scss";
 
 type EffectBoxProps = {
   particlesPerPlate: number;
@@ -31,7 +31,8 @@ export function EffectBox({
   ...rest
 }: EffectBoxProps) {
   return (
-    <Root
+    <span
+      className={styles.effectBox}
       style={
         {
           "--index": index,

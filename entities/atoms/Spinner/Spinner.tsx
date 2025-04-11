@@ -1,6 +1,7 @@
-import { Root, SpinnerImage } from "./styles";
 import { HTMLAttributes } from "react";
 import pikeSvg from "./pike.svg";
+import styles from "./Spinner.module.scss";
+import Image from "next/image";
 
 type SpinnerProps = HTMLAttributes<HTMLDivElement>;
 
@@ -9,8 +10,12 @@ type SpinnerProps = HTMLAttributes<HTMLDivElement>;
  */
 export function Spinner({ ...rest }: SpinnerProps) {
   return (
-    <Root data-testid={Spinner.name} {...rest}>
-      <SpinnerImage src={pikeSvg} alt="A gymnast in a pike shape" />
-    </Root>
+    <div className={styles.root} data-testid={Spinner.name} {...rest}>
+      <Image
+        className={styles.spinnerImage}
+        src={pikeSvg}
+        alt="A gymnast in a pike shape"
+      />
+    </div>
   );
 }

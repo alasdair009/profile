@@ -1,8 +1,7 @@
-"use client";
-import { Root } from "./styles";
 import { HTMLAttributes } from "react";
 import { StaticImageData } from "next/image";
 import { prefersReducedMotion } from "@/entities";
+import styles from "./Video.module.scss";
 
 type VideoProps = {
   /**
@@ -44,7 +43,8 @@ export function Video({
   ...rest
 }: VideoProps) {
   return (
-    <Root
+    <video
+      className={styles.root}
       loop={loop}
       autoPlay={!prefersReducedMotion}
       playsInline={autoPlay}
@@ -55,6 +55,6 @@ export function Video({
     >
       <source type="video/webm" src={webmSrc} />
       {mp4Src && <source type="video/mp4" src={mp4Src} />}
-    </Root>
+    </video>
   );
 }

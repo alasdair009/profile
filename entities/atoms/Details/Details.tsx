@@ -1,5 +1,5 @@
-import { Content, Root, Summary } from "./styles";
 import { HTMLAttributes } from "react";
+import styles from "./Details.module.scss";
 
 type DetailsProps = {
   /**
@@ -17,9 +17,9 @@ type DetailsProps = {
  */
 export function Details({ summary, children, ...rest }: DetailsProps) {
   return (
-    <Root data-testid={Details.name} {...rest}>
-      <Summary>{summary}</Summary>
-      <Content>{children}</Content>
-    </Root>
+    <details className={styles.root} data-testid={Details.name} {...rest}>
+      <summary className={styles.summary}>{summary}</summary>
+      <div className={styles.content}>{children}</div>
+    </details>
   );
 }

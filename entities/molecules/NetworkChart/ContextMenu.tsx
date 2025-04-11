@@ -1,9 +1,5 @@
-import { Heading, Paragraph, UnorderedList } from "@/entities";
-import {
-  ContextMenuButton,
-  ContextMenuFig,
-  ContextMenuRoot as Root,
-} from "./styles";
+import { Button, Heading, Paragraph, UnorderedList } from "@/entities";
+import styles from "./NetworkChart.module.scss";
 
 type ContextMenuProps = {
   onClose: any;
@@ -27,16 +23,20 @@ export function ContextMenu({
   coachLevelTitle,
 }: ContextMenuProps) {
   return (
-    <Root>
-      <ContextMenuButton onClick={onClose} type="button">
+    <div className={styles.contextMenuRoot}>
+      <Button
+        className={styles.contextMenuButton}
+        onClick={onClose}
+        type="button"
+      >
         X
-      </ContextMenuButton>
+      </Button>
       <Heading level="h6">{label}</Heading>
       <Paragraph>{description}</Paragraph>
       <UnorderedList>
         <li>Alt names: {altnames}</li>
         <li>
-          FIG: <ContextMenuFig>{fig}</ContextMenuFig>
+          FIG: <pre className={styles.contextMenuFig}>{fig}</pre>
         </li>
         <li>Difficulty: {difficulty}</li>
         {difficultyPS && difficultyPS > 0 && difficultyPS !== difficulty ? (
@@ -46,6 +46,6 @@ export function ContextMenu({
         )}
         <li>Coach level: {coachLevelTitle}</li>
       </UnorderedList>
-    </Root>
+    </div>
   );
 }

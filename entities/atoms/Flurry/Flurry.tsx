@@ -1,7 +1,8 @@
-import { Silhouette, Content, Inner, Root } from "./styles";
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
 import { StaticImageData } from "next/image";
 import { EffectBox } from "./EffectBox";
+import Image from "next/image";
+import styles from "./Flurry.module.scss";
 
 type FlurryProps = {
   /**
@@ -52,7 +53,8 @@ export function Flurry({
   }
 
   return (
-    <Root
+    <div
+      className={styles.root}
       data-testid={Flurry.name}
       style={
         {
@@ -64,11 +66,15 @@ export function Flurry({
       }
       {...rest}
     >
-      <Inner>{effectBoxes}</Inner>
+      <div className={styles.inner}>{effectBoxes}</div>
       {background && backgroundAlt && (
-        <Silhouette src={background} alt={backgroundAlt} />
+        <Image
+          className={styles.silhouette}
+          src={background}
+          alt={backgroundAlt}
+        />
       )}
-      <Content>{children}</Content>
-    </Root>
+      <div className={styles.content}>{children}</div>
+    </div>
   );
 }

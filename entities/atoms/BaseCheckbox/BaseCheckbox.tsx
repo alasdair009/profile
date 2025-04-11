@@ -1,6 +1,6 @@
 "use client";
-import { Root } from "./styles";
 import { HTMLAttributes, useState } from "react";
+import styles from "./BaseCheckbox.module.scss";
 
 export type BaseCheckboxProps = {
   /**
@@ -35,9 +35,9 @@ export function BaseCheckbox({
   };
 
   return (
-    <Root
+    <input
+      className={`${styles.root} ${isInvalidState ? styles.isInvalid : ""}`}
       type="checkbox"
-      $isInvalid={isInvalidState}
       onChange={() => handleOnChange()}
       data-testid={BaseCheckbox.name}
       {...rest}

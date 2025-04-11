@@ -1,8 +1,9 @@
 "use client";
-import { ProgressRing, Root } from "./styles";
-import { HTMLAttributes, useEffect, useState } from "react";
+import { CSSProperties, HTMLAttributes, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { prefersReducedMotion, sizes } from "@/entities";
+import { prefersReducedMotion } from "@/entities";
+import styles from "./ScoreCounter.module.scss";
+import { Progress } from "../../atoms/Progress";
 
 type ScoreCounterProps = {
   /**
@@ -49,13 +50,14 @@ export function ScoreCounter({ value = 100, ...rest }: ScoreCounterProps) {
   }, [inView]);
 
   return (
-    <Root
+    <div
+      className={styles.root}
       data-testid={ScoreCounter.name}
-      $value={progressValue}
       ref={ref}
+      style={{ "--set-counter": progressValue } as CSSProperties}
       {...rest}
     >
-      <ProgressRing max={100} value={progressValue} />
-    </Root>
+      <Progress max={100} value={progressValue} />
+    </div>
   );
 }

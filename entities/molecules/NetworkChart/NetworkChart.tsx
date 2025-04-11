@@ -4,9 +4,9 @@
 import { colors, ErrorText } from "@/entities";
 import { HTMLAttributes, ReactNode, useEffect, useState } from "react";
 import { darken } from "polished";
-import { Root } from "./styles";
 import { ContextMenu } from "./ContextMenu";
 import { useMounted } from "@/lib/useMounted";
+import styles from "./NetworkChart.module.scss";
 
 type NetworkChartProps = {
   /**
@@ -74,7 +74,7 @@ export function NetworkChart({
   //   return <>Loading...</>;
   // }
   return (
-    <Root data-testid={NetworkChart.name} {...rest}>
+    <div className={styles.root} data-testid={NetworkChart.name} {...rest}>
       {/*<GraphCanvas*/}
       {/*  nodes={nodes}*/}
       {/*  edges={edges}*/}
@@ -100,6 +100,6 @@ export function NetworkChart({
       <ErrorText>
         Graph is not currently compatible with this site - check back later.
       </ErrorText>
-    </Root>
+    </div>
   );
 }

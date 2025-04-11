@@ -1,7 +1,7 @@
 "use client";
-import { Root } from "./styles";
 import { BaseSelectProps } from "./BaseSelect.types";
 import { useState } from "react";
+import styles from "./BaseSelect.module.scss";
 
 /**
  * Base select field
@@ -18,13 +18,13 @@ export function BaseSelect({
   };
 
   return (
-    <Root
-      $isInvalid={isInvalidState}
+    <select
+      className={`${styles.root} ${isInvalidState ? styles.rootStateInvalid : ""}`}
       onChange={() => handleOnChange()}
       data-testid={BaseSelect.name}
       {...rest}
     >
       {children}
-    </Root>
+    </select>
   );
 }

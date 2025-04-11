@@ -1,12 +1,9 @@
 import { rem } from "polished";
 import { CSSProperties } from "react";
+import variables from "./Effects.module.scss";
 
 /**
  * Border radius values
  */
-export const borderRadii: Record<string, CSSProperties["borderRadius"]> = {
-  r2: rem(2),
-  r4: rem(4),
-  r8: rem(8),
-  round: "50%",
-};
+export const borderRadii: Record<string, CSSProperties["borderRadius"]> =
+  JSON.parse(variables.borderRadii.replaceAll("'", ""));

@@ -1,4 +1,4 @@
-import { Root } from "./styles";
+import styles from "./LabelledDate.module.scss";
 import { HTMLAttributes } from "react";
 import { BaseDate, BaseLabel, ErrorText } from "@/entities";
 import { DateInputType } from "@/entities/atoms/BaseDate/BaseDate.types";
@@ -57,10 +57,10 @@ export function LabelledDate({
   const minValue = typeof min === "number" ? new Date(min) : min;
   const maxValue = typeof max === "number" ? new Date(max) : max;
   return (
-    <Root data-testid={LabelledDate.name}>
+    <label className={styles.root} data-testid={LabelledDate.name}>
       <BaseLabel as="span">{label}</BaseLabel>
       <BaseDate isInvalid={isInvalid} min={minValue} max={maxValue} {...rest} />
       <ErrorText shown={isInvalid || false}>{errorText}</ErrorText>
-    </Root>
+    </label>
   );
 }

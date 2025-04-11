@@ -1,5 +1,5 @@
 import { Heading, Paragraph, Spacer } from "@/entities";
-import { Root } from "./styles";
+import styles from "./StatBox.module.scss";
 
 type StatBoxProps = {
   /**
@@ -21,13 +21,13 @@ type StatBoxProps = {
  */
 export function StatBox({ heading, name, value, ...rest }: StatBoxProps) {
   return (
-    <Root data-testid={StatBox.name} {...rest}>
+    <article className={styles.root} data-testid={StatBox.name} {...rest}>
       <Heading level="h4" as="h2" align="center">
         {heading}
       </Heading>
       <Paragraph align="center">{name}</Paragraph>
       <Spacer />
       <Paragraph align="center">{value}</Paragraph>
-    </Root>
+    </article>
   );
 }

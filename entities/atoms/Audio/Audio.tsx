@@ -1,4 +1,4 @@
-import { Root } from "./styles";
+import styles from "./Audio.module.scss";
 import { HTMLAttributes } from "react";
 
 type AudioProps = {
@@ -31,7 +31,8 @@ export function Audio({
   ...rest
 }: AudioProps) {
   return (
-    <Root
+    <audio
+      className={styles.root}
       controls={controls}
       autoPlay={autoPlay}
       loop={loop}
@@ -39,6 +40,6 @@ export function Audio({
       {...rest}
     >
       <source src={src} type="audio/mpeg" data-testid={`${Audio.name}Source`} />
-    </Root>
+    </audio>
   );
 }

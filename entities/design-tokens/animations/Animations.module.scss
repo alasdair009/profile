@@ -1,0 +1,7 @@
+@use "../../../app/styles/animation";
+
+:export {
+  animationCurveDefault: map-get(animation.$curves, default);
+  animationCurveEaseBoth: map-get(animation.$curves, easeBoth);
+  animationCurveLinear: map-get(animation.$curves, linear);
+}

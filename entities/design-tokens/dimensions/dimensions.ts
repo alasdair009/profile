@@ -1,25 +1,28 @@
 import { CSSProperties } from "react";
 import { rem } from "polished";
+import variables from "./Dimensions.module.scss";
 
 /**
  * Maximum width that inputs should be set to.
  */
-export const globalInputMaxWidth = 480;
+export const globalInputMaxWidth = parseInt(variables.globalInputMaxWidth);
 
 /**
  * Maximum width that text should be confined to.
  */
-export const globalTextMaxWidth = 1200;
+export const globalTextMaxWidth = parseInt(variables.globalTextMaxWidth);
 
 /**
  * Maximum width that content should extend to.
  */
-export const globalContentMaxWidth = 1600;
+export const globalContentMaxWidth = parseInt(variables.globalContentMaxWidth);
 
 /**
  * Maximum width decorative elements can stretch to on the screen.
  */
-export const globalDecorationMaxWidth = 3440;
+export const globalDecorationMaxWidth = parseInt(
+  variables.globalDecorationMaxWidth
+);
 
 /**
  * Key names for screen width sizes
@@ -39,20 +42,9 @@ export type Breakpoint =
  *
  * Alternatively {@link @jagex/jds#device} can be used in the context of styles breakpoints.
  */
-export const breakpoints: Record<Breakpoint, number> = {
-  base: 0,
-  min: 360,
-  xsmall: 576,
-  small: 768,
-  medium: 992,
-  large: globalTextMaxWidth,
-  xlarge: globalContentMaxWidth,
-  wide: globalDecorationMaxWidth,
-} as const;
-
-export type DeviceConfig<T> = {
-  [key in Breakpoint]?: T;
-};
+export const breakpoints: Record<string, number> = JSON.parse(
+  variables.breakpoints.replaceAll("'", "")
+);
 
 /**
  * Breakpoints as defined in {@link @jagex/jds#device}, for use in styles.
@@ -71,28 +63,9 @@ export const device: Record<
   wide: `min-width: ${breakpoints.wide}px`,
 };
 
-const sizeEntries: Record<string, number> = {
-  s2: 2,
-  s4: 4,
-  s8: 8,
-  s12: 12,
-  s16: 16,
-  s24: 24,
-  s32: 32,
-  s36: 36,
-  s40: 40,
-  s48: 48,
-  s56: 56,
-  s64: 64,
-  s72: 72,
-  s80: 80,
-  s96: 96,
-  s128: 128,
-  s192: 192,
-  s256: 256,
-  s512: 512,
-  s1024: 1024,
-};
+const sizeEntries: Record<string, number> = JSON.parse(
+  variables.sizes.replaceAll("'", "")
+);
 
 /**
  * A valid width entry that is not undefined or a number
