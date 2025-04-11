@@ -1,13 +1,7 @@
-import {
-  ArticleDate,
-  ArticleFigure,
-  ArticleHeading,
-  ArticleImage,
-  Content,
-  Root,
-} from "./styles";
 import { HTMLAttributes, ReactNode } from "react";
-import { Spacer } from "@/entities";
+import { Heading, Spacer } from "@/entities";
+import styles from "./Article.module.scss";
+import Image from "next/image";
 
 type ArticleProps = {
   heading: string;
@@ -48,27 +42,27 @@ export function Article({
   children,
   ...rest
 }: ArticleProps) {
-  const dayNumber = date.toLocaleDateString("en-GB", {
-    day: "numeric",
-  });
   return (
-    <Root data-testid={Article.name} {...rest}>
-      <ArticleHeading align="center">{heading}</ArticleHeading>
-      <ArticleDate dateTime={date.toISOString()}>
+    <article className={styles.root} data-testid={Article.name} {...rest}>
+      <Heading className={styles.articleHeading} align="center">
+        {heading}
+      </Heading>
+      <time className={styles.articleDate} dateTime={date.toISOString()}>
         {getNiceDate(date)}
-      </ArticleDate>
+      </time>
       <Spacer multiplier={6} />
-      <ArticleFigure>
-        <ArticleImage
+      <figure className={styles.articleFigure}>
+        <Image
+          className={styles.articleImage}
           src={image}
           alt={heading}
           fill={true}
           style={{ objectFit: "cover" }}
           priority={true}
         />
-      </ArticleFigure>
+      </figure>
       <Spacer multiplier={8} />
-      <Content>{children}</Content>
-    </Root>
+      <div className={styles.content}>{children}</div>
+    </article>
   );
 }

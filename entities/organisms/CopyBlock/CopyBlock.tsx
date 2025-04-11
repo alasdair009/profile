@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from "react";
-import { Root } from "./styles";
+import styles from "./CopyBlock.module.scss";
 
 type CopyBlockProps = HTMLAttributes<HTMLDivElement> & {
   children: ReactNode;
@@ -10,8 +10,8 @@ type CopyBlockProps = HTMLAttributes<HTMLDivElement> & {
  */
 export function CopyBlock({ children, ...rest }: CopyBlockProps) {
   return (
-    <Root data-testid={CopyBlock.name} {...rest}>
+    <section className={styles.root} data-testid={CopyBlock.name} {...rest}>
       {children}
-    </Root>
+    </section>
   );
 }

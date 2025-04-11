@@ -1,0 +1,58 @@
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/rem";
+
+.root {
+  margin: 0 auto;
+  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  position: relative;
+  width: 100%;
+}
+
+.articleHeading {
+  max-width: dimensions.getSize(s512);
+}
+
+.articleDate {
+  display: block;
+  font-style: italic;
+  margin: 0 auto;
+  max-width: rem.toRem(dimensions.$globalTextMaxWidth);
+  text-align: center;
+}
+
+.articleFigure {
+  box-sizing: border-box;
+  height: rem.toRem(320);
+  margin: 0 auto;
+  max-width: calc(100% - #{dimensions.getSize(s16)});
+  position: relative;
+
+  @media (map-get(dimensions.$device, large)) {
+    max-width: rem.toRem(dimensions.$globalTextMaxWidth);
+  }
+}
+
+.articleImage {
+  box-shadow:
+    -(dimensions.getSize(s48)) -(dimensions.getSize(s48))
+      0 -(dimensions.getSize(s40)) colors.$colorGreenGrass,
+    dimensions.getSize(s48) dimensions.getSize(s48) 0 -(dimensions.getSize(s40))
+      colors.$colorGreenGrass;
+  margin: dimensions.getSize(s8);
+  max-width: calc(100% - #{dimensions.getSize(s16)});
+}
+
+.content {
+  margin: 0 auto;
+  max-width: rem.toRem(dimensions.$globalTextMaxWidth);
+  overflow: hidden;
+  padding: dimensions.getSize(s8);
+  position: relative;
+  width: 100%;
+  word-break: break-word;
+
+  iframe {
+    max-width: rem.toRem(800);
+  }
+}

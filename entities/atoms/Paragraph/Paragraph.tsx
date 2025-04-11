@@ -44,6 +44,7 @@ export function Paragraph({
   fontSize = "medium",
   textWrap = "wrap",
   lines,
+  className,
   children,
   margin = `0 auto ${sizes.s24.rem}`,
   style,
@@ -53,7 +54,7 @@ export function Paragraph({
 
   return (
     <p
-      className={`${styles.root} ${lines ? styles.rootClamp : ""}`}
+      className={`${styles.root} ${lines ? styles.rootClamp : ""} ${className}`}
       data-testid={Paragraph.name}
       style={
         {

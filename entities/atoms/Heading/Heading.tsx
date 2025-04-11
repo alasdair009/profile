@@ -61,13 +61,14 @@ export function Heading<T extends ElementType = "h1">({
   textShadow = false,
   lines,
   children,
+  className,
   style,
   ...rest
 }: HeadingProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof HeadingProps<T>>) {
   const Root = as ? as : level;
   return (
     <Root
-      className={`${styles.root} ${headerClasses[level]} ${lines ? styles.rootClamp : ""} ${textShadow ? styles.Shadow : ""}`}
+      className={`${styles.root} ${headerClasses[level]} ${lines ? styles.rootClamp : ""} ${textShadow ? styles.Shadow : ""} ${className}`}
       $lines={lines}
       data-testid={Heading.name}
       style={

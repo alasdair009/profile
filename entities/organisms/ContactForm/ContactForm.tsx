@@ -1,5 +1,4 @@
 "use client";
-import { InputWrapper, Root, SubmittedMessage } from "./styles";
 import { FormEvent, HTMLAttributes, useState } from "react";
 import {
   Button,
@@ -12,6 +11,7 @@ import {
 } from "@/entities";
 import axios from "axios";
 import Script from "next/script";
+import styles from "./ContactForm.module.scss";
 
 type ContactFormProps = {
   /**
@@ -108,11 +108,18 @@ export function ContactForm({
   };
 
   return (
-    <Root data-testid={ContactForm.name} onSubmit={handleOnSubmit} {...rest}>
+    <form
+      className={styles.root}
+      data-testid={ContactForm.name}
+      onSubmit={handleOnSubmit}
+      {...rest}
+    >
       <Script
         src={`https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`}
       ></Script>
-      <InputWrapper $hasSubmitted={status.submitted}>
+      <div
+        className={`${styles.inputWrapper} ${status.submitted ? styles.hasSubmitted : ""}`}
+      >
         <LabelledInput
           label="Your email:"
           name="email"
@@ -159,12 +166,16 @@ export function ContactForm({
             <ErrorText>Error: {status.info.msg}</ErrorText>
           </>
         )}
-      </InputWrapper>
+      </div>
       {!status.info.error && status.info.msg && (
-        <SubmittedMessage align="center" fontSize="large">
+        <Paragraph
+          className={styles.submittedMessage}
+          align="center"
+          fontSize="large"
+        >
           {status.info.msg}
-        </SubmittedMessage>
+        </Paragraph>
       )}
-    </Root>
+    </form>
   );
 }

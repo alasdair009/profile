@@ -1,15 +1,8 @@
-import {
-  Root,
-  Inner,
-  BackgroundWrapper,
-  ForegroundWrapper,
-  CopyBox,
-  ForegroundImage,
-  FrameBoxWrapper,
-} from "./styles";
 import Image from "next/image";
 import { ContentPlateProps } from "./ContentPlate.types";
 import { IFrame } from "@/entities";
+import styles from "./ContentPlate.module.scss";
+import { CSSProperties } from "react";
 
 export function ContentPlate({
   orientation = "left",
@@ -19,32 +12,48 @@ export function ContentPlate({
   embedUrl,
   foregroundImage,
   foregroundImageAlt,
-  foregroundAnimate,
+  foregroundAnimate = false,
   children,
   ...rest
 }: ContentPlateProps) {
   return (
-    <Root {...rest} data-testid={ContentPlate.name}>
+    <section className={styles.root} {...rest} data-testid={ContentPlate.name}>
       {((backgroundImage && backgroundImageAlt) || backgroundCss) && (
-        <BackgroundWrapper $backgroundCss={backgroundCss}>
+        <figure
+          className={styles.backgroundWrapper}
+          style={{ "--background": backgroundCss } as CSSProperties}
+        >
           {backgroundImage && backgroundImageAlt && (
             <Image src={backgroundImage} alt={backgroundImageAlt} />
           )}
-        </BackgroundWrapper>
+        </figure>
       )}
-      <Inner $orientation={orientation}>
-        <CopyBox>{children}</CopyBox>
+      <div
+        className={styles.inner}
+        style={
+          {
+            "--orientation": orientation === "left" ? "row" : "row-reverse",
+          } as CSSProperties
+        }
+      >
+        <div className={styles.copyBox}>{children}</div>
         {embedUrl && (
-          <FrameBoxWrapper>
+          <div className={styles.frameBoxWrapper}>
             <IFrame src={embedUrl} />
-          </FrameBoxWrapper>
+          </div>
         )}
         {foregroundImage && foregroundImageAlt && (
-          <ForegroundWrapper $foregroundAnimate={foregroundAnimate}>
-            <ForegroundImage src={foregroundImage} alt={foregroundImageAlt} />
-          </ForegroundWrapper>
+          <figure
+            className={`${styles.foregroundWrapper} ${foregroundAnimate ? styles.animate : ""}`}
+          >
+            <Image
+              className={styles.foregroundImage}
+              src={foregroundImage}
+              alt={foregroundImageAlt}
+            />
+          </figure>
         )}
-      </Inner>
-    </Root>
+      </div>
+    </section>
   );
 }

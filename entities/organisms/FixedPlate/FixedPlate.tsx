@@ -1,7 +1,8 @@
-import { FixedImage, Root } from "./styles";
 import { HTMLAttributes } from "react";
 import skyImage from "@/entities/assets/sky.webp";
 import { StaticImageData } from "next/image";
+import styles from "./FixedPlate.module.scss";
+import Image from "next/image";
 
 type FixedPlateProps = {
   image?: StaticImageData;
@@ -16,8 +17,13 @@ export function FixedPlate({
   ...rest
 }: FixedPlateProps) {
   return (
-    <Root data-testid={FixedPlate.name} {...rest}>
-      <FixedImage placeholder={placeholder} src={image} alt={alt} />
-    </Root>
+    <figure className={styles.root} data-testid={FixedPlate.name} {...rest}>
+      <Image
+        className={styles.fixedImage}
+        placeholder={placeholder}
+        src={image}
+        alt={alt}
+      />
+    </figure>
   );
 }
