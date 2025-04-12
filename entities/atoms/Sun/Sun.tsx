@@ -11,6 +11,12 @@ type SunProps = {
 /**
  * Sun rendered in CSS.
  */
-export function Sun({ lenseFlare = false, ...rest }: SunProps) {
-  return <span className={styles.root} data-testid={Sun.name} {...rest} />;
+export function Sun({ lenseFlare = false, className, ...rest }: SunProps) {
+  return (
+    <span
+      className={`${styles.root} ${className}`}
+      data-testid={Sun.name}
+      {...rest}
+    />
+  );
 }

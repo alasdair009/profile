@@ -19,12 +19,13 @@ export function Cloud({
   scale = 180,
   skyColor = "linear-gradient(165deg, #527785 0%, #7fb4c7 100%)",
   style,
+  className,
   ...rest
 }: CloudProps) {
   return (
     <div
       data-testid={Cloud.name}
-      className={styles.root}
+      className={`${styles.root} ${className}`}
       style={{ "--skyColor": skyColor, ...style } as CSSProperties}
       {...rest}
     >
