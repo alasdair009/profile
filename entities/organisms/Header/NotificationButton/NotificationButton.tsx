@@ -1,8 +1,10 @@
 "use client";
 
 import notificationIcon from "@/entities/assets/notification.svg";
-import { NotificationButton as Root, NotificationIcon } from "../styles";
 import { HTMLAttributes, useCallback, useEffect, useState } from "react";
+import styles from "../Header.module.scss";
+import { Button } from "@/entities";
+import Image from "next/image";
 
 type NotificationButtonProps = {
   isSubscribed: boolean;
@@ -38,21 +40,21 @@ export function NotificationButton({
   }, []);
 
   return (
-    <Root
+    <Button
       type="button"
       variant="transparent"
       onClick={() => permissionRequest()}
       {...rest}
     >
-      <NotificationIcon
+      <Image
+        className={`${styles.notificationIcon} ${isSubscribed ? styles.isSubscribed : ""}`}
         src={notificationIcon}
         alt="Notifications icon"
-        $isSubscribed={isSubscribed}
         style={{
           background: notificationState === "granted" ? "green" : "red",
           display: "none",
         }}
       />
-    </Root>
+    </Button>
   );
 }
