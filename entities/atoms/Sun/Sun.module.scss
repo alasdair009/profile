@@ -1,6 +1,7 @@
 @use "../../../app/styles/dimensions";
 @use "../../../app/styles/radii";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
 .root {
   aspect-ratio: 1;
@@ -13,9 +14,9 @@
     hsl(4 0% 10% / 5%) 75%,
     transparent 99%
   );
-  border-radius: map-get(radii.$borderRadii, round);
+  border-radius: map.get(radii.$borderRadii, round);
   display: inline-block;
   filter: blur(4px);
-  min-height: rem.toRem(map-get(dimensions.$sizes, s64));
-  min-width: rem.toRem(map-get(dimensions.$sizes, s64));
+  min-height: rem.toRem(map.get(dimensions.$sizes, s64));
+  min-width: rem.toRem(map.get(dimensions.$sizes, s64));
 }

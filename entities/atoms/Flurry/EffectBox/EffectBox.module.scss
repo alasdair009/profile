@@ -1,5 +1,6 @@
 @use "../../../../app/styles/animation";
 @use "../../../../app/styles/helpers/rem";
+@use "sass:map";
 
 @keyframes orbit {
   from {
@@ -12,7 +13,7 @@
 
 .effectBox {
   animation: orbit animation.animationDuration(21) infinite
-    map-get(animation.$curves, linear);
+    map.get(animation.$curves, linear);
   animation-direction: reverse;
   animation-duration: calc(
     (var(--particleBaseDuration) + (var(--particleBaseDuration) / 2)) *

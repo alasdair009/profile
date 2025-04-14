@@ -2,6 +2,7 @@
 @use "./lineClamp";
 @use "./typography";
 @use "./helpers/rem";
+@use "sass:map";
 
 @mixin paragraphStyles {
   color: var(--color) !important;
@@ -9,7 +10,7 @@
   font-family: typography.$fontOpenSans !important;
   font-size: var(--font-size) !important;
   margin: var(--margin) !important;
-  max-width: calc(100vw - #{rem.toRem(map-get(dimensions.$sizes, s16))});
+  max-width: calc(100vw - #{rem.toRem(map.get(dimensions.$sizes, s16))});
   text-align: var(--text-align);
   text-wrap: var(--text-wrap);
   width: 100%;

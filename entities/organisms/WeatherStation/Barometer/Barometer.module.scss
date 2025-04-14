@@ -1,13 +1,13 @@
-"use client";
-import styled from "styled-components";
-import { borderRadii, sizes } from "@/entities";
+@use "../../../../app/styles/dimensions";
+@use "../../../../app/styles/radii";
+@use "sass:map";
 
-export const Root = styled.meter`
+.root {
   appearance: none;
-  border-radius: ${borderRadii.round};
-  height: ${sizes.s32.rem};
+  border-radius: map.get(radii.$borderRadii, round);
+  height: dimensions.getSize(s32);
   position: absolute;
-  width: ${sizes.s32.rem};
+  width: dimensions.getSize(s32);
 
   &::-webkit-meter-bar {
     background: none;
@@ -20,4 +20,4 @@ export const Root = styled.meter`
   &::-webkit-meter-optimum-value {
     background: transparent;
   }
-`;
+}

@@ -2,8 +2,9 @@
 @use "./dimensions";
 @use "./typography";
 @use "./helpers/rem";
+@use "sass:map";
 
-$fieldHeight: rem.toRem(map-get(dimensions.$sizes, s40));
+$fieldHeight: rem.toRem(map.get(dimensions.$sizes, s40));
 $invalidColor: rgba(colors.$colorRedHeat, 0.15);
 
 @mixin baseInputStyles {
@@ -12,11 +13,11 @@ $invalidColor: rgba(colors.$colorRedHeat, 0.15);
   border: 1px solid colors.$colorGreenGrass;
   color: colors.$colorWhiteGhost;
   display: block;
-  font-size: rem.toRem(map-get(typography.$fontSizes, medium));
+  font-size: rem.toRem(map.get(typography.$fontSizes, medium));
   height: $fieldHeight;
-  margin: rem.toRem(map-get(dimensions.$sizes, s2)) auto 0;
+  margin: rem.toRem(map.get(dimensions.$sizes, s2)) auto 0;
   max-width: rem.toRem(dimensions.$globalInputMaxWidth);
-  padding: rem.toRem(map-get(dimensions.$sizes, s8));
+  padding: rem.toRem(map.get(dimensions.$sizes, s8));
   width: 100%;
 
   &:-webkit-autofill,

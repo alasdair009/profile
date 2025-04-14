@@ -3,6 +3,7 @@
 @use "../../../app/styles/colors";
 @use "../../../app/styles/dimensions";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
 @keyframes fall {
   0% {
@@ -14,14 +15,14 @@
     opacity: 1;
   }
   25% {
-    transform: translateX(-(rem.toRem(map-get(dimensions.$sizes, s16))))
+    transform: translateX(-(rem.toRem(map.get(dimensions.$sizes, s16))))
       rotate(90deg);
   }
   50% {
     transform: translateX(0) rotate(180deg);
   }
   75% {
-    transform: translateX(rem.toRem(map-get(dimensions.$sizes, s16)))
+    transform: translateX(rem.toRem(map.get(dimensions.$sizes, s16)))
       rotate(270deg);
   }
   90% {
@@ -40,12 +41,12 @@
 }
 
 .flake {
-  animation: fall infinite map-get(animation.$curves, linear);
+  animation: fall infinite map.get(animation.$curves, linear);
   animation-delay: calc(var(--duration) * var(--delay) * 1s);
   animation-duration: calc(var(--flakeDuration) * 1s);
   aspect-ratio: 1;
   background: colors.$colorWhiteGhost;
-  clip-path: map-get(clipPaths.$clipPaths, snowflake);
+  clip-path: map.get(clipPaths.$clipPaths, snowflake);
   left: calc(
     (100% - var(--size)) * ((var(--index) - 1) / var(--numberOfFlakes))
   );

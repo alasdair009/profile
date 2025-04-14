@@ -1,6 +1,7 @@
 @use "../../../app/styles/colors";
 @use "../../../app/styles/dimensions";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
 $headerHeight: dimensions.getSize(s48);
 
@@ -51,7 +52,7 @@ $headerHeight: dimensions.getSize(s48);
   &.hideOnNarrow {
     display: none;
 
-    @media (map-get(dimensions.$device, xsmall)) {
+    @media (map.get(dimensions.$device, xsmall)) {
       display: flex;
     }
   }

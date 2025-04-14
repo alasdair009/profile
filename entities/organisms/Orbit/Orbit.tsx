@@ -1,7 +1,7 @@
-import { Core, Particle, Root, Stage } from "./styles";
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
 import { colors } from "@/entities";
 import { lcgNextRand, makeLCG } from "@/lib/random";
+import styles from "./Orbit.module.scss";
 
 type OrbitProps = {
   /**
@@ -31,7 +31,8 @@ export function Orbit({
   const orbitLCG = makeLCG();
   for (let i = 0; i < numberOfParticles; i++) {
     particles.push(
-      <Particle
+      <span
+        className={styles.particle}
         key={`particle${numberOfParticles}${i}`}
         data-testid={`${Orbit.name}Particle`}
         style={
@@ -46,10 +47,10 @@ export function Orbit({
     );
   }
   return (
-    <Root data-testid={Orbit.name} {...rest}>
-      <Stage>
-        <Core>{particles}</Core>
-      </Stage>
-    </Root>
+    <div className={styles.root} data-testid={Orbit.name} {...rest}>
+      <div className={styles.stage}>
+        <div className={styles.core}>{particles}</div>
+      </div>
+    </div>
   );
 }

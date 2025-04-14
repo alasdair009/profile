@@ -1,10 +1,11 @@
 @use "../../../app/styles/dimensions";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
 .root {
   content: "";
   display: block;
   margin-bottom: calc(
-    rem.toRem(map-get(dimensions.$sizes, s8)) * var(--multiplier)
+    rem.toRem(map.get(dimensions.$sizes, s8)) * var(--multiplier)
   );
 }

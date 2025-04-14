@@ -1,28 +1,29 @@
 @use "./_dimensions.scss";
 @use "./helpers/rem";
+@use "sass:map";
 
 $fontOpenSans: "OpenSans", "Arial", sans-serif;
 
 $fontSizes: (
-  small: map-get(dimensions.$sizes, s12),
-  medium: map-get(dimensions.$sizes, s16),
-  mlarge: map-get(dimensions.$sizes, s24),
-  large: map-get(dimensions.$sizes, s32),
-  xlarge: map-get(dimensions.$sizes, s40),
-  xxlarge: map-get(dimensions.$sizes, s64),
+  small: map.get(dimensions.$sizes, s12),
+  medium: map.get(dimensions.$sizes, s16),
+  mlarge: map.get(dimensions.$sizes, s24),
+  large: map.get(dimensions.$sizes, s32),
+  xlarge: map.get(dimensions.$sizes, s40),
+  xxlarge: map.get(dimensions.$sizes, s64),
 );
 
 @function getFontSize($size) {
-  @return rem.toRem(map-get($fontSizes, $size));
+  @return rem.toRem(map.get($fontSizes, $size));
 }
 
 $headerSizes: (
-  h1: map-get($fontSizes, xlarge),
-  h2: map-get($fontSizes, large),
-  h3: map-get($fontSizes, mlarge),
-  h4: map-get($fontSizes, mlarge),
-  h5: map-get($fontSizes, mlarge),
-  h6: map-get($fontSizes, mlarge),
+  h1: map.get($fontSizes, xlarge),
+  h2: map.get($fontSizes, large),
+  h3: map.get($fontSizes, mlarge),
+  h4: map.get($fontSizes, mlarge),
+  h5: map.get($fontSizes, mlarge),
+  h6: map.get($fontSizes, mlarge),
 );
 
 $lineHeights: (

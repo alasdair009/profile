@@ -1,5 +1,5 @@
-import { HTMLAttributes } from "react";
-import { Root, Text, Morpher } from "./styles";
+import { CSSProperties, HTMLAttributes } from "react";
+import styles from "./MorphingText.module.scss";
 
 type MorphingTextProps = {
   values: string[];
@@ -7,21 +7,26 @@ type MorphingTextProps = {
 
 export function MorphingText({ values, ...rest }: MorphingTextProps) {
   return (
-    <Root data-testid={MorphingText.name} {...rest}>
-      <Morpher>
+    <section className={styles.root} data-testid={MorphingText.name} {...rest}>
+      <h2 className={styles.morpher}>
         {values.map((value, index) => {
           return (
-            <Text
-              $wordCount={values.length}
-              $wordIndex={index}
+            <span
+              className={styles.text}
               key={value}
               data-testid={`${MorphingText.name}Text`}
+              style={
+                {
+                  "--word-count": values.length,
+                  "--word-index": index,
+                } as CSSProperties
+              }
             >
               {value}
-            </Text>
+            </span>
           );
         })}
-      </Morpher>
-    </Root>
+      </h2>
+    </section>
   );
 }

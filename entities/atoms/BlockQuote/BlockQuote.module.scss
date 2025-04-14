@@ -2,14 +2,15 @@
 @use "../../../app/styles/dimensions";
 @use "../../../app/styles/typography";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
 .root {
   display: block;
-  font-size: rem.toRem(map-get(typography.$fontSizes, large));
+  font-size: rem.toRem(map.get(typography.$fontSizes, large));
   font-style: italic;
-  margin: rem.toRem(map-get(dimensions.$sizes, s32)) auto;
+  margin: rem.toRem(map.get(dimensions.$sizes, s32)) auto;
   max-width: rem.toRem(dimensions.$globalTextMaxWidth);
-  padding: rem.toRem(map-get(dimensions.$sizes, s8));
+  padding: rem.toRem(map.get(dimensions.$sizes, s8));
   position: relative;
   text-align: center;
   text-wrap: balance;
@@ -18,7 +19,7 @@
   &::after {
     color: colors.$colorGreenGrass;
     content: '"';
-    font-size: rem.toRem(map-get(typography.$fontSizes, xxlarge));
-    font-weight: map-get(typography.$fontWeights, black);
+    font-size: rem.toRem(map.get(typography.$fontSizes, xxlarge));
+    font-weight: map.get(typography.$fontWeights, black);
   }
 }

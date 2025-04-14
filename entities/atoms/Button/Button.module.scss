@@ -3,11 +3,13 @@
 @use "../../../app/styles/dimensions";
 @use "../../../app/styles/typography";
 @use "../../../app/styles/helpers/rem";
+@use "sass:color";
+@use "sass:map";
 
 $buttonClipPath: polygon(
-  calc(0% + #{rem.toRem(map-get(dimensions.$sizes, s8))}) 0,
+  calc(0% + #{rem.toRem(map.get(dimensions.$sizes, s8))}) 0,
   100% 0,
-  calc(100% - #{rem.toRem(map-get(dimensions.$sizes, s8))}) 100%,
+  calc(100% - #{rem.toRem(map.get(dimensions.$sizes, s8))}) 100%,
   0 100%
 );
 
@@ -19,13 +21,13 @@ $buttonClipPath: polygon(
   color: colors.$colorWhiteGhost;
   cursor: pointer;
   display: flex;
-  font-size: rem.toRem(map-get(typography.$fontSizes, medium));
-  font-weight: map-get(typography.$fontWeights, bold);
-  height: rem.toRem(map-get(dimensions.$sizes, s48));
+  font-size: rem.toRem(map.get(typography.$fontSizes, medium));
+  font-weight: map.get(typography.$fontWeights, bold);
+  height: rem.toRem(map.get(dimensions.$sizes, s48));
   justify-content: center;
-  max-width: rem.toRem(map-get(dimensions.$sizes, s256));
-  min-width: rem.toRem(map-get(dimensions.$sizes, s64));
-  padding: 0 rem.toRem(map-get(dimensions.$sizes, s48));
+  max-width: rem.toRem(map.get(dimensions.$sizes, s256));
+  min-width: rem.toRem(map.get(dimensions.$sizes, s64));
+  padding: 0 rem.toRem(map.get(dimensions.$sizes, s48));
   position: relative;
   transition: padding animation.animationDuration(0.5);
   z-index: 0;
@@ -42,7 +44,7 @@ $buttonClipPath: polygon(
     top: 0;
     transform: translateX(-50%);
     transition: all animation.animationDuration(0.5);
-    width: calc(100% - #{rem.toRem(map-get(dimensions.$sizes, s32))});
+    width: calc(100% - #{rem.toRem(map.get(dimensions.$sizes, s32))});
     z-index: -1;
   }
 
@@ -56,7 +58,7 @@ $buttonClipPath: polygon(
   &:hover {
     &::before,
     &::after {
-      width: calc(100% - #{rem.toRem(map-get(dimensions.$sizes, s8))});
+      width: calc(100% - #{rem.toRem(map.get(dimensions.$sizes, s8))});
     }
 
     &::after {
@@ -65,7 +67,7 @@ $buttonClipPath: polygon(
   }
 
   &:active::before {
-    background: darken(colors.$colorGreenGrass, 0.05);
+    background: color.scale(colors.$colorGreenGrass, $lightness: 5%);
   }
 
   &Transparent {

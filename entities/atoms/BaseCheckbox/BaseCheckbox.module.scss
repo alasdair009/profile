@@ -1,6 +1,7 @@
 @use "../../../app/styles/colors";
 @use "../../../app/styles/helpers/rem";
 @use "../../../app/styles/dimensions";
+@use "sass:map";
 
 .root {
   appearance: none;
@@ -10,7 +11,7 @@
   border-style: solid;
   border-width: 1px;
   position: relative;
-  width: rem.toRem(map-get(dimensions.$sizes, s32));
+  width: rem.toRem(map.get(dimensions.$sizes, s32));
 
   &::after {
     background: colors.$colorGreenGrass;

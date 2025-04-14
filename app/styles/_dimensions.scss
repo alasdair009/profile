@@ -1,4 +1,5 @@
 @use "./helpers/rem";
+@use "sass:map";
 
 // Maximum width that inputs should be set to.
 $globalInputMaxWidth: 480;
@@ -52,16 +53,16 @@ $sizes: (
 );
 
 @function getSize($size) {
-  @return rem.toRem(map-get($sizes, $size));
+  @return rem.toRem(map.get($sizes, $size));
 }
 
 $device: (
-  base: "min-width: #{map-get($breakpoints, base)}px",
-  min: "min-width: #{map-get($breakpoints, min)}px",
-  xsmall: "min-width: #{map-get($breakpoints, xsmall)}px",
-  small: "min-width: #{map-get($breakpoints, small)}px",
-  medium: "min-width: #{map-get($breakpoints, medium)}px",
-  large: "min-width: #{map-get($breakpoints, large)}px",
-  xlarge: "min-width: #{map-get($breakpoints, xlarge)}px",
-  wide: "min-width: #{map-get($breakpoints, wide)}px",
+  base: "min-width: #{map.get($breakpoints, base)}px",
+  min: "min-width: #{map.get($breakpoints, min)}px",
+  xsmall: "min-width: #{map.get($breakpoints, xsmall)}px",
+  small: "min-width: #{map.get($breakpoints, small)}px",
+  medium: "min-width: #{map.get($breakpoints, medium)}px",
+  large: "min-width: #{map.get($breakpoints, large)}px",
+  xlarge: "min-width: #{map.get($breakpoints, xlarge)}px",
+  wide: "min-width: #{map.get($breakpoints, wide)}px",
 );

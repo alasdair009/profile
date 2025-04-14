@@ -2,13 +2,14 @@
 @use "../../../app/styles/dimensions";
 @use "../../../app/styles/radii";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
 .root {
   align-items: center;
   aspect-ratio: 1;
   border-radius: 50%;
   display: flex;
-  height: rem.toRem(map-get(dimensions.$sizes, s96));
+  height: rem.toRem(map.get(dimensions.$sizes, s96));
   justify-content: center;
   position: relative;
 
@@ -20,7 +21,7 @@
       rgba(colors.$colorblackEvil, 0.5) 70%,
       transparent 50%
     );
-    border-radius: map-get(radii.$borderRadii, round);
+    border-radius: map.get(radii.$borderRadii, round);
     content: "";
     height: 100%;
     left: 0;

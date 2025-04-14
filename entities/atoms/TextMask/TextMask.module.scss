@@ -1,5 +1,6 @@
 @use "../../../app/styles/typography";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
 .root {
   display: flex;
@@ -40,7 +41,7 @@
 .text {
   alignment-baseline: middle;
   font-family: typography.$fontOpenSans;
-  font-size: rem.toRem(map-get(typography.$fontSizes, large));
-  font-weight: map-get(typography.$fontWeights, black);
+  font-size: rem.toRem(map.get(typography.$fontSizes, large));
+  font-weight: map.get(typography.$fontWeights, black);
   text-anchor: middle;
 }

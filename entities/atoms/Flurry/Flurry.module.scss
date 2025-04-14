@@ -2,6 +2,7 @@
 @use "../../../app/styles/colors";
 @use "../../../app/styles/dimensions";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
 .root {
   align-items: center;
@@ -48,7 +49,7 @@
 .content {
   max-width: rem.toRem(dimensions.$globalTextMaxWidth);
   position: relative;
-  text-shadow: 0 0 rem.toRem(map-get(dimensions.$sizes, s8))
+  text-shadow: 0 0 rem.toRem(map.get(dimensions.$sizes, s8))
     colors.$colorblackEvil;
   word-break: break-word;
   z-index: 1;

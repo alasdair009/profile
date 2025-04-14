@@ -1,0 +1,19 @@
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/rem";
+
+.root {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  position: relative;
+  width: 100%;
+}
+
+.trampolineImage {
+  margin: 0 auto;
+  max-width: dimensions.getSize(s512);
+  width: 100%;
+}

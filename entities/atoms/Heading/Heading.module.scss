@@ -3,6 +3,7 @@
 @use "../../../app/styles/lineClamp";
 @use "../../../app/styles/typography";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
 @mixin append-element($element-name) {
   @at-root #{selector-append($element-name, &)} {
@@ -13,8 +14,8 @@
 .root {
   border: none !important;
   color: var(--color) !important;
-  font-weight: map-get(typography.$fontWeights, bold);
-  margin: 0 auto rem.toRem(map-get(dimensions.$sizes, s24)) !important;
+  font-weight: map.get(typography.$fontWeights, bold);
+  margin: 0 auto rem.toRem(map.get(dimensions.$sizes, s24)) !important;
   max-width: rem.toRem(dimensions.$globalTextMaxWidth);
   padding-bottom: 0;
   position: relative;
@@ -27,7 +28,7 @@
   }
 
   &.Shadow {
-    text-shadow: 0 0 rem.toRem(map-get(dimensions.$sizes, s4))
+    text-shadow: 0 0 rem.toRem(map.get(dimensions.$sizes, s4))
       colors.$colorblackEvil;
   }
 
@@ -44,8 +45,8 @@
   }
 
   &.h1 {
-    max-width: rem.toRem(map-get(dimensions.$sizes, s512));
-    padding-bottom: rem.toRem(map-get(dimensions.$sizes, s8));
+    max-width: rem.toRem(map.get(dimensions.$sizes, s512));
+    padding-bottom: rem.toRem(map.get(dimensions.$sizes, s8));
 
     &::after {
       display: block;
@@ -53,7 +54,7 @@
   }
 
   &.h2 {
-    max-width: rem.toRem(map-get(dimensions.$sizes, s512));
+    max-width: rem.toRem(map.get(dimensions.$sizes, s512));
 
     &::after {
       display: block;

@@ -1,7 +1,8 @@
 @use "../../../app/styles/animation";
+@use "sass:map";
 
 :export {
-  animationCurveDefault: map-get(animation.$curves, default);
-  animationCurveEaseBoth: map-get(animation.$curves, easeBoth);
-  animationCurveLinear: map-get(animation.$curves, linear);
+  animationCurveDefault: map.get(animation.$curves, default);
+  animationCurveEaseBoth: map.get(animation.$curves, easeBoth);
+  animationCurveLinear: map.get(animation.$curves, linear);
 }

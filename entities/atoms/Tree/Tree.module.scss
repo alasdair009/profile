@@ -1,6 +1,7 @@
 @use "../../../app/styles/animation";
 @use "../../../app/styles/radii";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
 @keyframes sway {
   0%,
@@ -30,6 +31,6 @@ $leavesTransform: (
 }
 
 .trunk {
-  rx: rem.toRem(map-get(radii.$borderRadii, s2));
+  rx: rem.toRem(map.get(radii.$borderRadii, s2));
   stroke: #2e1305;
 }

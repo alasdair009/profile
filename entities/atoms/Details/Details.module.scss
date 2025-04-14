@@ -2,6 +2,7 @@
 @use "../../../app/styles/dimensions";
 @use "../../../app/styles/typography";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
 .root {
   margin: 0 auto rem.toRem(1);
@@ -15,9 +16,9 @@
   align-items: center;
   background: colors.$colorGreyLight;
   cursor: pointer;
-  font-size: rem.toRem(map-get(typography.$fontSizes, mlarge));
+  font-size: rem.toRem(map.get(typography.$fontSizes, mlarge));
   justify-content: flex-start;
-  padding: rem.toRem(map-get(dimensions.$sizes, s8));
+  padding: rem.toRem(map.get(dimensions.$sizes, s8));
   position: relative;
   width: 100%;
 
@@ -33,7 +34,7 @@
 .content {
   background: colors.$colorGreyDark;
   overflow: hidden;
-  padding: rem.toRem(map-get(dimensions.$sizes, s8));
+  padding: rem.toRem(map.get(dimensions.$sizes, s8));
   position: relative;
   width: 100%;
 }

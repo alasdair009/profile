@@ -2,25 +2,26 @@
 @use "../../../app/styles/dimensions";
 @use "../../../app/styles/radii";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
 .root {
   aspect-ratio: 1;
-  border-radius: map-get(radii.$borderRadii, round);
+  border-radius: map.get(radii.$borderRadii, round);
   display: inline-block;
-  min-height: rem.toRem(map-get(dimensions.$sizes, s40));
-  min-width: rem.toRem(map-get(dimensions.$sizes, s40));
+  min-height: rem.toRem(map.get(dimensions.$sizes, s40));
+  min-width: rem.toRem(map.get(dimensions.$sizes, s40));
   overflow: hidden;
   position: relative;
 
   &::before {
-    border-radius: map-get(radii.$borderRadii, round);
-    box-shadow: rem.toRem(map-get(dimensions.$sizes, s16))
-      rem.toRem(map-get(dimensions.$sizes, s8)) 0 0 colors.$colorWhiteGhost;
+    border-radius: map.get(radii.$borderRadii, round);
+    box-shadow: rem.toRem(map.get(dimensions.$sizes, s16))
+      rem.toRem(map.get(dimensions.$sizes, s8)) 0 0 colors.$colorWhiteGhost;
     content: "";
     height: 100%;
-    left: -(rem.toRem(map-get(dimensions.$sizes, s16)));
+    left: -(rem.toRem(map.get(dimensions.$sizes, s16)));
     position: absolute;
-    top: -(rem.toRem(map-get(dimensions.$sizes, s8)));
+    top: -(rem.toRem(map.get(dimensions.$sizes, s8)));
     width: 100%;
   }
 }

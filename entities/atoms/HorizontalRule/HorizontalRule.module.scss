@@ -2,10 +2,11 @@
 @use "../../../app/styles/colors";
 @use "../../../app/styles/dimensions";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
 .root {
   border: none;
-  margin: rem.toRem(map-get(dimensions.$sizes, s32)) auto;
+  margin: rem.toRem(map.get(dimensions.$sizes, s32)) auto;
   max-width: rem.toRem(dimensions.$globalDecorationMaxWidth);
   padding: rem.toRem(1);
   position: relative;
@@ -30,7 +31,7 @@
     border-radius: 50%;
     content: "";
     display: none;
-    height: rem.toRem(map-get(dimensions.$sizes, s48));
+    height: rem.toRem(map.get(dimensions.$sizes, s48));
     left: 50%;
     position: absolute;
     top: 50%;
@@ -43,17 +44,17 @@
   }
 
   &.Top {
-    margin: rem.toRem(map-get(dimensions.$sizes, s32)) auto 0;
+    margin: rem.toRem(map.get(dimensions.$sizes, s32)) auto 0;
   }
   &.Bottom {
-    margin: 0 auto rem.toRem(map-get(dimensions.$sizes, s32));
+    margin: 0 auto rem.toRem(map.get(dimensions.$sizes, s32));
   }
   &.None {
     margin: 0 auto;
   }
 
   &.Decoration {
-    padding: calc(rem.toRem(map-get(dimensions.$sizes, s24)) + rem.toRem(2));
+    padding: calc(rem.toRem(map.get(dimensions.$sizes, s24)) + rem.toRem(2));
 
     &::after {
       display: block;
@@ -61,19 +62,19 @@
 
     &.Top {
       margin-bottom: calc(
-        rem.toRem(map-get(dimensions.$sizes, s24)) - rem.toRem(2) * -1
+        rem.toRem(map.get(dimensions.$sizes, s24)) - rem.toRem(2) * -1
       );
     }
 
     &.Bottom {
       margin-top: calc(
-        rem.toRem(map-get(dimensions.$sizes, s24)) - rem.toRem(2) * -1
+        rem.toRem(map.get(dimensions.$sizes, s24)) - rem.toRem(2) * -1
       );
     }
 
     &.None {
       margin: calc(
-          rem.toRem(map-get(dimensions.$sizes, s24)) - rem.toRem(2) * -1
+          rem.toRem(map.get(dimensions.$sizes, s24)) - rem.toRem(2) * -1
         )
         auto;
     }

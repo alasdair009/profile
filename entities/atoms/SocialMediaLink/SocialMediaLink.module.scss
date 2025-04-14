@@ -2,6 +2,7 @@
 @use "../../../app/styles/colors";
 @use "../../../app/styles/dimensions";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
 $socialMediaIcons: (
   bluesky: url(./assets/bluesky.svg),
@@ -26,7 +27,7 @@ $socialMediaIcons: (
   mask-size: contain;
   overflow: hidden;
   position: relative;
-  width: rem.toRem(map-get(dimensions.$sizes, s48));
+  width: rem.toRem(map.get(dimensions.$sizes, s48));
 
   &::before {
     background: linear-gradient(

@@ -4,6 +4,7 @@
 @use "../../../app/styles/typography";
 @use "../../../app/styles/lineClamp";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
 @function generatePolygonLine($yOffset: 0) {
   @return polygon(
@@ -49,8 +50,8 @@
   color: colors.$colorWhiteGhost;
   display: inline-flex;
   font-size: inherit;
-  font-weight: map-get(typography.$fontWeights, bold);
-  max-width: rem.toRem(map-get(dimensions.$sizes, s512));
+  font-weight: map.get(typography.$fontWeights, bold);
+  max-width: rem.toRem(map.get(dimensions.$sizes, s512));
   position: relative;
   text-decoration: none;
   word-break: break-word;
@@ -80,7 +81,7 @@
     bottom: calc(#{rem.toRem(7)} * -1);
     clip-path: generatePolygonLine();
     content: "";
-    height: rem.toRem(map-get(dimensions.$sizes, s8));
+    height: rem.toRem(map.get(dimensions.$sizes, s8));
     left: 0;
     position: absolute;
     width: 100%;
@@ -92,8 +93,8 @@
 
   &.Large {
     color: colors.$colorGreenGrass;
-    font-size: rem.toRem(map-get(typography.$fontSizes, large));
-    padding-bottom: calc(rem.toRem(map-get(dimensions.$sizes, s16)) + 2px);
+    font-size: rem.toRem(map.get(typography.$fontSizes, large));
+    padding-bottom: calc(rem.toRem(map.get(dimensions.$sizes, s16)) + 2px);
     text-transform: uppercase;
 
     &:visited,
@@ -103,27 +104,27 @@
 
     &::after {
       bottom: 0;
-      height: rem.toRem(map-get(dimensions.$sizes, s16));
+      height: rem.toRem(map.get(dimensions.$sizes, s16));
     }
   }
 }
 
 .newTabIcon {
   display: inline-block;
-  height: rem.toRem(map-get(dimensions.$sizes, s16));
-  margin-left: rem.toRem(map-get(dimensions.$sizes, s4));
-  width: rem.toRem(map-get(dimensions.$sizes, s16));
+  height: rem.toRem(map.get(dimensions.$sizes, s16));
+  margin-left: rem.toRem(map.get(dimensions.$sizes, s4));
+  width: rem.toRem(map.get(dimensions.$sizes, s16));
 }
 
 .hoverIFrameWrapper {
   aspect-ratio: 16 / 9;
   background: colors.$colorGreyDark;
-  border: rem.toRem(map-get(dimensions.$sizes, s8)) solid colors.$colorGreyDark;
+  border: rem.toRem(map.get(dimensions.$sizes, s8)) solid colors.$colorGreyDark;
   box-shadow: 0 0 rem.toRem(2) rem.toRem(2) colors.$colorblackEvil;
   display: none;
   height: calc(
-    rem.toRem(map-get(dimensions.$sizes, s128)) +
-      rem.toRem(map-get(dimensions.$sizes, s16))
+    rem.toRem(map.get(dimensions.$sizes, s128)) +
+      rem.toRem(map.get(dimensions.$sizes, s16))
   );
   overflow: hidden;
   position: absolute;
@@ -136,10 +137,10 @@
 
 .hoverIFrame {
   aspect-ratio: unset;
-  height: calc(1000% - rem.toRem(map-get(dimensions.$sizes, s16)));
+  height: calc(1000% - rem.toRem(map.get(dimensions.$sizes, s16)));
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%) scale(0.5);
-  width: calc(1000% - rem.toRem(map-get(dimensions.$sizes, s16)));
+  width: calc(1000% - rem.toRem(map.get(dimensions.$sizes, s16)));
 }

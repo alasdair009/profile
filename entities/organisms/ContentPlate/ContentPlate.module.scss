@@ -1,8 +1,9 @@
 @use "../../../app/styles/animation";
 @use "../../../app/styles/dimensions";
 @use "../../../app/styles/helpers/rem";
+@use "sass:map";
 
-$flipPoint: map-get(dimensions.$device, medium);
+$flipPoint: map.get(dimensions.$device, medium);
 $turnAmount: 0.05;
 
 @keyframes threeDRotate {
@@ -68,7 +69,7 @@ $turnAmount: 0.05;
 
   &.animate {
     animation: threeDRotate animation.animationDuration(3) infinite
-      map-get(animation.$curves, linear);
+      map.get(animation.$curves, linear);
   }
 }
 
