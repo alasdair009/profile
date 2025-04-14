@@ -1,0 +1,14 @@
+@use "../../../app/styles/dimensions";
+
+.rainCanvasWrapper {
+  height: 100%;
+  min-height: dimensions.getSize(s128);
+  position: absolute;
+  width: 100%;
+}
+
+.rainCanvas {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}

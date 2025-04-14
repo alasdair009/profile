@@ -11,6 +11,10 @@ type ErrorTextProps = {
    * Contents of the message
    */
   children: ReactNode;
+  /**
+   * Align text horizontal position.
+   */
+  align?: CSSProperties["textAlign"];
 } & HTMLAttributes<HTMLParagraphElement>;
 
 /**
@@ -19,6 +23,7 @@ type ErrorTextProps = {
 export function ErrorText({
   shown = true,
   children,
+  align = "left",
   style,
   ...rest
 }: ErrorTextProps) {
@@ -30,6 +35,7 @@ export function ErrorText({
         {
           "--color": colors.redHeat,
           "--font-size": "small",
+          "--text-align": align,
           ...style,
         } as CSSProperties
       }

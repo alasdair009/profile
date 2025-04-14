@@ -6,8 +6,9 @@ import {
   useJsApiLoader,
 } from "@react-google-maps/api";
 import { HTMLAttributes } from "react";
-import { colors, globalContentMaxWidth, Heading } from "@/entities";
+import { colors, ErrorText, globalContentMaxWidth, Heading } from "@/entities";
 import { rem } from "polished";
+import styles from "./Map.module.scss";
 
 const center = {
   lat: 51.5072479362636,
@@ -31,35 +32,46 @@ export function Map({ mapApiKey, markers, children }: MapProps) {
     googleMapsApiKey: mapApiKey,
   });
 
-  return isLoaded ? (
-    <GoogleMap
-      mapContainerStyle={{
-        aspectRatio: "16 / 9",
-        backgroundColor: colors.greyDark,
-        border: `${rem(1)} solid ${colors.greenGrass}`,
-        margin: "0 auto",
-        maxWidth: globalContentMaxWidth,
-        width: "100%",
-      }}
-      center={center}
-      zoom={3}
-      options={{ streetViewControl: false }}
-      tilt={0}
-    >
-      <>
-        {markers.map((marker, i) => {
-          return (
-            <Marker
-              key={`${marker.position.lat}${marker.position.lng}${i}`}
-              {...marker}
-            />
-          );
-        })}
+  if (!mapApiKey) {
+    return (
+      <div className={styles.root} data-testid={Map.name}>
+        <ErrorText align="center">No API key provided</ErrorText>
+      </div>
+    );
+  }
 
-        {children}
-      </>
-    </GoogleMap>
-  ) : (
-    <Heading level="h2">Loading...</Heading>
+  return (
+    <div className={styles.root} data-testid={Map.name}>
+      {isLoaded ? (
+        <GoogleMap
+          mapContainerStyle={{
+            height: "100%",
+            width: "100%",
+          }}
+          center={center}
+          zoom={3}
+          options={{ streetViewControl: false }}
+          tilt={0}
+        >
+          <>
+            {markers.map((marker, i) => {
+              return (
+                <Marker
+                  key={`${marker.position.lat}${marker.position.lng}${i}`}
+                  {...marker}
+                />
+              );
+            })}
+
+            {children}
+          </>
+        </GoogleMap>
+      ) : (
+        <Heading level="h2" align="center">
+          Loading...
+        </Heading>
+      )}
+      ;
+    </div>
   );
 }

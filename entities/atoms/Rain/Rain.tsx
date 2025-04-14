@@ -1,12 +1,9 @@
 "use client";
 import { HTMLAttributes, useEffect, useRef } from "react";
-import {
-  RainCanvasWrapper as Root,
-  RainCanvas,
-} from "@/entities/organisms/Lightning/styles";
 import { lighten, rgba } from "polished";
 import { prefersReducedMotion } from "@/entities";
 import { LCG, lcgNextRand, makeLCG } from "@/lib/random";
+import styles from "./Rain.module.scss";
 
 type RainProps = {
   rainDrops?: number;
@@ -163,8 +160,12 @@ export function Rain({
   }, [drawRain]);
 
   return (
-    <Root data-testid={Rain.name} {...rest}>
-      <RainCanvas ref={rainCanvasRef} data-chromatic="ignore" />
-    </Root>
+    <div className={styles.rainCanvasWrapper} data-testid={Rain.name} {...rest}>
+      <canvas
+        className={styles.rainCanvas}
+        ref={rainCanvasRef}
+        data-chromatic="ignore"
+      />
+    </div>
   );
 }

@@ -14,7 +14,7 @@ import {
 import { colors, Tree } from "@/entities";
 import talihouse from "./house.svg";
 import { StaticImageData } from "next/image";
-import { Rain } from "@/entities/organisms/Lightning/Rain";
+import { Rain } from "../../atoms/Rain";
 import { Thermometer } from "./Thermometer/Thermometer";
 import { Barometer } from "./Barometer";
 import { Plaque } from "./Plaque";

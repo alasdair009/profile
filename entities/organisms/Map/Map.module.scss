@@ -1,0 +1,15 @@
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/rem";
+
+.root {
+  align-items: center;
+  aspect-ratio: 16 / 9;
+  background-color: colors.$colorGreyDark;
+  border: rem.toRem(1) solid colors.$colorGreenGrass;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  width: 100%;
+}

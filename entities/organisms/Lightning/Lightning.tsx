@@ -1,8 +1,9 @@
-import { HTMLAttributes } from "react";
-import { Background, Content, Inner, Root, Strike } from "./styles";
+import { CSSProperties, HTMLAttributes } from "react";
 import backgroundImage from "./assets/background.webp";
 import strikeImage from "./assets/lightining.png";
-import { Rain } from "./Rain";
+import { Rain } from "../../atoms/Rain";
+import styles from "./Lightning.module.scss";
+import Image from "next/image";
 
 type LightningProps = {
   frequency?: number;
@@ -13,23 +14,33 @@ export function Lightning({
   ...rest
 }: LightningProps) {
   return (
-    <Root data-testid={Lightning.name} {...rest}>
-      <Inner>
-        <Background
+    <section className={styles.root} data-testid={Lightning.name} {...rest}>
+      <div className={styles.inner}>
+        <Image
+          className={styles.background}
           src={backgroundImage}
           alt={"Park background"}
-          $frequency={frequency}
+          style={
+            {
+              "--frequency": `${frequency}s`,
+            } as CSSProperties
+          }
         />
         <Rain />
-        <Strike
+        <Image
+          className={styles.strike}
           src={strikeImage}
           alt={"Rain"}
           fill={true}
-          $frequency={frequency}
+          style={
+            {
+              "--frequency": `${frequency}s`,
+            } as CSSProperties
+          }
         />
-        <Content>{children}</Content>
-      </Inner>
-    </Root>
+        <div className={styles.content}>{children}</div>
+      </div>
+    </section>
   );
 }
 

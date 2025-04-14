@@ -1,7 +1,6 @@
 import { Lightning } from "./Lightning";
 import { Meta, StoryObj } from "@storybook/react";
 import { expect, within } from "@storybook/test";
-import { Rain } from ".//Rain";
 
 const meta: Meta<typeof Lightning> = {
   component: Lightning,
@@ -15,10 +14,6 @@ const meta: Meta<typeof Lightning> = {
     frequency: {
       control: { type: "range", min: 1, max: 3, step: 0.1 },
     },
-  },
-  subcomponents: {
-    //@ts-ignore
-    Rain: Rain,
   },
 };
 export default meta;

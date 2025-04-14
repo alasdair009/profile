@@ -52,6 +52,7 @@ export { IFrame } from "./atoms/IFrame";
 export { Link } from "./atoms/Link";
 export { Moon } from "./atoms/Moon";
 export { Paragraph } from "./atoms/Paragraph";
+export { Rain } from "./atoms/Rain";
 export { Snow } from "./atoms/Snow";
 export { SocialMediaLink } from "./atoms/SocialMediaLink";
 export { Spacer } from "./atoms/Spacer";
