@@ -1,5 +1,5 @@
-@import "../../../app/styles/paragraph";
+@use "../../../app/styles/paragraph";
 
 .root {
-  @include paragraphStyles;
+  @include paragraph.paragraphStyles;
 }

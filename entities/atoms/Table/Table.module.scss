@@ -2,6 +2,7 @@
 @use "../../../app/styles/dimensions";
 @use "../../../app/styles/typography";
 @use "../../../app/styles/helpers/rem";
+@use "sass:color";
 @use "sass:map";
 
 .root {
@@ -52,7 +53,8 @@
         }
 
         tr {
-          border: rem.toRem(1) solid lighten(colors.$colorGreyDark, 0.5);
+          border: rem.toRem(1) solid
+            color.scale(colors.$colorGreyDark, $lightness: 5%);
         }
 
         td,

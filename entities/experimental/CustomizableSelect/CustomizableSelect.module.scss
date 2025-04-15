@@ -7,11 +7,11 @@
 @use "sass:map";
 
 .root {
-  @include input.baseInputStyles;
-
   appearance: base-select;
   cursor: pointer;
   padding: 0;
+
+  @include input.baseInputStyles;
 
   &::picker(select) {
     appearance: base-select;

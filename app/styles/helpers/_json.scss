@@ -1,12 +1,14 @@
+@use "sass:meta";
+
 // Stringifies SCSS variables into JSON for easier JavaScript importing/parsing.
 @function json-stringify($var) {
-  $var-type: type-of($var);
+  $var-type: meta.type-of($var);
   $encode-func-name: "_encode-#{$var-type}";
 
-  @if (function-exists($encode-func-name)) {
-    $encode-func: get-function($encode-func-name);
+  @if (meta.function-exists($encode-func-name)) {
+    $encode-func: meta.get-function($encode-func-name);
 
-    @return call($encode-func, $var);
+    @return meta.call($encode-func, $var);
   }
 
   @return $var; // strings and booleans don't need to be modified
@@ -45,8 +47,8 @@
 }
 
 @function _encode-iterable($iterable) {
-  $is-list: type-of($iterable) == "list";
-  $is-map: type-of($iterable) == "map";
+  $is-list: meta.type-of($iterable) == "list";
+  $is-map: meta.type-of($iterable) == "map";
 
   $str: "";
   $opening-bracket: if($is-list, "[", "{");

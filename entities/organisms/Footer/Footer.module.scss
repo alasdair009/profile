@@ -1,6 +1,7 @@
 @use "../../../app/styles/animation";
 @use "../../../app/styles/colors";
 @use "../../../app/styles/dimensions";
+@use "sass:color";
 
 @keyframes waving {
   0% {
@@ -48,15 +49,15 @@
 }
 
 .wave1 {
-  fill: darken(colors.$colorGreenGrass, 30%);
+  fill: color.scale(colors.$colorGreenGrass, $lightness: -60%);
 }
 
 .wave2 {
-  fill: darken(colors.$colorGreenGrass, 25%);
+  fill: color.scale(colors.$colorGreenGrass, $lightness: -40%);
 }
 
 .wave3 {
-  fill: darken(colors.$colorGreenGrass, 15%);
+  fill: color.scale(colors.$colorGreenGrass, $lightness: -20%);
 }
 
 .wave4 {
