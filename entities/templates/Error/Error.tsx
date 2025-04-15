@@ -1,13 +1,16 @@
 import { HTMLAttributes } from "react";
 import {
-  BackgroundFire,
-  ErrorTextMask,
-  Inner,
-  Root,
-  MaskWrapper,
-} from "./styles";
-import { colors, Heading, Link, Paragraph, Spacer } from "@/entities";
+  colors,
+  Container,
+  Fire,
+  Heading,
+  Link,
+  Paragraph,
+  Spacer,
+  TextMask,
+} from "@/entities";
 import { rgba } from "polished";
+import styles from "./Error.module.scss";
 
 type ErrorProps = {
   errorCode: 404 | 500;
@@ -26,26 +29,28 @@ export function Error({
   ...rest
 }: ErrorProps) {
   return (
-    <Root data-testid={Error.name} {...rest}>
+    <Container className={styles.root} data-testid={Error.name} {...rest}>
       <Spacer multiplier={4} />
       <Heading align="center">{errorHeading}</Heading>
-      <Inner>
-        <BackgroundFire
+      <div className={styles.inner}>
+        <Fire
+          className={styles.backgroundFire}
           baseColor={colors.greenGrass}
           duration={3}
           numberOfParticles={200}
         />
-        <MaskWrapper>
-          <ErrorTextMask
+        <div className={styles.maskWrapper}>
+          <TextMask
+            className={styles.errorTextMask}
             text={`${errorCode}`}
             maskFill={rgba(colors.blackEvil, 0.7)}
           />
-        </MaskWrapper>
-      </Inner>
+        </div>
+      </div>
       <Paragraph align="center">{errorText}</Paragraph>
       <Spacer />
       {children}
       <Spacer multiplier={8} />
-    </Root>
+    </Container>
   );
 }

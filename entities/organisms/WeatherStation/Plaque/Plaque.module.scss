@@ -1,0 +1,57 @@
+@use "../../../../app/styles/animation";
+@use "../../../../app/styles/colors";
+@use "../../../../app/styles/dimensions";
+@use "../../../../app/styles/typography";
+@use "../../../../app/styles/helpers/rem";
+@use "sass:map";
+
+.root {
+  box-shadow: (-(dimensions.getSize(s4))) dimensions.getSize(s4)
+    dimensions.getSize(s8) rem.toRem(1) rgba(0, 0, 0, 0.5);
+  color: colors.$colorWhiteGhost;
+  padding: dimensions.getSize(s8);
+  position: relative;
+  transition: color animation.animationDuration(0.25)
+    map.get(animation.$curves, default);
+  width: dimensions.getSize(s256);
+
+  &::before {
+    background:
+      repeating-radial-gradient(#421a00 0 0.0001%, #4d2105 0 0.0002%) 60%
+        60%/3000px 3000px,
+      repeating-conic-gradient(#421a00 0 0.0001%, #4d2105 0 0.0002%) 40%
+        40%/4000px 3000px;
+    border: dimensions.getSize(s4) solid colors.$colorWhiteGhost;
+    border-color: #5b1d00 #5b1d00 #371302 #371302;
+    content: "";
+    height: 100%;
+    left: 0;
+    mix-blend-mode: lighten;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &.pending dd {
+    color: transparent;
+  }
+}
+
+.dl {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: typography.getFontSize(small);
+  margin: 0;
+  position: relative;
+}
+
+.dt {
+  width: 50%;
+}
+
+.dd {
+  align-items: baseline;
+  display: flex;
+  margin: 0;
+  width: 50%;
+}

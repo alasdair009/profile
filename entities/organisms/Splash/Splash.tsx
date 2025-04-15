@@ -1,12 +1,4 @@
 import { HTMLAttributes } from "react";
-import {
-  Copy,
-  CopyParagraph,
-  FeetSection,
-  HeadSection,
-  Inner,
-  Root,
-} from "./styles";
 import { colors, Heading, Link, Paragraph } from "@/entities";
 import styles from "./Splash.module.scss";
 

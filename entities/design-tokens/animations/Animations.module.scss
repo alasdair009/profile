@@ -1,5 +1,55 @@
 @use "../../../app/styles/animation";
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/radii";
+@use "../../../app/styles/helpers/rem";
 @use "sass:map";
+
+@keyframes moveAnimation {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.curveViewer {
+  display: flex;
+  gap: dimensions.getSize(s8);
+  margin-bottom: dimensions.getSize(s32);
+}
+
+.curveWrapper {
+  border: rem.toRem(1) solid colors.$colorWhiteGhost;
+  color: colors.$colorWhiteGhost;
+  display: inline-flex;
+  flex-direction: column;
+  max-width: rem.toRem(147);
+  padding: dimensions.getSize(s8);
+}
+
+.svgWrapper {
+  position: relative;
+
+  &::after {
+    animation: moveAnimation 2s infinite alternate var(--curve);
+    aspect-ratio: 1;
+    background: colors.$colorWhiteGhost;
+    border-radius: map.get(radii.$borderRadii, round);
+    content: "";
+    left: 0;
+    offset-path: var(--offset-path);
+    position: absolute;
+    width: dimensions.getSize(s8);
+  }
+}
+
+.path {
+  fill: transparent;
+  stroke: colors.$colorGreenGrass;
+  stroke-width: rem.toRem(3);
+}
 
 :export {
   animationCurveDefault: map.get(animation.$curves, default);

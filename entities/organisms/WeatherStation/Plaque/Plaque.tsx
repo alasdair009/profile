@@ -1,5 +1,5 @@
-import { DD, DL, DT, Root } from "./styles";
 import { HTMLAttributes } from "react";
+import styles from "./Plaque.module.scss";
 
 type PlaqueProps = {
   windAngle?: string;
@@ -26,40 +26,47 @@ export function Plaque({
   cloudCover,
   lastUpdated,
   isPending,
+  className,
   ...rest
 }: PlaqueProps) {
   return (
-    <Root data-testid={Plaque.name} $isPending={isPending} {...rest}>
-      <DL>
-        <DT>Rain:</DT>
-        <DD>
+    <article
+      className={`${styles.root} ${isPending ? styles.pending : ""} ${className}`}
+      data-testid={Plaque.name}
+      {...rest}
+    >
+      <dl className={styles.dl}>
+        <dt className={styles.dt}>Rain:</dt>
+        <dd className={styles.dd}>
           {rain}
           <sub>mm</sub>
-        </DD>
-        <DT>Wind:</DT>
-        <DD>
+        </dd>
+        <dt className={styles.dt}>Wind:</dt>
+        <dd className={styles.dd}>
           {windStrength}
           <sub>kph</sub>&nbsp;({windAngle})
-        </DD>
-        <DT>Pressure:</DT>
-        <DD>
+        </dd>
+        <dt className={styles.dt}>Pressure:</dt>
+        <dd className={styles.dd}>
           {pressure}
           <sub>mbar</sub>
-        </DD>
-        <DT>Sun angle:</DT>
-        <DD>
+        </dd>
+        <dt className={styles.dt}>Sun angle:</dt>
+        <dd className={styles.dd}>
           {sunAngle}
           <sub>&deg;</sub>
-        </DD>
-        <DT>Cloud cover:</DT>
-        <DD>{cloudCover}%</DD>
-        <DT>Last updated:</DT>
+        </dd>
+        <dt className={styles.dt}>Cloud cover:</dt>
+        <dd className={styles.dd}>{cloudCover}%</dd>
+        <dt className={styles.dt}>Last updated:</dt>
         {lastUpdated ? (
-          <DD>{lastUpdated.toLocaleString("en-GB", timeFormat)}</DD>
+          <dd className={styles.dd}>
+            {lastUpdated.toLocaleString("en-GB", timeFormat)}
+          </dd>
         ) : (
-          <DD>-</DD>
+          <dd className={styles.dd}>-</dd>
         )}
-      </DL>
-    </Root>
+      </dl>
+    </article>
   );
 }

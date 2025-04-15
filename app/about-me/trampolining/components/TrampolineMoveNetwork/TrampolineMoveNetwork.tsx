@@ -1,7 +1,7 @@
 import mysql, { ConnectionOptions, RowDataPacket } from "mysql2/promise";
-import { Root } from "./styles";
 import { ErrorText, Heading, Paragraph } from "@/entities";
 // import { GraphEdge, GraphNode } from "reagraph";
+import styles from "./TrampolineMoveNetwork.module.scss";
 import dynamic from "next/dynamic";
 import { NetworkChart } from "@/entities/molecules/NetworkChart";
 
@@ -74,7 +74,7 @@ const getMoveData = async () => {
 export default async function TrampolineMoveNetwork() {
   const { nodes, edges, error } = await getMoveData();
   return (
-    <Root>
+    <section className={styles.root}>
       <Heading level="h2">Move Network</Heading>
       <Paragraph>
         Over time I have created a move network graph that is a visual
@@ -90,6 +90,6 @@ export default async function TrampolineMoveNetwork() {
       ) : (
         <ErrorText>Could not connect to move database: {error}</ErrorText>
       )}
-    </Root>
+    </section>
   );
 }

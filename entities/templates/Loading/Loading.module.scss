@@ -1,0 +1,11 @@
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/rem";
+
+.root {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - rem.toRem(dimensions.$globalHeaderHeight));
+  justify-content: center;
+  width: 100%;
+}

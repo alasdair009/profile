@@ -69,7 +69,6 @@ export function Heading<T extends ElementType = "h1">({
   return (
     <Root
       className={`${styles.root} ${headerClasses[level]} ${lines ? styles.rootClamp : ""} ${textShadow ? styles.Shadow : ""} ${className}`}
-      $lines={lines}
       data-testid={Heading.name}
       style={
         {

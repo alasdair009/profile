@@ -16,10 +16,16 @@ type TextMaskProps = {
 /**
  * Mask formed from text to place over a background.
  */
-export function TextMask({ maskFill, text, style, ...rest }: TextMaskProps) {
+export function TextMask({
+  maskFill,
+  text,
+  style,
+  className,
+  ...rest
+}: TextMaskProps) {
   return (
     <div
-      className={styles.root}
+      className={`${styles.root} ${className}`}
       data-testid={TextMask.name}
       style={{ "--maskFill": maskFill, ...style } as CSSProperties}
       {...rest}

@@ -1,0 +1,6 @@
+@use "./colors";
+
+@mixin scrollbarStyles {
+  scrollbar-color: colors.$colorGreenGrass colors.$colorblackEvil;
+  scrollbar-width: 10%;
+}

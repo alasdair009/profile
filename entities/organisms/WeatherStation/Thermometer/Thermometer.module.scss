@@ -1,0 +1,73 @@
+@use "../../../../app/styles/colors";
+@use "../../../../app/styles/dimensions";
+@use "../../../../app/styles/radii";
+@use "../../../../app/styles/typography";
+@use "../../../../app/styles/helpers/rem";
+@use "sass:map";
+
+.root {
+  background: colors.$colorGreyLight;
+  border-radius: rem.toRem(map.get(radii.$borderRadii, r4));
+  height: dimensions.getSize(s64);
+  left: 3%;
+  position: absolute;
+  top: 3%;
+  width: dimensions.getSize(s40);
+
+  &::before {
+    align-items: center;
+    aspect-ratio: 1;
+    bottom: dimensions.getSize(s16);
+    color: colors.$colorblackEvil;
+    content: attr(data-content);
+    display: flex;
+    font-size: typography.getFontSize(small);
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 50%);
+    width: dimensions.getSize(s32);
+    z-index: 2;
+  }
+
+  &::after {
+    align-items: center;
+    aspect-ratio: 1;
+    background: var(--color);
+    border: rem.toRem(1) solid colors.$colorblackEvil;
+    border-radius: map.get(radii.$borderRadii, round);
+    bottom: dimensions.getSize(s16);
+    color: colors.$colorblackEvil;
+    content: "";
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 50%);
+    width: dimensions.getSize(s32);
+  }
+}
+
+.lig {
+  appearance: none;
+  background: colors.$colorWhiteGhost;
+  border: rem.toRem(1) solid colors.$colorblackEvil;
+  height: dimensions.getSize(s16);
+  left: 50%;
+  position: absolute;
+  top: dimensions.getSize(s16);
+  transform: translateX(-50%) rotate(270deg);
+  width: dimensions.getSize(s40);
+
+  &::-webkit-meter-bar {
+    background: none;
+  }
+
+  &::-webkit-meter-suboptimum-value {
+    background: colors.$colorRedHeat;
+  }
+
+  &::-webkit-meter-optimum-value {
+    background: colors.$colorBlueSea;
+  }
+}

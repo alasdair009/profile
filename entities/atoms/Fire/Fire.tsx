@@ -32,6 +32,7 @@ export function Fire({
   numberOfParticles = 50,
   duration = 1,
   style,
+  className,
   ...rest
 }: HeadingProps) {
   const fireLCG = makeLCG();
@@ -54,7 +55,7 @@ export function Fire({
 
   return (
     <div
-      className={styles.root}
+      className={`${styles.root} ${className}`}
       data-testid={Fire.name}
       style={
         {

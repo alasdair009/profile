@@ -1,10 +1,7 @@
-export { GlobalStyle } from "./design-tokens/GlobalStyle";
-
 export {
   animationDurationCSS,
   prefersReducedMotion,
   curves,
-  motionStyles,
 } from "./design-tokens/animations";
 export { borderRadii } from "./design-tokens/effects";
 export { clipPaths } from "./design-tokens/clipPaths";
@@ -97,3 +94,4 @@ export { Timeline } from "./organisms/Timeline";
 export type { TimelineEntry } from "./organisms/Timeline";
 
 export { Error } from "./templates/Error";
+export { Loading } from "./templates/Loading";
