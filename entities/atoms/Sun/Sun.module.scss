@@ -14,9 +14,9 @@
     hsl(4 0% 10% / 5%) 75%,
     transparent 99%
   );
-  border-radius: map.get(radii.$borderRadii, round);
+  border-radius: radii.getBorderRadii(round);
   display: inline-block;
   filter: blur(4px);
-  min-height: rem.toRem(map.get(dimensions.$sizes, s64));
-  min-width: rem.toRem(map.get(dimensions.$sizes, s64));
+  min-height: dimensions.getSize(s64);
+  min-width: dimensions.getSize(s64);
 }

@@ -36,7 +36,7 @@
     animation: moveAnimation 2s infinite alternate var(--curve);
     aspect-ratio: 1;
     background: colors.$colorWhiteGhost;
-    border-radius: map.get(radii.$borderRadii, round);
+    border-radius: radii.getBorderRadii(round);
     content: "";
     left: 0;
     offset-path: var(--offset-path);

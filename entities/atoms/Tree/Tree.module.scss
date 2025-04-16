@@ -31,6 +31,6 @@ $leavesTransform: (
 }
 
 .trunk {
-  rx: rem.toRem(map.get(radii.$borderRadii, s2));
+  rx: radii.getBorderRadii(r2);
   stroke: #2e1305;
 }

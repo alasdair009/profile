@@ -2,6 +2,10 @@
 @use "sass:math";
 
 @function toRem($value) {
-  $remValue: math.div($value, 16) + rem;
+  @if ($value == null) {
+    @error "rem cannot be calculate on a null.";
+  }
+
+  $remValue: ($value * math.div(1, 16)) + rem;
   @return $remValue;
 }

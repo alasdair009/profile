@@ -27,7 +27,7 @@ $socialMediaIcons: (
   mask-size: contain;
   overflow: hidden;
   position: relative;
-  width: rem.toRem(map.get(dimensions.$sizes, s48));
+  width: dimensions.getSize(s48);
 
   &::before {
     background: linear-gradient(

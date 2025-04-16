@@ -49,8 +49,7 @@
 .content {
   max-width: rem.toRem(dimensions.$globalTextMaxWidth);
   position: relative;
-  text-shadow: 0 0 rem.toRem(map.get(dimensions.$sizes, s8))
-    colors.$colorblackEvil;
+  text-shadow: 0 0 dimensions.getSize(s8) colors.$colorblackEvil;
   word-break: break-word;
   z-index: 1;
 }

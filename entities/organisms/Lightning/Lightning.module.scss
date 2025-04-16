@@ -82,7 +82,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: rem.toRem(globalContentMaxWidth);
+  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
   overflow: hidden;
   padding: dimensions.getSize(s8);
   width: 100%;

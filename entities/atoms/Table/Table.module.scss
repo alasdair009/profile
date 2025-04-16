@@ -8,7 +8,7 @@
 .root {
   background: colors.$colorblackEvil;
   border-collapse: collapse;
-  margin: rem.toRem(map.get(dimensions.$sizes, s16)) auto;
+  margin: dimensions.getSize(s16) auto;
   max-width: rem.toRem(dimensions.$globalContentMaxWidth);
   vertical-align: middle;
   width: 100%;
@@ -20,7 +20,7 @@
 
   td {
     border: rem.toRem(1) solid colors.$colorGreyDark;
-    padding: rem.toRem(map.get(dimensions.$sizes, s8));
+    padding: dimensions.getSize(s8);
     position: relative;
   }
 
@@ -70,7 +70,7 @@
         th::before {
           content: attr(data-title) ":";
           font-weight: map.get(typography.$fontWeights, bold);
-          left: rem.toRem(map.get(dimensions.$sizes, s8));
+          left: dimensions.getSize(s8);
           position: absolute;
           top: 50%;
           transform: translateY(-50%);

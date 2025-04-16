@@ -2,12 +2,10 @@
 @use "../../../app/styles/paragraph";
 
 .root {
-  @include paragraph.paragraphStyles;
-
-  color: colors.$colorRedHeat;
+  --color: colors.$colorRedHeat;
   font-style: italic;
-  display: block;
-  text-align: var(--text-align);
+
+  @include paragraph.paragraphStyles;
 
   &Hide {
     display: none;

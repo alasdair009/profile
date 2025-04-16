@@ -15,15 +15,13 @@
     opacity: 1;
   }
   25% {
-    transform: translateX(-(rem.toRem(map.get(dimensions.$sizes, s16))))
-      rotate(90deg);
+    transform: translateX(-(dimensions.getSize(s16))) rotate(90deg);
   }
   50% {
     transform: translateX(0) rotate(180deg);
   }
   75% {
-    transform: translateX(rem.toRem(map.get(dimensions.$sizes, s16)))
-      rotate(270deg);
+    transform: translateX(dimensions.getSize(s16)) rotate(270deg);
   }
   90% {
     opacity: 1;

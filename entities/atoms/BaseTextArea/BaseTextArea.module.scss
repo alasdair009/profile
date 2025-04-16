@@ -9,7 +9,7 @@
   border: rem.toRem(1) solid colors.$colorGreenGrass;
   color: colors.$colorWhiteGhost;
   display: block;
-  min-height: rem.toRem(map.get(dimensions.$sizes, s256));
+  min-height: dimensions.getSize(s256);
   margin: 0 auto;
   max-width: rem.toRem(dimensions.$globalInputMaxWidth);
   resize: none;

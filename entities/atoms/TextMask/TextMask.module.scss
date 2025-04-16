@@ -41,7 +41,7 @@
 .text {
   alignment-baseline: middle;
   font-family: typography.$fontOpenSans;
-  font-size: rem.toRem(map.get(typography.$fontSizes, large));
+  font-size: typography.getFontSize(large);
   font-weight: map.get(typography.$fontWeights, black);
   text-anchor: middle;
 }

@@ -44,7 +44,7 @@
   position: relative;
 
   &::before {
-    border-radius: map.get(radii.$borderRadii, r2);
+    border-radius: radii.getBorderRadii(r2);
     bottom: -2vmin;
     box-shadow: 0 rem.toRem(2) rem.toRem(5) 0 rgba(colors.$colorblackEvil, 0.25)
       inset;
@@ -56,7 +56,7 @@
   }
 
   &::after {
-    border-radius: map.get(radii.$borderRadii, r2);
+    border-radius: radii.getBorderRadii(r2);
     bottom: -2.5vmin;
     box-shadow: 0 rem.toRem(2) rem.toRem(5) 0 rgba(colors.$colorblackEvil, 0.25);
     content: "";

@@ -7,9 +7,9 @@
 @use "sass:map";
 
 $buttonClipPath: polygon(
-  calc(0% + #{rem.toRem(map.get(dimensions.$sizes, s8))}) 0,
+  calc(0% + #{dimensions.getSize(s8)}) 0,
   100% 0,
-  calc(100% - #{rem.toRem(map.get(dimensions.$sizes, s8))}) 100%,
+  calc(100% - #{dimensions.getSize(s8)}) 100%,
   0 100%
 );
 
@@ -21,13 +21,13 @@ $buttonClipPath: polygon(
   color: colors.$colorWhiteGhost;
   cursor: pointer;
   display: flex;
-  font-size: rem.toRem(map.get(typography.$fontSizes, medium));
+  font-size: typography.getFontSize(medium);
   font-weight: map.get(typography.$fontWeights, bold);
-  height: rem.toRem(map.get(dimensions.$sizes, s48));
+  height: dimensions.getSize(s48);
   justify-content: center;
-  max-width: rem.toRem(map.get(dimensions.$sizes, s256));
-  min-width: rem.toRem(map.get(dimensions.$sizes, s64));
-  padding: 0 rem.toRem(map.get(dimensions.$sizes, s48));
+  max-width: dimensions.getSize(s256);
+  min-width: dimensions.getSize(s64);
+  padding: 0 dimensions.getSize(s48);
   position: relative;
   transition: padding animation.animationDuration(0.5);
   z-index: 0;
@@ -44,7 +44,7 @@ $buttonClipPath: polygon(
     top: 0;
     transform: translateX(-50%);
     transition: all animation.animationDuration(0.5);
-    width: calc(100% - #{rem.toRem(map.get(dimensions.$sizes, s32))});
+    width: calc(100% - #{dimensions.getSize(s32)});
     z-index: -1;
   }
 
@@ -58,7 +58,7 @@ $buttonClipPath: polygon(
   &:hover {
     &::before,
     &::after {
-      width: calc(100% - #{rem.toRem(map.get(dimensions.$sizes, s8))});
+      width: calc(100% - #{dimensions.getSize(s8)});
     }
 
     &::after {

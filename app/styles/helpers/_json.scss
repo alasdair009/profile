@@ -1,4 +1,6 @@
+@use "sass:math";
 @use "sass:meta";
+@use "sass:string";
 
 // Stringifies SCSS variables into JSON for easier JavaScript importing/parsing.
 @function json-stringify($var) {
@@ -23,7 +25,7 @@
 }
 
 @function _encode-number($number) {
-  @if (unitless($number)) {
+  @if (math.is-unitless($number)) {
     @return $number;
   }
 
@@ -66,7 +68,7 @@
     $str: $str + ", " + $entry-string;
   }
 
-  $str: str-slice($str, 3); // remove leading ', ' from ', entry1, entry2'
+  $str: string.slice($str, 3); // remove leading ', ' from ', entry1, entry2'
 
   @return $opening-bracket + $str + $closing-bracket;
 }

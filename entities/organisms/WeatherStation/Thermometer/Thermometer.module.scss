@@ -7,7 +7,7 @@
 
 .root {
   background: colors.$colorGreyLight;
-  border-radius: rem.toRem(map.get(radii.$borderRadii, r4));
+  border-radius: radii.getBorderRadii(r4);
   height: dimensions.getSize(s64);
   left: 3%;
   position: absolute;
@@ -35,7 +35,7 @@
     aspect-ratio: 1;
     background: var(--color);
     border: rem.toRem(1) solid colors.$colorblackEvil;
-    border-radius: map.get(radii.$borderRadii, round);
+    border-radius: radii.getBorderRadii(round);
     bottom: dimensions.getSize(s16);
     color: colors.$colorblackEvil;
     content: "";

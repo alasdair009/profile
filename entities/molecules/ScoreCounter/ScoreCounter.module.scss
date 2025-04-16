@@ -5,11 +5,6 @@
 @use "sass:map";
 
 .root {
-  @property --integer {
-    syntax: "<integer>";
-    initial-value: 0;
-    inherits: false;
-  }
   --num: var(--set-counter);
 
   align-items: center;
@@ -20,6 +15,12 @@
   position: relative;
   transition: --num 4s;
   width: dimensions.getSize(s128);
+
+  @property --integer {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
 
   &::before {
     align-items: center;

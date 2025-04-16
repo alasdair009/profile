@@ -11,7 +11,7 @@
   border-style: solid;
   border-width: 1px;
   position: relative;
-  width: rem.toRem(map.get(dimensions.$sizes, s32));
+  width: dimensions.getSize(s32);
 
   &::after {
     background: colors.$colorGreenGrass;

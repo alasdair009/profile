@@ -13,8 +13,8 @@
   content: "";
   border-radius: 50%;
   display: block;
-  height: rem.toRem(map.get(dimensions.$sizes, s48));
-  width: rem.toRem(map.get(dimensions.$sizes, s48));
+  height: dimensions.getSize(s48);
+  width: dimensions.getSize(s48);
 }
 
 .spinnerImage {

@@ -26,7 +26,7 @@
     background: colors.$colorGreyDark;
     color: colors.$colorWhiteGhost;
     display: flex;
-    padding: rem.toRem(map.get(dimensions.$sizes, s8));
+    padding: dimensions.getSize(s8);
     width: 100%;
 
     &:hover {
@@ -64,7 +64,7 @@
     background: colors.$colorWhiteGhost;
     clip-path: map.get(clipPaths.$clipPaths, chevronDown);
     content: "";
-    height: rem.toRem(map.get(dimensions.$sizes, s32));
+    height: dimensions.getSize(s32);
   }
 }
 
@@ -77,14 +77,14 @@
 .figure {
   align-items: center;
   aspect-ratio: 1;
-  border-radius: map.get(radii.$borderRadii, round);
+  border-radius: radii.getBorderRadii(round);
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: rem.toRem(map.get(dimensions.$sizes, s2));
+  padding: dimensions.getSize(s2);
   overflow: hidden;
   position: relative;
-  width: rem.toRem(map.get(dimensions.$sizes, s24));
+  width: dimensions.getSize(s24);
 }
 
 .doesNotSupport {

@@ -1,6 +1,16 @@
+@use "./helpers/rem";
+@use "sass:map";
+
 $borderRadii: (
   r2: 2,
   r4: 4,
   r8: 8,
   round: 50%,
 );
+
+@function getBorderRadii($r) {
+  @if ($r == round) {
+    @return map.get($borderRadii, $r);
+  }
+  @return rem.toRem(map.get($borderRadii, $r));
+}

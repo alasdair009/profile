@@ -5,7 +5,5 @@
 .root {
   content: "";
   display: block;
-  margin-bottom: calc(
-    rem.toRem(map.get(dimensions.$sizes, s8)) * var(--multiplier)
-  );
+  margin-bottom: calc(dimensions.getSize(s8) * var(--multiplier));
 }

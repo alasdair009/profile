@@ -9,14 +9,14 @@
   aspect-ratio: 1;
   background: colors.$colorWhiteGhost;
   border: rem.toRem(1) solid colors.$colorblackEvil;
-  border-radius: map.get(radii.$borderRadii, round);
+  border-radius: radii.getBorderRadii(round);
   box-shadow: 0 0 rem.toRem(2) rem.toRem(3) colors.$colorblackEvil;
-  width: rem.toRem(map.get(dimensions.$sizes, s32));
+  width: dimensions.getSize(s32);
 
   &:checked {
     background: radial-gradient(
-      colors.$colorGreenGrass rem.toRem(map.get(dimensions.$sizes, s8)),
-      colors.$colorWhiteGhost rem.toRem(map.get(dimensions.$sizes, s8)),
+      colors.$colorGreenGrass dimensions.getSize(s8),
+      colors.$colorWhiteGhost dimensions.getSize(s8),
       colors.$colorWhiteGhost
     );
   }

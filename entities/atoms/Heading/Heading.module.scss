@@ -15,7 +15,7 @@
   border: none !important;
   color: var(--color) !important;
   font-weight: map.get(typography.$fontWeights, bold);
-  margin: 0 auto rem.toRem(map.get(dimensions.$sizes, s24)) !important;
+  margin: 0 auto dimensions.getSize(s24) !important;
   max-width: rem.toRem(dimensions.$globalTextMaxWidth);
   padding-bottom: 0;
   position: relative;
@@ -28,8 +28,7 @@
   }
 
   &.Shadow {
-    text-shadow: 0 0 rem.toRem(map.get(dimensions.$sizes, s4))
-      colors.$colorblackEvil;
+    text-shadow: 0 0 dimensions.getSize(s4) colors.$colorblackEvil;
   }
 
   &::after {
@@ -45,8 +44,8 @@
   }
 
   &.h1 {
-    max-width: rem.toRem(map.get(dimensions.$sizes, s512));
-    padding-bottom: rem.toRem(map.get(dimensions.$sizes, s8));
+    max-width: dimensions.getSize(s512);
+    padding-bottom: dimensions.getSize(s8);
 
     &::after {
       display: block;
@@ -54,7 +53,7 @@
   }
 
   &.h2 {
-    max-width: rem.toRem(map.get(dimensions.$sizes, s512));
+    max-width: dimensions.getSize(s512);
 
     &::after {
       display: block;

@@ -4,7 +4,7 @@
 
 .root {
   appearance: none;
-  border-radius: map.get(radii.$borderRadii, round);
+  border-radius: radii.getBorderRadii(round);
   height: dimensions.getSize(s32);
   position: absolute;
   width: dimensions.getSize(s32);

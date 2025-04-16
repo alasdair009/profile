@@ -16,7 +16,7 @@
 .inner {
   flex: 1;
   margin: 0 auto;
-  max-width: dimensions.getSize(512);
+  max-width: dimensions.getSize(s512);
   overflow: hidden;
   position: relative;
   width: 100%;

@@ -7,6 +7,6 @@
   border: none;
   display: block;
   margin: 0 auto;
-  max-width: rem.toRem(map.get(dimensions.$sizes, s512));
+  max-width: dimensions.getSize(s512);
   width: 100%;
 }

@@ -6,22 +6,22 @@
 
 .root {
   aspect-ratio: 1;
-  border-radius: map.get(radii.$borderRadii, round);
+  border-radius: radii.getBorderRadii(round);
   display: inline-block;
-  min-height: rem.toRem(map.get(dimensions.$sizes, s40));
-  min-width: rem.toRem(map.get(dimensions.$sizes, s40));
+  min-height: dimensions.getSize(s40);
+  min-width: dimensions.getSize(s40);
   overflow: hidden;
   position: relative;
 
   &::before {
-    border-radius: map.get(radii.$borderRadii, round);
-    box-shadow: rem.toRem(map.get(dimensions.$sizes, s16))
-      rem.toRem(map.get(dimensions.$sizes, s8)) 0 0 colors.$colorWhiteGhost;
+    border-radius: radii.getBorderRadii(round);
+    box-shadow: dimensions.getSize(s16) dimensions.getSize(s8) 0 0
+      colors.$colorWhiteGhost;
     content: "";
     height: 100%;
-    left: -(rem.toRem(map.get(dimensions.$sizes, s16)));
+    left: -(dimensions.getSize(s16));
     position: absolute;
-    top: -(rem.toRem(map.get(dimensions.$sizes, s8)));
+    top: -(dimensions.getSize(s8));
     width: 100%;
   }
 }

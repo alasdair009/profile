@@ -59,7 +59,7 @@
     animation: baseRotate var(--time) calc(var(--position) * -2 * 1s)
       map.get(animation.$curves, linear) infinite reverse;
     background-color: var(--color);
-    border-radius: map.get(radii.$borderRadii, round);
+    border-radius: radii.getBorderRadii(round);
     bottom: 0;
     box-shadow:
       inset rem.toRem(5) rem.toRem(5) rem.toRem(10)
@@ -94,7 +94,7 @@
     120% 120%,
     100% 100%,
     60% 60%;
-  border-radius: map.get(radii.$borderRadii, round);
+  border-radius: radii.getBorderRadii(round);
   box-shadow:
     rem.toRem(80) rem.toRem(80) dimensions.getSize(s128) rgba(0, 0, 0, 0.5),
     0 0 5rem rgba(colors.$colorWhiteGhost, 0.8);
@@ -110,7 +110,7 @@
 
   &::before,
   &::after {
-    border-radius: map.get(radii.$borderRadii, round);
+    border-radius: radii.getBorderRadii(round);
     content: "";
     height: 100%;
     position: absolute;
