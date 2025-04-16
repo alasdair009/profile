@@ -2,15 +2,6 @@ import { css } from "styled-components";
 import { CSSProperties } from "react";
 
 export const animationRhythmVariableName = "animation-rhythm";
-export const motionStyles = `
-  :root {
-    --${animationRhythmVariableName}: 1s;
-
-    @media (prefers-reduced-motion: reduce) {
-      --${animationRhythmVariableName}: 0s;
-    }
-  }
-`;
 
 /**
  * Return a css calc for the number of seconds. If the user prefers reduced motion this will result in 0

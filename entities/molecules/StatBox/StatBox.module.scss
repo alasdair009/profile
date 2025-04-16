@@ -1,0 +1,10 @@
+@use "../../../app/styles/dimensions";
+
+.root {
+  align-items: center;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: dimensions.getSize(s96);
+}

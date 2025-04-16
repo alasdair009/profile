@@ -1,9 +1,9 @@
-import { Root } from "./styles";
 import { HTMLAttributes } from "react";
 import { Card } from "@/entities";
 import imageUrlBuilder from "@sanity/image-url";
 import { GET_ALL_POSTS, Post } from "@/lib/sanity/queries";
 import { SanityClient } from "next-sanity";
+import styles from "./BlogList.module.scss";
 
 type BlogListProps = {
   sanityClient: SanityClient;
@@ -15,7 +15,7 @@ type BlogListProps = {
 export async function BlogList({ sanityClient, ...rest }: BlogListProps) {
   const posts = await sanityClient.fetch<Post[]>(GET_ALL_POSTS);
   return (
-    <Root {...rest}>
+    <div className={styles.root} {...rest}>
       {posts.map((post) => {
         const postDate = new Date(post.publishedAt);
         return (
@@ -31,6 +31,6 @@ export async function BlogList({ sanityClient, ...rest }: BlogListProps) {
           />
         );
       })}
-    </Root>
+    </div>
   );
 }

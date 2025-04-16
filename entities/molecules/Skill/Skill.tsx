@@ -1,5 +1,5 @@
-import { Root } from "./styles";
-import { HTMLAttributes } from "react";
+import styles from "./Skill.module.scss";
+import { CSSProperties, HTMLAttributes } from "react";
 import { Heading, Paragraph, ScoreCounter } from "@/entities";
 import { Property } from "csstype";
 import { SkillGridConfig } from "@/entities/molecules/Skill/Skill.types";
@@ -36,18 +36,32 @@ export function Skill({
   value,
   grid,
   background = "transparent",
+  style,
   ...rest
 }: SkillProps) {
   return (
-    <Root
+    <article
+      className={styles.root}
       data-testid={Skill.name}
-      $background={background}
-      $grid={grid}
+      style={
+        {
+          ...style,
+          "--background": background,
+          "--xs-column-start": grid.xsmall.columnStart,
+          "--xs-column-end": grid.xsmall.columnEnd,
+          "--xs-row-start": grid.xsmall.rowStart,
+          "--xs-row-end": grid.xsmall.rowEnd,
+          "--s-column-start": grid.small.columnStart,
+          "--s-column-end": grid.small.columnEnd,
+          "--s-row-start": grid.small.rowStart,
+          "--s-row-end": grid.small.rowEnd,
+        } as CSSProperties
+      }
       {...rest}
     >
       <Heading level="h3">{heading}</Heading>
       <ScoreCounter value={value} />
       <Paragraph>{copy}</Paragraph>
-    </Root>
+    </article>
   );
 }

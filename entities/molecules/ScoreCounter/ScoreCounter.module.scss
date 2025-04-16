@@ -1,0 +1,41 @@
+@use "../../../app/styles/animation";
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/typography";
+@use "sass:map";
+
+.root {
+  --num: var(--set-counter);
+
+  align-items: center;
+  aspect-ratio: 1;
+  counter-reset: num var(--num);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transition: --num 4s;
+  width: dimensions.getSize(s128);
+
+  @property --integer {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+
+  &::before {
+    align-items: center;
+    animation: counter animation.animationDuration(5)
+      map.get(animation.$curves, linear) infinite alternate;
+    color: colors.$colorWhiteGhost;
+    content: counter(num);
+    display: flex;
+    font-size: typography.getFontSize(mlarge);
+    height: 100%;
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}

@@ -1,10 +1,7 @@
-export { GlobalStyle } from "./design-tokens/GlobalStyle";
-
 export {
   animationDurationCSS,
   prefersReducedMotion,
   curves,
-  motionStyles,
 } from "./design-tokens/animations";
 export { borderRadii } from "./design-tokens/effects";
 export { clipPaths } from "./design-tokens/clipPaths";
@@ -14,6 +11,7 @@ export {
   fontSizes,
   fontWeights,
   headingSizes,
+  lineHeights,
 } from "./design-tokens/typography";
 export type {
   FontSizes,
@@ -51,6 +49,7 @@ export { IFrame } from "./atoms/IFrame";
 export { Link } from "./atoms/Link";
 export { Moon } from "./atoms/Moon";
 export { Paragraph } from "./atoms/Paragraph";
+export { Rain } from "./atoms/Rain";
 export { Snow } from "./atoms/Snow";
 export { SocialMediaLink } from "./atoms/SocialMediaLink";
 export { Spacer } from "./atoms/Spacer";
@@ -95,3 +94,4 @@ export { Timeline } from "./organisms/Timeline";
 export type { TimelineEntry } from "./organisms/Timeline";
 
 export { Error } from "./templates/Error";
+export { Loading } from "./templates/Loading";

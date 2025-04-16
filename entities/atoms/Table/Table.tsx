@@ -1,6 +1,6 @@
-import { Root } from "./styles";
 import { HTMLAttributes } from "react";
 import { Breakpoint } from "@/entities";
+import styles from "./Table.module.scss";
 
 type TableProps = {
   /**
@@ -9,13 +9,38 @@ type TableProps = {
   breakAt?: Breakpoint;
 } & HTMLAttributes<HTMLTableElement>;
 
+const getTableClass = (breakAt: Breakpoint) => {
+  switch (breakAt) {
+    case "base":
+      return styles.rootbase;
+    case "min":
+      return styles.rootmin;
+    case "xsmall":
+      return styles.rootxsmall;
+    case "small":
+      return styles.rootsmall;
+    case "medium":
+      return styles.rootmedium;
+    case "large":
+      return styles.rootlarge;
+    case "xlarge":
+      return styles.rootxlarge;
+    case "wide":
+      return styles.rootwide;
+  }
+};
+
 /**
- * Rotating icon used to indicate something is loading or waiting.
+ * Styled HTML table used to display data.
  */
 export function Table({ breakAt = "base", children, ...rest }: TableProps) {
   return (
-    <Root $breakAt={breakAt} data-testid={Table.name} {...rest}>
+    <table
+      className={`${styles.root} ${getTableClass(breakAt)}`}
+      data-testid={Table.name}
+      {...rest}
+    >
       {children}
-    </Root>
+    </table>
   );
 }

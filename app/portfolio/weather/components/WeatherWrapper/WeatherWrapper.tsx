@@ -1,6 +1,5 @@
 "use client";
 import { WeatherStation } from "@/entities/organisms/WeatherStation";
-import { Root } from "./styles";
 import { WeatherData } from "../../types";
 import { useEffect, useState } from "react";
 
@@ -59,7 +58,7 @@ export function WeatherWrapper({ ...rest }: WeatherWrapperProps) {
   }, []);
 
   return (
-    <Root data-testid={WeatherWrapper.name} {...rest}>
+    <div data-testid={WeatherWrapper.name} {...rest}>
       <WeatherStation
         rain={currentData ? currentData.rain.value : undefined}
         windStrength={currentData ? currentData.wind.value : undefined}
@@ -83,6 +82,6 @@ export function WeatherWrapper({ ...rest }: WeatherWrapperProps) {
         }
         isPending={isPending}
       />
-    </Root>
+    </div>
   );
 }

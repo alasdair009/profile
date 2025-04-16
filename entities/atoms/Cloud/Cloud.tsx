@@ -1,7 +1,7 @@
-import { CloudCircle, Root } from "./styles";
 import { CSSProperties, HTMLAttributes } from "react";
-import { colors, sizes } from "@/entities";
+import { colors } from "@/entities";
 import { rem } from "polished";
+import styles from "./Cloud.module.scss";
 
 type CloudProps = {
   cloudColor: CSSProperties["color"];
@@ -19,15 +19,18 @@ export function Cloud({
   scale = 180,
   skyColor = "linear-gradient(165deg, #527785 0%, #7fb4c7 100%)",
   style,
+  className,
   ...rest
 }: CloudProps) {
   return (
-    <Root
+    <div
       data-testid={Cloud.name}
+      className={`${styles.root} ${className}`}
       style={{ "--skyColor": skyColor, ...style } as CSSProperties}
       {...rest}
     >
-      <CloudCircle
+      <div
+        className={styles.cloudCircle}
         style={
           {
             "--dispersion": rem(dispersion),
@@ -45,6 +48,6 @@ export function Cloud({
           <feDisplacementMap in="SourceGraphic" scale={scale} />
         </filter>
       </svg>
-    </Root>
+    </div>
   );
 }

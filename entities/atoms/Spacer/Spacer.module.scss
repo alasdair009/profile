@@ -1,0 +1,9 @@
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/rem";
+@use "sass:map";
+
+.root {
+  content: "";
+  display: block;
+  margin-bottom: calc(dimensions.getSize(s8) * var(--multiplier));
+}

@@ -1,0 +1,39 @@
+@use "./_colors.scss";
+@use "./scrollBar.scss";
+@use "./typography.scss";
+
+:root {
+  @include scrollBar.scrollbarStyles;
+
+  --animation-rhythm: 1s;
+
+  @media (prefers-reduced-motion: reduce) {
+    --animation-rhythm: 0s;
+  }
+}
+
+html,
+body {
+  background: colors.$colorblackEvil;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  color: colors.$colorWhiteGhost;
+}
+
+body {
+  font-family: typography.$fontOpenSans;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}

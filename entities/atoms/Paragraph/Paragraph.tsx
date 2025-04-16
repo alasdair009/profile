@@ -1,7 +1,8 @@
-import { Root } from "./styles";
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
-import { colors, FontSizes, sizes, TextAlignment } from "@/entities";
+import { colors, fontSizes, FontSizes, sizes, TextAlignment } from "@/entities";
 import { Property } from "csstype";
+import styles from "./Paragraph.module.scss";
+import { lineHeights } from "@/entities/design-tokens/typography/typography";
 
 type ParagraphProps = {
   /**
@@ -43,22 +44,34 @@ export function Paragraph({
   fontSize = "medium",
   textWrap = "wrap",
   lines,
+  className,
   children,
   margin = `0 auto ${sizes.s24.rem}`,
+  style,
   ...rest
 }: ParagraphProps) {
+  const fontSizeToRender = fontSizes[fontSize].rem;
+
   return (
-    <Root
-      $align={align}
-      $color={color}
-      $fontSize={fontSize}
-      $textWrap={textWrap}
-      $lines={lines}
-      $margin={margin}
+    <p
+      className={`${styles.root} ${lines ? styles.rootClamp : ""} ${className}`}
       data-testid={Paragraph.name}
+      style={
+        {
+          "--font-size": fontSizeToRender,
+          "--text-align": align,
+          "--line-height": lineHeights.p,
+          "--vertical-padding": 0,
+          "--text-wrap": textWrap,
+          "--color": color,
+          "--number-of-lines": lines,
+          "--margin": margin,
+          ...style,
+        } as CSSProperties
+      }
       {...rest}
     >
       {children}
-    </Root>
+    </p>
   );
 }

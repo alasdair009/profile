@@ -1,0 +1,10 @@
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/rem";
+
+.root {
+  display: block;
+  margin: 0 auto;
+  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  position: relative;
+  width: 100%;
+}

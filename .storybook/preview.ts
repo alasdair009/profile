@@ -1,11 +1,11 @@
 import type { Preview } from "@storybook/react";
 import theme from "./theme";
-import { withGlobalStyles } from "./decorators/withGlobalStyles";
 import {
   breakpoints,
   device,
 } from "../entities/design-tokens/dimensions/dimensions";
 import { ViewportMap } from "@storybook/addon-viewport";
+import "../app/styles/global.scss";
 
 const customViewports: ViewportMap = {};
 
@@ -59,7 +59,6 @@ const preview: Preview = {
     },
   },
 
-  decorators: [withGlobalStyles],
   tags: ["autodocs"],
 };
 

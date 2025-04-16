@@ -11,6 +11,12 @@ const meta: Meta<typeof Paragraph> = {
         type: "text",
       },
     },
+    color: {
+      control: {
+        type: "color",
+        presetColors: Object.values(colors),
+      },
+    },
   },
   args: {
     children: "Paragraph of text",
@@ -35,5 +41,13 @@ export const Default: StoryObj<typeof Paragraph> = {
       `font-size: ${fontSizes[args.fontSize ? args.fontSize : "medium"].px}`
     );
     await expect(paragraphElement).toHaveStyle(`text-wrap: ${args.textWrap}`);
+  },
+};
+
+export const Clamped: StoryObj<typeof Paragraph> = {
+  args: {
+    children:
+      "A very long line of text to demonstrate the text wrapping feature will cut the text off at the second wrap point. A very long line of text to demonstrate the text wrapping feature will cut the text off at the second wrap point. A very long line of text to demonstrate the text wrapping feature will cut the text off at the second wrap point.",
+    lines: 2,
   },
 };

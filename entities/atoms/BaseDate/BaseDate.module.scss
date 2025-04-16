@@ -1,0 +1,15 @@
+@use "../../../app/styles/colors";
+@use "../../../app/styles/input";
+
+.root {
+  @include input.baseInputStyles;
+
+  &::-webkit-calendar-picker-indicator {
+    background-color: colors.$colorGreenGrass;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(1.3);
+    }
+  }
+}

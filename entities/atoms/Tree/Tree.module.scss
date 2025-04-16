@@ -1,0 +1,36 @@
+@use "../../../app/styles/animation";
+@use "../../../app/styles/radii";
+@use "../../../app/styles/helpers/rem";
+@use "sass:map";
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: translate(calc(var(--moveTo) * 1px))
+      skew(calc(var(--swayTo) * 1deg));
+  }
+  50% {
+    transform: translate(calc((var(--moveTo) + var(--swayAmount)) * 1px))
+      skew(calc((var(--swayTo) - var(--swayAmount)) * 1deg));
+  }
+}
+
+$leavesTransform: (
+  left: translateX(-13px) skew(10deg),
+  right: translateX(13px) skew(-10deg),
+  default: none,
+);
+
+.leaves {
+  animation: sway animation.animationDuration(2) infinite linear;
+  stroke: #1a4a24;
+  fill-rule: nonzero;
+  transform: translateX(calc(var(--moveTo) * 1px))
+    skew(calc(var(--swayTo) * 1deg));
+  transition: transform 2s;
+}
+
+.trunk {
+  rx: radii.getBorderRadii(r2);
+  stroke: #2e1305;
+}

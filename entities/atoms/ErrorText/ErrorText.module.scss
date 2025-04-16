@@ -1,0 +1,13 @@
+@use "../../../app/styles/colors";
+@use "../../../app/styles/paragraph";
+
+.root {
+  --color: colors.$colorRedHeat;
+  font-style: italic;
+
+  @include paragraph.paragraphStyles;
+
+  &Hide {
+    display: none;
+  }
+}

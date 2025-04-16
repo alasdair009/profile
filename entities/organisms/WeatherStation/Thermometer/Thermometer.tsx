@@ -1,17 +1,22 @@
-import { Lig, Root } from "./styles";
-import { CSSProperties } from "react";
+import { CSSProperties, HTMLAttributes } from "react";
 import { colors } from "@/entities";
+import styles from "./Thermometer.module.scss";
 
 type ThermometerProps = {
   temperature: number;
-};
+} & HTMLAttributes<HTMLDivElement>;
 
 const MIN_TEMP = -20;
 const MAX_TEMP = 50;
 
-export function Thermometer({ temperature }: ThermometerProps) {
+export function Thermometer({
+  temperature,
+  className,
+  ...rest
+}: ThermometerProps) {
   return (
-    <Root
+    <div
+      className={`${styles.root} ${className}`}
       data-testid={Thermometer.name}
       data-content={`${temperature}C`}
       style={
@@ -20,14 +25,16 @@ export function Thermometer({ temperature }: ThermometerProps) {
           "--temperature": temperature,
         } as CSSProperties
       }
+      {...rest}
     >
-      <Lig
+      <meter
+        className={styles.lig}
         min={MIN_TEMP}
         max={MAX_TEMP}
         low={0}
         high={30}
         value={temperature}
       />
-    </Root>
+    </div>
   );
 }

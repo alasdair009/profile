@@ -1,5 +1,5 @@
 "use client";
-import { Root } from "./styles";
+import styles from "./BaseDate.module.scss";
 import type { BaseDateProps } from "./BaseDate.types";
 import { useEffect, useState } from "react";
 
@@ -45,8 +45,8 @@ export function BaseDate({
     : undefined;
 
   return (
-    <Root
-      $isInvalid={isInvalidState}
+    <input
+      className={`${styles.root} ${isInvalidState ? styles.rootStateInvalid : ""}`}
       type={type}
       min={minValue}
       max={maxValue}

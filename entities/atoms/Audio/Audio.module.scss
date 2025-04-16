@@ -1,0 +1,14 @@
+@use "../../../app/styles/colors";
+
+.root {
+  appearance: none;
+
+  &::-webkit-media-controls-panel {
+    background: colors.$colorGreenGrass;
+  }
+
+  &::-webkit-media-controls-current-time-display,
+  &::-webkit-media-controls-time-remaining-display {
+    color: colors.$colorWhiteGhost;
+  }
+}

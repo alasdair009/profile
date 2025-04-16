@@ -1,0 +1,27 @@
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/radii";
+@use "../../../app/styles/helpers/rem";
+@use "sass:map";
+
+.root {
+  aspect-ratio: 1;
+  border-radius: radii.getBorderRadii(round);
+  display: inline-block;
+  min-height: dimensions.getSize(s40);
+  min-width: dimensions.getSize(s40);
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    border-radius: radii.getBorderRadii(round);
+    box-shadow: dimensions.getSize(s16) dimensions.getSize(s8) 0 0
+      colors.$colorWhiteGhost;
+    content: "";
+    height: 100%;
+    left: -(dimensions.getSize(s16));
+    position: absolute;
+    top: -(dimensions.getSize(s8));
+    width: 100%;
+  }
+}

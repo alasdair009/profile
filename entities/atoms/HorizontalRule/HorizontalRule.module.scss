@@ -1,0 +1,75 @@
+@use "../../../app/styles/animation";
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/rem";
+@use "sass:map";
+
+.root {
+  border: none;
+  margin: dimensions.getSize(s32) auto;
+  max-width: rem.toRem(dimensions.$globalDecorationMaxWidth);
+  padding: rem.toRem(1);
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  &::before {
+    background: colors.$colorGreenGrass;
+    content: "";
+    height: rem.toRem(2);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  &::after {
+    aspect-ratio: 1;
+    background: colors.$colorblackEvil url(../../assets/am.svg) no-repeat center;
+    border: rem.toRem(2) solid colors.$colorGreenGrass;
+    border-radius: 50%;
+    content: "";
+    display: none;
+    height: dimensions.getSize(s48);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform animation.animationDuration(1);
+
+    &:hover {
+      transform: translate(-50%, -50%) rotateX(360deg);
+    }
+  }
+
+  &.Top {
+    margin: dimensions.getSize(s32) auto 0;
+  }
+  &.Bottom {
+    margin: 0 auto dimensions.getSize(s32);
+  }
+  &.None {
+    margin: 0 auto;
+  }
+
+  &.Decoration {
+    padding: calc(#{dimensions.getSize(s24)} + rem.toRem(2));
+
+    &::after {
+      display: block;
+    }
+
+    &.Top {
+      margin-bottom: calc(#{dimensions.getSize(s24)} - rem.toRem(2) * -1);
+    }
+
+    &.Bottom {
+      margin-top: calc(#{dimensions.getSize(s24)} - rem.toRem(2) * -1);
+    }
+
+    &.None {
+      margin: calc(#{dimensions.getSize(s24)} - rem.toRem(2) * -1) auto;
+    }
+  }
+}

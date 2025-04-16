@@ -1,0 +1,51 @@
+@use "../../../app/styles/animation";
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/rem";
+@use "sass:map";
+
+$socialMediaIcons: (
+  bluesky: url(./assets/bluesky.svg),
+  facebook: url(./assets/facebook.svg),
+  github: url(./assets/github.svg),
+  instagram: url(./assets/instagram.svg),
+  linkedin: url(./assets/linkedin.svg),
+  x: url(./assets/x.svg),
+  youtube: url(./assets/youtube.svg),
+);
+
+.root {
+  align-items: center;
+  aspect-ratio: 1;
+  background: colors.$colorblackEvil;
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  -webkit-mask: no-repeat center;
+  mask: no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  overflow: hidden;
+  position: relative;
+  width: dimensions.getSize(s48);
+
+  &::before {
+    background: linear-gradient(
+        colors.$colorWhiteGhost 50%,
+        colors.$colorGreenGrass 50%,
+        colors.$colorGreenGrass 100%
+      )
+      0 0;
+    content: "";
+    height: 200%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all animation.animationDuration(0.25);
+    width: 100%;
+  }
+
+  &:hover::before {
+    top: -100%;
+  }
+}

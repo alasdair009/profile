@@ -1,0 +1,22 @@
+@mixin lineClamp() {
+  line-height: var(--line-height);
+  max-height: calc(
+    var(--line-height) * var(--number-of-lines) + (var(--vertical-padding) * 2)
+  );
+  overflow: hidden;
+  border-bottom: var(--vertical-padding) solid transparent;
+  border-top: var(--vertical-padding) solid transparent;
+  padding-bottom: 0;
+  padding-top: 0;
+  text-overflow: ellipsis;
+  word-break: break-word;
+
+  @supports (-webkit-line-clamp: var(--number-of-lines)) and
+    (display: -webkit-box) {
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--number-of-lines);
+    line-clamp: var(--number-of-lines);
+  }
+}

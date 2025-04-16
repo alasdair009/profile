@@ -1,11 +1,11 @@
-import { globalContentMaxWidth, sizes, SocialMediaLink } from "@/entities";
-import { Root } from "./styles";
+import { SocialMediaLink } from "@/entities";
 import { HTMLAttributes } from "react";
+import styles from "./SocialMediaBar.module.scss";
 
 type SocialMediaBarProps = HTMLAttributes<HTMLDivElement>;
 export function SocialMediaBar({ ...rest }: SocialMediaBarProps) {
   return (
-    <Root data-testid={SocialMediaBar.name} {...rest}>
+    <nav className={styles.root} data-testid={SocialMediaBar.name} {...rest}>
       <SocialMediaLink variant="bluesky">Bluesky</SocialMediaLink>
       <SocialMediaLink variant="facebook">Facebook</SocialMediaLink>
       <SocialMediaLink variant="github">GitHub</SocialMediaLink>
@@ -13,6 +13,6 @@ export function SocialMediaBar({ ...rest }: SocialMediaBarProps) {
       <SocialMediaLink variant="linkedin">LinkedIn</SocialMediaLink>
       <SocialMediaLink variant="x">X</SocialMediaLink>
       <SocialMediaLink variant="youtube">YouTube</SocialMediaLink>
-    </Root>
+    </nav>
   );
 }

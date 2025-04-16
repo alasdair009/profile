@@ -1,8 +1,8 @@
-import { Root, Ember } from "./styles";
 import { CSSProperties, HTMLAttributes } from "react";
 import { sizes } from "@/entities";
 import { rem } from "polished";
 import { lcgNextRand, makeLCG } from "@/lib/random";
+import styles from "./Fire.module.scss";
 
 type HeadingProps = {
   /**
@@ -32,13 +32,15 @@ export function Fire({
   numberOfParticles = 50,
   duration = 1,
   style,
+  className,
   ...rest
 }: HeadingProps) {
   const fireLCG = makeLCG();
   const embers = [];
   for (let i = 0; i < numberOfParticles; i++) {
     embers.push(
-      <Ember
+      <span
+        className={styles.ember}
         key={`ember${baseColor}${particleSize}${numberOfParticles}${duration}${i}`}
         data-testid={`${Fire.name}Ember`}
         style={
@@ -52,7 +54,8 @@ export function Fire({
   }
 
   return (
-    <Root
+    <div
+      className={`${styles.root} ${className}`}
       data-testid={Fire.name}
       style={
         {
@@ -66,6 +69,6 @@ export function Fire({
       {...rest}
     >
       {embers}
-    </Root>
+    </div>
   );
 }

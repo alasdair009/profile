@@ -1,5 +1,4 @@
 "use client";
-import { Root } from "./styles";
 import { HTMLAttributes, ReactNode } from "react";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
@@ -20,7 +19,7 @@ export type TimelineProps = {
 
 export function Timeline({ entries, ...rest }: TimelineProps) {
   return (
-    <Root data-testid={Timeline.name} {...rest}>
+    <section data-testid={Timeline.name} {...rest}>
       <VerticalTimeline animate={!prefersReducedMotion}>
         {entries.map((entry, index) => (
           <TimelineElement
@@ -33,6 +32,6 @@ export function Timeline({ entries, ...rest }: TimelineProps) {
           </TimelineElement>
         ))}
       </VerticalTimeline>
-    </Root>
+    </section>
   );
 }

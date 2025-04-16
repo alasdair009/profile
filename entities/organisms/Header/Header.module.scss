@@ -1,0 +1,69 @@
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/rem";
+@use "sass:map";
+
+$headerHeight: dimensions.getSize(s48);
+
+.root {
+  background: rgba(colors.$colorGreyDark, 0.5);
+  border-bottom: dimensions.getSize(s2) solid
+    rgba(colors.$colorGreenGrass, 0.25);
+  display: block;
+  height: $headerHeight;
+  margin: 0 auto;
+  max-width: rem.toRem(dimensions.$globalDecorationMaxWidth);
+  padding: dimensions.getSize(s8);
+  position: sticky;
+  width: 100%;
+}
+
+.inner {
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  width: 100%;
+}
+
+.headerLogo {
+  &:hover {
+    filter: brightness(1.3);
+  }
+}
+
+.headerLinks {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  gap: dimensions.getSize(s16);
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.headerLink {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+  justify-content: center;
+  white-space: nowrap;
+
+  &.hideOnNarrow {
+    display: none;
+
+    @media (map.get(dimensions.$device, xsmall)) {
+      display: flex;
+    }
+  }
+}
+
+.notificationIcon {
+  height: dimensions.getSize(s24);
+  opacity: 0.3;
+  width: dimensions.getSize(s24);
+
+  &.isSubscribed {
+    opacity: 1;
+  }
+}

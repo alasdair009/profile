@@ -1,7 +1,7 @@
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
-import { Root, Cloud, Sun } from "./styles";
-import { colors } from "@/entities";
+import { Cloud, colors, Sun } from "@/entities";
 import { lcgNextRand, makeLCG } from "@/lib/random";
+import styles from "./Flight.module.scss";
 
 type FlightProps = {
   /**
@@ -20,6 +20,8 @@ type FlightProps = {
 export function Flight({
   skyColor = "#7fb4c7",
   numberOfClouds = 30,
+  className,
+  style,
   ...rest
 }: FlightProps) {
   const flightLCG = makeLCG();
@@ -28,6 +30,7 @@ export function Flight({
     const x = (100 / numberOfClouds) * i;
     clouds.push(
       <Cloud
+        className={styles.cloud}
         key={`cloud${i}`}
         data-testid={`${Flight.name}Cloud`}
         cloudColor={colors.whiteGhost}
@@ -47,9 +50,14 @@ export function Flight({
   }
 
   return (
-    <Root data-testid={Flight.name} $skyColor={skyColor} {...rest}>
-      <Sun />
+    <div
+      className={`${styles.root} ${className}`}
+      data-testid={Flight.name}
+      style={{ ...style, "--sky-color": skyColor } as CSSProperties}
+      {...rest}
+    >
+      <Sun className={styles.sun} />
       {clouds}
-    </Root>
+    </div>
   );
 }

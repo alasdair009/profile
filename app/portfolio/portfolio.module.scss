@@ -1,0 +1,41 @@
+@use "../styles/dimensions";
+@use "sass:map";
+
+.skillGrid {
+  display: block;
+  width: 100%;
+
+  @media (map.get(dimensions.$device, xsmall)) {
+    display: grid;
+    gap: dimensions.getSize(s2);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  @media (map.get(dimensions.$device, small)) {
+    display: grid;
+    gap: dimensions.getSize(s2);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.gridLogo {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  @media (map.get(dimensions.$device, xsmall)) {
+    grid-column-start: var(--xs-column-start);
+    grid-column-end: var(--xs-column-end);
+    grid-row-start: var(--xs-row-start);
+    grid-row-end: var(--xs-row-end);
+  }
+
+  @media (map.get(dimensions.$device, small)) {
+    grid-column-start: var(--s-column-start);
+    grid-column-end: var(--s-column-end);
+    grid-row-start: var(--s-row-start);
+    grid-row-end: var(--s-row-end);
+  }
+}

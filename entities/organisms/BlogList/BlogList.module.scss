@@ -1,0 +1,14 @@
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/rem";
+
+.root {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: dimensions.getSize(s32);
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  padding: dimensions.getSize(s8);
+  width: 100%;
+}

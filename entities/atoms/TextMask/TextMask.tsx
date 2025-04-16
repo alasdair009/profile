@@ -1,6 +1,6 @@
-import { Rect, Root, Text, Inner, SVG } from "./styles";
 import { CSSProperties, HTMLAttributes } from "react";
 import { Property } from "csstype";
+import styles from "./TextMask.module.scss";
 
 type TextMaskProps = {
   /**
@@ -16,26 +16,37 @@ type TextMaskProps = {
 /**
  * Mask formed from text to place over a background.
  */
-export function TextMask({ maskFill, text, style, ...rest }: TextMaskProps) {
+export function TextMask({
+  maskFill,
+  text,
+  style,
+  className,
+  ...rest
+}: TextMaskProps) {
   return (
-    <Root
+    <div
+      className={`${styles.root} ${className}`}
       data-testid={TextMask.name}
       style={{ "--maskFill": maskFill, ...style } as CSSProperties}
       {...rest}
     >
-      <Inner>
-        <SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <div className={styles.inner}>
+        <svg
+          className={styles.svg}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100"
+        >
           <defs>
             <mask id="mask" x="0" y="0">
               <rect x="0" y="0" width="100" height="100" fill="white" />
-              <Text x="50" y="50">
+              <text className={styles.text} x="50" y="50">
                 {text}
-              </Text>
+              </text>
             </mask>
           </defs>
-          <Rect x="0" y="0" height="100" width="100" />
-        </SVG>
-      </Inner>
-    </Root>
+          <rect className={styles.rect} x="0" y="0" height="100" width="100" />
+        </svg>
+      </div>
+    </div>
   );
 }

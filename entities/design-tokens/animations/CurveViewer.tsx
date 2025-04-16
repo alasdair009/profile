@@ -1,9 +1,6 @@
-"use client";
-import styled, { keyframes } from "styled-components";
-import { borderRadii, colors, sizes } from "@/entities";
-import { rem } from "polished";
+import styles from "./Animations.module.scss";
 
-import type { JSX } from "react";
+import type { CSSProperties, JSX } from "react";
 
 type CurveViewerProps = {
   /**
@@ -16,53 +13,15 @@ type CurveViewerProps = {
   title: string;
 };
 
-const moveAnimation = keyframes`
-  0% {
-    offset-distance: 0%;
-  }
-  100% {
-    offset-distance: 100%;
-  }
-`;
-
-const Root = styled.section`
-  margin-bottom: ${sizes.s32.rem};
-`;
-
-const CurveWrapper = styled.div`
-  border: ${rem(1)} solid ${colors.whiteGhost};
-  color: ${colors.whiteGhost};
-  display: inline-flex;
-  flex-direction: column;
-  max-width: ${rem(147)};
-  padding: ${sizes.s8.rem};
-`;
-
-const SVGWrapper = styled.div<{ curve: string; offsetPath: string }>`
-  position: relative;
-
-  &::after {
-    animation: ${moveAnimation} 2s infinite alternate ${({ curve }) => curve};
-    aspect-ratio: 1;
-    background: ${colors.whiteGhost};
-    border-radius: ${borderRadii.round};
-    content: "";
-    left: 0;
-    offset-path: path("${({ offsetPath }) => offsetPath}");
-    position: absolute;
-    width: ${sizes.s8.rem};
-  }
-`;
-
 /**
  * Displays a square with the passed css property applied to it.
  */
 export function CurveViewer({ curves, title }: CurveViewerProps): JSX.Element {
   return (
-    <Root
+    <section
+      className={styles.curveViewer}
       title={title}
       data-testid={CurveViewer.name}
-      style={{ display: "flex", gap: sizes.s8.rem }}
     >
       {Object.keys(curves).map((key) => {
         // Get the values from inside the brackets as an array
@@ -78,28 +37,31 @@ export function CurveViewer({ curves, title }: CurveViewerProps): JSX.Element {
           const c2y = 100 - parseFloat(curveValues[3]) * 100;
           const cubicPath = `M 10 90 C ${c1X} ${c1Y}, ${c2x} ${c2y}, 90 10`;
           return (
-            <CurveWrapper key={key}>
-              <SVGWrapper offsetPath={cubicPath} curve={curves[key]}>
+            <div className={styles.curveWrapper} key={key}>
+              <div
+                className={styles.svgWrapper}
+                style={
+                  {
+                    "--offset-path": `path("${cubicPath}")`,
+                    "--curve": curves[key],
+                  } as CSSProperties
+                }
+              >
                 <svg
                   width="100"
                   height="100"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    d={cubicPath}
-                    stroke={colors.greenGrass}
-                    strokeWidth={3}
-                    fill="transparent"
-                  />
+                  <path className={styles.path} d={cubicPath} />
                 </svg>
-              </SVGWrapper>
+              </div>
               <h4 style={{ textAlign: "center" }}>{key}</h4>
-            </CurveWrapper>
+            </div>
           );
         }
 
         return <p key={key}>Unable to render {key} curve</p>;
       })}
-    </Root>
+    </section>
   );
 }

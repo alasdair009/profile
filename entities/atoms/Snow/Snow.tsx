@@ -1,7 +1,7 @@
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
-import { Root, Flake } from "./styles";
 import { lcgNextRand, makeLCG } from "@/lib/random";
 import { rem } from "polished";
+import styles from "./Snow.module.scss";
 
 type SnowProps = {
   /**
@@ -32,7 +32,8 @@ export function Snow({
   const flakeLCG = makeLCG();
   for (let i = 0; i < numberOfFlakes; i++) {
     flakes.push(
-      <Flake
+      <span
+        className={styles.flake}
         key={`flake${i}`}
         data-testid={`${Snow.name}Flake`}
         style={
@@ -48,7 +49,8 @@ export function Snow({
   }
 
   return (
-    <Root
+    <div
+      className={styles.root}
       data-testid={Snow.name}
       style={
         {
@@ -61,6 +63,6 @@ export function Snow({
       {...rest}
     >
       {flakes}
-    </Root>
+    </div>
   );
 }

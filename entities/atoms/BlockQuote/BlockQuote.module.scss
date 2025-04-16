@@ -1,0 +1,25 @@
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/typography";
+@use "../../../app/styles/helpers/rem";
+@use "sass:map";
+
+.root {
+  display: block;
+  font-size: typography.getFontSize(large);
+  font-style: italic;
+  margin: dimensions.getSize(s32) auto;
+  max-width: rem.toRem(dimensions.$globalTextMaxWidth);
+  padding: dimensions.getSize(s8);
+  position: relative;
+  text-align: center;
+  text-wrap: balance;
+
+  &::before,
+  &::after {
+    color: colors.$colorGreenGrass;
+    content: '"';
+    font-size: typography.getFontSize(xxlarge);
+    font-weight: map.get(typography.$fontWeights, black);
+  }
+}

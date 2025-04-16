@@ -1,5 +1,5 @@
-import { Root } from "./styles";
 import { CSSProperties, HTMLAttributes } from "react";
+import styles from "./Spacer.module.scss";
 
 type SpacerProps = {
   /**
@@ -13,7 +13,8 @@ type SpacerProps = {
  */
 export function Spacer({ multiplier = 1, style, ...rest }: SpacerProps) {
   return (
-    <Root
+    <br
+      className={styles.root}
       data-testid={Spacer.name}
       style={{ "--multiplier": multiplier, ...style } as CSSProperties}
       {...rest}

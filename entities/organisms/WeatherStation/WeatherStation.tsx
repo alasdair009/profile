@@ -1,24 +1,14 @@
 import { ComponentProps, CSSProperties, HTMLAttributes } from "react";
-import {
-  Cloud,
-  CloudWrapper,
-  Frame,
-  House,
-  HouseTree,
-  Inner,
-  Moon,
-  Root,
-  Sun,
-  SunAnchor,
-} from "./styles";
-import { colors, Tree } from "@/entities";
+import { Cloud, colors, Moon, Sun, Tree } from "@/entities";
 import talihouse from "./house.svg";
 import { StaticImageData } from "next/image";
-import { Rain } from "@/entities/organisms/Lightning/Rain";
+import { Rain } from "../../atoms/Rain";
 import { Thermometer } from "./Thermometer/Thermometer";
 import { Barometer } from "./Barometer";
 import { Plaque } from "./Plaque";
 import type { SunState } from "@/app/portfolio/weather/types";
+import styles from "./WeatherStation.module.scss";
+import Image from "next/image";
 
 export const windDirections = [
   "n",
@@ -131,14 +121,20 @@ export function WeatherStation({
       : new Date(nextSetting as unknown as number).getHours();
 
   return (
-    <Root data-testid={WeatherStation.name} {...rest}>
-      <Inner>
-        <Frame
+    <section
+      className={styles.root}
+      data-testid={WeatherStation.name}
+      {...rest}
+    >
+      <div className={styles.inner}>
+        <div
+          className={styles.frame}
           style={{ "--background": getSkyColor(sunState) } as CSSProperties}
         >
           {showRain && <Rain rainDrops={20} />}
           {showSun && (
-            <SunAnchor
+            <span
+              className={styles.sunAnchor}
               style={
                 {
                   "--rotation": getSunTransform(
@@ -149,13 +145,14 @@ export function WeatherStation({
                 } as CSSProperties
               }
             >
-              <Moon />
-              <Sun />
-            </SunAnchor>
+              <Moon className={styles.moon} />
+              <Sun className={styles.sun} />
+            </span>
           )}
-          <CloudWrapper>
+          <div className={styles.cloudWrapper}>
             {cloudCoverPercentage > 0 && (
               <Cloud
+                className={styles.cloud}
                 cloudColor={colors.whiteGhost}
                 dispersion={50}
                 skyColor="transparent"
@@ -164,6 +161,7 @@ export function WeatherStation({
             )}
             {cloudCoverPercentage > 33 && (
               <Cloud
+                className={styles.cloud}
                 cloudColor={colors.whiteGhost}
                 dispersion={50}
                 skyColor="transparent"
@@ -172,21 +170,24 @@ export function WeatherStation({
             )}
             {cloudCoverPercentage > 66 && (
               <Cloud
+                className={styles.cloud}
                 cloudColor={colors.whiteGhost}
                 dispersion={50}
                 skyColor="transparent"
                 style={{ "--xPos": "50%", "--yPos": "20%" } as CSSProperties}
               />
             )}
-          </CloudWrapper>
-          <House
+          </div>
+          <Image
+            className={styles.house}
             src={talihouse as StaticImageData}
             alt="Talihouse"
             width={1000}
             height={1000}
           />
           {treePositions.map((position) => (
-            <HouseTree
+            <Tree
+              className={styles.houseTree}
               key={JSON.stringify(position)}
               windDirection={treeDirection}
               style={
@@ -201,7 +202,7 @@ export function WeatherStation({
             <Thermometer temperature={temperature} />
           )}
           {typeof pressure !== "undefined" && <Barometer pressure={pressure} />}
-        </Frame>
+        </div>
         <Plaque
           windAngle={windAngle}
           windStrength={windStrength}
@@ -212,8 +213,8 @@ export function WeatherStation({
           isPending={isPending}
           cloudCover={cloudCoverPercentage}
         />
-      </Inner>
-    </Root>
+      </div>
+    </section>
   );
 }
 

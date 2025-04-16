@@ -1,11 +1,12 @@
 "use client";
 import { StaticImageData } from "next/image";
 import { colors, sizes } from "@/entities";
-import { Logo, Root } from "./styles";
+import Image from "next/image";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { useInView } from "react-intersection-observer";
 import { HTMLAttributes } from "react";
 import "react-vertical-timeline-component/style.min.css";
+import styles from "./TimelineElement.module.scss";
 
 type TimelineElementProps = {
   date: string;
@@ -24,7 +25,7 @@ export function TimelineElement({
     triggerOnce: true,
   });
   return (
-    <Root
+    <div
       ref={ref}
       className="vertical-timeline-element"
       data-testid={TimelineElement.name}
@@ -44,10 +45,10 @@ export function TimelineElement({
           background: colors.greenGrass,
           color: colors.whiteGhost,
         }}
-        icon={<Logo src={icon} alt={alt} />}
+        icon={<Image className={styles.logo} src={icon} alt={alt} />}
       >
         {children}
       </VerticalTimelineElement>
-    </Root>
+    </div>
   );
 }

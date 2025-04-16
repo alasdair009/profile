@@ -32,12 +32,12 @@ import runeScapeNewsImage from "../../entities/assets/runescape-news.webp";
 import weatherImage from "../../entities/assets/weather.webp";
 import { rem, rgba } from "polished";
 import amLogo from "../../entities/assets/am.svg";
-import { GridLogo, SkillGrid } from "@/app/portfolio/styles";
 import aliSvg from "../../entities/assets/ali-portrait.svg";
 import Image from "next/image";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
-import { siteOrigin } from "@/lib/domains";
+import styles from "./portfolio.module.scss";
+import { CSSProperties } from "react";
 
 const currentEmployer = getCurrentEmployer();
 const employmentHistory: TimelineEntry[] = [];
@@ -144,7 +144,7 @@ export default function Portfolio() {
           team&apos;s work to improve company cohesion and help identify value
           delivered to the business.
         </Paragraph>
-        <SkillGrid>
+        <div className={styles.skillGrid}>
           <Skill
             background={rgba(colors.redHeat, 0.25)}
             value={100}
@@ -169,18 +169,24 @@ export default function Portfolio() {
               small: { columnStart: 1, columnEnd: 2, rowStart: 2, rowEnd: 4 },
             }}
           />
-          <GridLogo
-            $grid={{
-              xsmall: { columnStart: 1, columnEnd: 3, rowStart: 3 },
-              small: { columnStart: 2, rowStart: 2 },
-            }}
+          <figure
+            className={styles.gridLogo}
+            style={
+              {
+                "--xs-column-start": 1,
+                "--xs-column-end": 3,
+                "--xs-row-start": 3,
+                "--s-column-start": 2,
+                "--s-row-start": 2,
+              } as CSSProperties
+            }
           >
             <Image
               src={amLogo}
               alt="Am Logo"
               style={{ maxWidth: sizes.s256.rem }}
             />
-          </GridLogo>
+          </figure>
           <Skill
             background={rgba(colors.redHeat, 0.25)}
             value={100}
@@ -221,7 +227,7 @@ export default function Portfolio() {
               small: { columnStart: 3, rowStart: 4, columnEnd: 4 },
             }}
           />
-        </SkillGrid>
+        </div>
       </section>
       <HorizontalRule margin="bottom" />
       <section
@@ -244,7 +250,7 @@ export default function Portfolio() {
         contentPlateProps={{
           foregroundImageAlt: "White Jagex logo part-way through being drawn",
           foregroundImage: jdsLogo,
-          foregroundAnimate: "3drotate",
+          foregroundAnimate: true,
           backgroundCss: `linear-gradient(#1c1c1c,${colors.blackEvil})`,
         }}
         heading="Jagex Design System"
@@ -266,7 +272,7 @@ export default function Portfolio() {
           foregroundImage: jagexLauncherImage,
           foregroundImageAlt:
             "The opening UI from the Jagex Launcher displaying RuneScape",
-          foregroundAnimate: "3drotate",
+          foregroundAnimate: true,
           backgroundCss: `linear-gradient(#07111b,black)`,
           orientation: "right",
         }}
@@ -285,7 +291,7 @@ export default function Portfolio() {
         contentPlateProps={{
           foregroundImage: runeScapeNewsImage,
           foregroundImageAlt: "A RuneScape news article",
-          foregroundAnimate: "3drotate",
+          foregroundAnimate: true,
           backgroundCss: `linear-gradient(#101d23,black)`,
         }}
         heading="RuneScape News"
@@ -301,7 +307,7 @@ export default function Portfolio() {
         contentPlateProps={{
           foregroundImage: jagexCorporateImage,
           foregroundImageAlt: "The Jagex corporate website homepage",
-          foregroundAnimate: "3drotate",
+          foregroundAnimate: true,
           backgroundCss: `linear-gradient(#4b4c01,black)`,
           orientation: "right",
         }}
@@ -318,7 +324,7 @@ export default function Portfolio() {
         contentPlateProps={{
           foregroundImage: runeFestImage,
           foregroundImageAlt: "The golden dragon RuneFest logo",
-          foregroundAnimate: "3drotate",
+          foregroundAnimate: true,
           backgroundCss: `linear-gradient(#101d23,black)`,
         }}
         heading="RuneFest"

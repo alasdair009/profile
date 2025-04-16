@@ -1,14 +1,16 @@
+import variables from "./Colors.module.scss";
+
 export const colorsGrey = {
-  blackEvil: "#000",
-  greyLight: "#656565",
-  greyDark: "#222425",
-  whiteGhost: "#fff",
+  blackEvil: variables.colorblackEvil,
+  greyLight: variables.colorGreyLight,
+  greyDark: variables.colorGreyDark,
+  whiteGhost: variables.colorWhiteGhost,
 };
 
 export const colorsBrand = {
-  blueSea: "#3487F5",
-  greenGrass: "#2E9B26",
-  redHeat: "#df1c41",
+  blueSea: variables.colorBlueSea,
+  greenGrass: variables.colorGreenGrass,
+  redHeat: variables.colorRedHeat,
 };
 
 export const colors = {

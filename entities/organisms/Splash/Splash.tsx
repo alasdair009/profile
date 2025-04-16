@@ -1,46 +1,41 @@
 import { HTMLAttributes } from "react";
-import {
-  Copy,
-  CopyParagraph,
-  FeetSection,
-  HeadSection,
-  Inner,
-  Root,
-} from "./styles";
-import { colors, Heading, Link } from "@/entities";
+import { colors, Heading, Link, Paragraph } from "@/entities";
+import styles from "./Splash.module.scss";
 
 export function Splash({ ...rest }: HTMLAttributes<HTMLDivElement>) {
   return (
-    <Root
+    <section
+      className={styles.root}
       itemScope={true}
       itemType="https://schema.org/Person"
       data-testid={Splash.name}
       {...rest}
     >
-      <Inner>
-        <FeetSection>
-          <Copy>
+      <div className={styles.inner}>
+        <div className={styles.feetSection}>
+          <div className={styles.copy}>
             <Heading>
               <span itemProp="givenName">Ali</span> Macrae
             </Heading>
-            <CopyParagraph
+            <Paragraph
+              className={styles.copyParagraph}
               color={colors.whiteGhost}
               fontSize="large"
               textWrap="balance"
             >
               The gravity defying blend of{" "}
               <span itemProp="jobTitle">web developer</span> and trampolinist.
-            </CopyParagraph>
-            <CopyParagraph fontSize="large">
+            </Paragraph>
+            <Paragraph className={styles.copyParagraph} fontSize="large">
               Always seeking adventures!
-            </CopyParagraph>
+            </Paragraph>
             <Link variant="large" href="/portfolio">
               Hire me now!
             </Link>
-          </Copy>
-        </FeetSection>
-        <HeadSection />
-      </Inner>
-    </Root>
+          </div>
+        </div>
+        <div className={styles.headSection} />
+      </div>
+    </section>
   );
 }
