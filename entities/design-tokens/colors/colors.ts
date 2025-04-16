@@ -7,8 +7,6 @@ export const colorsGrey = {
   whiteGhost: variables.colorWhiteGhost,
 };
 
-console.log({ variables });
-
 export const colorsBrand = {
   blueSea: variables.colorBlueSea,
   greenGrass: variables.colorGreenGrass,
