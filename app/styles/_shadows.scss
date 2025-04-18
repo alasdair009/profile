@@ -1,0 +1,11 @@
+@use "./colors";
+@use "./dimensions";
+@use "sass:map";
+
+$shadows: (
+  boxGreen: 0 0 dimensions.getSize(s4) dimensions.getSize(s2)
+    colors.$colorGreenGrass,
+);
+@function getShadow($s) {
+  @return map.get($shadows, $s);
+}

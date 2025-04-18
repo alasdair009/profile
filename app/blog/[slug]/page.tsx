@@ -2,7 +2,9 @@ import {
   Article,
   BlockQuote,
   Code,
+  CodeBlock,
   colors,
+  Figure,
   fontSizes,
   globalTextMaxWidth,
   Heading,
@@ -85,48 +87,30 @@ const ptComponents: Partial<PortableTextReactComponents> = {
     },
   },
   types: {
+    codeBlock: ({ value }) => {
+      return (
+        <CodeBlock
+          language={value.language}
+          code={value.code}
+          description={value.description}
+        />
+      );
+    },
     image: ({ value }) => {
       if (!value?.asset?._ref) {
         return null;
       }
       return (
-        <figure style={{ margin: `${sizes.s16.rem} auto` }}>
-          <div
-            style={{
-              aspectRatio: "16 / 9",
-              boxShadow: `0 0 ${sizes.s4.rem} ${sizes.s2.rem} ${colors.greenGrass}`,
-              margin: `0 auto`,
-              position: "relative",
-              width: "100%",
-            }}
-          >
-            <Image
-              alt={value.alt || " "}
-              loading="lazy"
-              src={urlFor(value)
-                .width(1024)
-                .height(576)
-                .fit("max")
-                .auto("format")
-                .url()}
-              fill
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-          {value.title && (
-            <figcaption
-              style={{
-                display: "block",
-                fontSize: fontSizes.small.rem,
-                fontStyle: "italic",
-                margin: `${sizes.s8.rem} auto`,
-                textAlign: "center",
-              }}
-            >
-              {value.title}
-            </figcaption>
-          )}
-        </figure>
+        <Figure
+          alt={value.alt || " "}
+          src={urlFor(value)
+            .width(1024)
+            .height(576)
+            .fit("max")
+            .auto("format")
+            .url()}
+          caption={value.title}
+        />
       );
     },
     youtube: ({ value }) => {

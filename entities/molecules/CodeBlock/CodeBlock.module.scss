@@ -1,0 +1,20 @@
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/shadows";
+@use "../../../app/styles/typography";
+@use "../../../app/styles/helpers/rem";
+
+.root {
+  display: block;
+  margin: 0 auto;
+  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  width: 100%;
+}
+
+.codeWrapper {
+  box-shadow: shadows.getShadow(boxGreen);
+}
+
+.heading {
+  font-size: typography.getFontSize(small) !important;
+  font-style: italic;
+}
