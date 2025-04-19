@@ -5,13 +5,11 @@ import {
   CopyBlock,
   FixedPlate,
   Flurry,
-  globalContentMaxWidth,
   Heading,
   HorizontalRule,
   Link,
   Paragraph,
   PortfolioPlate,
-  sizes,
   Skill,
   Timeline,
   TimelineEntry,
@@ -30,7 +28,7 @@ import jagexLauncherImage from "../../entities/assets/launcher.webp";
 import runeFestImage from "../../entities/assets/runefest.webp";
 import runeScapeNewsImage from "../../entities/assets/runescape-news.webp";
 import weatherImage from "../../entities/assets/weather.webp";
-import { rem, rgba } from "polished";
+import { rgba } from "polished";
 import amLogo from "../../entities/assets/am.svg";
 import aliSvg from "../../entities/assets/ali-portrait.svg";
 import Image from "next/image";
@@ -122,14 +120,7 @@ export default function Portfolio() {
       </CopyBlock>
       <Timeline entries={employmentHistory} />
       <HorizontalRule margin="bottom" />
-      <section
-        style={{
-          display: "block",
-          maxWidth: rem(globalContentMaxWidth),
-          margin: "0 auto",
-          padding: `0 ${sizes.s16.rem}`,
-        }}
-      >
+      <section className={styles.skillsSection}>
         <Heading level="h2">Skills</Heading>
         <Paragraph>
           Throughout my career and personal projects I have a wide exposure to
@@ -184,7 +175,7 @@ export default function Portfolio() {
             <Image
               src={amLogo}
               alt="Am Logo"
-              style={{ maxWidth: sizes.s256.rem }}
+              className={styles.gridLogoImage}
             />
           </figure>
           <Skill
@@ -230,14 +221,7 @@ export default function Portfolio() {
         </div>
       </section>
       <HorizontalRule margin="bottom" />
-      <section
-        style={{
-          display: "block",
-          maxWidth: rem(globalContentMaxWidth),
-          margin: "0 auto",
-          padding: `0 ${sizes.s16.rem}`,
-        }}
-      >
+      <section className={styles.portfolioSection}>
         <Heading level="h2">Work portfolio</Heading>
         <Paragraph>
           Below you will find a collection of projects I have worked on
@@ -357,14 +341,7 @@ export default function Portfolio() {
         </Paragraph>
       </PortfolioPlate>
       <HorizontalRule />
-      <section
-        style={{
-          display: "block",
-          maxWidth: rem(globalContentMaxWidth),
-          margin: "0 auto",
-          padding: `0 ${sizes.s16.rem}`,
-        }}
-      >
+      <section className={styles.portfolioSection}>
         <Heading level="h2">Personal Portfolio</Heading>
         <Paragraph>
           The following is a library of person projects I have undertaken

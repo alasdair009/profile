@@ -1,4 +1,7 @@
+@use "sass:map";
+
 $clipPaths: (
+  arrowLeft: polygon(0 50%, 100% 0, 100% 100%),
   blinds: polygon(
       0% 5%,
       100% 5%,
@@ -141,3 +144,6 @@ $clipPaths: (
       39% 35%
     ),
 );
+@function getClipPath($s) {
+  @return map.get($clipPaths, $s);
+}

@@ -1,5 +1,13 @@
 @use "../styles/dimensions";
+@use "../styles/helpers/rem";
 @use "sass:map";
+
+.skillsSection {
+  display: block;
+  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  margin: 0 auto;
+  padding: 0 dimensions.getSize(s16);
+}
 
 .skillGrid {
   display: block;
@@ -38,4 +46,15 @@
     grid-row-start: var(--s-row-start);
     grid-row-end: var(--s-row-end);
   }
+
+  &Image {
+    max-width: dimensions.getSize(s256);
+  }
+}
+
+.portfolioSection {
+  display: block;
+  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  margin: 0 auto;
+  padding: 0 dimensions.getSize(s16);
 }

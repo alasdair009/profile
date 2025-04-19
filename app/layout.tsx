@@ -5,29 +5,21 @@ import ServiceWorker from "@/app/ServiceWorker";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ViewTransitions } from "next-view-transitions";
 import "./styles/global.scss";
+import styles from "./layout.module.scss";
+import { ReactNode } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <ViewTransitions>
       <html lang="en">
         <body className={inter.className}>
           <Header />
-          <main
-            style={{
-              minHeight: `calc(100vh - ${48}px - ${128}px)`,
-            }}
-          >
-            {children}
-          </main>
+          <main className={styles.main}>{children}</main>
           <Footer />
           <ServiceWorker />
           <SpeedInsights />

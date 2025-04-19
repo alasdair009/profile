@@ -3,24 +3,19 @@ import {
   BlockQuote,
   Code,
   CodeBlock,
-  colors,
   Figure,
-  fontSizes,
-  globalTextMaxWidth,
   Heading,
   IFrame,
   Link,
   Paragraph,
-  sizes,
 } from "@/entities";
-import { generateMetaData, myName } from "@/lib/metadata";
+import { generateMetaData } from "@/lib/metadata";
 import { sanityClient, urlFor } from "@/lib/sanity/client";
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
-import { rem } from "polished";
 import imageUrlBuilder from "@sanity/image-url";
-import Image from "next/image";
 import { Post } from "@/lib/sanity/queries";
 import { notFound } from "next/navigation";
+import styles from "./page.module.scss";
 
 async function getPost(slug: string) {
   return sanityClient.fetch<Post>(
@@ -128,7 +123,7 @@ const ptComponents: Partial<PortableTextReactComponents> = {
         </Link>
       );
     },
-    code: ({ children, text }) => {
+    code: ({ children }) => {
       return <Code>{children}</Code>;
     },
   },
@@ -140,23 +135,8 @@ export default async function ArticlePage(props: any) {
     const post = await getPost(params.slug);
     return (
       <>
-        <nav
-          style={{
-            margin: `${sizes.s16.rem} auto ${sizes.s32.rem}`,
-            maxWidth: rem(globalTextMaxWidth),
-          }}
-        >
-          <Link href={"/blog"} style={{ marginLeft: sizes.s8.rem }}>
-            <span
-              style={{
-                aspectRatio: 1,
-                background: colors.whiteGhost,
-                clipPath: "polygon(0 50%, 100% 0, 100% 100%)",
-                display: "inline-blocks",
-                marginRight: sizes.s8.rem,
-                width: sizes.s8.rem,
-              }}
-            ></span>
+        <nav className={styles.blogNav}>
+          <Link href={"/blog"} className={styles.blogNavLink}>
             Back to blog
           </Link>
         </nav>

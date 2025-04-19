@@ -1,0 +1,7 @@
+@use "./styles/dimensions";
+
+.main {
+  min-height: calc(
+    100vh - #{dimensions.getSize(s48)} - #{dimensions.getSize(s128)}
+  );
+}

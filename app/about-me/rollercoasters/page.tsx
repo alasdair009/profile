@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
 import {
-  globalContentMaxWidth,
   Heading,
   Map,
   Paragraph,
@@ -16,6 +15,7 @@ import { SanityDocument } from "next-sanity";
 import Image from "next/image";
 import imageUrlBuilder from "@sanity/image-url";
 import { MarkerProps } from "@react-google-maps/api";
+import styles from "./page.module.scss";
 
 export const metadata: Metadata = generateMetaData(
   "Rollercoasters",
@@ -60,18 +60,7 @@ export default async function Rollercoasters() {
         serves as a history of my {rollercoasters.length} unique rollerocaster
         experiences around the world.
       </Paragraph>
-      <div
-        style={{
-          alignItems: "center",
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          maxWidth: globalContentMaxWidth,
-          gap: sizes.s24.rem,
-          margin: "0 auto",
-          width: "100%",
-        }}
-      >
+      <div className={styles.statBoxWrapper}>
         <StatBox
           heading="Fastest"
           name={fastestRollercoaster.title}
@@ -109,15 +98,7 @@ export default async function Rollercoasters() {
               <td data-title="theme park">
                 <span>{rollercoaster.themeparkTitle}</span>
                 {rollercoaster.themeparkLogo && (
-                  <figure
-                    style={{
-                      aspectRatio: 1,
-                      display: "inline-block",
-                      height: sizes.s24.rem,
-                      margin: `0 0 0 ${sizes.s8.rem}`,
-                      position: "relative",
-                    }}
-                  >
+                  <figure className={styles.themeParkLogoFigure}>
                     <Image
                       src={imageUrlBuilder(sanityClient)
                         .image(rollercoaster.themeparkLogo.asset)
@@ -125,7 +106,7 @@ export default async function Rollercoasters() {
                       alt={`${rollercoaster.themeparkTitle} logo`}
                       width={sizes.s24.raw}
                       height={sizes.s24.raw}
-                      style={{ objectFit: "contain" }}
+                      className={styles.themeParkLogoImage}
                     />
                   </figure>
                 )}

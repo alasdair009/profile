@@ -1,14 +1,8 @@
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
-import {
-  globalContentMaxWidth,
-  Heading,
-  Paragraph,
-  sizes,
-  Table,
-} from "@/entities";
-import { rem } from "polished";
+import { Heading, Paragraph, Table } from "@/entities";
 import Image from "next/image";
+import styles from "./page.module.scss";
 
 const playerName = "allstar";
 
@@ -63,14 +57,8 @@ export default async function RuneScape() {
         {playerName}. The app returns details on skills and activities fetched
         via the public API.
       </Paragraph>
-      <div style={{ margin: "0 auto", maxWidth: rem(globalContentMaxWidth) }}>
-        <div
-          style={{
-            display: "flex",
-            gap: sizes.s8.rem,
-            justifyContent: "center",
-          }}
-        >
+      <div className={styles.wrapper}>
+        <div className={styles.inner}>
           <figure>
             <Image
               src={`https://secure.runescape.com/m=avatar-rs/${playerName}/chat.png`}

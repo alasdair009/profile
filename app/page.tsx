@@ -5,7 +5,6 @@ import trampolineImage from "../entities/assets/trampoline.svg";
 import challengeImage from "../entities/assets/challenge.svg";
 
 import {
-  colors,
   ContactForm,
   ContentPlate,
   CopyBlock,

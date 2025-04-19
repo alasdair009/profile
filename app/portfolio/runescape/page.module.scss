@@ -1,0 +1,13 @@
+@use "../../styles/dimensions";
+@use "../../styles/helpers/rem";
+
+.wrapper {
+  margin: 0 auto;
+  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+}
+
+.inner {
+  display: flex;
+  gap: dimensions.getSize(s8);
+  justify-content: center;
+}

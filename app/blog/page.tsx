@@ -1,9 +1,10 @@
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
-import { BlogList, Heading, Paragraph, sizes } from "@/entities";
+import { BlogList, Heading, Paragraph } from "@/entities";
 import { sanityClient } from "@/lib/sanity/client";
 import { Suspense } from "react";
 import { siteOrigin } from "@/lib/domains";
+import styles from "./page.module.scss";
 
 export const metadata: Metadata = generateMetaData(
   "Blog",
@@ -27,7 +28,7 @@ export default async function BlogPage() {
       <Heading>Blog</Heading>
       <Paragraph
         align="center"
-        style={{ padding: `0 ${sizes.s8.rem}` }}
+        className={styles.blogDescription}
         textWrap="balance"
       >
         A cocktail of thoughts and projects from my years of web development,

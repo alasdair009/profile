@@ -1,23 +1,18 @@
 import {
   BlockQuote,
-  colors,
   ContactForm,
   CopyBlock,
   FixedPlate,
-  globalContentMaxWidth,
-  globalDecorationMaxWidth,
   Heading,
   HorizontalRule,
   Link,
   Paragraph,
-  sizes,
   SocialMediaBar,
   Spacer,
   Video,
 } from "@/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
-import { rem } from "polished";
 import trampolinePosterImage from "../../entities/assets/trampoline-poster.webp";
 import skylinesImage from "../../entities/assets/city-skylines.webp";
 import rollercoasterImage from "../../entities/assets/rollercoaster.svg";
@@ -26,6 +21,7 @@ import Image from "next/image";
 import { sanityClient } from "@/lib/sanity/client";
 import { SanityDocument } from "next-sanity";
 import { GET_ALL_ROLLERCOASTERS } from "@/lib/sanity/queries";
+import styles from "./page.module.scss";
 
 export const metadata: Metadata = generateMetaData(
   "About Me",
@@ -38,38 +34,14 @@ export default async function AboutMe() {
   );
   return (
     <>
-      <section
-        style={{
-          alignItems: "center",
-          display: "flex",
-          justifyContent: "center",
-          maxWidth: rem(globalDecorationMaxWidth),
-          margin: "0 auto",
-          minHeight: "90vh",
-          padding: sizes.s8.rem,
-          position: "relative",
-        }}
-      >
+      <section className={styles.videoWrapper}>
         <Video
           webmSrc="https://files.alasdairmacrae.co.uk/trampoline-cambs.webm"
           mp4Src="https://files.alasdairmacrae.co.uk/trampoline-cambs.mp4"
           poster={trampolinePosterImage}
-          style={{
-            height: "100%",
-            left: 0,
-            opacity: 0.5,
-            position: "absolute",
-            top: 0,
-            width: "100%",
-          }}
+          className={styles.video}
         />
-        <div
-          style={{
-            margin: "0 auto",
-            maxWidth: rem(globalContentMaxWidth),
-            position: "relative",
-          }}
-        >
+        <div className={styles.videoCopy}>
           <Heading>About Me</Heading>
           <Paragraph fontSize="mlarge">
             I am a keen front-end web developer with a passion for high-fidelity
@@ -110,27 +82,11 @@ export default async function AboutMe() {
           to the occasional game of Rocket League - nice shot!
         </Paragraph>
       </CopyBlock>
-      <figure
-        style={{
-          borderBottom: `${rem(1)} solid ${colors.greenGrass}`,
-          borderTop: `${rem(1)} solid ${colors.greenGrass}`,
-          margin: "0 auto",
-          maxWidth: rem(globalDecorationMaxWidth),
-          position: "relative",
-          width: "100%",
-        }}
-      >
+      <figure className={styles.skylinesFigure}>
         <Image
           src={skylinesImage}
           alt="An ariel view of a city in the City Skyliens game"
-          style={{
-            display: "block",
-            objectFit: "cover",
-            opacity: 0.5,
-            height: "auto",
-            maxHeight: sizes.s512.rem,
-            width: "100%",
-          }}
+          className={styles.skylinesImage}
         />
       </figure>
       <CopyBlock>

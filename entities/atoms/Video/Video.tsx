@@ -40,11 +40,12 @@ export function Video({
   autoPlay = true,
   muted = true,
   poster,
+  className,
   ...rest
 }: VideoProps) {
   return (
     <video
-      className={styles.root}
+      className={`${styles.root} ${className}`}
       loop={loop}
       autoPlay={!prefersReducedMotion}
       playsInline={autoPlay}
