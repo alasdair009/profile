@@ -6,8 +6,27 @@
               id="path-1">
 
         </path>
+        <style>
+            @keyframes rotate {
+                from {
+                    transform: translateX(-30px) rotateY(0);
+                }
+                to {
+                    transform: translateX(-30px) rotateY(360deg);
+                }
+            }
+            .graphic {
+                animation: rotate 4s infinite linear;
+                transform-origin: center;
+            }
+            @media (prefers-reduced-motion) {
+                .graphic {
+                    animation: none;
+                }
+            }
+        </style>
     </defs>
-    <g>
+    <g class="graphic">
         <mask id="mask-2" fill="white">
             <use xlink:href="#path-1">
 
