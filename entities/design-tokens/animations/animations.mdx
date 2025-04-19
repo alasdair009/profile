@@ -1,7 +1,6 @@
 import { Meta, Source } from "@storybook/blocks";
 import { CurveViewer } from "./CurveViewer";
 import { curves } from "./curves";
-import { animationRhythmVariableName } from "./motion";
 
 <Meta title="Design Tokens/Animations" />
 
@@ -21,20 +20,11 @@ Transitions and animations use timing curves to define the rate of change of ani
 
 When the user has opted out of animations in their OS the website should respect this and remove any animation that it reasonably can.
 
-Inside styled components the function `animationDurationCSS` uses the css variable <code>--{animationRhythmVariableName}</code> inside a calc to control animation duration.
-When the user has opted out of animation the variable is equal to 0 making all animations instant.
-
-<Source
-  language="typescript"
-  code={`animation-duration: \${animationDurationCSS(1.2)};`}
-  dark={true}
-/>
-
-creates...
+To ensure this is honoured I have provided the following functions:
 
 <Source
   language="css"
-  code={`animation-duration: calc(1.2s * var(--${animationRhythmVariableName}));`}
+  code={`animation-duration: animation.animationDuration(1);`}
   dark={true}
 />
 

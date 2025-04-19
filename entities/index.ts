@@ -1,8 +1,4 @@
-export {
-  animationDurationCSS,
-  prefersReducedMotion,
-  curves,
-} from "./design-tokens/animations";
+export { prefersReducedMotion, curves } from "./design-tokens/animations";
 export { borderRadii } from "./design-tokens/effects";
 export { clipPaths } from "./design-tokens/clipPaths";
 export { colors } from "./design-tokens/colors";
