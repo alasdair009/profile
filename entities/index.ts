@@ -38,6 +38,7 @@ export { Cloud } from "./atoms/Cloud";
 export { Code } from "./atoms/Code";
 export { Details } from "./atoms/Details";
 export { Fire } from "./atoms/Fire";
+export { Flag } from "./atoms/Flag";
 export { Flurry } from "./atoms/Flurry";
 export { Heading } from "./atoms/Heading";
 export { HorizontalRule } from "./atoms/HorizontalRule";
