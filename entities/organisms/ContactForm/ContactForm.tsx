@@ -150,11 +150,17 @@ export function ContactForm({
         <Spacer multiplier={2} />
         <Paragraph fontSize="small" style={{ fontStyle: "italic" }}>
           This site is protected by reCAPTCHA and the Google&nbsp;
-          <Link href="https://policies.google.com/privacy">
+          <Link
+            href="https://policies.google.com/privacy"
+            data-testid={`${ContactForm.name}CapLink1`}
+          >
             Privacy Policy
           </Link>{" "}
           and&nbsp;
-          <Link href="https://policies.google.com/terms">
+          <Link
+            href="https://policies.google.com/terms"
+            data-testid={`${ContactForm.name}CapLink2`}
+          >
             Terms of Service
           </Link>{" "}
           apply.

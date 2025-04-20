@@ -22,6 +22,6 @@ export const Default: StoryObj<typeof SocialMediaBar> = {
     const socialLinks = canvas.getAllByTestId(SocialMediaLink.name);
 
     await expect(socialMediaBarElement).toBeInTheDocument();
-    await expect(socialLinks).toHaveLength(6);
+    await expect(socialLinks).toHaveLength(7);
   },
 };

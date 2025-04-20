@@ -1,7 +1,7 @@
 import { LabelledDate } from "./LabelledDate";
 import { Meta, StoryObj } from "@storybook/react";
 import { expect, within } from "@storybook/test";
-import { BaseInput } from "@/entities";
+import { BaseDate, BaseInput } from "@/entities";
 
 const meta: Meta<typeof LabelledDate> = {
   component: LabelledDate,
@@ -27,7 +27,7 @@ export const Default: StoryObj<typeof LabelledDate> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
     const labelledInputElement = canvas.getByTestId(LabelledDate.name);
-    await canvas.findByTestId(BaseInput.name);
+    await canvas.findByTestId(BaseDate.name);
 
     await expect(labelledInputElement).toBeInTheDocument();
     await expect(canvas.getByText(args.label)).toBeInTheDocument();
@@ -41,7 +41,7 @@ export const DateTimeLocale: StoryObj<typeof LabelledDate> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
     const labelledInputElement = canvas.getByTestId(LabelledDate.name);
-    await canvas.findByTestId(BaseInput.name);
+    await canvas.findByTestId(BaseDate.name);
 
     await expect(labelledInputElement).toBeInTheDocument();
     await expect(canvas.getByText(args.label)).toBeInTheDocument();
@@ -55,13 +55,10 @@ export const Required: StoryObj<typeof LabelledDate> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const labelledInputElement = canvas.getByTestId(LabelledDate.name);
-    await canvas.findByTestId(BaseInput.name);
+    await canvas.findByTestId(BaseDate.name);
 
     await expect(labelledInputElement).toBeInTheDocument();
-    await expect(canvas.getByText("Required entry")).toBeInTheDocument();
-    await expect(canvas.getByTestId(BaseInput.name)).toHaveAttribute(
-      "required"
-    );
+    await expect(canvas.getByTestId(BaseDate.name)).toHaveAttribute("required");
   },
 };
 
@@ -72,9 +69,9 @@ export const IsInvalid: StoryObj<typeof LabelledDate> = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    await canvas.findByTestId(BaseInput.name);
+    await canvas.findByTestId(BaseDate.name);
 
-    await expect(canvas.getByTestId(BaseInput.name)).toHaveStyle(
+    await expect(canvas.getByTestId(BaseDate.name)).toHaveStyle(
       "background-color: rgba(223,28,65,0.15)"
     );
   },

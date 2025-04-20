@@ -47,7 +47,9 @@ export function Error({
           />
         </div>
       </div>
-      <Paragraph align="center">{errorText}</Paragraph>
+      <Paragraph align="center" data-testid={`${Error.name}Text`}>
+        {errorText}
+      </Paragraph>
       <Spacer />
       {children}
       <Spacer multiplier={8} />

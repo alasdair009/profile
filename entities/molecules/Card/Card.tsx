@@ -29,7 +29,11 @@ export function Card({
 }: CardProps) {
   return (
     <article className={styles.root} data-testid={Card.name} {...rest}>
-      <Link className={styles.cardLink} href={href}>
+      <Link
+        className={styles.cardLink}
+        href={href}
+        data-testid={`${Card.name}Link`}
+      >
         <figure className={styles.figure}>
           <Image
             className={styles.cardImage}

@@ -29,7 +29,11 @@ export function CodeBlock({
   ...rest
 }: CodeBlockProps) {
   return (
-    <section className={`${styles.root} ${className}`} {...rest}>
+    <section
+      className={`${styles.root} ${className}`}
+      data-testid={CodeBlock.name}
+      {...rest}
+    >
       <div className={styles.codeWrapper}>
         <SyntaxHighlighter
           language={language}

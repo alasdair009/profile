@@ -23,8 +23,10 @@ const meta: Meta<typeof ContentPlate> = {
     foregroundImageAlt: "AM Logo",
     children: (
       <>
-        <Heading level="h3">Children</Heading>
-        <Paragraph>
+        <Heading level="h3" data-testid={`${ContentPlate.name}Heading`}>
+          Children
+        </Heading>
+        <Paragraph data-testid={`${ContentPlate.name}Paragraph`}>
           This is my content plate, there are many like it but this one is mine!
         </Paragraph>
       </>

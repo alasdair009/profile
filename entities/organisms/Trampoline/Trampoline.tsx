@@ -8,8 +8,12 @@ export function Trampoline({ ...rest }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div className={styles.root} data-testid={Trampoline.name} {...rest}>
       <Spacer multiplier={4} />
-      <Heading level="h2">Trampoline</Heading>
-      <Heading level="h3">Gymnast & Coach</Heading>
+      <Heading level="h2" data-testid={`${Trampoline.name}Heading2`}>
+        Trampoline
+      </Heading>
+      <Heading level="h3" data-testid={`${Trampoline.name}Heading3`}>
+        Gymnast & Coach
+      </Heading>
       <Spacer multiplier={4} />
       <Image
         className={styles.trampolineImage}

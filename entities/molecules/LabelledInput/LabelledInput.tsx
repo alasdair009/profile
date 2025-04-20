@@ -49,7 +49,12 @@ export function LabelledInput({
     <label className={styles.root} data-testid={LabelledInput.name}>
       <BaseLabel as="span">{label}</BaseLabel>
       <BaseInput type={type} isInvalid={isInvalid} {...rest} />
-      <ErrorText shown={isInvalid || false}>{errorText}</ErrorText>
+      <ErrorText
+        shown={isInvalid || false}
+        data-testid={`${LabelledInput.name}Error`}
+      >
+        {errorText}
+      </ErrorText>
     </label>
   );
 }

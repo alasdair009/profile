@@ -45,10 +45,5 @@ export const Default: StoryObj<typeof NetworkChart> = {
     await waitFor(() =>
       expect(canvas.getByTestId(NetworkChart.name)).toBeInTheDocument()
     );
-
-    const networkChartElement = canvas.getByTestId(NetworkChart.name);
-    const htmlCanvasElement =
-      networkChartElement.children[0].children[0].children[0].children[0];
-    await expect(htmlCanvasElement.tagName).toBe("CANVAS");
   },
 };

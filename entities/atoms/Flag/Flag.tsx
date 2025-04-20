@@ -39,7 +39,11 @@ export function Flag({
   ...rest
 }: FlagProps) {
   return (
-    <div className={`${styles.root} ${className}`} {...rest}>
+    <div
+      className={`${styles.root} ${className}`}
+      data-testid={Flag.name}
+      {...rest}
+    >
       <div
         className={`${styles.flagWrapper} ${showPoll ? styles.showPoll : ""} ${animateFlag ? styles.animateFlag : ""}`}
         style={

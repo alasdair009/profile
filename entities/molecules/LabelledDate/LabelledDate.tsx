@@ -60,7 +60,12 @@ export function LabelledDate({
     <label className={styles.root} data-testid={LabelledDate.name}>
       <BaseLabel as="span">{label}</BaseLabel>
       <BaseDate isInvalid={isInvalid} min={minValue} max={maxValue} {...rest} />
-      <ErrorText shown={isInvalid || false}>{errorText}</ErrorText>
+      <ErrorText
+        shown={isInvalid || false}
+        data-testid={`${LabelledDate.name}Error`}
+      >
+        {errorText}
+      </ErrorText>
     </label>
   );
 }

@@ -34,7 +34,7 @@ export const X: StoryObj<typeof SocialMediaLink> = {
     await expect(socialMediaElement).toBeInTheDocument();
     await expect(socialMediaElement).toHaveAttribute(
       "href",
-      "https://twitter.com/alasdair009"
+      "https://x.com/alasdair009"
     );
   },
 };
