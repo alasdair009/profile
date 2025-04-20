@@ -1,5 +1,6 @@
 import {
   Article,
+  Audio,
   BlockQuote,
   Code,
   CodeBlock,
@@ -82,6 +83,9 @@ const ptComponents: Partial<PortableTextReactComponents> = {
     },
   },
   types: {
+    audio: ({ value }) => {
+      return <Audio src={value.source} />;
+    },
     codeBlock: ({ value }) => {
       return (
         <CodeBlock
