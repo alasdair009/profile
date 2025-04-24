@@ -10,6 +10,7 @@ export const colorsGrey = {
 export const colorsBrand = {
   blueSea: variables.colorBlueSea,
   greenGrass: variables.colorGreenGrass,
+  yellowSun: variables.colorYellowSun,
   redHeat: variables.colorRedHeat,
 };
 

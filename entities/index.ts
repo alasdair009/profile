@@ -44,6 +44,7 @@ export { Heading } from "./atoms/Heading";
 export { HorizontalRule } from "./atoms/HorizontalRule";
 export { IFrame } from "./atoms/IFrame";
 export { Link } from "./atoms/Link";
+export { Meter } from "./atoms/Meter";
 export { Moon } from "./atoms/Moon";
 export { Paragraph } from "./atoms/Paragraph";
 export { Rain } from "./atoms/Rain";

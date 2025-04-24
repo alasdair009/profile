@@ -1,0 +1,50 @@
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/radii";
+@use "../../../app/styles/helpers/rem";
+
+.root {
+  appearance: none;
+  background: colors.$colorWhiteGhost;
+  border: rem.toRem(1) solid colors.$colorblackEvil;
+  border-radius: radii.getBorderRadii(r2);
+  display: flex;
+  height: dimensions.getSize(s32);
+  max-width: rem.toRem(dimensions.$globalInputMaxWidth);
+  width: 100%;
+
+  &::-webkit-meter-bar {
+    background: colors.$colorWhiteGhost;
+    box-shadow: 0 rem.toRem(5) rem.toRem(5) rem.toRem(-5) colors.$colorblackEvil
+      inset;
+  }
+
+  &::-webkit-meter-inner-element {
+    background: colors.$colorWhiteGhost;
+    display: flex;
+  }
+
+  &::-webkit-meter-optimum-value {
+    background: colors.$colorGreenGrass;
+  }
+
+  &:-moz-meter-optimum::-moz-meter-bar {
+    background: colors.$colorGreenGrass;
+  }
+
+  &::-webkit-meter-suboptimum-value {
+    background: colors.$colorYellowSun;
+  }
+
+  &:-moz-meter-sub-optimum::-moz-meter-bar {
+    background: colors.$colorYellowSun;
+  }
+
+  &::-webkit-meter-even-less-good-value {
+    background: colors.$colorRedHeat;
+  }
+
+  &:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+    background: colors.$colorRedHeat;
+  }
+}
