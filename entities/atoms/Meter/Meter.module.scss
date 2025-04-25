@@ -2,10 +2,26 @@
 @use "../../../app/styles/dimensions";
 @use "../../../app/styles/radii";
 @use "../../../app/styles/helpers/rem";
+@use "sass:color";
+
+@function generateGradient($color) {
+  @return repeating-linear-gradient(
+    135deg,
+    $color,
+    $color dimensions.getSize(s16),
+    color.scale($color, $lightness: -10%) dimensions.getSize(s16),
+    color.scale($color, $lightness: -10%) dimensions.getSize(s32),
+    $color dimensions.getSize(s32)
+  );
+}
+$emptyBackground: generateGradient(colors.$colorWhiteGhost);
+$optimumBackground: generateGradient(colors.$colorGreenGrass);
+$warningBackground: generateGradient(colors.$colorYellowSun);
+$dangerBackground: generateGradient(colors.$colorRedHeat);
 
 .root {
   appearance: none;
-  background: colors.$colorWhiteGhost;
+  background-image: $emptyBackground;
   border: rem.toRem(1) solid colors.$colorblackEvil;
   border-radius: radii.getBorderRadii(r2);
   display: flex;
@@ -14,7 +30,7 @@
   width: 100%;
 
   &::-webkit-meter-bar {
-    background: colors.$colorWhiteGhost;
+    background-image: $emptyBackground;
     box-shadow: 0 rem.toRem(5) rem.toRem(5) rem.toRem(-5) colors.$colorblackEvil
       inset;
   }
@@ -25,26 +41,26 @@
   }
 
   &::-webkit-meter-optimum-value {
-    background: colors.$colorGreenGrass;
+    background: $optimumBackground;
   }
 
   &:-moz-meter-optimum::-moz-meter-bar {
-    background: colors.$colorGreenGrass;
+    background: $optimumBackground;
   }
 
   &::-webkit-meter-suboptimum-value {
-    background: colors.$colorYellowSun;
+    background: $warningBackground;
   }
 
   &:-moz-meter-sub-optimum::-moz-meter-bar {
-    background: colors.$colorYellowSun;
+    background: $warningBackground;
   }
 
   &::-webkit-meter-even-less-good-value {
-    background: colors.$colorRedHeat;
+    background: $dangerBackground;
   }
 
   &:-moz-meter-sub-sub-optimum::-moz-meter-bar {
-    background: colors.$colorRedHeat;
+    background: $dangerBackground;
   }
 }
