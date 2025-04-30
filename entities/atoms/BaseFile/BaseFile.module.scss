@@ -1,0 +1,28 @@
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/typography";
+@use "../../../app/styles/input";
+@use "sass:map";
+
+.root {
+  @include input.baseInputStyles;
+
+  height: dimensions.getSize(s48);
+
+  &::-webkit-file-upload-button {
+    appearance: none;
+    background: colors.$colorGreenGrass;
+    border: none;
+    color: colors.$colorWhiteGhost;
+    cursor: pointer;
+    font-size: typography.getFontSize(medium);
+    font-weight: map.get(typography.$fontWeights, bold);
+    height: 100%;
+    margin-right: dimensions.getSize(s16);
+    padding: 0 dimensions.getSize(s16);
+
+    &:hover {
+      filter: brightness(1.3);
+    }
+  }
+}

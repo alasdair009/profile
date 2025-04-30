@@ -27,6 +27,7 @@ export type { Breakpoint, Dimension } from "./design-tokens/dimensions";
 export { Audio } from "./atoms/Audio";
 export { BaseCheckbox } from "./atoms/BaseCheckbox";
 export { BaseDate } from "./atoms/BaseDate";
+export { BaseFile } from "./atoms/BaseFile";
 export { BaseInput } from "./atoms/BaseInput";
 export { BaseLabel } from "./atoms/BaseLabel";
 export { BaseRadio } from "./atoms/BaseRadio";
