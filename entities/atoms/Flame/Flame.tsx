@@ -31,7 +31,7 @@ type FireProps = {
 } & HTMLAttributes<HTMLDivElement>;
 
 /**
- * A single file particle.
+ * A single fire particle.
  */
 class Particle {
   public x: number;
