@@ -1,130 +1,18 @@
 import { Meta } from "@storybook/blocks";
-import Image from "next/image";
-import amLogo from "./assets/am.svg";
 import {
   colors,
-  Cloud,
   Heading,
-  sizes,
   Spacer,
   Paragraph,
   ContentPlate,
   HorizontalRule,
+  MorphingText,
 } from "./";
-import { rem } from "polished";
+import { DesignLanding } from "./organisms/DesignLanding";
 
 <Meta title="Alasdair Macrae Design" />
 
-<section
-  style={{
-    boxShadow: `0 0 ${sizes.s24.rem} ${sizes.s8.rem} ${colors.blackEvil}`,
-  }}
->
-  <div
-    style={{
-      alignItems: "center",
-      background: colors.blackEvil,
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      minHeight: 500,
-      padding: sizes.s16.rem,
-      position: "relative",
-      overflow: "hidden",
-      width: "100%",
-    }}
-  >
-    <Cloud
-      dispersion={10}
-      cloudColor={colors.greenGrass}
-      skyColor="transparent"
-      style={{
-        height: "100%",
-        opacity: 0.4,
-        position: "absolute",
-        width: "100%",
-      }}
-    />
-    <Cloud
-      dispersion={30}
-      cloudColor={colors.greenGrass}
-      skyColor="transparent"
-      style={{
-        height: "100%",
-        left: -250,
-        opacity: 0.4,
-        position: "absolute",
-        top: -250,
-        width: "100%",
-      }}
-    />
-    <Cloud
-      dispersion={50}
-      cloudColor={colors.greenGrass}
-      skyColor="transparent"
-      style={{
-        height: "100%",
-        left: 150,
-        opacity: 0.4,
-        position: "absolute",
-        top: 150,
-        width: "100%",
-      }}
-    />
-    <Cloud
-      dispersion={70}
-      cloudColor={colors.greenGrass}
-      skyColor="transparent"
-      style={{
-        height: "100%",
-        left: -200,
-        opacity: 0.4,
-        position: "absolute",
-        top: 150,
-        width: "100%",
-      }}
-    />
-    <Cloud
-      dispersion={90}
-      cloudColor={colors.greenGrass}
-      skyColor="transparent"
-      style={{
-        height: "100%",
-        left: 200,
-        opacity: 0.4,
-        position: "absolute",
-        top: -100,
-        width: "100%",
-      }}
-    />
-    {/* prettier-ignore */}
-    <Heading align="center" style={{ margin: "0 auto" }}>Alasdair Macrae Design</Heading>
-    <Spacer multiplier={4} />
-    <Image
-      src={amLogo}
-      alt="Green and white AM letters"
-      width={0}
-      height={0}
-      style={{
-        maxWidth: rem(200),
-        position: "relative",
-        width: "100%",
-        height: "auto",
-      }}
-    />
-    {/* prettier-ignore */}
-    <Paragraph align="center" fontSize="medium" style={{ position: "relative" }}>I am a keen supported of Storybook js using it across the majority of projects I build including websites, web-apps and desktop applications.</Paragraph>
-    <div
-      style={{
-        boxShadow: `inset 0 0 ${sizes.s32.rem} ${sizes.s16.rem} ${colors.blackEvil}`,
-        height: "100%",
-        pointerEvents: "none",
-        position: "absolute",
-        width: "100%",
-      }}
-    />
-  </div>
-</section>
+<DesignLanding />
 <Spacer multiplier={4} />
 <HorizontalRule />
 <ContentPlate flameColor={colors.greenGrass}>
@@ -138,6 +26,15 @@ import { rem } from "polished";
   </Paragraph>
 </ContentPlate>
 <HorizontalRule />
+<MorphingText values={["developing", "with", "style"]} />
 {/* prettier-ignore */}
-<Paragraph>If you like what you see here and feel I could add value to your project please<a href="https://www.alasdairmacrae.co.uk/#contact" target="_blank">get in contact with me</a>.</Paragraph>
+<Paragraph>I am driven by exploring how the web can be used to make the customer journey more inspiring whilst ensuring effectiveness. I love challenging the norms and testing new ideas to built the optimum solution.</Paragraph>
+<Paragraph>
+  If you like what you see here and feel I could add value to your project
+  please{" "}
+  <a href="https://www.alasdairmacrae.co.uk/#contact" target="_blank">
+    get in contact with me
+  </a>
+  .
+</Paragraph>
 {/* prettier-ignore */}

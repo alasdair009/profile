@@ -33,7 +33,7 @@
   animation: wordAnim calc(var(--speed) * 1s) infinite ease-in-out;
   animation-delay: calc(var(--delay) * 1s);
   display: inline-block;
-  font-size: typography.getFontSize(xxlarge);
+  font-size: typography.getFontSize(xxlarge) !important;
   left: 50%;
   position: absolute;
   text-align: center;
@@ -51,6 +51,7 @@
 }
 
 .morpher {
+  border: none !important;
   filter: contrast(25) blur(rem.toRem(1));
   position: relative;
   min-height: rem.toRem(480);

@@ -1,0 +1,85 @@
+@use "../../../app/styles/animation";
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/helpers/rem";
+
+@keyframes orbit {
+  0% {
+    opacity: 0.4;
+    transform: rotate(0deg) var(--translate) rotate(0deg);
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0.4;
+    transform: rotate(360deg) var(--translate) rotate(-360deg);
+  }
+}
+
+@keyframes fade {
+  0%,
+  66% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+}
+
+.root {
+  box-shadow: 0 0 dimensions.getSize(s24) dimensions.getSize(s8)
+    colors.$colorblackEvil;
+}
+
+.inner {
+  align-items: center;
+  background: colors.$colorblackEvil;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: dimensions.getSize(s512);
+  padding: dimensions.getSize(s16);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &::after {
+    box-shadow: inset 0 0 dimensions.getSize(s32) dimensions.getSize(s16)
+      colors.$colorblackEvil;
+    content: "";
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.cloud {
+  animation: orbit animation.animationDuration(10) infinite linear;
+  animation-delay: calc(var(--animation-delay) * 1s);
+  animation-direction: var(--animation-direction);
+  height: 100%;
+  left: calc(var(--cloud-left) * 1px);
+  opacity: 0.4;
+  position: absolute;
+  top: calc(var(--cloud-top) * 1px);
+  width: 100%;
+}
+
+.heading {
+  margin: 0 auto;
+}
+
+.logo {
+  max-width: rem.toRem(200) !important;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.paragraph {
+  position: relative;
+}

@@ -39,6 +39,7 @@ export function Rain({
   rainColor = "rgb(174,194,224)",
   rainDrops = 200,
   speedRainTrough = 25,
+  className,
   ...rest
 }: RainProps) {
   const rainLCG = makeLCG();
@@ -160,7 +161,11 @@ export function Rain({
   }, [drawRain]);
 
   return (
-    <div className={styles.rainCanvasWrapper} data-testid={Rain.name} {...rest}>
+    <div
+      className={`${styles.rainCanvasWrapper} ${className}`}
+      data-testid={Rain.name}
+      {...rest}
+    >
       <canvas
         className={styles.rainCanvas}
         ref={rainCanvasRef}
