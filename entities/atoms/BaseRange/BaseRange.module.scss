@@ -1,0 +1,43 @@
+@use "../../../app/styles/colors";
+@use "../../../app/styles/dimensions";
+@use "../../../app/styles/input";
+@use "../../../app/styles/radii";
+@use "../../../app/styles/helpers/rem";
+
+.root {
+  @include input.baseInputStyles;
+
+  background: transparent;
+  border: none;
+  cursor: ew-resize;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    aspect-ratio: 1;
+    background: colors.$colorGreenGrass;
+    border: rem.toRem(1) solid colors.$colorWhiteGhost;
+    border-radius: radii.getBorderRadii(round);
+    height: dimensions.getSize(s16);
+  }
+
+  &::-moz-range-thumb {
+    appearance: none;
+    aspect-ratio: 1;
+    background: colors.$colorGreenGrass;
+    border: rem.toRem(1) solid colors.$colorWhiteGhost;
+    border-radius: radii.getBorderRadii(round);
+    height: dimensions.getSize(s16);
+  }
+
+  &::-webkit-slider-runnable-track {
+    background-color: colors.$colorGreyDark;
+    border: rem.toRem(1) solid colors.$colorGreenGrass;
+    border-radius: radii.getBorderRadii(r8);
+  }
+
+  &::-moz-range-track {
+    background-color: colors.$colorGreyDark;
+    border: rem.toRem(1) solid colors.$colorGreenGrass;
+    border-radius: radii.getBorderRadii(r8);
+  }
+}

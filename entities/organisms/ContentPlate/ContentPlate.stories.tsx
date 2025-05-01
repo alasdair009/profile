@@ -1,6 +1,6 @@
 import { ContentPlate } from "./ContentPlate";
 import { Meta, StoryObj } from "@storybook/react";
-import { colors, Container, Heading, Paragraph } from "@/entities";
+import { colors, Flame, Heading, Paragraph } from "@/entities";
 import amLogo from "../../assets/am.svg";
 import { expect, within } from "@storybook/test";
 
@@ -10,7 +10,7 @@ const meta: Meta<typeof ContentPlate> = {
     backgroundCss: {
       control: {
         type: "color",
-        presetColors: Object.values(colors),
+        // presetColors: Object.values(colors),
       },
     },
     children: {
@@ -19,8 +19,6 @@ const meta: Meta<typeof ContentPlate> = {
   },
   args: {
     backgroundCss: colors.blackEvil,
-    foregroundImage: amLogo,
-    foregroundImageAlt: "AM Logo",
     children: (
       <>
         <Heading level="h3" data-testid={`${ContentPlate.name}Heading`}>
@@ -36,6 +34,10 @@ const meta: Meta<typeof ContentPlate> = {
 export default meta;
 
 export const Default: StoryObj<typeof ContentPlate> = {
+  args: {
+    foregroundImage: amLogo,
+    foregroundImageAlt: "AM Logo",
+  },
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
     const contentPlateElement: HTMLDivElement = canvas.getByTestId(
@@ -49,5 +51,20 @@ export const Default: StoryObj<typeof ContentPlate> = {
     await expect(contentPlateElement.children[0]).toHaveStyle(
       `background-color: ${args.backgroundCss}`
     );
+  },
+};
+
+export const WithFlame: StoryObj<typeof ContentPlate> = {
+  args: {
+    flameColor: "red",
+  },
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const contentPlateElement: HTMLDivElement = canvas.getByTestId(
+      ContentPlate.name
+    );
+
+    await expect(contentPlateElement).toBeInTheDocument();
+    await expect(canvas.getByTestId(Flame.name)).toBeInTheDocument();
   },
 };

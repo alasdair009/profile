@@ -1,14 +1,9 @@
 @use "../../../app/styles/dimensions";
+@use "../../../app/styles/input";
 @use "../../../app/styles/helpers/rem";
 
 .root {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto dimensions.getSize(s8);
-  max-width: rem.toRem(dimensions.$globalInputMaxWidth);
-  width: 100%;
+  @include input.labelledStyles;
 }
 
 .labelText {

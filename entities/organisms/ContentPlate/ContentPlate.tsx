@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ContentPlateProps } from "./ContentPlate.types";
-import { IFrame } from "@/entities";
+import { Flame, IFrame } from "@/entities";
 import styles from "./ContentPlate.module.scss";
 import { CSSProperties } from "react";
 
@@ -13,9 +13,13 @@ export function ContentPlate({
   foregroundImage,
   foregroundImageAlt,
   foregroundAnimate = false,
+  flameColor,
   children,
   ...rest
 }: ContentPlateProps) {
+  const showForeground =
+    typeof foregroundImage !== "undefined" &&
+    typeof foregroundImageAlt !== "undefined";
   return (
     <section className={styles.root} {...rest} data-testid={ContentPlate.name}>
       {((backgroundImage && backgroundImageAlt) || backgroundCss) && (
@@ -42,7 +46,12 @@ export function ContentPlate({
             <IFrame src={embedUrl} />
           </div>
         )}
-        {foregroundImage && foregroundImageAlt && (
+        {flameColor && (
+          <div className={styles.flameBox}>
+            <Flame className={styles.flame} baseColor={flameColor} />
+          </div>
+        )}
+        {showForeground && (
           <figure
             className={`${styles.foregroundWrapper} ${foregroundAnimate ? styles.animate : ""}`}
           >

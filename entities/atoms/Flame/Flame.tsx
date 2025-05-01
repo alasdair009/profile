@@ -76,7 +76,6 @@ const hexToRgb = (hex: string) => {
  * Canvas rendered flame with customisable size and intensity.
  */
 export function Flame({
-  onClick,
   children,
   className,
   maxLife = 40,
@@ -179,7 +178,19 @@ export function Flame({
     return () => {
       clearInterval(interval);
     };
-  });
+  }, [
+    canvasWidth,
+    canvasHeight,
+    spreadPercentage,
+    particlesPerFrame,
+    speed,
+    particles,
+    rgbColors.r,
+    rgbColors.g,
+    rgbColors.b,
+    maxLife,
+    size,
+  ]);
 
   return (
     <div

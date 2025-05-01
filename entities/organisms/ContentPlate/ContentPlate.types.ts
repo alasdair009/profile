@@ -11,5 +11,6 @@ export type ContentPlateProps = {
   foregroundImageAlt?: string;
   foregroundAnimate?: boolean;
   embedUrl?: string;
+  flameColor?: string;
   children: ReactNode;
 } & HTMLAttributes<HTMLDivElement>;
