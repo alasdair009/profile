@@ -93,8 +93,9 @@ export function DesignLanding({ children, ...rest }: DesignLandingProps) {
             } as CSSProperties
           }
         />
-        {/* prettier-ignore */}
-        <Heading className={styles.heading} align="center">Alasdair Macrae Design</Heading>
+        <Heading className={styles.heading} align="center">
+          Alasdair Macrae Design
+        </Heading>
         <Spacer multiplier={4} />
         <Image
           className={styles.logo}
@@ -103,8 +104,17 @@ export function DesignLanding({ children, ...rest }: DesignLandingProps) {
           width={0}
           height={0}
         />
-        {/* prettier-ignore */}
-        <Paragraph className={styles.paragraph} align="center" fontSize="medium">I am a keen supported of Storybook js using it across the majority of projects I build including websites, web-apps and desktop applications. Its value stretches far beyond mere component display and including testing, rapid iteration and developer documentation.</Paragraph>
+        <Paragraph
+          className={styles.paragraph}
+          align="center"
+          fontSize="medium"
+        >
+          I am a passionate advocate for Storybook.js and utilise it in nearly
+          all the projects I develop, including websites, web applications, and
+          desktop applications. The advantages of Storybook extend well beyond
+          just showcasing components; it is an essential tool for testing, rapid
+          iteration, and comprehensive developer documentation.
+        </Paragraph>
       </div>
     </section>
   );
