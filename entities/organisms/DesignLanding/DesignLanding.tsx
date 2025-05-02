@@ -1,6 +1,14 @@
-import { CSSProperties, HTMLAttributes, ReactNode } from "react";
+import { CSSProperties, HTMLAttributes } from "react";
 import styles from "./DesignLanding.module.scss";
-import { Cloud, colors, Heading, Paragraph, Rain, Spacer } from "@/entities";
+import {
+  Cloud,
+  colors,
+  ContentPlate,
+  Heading,
+  Paragraph,
+  Rain,
+  Spacer,
+} from "@/entities";
 import amLogo from "../../assets/am.svg";
 import Image from "next/image";
 
@@ -117,5 +125,21 @@ export function DesignLanding({ children, ...rest }: DesignLandingProps) {
         </Paragraph>
       </div>
     </section>
+  );
+}
+
+export function DesignLandingContentPlate() {
+  return (
+    <ContentPlate flameColor={colors.greenGrass}>
+      <Heading level="h2">Like what you see?</Heading>
+      <Paragraph>
+        This Storybook instance serves as a playground for my front-end
+        creativity and experiments. I strive to build everything you see here
+        using CSS and SVG to create a lightweight and sleek user interface.
+        While many visual effects can now be achieved with CSS, it’s important
+        to remember that just because something is possible doesn’t mean it’s
+        the best choice.
+      </Paragraph>
+    </ContentPlate>
   );
 }

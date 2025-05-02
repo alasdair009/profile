@@ -1,37 +1,19 @@
 import { Meta } from "@storybook/blocks";
-import {
-  colors,
-  Heading,
-  Spacer,
-  Paragraph,
-  ContentPlate,
-  HorizontalRule,
-  MorphingText,
-} from "./";
+import { Spacer, Paragraph, HorizontalRule, MorphingText } from "./";
 import { DesignLanding } from "./organisms/DesignLanding";
+import { DesignLandingContentPlate } from "./organisms/DesignLanding/DesignLanding";
 
 <Meta title="Alasdair Macrae Design" />
 
 <DesignLanding />
 <Spacer multiplier={4} />
 <HorizontalRule />
-<ContentPlate flameColor={colors.greenGrass}>
-  <Heading level="h2">Like what you see?</Heading>
-  <Paragraph>
-    This Storybook instance serves as a playground for my front-end creativity
-    and experiments. I strive to build everything you see here using CSS and SVG
-    to create a lightweight and sleek user interface. While many visual effects
-    can now be achieved with CSS, it’s important to remember that just because
-    something is possible doesn’t mean it’s the best choice.
-  </Paragraph>
-</ContentPlate>
+<DesignLandingContentPlate />
 <HorizontalRule />
 <MorphingText values={["developing", "with", "style"]} />
-<Paragraph>
-  I am driven by exploring how the web can be used to make the customer journey
-  more inspiring whilst ensuring effectiveness. I love challenging the norms and
-  testing new ideas to built the optimum solution.
-</Paragraph>
+{/* prettier-ignore */}
+<Paragraph>I am driven by exploring how the web can be used to make the customer journey more inspiring whilst ensuring effectiveness. I love challenging the norms and testing new ideas to built the optimum solution.</Paragraph>
+{/* prettier-ignore */}
 {/* prettier-ignore */}
 <Paragraph>If you like what you see here and feel I could add value to your project please <a href="https://www.alasdairmacrae.co.uk/#contact" target="_blank"> get in contact with me</a>.</Paragraph>
 {/* prettier-ignore */}
