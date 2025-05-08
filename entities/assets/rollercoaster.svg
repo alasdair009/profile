@@ -11,7 +11,7 @@
       .car {
         fill: #2e9b26;
         height: 70px;
-        stroke: white;
+        stroke: #656565;
         stroke-width: 5px;
         width: 150px;
       }
