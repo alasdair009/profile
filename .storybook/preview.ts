@@ -6,6 +6,7 @@ import {
 } from "../entities/design-tokens/dimensions/dimensions";
 import { ViewportMap } from "@storybook/addon-viewport";
 import "../app/styles/global.scss";
+import { withFont } from "./decorators/withFont";
 
 const customViewports: ViewportMap = {};
 
@@ -58,7 +59,7 @@ const preview: Preview = {
       viewports: customViewports,
     },
   },
-
+  decorators: [withFont],
   tags: ["autodocs"],
 };
 

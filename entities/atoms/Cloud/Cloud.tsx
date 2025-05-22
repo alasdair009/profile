@@ -1,6 +1,5 @@
 import { CSSProperties, HTMLAttributes } from "react";
-import { colors } from "@/entities";
-import { rem } from "polished";
+import { colors, toRem } from "@/entities";
 import styles from "./Cloud.module.scss";
 
 type CloudProps = {
@@ -33,7 +32,7 @@ export function Cloud({
         className={styles.cloudCircle}
         style={
           {
-            "--dispersion": rem(dispersion),
+            "--dispersion": toRem(dispersion),
             "--cloudColor": cloudColor,
           } as CSSProperties
         }

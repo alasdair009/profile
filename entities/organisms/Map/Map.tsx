@@ -6,8 +6,7 @@ import {
   useJsApiLoader,
 } from "@react-google-maps/api";
 import { HTMLAttributes } from "react";
-import { colors, ErrorText, globalContentMaxWidth, Heading } from "@/entities";
-import { rem } from "polished";
+import { ErrorText, Heading } from "@/entities";
 import styles from "./Map.module.scss";
 
 const center = {

@@ -1,8 +1,20 @@
 import { CSSProperties } from "react";
-import { Dimension, sizes } from "../dimensions";
+import { toRem } from "../dimensions/utils";
+import type { Dimension } from "../dimensions";
 import { Property } from "csstype";
+import { Inter } from "next/font/google";
 
-const OPEN_SANS: CSSProperties["fontFamily"] = '"OpenSans","Arial",sans-serif';
+type FontWeights = "regular" | "bold" | "black";
+export const fontWeights: Record<FontWeights, number> = {
+  regular: 400,
+  bold: 700,
+  black: 900,
+};
+
+export const interFont = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 type FontAreas = "body" | "heading" | "cta";
 
@@ -10,9 +22,9 @@ export type TextAlignment = "left" | "center" | "right";
 
 export type HeadingTypes = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 export const fonts: Record<FontAreas, CSSProperties["fontFamily"]> = {
-  body: OPEN_SANS,
-  heading: OPEN_SANS,
-  cta: OPEN_SANS,
+  body: interFont.style.fontFamily,
+  heading: interFont.style.fontFamily,
+  cta: interFont.style.fontFamily,
 };
 
 export type FontSizes =
@@ -26,12 +38,42 @@ export const fontSizes: Record<
   FontSizes,
   { raw: number; px: Dimension; rem: Dimension }
 > = {
-  small: sizes.s12,
-  medium: sizes.s16,
-  mlarge: sizes.s24,
-  large: sizes.s32,
-  xlarge: sizes.s40,
-  xxlarge: sizes.s64,
+  // small: sizes.s12,
+  // medium: sizes.s16,
+  // mlarge: sizes.s24,
+  // large: sizes.s32,
+  // xlarge: sizes.s40,
+  // xxlarge: sizes.s64,
+  small: {
+    raw: 12,
+    px: "12px",
+    rem: toRem(12),
+  },
+  medium: {
+    raw: 16,
+    px: "16px",
+    rem: toRem(16),
+  },
+  mlarge: {
+    raw: 24,
+    px: "24px",
+    rem: toRem(24),
+  },
+  large: {
+    raw: 32,
+    px: "32px",
+    rem: toRem(32),
+  },
+  xlarge: {
+    raw: 40,
+    px: "40px",
+    rem: toRem(40),
+  },
+  xxlarge: {
+    raw: 64,
+    px: "64px",
+    rem: toRem(64),
+  },
 };
 
 export const headingSizes: Record<HeadingTypes, Property.FontSize> = {
@@ -51,11 +93,4 @@ export const lineHeights: Record<HeadingTypes | "p", Property.LineHeight> = {
   h5: "1.2em",
   h6: "1.2em",
   p: "1.3em",
-};
-
-type FontWeights = "regular" | "bold" | "black";
-export const fontWeights: Record<FontWeights, number> = {
-  regular: 400,
-  bold: 700,
-  black: 900,
 };

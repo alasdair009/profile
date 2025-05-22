@@ -1,4 +1,3 @@
-import { rem } from "polished";
 import { CSSProperties } from "react";
 import variables from "./Effects.module.scss";
 

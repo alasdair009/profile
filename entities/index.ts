@@ -21,6 +21,7 @@ export {
   globalTextMaxWidth,
   globalDecorationMaxWidth,
   sizes,
+  toRem,
 } from "./design-tokens/dimensions";
 export type { Breakpoint, Dimension } from "./design-tokens/dimensions";
 

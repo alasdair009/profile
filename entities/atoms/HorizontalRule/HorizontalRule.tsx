@@ -8,6 +8,10 @@ type HorizontalRuleProps = {
    */
   decoration?: boolean;
   /**
+   * Curve the rule line.
+   */
+  curve?: boolean;
+  /**
    * Margin position above and below the line.
    */
   margin?: HorizontalRuleMarginOptions;
@@ -31,12 +35,13 @@ const getMarginClass = (margin: HorizontalRuleMarginOptions) => {
  */
 export function HorizontalRule({
   decoration = false,
+  curve = false,
   margin = "both",
   ...rest
 }: HorizontalRuleProps) {
   return (
     <hr
-      className={`${styles.root} ${decoration ? styles.Decoration : ""} ${getMarginClass(margin)}`}
+      className={`${styles.root} ${decoration ? styles.Decoration : ""} ${curve ? styles.curve : ""} ${getMarginClass(margin)}`}
       data-testid={HorizontalRule.name}
       {...rest}
     />

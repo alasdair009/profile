@@ -4,7 +4,6 @@ import {
   Container,
   Fire,
   Heading,
-  Link,
   Paragraph,
   Spacer,
   TextMask,

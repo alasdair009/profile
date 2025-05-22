@@ -1,11 +1,12 @@
 import { create } from "@storybook/theming/create";
 // @ts-ignore
 import amLogo from "./assets/am.svg";
+import { interFont } from "../entities/design-tokens/typography";
 
 export default create({
   base: "dark",
 
-  fontBase: '"OpenSans","Arial",sans-serif',
+  fontBase: interFont.style.fontFamily,
   fontCode: "monospace",
 
   brandTitle: "Alasdair Macrae",

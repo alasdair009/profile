@@ -5,9 +5,7 @@
 @use "sass:map";
 
 .root {
-  @include input.baseInputStyles;
-
-  height: dimensions.getSize(s48);
+  @include input.baseInputStyles($height: dimensions.getSize(s48));
 
   &::-webkit-file-upload-button {
     appearance: none;

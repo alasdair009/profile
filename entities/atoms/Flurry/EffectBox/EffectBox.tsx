@@ -1,7 +1,8 @@
 import { CSSProperties, HTMLAttributes } from "react";
-import { rem, rgba } from "polished";
+import { rgba } from "polished";
 import { LCG, lcgNextRand, makeLCG } from "@/lib/random";
 import styles from "./EffectBox.module.scss";
+import { toRem } from "@/entities";
 
 type EffectBoxProps = {
   particlesPerPlate: number;
@@ -19,7 +20,7 @@ export const generateParticles = (
   const particleLCG = makeLCG();
   let particleString: CSSProperties["boxShadow"] = "";
   for (let i = 0; i < numberOfParticles; i++) {
-    particleString += `${randomPosition(particleLCG)}vw ${randomPosition(particleLCG)}vh ${rem(size * 5)} ${rem(size * 3)} ${rgba(255, 255, 255, 0.5)}${i < numberOfParticles - 1 ? "," : ""} `;
+    particleString += `${randomPosition(particleLCG)}vw ${randomPosition(particleLCG)}vh ${toRem(size * 5)} ${toRem(size * 3)} ${rgba(255, 255, 255, 0.5)}${i < numberOfParticles - 1 ? "," : ""} `;
   }
   return particleString;
 };

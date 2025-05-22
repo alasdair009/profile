@@ -7,7 +7,7 @@
 @mixin paragraphStyles {
   color: var(--color) !important;
   display: block;
-  font-family: typography.$fontOpenSans !important;
+  font-family: typography.$fontInter !important;
   font-size: var(--font-size) !important;
   margin: var(--margin) !important;
   max-width: calc(100vw - #{rem.toRem(map.get(dimensions.$sizes, s16))});

@@ -1,7 +1,7 @@
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
 import { lcgNextRand, makeLCG } from "@/lib/random";
-import { rem } from "polished";
 import styles from "./Snow.module.scss";
+import { toRem } from "@/entities";
 
 type SnowProps = {
   /**
@@ -55,7 +55,7 @@ export function Snow({
       style={
         {
           "--numberOfFlakes": numberOfFlakes,
-          "--size": rem(size),
+          "--size": toRem(size),
           "--duration": duration,
           ...style,
         } as CSSProperties

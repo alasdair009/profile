@@ -1,8 +1,14 @@
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
-import { colors, fontSizes, FontSizes, sizes, TextAlignment } from "@/entities";
+import {
+  colors,
+  fontSizes,
+  FontSizes,
+  lineHeights,
+  sizes,
+  TextAlignment,
+} from "@/entities";
 import { Property } from "csstype";
 import styles from "./Paragraph.module.scss";
-import { lineHeights } from "@/entities/design-tokens/typography/typography";
 
 type ParagraphProps = {
   /**

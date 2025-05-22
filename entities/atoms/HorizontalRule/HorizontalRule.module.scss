@@ -72,4 +72,16 @@
       margin: calc(#{dimensions.getSize(s24)} - rem.toRem(2) * -1) auto;
     }
   }
+
+  &.curve {
+    margin: 0;
+    padding: dimensions.getSize(s32) 0;
+
+    &::before {
+      background: colors.$colorGreenGrass;
+      height: 100%;
+      mask: url(./pulse.svg) no-repeat center;
+      mask-size: 100% 100%;
+    }
+  }
 }

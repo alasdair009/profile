@@ -1,6 +1,5 @@
 import { CSSProperties, HTMLAttributes } from "react";
-import { sizes } from "@/entities";
-import { rem } from "polished";
+import { sizes, toRem } from "@/entities";
 import { lcgNextRand, makeLCG } from "@/lib/random";
 import styles from "./Fire.module.scss";
 
@@ -62,7 +61,7 @@ export function Fire({
           "--baseColor": baseColor,
           "--duration": duration,
           "--numberOfParticles": numberOfParticles,
-          "--particleSize": rem(particleSize),
+          "--particleSize": toRem(particleSize),
           ...style,
         } as CSSProperties
       }

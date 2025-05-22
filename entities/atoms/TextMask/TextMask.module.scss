@@ -40,7 +40,7 @@
 
 .text {
   alignment-baseline: middle;
-  font-family: typography.$fontOpenSans;
+  font-family: typography.$fontInter;
   font-size: typography.getFontSize(large);
   font-weight: map.get(typography.$fontWeights, black);
   text-anchor: middle;

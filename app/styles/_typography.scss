@@ -2,7 +2,7 @@
 @use "./helpers/rem";
 @use "sass:map";
 
-$fontOpenSans: "OpenSans", "Arial", sans-serif;
+$fontInter: Inter;
 
 $fontSizes: (
   small: map.get(dimensions.$sizes, s12),
