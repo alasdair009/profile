@@ -1,9 +1,6 @@
 import type { Preview } from "@storybook/react";
 import theme from "./theme";
-import {
-  breakpoints,
-  device,
-} from "../entities/design-tokens/dimensions/dimensions";
+import { breakpoints, device } from "../entities/design-tokens/dimensions";
 import { ViewportMap } from "@storybook/addon-viewport";
 import "../app/styles/global.scss";
 import { withFont } from "./decorators/withFont";
