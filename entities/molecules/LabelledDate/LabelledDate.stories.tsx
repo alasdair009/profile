@@ -1,6 +1,6 @@
 import { LabelledDate } from "./LabelledDate";
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, within } from "storybook/test";
 import { BaseDate, BaseInput } from "@/entities";
 
 const meta: Meta<typeof LabelledDate> = {

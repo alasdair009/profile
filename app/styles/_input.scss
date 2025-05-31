@@ -7,10 +7,14 @@
 $fieldHeight: rem.toRem(map.get(dimensions.$sizes, s40));
 $invalidColor: rgba(colors.$colorRedHeat, 0.15);
 
-@mixin baseInputStyles($height: $fieldHeight) {
+@mixin baseInputStyles(
+  $height: $fieldHeight,
+  $backgroundColor: colors.$colorGreyDark,
+  $border: 1px solid colors.$colorGreenGrass
+) {
   appearance: none;
-  background-color: colors.$colorGreyDark;
-  border: 1px solid colors.$colorGreenGrass;
+  background-color: $backgroundColor;
+  border: $border;
   color: colors.$colorWhiteGhost;
   display: block;
   font-size: rem.toRem(map.get(typography.$fontSizes, medium));
@@ -24,7 +28,7 @@ $invalidColor: rgba(colors.$colorRedHeat, 0.15);
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus {
     -webkit-text-fill-color: colors.$colorWhiteGhost;
-    -webkit-box-shadow: 0 0 0 $height colors.$colorGreyDark inset;
+    -webkit-box-shadow: 0 0 0 $height $backgroundColor inset;
   }
 
   &:user-invalid {

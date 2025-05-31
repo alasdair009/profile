@@ -1,7 +1,7 @@
-import type { Preview } from "@storybook/react";
+import type { Preview } from "@storybook/nextjs";
 import theme from "./theme";
 import { breakpoints, device } from "../entities/design-tokens/dimensions";
-import { ViewportMap } from "@storybook/addon-viewport";
+import { ViewportMap } from "storybook/viewport";
 import "../app/styles/global.scss";
 import { withFont } from "./decorators/withFont";
 

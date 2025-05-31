@@ -1,6 +1,6 @@
 import { Heading, HeadingProps } from "./Heading";
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, within } from "storybook/test";
 import { colors, Flurry } from "@/entities";
 
 const meta: Meta<typeof Heading> = {

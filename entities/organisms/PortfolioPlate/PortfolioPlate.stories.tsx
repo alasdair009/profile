@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import { PortfolioPlate } from "./PortfolioPlate";
 import jdsLogo from "../../assets/jds-logo.svg";
 import jagexLauncherImage from "../../assets/launcher.webp";
 import { colors, Link, Paragraph } from "@/entities";
-import { expect, within } from "@storybook/test";
+import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof PortfolioPlate> = {
   component: PortfolioPlate,

@@ -1,7 +1,7 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import { Skill } from "./Skill";
 import { colors } from "@/entities";
-import { expect, within } from "@storybook/test";
+import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof Skill> = {
   component: Skill,

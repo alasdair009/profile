@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import { Figure } from "./Figure";
-import { expect, within } from "@storybook/test";
+import { expect, within } from "storybook/test";
 import amLogo from "../../assets/am.svg";
 
 const meta: Meta<typeof Figure> = {

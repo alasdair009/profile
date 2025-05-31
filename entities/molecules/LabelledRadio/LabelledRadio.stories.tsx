@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import { LabelledRadio } from "./LabelledRadio";
-import { expect, within } from "@storybook/test";
+import { expect, within } from "storybook/test";
 import { BaseRadio } from "../../atoms/BaseRadio";
 
 const meta: Meta<typeof LabelledRadio> = {

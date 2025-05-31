@@ -1,7 +1,7 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import { Article, getNiceDate } from "./Article";
 import amLogo from "../../assets/am.svg";
-import { expect, within } from "@storybook/test";
+import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof Article> = {
   component: Article,

@@ -1,6 +1,6 @@
 import { SocialMediaBar } from "./SocialMediaBar";
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, within } from "storybook/test";
 import { SocialMediaLink } from "../../atoms/SocialMediaLink";
 
 const meta: Meta<typeof SocialMediaBar> = {

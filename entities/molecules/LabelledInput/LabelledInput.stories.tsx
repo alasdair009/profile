@@ -1,6 +1,6 @@
 import { LabelledInput } from "./LabelledInput";
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, within } from "storybook/test";
 import { BaseInput } from "@/entities";
 
 const meta: Meta<typeof LabelledInput> = {

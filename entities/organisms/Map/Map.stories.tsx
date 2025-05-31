@@ -1,6 +1,6 @@
 import { Map } from "./Map";
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof Map> = {
   component: Map,

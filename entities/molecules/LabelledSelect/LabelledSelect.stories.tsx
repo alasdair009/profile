@@ -1,6 +1,6 @@
 import { LabelledSelect } from "./LabelledSelect";
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, userEvent, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, userEvent, within } from "storybook/test";
 
 const meta: Meta<typeof LabelledSelect> = {
   component: LabelledSelect,

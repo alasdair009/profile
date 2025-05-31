@@ -1,7 +1,7 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import { Orbit } from "./Orbit";
 import { Button, colors } from "@/entities";
-import { expect, userEvent, waitFor, within } from "@storybook/test";
+import { expect, userEvent, waitFor, within } from "storybook/test";
 
 const meta: Meta<typeof Orbit> = {
   component: Orbit,

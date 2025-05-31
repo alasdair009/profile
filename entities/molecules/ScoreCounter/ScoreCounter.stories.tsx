@@ -1,6 +1,6 @@
 import { ScoreCounter } from "./ScoreCounter";
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, userEvent, waitFor, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, userEvent, waitFor, within } from "storybook/test";
 import { Progress } from "@/entities/atoms/Progress";
 
 const meta: Meta<typeof ScoreCounter> = {

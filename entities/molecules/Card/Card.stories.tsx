@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import { Card } from "./Card";
-import { expect, within } from "@storybook/test";
+import { expect, within } from "storybook/test";
 import { Link } from "../../atoms/Link";
 
 const meta: Meta<typeof Card> = {

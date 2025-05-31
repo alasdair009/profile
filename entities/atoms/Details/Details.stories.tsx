@@ -1,6 +1,6 @@
 import { Details } from "./Details";
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, within } from "storybook/test";
 import { Heading } from "../Heading";
 import { Paragraph } from "../Paragraph";
 

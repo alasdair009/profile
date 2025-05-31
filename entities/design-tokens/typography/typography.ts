@@ -14,6 +14,7 @@ export const fontWeights: Record<FontWeights, number> = {
 export const interFont = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-inter",
 });
 
 type FontAreas = "body" | "heading" | "cta";
@@ -22,9 +23,9 @@ export type TextAlignment = "left" | "center" | "right";
 
 export type HeadingTypes = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 export const fonts: Record<FontAreas, CSSProperties["fontFamily"]> = {
-  body: interFont.style.fontFamily,
-  heading: interFont.style.fontFamily,
-  cta: interFont.style.fontFamily,
+  body: interFont.variable,
+  heading: interFont.variable,
+  cta: interFont.variable,
 };
 
 export type FontSizes =

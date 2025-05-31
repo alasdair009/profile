@@ -1,6 +1,6 @@
 import { Button } from "./Button";
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, fn, userEvent, waitFor, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, fn, userEvent, waitFor, within } from "storybook/test";
 
 const meta: Meta<typeof Button> = {
   component: Button,

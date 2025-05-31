@@ -1,7 +1,7 @@
 import { Video } from "./Video";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import trampolinePosterImage from "../../assets/trampoline-poster.webp";
-import { expect, within } from "@storybook/test";
+import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof Video> = {
   component: Video,

@@ -5,11 +5,9 @@
 @use "../../../app/styles/helpers/rem";
 
 .root {
-  @include input.baseInputStyles;
-
-  background: transparent;
-  border: none;
   cursor: ew-resize;
+
+  @include input.baseInputStyles($backgroundColor: transparent, $border: none);
 
   &::-webkit-slider-thumb {
     appearance: none;

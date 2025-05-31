@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import { NetworkChart } from "./NetworkChart";
-import { expect, fn, waitFor, within } from "@storybook/test";
+import { expect, fn, waitFor, within } from "storybook/test";
 
 const meta: Meta<typeof NetworkChart> = {
   component: NetworkChart,

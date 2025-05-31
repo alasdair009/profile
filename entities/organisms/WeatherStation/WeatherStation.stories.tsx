@@ -1,6 +1,6 @@
 import { WeatherStation, windDirections } from "./WeatherStation";
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, within } from "storybook/test";
 
 const midnight = new Date("2025-01-01 00:00:00");
 const dawn = new Date("2025-01-01 07:00:00");

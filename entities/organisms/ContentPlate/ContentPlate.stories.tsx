@@ -1,8 +1,8 @@
 import { ContentPlate } from "./ContentPlate";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import { colors, Flame, Heading, Paragraph } from "@/entities";
 import amLogo from "../../assets/am.svg";
-import { expect, within } from "@storybook/test";
+import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof ContentPlate> = {
   component: ContentPlate,

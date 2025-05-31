@@ -1,6 +1,6 @@
 import { LabelledTextArea } from "./LabelledTextArea";
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, userEvent, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, userEvent, within } from "storybook/test";
 import { colors } from "../../design-tokens/colors";
 
 const meta: Meta<typeof LabelledTextArea> = {

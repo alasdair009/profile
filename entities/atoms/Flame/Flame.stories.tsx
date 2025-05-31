@@ -1,6 +1,6 @@
 import { defaultBaseColor, Flame } from "./Flame";
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, within } from "storybook/test";
 import { colors } from "@/entities";
 
 const meta: Meta<typeof Flame> = {

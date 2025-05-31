@@ -1,6 +1,6 @@
 import { ErrorText } from "./ErrorText";
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof ErrorText> = {
   component: ErrorText,

@@ -1,6 +1,6 @@
 import { SocialMediaLink } from "./SocialMediaLink";
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, userEvent, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, userEvent, within } from "storybook/test";
 
 const meta: Meta<typeof SocialMediaLink> = {
   component: SocialMediaLink,

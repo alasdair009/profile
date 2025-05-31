@@ -1,7 +1,7 @@
 import { Timeline } from "./Timeline";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import jagexLogo from "../../assets/jagex-logo.svg";
-import { expect, within } from "@storybook/test";
+import { expect, within } from "storybook/test";
 import { TimelineElement } from "@/entities/organisms/Timeline/TimelineElement";
 
 const meta: Meta<typeof Timeline> = {

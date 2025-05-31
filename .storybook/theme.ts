@@ -1,4 +1,4 @@
-import { create } from "@storybook/theming/create";
+import { create } from "storybook/theming/create";
 // @ts-ignore
 import amLogo from "./assets/am.svg";
 import { interFont } from "../entities/design-tokens/typography";

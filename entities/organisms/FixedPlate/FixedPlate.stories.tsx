@@ -1,6 +1,6 @@
 import { FixedPlate } from "./FixedPlate";
-import { Meta, StoryObj } from "@storybook/react";
-import { expect, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs";
+import { expect, within } from "storybook/test";
 import skyImage from "@/entities/assets/sky.webp";
 
 const meta: Meta<typeof FixedPlate> = {
