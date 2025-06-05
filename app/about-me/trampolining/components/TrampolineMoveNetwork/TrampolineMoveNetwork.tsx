@@ -1,19 +1,8 @@
 import mysql, { ConnectionOptions, RowDataPacket } from "mysql2/promise";
 import { ErrorText, Heading, Paragraph } from "@/entities";
-// import { GraphEdge, GraphNode } from "reagraph";
+import { GraphEdge, GraphNode } from "reagraph";
 import styles from "./TrampolineMoveNetwork.module.scss";
-import dynamic from "next/dynamic";
-import { NetworkChart } from "@/entities/molecules/NetworkChart";
-
-// const NetworkChart = dynamic(
-//   () =>
-//     import("@/entities/molecules/NetworkChart/").then(
-//       (mod) => mod.NetworkChart
-//     ),
-//   {
-//     ssr: false,
-//   }
-// );
+import TrampolineMoveNetworkWrapper from "@/app/about-me/trampolining/components/TrampolineMoveNetwork/TrampolineMoveNetworkWrapper";
 
 const connectionOptions: ConnectionOptions = {
   host: `${process.env.CANGAROOS_DB_HOST}`,
@@ -23,10 +12,8 @@ const connectionOptions: ConnectionOptions = {
 };
 
 const getMoveData = async () => {
-  // let nodes: GraphNode[] = [];
-  // let edges: GraphEdge[] = [];
-  let nodes: unknown[] = [];
-  let edges: unknown[] = [];
+  let nodes: GraphNode[] = [];
+  let edges: GraphEdge[] = [];
   let error = "ok";
   try {
     const connection = await mysql.createConnection(connectionOptions);
@@ -39,7 +26,7 @@ const getMoveData = async () => {
     );
 
     movesResults.forEach((row) => {
-      const node: unknown = {
+      const node: GraphNode = {
         id: `${row.id}`,
         label: row.title,
         subLabel: `${row.altnames}`,
@@ -57,7 +44,7 @@ const getMoveData = async () => {
     });
 
     edgesResults.forEach((row) => {
-      const edge: unknown = {
+      const edge: GraphEdge = {
         id: `${row.move2}->${row.move1}`,
         source: `${row.move2}`,
         target: `${row.move1}`,
@@ -86,7 +73,7 @@ export default async function TrampolineMoveNetwork() {
         right click on a node to view information about the skill.
       </Paragraph>
       {nodes.length && edges.length ? (
-        <NetworkChart nodes={nodes} edges={edges} />
+        <TrampolineMoveNetworkWrapper nodes={nodes} edges={edges} />
       ) : (
         <ErrorText>Could not connect to move database: {error}</ErrorText>
       )}
