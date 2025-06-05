@@ -79,8 +79,9 @@ export function NetworkChart({
         layoutType="treeTd3d"
         onNodeClick={onNodeClick}
         sizingType="centrality"
-        draggable={true}
+        draggable={false}
         edgeInterpolation="curved"
+        labelType="nodes"
         contextMenu={({ data, onClose }) => (
           <ContextMenu
             onClose={onClose}

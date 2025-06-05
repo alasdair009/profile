@@ -1,17 +1,18 @@
 import type { Preview } from "@storybook/nextjs";
 import theme from "./theme";
 import { breakpoints, device } from "../entities/design-tokens/dimensions";
+import type { Breakpoint } from "../entities/design-tokens/dimensions";
 import { ViewportMap } from "storybook/viewport";
 import "../app/styles/global.scss";
 import { withFont } from "./decorators/withFont";
 
 const customViewports: ViewportMap = {};
 
-(Object.keys(breakpoints) as (keyof typeof breakpoints)[]).forEach(
+(Object.keys(breakpoints) as Array<keyof typeof breakpoints>).forEach(
   (breakpointKey) => {
     if (breakpoints[breakpointKey] > 0) {
       customViewports[breakpointKey] = {
-        name: `${breakpointKey} (${device[breakpointKey] ? device[breakpointKey] : `min-width: ${breakpoints[breakpointKey]}px`})`,
+        name: `${breakpointKey} (${device[breakpointKey as Breakpoint] ? device[breakpointKey as Breakpoint] : `min-width: ${breakpoints[breakpointKey]}px`})`,
         styles: {
           height: "100%",
           width: `${breakpoints[breakpointKey]}px`,
