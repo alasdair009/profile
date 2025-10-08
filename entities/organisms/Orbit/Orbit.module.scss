@@ -79,7 +79,8 @@
 
 .core {
   aspect-ratio: 1;
-  background-image: radial-gradient(transparent 40%, colors.$colorWhiteGhost),
+  background-image:
+    radial-gradient(transparent 40%, colors.$colorWhiteGhost),
     linear-gradient(
       rgba(colors.$colorWhiteGhost, 0.8),
       rgba(colors.$colorWhiteGhost, 0.8)
