@@ -1,7 +1,7 @@
 import { LabelledRange } from "./LabelledRange";
 import { Meta, StoryObj } from "@storybook/nextjs";
 import { expect, within } from "storybook/test";
-import { BaseFile } from "@/entities";
+import { BaseRange } from "@/entities";
 
 const meta: Meta<typeof LabelledRange> = {
   component: LabelledRange,
@@ -22,13 +22,13 @@ export const Default: StoryObj<typeof LabelledRange> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const labelledInputElement = canvas.getByTestId(LabelledRange.name);
-    await canvas.findByTestId(BaseFile.name);
+    await canvas.findByTestId(BaseRange.name);
 
     await expect(labelledInputElement).toBeInTheDocument();
-    await expect(canvas.getByText("Text entry")).toBeInTheDocument();
-    await expect(canvas.getByTestId(BaseFile.name)).toHaveAttribute(
+    await expect(canvas.getByText("Range entry")).toBeInTheDocument();
+    await expect(canvas.getByTestId(BaseRange.name)).toHaveAttribute(
       "type",
-      "text"
+      "range"
     );
   },
 };
@@ -41,11 +41,13 @@ export const Required: StoryObj<typeof LabelledRange> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const labelledInputElement = canvas.getByTestId(LabelledRange.name);
-    await canvas.findByTestId(BaseFile.name);
+    await canvas.findByTestId(BaseRange.name);
 
     await expect(labelledInputElement).toBeInTheDocument();
     await expect(canvas.getByText("Required entry")).toBeInTheDocument();
-    await expect(canvas.getByTestId(BaseFile.name)).toHaveAttribute("required");
+    await expect(canvas.getByTestId(BaseRange.name)).toHaveAttribute(
+      "required"
+    );
   },
 };
 
@@ -57,9 +59,9 @@ export const IsInvalid: StoryObj<typeof LabelledRange> = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    await canvas.findByTestId(BaseFile.name);
+    await canvas.findByTestId(BaseRange.name);
 
-    await expect(canvas.getByTestId(BaseFile.name)).toHaveStyle(
+    await expect(canvas.getByTestId(BaseRange.name)).toHaveStyle(
       "background-color: rgba(223,28,65,0.15)"
     );
   },

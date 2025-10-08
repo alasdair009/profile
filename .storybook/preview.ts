@@ -54,7 +54,7 @@ const preview: Preview = {
       },
     },
     viewport: {
-      viewports: customViewports,
+      options: customViewports,
     },
   },
   decorators: [withFont],

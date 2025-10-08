@@ -22,10 +22,10 @@ export const Default: StoryObj<typeof LabelledFile> = {
     await canvas.findByTestId(BaseFile.name);
 
     await expect(labelledInputElement).toBeInTheDocument();
-    await expect(canvas.getByText("Text entry")).toBeInTheDocument();
+    await expect(canvas.getByText("File entry")).toBeInTheDocument();
     await expect(canvas.getByTestId(BaseFile.name)).toHaveAttribute(
       "type",
-      "text"
+      "file"
     );
   },
 };
