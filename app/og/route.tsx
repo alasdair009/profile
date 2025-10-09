@@ -1,20 +1,27 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
-import { colors } from "@/entities";
 import { darken } from "polished";
 import { CSSProperties } from "react";
 
 export const runtime = "edge";
 
+const greenGrass = "#2e9b26";
+const whiteGhost = "#fff";
+const blackEvil = "#000";
+const trampolineBedColor1 = whiteGhost;
+const trampolineBedColor2 = `#bfbfbf`;
+
 const galleryStyles: CSSProperties = {
   background: "black",
-  border: `1px solid ${colors.greenGrass}`,
+  border: `1px solid ${greenGrass}`,
   display: "flex",
   height: 100,
   objectFit: "cover",
   overflow: "hidden",
   width: 140,
 };
+
+const cDNFolder = "https://files.alasdairmacrae.co.uk/og";
 
 export async function GET(request: Request) {
   try {
@@ -25,56 +32,13 @@ export async function GET(request: Request) {
       ? searchParams.get("title")?.slice(0, 100)
       : "Online Portfolio";
 
-    const image = await fetch(new URL("./icon.png", import.meta.url)).then(
-      (res) => res.arrayBuffer()
-    );
-
-    const trampoline = await fetch(
-      new URL("./trampoline.png", import.meta.url)
-    ).then((res) => res.arrayBuffer());
-
-    const jagex = await fetch(new URL("./jagex.png", import.meta.url)).then(
-      (res) => res.arrayBuffer()
-    );
-
-    const nemesis = await fetch(new URL("./nemesis.png", import.meta.url)).then(
-      (res) => res.arrayBuffer()
-    );
-
-    const runefest = await fetch(
-      new URL("./runefest.png", import.meta.url)
-    ).then((res) => res.arrayBuffer());
-
-    const skylines = await fetch(
-      new URL("./skylines.png", import.meta.url)
-    ).then((res) => res.arrayBuffer());
-
-    const talk = await fetch(new URL("./talk.png", import.meta.url)).then(
-      (res) => res.arrayBuffer()
-    );
-
-    const css = await fetch(new URL("./css.png", import.meta.url)).then((res) =>
-      res.arrayBuffer()
-    );
-
-    const vercel = await fetch(new URL("./vercel.png", import.meta.url)).then(
-      (res) => res.arrayBuffer()
-    );
-
-    const rain = await fetch(new URL("./rain.png", import.meta.url)).then(
-      (res) => res.arrayBuffer()
-    );
-
-    const trampolineBedColor1 = `#fff`;
-    const trampolineBedColor2 = `#bfbfbf`;
-
     return new ImageResponse(
       (
         <div
           style={{
             alignItems: "center",
-            background: `radial-gradient(ellipse at top, rgba(20, 44, 22, 0.5), rgba(36, 96, 44, 0.5)), radial-gradient(${colors.blackEvil} 75%, ${darken(0.3, colors.greenGrass)})`,
-            color: colors.whiteGhost,
+            background: `radial-gradient(ellipse at top, rgba(20, 44, 22, 0.5), rgba(36, 96, 44, 0.5)), radial-gradient(${blackEvil} 75%, ${darken(0.3, greenGrass)})`,
+            color: whiteGhost,
             display: "flex",
             flex: 1,
             flexDirection: "column",
@@ -117,7 +81,7 @@ export async function GET(request: Request) {
               }}
             >
               <img
-                src={image as unknown as string}
+                src={`${cDNFolder}/icon.png`}
                 style={{ height: 200 }}
                 alt="AM logo"
               />
@@ -133,39 +97,31 @@ export async function GET(request: Request) {
               marginBottom: "auto",
             }}
           >
+            <img src={`${cDNFolder}/jagex.png`} alt="" style={galleryStyles} />
             <img
-              src={jagex as unknown as string}
+              src={`${cDNFolder}/nemesis.png`}
               alt=""
               style={galleryStyles}
             />
             <img
-              src={nemesis as unknown as string}
+              src={`${cDNFolder}/runefest.png`}
               alt=""
               style={galleryStyles}
             />
             <img
-              src={runefest as unknown as string}
+              src={`${cDNFolder}/skylines.png`}
               alt=""
               style={galleryStyles}
             />
             <img
-              src={skylines as unknown as string}
+              src={`${cDNFolder}/trampoline.png`}
               alt=""
               style={galleryStyles}
             />
-            <img
-              src={trampoline as unknown as string}
-              alt=""
-              style={galleryStyles}
-            />
-            <img src={talk as unknown as string} alt="" style={galleryStyles} />
-            <img src={css as unknown as string} alt="" style={galleryStyles} />
-            <img
-              src={vercel as unknown as string}
-              alt=""
-              style={galleryStyles}
-            />
-            <img src={rain as unknown as string} alt="" style={galleryStyles} />
+            <img src={`${cDNFolder}/talk.png`} alt="" style={galleryStyles} />
+            <img src={`${cDNFolder}/css.png`} alt="" style={galleryStyles} />
+            <img src={`${cDNFolder}/vercel.png`} alt="" style={galleryStyles} />
+            <img src={`${cDNFolder}/rain.png`} alt="" style={galleryStyles} />
           </div>
         </div>
       ),
