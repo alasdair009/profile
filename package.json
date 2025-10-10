@@ -32,7 +32,8 @@
     "react-dom": "^19.1.0",
     "react-intersection-observer": "^9.15.1",
     "react-syntax-highlighter": "^15.6.1",
-    "reagraph": "^4.24.0"
+    "reagraph": "^4.24.0",
+    "three": "^0.180.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.1",
