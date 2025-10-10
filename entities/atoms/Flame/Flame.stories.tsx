@@ -55,6 +55,7 @@ const meta: Meta<typeof Flame> = {
       },
     },
   },
+  tags: ["no-snaps"],
 };
 export default meta;
 

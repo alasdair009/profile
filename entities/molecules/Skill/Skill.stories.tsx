@@ -27,7 +27,7 @@ export default meta;
 export const Default: StoryObj<typeof Skill> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
-    const skillElement = canvas.getByTestId(Skill.name);
+    const skillElement = canvas.getByTestId(Skill.displayName);
 
     await expect(skillElement).toBeInTheDocument();
     await expect(canvas.getByText(args.heading)).toBeInTheDocument();

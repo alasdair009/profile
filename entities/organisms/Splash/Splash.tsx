@@ -8,7 +8,7 @@ export function Splash({ ...rest }: HTMLAttributes<HTMLDivElement>) {
       className={styles.root}
       itemScope={true}
       itemType="https://schema.org/Person"
-      data-testid={Splash.name}
+      data-testid={Splash.displayName}
       {...rest}
     >
       <div className={styles.inner}>
@@ -39,3 +39,4 @@ export function Splash({ ...rest }: HTMLAttributes<HTMLDivElement>) {
     </section>
   );
 }
+Splash.displayName = "Splash";

@@ -21,7 +21,11 @@ type StatBoxProps = {
  */
 export function StatBox({ heading, name, value, ...rest }: StatBoxProps) {
   return (
-    <article className={styles.root} data-testid={StatBox.name} {...rest}>
+    <article
+      className={styles.root}
+      data-testid={StatBox.displayName}
+      {...rest}
+    >
       <Heading level="h4" as="h2" align="center">
         {heading}
       </Heading>
@@ -31,3 +35,4 @@ export function StatBox({ heading, name, value, ...rest }: StatBoxProps) {
     </article>
   );
 }
+StatBox.displayName = "StatBox";

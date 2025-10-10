@@ -18,12 +18,12 @@ export type ProgressProps = {
 export function Progress({ max = 100, value = 100, ...rest }: ProgressProps) {
   const safeValue = value > max ? max : value;
   return (
-    <div className={styles.root} data-testid={Progress.name} {...rest}>
+    <div className={styles.root} data-testid={Progress.displayName} {...rest}>
       <progress
         className={styles.progressElement}
         max={100}
         value={safeValue}
-        data-testid={`${Progress.name}Element`}
+        data-testid={`${Progress.displayName}Element`}
         style={
           {
             "--max": 100,
@@ -34,3 +34,4 @@ export function Progress({ max = 100, value = 100, ...rest }: ProgressProps) {
     </div>
   );
 }
+Progress.displayName = "Progress";

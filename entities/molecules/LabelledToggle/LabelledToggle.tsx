@@ -14,9 +14,10 @@ type LabelledToggleProps = {
  */
 export function LabelledToggle({ name, label, ...rest }: LabelledToggleProps) {
   return (
-    <div className={styles.root} data-testid={LabelledToggle.name}>
+    <div className={styles.root} data-testid={LabelledToggle.displayName}>
       <BaseLabel as="span">{label}</BaseLabel>
       <BaseToggle {...rest} />
     </div>
   );
 }
+LabelledToggle.displayName = "LabelledToggle";

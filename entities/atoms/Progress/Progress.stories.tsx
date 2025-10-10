@@ -40,8 +40,8 @@ const progressTest = async (
   canvasElement: HTMLElement
 ) => {
   const canvas = within(canvasElement);
-  const progressWrapper = canvas.getByTestId(Progress.name);
-  const progressElement = canvas.getByTestId(`${Progress.name}Element`);
+  const progressWrapper = canvas.getByTestId(Progress.displayName);
+  const progressElement = canvas.getByTestId(`${Progress.displayName}Element`);
 
   await expect(progressWrapper).toBeInTheDocument();
   await expect(progressElement).toBeInTheDocument();

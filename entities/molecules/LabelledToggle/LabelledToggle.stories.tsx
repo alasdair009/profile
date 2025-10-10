@@ -15,7 +15,7 @@ export default meta;
 export const Default: StoryObj<typeof LabelledToggle> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
-    const checkboxElement = canvas.getByTestId(BaseToggle.name);
+    const checkboxElement = canvas.getByTestId(BaseToggle.displayName);
     const labelElement = canvas.getByText("Toggle entry");
 
     await expect(checkboxElement).toBeInTheDocument();
@@ -35,7 +35,7 @@ export const On: StoryObj<typeof LabelledToggle> = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const checkboxElement = canvas.getByTestId(BaseToggle.name);
+    const checkboxElement = canvas.getByTestId(BaseToggle.displayName);
     const labelElement = canvas.getByText("Toggle entry");
 
     await expect(checkboxElement).toBeInTheDocument();

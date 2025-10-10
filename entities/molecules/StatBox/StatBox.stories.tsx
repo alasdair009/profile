@@ -15,7 +15,7 @@ export default meta;
 export const Default: StoryObj<typeof StatBox> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
-    const statBoxElement = canvas.getByTestId(StatBox.name);
+    const statBoxElement = canvas.getByTestId(StatBox.displayName);
 
     await expect(statBoxElement).toBeInTheDocument();
     await expect(canvas.getByText(args.heading)).toBeInTheDocument();

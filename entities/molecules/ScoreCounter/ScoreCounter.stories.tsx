@@ -24,8 +24,10 @@ export default meta;
 export const Default: StoryObj<typeof ScoreCounter> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
-    const networkChartElement = canvas.getByTestId(ScoreCounter.name);
-    const progressElement = canvas.getByTestId(`${Progress.name}Element`);
+    const networkChartElement = canvas.getByTestId(ScoreCounter.displayName);
+    const progressElement = canvas.getByTestId(
+      `${Progress.displayName}Element`
+    );
 
     await expect(networkChartElement).toBeInTheDocument();
     await expect(progressElement).toHaveAttribute("max", "100");
@@ -38,8 +40,10 @@ export const Fifty: StoryObj<typeof ScoreCounter> = {
   },
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
-    const networkChartElement = canvas.getByTestId(ScoreCounter.name);
-    const progressElement = canvas.getByTestId(`${Progress.name}Element`);
+    const networkChartElement = canvas.getByTestId(ScoreCounter.displayName);
+    const progressElement = canvas.getByTestId(
+      `${Progress.displayName}Element`
+    );
 
     await expect(networkChartElement).toBeInTheDocument();
     await expect(progressElement).toHaveAttribute("max", "100");

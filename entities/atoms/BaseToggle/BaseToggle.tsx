@@ -21,9 +21,10 @@ export function BaseToggle({ checked = false, ...rest }: BaseToggleProps) {
     <input
       className={styles.root}
       type="checkbox"
-      data-testid={BaseToggle.name}
+      data-testid={BaseToggle.displayName}
       defaultChecked={checked}
       {...rest}
     />
   );
 }
+BaseToggle.displayName = "BaseToggle";

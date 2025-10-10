@@ -42,7 +42,7 @@ export function Skill({
   return (
     <article
       className={styles.root}
-      data-testid={Skill.name}
+      data-testid={Skill.displayName}
       style={
         {
           ...style,
@@ -65,3 +65,4 @@ export function Skill({
     </article>
   );
 }
+Skill.displayName = "Skill";

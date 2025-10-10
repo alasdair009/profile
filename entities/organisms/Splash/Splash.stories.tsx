@@ -13,7 +13,7 @@ export default meta;
 export const Default: StoryObj<typeof Splash> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const splashElement = canvas.getByTestId(Splash.name);
+    const splashElement = canvas.getByTestId(Splash.displayName);
 
     await expect(splashElement).toBeInTheDocument();
   },

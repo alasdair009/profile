@@ -28,7 +28,11 @@ export function Error({
   ...rest
 }: ErrorProps) {
   return (
-    <Container className={styles.root} data-testid={Error.name} {...rest}>
+    <Container
+      className={styles.root}
+      data-testid={Error.displayName}
+      {...rest}
+    >
       <Spacer multiplier={4} />
       <Heading align="center">{errorHeading}</Heading>
       <div className={styles.inner}>
@@ -46,7 +50,7 @@ export function Error({
           />
         </div>
       </div>
-      <Paragraph align="center" data-testid={`${Error.name}Text`}>
+      <Paragraph align="center" data-testid={`${Error.displayName}Text`}>
         {errorText}
       </Paragraph>
       <Spacer />
@@ -55,3 +59,4 @@ export function Error({
     </Container>
   );
 }
+Error.displayName = "Error";

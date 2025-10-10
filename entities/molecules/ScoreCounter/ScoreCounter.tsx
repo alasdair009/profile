@@ -52,7 +52,7 @@ export function ScoreCounter({ value = 100, ...rest }: ScoreCounterProps) {
   return (
     <div
       className={styles.root}
-      data-testid={ScoreCounter.name}
+      data-testid={ScoreCounter.displayName}
       ref={ref}
       style={{ "--set-counter": progressValue } as CSSProperties}
       {...rest}
@@ -61,3 +61,4 @@ export function ScoreCounter({ value = 100, ...rest }: ScoreCounterProps) {
     </div>
   );
 }
+ScoreCounter.displayName = "ScoreCounter";
