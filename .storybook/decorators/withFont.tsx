@@ -1,14 +1,11 @@
 import { DecoratorFunction } from "@storybook/core/csf";
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-});
+import "@fontsource-variable/inter";
 
 export const withFont: DecoratorFunction = (Story) => {
   return (
-    <div className={inter.className}>
+    <div
+      style={{ fontFamily: "'Inter Variable', 'Inter', system-ui, sans-serif" }}
+    >
       <Story />
     </div>
   );

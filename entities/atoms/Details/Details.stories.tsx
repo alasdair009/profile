@@ -1,8 +1,7 @@
 import { Details } from "./Details";
 import { Meta, StoryObj } from "@storybook/nextjs";
-import { expect, within } from "storybook/test";
-import { Heading } from "../Heading";
-import { Paragraph } from "../Paragraph";
+import { expect, waitFor, within } from "storybook/test";
+import { Heading, Paragraph } from "@/entities";
 
 const meta: Meta<typeof Details> = {
   component: Details,
@@ -29,9 +28,10 @@ export default meta;
 export const Default: StoryObj<typeof Details> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
-    const summaryElement = canvas.getByText(args.summary);
 
-    await expect(summaryElement).toBeInTheDocument();
+    await waitFor(() =>
+      expect(canvas.getByText(args.summary)).toBeInTheDocument()
+    );
   },
 };
 
@@ -54,12 +54,15 @@ export const Accordion: StoryObj<typeof Details> = {
   ),
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
-    const summaryElement1 = canvas.getByText("First details");
-    const summaryElement2 = canvas.getByText("Second details");
-    const summaryElement3 = canvas.getByText("Third details");
 
-    await expect(summaryElement1).toBeInTheDocument();
-    await expect(summaryElement2).toBeInTheDocument();
-    await expect(summaryElement3).toBeInTheDocument();
+    await waitFor(() =>
+      expect(canvas.getByText("First details")).toBeInTheDocument()
+    );
+    await waitFor(() =>
+      expect(canvas.getByText("Second details")).toBeInTheDocument()
+    );
+    await waitFor(() =>
+      expect(canvas.getByText("Third details")).toBeInTheDocument()
+    );
   },
 };

@@ -1,4 +1,4 @@
-@use "../styles/dimensions";
+@use "../../../app/styles/dimensions";
 
 .blogDescription {
   padding: 0 dimensions.getSize(s8);

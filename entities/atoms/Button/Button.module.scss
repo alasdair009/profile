@@ -21,6 +21,7 @@ $buttonClipPath: polygon(
   color: colors.$colorWhiteGhost;
   cursor: pointer;
   display: flex;
+  font-family: typography.$fontInter;
   font-size: typography.getFontSize(medium);
   font-weight: map.get(typography.$fontWeights, bold);
   height: dimensions.getSize(s48);

@@ -5,9 +5,7 @@ import type { GraphEdge, GraphNode } from "reagraph";
 
 const NetworkChart = dynamic(
   () =>
-    import("@/entities/molecules/NetworkChart/").then(
-      (mod) => mod.NetworkChart
-    ),
+    import("@/entities/molecules/NetworkChart").then((mod) => mod.NetworkChart),
   {
     ssr: false,
   }

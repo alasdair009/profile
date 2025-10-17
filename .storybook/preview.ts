@@ -5,6 +5,7 @@ import type { Breakpoint } from "../entities/design-tokens/dimensions";
 import { ViewportMap } from "storybook/viewport";
 import "../app/styles/global.scss";
 import { withFont } from "./decorators/withFont";
+import "@fontsource-variable/inter";
 
 const customViewports: ViewportMap = {};
 
@@ -49,10 +50,12 @@ const preview: Preview = {
           "molecules",
           "organisms",
           "templates",
+          "pages",
           "experimental",
         ],
       },
     },
+    rsc: false,
     viewport: {
       options: customViewports,
     },

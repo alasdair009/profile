@@ -6,6 +6,7 @@ const config: StorybookConfig = {
     "../entities/**/*.mdx",
     "../entities/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
+  features: { experimentalRSC: true },
   addons: [
     "@storybook/addon-links",
     "@chromatic-com/storybook",
@@ -23,6 +24,13 @@ const config: StorybookConfig = {
       ...config.resolve.alias,
       "@/entities": path.resolve(__dirname, "/entities"),
       "@/lib": path.resolve(__dirname, "/lib"),
+    };
+
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      net: false,
+      tls: false,
+      fs: false,
     };
 
     return config;

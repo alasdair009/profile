@@ -102,3 +102,11 @@ export type { TimelineEntry } from "./organisms/Timeline";
 
 export { Error } from "./templates/Error";
 export { Loading } from "./templates/Loading";
+
+export { AboutMe } from "./pages/AboutMe";
+export { Blog } from "./pages/Blog";
+export { BlogArticle } from "./pages/Blog/BlogArticle";
+export { Portfolio } from "./pages/Portfolio";
+export { Rollercoasters } from "./pages/AboutMe/Rollercoasters";
+export { Trampolining } from "./pages/AboutMe/Trampolining";
+export { Home } from "./pages/Home";

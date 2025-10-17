@@ -1,7 +1,7 @@
-@use "../../styles/clipPaths";
-@use "../../styles/colors";
-@use "../../styles/dimensions";
-@use "../../styles/helpers/rem";
+@use "../../../../app/styles/clipPaths";
+@use "../../../../app/styles/colors";
+@use "../../../../app/styles/dimensions";
+@use "../../../../app/styles/helpers/rem";
 
 .blogNav {
   margin: dimensions.getSize(s16) auto dimensions.getSize(s32);

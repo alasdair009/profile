@@ -1,5 +1,4 @@
 import { Container } from "./Container";
-import { Heading } from "../../atoms/Heading";
 import { Meta, StoryObj } from "@storybook/nextjs";
 import { expect, within } from "storybook/test";
 
@@ -11,7 +10,7 @@ const meta: Meta<typeof Container> = {
     },
   },
   args: {
-    children: <Heading>Container</Heading>,
+    children: <>Container</>,
   },
 };
 export default meta;
@@ -19,7 +18,9 @@ export default meta;
 export const Default: StoryObj<typeof Container> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
-    const containerElement: HTMLDivElement = canvas.getByTestId(Container.name);
+    const containerElement: HTMLDivElement = canvas.getByTestId(
+      Container.displayName
+    );
 
     await expect(containerElement).toBeInTheDocument();
   },

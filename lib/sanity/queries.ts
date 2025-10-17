@@ -55,6 +55,8 @@ export const GET_ALL_ROLLERCOASTERS = `*[_type == "rollercoasters"] | order(firs
   "themeparkcoords": themeparks->coords,
 }`;
 
+export const GET_ROLLERCOASTER_COUNT = `count(*[_type == "rollercoasters"])`;
+
 export const GET_ALL_PARKS = `*[_type == "themeparks"] | order(title asc) {
   _id,
   _type,

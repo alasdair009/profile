@@ -17,9 +17,14 @@ type DetailsProps = {
  */
 export function Details({ summary, children, ...rest }: DetailsProps) {
   return (
-    <details className={styles.root} data-testid={Details.name} {...rest}>
+    <details
+      className={styles.root}
+      data-testid={Details.displayName}
+      {...rest}
+    >
       <summary className={styles.summary}>{summary}</summary>
       <div className={styles.content}>{children}</div>
     </details>
   );
 }
+Details.displayName = "Details";

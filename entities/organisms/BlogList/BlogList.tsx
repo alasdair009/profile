@@ -15,7 +15,7 @@ type BlogListProps = {
 export async function BlogList({ sanityClient, ...rest }: BlogListProps) {
   const posts = await sanityClient.fetch<Post[]>(GET_ALL_POSTS);
   return (
-    <div className={styles.root} {...rest}>
+    <div className={styles.root} data-testid={BlogList.displayName} {...rest}>
       {posts.map((post) => {
         const postDate = new Date(post.publishedAt);
         return (
@@ -34,3 +34,4 @@ export async function BlogList({ sanityClient, ...rest }: BlogListProps) {
     </div>
   );
 }
+BlogList.displayName = "BlogList";

@@ -6,10 +6,11 @@ export function Container({ children, className, ...rest }: HeaderProps) {
   return (
     <section
       className={`${styles.root} ${className}`}
-      data-testid={Container.name}
+      data-testid={Container.displayName}
       {...rest}
     >
       {children}
     </section>
   );
 }
+Container.displayName = "Container";

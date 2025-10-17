@@ -1,10 +1,8 @@
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
-import { BlogList, Heading, Paragraph } from "@/entities";
 import { sanityClient } from "@/lib/sanity/client";
-import { Suspense } from "react";
 import { siteOrigin } from "@/lib/domains";
-import styles from "./page.module.scss";
+import { Blog } from "@/entities";
 
 export const metadata: Metadata = generateMetaData(
   "Blog",
@@ -23,20 +21,5 @@ export const metadata: Metadata = generateMetaData(
 export const revalidate = 600; // revalidate at most every 10mins
 
 export default async function BlogPage() {
-  return (
-    <>
-      <Heading>Blog</Heading>
-      <Paragraph
-        align="center"
-        className={styles.blogDescription}
-        textWrap="balance"
-      >
-        A cocktail of thoughts and projects from my years of web development,
-        trampoline coaching and general adventures.
-      </Paragraph>
-      <Suspense fallback={<Paragraph align="center">Loading...</Paragraph>}>
-        <BlogList sanityClient={sanityClient} />
-      </Suspense>
-    </>
-  );
+  return <Blog sanityClient={sanityClient} />;
 }
