@@ -6,6 +6,7 @@
   @include scrollBar.scrollbarStyles;
 
   --animation-rhythm: 1s;
+  interpolate-size: allow-keywords;
 
   @media (prefers-reduced-motion: reduce) {
     --animation-rhythm: 0s;
@@ -31,7 +32,7 @@ body {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 .grecaptcha-badge {

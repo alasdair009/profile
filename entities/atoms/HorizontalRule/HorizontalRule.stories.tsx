@@ -15,7 +15,7 @@ export default meta;
 export const Default: StoryObj<typeof HorizontalRule> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
-    const ruleElement = canvas.getByTestId(HorizontalRule.name);
+    const ruleElement = canvas.getByTestId(HorizontalRule.displayName);
 
     await expect(ruleElement).toBeInTheDocument();
   },
@@ -27,7 +27,7 @@ export const Decoration: StoryObj<typeof HorizontalRule> = {
   },
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
-    const ruleElement = canvas.getByTestId(HorizontalRule.name);
+    const ruleElement = canvas.getByTestId(HorizontalRule.displayName);
 
     await expect(ruleElement).toBeInTheDocument();
   },
@@ -39,7 +39,7 @@ export const Curve: StoryObj<typeof HorizontalRule> = {
   },
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
-    const ruleElement = canvas.getByTestId(HorizontalRule.name);
+    const ruleElement = canvas.getByTestId(HorizontalRule.displayName);
 
     await expect(ruleElement).toBeInTheDocument();
   },

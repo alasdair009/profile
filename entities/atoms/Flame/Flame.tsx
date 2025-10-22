@@ -195,7 +195,7 @@ export function Flame({
   return (
     <div
       className={`${styles.root} ${className}`}
-      data-testid={Flame.name}
+      data-testid={Flame.displayName}
       ref={containerRef}
       {...rest}
     >
@@ -207,3 +207,4 @@ export function Flame({
     </div>
   );
 }
+Flame.displayName = "Flame";

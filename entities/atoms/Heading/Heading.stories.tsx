@@ -87,7 +87,7 @@ const headerTest = async (
   canvasElement: HTMLElement
 ) => {
   const canvas = within(canvasElement);
-  const headingElement = canvas.getByTestId(Heading.name);
+  const headingElement = canvas.getByTestId(Heading.displayName);
 
   await expect(headingElement).toBeInTheDocument();
   await expect(headingElement).toHaveTextContent(`${args.children}`);

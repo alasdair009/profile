@@ -21,7 +21,11 @@ export function ContentPlate({
     typeof foregroundImage !== "undefined" &&
     typeof foregroundImageAlt !== "undefined";
   return (
-    <section className={styles.root} {...rest} data-testid={ContentPlate.name}>
+    <section
+      className={styles.root}
+      {...rest}
+      data-testid={ContentPlate.displayName}
+    >
       {((backgroundImage && backgroundImageAlt) || backgroundCss) && (
         <figure
           className={styles.backgroundWrapper}
@@ -66,3 +70,4 @@ export function ContentPlate({
     </section>
   );
 }
+ContentPlate.displayName = "ContentPlate";

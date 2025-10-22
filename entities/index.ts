@@ -108,5 +108,7 @@ export { Blog } from "./pages/Blog";
 export { BlogArticle } from "./pages/Blog/BlogArticle";
 export { Portfolio } from "./pages/Portfolio";
 export { Rollercoasters } from "./pages/AboutMe/Rollercoasters";
+export { RuneScape } from "./pages/Portfolio/RuneScape";
 export { Trampolining } from "./pages/AboutMe/Trampolining";
+export { Weather } from "./pages/Portfolio/Weather";
 export { Home } from "./pages/Home";

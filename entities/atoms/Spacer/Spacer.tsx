@@ -15,9 +15,10 @@ export function Spacer({ multiplier = 1, style, ...rest }: SpacerProps) {
   return (
     <br
       className={styles.root}
-      data-testid={Spacer.name}
+      data-testid={Spacer.displayName}
       style={{ "--multiplier": multiplier, ...style } as CSSProperties}
       {...rest}
     />
   );
 }
+Spacer.displayName = "Spacer";

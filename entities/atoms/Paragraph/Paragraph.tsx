@@ -61,7 +61,7 @@ export function Paragraph({
   return (
     <p
       className={`${styles.root} ${lines ? styles.rootClamp : ""} ${className}`}
-      data-testid={Paragraph.name}
+      data-testid={Paragraph.displayName}
       style={
         {
           "--font-size": fontSizeToRender,
@@ -81,3 +81,4 @@ export function Paragraph({
     </p>
   );
 }
+Paragraph.displayName = "Paragraph";

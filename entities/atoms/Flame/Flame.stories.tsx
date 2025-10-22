@@ -65,7 +65,7 @@ export default meta;
 export const Default: StoryObj<typeof Flame> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const flameElement = canvas.getByTestId(Flame.name);
+    const flameElement = canvas.getByTestId(Flame.displayName);
 
     await expect(flameElement).toBeInTheDocument();
   },
@@ -77,7 +77,7 @@ export const Green: StoryObj<typeof Flame> = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const flameElement = canvas.getByTestId(Flame.name);
+    const flameElement = canvas.getByTestId(Flame.displayName);
 
     await expect(flameElement).toBeInTheDocument();
   },
@@ -89,7 +89,7 @@ export const Blue: StoryObj<typeof Flame> = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const flameElement = canvas.getByTestId(Flame.name);
+    const flameElement = canvas.getByTestId(Flame.displayName);
 
     await expect(flameElement).toBeInTheDocument();
   },

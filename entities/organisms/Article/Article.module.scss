@@ -23,7 +23,6 @@
 }
 
 .articleFigure {
-  box-sizing: border-box;
   height: rem.toRem(320);
   margin: 0 auto;
   max-width: calc(100% - #{dimensions.getSize(s16)});

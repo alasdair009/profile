@@ -1,4 +1,4 @@
-import { DecoratorFunction } from "@storybook/core/csf";
+import { DecoratorFunction } from "storybook/internal/csf";
 import "@fontsource-variable/inter";
 
 export const withFont: DecoratorFunction = (Story) => {

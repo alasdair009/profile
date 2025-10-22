@@ -31,7 +31,7 @@ export default meta;
 export const Default: StoryObj<typeof Paragraph> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
-    const paragraphElement = canvas.getByTestId(Paragraph.name);
+    const paragraphElement = canvas.getByTestId(Paragraph.displayName);
 
     await expect(paragraphElement).toBeInTheDocument();
     await expect(paragraphElement).toHaveTextContent(`${args.children}`);

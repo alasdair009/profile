@@ -19,7 +19,11 @@ type DesignLandingProps = HTMLAttributes<HTMLDivElement>;
  */
 export function DesignLanding({ children, ...rest }: DesignLandingProps) {
   return (
-    <section className={styles.root} data-testid={DesignLanding.name} {...rest}>
+    <section
+      className={styles.root}
+      data-testid={DesignLanding.displayName}
+      {...rest}
+    >
       <div className={styles.inner}>
         <Rain
           rainDrops={40}
@@ -127,6 +131,7 @@ export function DesignLanding({ children, ...rest }: DesignLandingProps) {
     </section>
   );
 }
+DesignLanding.displayName = "DesignLanding";
 
 export function DesignLandingContentPlate() {
   return (
@@ -143,3 +148,4 @@ export function DesignLandingContentPlate() {
     </ContentPlate>
   );
 }
+DesignLandingContentPlate.displayName = "DesignLandingContentPlate";

@@ -9,9 +9,13 @@ const meta: Meta<typeof Details> = {
     summary: {
       type: "string",
     },
+    transitionDuration: {
+      control: { type: "range", min: 0, max: 5, step: 0.1 },
+    },
   },
   args: {
     summary: "Title for the details element",
+    transitionDuration: 0.5,
     children: (
       <>
         <Heading>Content</Heading>
@@ -28,6 +32,12 @@ export default meta;
 export const Default: StoryObj<typeof Details> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
+    const detailsElement = canvas.getByTestId(Details.displayName);
+
+    await expect(detailsElement).toBeInTheDocument();
+    await expect(detailsElement).toHaveStyle(
+      `--transition-duration: ${args.transitionDuration}`
+    );
 
     await waitFor(() =>
       expect(canvas.getByText(args.summary)).toBeInTheDocument()

@@ -7,14 +7,18 @@ type MorphingTextProps = {
 
 export function MorphingText({ values, ...rest }: MorphingTextProps) {
   return (
-    <section className={styles.root} data-testid={MorphingText.name} {...rest}>
+    <section
+      className={styles.root}
+      data-testid={MorphingText.displayName}
+      {...rest}
+    >
       <h2 className={styles.morpher}>
         {values.map((value, index) => {
           return (
             <span
               className={styles.text}
               key={value}
-              data-testid={`${MorphingText.name}Text`}
+              data-testid={`${MorphingText.displayName}Text`}
               style={
                 {
                   "--word-count": values.length,
@@ -30,3 +34,4 @@ export function MorphingText({ values, ...rest }: MorphingTextProps) {
     </section>
   );
 }
+MorphingText.displayName = "MorphingText";

@@ -21,10 +21,10 @@ const meta: Meta<typeof ContentPlate> = {
     backgroundCss: colors.blackEvil,
     children: (
       <>
-        <Heading level="h3" data-testid={`${ContentPlate.name}Heading`}>
+        <Heading level="h3" data-testid={`${ContentPlate.displayName}Heading`}>
           Children
         </Heading>
-        <Paragraph data-testid={`${ContentPlate.name}Paragraph`}>
+        <Paragraph data-testid={`${ContentPlate.displayName}Paragraph`}>
           This is my content plate, there are many like it but this one is mine!
         </Paragraph>
       </>
@@ -41,7 +41,7 @@ export const Default: StoryObj<typeof ContentPlate> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
     const contentPlateElement: HTMLDivElement = canvas.getByTestId(
-      ContentPlate.name
+      ContentPlate.displayName
     );
 
     await expect(contentPlateElement).toBeInTheDocument();
@@ -65,10 +65,10 @@ export const WithFlame: StoryObj<typeof ContentPlate> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
     const contentPlateElement: HTMLDivElement = canvas.getByTestId(
-      ContentPlate.name
+      ContentPlate.displayName
     );
 
     await expect(contentPlateElement).toBeInTheDocument();
-    await expect(canvas.getByTestId(Flame.name)).toBeInTheDocument();
+    await expect(canvas.getByTestId(Flame.displayName)).toBeInTheDocument();
   },
 };

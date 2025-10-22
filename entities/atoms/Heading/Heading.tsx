@@ -69,7 +69,7 @@ export function Heading<T extends ElementType = "h1">({
   return (
     <Root
       className={`${styles.root} ${headerClasses[level]} ${lines ? styles.rootClamp : ""} ${textShadow ? styles.Shadow : ""} ${className}`}
-      data-testid={Heading.name}
+      data-testid={Heading.displayName}
       style={
         {
           ...style,
@@ -86,3 +86,4 @@ export function Heading<T extends ElementType = "h1">({
     </Root>
   );
 }
+Heading.displayName = "Heading";

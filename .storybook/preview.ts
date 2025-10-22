@@ -5,6 +5,7 @@ import type { Breakpoint } from "../entities/design-tokens/dimensions";
 import { ViewportMap } from "storybook/viewport";
 import "../app/styles/global.scss";
 import { withFont } from "./decorators/withFont";
+import { withStyle } from "./decorators/withStyle";
 import "@fontsource-variable/inter";
 
 const customViewports: ViewportMap = {};
@@ -60,7 +61,7 @@ const preview: Preview = {
       options: customViewports,
     },
   },
-  decorators: [withFont],
+  decorators: [withFont, withStyle],
   tags: ["autodocs"],
 };
 

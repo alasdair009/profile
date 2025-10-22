@@ -13,7 +13,7 @@ export default meta;
 export const Default: StoryObj<typeof Spacer> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const spacerElement = canvas.getByTestId(Spacer.name);
+    const spacerElement = canvas.getByTestId(Spacer.displayName);
 
     await expect(spacerElement).toBeInTheDocument();
     await expect(spacerElement).toHaveStyle("margin-bottom: 8px");
@@ -26,7 +26,7 @@ export const Eight: StoryObj<typeof Spacer> = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const spacerElement = canvas.getByTestId(Spacer.name);
+    const spacerElement = canvas.getByTestId(Spacer.displayName);
 
     await expect(spacerElement).toBeInTheDocument();
     await expect(spacerElement).toHaveStyle("margin-bottom: 64px");

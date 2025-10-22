@@ -42,8 +42,9 @@ export function HorizontalRule({
   return (
     <hr
       className={`${styles.root} ${decoration ? styles.Decoration : ""} ${curve ? styles.curve : ""} ${getMarginClass(margin)}`}
-      data-testid={HorizontalRule.name}
+      data-testid={HorizontalRule.displayName}
       {...rest}
     />
   );
 }
+HorizontalRule.displayName = "HorizontalRule";

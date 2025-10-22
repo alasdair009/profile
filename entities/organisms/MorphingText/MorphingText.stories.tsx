@@ -16,8 +16,10 @@ export default meta;
 export const Default: StoryObj<typeof MorphingText> = {
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
-    const morphingTextElement = canvas.getByTestId(MorphingText.name);
-    const textElements = canvas.getAllByTestId(`${MorphingText.name}Text`);
+    const morphingTextElement = canvas.getByTestId(MorphingText.displayName);
+    const textElements = canvas.getAllByTestId(
+      `${MorphingText.displayName}Text`
+    );
     const firstTextElement = canvas.getByText(args.values[0]);
     const lastTextElement = canvas.getByText(
       args.values[args.values.length - 1]
