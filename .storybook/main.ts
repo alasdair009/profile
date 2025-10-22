@@ -13,6 +13,7 @@ const config: StorybookConfig = {
     "@storybook/addon-docs",
     "@storybook/addon-a11y",
   ],
+  chromatic: { projectId: process.env.CHROMATIC_PROJECT_ID },
   framework: {
     name: "@storybook/nextjs",
     options: {},
