@@ -19,7 +19,7 @@ const config: StorybookConfig = {
     {
       name: "@chromatic-com/storybook",
       options: {
-        projectId: process.env.STORYBOOK_CHROMATIC_PROJECT_ID,
+        projectId: "Project:654e7daf8304571203c13775",
       },
     },
     "@storybook/addon-docs",
