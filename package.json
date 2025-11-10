@@ -14,7 +14,7 @@
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ixgnore-path .gitignore .",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "storybook build -c .storybook -o storybook-static",
     "prepare": "husky install",
     "chromatic": "chromatic --exit-zero-on-changes",
     "depcheck": "npx depcheck",
