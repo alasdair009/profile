@@ -16,11 +16,15 @@ const config: StorybookConfig = {
   features: { experimentalRSC: true },
   addons: [
     "@storybook/addon-links",
-    "@chromatic-com/storybook",
+    {
+      name: "@chromatic-com/storybook",
+      options: {
+        projectId: process.env.STORYBOOK_CHROMATIC_PROJECT_ID,
+      },
+    },
     "@storybook/addon-docs",
     "@storybook/addon-a11y",
   ],
-  chromatic: { projectId: process.env.CHROMATIC_PROJECT_ID },
   framework: {
     name: "@storybook/nextjs",
     options: {},
