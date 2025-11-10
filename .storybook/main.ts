@@ -16,13 +16,7 @@ const config: StorybookConfig = {
   ],
   features: { experimentalRSC: true },
   addons: [
-    "@storybook/addon-links",
-    {
-      name: "@chromatic-com/storybook",
-      options: {
-        projectId: "Project:654e7daf8304571203c13775",
-      },
-    },
+    "@chromatic-com/storybook",
     "@storybook/addon-docs",
     "@storybook/addon-a11y",
   ],
