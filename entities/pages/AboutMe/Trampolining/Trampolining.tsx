@@ -48,7 +48,10 @@ export function Trampolining({
         information and coaching techniques should be available to all and not
         put behind arbitrary qualification or financial barriers.
       </Paragraph>
-      <BlockQuote cite="https://books.google.co.uk/books/about/Over_Above.html?id=T30IBAAAQBAJ&redir_esc=y">
+      <BlockQuote
+        citeUrl="https://books.google.co.uk/books/about/Over_Above.html?id=T30IBAAAQBAJ&redir_esc=y"
+        citeTitle="Jack Kelly - Over & Above"
+      >
         The twist is the easy bit.
       </BlockQuote>
       <Paragraph>
