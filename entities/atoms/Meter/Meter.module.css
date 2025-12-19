@@ -1,0 +1,76 @@
+.root {
+  --emptyBackground: repeating-linear-gradient(
+    135deg,
+    var(--colorWhiteGhost),
+    var(--colorWhiteGhost) var(--size-16),
+    color-mix(in srgb, var(--colorWhiteGhost) 90%, black 10%) var(--size-16),
+    color-mix(in srgb, var(--colorWhiteGhost) 90%, black 10%) var(--size-32),
+    var(--colorWhiteGhost) var(--size-32)
+  );
+  --optimumBackground: repeating-linear-gradient(
+    135deg,
+    var(--colorGreenGrass),
+    var(--colorGreenGrass) var(--size-16),
+    color-mix(in srgb, var(--colorGreenGrass) 90%, black 10%) var(--size-16),
+    color-mix(in srgb, var(--colorGreenGrass) 90%, black 10%) var(--size-32),
+    var(--colorGreenGrass) var(--size-32)
+  );
+  --warningBackground: repeating-linear-gradient(
+    135deg,
+    var(--colorYellowSun),
+    var(--colorYellowSun) var(--size-16),
+    color-mix(in srgb, var(--colorYellowSun) 90%, black 10%) var(--size-16),
+    color-mix(in srgb, var(--colorYellowSun) 90%, black 10%) var(--size-32),
+    var(--colorYellowSun) var(--size-32)
+  );
+  --dangerBackground: repeating-linear-gradient(
+    135deg,
+    var(--colorRedHeat),
+    var(--colorRedHeat) var(--size-16),
+    color-mix(in srgb, var(--colorRedHeat) 90%, black 10%) var(--size-16),
+    color-mix(in srgb, var(--colorRedHeat) 90%, black 10%) var(--size-32),
+    var(--colorRedHeat) var(--size-32)
+  );
+  appearance: none;
+  background-image: var(--emptyBackground);
+  border: 1px solid var(--colorblackEvil);
+  border-radius: var(--radii-2);
+  display: flex;
+  height: var(--size-32);
+  max-width: var(--globalInputMaxWidth);
+  width: 100%;
+
+  &::-webkit-meter-bar {
+    background-image: var(--emptyBackground);
+    box-shadow: 0 5px 5px -5px var(--colorblackEvil) inset;
+  }
+
+  &::-webkit-meter-inner-element {
+    background: var(--colorWhiteGhost);
+    display: flex;
+  }
+
+  &::-webkit-meter-optimum-value {
+    background: var(--optimumBackground);
+  }
+
+  &:-moz-meter-optimum::-moz-meter-bar {
+    background: var(--optimumBackground);
+  }
+
+  &::-webkit-meter-suboptimum-value {
+    background: var(--warningBackground);
+  }
+
+  &:-moz-meter-sub-optimum::-moz-meter-bar {
+    background: var(--warningBackground);
+  }
+
+  &::-webkit-meter-even-less-good-value {
+    background: var(--dangerBackground);
+  }
+
+  &:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+    background: var(--dangerBackground);
+  }
+}

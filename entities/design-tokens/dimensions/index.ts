@@ -1,10 +1,10 @@
 export {
   breakpoints,
   device,
-  globalInputMaxWidth,
-  globalTextMaxWidth,
-  globalContentMaxWidth,
-  globalDecorationMaxWidth,
+  //   globalInputMaxWidth,
+  //   globalTextMaxWidth,
+  //   globalContentMaxWidth,
+  //   globalDecorationMaxWidth,
   sizes,
 } from "./dimensions";
 export { toRem } from "./utils";

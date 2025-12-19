@@ -1,5 +1,5 @@
 import { CSSProperties, HTMLAttributes } from "react";
-import styles from "./DesignLanding.module.scss";
+import styles from "./DesignLanding.module.css";
 import {
   Cloud,
   colors,

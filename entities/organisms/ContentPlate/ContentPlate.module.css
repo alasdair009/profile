@@ -1,0 +1,115 @@
+@keyframes threeDRotate {
+  0%,
+  100% {
+    transform: perspective(1000px) rotateX(calc(var(--turnAmount) * -1) turn)
+      rotateY(0);
+  }
+  25% {
+    transform: perspective(1000px) rotateX(0)
+      rotateY(calc(var(--turnAmount) * -1) turn);
+  }
+  50% {
+    transform: perspective(1000px) rotateX(var(--turnAmount) turn) rotateY(0);
+  }
+  75% {
+    transform: perspective(1000px) rotateX(0) rotateY(var(--turnAmount) turn);
+  }
+}
+
+.root {
+  margin: 0 auto;
+  max-width: var(--globalDecorationMaxWidth);
+  overflow: hidden;
+  position: relative;
+}
+
+.inner {
+  --orientation: flex-start;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: var(--globalContentMaxWidth);
+  position: relative;
+  width: 100%;
+
+  @media (min-width: var(--breakpoint-medium)) {
+    flex-direction: var(--orientation);
+  }
+}
+
+.backgroundWrapper {
+  background: var(--background);
+  height: 100%;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.foregroundWrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  padding: var(--size-16);
+  position: relative;
+  width: 100%;
+
+  @media (min-width: var(--breakpoint-medium)) {
+    padding: 0;
+    width: 50%;
+  }
+
+  &.animate {
+    --turnAmount: 0.05;
+    animation: threeDRotate calc(var(--animation-rhythm) * 3) infinite
+      var(--curve-linear);
+  }
+}
+
+.foregroundImage {
+  display: block;
+  height: 400px;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  width: 400px;
+}
+
+.frameBoxWrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: var(--size-16);
+  width: 100%;
+
+  @media (min-width: var(--breakpoint-medium)) {
+    width: 50%;
+  }
+}
+
+.copyBox {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--size-16);
+  width: 100%;
+
+  @media (min-width: var(--breakpoint-medium)) {
+    width: 50%;
+  }
+}
+
+.flameBox {
+  height: 100%;
+  width: 50%;
+}
+
+.flame {
+  height: 250px;
+  width: 100%;
+}

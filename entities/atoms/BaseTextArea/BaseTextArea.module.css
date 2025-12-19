@@ -1,0 +1,19 @@
+.root {
+  background: var(--colorGreyDark);
+  border: 1px solid var(--colorGreenGrass);
+  color: var(--colorWhiteGhost);
+  display: block;
+  min-height: var(--size-256);
+  margin: 0 auto;
+  max-width: var(--globalInputMaxWidth);
+  resize: none;
+  width: 100%;
+
+  &:user-invalid {
+    background: var(--colorRedHeat);
+  }
+
+  &.invalid {
+    background: var(--colorRedHeat);
+  }
+}

@@ -3,7 +3,7 @@ import { CustomizableSelect } from "./CustomizableSelect";
 import Image from "next/image";
 import amLogo from "@/entities/assets/am.svg";
 import { ErrorText, Paragraph, sizes } from "@/entities";
-import styles from "./CustomizableSelect.module.scss";
+import styles from "./CustomizableSelect.module.css";
 
 const meta: Meta<typeof CustomizableSelect> = {
   component: CustomizableSelect,

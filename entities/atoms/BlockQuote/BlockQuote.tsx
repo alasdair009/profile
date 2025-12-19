@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from "react";
-import styles from "./BlockQuote.module.scss";
+import styles from "./BlockQuote.module.css";
 import { Link } from "@/entities";
 
 type BlockQuoteProps = {

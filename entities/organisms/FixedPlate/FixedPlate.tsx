@@ -1,7 +1,7 @@
 import { HTMLAttributes } from "react";
 import skyImage from "@/entities/assets/sky.webp";
 import { StaticImageData } from "next/image";
-import styles from "./FixedPlate.module.scss";
+import styles from "./FixedPlate.module.css";
 import Image from "next/image";
 
 type FixedPlateProps = {

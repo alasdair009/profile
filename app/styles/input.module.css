@@ -1,0 +1,54 @@
+.baseInput {
+  --baseInputBackground: var(--colorGreyDark);
+  --baseInputHeight: var(--size-40);
+  --baseInputInvalidColor: color-mix(
+    in srgb,
+    var(--colorRedHeat) 15%,
+    transparent
+  );
+  appearance: none;
+  background-color: var(--baseInputBackground);
+  border: 1px solid var(--colorGreenGrass);
+  color: var(--colorWhiteGhost);
+  display: block;
+  font-size: var(--font-size-medium);
+  height: var(--baseInputHeight);
+  margin: var(--size-2) auto 0;
+  max-width: var(--globalInputMaxWidth);
+  padding: var(--size-8);
+  width: 100%;
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--colorWhiteGhost);
+    -webkit-box-shadow: 0 0 0 var(--baseInputHeight) var(--baseInputBackground)
+      inset;
+  }
+
+  &:user-invalid {
+    background-color: var(--baseInputInvalidColor);
+  }
+}
+
+.invalid {
+  background-color: var(--baseInputInvalidColor);
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--colorWhiteGhost);
+    -webkit-box-shadow: 0 0 0 var(--baseInputHeight)
+      var(--baseInputInvalidColor) inset;
+  }
+}
+
+.labelledStyles {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto var(--size-8);
+  max-width: var(--globalInputMaxWidth);
+  width: 100%;
+}

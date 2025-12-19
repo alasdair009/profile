@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import styles from "./CodeBlock.module.scss";
+import styles from "./CodeBlock.module.css";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import typescript from "react-syntax-highlighter/dist/esm/languages/prism/typescript";
 import tsx from "react-syntax-highlighter/dist/esm/languages/prism/tsx";

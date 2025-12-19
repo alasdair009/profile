@@ -6,7 +6,7 @@ import { HTMLAttributes, ReactNode, useEffect, useState } from "react";
 import { darken } from "polished";
 import { ContextMenu } from "./ContextMenu";
 import { useMounted } from "@/lib/useMounted";
-import styles from "./NetworkChart.module.scss";
+import styles from "./NetworkChart.module.css";
 
 type NetworkChartProps = {
   /**

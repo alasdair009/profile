@@ -1,0 +1,53 @@
+@keyframes moveAnimation {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.curveViewer {
+  display: flex;
+  gap: var(--size-8);
+  margin-bottom: var(--size-32);
+}
+
+.curveWrapper {
+  border: 1px solid var(--colorWhiteGhost);
+  color: var(--colorWhiteGhost);
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 147px;
+  padding: var(--size-8);
+}
+
+.svgWrapper {
+  --curve: "";
+  --offset-path: "";
+  position: relative;
+
+  &::after {
+    animation: moveAnimation 2s infinite alternate var(--curve);
+    aspect-ratio: 1;
+    background: var(--colorWhiteGhost);
+    border-radius: var(--radii-round);
+    content: "";
+    left: 0;
+    offset-path: var(--offset-path);
+    position: absolute;
+    width: var(--size-8);
+  }
+}
+
+.path {
+  fill: transparent;
+  stroke: var(--colorGreenGrass);
+  stroke-width: 3px;
+}
+
+/*:export {*/
+/*  animationCurveDefault: map.get(animation.$curves, default);*/
+/*  animationCurveEaseBoth: map.get(animation.$curves, easeBoth);*/
+/*  animationCurveLinear: map.get(animation.$curves, linear);*/
+/*}*/

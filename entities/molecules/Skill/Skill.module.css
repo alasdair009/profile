@@ -1,0 +1,32 @@
+.root {
+  --background: transparent;
+  --xs-column-start: 0;
+  --xs-column-end: 0;
+  --xs-row-start: 0;
+  --xs-row-end: 0;
+  --s-column-start: 0;
+  --s-column-end: 0;
+  --s-row-start: 0;
+  --s-row-end: 0;
+
+  align-items: center;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--size-16);
+
+  @media (min-width: var(--breakpoint-xsmall)) {
+    grid-column-start: var(--xs-column-start);
+    grid-column-end: var(--xs-column-end);
+    grid-row-start: var(--xs-row-start);
+    grid-row-end: var(--xs-row-end);
+  }
+
+  @media (min-width: var(--breakpoint-small)) {
+    grid-column-start: var(--s-column-start);
+    grid-column-end: var(--s-column-end);
+    grid-row-start: var(--s-row-start);
+    grid-row-end: var(--s-row-end);
+  }
+}

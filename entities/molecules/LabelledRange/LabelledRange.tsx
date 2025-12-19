@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 import { BaseRange, BaseLabel, ErrorText } from "@/entities";
-import styles from "./LabelledRange.module.scss";
+import styles from "./LabelledRange.module.css";
 
 type LabelledRangeProps = {
   /**

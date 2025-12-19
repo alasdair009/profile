@@ -1,0 +1,81 @@
+.root {
+  border: none;
+  margin: var(--size-32) auto;
+  max-width: var(--globalDecorationMaxWidth);
+  padding: 1px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  &::before {
+    background: var(--colorGreenGrass);
+    content: "";
+    height: var(--size-2);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  &::after {
+    aspect-ratio: 1;
+    background: var(--colorblackEvil) url(../../assets/am.svg) no-repeat center;
+    border: var(--size-2) solid var(--colorGreenGrass);
+    border-radius: 50%;
+    content: "";
+    display: none;
+    height: var(--size-48);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform calc(var(--animation-rhythm) * 1);
+
+    &:hover {
+      transform: translate(-50%, -50%) rotateX(360deg);
+    }
+  }
+
+  &.Top {
+    margin: var(--size-32) auto 0;
+  }
+  &.Bottom {
+    margin: 0 auto var(--size-32);
+  }
+  &.None {
+    margin: 0 auto;
+  }
+
+  &.Decoration {
+    padding: calc(var(--size-24) + var(--size-2));
+
+    &::after {
+      display: block;
+    }
+
+    &.Top {
+      margin-bottom: calc(var(--size-24) - var(--size-2) * -1);
+    }
+
+    &.Bottom {
+      margin-top: calc(var(--size-24) - var(--size-2) * -1);
+    }
+
+    &.None {
+      margin: calc(var(--size-24) - var(--size-2) * -1) auto;
+    }
+  }
+
+  &.curve {
+    margin: 0;
+    padding: var(--size-32) 0;
+
+    &::before {
+      background: var(--colorGreenGrass);
+      height: 100%;
+      mask: url(./pulse.svg) no-repeat center;
+      mask-size: 100% 100%;
+    }
+  }
+}

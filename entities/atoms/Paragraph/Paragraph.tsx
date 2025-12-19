@@ -8,7 +8,7 @@ import {
   TextAlignment,
 } from "@/entities";
 import { Property } from "csstype";
-import styles from "./Paragraph.module.scss";
+import styles from "./Paragraph.module.css";
 
 type ParagraphProps = {
   /**

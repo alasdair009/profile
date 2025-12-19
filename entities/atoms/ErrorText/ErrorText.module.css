@@ -1,0 +1,10 @@
+.root {
+  --color: var(--colorRedHeat);
+  font-style: italic;
+
+  composes: paragraphStyles from "../../../app/styles/paragraph.module.css";
+
+  &.hide {
+    display: none;
+  }
+}

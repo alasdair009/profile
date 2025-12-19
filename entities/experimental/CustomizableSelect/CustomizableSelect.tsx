@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import styles from "./CustomizableSelect.module.scss";
+import styles from "./CustomizableSelect.module.css";
 
 type SelectMenuProps = {
   /**

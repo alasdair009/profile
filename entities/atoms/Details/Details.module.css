@@ -1,0 +1,51 @@
+.root {
+  --transition-duration: 0;
+
+  margin: 0 auto 1px;
+  max-width: var(--globalContentMaxWidth);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &::details-content {
+    transition:
+      height calc(var(--animation-rhythm) * var(--transition-duration)) ease,
+      content-visibility
+        calc(var(--animation-rhythm) * var(--transition-duration)) ease
+        allow-discrete;
+    height: 0;
+    overflow: clip;
+  }
+
+  &[open]::details-content {
+    height: auto;
+  }
+}
+
+.summary {
+  align-items: center;
+  background: var(--colorGreyLight);
+  cursor: pointer;
+  font-size: var(--font-size-mlarge);
+  justify-content: flex-start;
+  padding: var(--size-8);
+  position: relative;
+  width: 100%;
+
+  &:hover {
+    filter: brightness(1.3);
+  }
+
+  &::marker {
+    color: var(--colorGreenGrass);
+  }
+}
+
+.content {
+  background: var(--colorGreyDark);
+  box-shadow: inset 0 0 10px 0 var(--colorblackEvil);
+  overflow: hidden;
+  padding: var(--size-8);
+  position: relative;
+  width: 100%;
+}

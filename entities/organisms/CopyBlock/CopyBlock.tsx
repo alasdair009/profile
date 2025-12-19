@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from "react";
-import styles from "./CopyBlock.module.scss";
+import styles from "./CopyBlock.module.css";
 
 type CopyBlockProps = HTMLAttributes<HTMLDivElement> & {
   children: ReactNode;

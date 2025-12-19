@@ -1,0 +1,72 @@
+.root {
+  --table-break: 0;
+  background: var(--colorblackEvil);
+  border-collapse: collapse;
+  margin: var(--size-16) auto;
+  max-width: var(--globalContentMaxWidth);
+  vertical-align: middle;
+  width: 100%;
+
+  thead,
+  tfoot {
+    background: var(--colorGreenGrass);
+  }
+
+  td {
+    border: 1px solid var(--colorGreyDark);
+    padding: var(--size-8);
+    position: relative;
+  }
+
+  th {
+    font-weight: var(--font-weight-bold);
+  }
+
+  @media (max-width: var(--table-break)) {
+    table,
+    thead,
+    tbody,
+    tfoot,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    thead,
+    tfoot {
+      background: none;
+    }
+
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    tr {
+      border: 1px solid color-mix(in srgb, var(--colorGreyDark) 95%, white 5%);
+    }
+
+    td,
+    th {
+      border: none;
+      border-bottom: 1px solid var(--colorGreyDark);
+      padding-left: 50%;
+      position: relative;
+      text-align: left;
+    }
+
+    td::before,
+    th::before {
+      content: attr(data-title) ":";
+      font-weight: var(--font-weight-bold);
+      left: var(--size-8);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 45%;
+      white-space: nowrap;
+    }
+  }
+}

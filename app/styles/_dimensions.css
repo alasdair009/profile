@@ -1,0 +1,41 @@
+:root {
+  /*Maximum width that inputs should be set to.*/
+  --globalInputMaxWidth: 480px;
+  /*Maximum width that text should be confined to.*/
+  --globalTextMaxWidth: 1200px;
+  /*Maximum width that content should extend to.*/
+  --globalContentMaxWidth: 1600px;
+  /*Maximum width decorative elements can stretch to on the screen.*/
+  --globalDecorationMaxWidth: 3440px;
+
+  --globalHeaderHeight: 48px;
+
+  --size-2: 2px;
+  --size-4: 4px;
+  --size-8: 8px;
+  --size-12: 12px;
+  --size-16: 16px;
+  --size-24: 24px;
+  --size-32: 32px;
+  --size-40: 40px;
+  --size-48: 48px;
+  --size-56: 56px;
+  --size-64: 64px;
+  --size-72: 72px;
+  --size-80: 80px;
+  --size-96: 96px;
+  --size-128: 128px;
+  --size-192: 192px;
+  --size-256: 256px;
+  --size-512: 512px;
+  --size-1024: 1024px;
+
+  --breakpoint-base: 0px;
+  --breakpoint-min: 320px;
+  --breakpoint-xsmall: 640px;
+  --breakpoint-small: 768px;
+  --breakpoint-medium: 1024px;
+  --breakpoint-large: var(--globalTextMaxWidth);
+  --breakpoint-xlarge: var(--globalContentMaxWidth);
+  --breakpoint-wide: var(--globalDecorationMaxWidth);
+}

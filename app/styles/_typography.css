@@ -1,0 +1,29 @@
+:root {
+  --font-Inter: Inter, serif;
+
+  --font-size-small: var(--size-12);
+  --font-size-medium: var(--size-16);
+  --font-size-mlarge: var(--size-24);
+  --font-size-large: var(--size-32);
+  --font-size-xlarge: var(--size-40);
+  --font-size-xxlarge: var(--size-64);
+
+  --font-size-h1: var(--font-size-xlarge);
+  --font-size-h2: var(--font-size-large);
+  --font-size-h3: var(--font-size-mlarge);
+  --font-size-h4: var(--font-size-mlarge);
+  --font-size-h5: var(--font-size-mlarge);
+  --font-size-h6: var(--font-size-mlarge);
+
+  --font-line-height-h1: 1.4em;
+  --font-line-height-h2: 1.3em;
+  --font-line-height-h3: 1.2em;
+  --font-line-height-h4: 1.2em;
+  --font-line-height-h5: 1.2em;
+  --font-line-height-h6: 1.2em;
+  --font-line-height-p: 1.3em;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+}

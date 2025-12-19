@@ -1,4 +1,4 @@
-import styles from "./Skill.module.scss";
+import styles from "./Skill.module.css";
 import { CSSProperties, HTMLAttributes } from "react";
 import { Heading, Paragraph, ScoreCounter } from "@/entities";
 import { Property } from "csstype";

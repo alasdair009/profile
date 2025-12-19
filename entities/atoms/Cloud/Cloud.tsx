@@ -1,6 +1,6 @@
 import { CSSProperties, HTMLAttributes } from "react";
 import { colors, toRem } from "@/entities";
-import styles from "./Cloud.module.scss";
+import styles from "./Cloud.module.css";
 
 type CloudProps = {
   cloudColor: CSSProperties["color"];

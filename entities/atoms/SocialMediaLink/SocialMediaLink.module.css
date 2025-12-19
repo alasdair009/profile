@@ -1,0 +1,35 @@
+.root {
+  align-items: center;
+  aspect-ratio: 1;
+  background: var(--colorblackEvil);
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  -webkit-mask: no-repeat center;
+  mask: no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  overflow: hidden;
+  position: relative;
+  width: var(--size-48);
+
+  &::before {
+    background: linear-gradient(
+        var(--colorWhiteGhost) 50%,
+        var(--colorGreenGrass) 50%,
+        var(--colorGreenGrass) 100%
+      )
+      0 0;
+    content: "";
+    height: 200%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all calc(var(--animation-rhythm) * 0.2);
+    width: 100%;
+  }
+
+  &:hover::before {
+    top: -100%;
+  }
+}

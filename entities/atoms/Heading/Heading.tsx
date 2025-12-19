@@ -7,7 +7,7 @@ import {
 } from "react";
 import { colors, HeadingTypes, TextAlignment } from "@/entities";
 import { Property } from "csstype";
-import styles from "./Heading.module.scss";
+import styles from "./Heading.module.css";
 import { lineHeights } from "@/entities/design-tokens/typography/typography";
 
 export type HeadingProps<T extends ElementType> = {
@@ -68,7 +68,7 @@ export function Heading<T extends ElementType = "h1">({
   const Root = as ? as : level;
   return (
     <Root
-      className={`${styles.root} ${headerClasses[level]} ${lines ? styles.rootClamp : ""} ${textShadow ? styles.Shadow : ""} ${className}`}
+      className={`${styles.root} ${headerClasses[level]} ${lines ? styles.clamp : ""} ${textShadow ? styles.Shadow : ""} ${className}`}
       data-testid={Heading.displayName}
       style={
         {

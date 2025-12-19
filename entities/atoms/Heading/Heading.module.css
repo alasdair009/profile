@@ -1,0 +1,68 @@
+.root {
+  --align: left;
+  border: none !important;
+  color: var(--color) !important;
+  font-weight: var(--font-weight-bold);
+  margin: 0 auto var(--size-24) !important;
+  max-width: var(--globalTextMaxWidth);
+  padding-bottom: 0;
+  position: relative;
+  text-align: var(--align);
+  text-wrap: balance;
+  width: fit-content;
+
+  &.shadow {
+    text-shadow: 0 0 var(--size-4) var(--colorblackEvil);
+  }
+
+  &::after {
+    background: var(--colorGreenGrass);
+    bottom: 0;
+    content: "";
+    display: none;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    transform: rotate(-2deg);
+    width: 100%;
+  }
+
+  &.h1 {
+    font-size: var(--font-size-h1);
+    max-width: var(--size-512);
+    padding-bottom: var(--size-8);
+
+    &::after {
+      display: block;
+    }
+  }
+
+  &.h2 {
+    font-size: var(--font-size-h2);
+    max-width: var(--size-512);
+
+    &::after {
+      display: block;
+    }
+  }
+
+  &.h3 {
+    font-size: var(--font-size-h3);
+  }
+
+  &.h4 {
+    font-size: var(--font-size-h4);
+  }
+
+  &.h5 {
+    font-size: var(--font-size-h5);
+  }
+
+  &.h6 {
+    font-size: var(--font-size-h6);
+  }
+}
+
+.clamp {
+  composes: lineClamp from "../../../app/styles/lineClamp.module.css";
+}

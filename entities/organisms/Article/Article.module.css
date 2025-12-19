@@ -1,0 +1,53 @@
+.root {
+  margin: 0 auto;
+  max-width: var(--globalContentMaxWidth);
+  position: relative;
+  width: 100%;
+}
+
+.articleHeading {
+  max-width: var(--size-512);
+}
+
+.articleDate {
+  display: block;
+  font-style: italic;
+  margin: 0 auto;
+  max-width: var(--globalTextMaxWidth);
+  text-align: center;
+}
+
+.articleFigure {
+  height: 320px;
+  margin: 0 auto;
+  max-width: calc(100% - var(--size-16));
+  position: relative;
+
+  @media (min-width: var(--breakpoint-large)) {
+    max-width: var(--globalTextMaxWidth);
+  }
+}
+
+.articleImage {
+  box-shadow:
+    calc(var(--size-48) * -1) calc(var(--size-48) * -1) 0
+      calc(var(--size-40) * -1) var(--colorGreenGrass),
+    var(--size-48) var(--size-48) 0 calc(var(--size-40) * -1)
+      var(--colorGreenGrass);
+  margin: var(--size-8);
+  max-width: calc(100% - var(--size-16));
+}
+
+.content {
+  margin: 0 auto;
+  max-width: var(--globalTextMaxWidth);
+  overflow: hidden;
+  padding: var(--size-8);
+  position: relative;
+  width: 100%;
+  word-break: break-word;
+
+  iframe {
+    max-width: 800px;
+  }
+}

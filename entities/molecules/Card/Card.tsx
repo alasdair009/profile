@@ -4,8 +4,7 @@ import { HTMLAttributes } from "react";
 import { Heading, toRem } from "@/entities";
 import { StaticImageData } from "next/image";
 import amLogo from "../../assets/am.svg";
-import { breakpoints } from "@/entities/design-tokens/dimensions/dimensions";
-import styles from "./Card.module.scss";
+import styles from "./Card.module.css";
 
 type CardProps = {
   href: string;
@@ -39,7 +38,7 @@ export function Card({
             src={image}
             alt={imageAlt}
             fill={true}
-            sizes={`(max-width: ${breakpoints.xsmall}px) ${toRem(312)}, ${toRem(240)}`}
+            sizes={`(max-width: var(--breakpoints-xsmall)) ${toRem(312)}, ${toRem(240)}`}
           />
         </figure>
         <div>

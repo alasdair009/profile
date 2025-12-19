@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 import { BaseTextArea } from "../../atoms/BaseTextArea";
-import styles from "./LabelledTextArea.module.scss";
+import styles from "./LabelledTextArea.module.css";
 
 type LabelledTextAreaProps = {
   /**

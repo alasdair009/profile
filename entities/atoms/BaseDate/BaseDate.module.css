@@ -1,0 +1,16 @@
+.root {
+  composes: baseInput from "../../../app/styles/input.module.css";
+
+  &::-webkit-calendar-picker-indicator {
+    background-color: var(--colorGreenGrass);
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(1.3);
+    }
+  }
+}
+
+.invalid {
+  composes: invalid from "../../../app/styles/input.module.css";
+}

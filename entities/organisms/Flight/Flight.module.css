@@ -1,0 +1,58 @@
+@keyframes cloudMove {
+  0% {
+    opacity: 0;
+    top: 50%;
+    transform: translateZ(1px) translate(-50%, -50%) scale(0.4);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 100%;
+    transform: translateZ(1px) translate(var(--moveTo), -50%) scale(0.7);
+  }
+}
+
+.root {
+  --sky-color: transparent;
+  background-color: var(--sky-color);
+  min-height: var(--size-512);
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    background: linear-gradient(
+      transparent 35%,
+      rgb(from var(--colorWhiteGhost) r g b / 50%) 45%,
+      rgb(from var(--colorWhiteGhost) r g b / 50%) 80%,
+      var(--colorWhiteGhost)
+    );
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.sun {
+  left: 7%;
+  position: absolute;
+  top: 7%;
+  width: 10%;
+}
+
+.cloud {
+  animation: cloudMove calc(var(--animation-rhythm) * 5) infinite
+    var(--curve-linear);
+  position: absolute;
+  height: 100%;
+  top: 75%;
+  transform: translateZ(1px) translate(-50%, -50%);
+  width: 100%;
+  will-change: transform, opacity, top;
+}

@@ -1,0 +1,28 @@
+.root {
+  border: 1px solid var(--colorGreenGrass);
+  min-height: var(--size-1024);
+  max-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.contextMenuRoot {
+  background: var(--colorGreyDark);
+  box-shadow: 0 0 3px 3px var(--colorblackEvil);
+  max-width: 100vw;
+  padding: var(--size-56) var(--size-16) var(--size-16);
+  position: relative;
+  width: var(--size-512);
+}
+
+.contextMenuButton {
+  position: absolute;
+  right: var(--size-8);
+  top: var(--size-8);
+}
+
+.contextMenuFig {
+  display: inline-block;
+  margin: 0;
+}

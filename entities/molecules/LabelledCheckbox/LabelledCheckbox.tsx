@@ -1,4 +1,4 @@
-import styles from "./LabelledCheckbox.module.scss";
+import styles from "./LabelledCheckbox.module.css";
 import { BaseCheckbox, BaseLabel } from "@/entities";
 import { BaseCheckboxProps } from "@/entities/atoms/BaseCheckbox/BaseCheckbox";
 

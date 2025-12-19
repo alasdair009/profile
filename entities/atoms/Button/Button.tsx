@@ -1,5 +1,5 @@
 import { ButtonProps } from "@/entities/atoms/Button/Button.types";
-import styles from "./Button.module.scss";
+import styles from "./Button.module.css";
 
 /**
  * Clickable button for executing actions.

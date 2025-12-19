@@ -1,0 +1,4 @@
+.root {
+  height: var(--size-512);
+  width: var(--size-256);
+}

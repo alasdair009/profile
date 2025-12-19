@@ -1,5 +1,5 @@
 import { CSSProperties, HTMLAttributes } from "react";
-import styles from "./Progress.module.scss";
+import styles from "./Progress.module.css";
 
 export type ProgressProps = {
   /**

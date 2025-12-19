@@ -1,0 +1,76 @@
+.root {
+  --buttonClipPath: polygon(
+    calc(0% + var(--size-8)) 0,
+    100% 0,
+    calc(100% - var(--size-8)) 100%,
+    0 100%
+  );
+
+  align-items: center;
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: var(--colorWhiteGhost);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-Inter);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  height: var(--size-48);
+  justify-content: center;
+  max-width: var(--size-256);
+  min-width: var(--size-64);
+  padding: 0 var(--size-48);
+  position: relative;
+  transition: padding calc(var(--animation-rhythm) * 0.5);
+  z-index: 0;
+
+  &::before,
+  &::after {
+    background: var(--colorGreenGrass);
+    clip-path: var(--buttonClipPath);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    transition: all calc(var(--animation-rhythm) * 0.5);
+    width: calc(100% - var(--size-32));
+    z-index: -1;
+  }
+
+  &::after {
+    background: var(--colorGreyDark);
+    left: calc(50% + 5px);
+    top: 5px;
+    z-index: -2;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      width: calc(100% - var(--size-8));
+    }
+
+    &::after {
+      background: var(--colorWhiteGhost);
+    }
+  }
+
+  &:active::before {
+    background: color-mix(in srgb, var(--colorGreenGrass) 50%, white 5%);
+  }
+
+  &.transparent {
+    height: auto;
+    min-width: 0;
+    padding: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
