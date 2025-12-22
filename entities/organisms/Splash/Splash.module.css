@@ -1,20 +1,15 @@
-@use "../../../app/styles/colors";
-@use "../../../app/styles/dimensions";
-@use "../../../app/styles/helpers/rem";
-@use "sass:map";
-
 .root {
   align-items: center;
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: rem.toRem(dimensions.$globalDecorationMaxWidth);
+  max-width: var(--globalDecorationMaxWidth);
   position: relative;
   width: 100%;
 
-  @media (map.get(dimensions.$device, small)) {
-    height: calc(100vh - rem.toRem(dimensions.$globalHeaderHeight));
-    min-height: rem.toRem(320);
+  @media (min-width: var(--breakpoint-small)) {
+    height: calc(100vh - var(--globalHeaderHeight));
+    min-height: 320px;
 
     &::before,
     &::after {
@@ -24,7 +19,7 @@
     }
 
     &::after {
-      background: colors.$colorWhiteGhost;
+      background: var(--colorWhiteGhost);
     }
   }
 }
@@ -34,16 +29,16 @@
   flex-direction: column;
   height: 100%;
   margin: 0 auto;
-  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  max-width: var(--globalContentMaxWidth);
   width: 100%;
 
-  @media (map.get(dimensions.$device, small)) {
+  @media (min-width: var(--breakpoint-small)) {
     flex-direction: row;
   }
 }
 
 .feetSection {
-  background: colors.$colorblackEvil;
+  background: var(--colorblackEvil);
   align-items: center;
   display: flex;
   justify-content: center;
@@ -51,7 +46,7 @@
   position: relative;
   width: 100%;
 
-  @media (map.get(dimensions.$device, small)) {
+  @media (min-width: var(--breakpoint-small)) {
     width: 50%;
   }
 
@@ -63,8 +58,8 @@
     top: 0;
     width: 100%;
 
-    @media (map.get(dimensions.$device, small)) {
-      background: colors.$colorWhiteGhost;
+    @media (min-width: var(--breakpoint-small)) {
+      background: var(--colorWhiteGhost);
       -webkit-mask: url(./ali-flight.svg) no-repeat 350% center;
       mask: url(./ali-flight.svg) no-repeat 350% center;
       -webkit-mask-size: 75%;
@@ -76,15 +71,15 @@
 .headSection {
   background: linear-gradient(
     to right,
-    colors.$colorWhiteGhost,
-    colors.$colorWhiteGhost 50%,
-    colors.$colorblackEvil 50%
+    var(--colorWhiteGhost),
+    var(--colorWhiteGhost) 50%,
+    var(--colorWhiteGhost) 50%
   );
-  height: rem.toRem(480);
+  height: 480px;
   position: relative;
   width: 100%;
 
-  @media (map.get(dimensions.$device, small)) {
+  @media (min-width: var(--breakpoint-small)) {
     background: transparent;
     height: auto;
     width: 50%;
@@ -93,9 +88,9 @@
   &::before {
     background: linear-gradient(
       to right,
-      colors.$colorblackEvil,
-      colors.$colorblackEvil 50%,
-      colors.$colorWhiteGhost 50%
+      var(--colorblackEvil),
+      var(--colorblackEvil) 50%,
+      var(--colorWhiteGhost) 50%
     );
     content: "";
     height: 100%;
@@ -114,8 +109,8 @@
     top: 0;
     width: 100%;
 
-    @media (map.get(dimensions.$device, small)) {
-      background: colors.$colorWhiteGhost;
+    @media (min-width: var(--breakpoint-small)) {
+      background: var(--colorWhiteGhost);
       -webkit-mask:
         url(./ali-flight.svg) no-repeat -50% center,
         linear-gradient(#fff 0 0);
@@ -131,26 +126,25 @@
 }
 
 .copy {
-  padding: dimensions.getSize(s32) dimensions.getSize(s16);
+  padding: var(--size-32) var(--size-16);
   text-align: center;
   width: 100%;
 
-  @media (map.get(dimensions.$device, small)) {
-    max-width: rem.toRem(480);
-    padding: dimensions.getSize(s16) dimensions.getSize(s32)
-      dimensions.getSize(s16) dimensions.getSize(s16);
+  @media (min-width: var(--breakpoint-small)) {
+    max-width: 480px;
+    padding: var(--size-16) var(--size-32) var(--size-16) var(--size-16);
     text-align: left;
   }
 
-  @media (map.get(dimensions.$device, medium)) {
-    padding: dimensions.getSize(s16);
+  @media (min-width: var(--breakpoint-medium)) {
+    padding: var(--size-16);
   }
 }
 
 .copyParagraph {
   text-align: center;
 
-  @media (map.get(dimensions.$device, small)) {
+  @media (min-width: var(--breakpoint-small)) {
     text-align: left;
   }
 }

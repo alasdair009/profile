@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import styles from "./Plaque.module.scss";
+import styles from "./Plaque.module.css";
 
 type PlaqueProps = {
   windAngle?: string;

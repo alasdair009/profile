@@ -1,11 +1,3 @@
-@use "../../../app/styles/animation";
-@use "../../../app/styles/colors";
-@use "../../../app/styles/dimensions";
-@use "../../../app/styles/radii";
-@use "../../../app/styles/typography";
-@use "../../../app/styles/helpers/rem";
-@use "sass:map";
-
 @keyframes baseRotate {
   0% {
     transform: rotateY(0);
@@ -26,8 +18,8 @@
 
 .root {
   margin: 0 auto;
-  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
-  padding: dimensions.getSize(s64) 0;
+  max-width: var(--globalContentMaxWidth);
+  padding: var(--size-64) 0;
   position: relative;
 }
 
@@ -37,14 +29,18 @@
   height: 100%;
   justify-content: center;
   margin: 0 auto;
-  max-width: rem.toRem(480);
+  max-width: 480px;
   perspective: 300px;
   width: 100%;
 }
 
 .particle {
+  --color: transparent;
+  --content: "";
+  --position: 0;
+  --time: 0s;
   animation: rotating var(--time) calc(var(--position) * -2 * 1s)
-    map.get(animation.$curves, linear) infinite;
+    var(--curve-linear) infinite;
   left: -16%;
   margin-top: -5%;
   padding-bottom: 10%;
@@ -52,23 +48,21 @@
   right: -16%;
   top: 50%;
   transform-style: preserve-3d;
-  transition: animation-duration animation.animationDuration(1);
+  transition: animation-duration var(--animation-rhythm);
 
   &::before {
     align-items: center;
     animation: baseRotate var(--time) calc(var(--position) * -2 * 1s)
-      map.get(animation.$curves, linear) infinite reverse;
+      var(--curve-linear) infinite reverse;
     background-color: var(--color);
-    border-radius: radii.getBorderRadii(round);
+    border-radius: var(--radii-round);
     bottom: 0;
     box-shadow:
-      inset rem.toRem(5) rem.toRem(5) rem.toRem(10)
-        rgba(colors.$colorWhiteGhost, 0.2),
-      inset rem.toRem(-5) rem.toRem(-5) rem.toRem(10)
-        rgba(colors.$colorWhiteGhost, 0.2);
+      inset 5px 5px 10px rgb(from var(--colorWhiteGhost) r g b / 20%),
+      inset -5px -5px 10px rgb(from var(--colorWhiteGhost) r g b / 20%);
     content: var(--content);
     display: flex;
-    font-size: typography.getFontSize(small);
+    font-size: var(--font-size-small);
     justify-content: center;
     left: 0;
     position: absolute;
@@ -80,12 +74,15 @@
 .core {
   aspect-ratio: 1;
   background-image:
-    radial-gradient(transparent 40%, colors.$colorWhiteGhost),
+    radial-gradient(transparent 40%, var(--colorWhiteGhost)),
     linear-gradient(
-      rgba(colors.$colorWhiteGhost, 0.8),
-      rgba(colors.$colorWhiteGhost, 0.8)
+      rgb(from var(--colorWhiteGhost) r g b / 80%),
+      rgb(from var(--colorWhiteGhost) r g b / 80%)
     ),
-    radial-gradient(colors.$colorWhiteGhost 10%, transparent 50%);
+    radial-gradient(
+      rgb(from var(--colorWhiteGhost) r g b / 10%),
+      transparent 50%
+    );
   background-position:
     0 0,
     50% 50%,
@@ -95,23 +92,24 @@
     120% 120%,
     100% 100%,
     60% 60%;
-  border-radius: radii.getBorderRadii(round);
+  border-radius: var(--radii-round);
   box-shadow:
-    rem.toRem(80) rem.toRem(80) dimensions.getSize(s128) rgba(0, 0, 0, 0.5),
-    0 0 5rem rgba(colors.$colorWhiteGhost, 0.8);
+    var(--size-80) var(--size-80) var(--size-128)
+      rgb(from var(--colorblackEvil) r g b / 50%),
+    0 0 5rem rgb(from var(--colorWhiteGhost) r g b / 80%);
   margin: 0 auto;
-  max-width: dimensions.getSize(s192);
+  max-width: var(--size-192);
   position: relative;
   transform-style: preserve-3d;
   width: 100%;
 
-  @media (map.get(dimensions.$device, medium)) {
-    max-width: dimensions.getSize(s256);
+  @media (min-width: var(--breakpoint-medium)) {
+    max-width: var(--size-256);
   }
 
   &::before,
   &::after {
-    border-radius: radii.getBorderRadii(round);
+    border-radius: var(--radii-round);
     content: "";
     height: 100%;
     position: absolute;
@@ -120,8 +118,8 @@
 
   &::before {
     background: radial-gradient(
-      colors.$colorGreenGrass,
-      rgba(colors.$colorGreenGrass, 0.15)
+      var(--colorGreenGrass),
+      rgb(from var(--colorGreenGrass) r g b / 15%)
     );
     mask: url(../../assets/am.svg) no-repeat center;
     opacity: 0.1;
@@ -130,7 +128,7 @@
   &::after {
     background: url(../../assets/am.svg) no-repeat center;
     opacity: 0;
-    transition: opacity animation.animationDuration(0.5);
+    transition: opacity calc(var(--animation-rhythm) * 0.5);
 
     @media (prefers-reduced-motion) {
       opacity: 1;
@@ -143,7 +141,7 @@
     }
 
     .particle {
-      animation-duration: animation.animationDuration(10);
+      animation-duration: calc(var(--animation-rhythm) * 10);
     }
   }
 }

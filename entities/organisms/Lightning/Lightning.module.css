@@ -1,8 +1,3 @@
-@use "../../../app/styles/animation";
-@use "../../../app/styles/colors";
-@use "../../../app/styles/dimensions";
-@use "../../../app/styles/helpers/rem";
-
 @keyframes strikeAnimation {
   0%,
   49%,
@@ -35,13 +30,14 @@
   display: flex;
   height: 100vh;
   margin: 0 auto;
-  max-width: rem.toRem(dimensions.$globalDecorationMaxWidth);
+  max-width: var(--globalDecorationMaxWidth);
   overflow: hidden;
   position: relative;
   width: 100%;
 }
 
 .background {
+  --frequency: 0;
   animation: strikeGlow var(--frequency) linear infinite;
   height: 100%;
   left: 0;
@@ -56,6 +52,7 @@
 }
 
 .strike {
+  --frequency: 0;
   animation: strikeAnimation var(--frequency) linear infinite;
   height: 100%;
   left: 0;
@@ -76,15 +73,15 @@
   background: linear-gradient(
     to left,
     transparent,
-    rgba(colors.$colorblackEvil, 0.2),
+    rgb(from var(--colorblackEvil) r g b / 20%),
     transparent
   );
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  max-width: var(--globalContentMaxWidth);
   overflow: hidden;
-  padding: dimensions.getSize(s8);
+  padding: var(--size-8);
   width: 100%;
   z-index: 1;
 }

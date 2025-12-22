@@ -6,7 +6,7 @@ import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { useInView } from "react-intersection-observer";
 import { HTMLAttributes } from "react";
 import "react-vertical-timeline-component/style.min.css";
-import styles from "./TimelineElement.module.scss";
+import styles from "./TimelineElement.module.css";
 
 type TimelineElementProps = {
   date: string;

@@ -1,8 +1,0 @@
-@use "../../../../../../app/styles/dimensions";
-@use "../../../../../../app/styles/helpers/rem";
-
-.root {
-  margin: 0 auto;
-  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
-  position: relative;
-}

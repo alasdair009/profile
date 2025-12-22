@@ -1,13 +1,9 @@
-@use "../../../../app/styles/dimensions";
-@use "../../../../app/styles/radii";
-@use "sass:map";
-
 .root {
   appearance: none;
-  border-radius: radii.getBorderRadii(round);
-  height: dimensions.getSize(s32);
+  border-radius: var(--radii-round);
+  height: var(--size-32);
   position: absolute;
-  width: dimensions.getSize(s32);
+  width: var(--size-32);
 
   &::-webkit-meter-bar {
     background: none;

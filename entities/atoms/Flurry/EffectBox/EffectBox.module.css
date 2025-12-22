@@ -1,7 +1,3 @@
-@use "../../../../app/styles/animation";
-@use "../../../../app/styles/helpers/rem";
-@use "sass:map";
-
 @keyframes orbit {
   from {
     transform: rotate(0deg) translate(-50%, -50%);
@@ -12,8 +8,10 @@
 }
 
 .effectBox {
-  animation: orbit animation.animationDuration(21) infinite
-    map.get(animation.$curves, linear);
+  --index: 0;
+  --shadows: none;
+  animation: orbit animation calc(var(--animation-rhythm) * 21) infinite
+    var(--curve-linear);
   animation-direction: reverse;
   animation-duration: calc(
     (var(--particleBaseDuration) + (var(--particleBaseDuration) / 2)) *
@@ -41,6 +39,6 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: rem.toRem(1);
+    width: 1px;
   }
 }

@@ -1,7 +1,3 @@
-@use "../../../app/styles/dimensions";
-@use "../../../app/styles/typography";
-@use "../../../app/styles/helpers/rem";
-
 @keyframes wordAnim {
   0%,
   5%,
@@ -19,21 +15,23 @@
 .root {
   display: flex;
   margin: 0 auto;
-  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  max-width: var(--globalContentMaxWidth);
   position: relative;
   width: 100%;
 }
 
 .text {
+  --word-count: 0;
+  --word-index: 0;
   --speed: calc(var(--word-count) * 1.5 + 2);
   --delay: calc(
-    ((var(--speed) / (var(--word-count) + 1))) *
-      var(--word-index) - var(--speed)
+    ((var(--speed) / (var(--word-count) + 1))) * var(--word-index) -
+      var(--speed)
   );
   animation: wordAnim calc(var(--speed) * 1s) infinite ease-in-out;
   animation-delay: calc(var(--delay) * 1s);
   display: inline-block;
-  font-size: typography.getFontSize(xxlarge) !important;
+  font-size: var(--font-size-xxlarge) !important;
   left: 50%;
   position: absolute;
   text-align: center;
@@ -52,9 +50,9 @@
 
 .morpher {
   border: none !important;
-  filter: contrast(25) blur(rem.toRem(1));
+  filter: contrast(25) blur(1px);
   position: relative;
-  min-height: rem.toRem(480);
+  min-height: 480px;
   width: 100%;
 
   @media (prefers-reduced-motion) {

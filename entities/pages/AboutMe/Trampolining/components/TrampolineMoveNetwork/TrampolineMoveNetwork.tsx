@@ -1,6 +1,6 @@
 import { ConnectionOptions } from "mysql2/promise";
 import { ErrorText, Heading, Paragraph } from "@/entities";
-import styles from "./TrampolineMoveNetwork.module.scss";
+import styles from "./TrampolineMoveNetwork.module.css";
 import TrampolineMoveNetworkWrapper from "./TrampolineMoveNetworkWrapper";
 import { HTMLAttributes } from "react";
 import { getMoveData } from "./getData";

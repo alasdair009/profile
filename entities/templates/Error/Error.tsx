@@ -9,7 +9,7 @@ import {
   TextMask,
 } from "@/entities";
 import { rgba } from "polished";
-import styles from "./Error.module.scss";
+import styles from "./Error.module.css";
 
 type ErrorProps = {
   errorCode: 404 | 500;

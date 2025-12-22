@@ -1,22 +1,18 @@
-@use "../../../app/styles/colors";
-@use "../../../app/styles/dimensions";
-@use "../../../app/styles/helpers/rem";
-
 .root {
   align-items: center;
-  background: colors.$colorblackEvil;
+  background: var(--colorblackEvil);
   justify-content: center;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - #{dimensions.getSize(s48)});
-  min-height: rem.toRem(400);
+  height: calc(100vh - var(--size-48));
+  min-height: 400px;
   position: relative;
 }
 
 .inner {
   flex: 1;
   margin: 0 auto;
-  max-width: dimensions.getSize(s512);
+  max-width: var(--size-512);
   overflow: hidden;
   position: relative;
   width: 100%;

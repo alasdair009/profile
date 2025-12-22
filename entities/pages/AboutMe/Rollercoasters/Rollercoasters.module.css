@@ -1,13 +1,10 @@
-@use "../../../../app/styles/dimensions";
-@use "../../../../app/styles/helpers/rem";
-
 .statBoxWrapper {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
-  gap: dimensions.getSize(s24);
+  max-width: var(--globalContentMaxWidth);
+  gap: var(--size-24);
   margin: 0 auto;
   width: 100%;
 }
@@ -15,8 +12,8 @@
 .themeParkLogoFigure {
   aspect-ratio: 1;
   display: inline-block;
-  height: dimensions.getSize(s24);
-  margin: 0 0 0 dimensions.getSize(s8);
+  height: var(--size-24);
+  margin: 0 0 0 var(--size-8);
   position: relative;
 }
 

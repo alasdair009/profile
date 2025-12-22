@@ -1,5 +1,5 @@
 import { CSSProperties, HTMLAttributes } from "react";
-import styles from "./MorphingText.module.scss";
+import styles from "./MorphingText.module.css";
 
 type MorphingTextProps = {
   values: string[];

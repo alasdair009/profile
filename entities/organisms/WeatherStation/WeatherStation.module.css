@@ -1,14 +1,7 @@
-@use "../../../app/styles/animation";
-@use "../../../app/styles/colors";
-@use "../../../app/styles/dimensions";
-@use "../../../app/styles/radii";
-@use "../../../app/styles/helpers/rem";
-@use "sass:map";
-
 .root {
   display: block;
   margin: 0 auto;
-  max-width: rem.toRem(dimensions.$globalDecorationMaxWidth);
+  max-width: var(--globalDecorationMaxWidth);
   position: relative;
   width: 100%;
 }
@@ -19,13 +12,13 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  max-width: var(--globalContentMaxWidth);
 }
 
 .house {
   aspect-ratio: 1;
   height: auto;
-  max-width: rem.toRem(900);
+  max-width: 900px;
   position: relative;
   width: 100%;
 }
@@ -37,17 +30,17 @@
   border-style: solid;
   border-width: 5vmin;
   box-shadow:
-    0 0 rem.toRem(5) 0 rgba(colors.$colorWhiteGhost, 0.25) inset,
-    0 rem.toRem(5) rem.toRem(10) rem.toRem(5) rgba(colors.$colorblackEvil, 0.25);
+    0 0 5px 0 rgb(from var(--colorWhiteGhost) r g b / 25%) inset,
+    0 5px 10px 5px rgb(from var(--colorblackEvil) r g b / 25%);
   display: flex;
   margin: 10vh 10vw 5vh;
   position: relative;
 
   &::before {
-    border-radius: radii.getBorderRadii(r2);
+    border-radius: var(--radii-2);
     bottom: -2vmin;
-    box-shadow: 0 rem.toRem(2) rem.toRem(5) 0 rgba(colors.$colorblackEvil, 0.25)
-      inset;
+    box-shadow: 0 var(--size-2) 5px 0
+      rgb(from var(--colorblackEvil) r g b / 25%) inset;
     content: "";
     left: -2vmin;
     position: absolute;
@@ -56,9 +49,10 @@
   }
 
   &::after {
-    border-radius: radii.getBorderRadii(r2);
+    border-radius: var(--radii-2);
     bottom: -2.5vmin;
-    box-shadow: 0 rem.toRem(2) rem.toRem(5) 0 rgba(colors.$colorblackEvil, 0.25);
+    box-shadow: 0 var(--size-2) 5px 0
+      rgb(from var(--colorblackEvil) r g b / 25%);
     content: "";
     left: -2.5vmin;
     position: absolute;
@@ -68,26 +62,28 @@
 }
 
 .houseTree {
-  height: dimensions.getSize(s64);
+  --right: 0;
+  --top: 0;
+  height: var(--size-64);
   position: absolute;
   right: var(--right);
   top: var(--top);
-  width: dimensions.getSize(s64);
+  width: var(--size-64);
 }
 
 .sunAnchor {
+  --rotation: 0;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   transform: rotate(calc(var(--rotation) * 1deg));
-  transition: transform animation.animationDuration(1)
-    map.get(animation.$curves, default);
+  transition: transform var(--animation-rhythm) var(--curve-default);
   width: 100%;
 }
 
 .sun {
-  left: dimensions.getSize(s24);
+  left: var(--size-24);
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -95,7 +91,7 @@
 
 .moon {
   position: absolute !important;
-  right: dimensions.getSize(s8);
+  right: var(--size-8);
   top: 50%;
   transform: translate(-50%, -50%);
 }
@@ -110,11 +106,13 @@
 }
 
 .cloud {
-  height: dimensions.getSize(s512);
+  --xPos: 0;
+  --yPos: 0;
+  height: var(--size-512);
   left: var(--xPos);
   opacity: 0.65;
   position: absolute;
   top: var(--yPos);
   transform: translate(-50%, -50%) scale(0.2);
-  width: dimensions.getSize(s1024);
+  width: var(--size-1024);
 }

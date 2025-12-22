@@ -1,28 +1,24 @@
-@use "../../../app/styles/dimensions";
-@use "../../../app/styles/helpers/rem";
-@use "sass:map";
-
 .skillsSection {
   display: block;
-  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  max-width: var(--globalContentMaxWidth);
   margin: 0 auto;
-  padding: 0 dimensions.getSize(s16);
+  padding: 0 var(--size-16);
 }
 
 .skillGrid {
   display: block;
   width: 100%;
 
-  @media (map.get(dimensions.$device, xsmall)) {
+  @media (min-width: var(--breakpoint-xsmall)) {
     display: grid;
-    gap: dimensions.getSize(s2);
+    gap: var(--size-2);
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   }
 
-  @media (map.get(dimensions.$device, small)) {
+  @media (min-width: var(--breakpoint-small)) {
     display: grid;
-    gap: dimensions.getSize(s2);
+    gap: var(--size-2);
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
   }
@@ -33,14 +29,14 @@
   display: flex;
   justify-content: center;
 
-  @media (map.get(dimensions.$device, xsmall)) {
+  @media (min-width: var(--breakpoint-xsmall)) {
     grid-column-start: var(--xs-column-start);
     grid-column-end: var(--xs-column-end);
     grid-row-start: var(--xs-row-start);
     grid-row-end: var(--xs-row-end);
   }
 
-  @media (map.get(dimensions.$device, small)) {
+  @media (min-width: var(--breakpoint-small)) {
     grid-column-start: var(--s-column-start);
     grid-column-end: var(--s-column-end);
     grid-row-start: var(--s-row-start);
@@ -48,13 +44,13 @@
   }
 
   &Image {
-    max-width: dimensions.getSize(s256);
+    max-width: var(--size-256);
   }
 }
 
 .portfolioSection {
   display: block;
-  max-width: rem.toRem(dimensions.$globalContentMaxWidth);
+  max-width: var(--globalContentMaxWidth);
   margin: 0 auto;
-  padding: 0 dimensions.getSize(s16);
+  padding: 0 var(--size-16);
 }

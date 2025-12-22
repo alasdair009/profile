@@ -1,6 +1,6 @@
 import { SocialMediaLink } from "@/entities";
 import { HTMLAttributes } from "react";
-import styles from "./SocialMediaBar.module.scss";
+import styles from "./SocialMediaBar.module.css";
 
 type SocialMediaBarProps = HTMLAttributes<HTMLDivElement>;
 export function SocialMediaBar({ ...rest }: SocialMediaBarProps) {

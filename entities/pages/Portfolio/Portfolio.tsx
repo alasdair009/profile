@@ -24,7 +24,7 @@ import {
   getTotalExperienceYears,
 } from "@/lib/data/professional";
 import jagexLogo from "@/entities/assets/jagex-square.webp";
-import styles from "./Portfolio.module.scss";
+import styles from "./Portfolio.module.css";
 import { rgba } from "polished";
 import Image from "next/image";
 import amLogo from "@/entities/assets/am.svg";

@@ -1,19 +1,11 @@
-@use "../../../../app/styles/animation";
-@use "../../../../app/styles/colors";
-@use "../../../../app/styles/dimensions";
-@use "../../../../app/styles/typography";
-@use "../../../../app/styles/helpers/rem";
-@use "sass:map";
-
 .root {
-  box-shadow: (-(dimensions.getSize(s4))) dimensions.getSize(s4)
-    dimensions.getSize(s8) rem.toRem(1) rgba(0, 0, 0, 0.5);
-  color: colors.$colorWhiteGhost;
-  padding: dimensions.getSize(s8);
+  box-shadow: calc(var(--size-4) * -1) var(--size-4) var(--size-8) 1px
+    rgba(0, 0, 0, 0.5);
+  color: var(--colorWhiteGhost);
+  padding: var(--size-8);
   position: relative;
-  transition: color animation.animationDuration(0.25)
-    map.get(animation.$curves, default);
-  width: dimensions.getSize(s256);
+  transition: color calc(var(--animation-rhythm) * 0.25) var(--curve-default);
+  width: var(--size-256);
 
   &::before {
     background:
@@ -21,7 +13,7 @@
         60%/3000px 3000px,
       repeating-conic-gradient(#421a00 0 0.0001%, #4d2105 0 0.0002%) 40%
         40%/4000px 3000px;
-    border: dimensions.getSize(s4) solid colors.$colorWhiteGhost;
+    border: var(--size-4) solid var(--colorWhiteGhost);
     border-color: #5b1d00 #5b1d00 #371302 #371302;
     content: "";
     height: 100%;
@@ -40,7 +32,7 @@
 .dl {
   display: flex;
   flex-wrap: wrap;
-  font-size: typography.getFontSize(small);
+  font-size: var(--font-size-small);
   margin: 0;
   position: relative;
 }

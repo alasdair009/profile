@@ -8,7 +8,7 @@ import {
   StatBox,
   Table,
 } from "@/entities";
-import styles from "./Rollercoasters.module.scss";
+import styles from "./Rollercoasters.module.css";
 import Image from "next/image";
 import imageUrlBuilder from "@sanity/image-url";
 import { MarkerProps } from "@react-google-maps/api";

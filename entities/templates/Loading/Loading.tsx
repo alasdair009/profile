@@ -1,6 +1,6 @@
 import { Heading, Spinner } from "@/entities";
 import { HTMLAttributes } from "react";
-import styles from "./Loading.module.scss";
+import styles from "./Loading.module.css";
 
 type LoadingProps = HTMLAttributes<HTMLDivElement>;
 

@@ -7,7 +7,7 @@ import {
 } from "@react-google-maps/api";
 import { HTMLAttributes } from "react";
 import { ErrorText, Heading } from "@/entities";
-import styles from "./Map.module.scss";
+import styles from "./Map.module.css";
 
 const center = {
   lat: 51.5072479362636,

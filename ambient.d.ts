@@ -2,7 +2,7 @@ declare module "*.png";
 declare module "*.jpg";
 declare module "*.svg";
 
-declare module "*.scss" {
+declare module "*.css" {
   const content: Record<string, string>;
   export default content;
 }
