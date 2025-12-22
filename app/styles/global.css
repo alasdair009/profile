@@ -9,6 +9,18 @@
 /*  }*/
 /*}*/
 
+@import "./_animation.css";
+@import "./_clipPaths.css";
+@import "./_colors.css";
+@import "./_dimensions.css";
+@import "./_radii.css";
+@import "./_shadows.css";
+@import "./_typography.css";
+
+:root {
+  composes: scrollbarStyles from "./scrollBar.module.css";
+}
+
 html,
 body {
   background: var(--colorblackEvil);
