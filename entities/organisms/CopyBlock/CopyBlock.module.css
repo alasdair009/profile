@@ -1,0 +1,8 @@
+.root {
+  display: block;
+  margin: 0 auto;
+  max-width: var(--globalTextMaxWidth);
+  overflow: hidden;
+  padding: var(--size-8);
+  width: 100%;
+}

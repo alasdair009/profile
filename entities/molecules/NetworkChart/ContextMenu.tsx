@@ -1,5 +1,5 @@
 import { Button, Heading, Paragraph, UnorderedList } from "@/entities";
-import styles from "./NetworkChart.module.scss";
+import styles from "./NetworkChart.module.css";
 
 type ContextMenuProps = {
   onClose: any;

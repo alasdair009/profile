@@ -1,4 +1,4 @@
-import styles from "./LabelledRadio.module.scss";
+import styles from "./LabelledRadio.module.css";
 import { BaseRadio } from "../../atoms/BaseRadio";
 import { BaseLabel } from "../../atoms/BaseLabel";
 import type { BaseRadioProps } from "../../atoms/BaseRadio";

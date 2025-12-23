@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 import { HorizontalRuleMarginOptions } from "./HorizontalRule.types";
-import styles from "./HorizontalRule.module.scss";
+import styles from "./HorizontalRule.module.css";
 
 type HorizontalRuleProps = {
   /**

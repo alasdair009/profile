@@ -1,6 +1,6 @@
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
 import { colors } from "@/entities";
-import styles from "./ErrorText.module.scss";
+import styles from "./ErrorText.module.css";
 
 type ErrorTextProps = {
   /**

@@ -1,0 +1,37 @@
+@import url("./_animation.css");
+@import url("./_clipPaths.css");
+@import url("./_colors.css");
+@import url("./_dimensions.css");
+@import url("./_radii.css");
+@import url("./_shadows.css");
+@import url("./_typography.css");
+
+:root {
+  composes: scrollbarstyles from "./scrollBar.module.css";
+}
+
+html,
+body {
+  background: var(--colorblackEvil);
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  color: var(--colorWhiteGhost);
+}
+
+body {
+  font-family: var(--font-Inter);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}

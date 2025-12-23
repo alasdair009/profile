@@ -1,11 +1,11 @@
-import { HTMLAttributes, ReactNode } from "react";
+import { HTMLAttributes } from "react";
 import { colors } from "@/entities";
-import styles from "./Code.module.scss";
+import styles from "./Code.module.css";
 
 type CodeProps = HTMLAttributes<HTMLSpanElement>;
 
 /**
- * Render source code in a monospaced box.
+ * Source code in a monospaced box.
  */
 export function Code({ children, ...rest }: CodeProps) {
   return (

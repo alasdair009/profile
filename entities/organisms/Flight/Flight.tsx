@@ -1,7 +1,7 @@
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
 import { Cloud, colors, Sun } from "@/entities";
 import { lcgNextRand, makeLCG } from "@/lib/random";
-import styles from "./Flight.module.scss";
+import styles from "./Flight.module.css";
 
 type FlightProps = {
   /**

@@ -1,0 +1,3 @@
+.root {
+  composes: paragraphstyles from "../../../app/styles/paragraph.module.css";
+}

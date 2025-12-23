@@ -1,6 +1,6 @@
 "use client";
-import { HTMLAttributes, useState } from "react";
-import styles from "./BaseToggle.module.scss";
+import { HTMLAttributes } from "react";
+import styles from "./BaseToggle.module.css";
 
 export type BaseToggleProps = {
   /**

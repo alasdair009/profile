@@ -1,5 +1,5 @@
 import { CSSProperties, HTMLAttributes } from "react";
-import styles from "./Spacer.module.scss";
+import styles from "./Spacer.module.css";
 
 type SpacerProps = {
   /**

@@ -1,0 +1,3 @@
+.root {
+  composes: labelledstyles from "../../../app/styles/input.module.css";
+}

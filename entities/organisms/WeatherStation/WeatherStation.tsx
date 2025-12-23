@@ -7,7 +7,7 @@ import { Thermometer } from "./Thermometer/Thermometer";
 import { Barometer } from "./Barometer";
 import { Plaque } from "./Plaque";
 import type { SunState } from "@/app/portfolio/weather/types";
-import styles from "./WeatherStation.module.scss";
+import styles from "./WeatherStation.module.css";
 import Image from "next/image";
 
 export const windDirections = [

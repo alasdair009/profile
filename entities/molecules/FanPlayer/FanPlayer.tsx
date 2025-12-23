@@ -1,4 +1,4 @@
-import styles from "./FanPlayer.module.scss";
+import styles from "./FanPlayer.module.css";
 import { HTMLAttributes } from "react";
 import { Audio } from "@/entities";
 

@@ -1,6 +1,7 @@
 import { Meta } from "@storybook/addon-docs/blocks";
-import { clipPaths } from "./clipPaths";
 import { colors } from "../colors";
+
+[//]: # 'import { clipPaths } from "./clipPaths";'
 
 <Meta title="Design Tokens/Clip Paths" />
 
@@ -9,29 +10,29 @@ import { colors } from "../colors";
 Basic iconography can be created without the need for a net request using a css clip-path.
 Below is a gallery of icons I have created for use across my site.
 
-<div
-  style={{
-    display: "flex",
-    flexWrap: "wrap",
-    gap: 8,
-    justifyContent: "space-between",
-    width: "100%",
-  }}
->
-  {Object.keys(clipPaths).map((clipPathKey) => {
-    return (
-      <article style={{ textAlign: "center", overflow: "hidden", width: 125 }}>
-        <h4 style={{ textAlign: "center" }}>{clipPathKey}</h4>
-        <div
-          style={{
-            aspectRatio: 1,
-            background: colors.whiteGhost,
-            clipPath: clipPaths[clipPathKey],
-            margin: "0 auto",
-            width: 100,
-          }}
-        />
-      </article>
-    );
-  })}
-</div>
+[//]: # "<div"
+[//]: # "  style={{"
+[//]: # '    display: "flex",'
+[//]: # '    flexWrap: "wrap",'
+[//]: # "    gap: 8,"
+[//]: # '    justifyContent: "space-between",'
+[//]: # '    width: "100%",'
+[//]: # "  }}"
+[//]: # ">"
+[//]: # "  {Object.keys(clipPaths).map((clipPathKey) => {"
+[//]: # "    return ("
+[//]: # '      <article style={{ textAlign: "center", overflow: "hidden", width: 125 }}>'
+[//]: # '        <h4 style={{ textAlign: "center" }}>{clipPathKey}</h4>'
+[//]: # "        <div"
+[//]: # "          style={{"
+[//]: # "            aspectRatio: 1,"
+[//]: # "            background: colors.whiteGhost,"
+[//]: # "            clipPath: clipPaths[clipPathKey],"
+[//]: # '            margin: "0 auto",'
+[//]: # "            width: 100,"
+[//]: # "          }}"
+[//]: # "        />"
+[//]: # "      </article>"
+[//]: # "    );"
+[//]: # "  })}"
+[//]: # "</div>"

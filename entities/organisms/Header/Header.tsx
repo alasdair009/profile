@@ -2,7 +2,7 @@ import { HTMLAttributes } from "react";
 import amLogo from "../../assets/am.svg";
 import { Link as HeaderLink, sizes } from "@/entities";
 import { NotificationButton } from "./NotificationButton";
-import styles from "./Header.module.scss";
+import styles from "./Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
 

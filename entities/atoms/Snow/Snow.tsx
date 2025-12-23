@@ -1,6 +1,6 @@
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
 import { lcgNextRand, makeLCG } from "@/lib/random";
-import styles from "./Snow.module.scss";
+import styles from "./Snow.module.css";
 import { toRem } from "@/entities";
 
 type SnowProps = {

@@ -1,7 +1,7 @@
 import { CSSProperties, HTMLAttributes } from "react";
 import type { TreeWindDirection } from "./types";
 import { lcgNextRand, makeLCG } from "@/lib/random";
-import styles from "./Tree.module.scss";
+import styles from "./Tree.module.css";
 
 const getAnimationValues = (
   windDirection: TreeWindDirection

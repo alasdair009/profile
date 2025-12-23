@@ -1,4 +1,4 @@
-import styles from "./Audio.module.scss";
+import styles from "./Audio.module.css";
 import { HTMLAttributes } from "react";
 
 type AudioProps = {

@@ -3,8 +3,8 @@ import { Analytics } from "@vercel/analytics/react";
 import ServiceWorker from "@/app/ServiceWorker";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ViewTransitions } from "next-view-transitions";
-import "./styles/global.scss";
-import styles from "./layout.module.scss";
+import "./styles/global.css";
+import styles from "./layout.module.css";
 import { ReactNode } from "react";
 import { interFont } from "@/entities/design-tokens/typography/typography";
 

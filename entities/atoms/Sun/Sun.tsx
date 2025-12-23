@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import styles from "./Sun.module.scss";
+import styles from "./Sun.module.css";
 
 type SunProps = {
   /**

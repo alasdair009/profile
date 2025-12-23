@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 import pikeSvg from "./pike.svg";
-import styles from "./Spinner.module.scss";
+import styles from "./Spinner.module.css";
 import Image from "next/image";
 
 type SpinnerProps = HTMLAttributes<HTMLDivElement>;
