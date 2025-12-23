@@ -45,7 +45,7 @@
   &.hideOnNarrow {
     display: none;
 
-    @media (min-width: var(--breakpoint-xsmall)) {
+    @media (--breakpoint-xsmall) {
       display: flex;
     }
   }

@@ -29,13 +29,4 @@
   --size-256: 256px;
   --size-512: 512px;
   --size-1024: 1024px;
-
-  --breakpoint-base: 0px;
-  --breakpoint-min: 320px;
-  --breakpoint-xsmall: 640px;
-  --breakpoint-small: 768px;
-  --breakpoint-medium: 1024px;
-  --breakpoint-large: var(--globalTextMaxWidth);
-  --breakpoint-xlarge: var(--globalContentMaxWidth);
-  --breakpoint-wide: var(--globalDecorationMaxWidth);
 }

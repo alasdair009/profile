@@ -1,6 +1,6 @@
 .root {
   background: var(--colorGreyDark);
-  box-shadow: 0 0 10px 6px rgb(from var(--colorblackEvil) r g b / 35%);
+  box-shadow: 0 0 10px 6px rgb(from var(--colorWhiteGhost) r g b / 35%);
   display: flex;
   height: 300px;
   margin: 0 auto;
@@ -8,7 +8,7 @@
   position: relative;
   width: 100%;
 
-  @media (min-width: var(--breakpoint-xsmall)) {
+  @media (--breakpoint-xsmall) {
     max-width: var(--size-256);
   }
 }
@@ -47,7 +47,7 @@
   text-align: center;
   width: 100%;
 
-  @media (min-width: var(--breakpoint-xsmall)) {
+  @media (--breakpoint-xsmall) {
     min-height: var(--size-96);
   }
 }

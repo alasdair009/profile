@@ -14,7 +14,7 @@
   text-wrap: var(--text-wrap);
   width: 100%;
 
-  @media (min-width: var(--globalTextMaxWidth)) {
+  @media (--breakpoint-large) {
     max-width: var(--globalTextMaxWidth);
   }
 }

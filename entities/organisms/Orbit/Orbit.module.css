@@ -103,7 +103,7 @@
   transform-style: preserve-3d;
   width: 100%;
 
-  @media (min-width: var(--breakpoint-medium)) {
+  @media (--breakpoint-medium) {
     max-width: var(--size-256);
   }
 

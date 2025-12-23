@@ -1,18 +1,16 @@
 @keyframes threeDRotate {
   0%,
   100% {
-    transform: perspective(1000px) rotateX(calc(var(--turnAmount) * -1) turn)
-      rotateY(0);
+    transform: perspective(1000px) rotateX(-18deg) rotateY(0);
   }
   25% {
-    transform: perspective(1000px) rotateX(0)
-      rotateY(calc(var(--turnAmount) * -1) turn);
+    transform: perspective(1000px) rotateX(0) rotateY(-18deg);
   }
   50% {
-    transform: perspective(1000px) rotateX(var(--turnAmount) turn) rotateY(0);
+    transform: perspective(1000px) rotateX(18deg) rotateY(0);
   }
   75% {
-    transform: perspective(1000px) rotateX(0) rotateY(var(--turnAmount) turn);
+    transform: perspective(1000px) rotateX(0) rotateY(18deg);
   }
 }
 
@@ -33,7 +31,7 @@
   position: relative;
   width: 100%;
 
-  @media (min-width: var(--breakpoint-medium)) {
+  @media (--breakpoint-medium) {
     flex-direction: var(--orientation);
   }
 }
@@ -58,7 +56,7 @@
   position: relative;
   width: 100%;
 
-  @media (min-width: var(--breakpoint-medium)) {
+  @media (--breakpoint-medium) {
     padding: 0;
     width: 50%;
   }
@@ -86,7 +84,7 @@
   margin: var(--size-16);
   width: 100%;
 
-  @media (min-width: var(--breakpoint-medium)) {
+  @media (--breakpoint-medium) {
     width: 50%;
   }
 }
@@ -99,7 +97,7 @@
   padding: var(--size-16);
   width: 100%;
 
-  @media (min-width: var(--breakpoint-medium)) {
+  @media (--breakpoint-medium) {
     width: 50%;
   }
 }

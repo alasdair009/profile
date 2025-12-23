@@ -16,14 +16,14 @@
   justify-content: center;
   padding: var(--size-16);
 
-  @media (min-width: var(--breakpoint-xsmall)) {
+  @media (--breakpoint-xsmall) {
     grid-column-start: var(--xs-column-start);
     grid-column-end: var(--xs-column-end);
     grid-row-start: var(--xs-row-start);
     grid-row-end: var(--xs-row-end);
   }
 
-  @media (min-width: var(--breakpoint-small)) {
+  @media (--breakpoint-small) {
     grid-column-start: var(--s-column-start);
     grid-column-end: var(--s-column-end);
     grid-row-start: var(--s-row-start);

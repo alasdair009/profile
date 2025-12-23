@@ -12,7 +12,7 @@
       transparent,
       transparent 30%,
       rgb(from var(--colorblackEvil) r g b / 50%) 30%,
-      rgb(from var(--colorblackEvil), 0.5) 70%,
+      rgb(from var(--colorblackEvil) r g b / 50%) 70%,
       transparent 50%
     );
     border-radius: var(--radii-round);

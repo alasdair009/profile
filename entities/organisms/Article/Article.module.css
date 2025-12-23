@@ -23,7 +23,7 @@
   max-width: calc(100% - var(--size-16));
   position: relative;
 
-  @media (min-width: var(--breakpoint-large)) {
+  @media (--breakpoint-large) {
     max-width: var(--globalTextMaxWidth);
   }
 }
