@@ -22,8 +22,10 @@
   margin: 0 auto;
   max-width: calc(100% - var(--size-16));
   position: relative;
+}
 
-  @media (--breakpoint-large) {
+@media (--breakpoint-large) {
+  .articleFigure {
     max-width: var(--globalTextMaxWidth);
   }
 }

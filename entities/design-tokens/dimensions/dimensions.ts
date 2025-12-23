@@ -1,4 +1,3 @@
-import variables from "./Dimensions.module.css";
 import type { Breakpoint, Dimension } from "./types";
 import { toRem } from "./utils";
 

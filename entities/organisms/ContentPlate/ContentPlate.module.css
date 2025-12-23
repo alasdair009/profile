@@ -33,10 +33,6 @@
   max-width: var(--globalContentMaxWidth);
   position: relative;
   width: 100%;
-
-  @media (--breakpoint-medium) {
-    flex-direction: var(--orientation);
-  }
 }
 
 .backgroundWrapper {
@@ -58,11 +54,6 @@
   padding: var(--size-16);
   position: relative;
   width: 100%;
-
-  @media (--breakpoint-medium) {
-    padding: 0;
-    width: 50%;
-  }
 
   &.animate {
     --turnAmount: 0.05;
@@ -87,10 +78,6 @@
   justify-content: center;
   margin: var(--size-16);
   width: 100%;
-
-  @media (--breakpoint-medium) {
-    width: 50%;
-  }
 }
 
 .copyBox {
@@ -100,10 +87,6 @@
   justify-content: center;
   padding: var(--size-16);
   width: 100%;
-
-  @media (--breakpoint-medium) {
-    width: 50%;
-  }
 }
 
 .flameBox {
@@ -114,4 +97,23 @@
 .flame {
   height: 250px;
   width: 100%;
+}
+
+@media (--breakpoint-medium) {
+  .inner {
+    flex-direction: var(--orientation);
+  }
+
+  .foregroundWrapper {
+    padding: 0;
+    width: 50%;
+  }
+
+  .frameBoxWrapper {
+    width: 50%;
+  }
+
+  .copyBox {
+    width: 50%;
+  }
 }

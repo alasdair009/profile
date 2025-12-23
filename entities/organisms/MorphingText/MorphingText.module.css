@@ -40,8 +40,10 @@
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+}
 
-  @media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
+  .text {
     animation: none;
     left: auto;
     position: relative;
@@ -56,8 +58,10 @@
   position: relative;
   min-height: 480px;
   width: 100%;
+}
 
-  @media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
+  .morpher {
     flex-direction: column;
     display: flex;
     justify-content: center;

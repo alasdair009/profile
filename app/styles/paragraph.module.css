@@ -14,8 +14,10 @@
   text-align: var(--text-align);
   text-wrap: var(--text-wrap);
   width: 100%;
+}
 
-  @media (--breakpoint-large) {
+@media (--breakpoint-large) {
+  .paragraphStyles {
     max-width: var(--globalTextMaxWidth);
   }
 }

@@ -44,10 +44,12 @@
 
   &.hideOnNarrow {
     display: none;
+  }
+}
 
-    @media (--breakpoint-xsmall) {
-      display: flex;
-    }
+@media (--breakpoint-xsmall) {
+  .headerLink.hideOnNarrow {
+    display: flex;
   }
 }
 

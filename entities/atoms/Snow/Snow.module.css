@@ -55,8 +55,10 @@
   position: absolute;
   transform-origin: center center;
   width: var(--size);
+}
 
-  @media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
+  .flake {
     animation-delay: calc(var(--duration) * var(--delay) * -1s);
     animation-play-state: paused;
   }

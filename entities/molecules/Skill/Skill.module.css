@@ -15,13 +15,17 @@
   flex-direction: column;
   justify-content: center;
   padding: var(--size-16);
+}
 
-  @media (--breakpoint-xsmall) {
+@media (--breakpoint-xsmall) {
+  .root {
     grid-column: var(--xs-column-start) / var(--xs-column-end);
     grid-row: var(--xs-row-start) / var(--xs-row-end);
   }
+}
 
-  @media (--breakpoint-small) {
+@media (--breakpoint-small) {
+  .root {
     grid-column: var(--s-column-start) / var(--s-column-end);
     grid-row: var(--s-row-start) / var(--s-row-end);
   }

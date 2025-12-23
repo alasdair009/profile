@@ -106,10 +106,6 @@
   transform-style: preserve-3d;
   width: 100%;
 
-  @media (--breakpoint-medium) {
-    max-width: var(--size-256);
-  }
-
   &::before,
   &::after {
     border-radius: var(--radii-round);
@@ -132,10 +128,6 @@
     background: url("../../assets/am.svg") no-repeat center;
     opacity: 0;
     transition: opacity calc(var(--animation-rhythm) * 0.5);
-
-    @media (prefers-reduced-motion) {
-      opacity: 1;
-    }
   }
 
   &:hover {
@@ -146,5 +138,17 @@
     .particle {
       animation-duration: calc(var(--animation-rhythm) * 10);
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .core::after {
+    opacity: 1;
+  }
+}
+
+@media (--breakpoint-medium) {
+  .core {
+    max-width: var(--size-256);
   }
 }

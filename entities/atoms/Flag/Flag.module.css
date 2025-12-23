@@ -90,14 +90,6 @@
     }
   }
 
-  @media (prefers-reduced-motion) {
-    animation: none;
-
-    &::after {
-      display: none;
-    }
-  }
-
   &.showPoll::before {
     background-color: #444;
     border-radius: var(--radii-2);
@@ -107,6 +99,16 @@
     position: absolute;
     top: -3px;
     width: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flagWrapper {
+    animation: none;
+
+    &::after {
+      display: none;
+    }
   }
 }
 

@@ -14,6 +14,7 @@ const {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  productionBrowserSourceMaps: true,
   env: {
     VERCEL_ENV,
     VERCEL_URL,
