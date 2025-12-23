@@ -2,12 +2,15 @@
   0% {
     background-position: -200% 0;
   }
+
   30% {
     background-position: -60% 5px;
   }
+
   70% {
     background-position: 70% -5px;
   }
+
   100% {
     background-position: 200% 0;
   }
@@ -15,27 +18,32 @@
 
 @keyframes wave {
   0% {
-    box-shadow: 4px 5px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 5px 5px 0 rgb(0 0 0 / 10%);
     transform: translate3d(0, 0, 0) rotateZ(0deg) rotateY(22deg);
   }
+
   20% {
-    box-shadow: 4px 5px 15px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 5px 15px 0 rgb(0 0 0 / 10%);
     transform: translate3d(0, 0, 0) rotateZ(0deg) rotateY(0deg);
   }
+
   40% {
-    box-shadow: 4px 5px 20px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 5px 20px 0 rgb(0 0 0 / 40%);
     transform: translate3d(0, 0, 0) rotateZ(1deg) rotateY(-22deg);
   }
+
   60% {
-    box-shadow: 4px 5px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 5px 5px 0 rgb(0 0 0 / 10%);
     transform: translate3d(0, 0, 0) rotateZ(0deg) rotateY(0deg);
   }
+
   80% {
-    box-shadow: 4px 5px 5px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 5px 5px 0 rgb(0 0 0 / 30%);
     transform: translate3d(0, 0, 0) rotateZ(0deg) rotateY(16deg);
   }
+
   100% {
-    box-shadow: 4px 5px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 5px 5px 0 rgb(0 0 0 / 10%);
     transform: translate3d(0, 0, 0) rotateZ(0deg) rotateY(22deg);
   }
 }
@@ -62,14 +70,14 @@
       animation: flutter 8s var(--curve-flag) 1s infinite;
       background-image: linear-gradient(
         to left,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0) 20%,
-        rgba(0, 0, 0, 0.04) 30%,
-        rgba(255, 255, 255, 0.1) 40%,
-        rgba(255, 255, 255, 0) 60%,
-        rgba(255, 255, 255, 0.1) 65%,
-        rgba(0, 0, 0, 0.05) 80%,
-        rgba(255, 255, 255, 0) 100%
+        rgb(255 255 255 / 0%),
+        rgb(255 255 255 / 0%) 20%,
+        rgb(0 0 0 / 4%) 30%,
+        rgb(255 255 255 / 10%) 40%,
+        rgb(255 255 255 / 0%) 60%,
+        rgb(255 255 255 / 10%) 65%,
+        rgb(0 0 0 / 5%) 80%,
+        rgb(255 255 255 / 0%) 100%
       );
       background-size: 200%;
       content: "";

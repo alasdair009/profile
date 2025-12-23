@@ -13,7 +13,7 @@
   border-radius: var(--radii-round);
   box-shadow: 0 calc(var(--size-256) * 1.5) var(--dispersion) 0
     var(--cloudColor);
-  filter: url(#cloudFilter);
+  filter: url("#cloudFilter");
   height: var(--size-256);
   position: absolute;
   top: 50%;

@@ -2,7 +2,6 @@
   appearance: base-select;
   cursor: pointer;
   padding: 0;
-
   composes: baseInput from "../../../app/styles/input.module.css";
 
   &::picker(select) {

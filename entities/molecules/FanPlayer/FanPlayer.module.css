@@ -3,16 +3,20 @@
     background-color: var(--colorRedHeat);
     transform: translate(-50%, -50%);
   }
+
   25% {
     background-color: var(--colorGreenGrass);
   }
+
   50% {
     background-color: var(--colorBlueSea);
     transform: translate(-50%, -50%) rotate(360deg);
   }
+
   75% {
     background-color: var(--colorblackEvil);
   }
+
   100% {
     background-color: var(--colorRedHeat);
     transform: translate(-50%, -50%) rotate(720deg);
@@ -32,7 +36,7 @@
       var(--curve-linear);
     aspect-ratio: 1;
     background: var(--colorGreenGrass);
-    mask: url(./assets/fan.svg) no-repeat center;
+    mask: url("./assets/fan.svg") no-repeat center;
     max-height: 100%;
     max-width: 100%;
     content: "";

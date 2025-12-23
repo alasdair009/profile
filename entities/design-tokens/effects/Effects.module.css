@@ -1,6 +1,9 @@
-/*@use "../../../app/styles/radii";*/
-/*@use "../../../app/styles/helpers/json";*/
+/* @use "../../../app/styles/radii"; */
 
-/*:export {*/
-/*  borderRadii: json.json-stringify(radii.$borderRadii);*/
-/*}*/
+/* @use "../../../app/styles/helpers/json"; */
+
+/* :export { */
+
+/*  borderRadii: json.json-stringify(radii.$borderRadii); */
+
+/* } */

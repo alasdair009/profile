@@ -4,6 +4,7 @@
   --margin: ;
   --text-align: ;
   --text-wrap: ;
+
   color: var(--color);
   display: block;
   font-family: var(--font-Inter) !important;
@@ -20,5 +21,5 @@
 }
 
 .clamp {
-  composes: lineClamp from "./lineClamp.module.css";
+  composes: lineclamp from "./lineClamp.module.css";
 }

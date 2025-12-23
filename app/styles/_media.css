@@ -1,4 +1,4 @@
-@custom-media --breakpoint-base (min-width: 0px);
+@custom-media --breakpoint-base (min-width: 0);
 @custom-media --breakpoint-min (min-width: 320px);
 @custom-media --breakpoint-xsmall (min-width: 640px);
 @custom-media --breakpoint-small (min-width: 768px);

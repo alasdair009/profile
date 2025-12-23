@@ -1,5 +1,6 @@
 .root {
   --maskFill: transparent;
+
   display: flex;
   height: 100%;
   width: 100%;
@@ -27,7 +28,7 @@
 
 .rect {
   fill: var(--maskFill);
-  mask: url(#mask);
+  mask: url("#mask");
 }
 
 .svg {

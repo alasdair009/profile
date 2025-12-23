@@ -1,13 +1,15 @@
 @keyframes rise {
-  from {
+  0% {
     opacity: 0;
     transform: scale(1);
     bottom: 0;
   }
+
   25% {
     opacity: 1;
   }
-  to {
+
+  100% {
     opacity: 0;
     transform: scale(0);
     bottom: 75%;
@@ -39,6 +41,6 @@
 }
 
 .root {
-  filter: blur(0.32);
+  filter: blur(1px);
   position: relative;
 }

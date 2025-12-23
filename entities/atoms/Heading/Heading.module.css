@@ -1,5 +1,6 @@
 .root {
   --align: left;
+
   border: none !important;
   color: var(--color) !important;
   font-weight: var(--font-weight-bold);
@@ -64,5 +65,5 @@
 }
 
 .clamp {
-  composes: lineClamp from "../../../app/styles/lineClamp.module.css";
+  composes: lineclamp from "../../../app/styles/lineClamp.module.css";
 }

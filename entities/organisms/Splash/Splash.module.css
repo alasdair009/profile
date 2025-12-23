@@ -60,9 +60,7 @@
 
     @media (--breakpoint-small) {
       background: var(--colorWhiteGhost);
-      -webkit-mask: url(./ali-flight.svg) no-repeat 350% center;
-      mask: url(./ali-flight.svg) no-repeat 350% center;
-      -webkit-mask-size: 75%;
+      mask: url("./ali-flight.svg") no-repeat 350% center;
       mask-size: 75%;
     }
   }
@@ -95,15 +93,10 @@
     content: "";
     height: 100%;
     left: 0;
-    -webkit-mask:
-      url(./ali-flight.svg) no-repeat center center,
-      linear-gradient(#fff 0 0);
     mask:
-      url(./ali-flight.svg) no-repeat center center,
+      url("./ali-flight.svg") no-repeat center center,
       linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-    -webkit-mask-size: 75%;
+    mask-composite: exclude; /* mask-composite: destination-out; */
     mask-size: 75%;
     position: absolute;
     top: 0;
@@ -111,15 +104,10 @@
 
     @media (--breakpoint-small) {
       background: var(--colorWhiteGhost);
-      -webkit-mask:
-        url(./ali-flight.svg) no-repeat -50% center,
-        linear-gradient(#fff 0 0);
       mask:
-        url(./ali-flight.svg) no-repeat -50% center,
+        url("./ali-flight.svg") no-repeat -50% center,
         linear-gradient(#fff 0 0);
-      -webkit-mask-composite: destination-out;
-      mask-composite: exclude;
-      -webkit-mask-size: 75%;
+      mask-composite: exclude; /* mask-composite: destination-out; */
       mask-size: 75%;
     }
   }

@@ -5,6 +5,7 @@
     filter: blur(0);
     opacity: 1;
   }
+
   20%,
   80% {
     filter: blur(1em);
@@ -28,6 +29,7 @@
     ((var(--speed) / (var(--word-count) + 1))) * var(--word-index) -
       var(--speed)
   );
+
   animation: wordAnim calc(var(--speed) * 1s) infinite ease-in-out;
   animation-delay: calc(var(--delay) * 1s);
   display: inline-block;

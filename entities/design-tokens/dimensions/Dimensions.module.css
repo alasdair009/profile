@@ -1,11 +1,19 @@
-/*@use "../../../app/styles/dimensions";*/
-/*@use "../../../app/styles/helpers/_json";*/
+/* @use "../../../app/styles/dimensions"; */
 
-/*:export {*/
-/*  globalInputMaxWidth: dimensions.$globalInputMaxWidth;*/
-/*  globalTextMaxWidth: dimensions.$globalTextMaxWidth;*/
-/*  globalContentMaxWidth: dimensions.$globalContentMaxWidth;*/
-/*  globalDecorationMaxWidth: dimensions.$globalDecorationMaxWidth;*/
-/*  breakpoints: json.json-stringify(dimensions.$breakpoints);*/
-/*  sizes: json.json-stringify(dimensions.$sizes);*/
-/*}*/
+/* @use "../../../app/styles/helpers/_json"; */
+
+/* :export { */
+
+/*  globalInputMaxWidth: dimensions.$globalInputMaxWidth; */
+
+/*  globalTextMaxWidth: dimensions.$globalTextMaxWidth; */
+
+/*  globalContentMaxWidth: dimensions.$globalContentMaxWidth; */
+
+/*  globalDecorationMaxWidth: dimensions.$globalDecorationMaxWidth; */
+
+/*  breakpoints: json.json-stringify(dimensions.$breakpoints); */
+
+/*  sizes: json.json-stringify(dimensions.$sizes); */
+
+/* } */

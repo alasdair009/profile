@@ -31,6 +31,7 @@
     color-mix(in srgb, var(--colorRedHeat) 90%, black 10%) var(--size-32),
     var(--colorRedHeat) var(--size-32)
   );
+
   appearance: none;
   background-image: var(--emptyBackground);
   border: 1px solid var(--colorblackEvil);

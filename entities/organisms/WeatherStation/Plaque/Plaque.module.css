@@ -1,6 +1,6 @@
 .root {
   box-shadow: calc(var(--size-4) * -1) var(--size-4) var(--size-8) 1px
-    rgba(0, 0, 0, 0.5);
+    rgb(0 0 0 / 50%);
   color: var(--colorWhiteGhost);
   padding: var(--size-8);
   position: relative;

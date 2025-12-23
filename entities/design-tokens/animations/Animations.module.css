@@ -2,6 +2,7 @@
   0% {
     offset-distance: 0%;
   }
+
   100% {
     offset-distance: 100%;
   }
@@ -25,6 +26,7 @@
 .svgWrapper {
   --curve: "";
   --offset-path: "";
+
   position: relative;
 
   &::after {
@@ -46,8 +48,12 @@
   stroke-width: 3px;
 }
 
-/*:export {*/
-/*  animationCurveDefault: map.get(animation.$curves, default);*/
-/*  animationCurveEaseBoth: map.get(animation.$curves, easeBoth);*/
-/*  animationCurveLinear: map.get(animation.$curves, linear);*/
-/*}*/
+/* :export { */
+
+/*  animationCurveDefault: map.get(animation.$curves, default); */
+
+/*  animationCurveEaseBoth: map.get(animation.$curves, easeBoth); */
+
+/*  animationCurveLinear: map.get(animation.$curves, linear); */
+
+/* } */

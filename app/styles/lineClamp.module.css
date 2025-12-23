@@ -10,10 +10,10 @@
   overflow: hidden;
   border-bottom: var(--vertical-padding) solid transparent;
   border-top: var(--vertical-padding) solid transparent;
+  overflow-wrap: break-word;
   padding-bottom: 0;
   padding-top: 0;
   text-overflow: ellipsis;
-  word-break: break-word;
 
   @supports (-webkit-line-clamp: var(--number-of-lines)) and
     (display: -webkit-box) {

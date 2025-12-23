@@ -5,9 +5,7 @@
   color: transparent;
   display: flex;
   justify-content: center;
-  -webkit-mask: no-repeat center;
   mask: no-repeat center;
-  -webkit-mask-size: contain;
   mask-size: contain;
   overflow: hidden;
   position: relative;

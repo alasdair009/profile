@@ -10,6 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:css": "stylelint '**/*.css'",
+    "lint:css:fix": "stylelint '**/*.css' --fix",
     "check": "npx tsc --noEmit",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ixgnore-path .gitignore .",
@@ -70,6 +72,8 @@
     "prettier": "^3.0.3",
     "react-vertical-timeline-component": "^3.6.0",
     "storybook": "^10.0.6",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^39.0.1",
     "superstruct": "^1.0.4",
     "typescript": "^5"
   },

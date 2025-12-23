@@ -6,6 +6,7 @@
     var(--colorRedHeat) 15%,
     transparent
   );
+
   appearance: none;
   background-color: var(--baseInputBackground);
   border: 1px solid var(--colorGreenGrass);
@@ -18,16 +19,15 @@
   padding: var(--size-8);
   width: 100%;
 
+  &:user-invalid {
+    background-color: var(--baseInputInvalidColor);
+  }
+
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus {
     -webkit-text-fill-color: var(--colorWhiteGhost);
-    -webkit-box-shadow: 0 0 0 var(--baseInputHeight) var(--baseInputBackground)
-      inset;
-  }
-
-  &:user-invalid {
-    background-color: var(--baseInputInvalidColor);
+    box-shadow: 0 0 0 var(--baseInputHeight) var(--baseInputBackground) inset;
   }
 }
 
@@ -38,8 +38,7 @@
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus {
     -webkit-text-fill-color: var(--colorWhiteGhost);
-    -webkit-box-shadow: 0 0 0 var(--baseInputHeight)
-      var(--baseInputInvalidColor) inset;
+    box-shadow: 0 0 0 var(--baseInputHeight) var(--baseInputInvalidColor) inset;
   }
 }
 

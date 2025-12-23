@@ -1,5 +1,5 @@
 .root {
-  composes: baseInput from "../../../app/styles/input.module.css";
+  composes: baseinput from "../../../app/styles/input.module.css";
   height: var(--size-40);
 
   &::-webkit-file-upload-button {

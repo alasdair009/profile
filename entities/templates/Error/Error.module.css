@@ -23,7 +23,7 @@
   height: 60%;
   left: 0;
   position: absolute;
-  transform: translatey(-50%);
+  transform: translateY(-50%);
   width: 100%;
 }
 

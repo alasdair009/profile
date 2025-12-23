@@ -20,7 +20,8 @@
 
   &::after {
     aspect-ratio: 1;
-    background: var(--colorblackEvil) url(../../assets/am.svg) no-repeat center;
+    background: var(--colorblackEvil) url("../../assets/am.svg") no-repeat
+      center;
     border: var(--size-2) solid var(--colorGreenGrass);
     border-radius: 50%;
     content: "";
@@ -40,9 +41,11 @@
   &.Top {
     margin: var(--size-32) auto 0;
   }
+
   &.Bottom {
     margin: 0 auto var(--size-32);
   }
+
   &.None {
     margin: 0 auto;
   }
@@ -74,7 +77,7 @@
     &::before {
       background: var(--colorGreenGrass);
       height: 100%;
-      mask: url(./pulse.svg) no-repeat center;
+      mask: url("./pulse.svg") no-repeat center;
       mask-size: 100% 100%;
     }
   }

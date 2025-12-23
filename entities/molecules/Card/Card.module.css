@@ -38,11 +38,10 @@
 }
 
 .cardImage {
-  align-content: center;
+  place-content: center center;
   background: var(--colorblackEvil);
   display: flex;
   min-height: var(--size-128);
-  justify-content: center;
   object-fit: cover;
   text-align: center;
   width: 100%;

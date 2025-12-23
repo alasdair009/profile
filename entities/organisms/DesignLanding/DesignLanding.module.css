@@ -19,6 +19,7 @@
   66% {
     opacity: 0;
   }
+
   33% {
     opacity: 1;
   }
@@ -56,6 +57,7 @@
   --cloud-left: 0;
   --cloud-top: 0;
   --translate: none;
+
   animation: orbit calc(var(--animation-rhythm) * 10) infinite
     var(--curve-linear);
   animation-delay: calc(var(--animation-delay) * 1s);

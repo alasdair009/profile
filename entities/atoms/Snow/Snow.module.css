@@ -4,21 +4,27 @@
     transform: translateX(0) rotate(0);
     top: 0;
   }
+
   10% {
     opacity: 1;
   }
+
   25% {
     transform: translateX(calc(var(--size-16) * -1)) rotate(90deg);
   }
+
   50% {
     transform: translateX(0) rotate(180deg);
   }
+
   75% {
     transform: translateX(var(--size-16)) rotate(270deg);
   }
+
   90% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     top: 100%;
@@ -35,6 +41,7 @@
   --flakeDuration: 0;
   --numberOfFlakes: 0;
   --size: 0;
+
   animation: fall infinite var(--curve-linear);
   animation-delay: calc(var(--duration) * var(--delay) * 1s);
   animation-duration: calc(var(--flakeDuration) * 1s);

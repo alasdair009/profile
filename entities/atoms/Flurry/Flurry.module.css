@@ -2,6 +2,7 @@
   --particleBaseDuration: 0;
   --particleBlocks: 0;
   --particlesPerPlate: 0;
+
   align-items: center;
   background: linear-gradient(
     207deg,
@@ -45,9 +46,9 @@
 
 .content {
   max-width: var(--globalTextMaxWidth);
+  overflow-wrap: break-word;
   position: relative;
   text-shadow: 0 0 var(--size-8) var(--colorblackEvil);
-  word-break: break-word;
   z-index: 1;
 }
 

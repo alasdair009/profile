@@ -42,10 +42,10 @@
   margin: 0 auto;
   max-width: var(--globalTextMaxWidth);
   overflow: hidden;
+  overflow-wrap: break-word;
   padding: var(--size-8);
   position: relative;
   width: 100%;
-  word-break: break-word;
 
   iframe {
     max-width: 800px;

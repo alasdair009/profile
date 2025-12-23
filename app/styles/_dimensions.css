@@ -1,15 +1,16 @@
 :root {
-  /*Maximum width that inputs should be set to.*/
+  /* Maximum width that inputs should be set to. */
   --globalInputMaxWidth: 480px;
-  /*Maximum width that text should be confined to.*/
+
+  /* Maximum width that text should be confined to. */
   --globalTextMaxWidth: 1200px;
-  /*Maximum width that content should extend to.*/
+
+  /* Maximum width that content should extend to. */
   --globalContentMaxWidth: 1600px;
-  /*Maximum width decorative elements can stretch to on the screen.*/
+
+  /* Maximum width decorative elements can stretch to on the screen. */
   --globalDecorationMaxWidth: 3440px;
-
   --globalHeaderHeight: 48px;
-
   --size-2: 2px;
   --size-4: 4px;
   --size-8: 8px;

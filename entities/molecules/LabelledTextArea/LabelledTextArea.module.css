@@ -1,5 +1,5 @@
 .root {
-  composes: labelledStyles from "../../../app/styles/input.module.css";
+  composes: labelledstyles from "../../../app/styles/input.module.css";
 }
 
 .labelText {

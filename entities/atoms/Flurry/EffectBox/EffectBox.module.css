@@ -2,6 +2,7 @@
   from {
     transform: rotate(0deg) translate(-50%, -50%);
   }
+
   to {
     transform: rotate(360deg) translate(-50%, -50%);
   }
@@ -10,6 +11,7 @@
 .effectBox {
   --index: 0;
   --shadows: none;
+
   animation: orbit animation calc(var(--animation-rhythm) * 21) infinite
     var(--curve-linear);
   animation-direction: reverse;

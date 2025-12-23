@@ -4,12 +4,15 @@
     top: 50%;
     transform: translateZ(1px) translate(-50%, -50%) scale(0.4);
   }
+
   10% {
     opacity: 1;
   }
+
   90% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     top: 100%;
@@ -19,6 +22,7 @@
 
 .root {
   --sky-color: transparent;
+
   background-color: var(--sky-color);
   min-height: var(--size-512);
   overflow: hidden;

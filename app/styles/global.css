@@ -1,24 +1,29 @@
-/*:root {*/
-/*  @include scrollBar.scrollbarStyles;*/
+/* :root { */
 
-/*  --animation-rhythm: 1s;*/
-/*  interpolate-size: allow-keywords;*/
+/*  @include scrollBar.scrollbarStyles; */
 
-/*  @media (prefers-reduced-motion: reduce) {*/
-/*    --animation-rhythm: 0s;*/
-/*  }*/
-/*}*/
+/*  --animation-rhythm: 1s; */
 
-@import "./_animation.css";
-@import "./_clipPaths.css";
-@import "./_colors.css";
-@import "./_dimensions.css";
-@import "./_radii.css";
-@import "./_shadows.css";
-@import "./_typography.css";
+/*  interpolate-size: allow-keywords; */
+
+/*  @media (prefers-reduced-motion: reduce) { */
+
+/*    --animation-rhythm: 0s; */
+
+/*  } */
+
+/* } */
+
+@import url("./_animation.css");
+@import url("./_clipPaths.css");
+@import url("./_colors.css");
+@import url("./_dimensions.css");
+@import url("./_radii.css");
+@import url("./_shadows.css");
+@import url("./_typography.css");
 
 :root {
-  composes: scrollbarStyles from "./scrollBar.module.css";
+  composes: scrollbarstyles from "./scrollBar.module.css";
 }
 
 html,
@@ -38,8 +43,8 @@ body {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
