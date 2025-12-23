@@ -1,10 +1,10 @@
-export default {
+module.exports = {
   plugins: {
     "@csstools/postcss-global-data": {
       files: ["./app/styles/_media.css"],
     },
-    "postcss-nesting": {},
     "postcss-custom-media": {},
+    "postcss-nesting": {},
     "postcss-pxtorem": {
       rootValue: 16,
       unitPrecision: 4,

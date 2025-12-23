@@ -1,5 +1,3 @@
-// import variables from "./Colors.module.scss";
-
 // export const colorsGrey = {
 //   blackEvil: variables.colorblackEvil,
 //   greyLight: variables.colorGreyLight,
