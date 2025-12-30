@@ -29,7 +29,7 @@ export function ErrorText({
 }: ErrorTextProps) {
   return (
     <span
-      className={`${styles.root} ${shown ? "" : styles.rootHide}`}
+      className={`${styles.root} ${shown ? "" : styles.hide}`}
       data-testid={ErrorText.name}
       style={
         {
