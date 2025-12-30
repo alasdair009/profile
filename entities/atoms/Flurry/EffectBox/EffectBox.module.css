@@ -12,7 +12,7 @@
   --index: 0;
   --shadows: none;
 
-  animation: orbit animation calc(var(--animation-rhythm) * 21) infinite
+  animation: orbit calc(var(--animation-rhythm) * 21) infinite
     var(--curve-linear);
   animation-direction: reverse;
   animation-duration: calc(
