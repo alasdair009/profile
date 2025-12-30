@@ -1,5 +1,5 @@
 .scrollBarDemo {
-  composes: scrollbarstyles from "../../../app/styles/scrollBar.module.css";
+  composes: scrollbarStyles from "../../../app/styles/scrollBar.module.css";
   border: 1px solid var(--colorBlueSea);
   cursor: all-scroll;
   height: var(--size-128);

@@ -65,5 +65,5 @@
 }
 
 .clamp {
-  composes: lineclamp from "../../../app/styles/lineClamp.module.css";
+  composes: lineClamp from "../../../app/styles/lineClamp.module.css";
 }

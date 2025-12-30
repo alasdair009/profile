@@ -50,7 +50,7 @@ export function Paragraph({
   fontSize = "medium",
   textWrap = "wrap",
   lines,
-  className,
+  className = "",
   children,
   margin = `0 auto ${sizes.s24.rem}`,
   style,
