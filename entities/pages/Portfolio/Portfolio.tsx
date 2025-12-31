@@ -135,14 +135,20 @@ export function Portfolio({ ...rest }: PortfolioProps) {
             value={100}
             heading="Storybook"
             copy="I am an avid supporter of design system delivered through Storybook.js for display, maintenace and testing. I have planned and delivered progresiively more ambitious implementations of these that have been of high value to the business."
-            grid={{ xsmall: { columnStart: 1, rowStart: 1 }, small: {} }}
+            grid={{
+              xsmall: { columnStart: 1, rowStart: 1 },
+              small: { columnStart: 1, rowStart: 1 },
+            }}
           />
           <Skill
             background={rgba(colors.greenGrass, 0.25)}
             value={100}
             heading="CSS"
             copy="Passionate about pushing the boundaries of what CSS can achieve in a browser."
-            grid={{ xsmall: { columnStart: 2, rowStart: 1 }, small: {} }}
+            grid={{
+              xsmall: { columnStart: 2, rowStart: 1 },
+              small: { columnStart: 2, rowStart: 1 },
+            }}
           />
           <Skill
             background={rgba(colors.blueSea, 0.25)}

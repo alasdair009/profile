@@ -19,14 +19,18 @@
 
 @media (--breakpoint-xsmall) {
   .root {
-    grid-column: var(--xs-column-start) / var(--xs-column-end);
-    grid-row: var(--xs-row-start) / var(--xs-row-end);
+    grid-column-start: var(--xs-column-start);
+    grid-column-end: var(--xs-column-end);
+    grid-row-start: var(--xs-row-start);
+    grid-row-end: var(--xs-row-end);
   }
 }
 
 @media (--breakpoint-small) {
   .root {
-    grid-column: var(--s-column-start) / var(--s-column-end);
-    grid-row: var(--s-row-start) / var(--s-row-end);
+    grid-column-start: var(--s-column-start);
+    grid-column-end: var(--s-column-end);
+    grid-row-start: var(--s-row-start);
+    grid-row-end: var(--s-row-end);
   }
 }
