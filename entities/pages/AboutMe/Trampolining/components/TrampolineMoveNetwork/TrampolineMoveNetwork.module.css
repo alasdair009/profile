@@ -1,0 +1,5 @@
+.root {
+  margin: 0 auto;
+  max-width: var(--globalContentMaxWidth);
+  position: relative;
+}

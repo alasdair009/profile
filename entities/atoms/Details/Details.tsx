@@ -1,5 +1,5 @@
 import { CSSProperties, HTMLAttributes } from "react";
-import styles from "./Details.module.scss";
+import styles from "./Details.module.css";
 
 type DetailsProps = {
   /**

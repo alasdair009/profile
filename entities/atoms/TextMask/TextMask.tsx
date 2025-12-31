@@ -1,6 +1,6 @@
 import { CSSProperties, HTMLAttributes } from "react";
 import { Property } from "csstype";
-import styles from "./TextMask.module.scss";
+import styles from "./TextMask.module.css";
 
 type TextMaskProps = {
   /**

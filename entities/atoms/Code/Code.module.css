@@ -1,0 +1,8 @@
+.root {
+  background: var(--colorGreyDark);
+  border: 1px solid colors.var(--colorGreenGrass);
+  display: inline-block;
+  font-family: monospace;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px;
+}

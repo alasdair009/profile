@@ -1,0 +1,34 @@
+.root {
+  composes: baseInput from "../../../app/styles/input.module.css";
+  cursor: ew-resize;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    aspect-ratio: 1;
+    background: var(--colorGreenGrass);
+    border: 1px solid var(--colorWhiteGhost);
+    border-radius: var(--radii-round);
+    height: var(--size-16);
+  }
+
+  &::-moz-range-thumb {
+    appearance: none;
+    aspect-ratio: 1;
+    background: var(--colorGreenGrass);
+    border: 1px solid var(--colorWhiteGhost);
+    border-radius: var(--radii-round);
+    height: var(--size-16);
+  }
+
+  &::-webkit-slider-runnable-track {
+    background-color: var(--colorGreyDark);
+    border: 1px solid var(--colorGreenGrass);
+    border-radius: var(--radii-8);
+  }
+
+  &::-moz-range-track {
+    background-color: var(--colorGreyDark);
+    border: 1px solid var(--colorGreenGrass);
+    border-radius: var(--radii-8);
+  }
+}

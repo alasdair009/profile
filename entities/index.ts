@@ -1,6 +1,7 @@
-export { prefersReducedMotion, curves } from "./design-tokens/animations";
-export { borderRadii } from "./design-tokens/effects";
-export { clipPaths } from "./design-tokens/clipPaths";
+export { prefersReducedMotion } from "./design-tokens/animations";
+// export { prefersReducedMotion, curves } from "./design-tokens/animations";
+// export { borderRadii } from "./design-tokens/effects";
+// export { clipPaths } from "./design-tokens/clipPaths";
 export { colors } from "./design-tokens/colors";
 export {
   fonts,
@@ -15,11 +16,12 @@ export type {
   TextAlignment,
 } from "./design-tokens/typography";
 export {
+  breakpoints,
   device,
-  globalInputMaxWidth,
-  globalContentMaxWidth,
-  globalTextMaxWidth,
-  globalDecorationMaxWidth,
+  // globalInputMaxWidth,
+  // globalContentMaxWidth,
+  // globalTextMaxWidth,
+  // globalDecorationMaxWidth,
   sizes,
   toRem,
 } from "./design-tokens/dimensions";

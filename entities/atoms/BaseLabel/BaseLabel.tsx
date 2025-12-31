@@ -1,6 +1,6 @@
 "use client";
 import { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
-import styles from "./BaseLabel.module.scss";
+import styles from "./BaseLabel.module.css";
 
 type BaseLabelProps<T extends ElementType> = {
   as?: "label" | "span";

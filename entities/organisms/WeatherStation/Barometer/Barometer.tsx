@@ -1,4 +1,4 @@
-import styles from "./Barometer.module.scss";
+import styles from "./Barometer.module.css";
 
 type BarometerProps = {
   pressure: number;

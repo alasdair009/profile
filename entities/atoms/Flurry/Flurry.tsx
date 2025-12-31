@@ -2,7 +2,7 @@ import { CSSProperties, HTMLAttributes, ReactNode } from "react";
 import { StaticImageData } from "next/image";
 import { EffectBox } from "./EffectBox";
 import Image from "next/image";
-import styles from "./Flurry.module.scss";
+import styles from "./Flurry.module.css";
 
 type FlurryProps = {
   /**

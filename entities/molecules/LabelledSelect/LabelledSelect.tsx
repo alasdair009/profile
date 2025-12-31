@@ -1,4 +1,4 @@
-import styles from "./LabelledSelect.module.scss";
+import styles from "./LabelledSelect.module.css";
 import { HTMLAttributes } from "react";
 import { BaseLabel, ErrorText } from "@/entities";
 import { BaseSelect } from "@/entities/atoms/BaseSelect";

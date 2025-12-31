@@ -1,1 +1,1 @@
-export { clipPaths } from "./clipPaths";
+// export { clipPaths } from "./clipPaths";

@@ -1,0 +1,37 @@
+.root {
+  display: block;
+  margin: var(--size-32) auto;
+  max-width: var(--globalDecorationMaxWidth);
+}
+
+.blockQuote {
+  display: block;
+  font-size: var(--font-size-large);
+  font-style: italic;
+  margin: 0 auto;
+  max-width: var(--globalTextMaxWidth);
+  padding: var(--size-8);
+  position: relative;
+  text-align: center;
+  text-wrap: balance;
+
+  &::before,
+  &::after {
+    color: var(--colorGreenGrass);
+    content: '"';
+    font-size: var(--font-size-xxlarge);
+    font-weight: var(--font-weight-black);
+  }
+}
+
+.cite {
+  display: block;
+  margin: var(--size-4) auto 0;
+  max-width: var(--globalTextMaxWidth);
+  text-align: center;
+}
+
+.citeLink {
+  color: var(--colorGreyLight);
+  font-weight: var(--font-weight-regular);
+}

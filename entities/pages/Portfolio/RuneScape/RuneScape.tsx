@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import styles from "./RuneScape.module.scss";
+import styles from "./RuneScape.module.css";
 import { ErrorText, Heading, Paragraph, Table } from "@/entities";
 import Image from "next/image";
 

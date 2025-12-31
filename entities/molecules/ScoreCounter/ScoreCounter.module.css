@@ -1,0 +1,35 @@
+.root {
+  --num: var(--set-counter);
+
+  align-items: center;
+  aspect-ratio: 1;
+  counter-reset: num var(--num);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transition: --num 4s;
+  width: var(--size-128);
+
+  @property --integer {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+
+  &::before {
+    align-items: center;
+    animation: counter calc(var(--animation-rhythm) * 5) var(--curve-linear)
+      infinite alternate;
+    color: var(--colorWhiteGhost);
+    content: counter(num);
+    display: flex;
+    font-size: var(--font-size-mlarge);
+    height: 100%;
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { HTMLAttributes } from "react";
-import styles from "./Figure.module.scss";
+import styles from "./Figure.module.css";
 
 type FigureProps = {
   alt: string;

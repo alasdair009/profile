@@ -1,7 +1,7 @@
 import { CSSProperties, HTMLAttributes } from "react";
 import { sizes, toRem } from "@/entities";
 import { lcgNextRand, makeLCG } from "@/lib/random";
-import styles from "./Fire.module.scss";
+import styles from "./Fire.module.css";
 
 type HeadingProps = {
   /**

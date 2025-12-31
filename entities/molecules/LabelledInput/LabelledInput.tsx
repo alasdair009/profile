@@ -1,7 +1,7 @@
 import { HTMLAttributes } from "react";
 import { TextInputType } from "../../atoms/BaseInput/BaseInput.types";
 import { BaseInput, BaseLabel, ErrorText } from "@/entities";
-import styles from "./LabelledInput.module.scss";
+import styles from "./LabelledInput.module.css";
 
 type LabelledInputProps = {
   /**

@@ -1,5 +1,5 @@
 "use client";
-import styles from "./BaseInput.module.scss";
+import styles from "./BaseInput.module.css";
 import { BaseInputProps } from "./BaseInput.types";
 import { useEffect, useState } from "react";
 

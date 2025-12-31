@@ -1,7 +1,7 @@
 import { HTMLAttributes } from "react";
 import { SocialMediaLinkVariant } from "./SocialMediaLinks.types";
 import Link from "next/link";
-import styles from "./SocialMediaLink.module.scss";
+import styles from "./SocialMediaLink.module.css";
 import blueskyIcon from "@/entities/atoms/SocialMediaLink/assets/bluesky.svg";
 import facebookIcon from "@/entities/atoms/SocialMediaLink/assets/facebook.svg";
 import gitHubIcon from "@/entities/atoms/SocialMediaLink/assets/github.svg";

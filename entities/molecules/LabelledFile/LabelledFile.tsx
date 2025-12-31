@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 import { BaseFile, BaseLabel, ErrorText } from "@/entities";
-import styles from "./LabelledFile.module.scss";
+import styles from "./LabelledFile.module.css";
 
 type LabelledInputProps = {
   /**

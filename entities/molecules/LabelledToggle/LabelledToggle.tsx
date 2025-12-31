@@ -1,4 +1,4 @@
-import styles from "./LabelledToggle.module.scss";
+import styles from "./LabelledToggle.module.css";
 import { BaseToggle, BaseLabel } from "@/entities";
 import { BaseToggleProps } from "../../atoms/BaseToggle";
 

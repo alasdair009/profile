@@ -8,7 +8,7 @@ import {
   TextAlignment,
 } from "@/entities";
 import { Property } from "csstype";
-import styles from "./Paragraph.module.scss";
+import styles from "./Paragraph.module.css";
 
 type ParagraphProps = {
   /**
@@ -50,7 +50,7 @@ export function Paragraph({
   fontSize = "medium",
   textWrap = "wrap",
   lines,
-  className,
+  className = "",
   children,
   margin = `0 auto ${sizes.s24.rem}`,
   style,

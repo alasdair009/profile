@@ -1,4 +1,4 @@
-import styles from "./Animations.module.scss";
+import styles from "./Animations.module.css";
 
 import type { CSSProperties, JSX } from "react";
 

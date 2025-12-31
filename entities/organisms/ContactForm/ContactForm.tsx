@@ -11,7 +11,7 @@ import {
 } from "@/entities";
 import axios from "axios";
 import Script from "next/script";
-import styles from "./ContactForm.module.scss";
+import styles from "./ContactForm.module.css";
 
 type ContactFormProps = {
   /**

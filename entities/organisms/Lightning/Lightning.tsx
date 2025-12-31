@@ -2,7 +2,7 @@ import { CSSProperties, HTMLAttributes } from "react";
 import backgroundImage from "./assets/background.webp";
 import strikeImage from "./assets/lightining.png";
 import { Rain } from "../../atoms/Rain";
-import styles from "./Lightning.module.scss";
+import styles from "./Lightning.module.css";
 import Image from "next/image";
 
 type LightningProps = {

@@ -1,5 +1,5 @@
 import { CSSProperties, HTMLAttributes } from "react";
-import styles from "./Flag.module.scss";
+import styles from "./Flag.module.css";
 import Image from "next/image";
 import { colors } from "@/entities";
 

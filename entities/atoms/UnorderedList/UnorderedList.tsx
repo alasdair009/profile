@@ -1,6 +1,6 @@
 import { UnorderedListProps } from "./UnorderedList.types";
 import { CSSProperties } from "react";
-import styles from "./UnorderedList.module.scss";
+import styles from "./UnorderedList.module.css";
 
 /**
  * HTML unordered list.

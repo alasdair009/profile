@@ -1,5 +1,5 @@
 "use client";
-import styles from "./BaseFile.module.scss";
+import styles from "./BaseFile.module.css";
 import { BaseFileProps } from "./BaseFile.types";
 import { useEffect, useState } from "react";
 

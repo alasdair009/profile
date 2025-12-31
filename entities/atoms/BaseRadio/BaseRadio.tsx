@@ -1,6 +1,6 @@
 "use client";
 import { HTMLAttributes, useState } from "react";
-import styles from "./BaseRadio.module.scss";
+import styles from "./BaseRadio.module.css";
 
 export type BaseRadioProps = {
   /**

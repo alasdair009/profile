@@ -1,7 +1,7 @@
 "use client";
 
 import { HTMLAttributes, useEffect, useRef, useState } from "react";
-import styles from "./Flame.module.scss";
+import styles from "./Flame.module.css";
 
 type FireProps = {
   /**
