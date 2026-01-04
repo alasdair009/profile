@@ -1,7 +1,7 @@
 import { Paragraph } from "./Paragraph";
 import { Meta, StoryObj } from "@storybook/nextjs";
 import { expect, within } from "storybook/test";
-import { colors, fontSizes } from "@/entities";
+import { colors, fontSizes } from "../../../app/styles/tokens";
 
 const meta: Meta<typeof Paragraph> = {
   component: Paragraph,
@@ -38,7 +38,7 @@ export const Default: StoryObj<typeof Paragraph> = {
     await expect(paragraphElement).toHaveStyle(`text-align: ${args.align}`);
     await expect(paragraphElement).toHaveStyle(`color: ${args.color}`);
     await expect(paragraphElement).toHaveStyle(
-      `font-size: ${fontSizes[args.fontSize ? args.fontSize : "medium"].px}`
+      `font-size: ${fontSizes[args.fontSize ? args.fontSize : "medium"]}`
     );
     await expect(paragraphElement).toHaveStyle(`text-wrap: ${args.textWrap}`);
   },

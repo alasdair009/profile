@@ -1,6 +1,7 @@
 "use client";
 import { StaticImageData } from "next/image";
-import { colors, sizes } from "@/entities";
+import { toRem } from "@/entities";
+import { colors, sizes } from "../../../../app/styles/tokens";
 import Image from "next/image";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { useInView } from "react-intersection-observer";
@@ -34,16 +35,16 @@ export function TimelineElement({
       <VerticalTimelineElement
         visible={inView}
         contentStyle={{
-          background: colors.greenGrass,
-          color: colors.whiteGhost,
+          background: colors.colorGreenGrass,
+          color: colors.colorWhiteGhost,
         }}
         contentArrowStyle={{
-          borderRight: `${sizes.s8.rem} solid  ${colors.greenGrass}`,
+          borderRight: `${toRem(sizes.size8)} solid  ${colors.colorGreenGrass}`,
         }}
         date={date}
         iconStyle={{
-          background: colors.greenGrass,
-          color: colors.whiteGhost,
+          background: colors.colorGreenGrass,
+          color: colors.colorWhiteGhost,
         }}
         icon={<Image className={styles.logo} src={icon} alt={alt} />}
       >

@@ -47,13 +47,3 @@
   stroke: var(--colorGreenGrass);
   stroke-width: 3px;
 }
-
-/* :export { */
-
-/*  animationCurveDefault: map.get(animation.$curves, default); */
-
-/*  animationCurveEaseBoth: map.get(animation.$curves, easeBoth); */
-
-/*  animationCurveLinear: map.get(animation.$curves, linear); */
-
-/* } */

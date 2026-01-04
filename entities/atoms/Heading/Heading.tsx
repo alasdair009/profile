@@ -5,10 +5,13 @@ import {
   HTMLAttributes,
   ReactNode,
 } from "react";
-import { colors, HeadingTypes, TextAlignment } from "@/entities";
+import { colors, lineHeights } from "../../../app/styles/tokens";
+import type {
+  HeadingTypes,
+  TextAlignment,
+} from "../../../app/styles/styles.types";
 import { Property } from "csstype";
 import styles from "./Heading.module.css";
-import { lineHeights } from "@/entities/design-tokens/typography/typography";
 
 export type HeadingProps<T extends ElementType> = {
   /**
@@ -57,7 +60,7 @@ export function Heading<T extends ElementType = "h1">({
   level = "h1",
   as,
   align = "left",
-  color = colors.whiteGhost,
+  color = colors.colorWhiteGhost,
   textShadow = false,
   lines,
   children,

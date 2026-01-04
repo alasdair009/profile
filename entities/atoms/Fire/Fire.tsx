@@ -1,7 +1,8 @@
 import { CSSProperties, HTMLAttributes } from "react";
-import { sizes, toRem } from "@/entities";
+import { sizes } from "../../../app/styles/tokens";
 import { lcgNextRand, makeLCG } from "@/lib/random";
 import styles from "./Fire.module.css";
+import { toRem } from "@/entities";
 
 type HeadingProps = {
   /**
@@ -27,7 +28,7 @@ type HeadingProps = {
  */
 export function Fire({
   baseColor = "#ff5000",
-  particleSize = sizes.s80.raw,
+  particleSize = sizes.size80,
   numberOfParticles = 50,
   duration = 1,
   style,

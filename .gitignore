@@ -134,3 +134,6 @@ dist
 *.DS_Store
 /storybook-static/
 .vercel
+
+# Generated on build
+/app/styles/_generated.css

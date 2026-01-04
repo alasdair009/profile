@@ -4,9 +4,9 @@ import newTabIcon from "../../assets/new-tab-icon.svg";
 import Image from "next/image";
 import { Link as ViewTransitionLink } from "next-view-transitions";
 import styles from "./Link.module.css";
-import { lineHeights } from "../../design-tokens/typography";
 import { CSSProperties } from "react";
 import { IFrame } from "../IFrame";
+import { lineHeights } from "@/app/styles/tokens";
 
 /**
  * Link to a new path or url.

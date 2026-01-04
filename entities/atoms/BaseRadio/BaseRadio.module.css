@@ -1,21 +1,21 @@
 .root {
   appearance: none;
   aspect-ratio: 1;
-  background: var(--colorWhiteGhost);
+  background: var(--color-white-ghost);
   border: 1px solid var(--colorblackEvil);
   border-radius: var(--radii-round);
-  box-shadow: 0 0 var(--size-2) 3px var(--colorblackEvil);
-  width: var(--size-32);
+  box-shadow: 0 0 var(--size-s2) 3px var(--colorblackEvil);
+  width: var(--size-s32);
 
   &:checked {
     background: radial-gradient(
-      var(--colorGreenGrass) var(--size-8),
-      var(--colorWhiteGhost) var(--size-8),
+      var(--color-green-grass) var(--size-s8),
+      var(--colorWhiteGhost) var(--size-s8),
       var(--colorWhiteGhost)
     );
   }
 
   &:invalid {
-    border: var(--size-2) solid var(--colorRedHeat);
+    border: var(--size-s2) solid var(--colorRedHeat);
   }
 }

@@ -1,7 +1,6 @@
 import { Meta, Source } from "@storybook/addon-docs/blocks";
 import { CurveViewer } from "./CurveViewer";
-
-[//]: # 'import { curves } from "./curves";'
+import { curves } from "../../../app/styles/tokens";
 
 <Meta title="Design Tokens/Animations" />
 
@@ -15,13 +14,13 @@ It should also be possible to opt out of animations on a web page but maintain a
 
 Transitions and animations use timing curves to define the rate of change of animation. My site uses the following curves:
 
-[//]: # '<CurveViewer curves={curves} title="curves" />'
+<CurveViewer curves={curves} title="curves" />
 
 ## Prefers reduce motion
 
 When the user has opted out of animations in their OS the website should respect this and remove any animation that it reasonably can.
 
-To ensure this is honoured I have provided the following functions:
+To ensure this is honored I have provided the following functions:
 
 <Source
   language="css"

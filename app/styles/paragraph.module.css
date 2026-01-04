@@ -7,10 +7,10 @@
 
   color: var(--color);
   display: block;
-  font-family: var(--font-Inter) !important;
+  font-family: var(--font-family-font-inter) !important;
   font-size: var(--font-size) !important;
   margin: var(--margin) !important;
-  max-width: calc(100vw - var(--size-16));
+  max-width: calc(100vw - var(--size-s16));
   text-align: var(--text-align);
   text-wrap: var(--text-wrap);
   width: 100%;
@@ -18,7 +18,7 @@
 
 @media (--breakpoint-large) {
   .paragraphStyles {
-    max-width: var(--globalTextMaxWidth);
+    max-width: var(--global-text-max-width);
   }
 }
 

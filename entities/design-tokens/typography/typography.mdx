@@ -1,26 +1,28 @@
 import { Meta, Typeset } from "@storybook/addon-docs/blocks";
-import { fonts, fontSizes, fontWeights } from "./typography";
-
-[//]: # 'import { colors } from "../colors";'
+import {
+  fontFamilies,
+  fontSizes,
+  fontWeights,
+} from "../../../app/styles/tokens";
 
 <Meta title="Design Tokens/Typography" />
 
 # Typography
 
-The system uses the same font in all areas with associated fallbacks: <code>{fonts.body}</code>.
+The system uses the same font in all areas with associated fallbacks: <code>{fontFamilies.fontInter}</code>.
 
 <Typeset
-  fontSizes={[fontSizes.small.raw, fontSizes.medium.raw, fontSizes.large.raw]}
+  fontSizes={[fontSizes.small, fontSizes.medium, fontSizes.large]}
   fontWeight={fontWeights.regular}
   sampleText={"Font at regular weight"}
-  fontFamily={fonts.body}
+  fontFamily={fontFamilies.fontInter}
   style={{ color: "var(--colorWhiteGhost)" }}
 />
 
 <Typeset
-  fontSizes={[fontSizes.small.raw, fontSizes.medium.raw, fontSizes.large.raw]}
+  fontSizes={[fontSizes.small, fontSizes.medium, fontSizes.large]}
   fontWeight={fontWeights.bold}
   sampleText={"Font at bold weight"}
-  fontFamily={fonts.body}
+  fontFamily={fontFamilies.fontInter}
   style={{ color: "var(--colorWhiteGhost)" }}
 />
