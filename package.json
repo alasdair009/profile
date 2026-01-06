@@ -5,9 +5,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "npm run generate:css-vars",
     "dev": "next dev",
     "dev:turbo": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run generate:css-vars && next build",
     "start": "next start",
     "lint": "next lint",
     "lint:css": "stylelint '**/*.css'",
@@ -15,13 +16,16 @@
     "check": "npx tsc --noEmit",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ixgnore-path .gitignore .",
+    "prestorybook": "npm run generate:css-vars",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "prebuild-storybook": "npm run generate:css-vars",
+    "build-storybook": "npm run generate:css-vars && storybook build",
     "prepare": "husky install",
     "chromatic": "chromatic --exit-zero-on-changes",
     "depcheck": "npx depcheck",
     "test-storybook": "test-storybook",
-    "generate:css-vars": "tsx scripts/generate-css-vars.ts"
+    "generate:css-vars": "tsx scripts/generate-css-vars.ts",
+    "postinstall": "npm run generate:css-vars"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
