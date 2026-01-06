@@ -8,7 +8,7 @@ export type DimensionViewerProps = {
   /**
    * The units to display
    */
-  units: Record<string, unknown>;
+  units: Record<string, number>;
   /**
    * A simplified object that can be used for the DimensionBar interface
    */
@@ -48,15 +48,15 @@ export function DimensionViewer({
       </p>
       <Source code={sourceExample} dark={true} language="css" />
       <DimensionBarWrapper title={title}>
-        {Object.keys(barUnits).map((key, index) => {
+        {Object.keys(units).map((key, index) => {
           return (
             <DimensionBar
               key={`${title}${index}`}
               data-testid={DimensionViewer.name}
-              width={`${barUnits[key]}${suffix}`}
+              width={`${units[key]}${suffix}`}
             >
               <DimensionBarLabel>
-                {barUnits[key]}
+                {units[key]}
                 {suffix}
                 <br />({key})
               </DimensionBarLabel>
@@ -86,8 +86,9 @@ const DimensionBar = ({
   width,
 }: { width: string } & HTMLAttributes<HTMLDivElement>) => (
   <div
+    data-width={width}
     style={{
-      background: colors.colorGreenGrass,
+      background: colors.greenGrass,
       color: "white",
       flex: 1,
       marginBottom: "8px",

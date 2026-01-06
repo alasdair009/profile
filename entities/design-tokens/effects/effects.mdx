@@ -1,0 +1,19 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { EffectViewer } from "./EffectViewer";
+import { radii, shadows } from "../../../styles/tokens";
+
+<Meta title="Design Tokens/Effects" />
+
+# Effects
+
+## Radii
+
+The border-radius rounding of corners.
+
+<EffectViewer effectProperty="borderRadius" effects={radii} />
+
+## Shadows
+
+Box shadows set around an element to give depth or contrast.
+
+<EffectViewer effectProperty="boxShadow" effects={shadows} />

@@ -1,6 +1,6 @@
-import { Meta, Story } from "@storybook/addon-docs/blocks";
+import { Meta } from "@storybook/addon-docs/blocks";
 import { DimensionViewer } from "../../../lib/storybook/DimensionViewer";
-import { sizes } from "../../../styles/tokens";
+import { breakpoints, globalSizes, sizes } from "../../../styles/tokens";
 
 <Meta title="Design Tokens/Dimensions" />
 
@@ -13,20 +13,34 @@ Each size key has properties for the dimension in number (`raw`), `px` and `rem`
 <DimensionViewer
   units={sizes}
   barUnits={Object.entries(sizes)}
+  suffix="px"
   title="sizes"
-  sourceExample="width: ${sizes.s8.rem};"
+  sourceExample="width: var(--size-s8);"
   objectName="sizes"
+/>
+
+## Global Sizes
+
+Larger sizes used to maintain consistent sizes across entities.
+
+<DimensionViewer
+  units={globalSizes}
+  barUnits={Object.entries(globalSizes)}
+  suffix="px"
+  title="globalSizes"
+  sourceExample="width: var(--global-content-max-width);"
+  objectName="globalSizes"
 />
 
 ## Breakpoints
 
 These are used to adjust the content layout for different device screen widths.
 
-[//]: # "<DimensionViewer"
-[//]: # "  units={breakpoints}"
-[//]: # "  barUnits={breakpoints}"
-[//]: # '  title="breakpoints"'
-[//]: # '  suffix="px"'
-[//]: # '  sourceExample="@media (${device.medium}){...}"'
-[//]: # '  objectName="breakpoints"'
-[//]: # "/>"
+<DimensionViewer
+  units={breakpoints}
+  barUnits={breakpoints}
+  title="breakpoints"
+  suffix="px"
+  sourceExample="@media (--breakpoint-medium){...}"
+  objectName="breakpoints"
+/>

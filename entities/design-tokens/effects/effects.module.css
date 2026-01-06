@@ -1,0 +1,27 @@
+.root {
+  display: flex;
+  gap: var(--size-s8);
+}
+
+.outer {
+  align-items: center;
+  aspect-ratio: 1;
+  background: rgb(from var(--color-white-ghost) r g b / 75%);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 128px;
+}
+
+.inner {
+  align-items: center;
+  aspect-ratio: 1;
+  background: var(--color-black-evil);
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--size-s2);
+  text-align: center;
+  width: 75%;
+}
