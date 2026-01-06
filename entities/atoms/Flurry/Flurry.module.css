@@ -1,0 +1,64 @@
+.root {
+  --particleBaseDuration: 0;
+  --particleBlocks: 0;
+  --particlesPerPlate: 0;
+
+  align-items: center;
+  background: linear-gradient(
+    207deg,
+    rgb(from var(--color-green-grass) r g b / 35%),
+    transparent
+  );
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: var(--global-decoration-max-width);
+  padding: 20px;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    background: linear-gradient(
+      117deg,
+      var(--color-black-evil) 15%,
+      transparent 50%,
+      transparent 65%,
+      var(--color-black-evil) 95%
+    );
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.inner {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.content {
+  max-width: var(--global-text-max-width);
+  overflow-wrap: break-word;
+  position: relative;
+  text-shadow: 0 0 var(--size-s8) var(--color-black-evil);
+  z-index: 1;
+}
+
+.silhouette {
+  left: 50%;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  opacity: 0.025;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,752 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`organisms/Flight Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <div class="Flight_root__CVyvO undefined"
+       data-testid="Flight"
+       style="--sky-color: #7fb4c7;"
+  >
+    <span class="Sun_root__tMHV_ Flight_sun__U_ZtD"
+          data-testid="Sun"
+    >
+    </span>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -100%; animation-delay: -4.00548s; filter: brightness(0.999416); left: 0%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 2.5132105068769306rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="190.03986976575106"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -96.66666666666667%; animation-delay: -1.06995s; filter: brightness(0.968937); left: 3.33333%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.214359372854233rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="189.7307813167572"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -93.33333333333333%; animation-delay: -5.98329s; filter: brightness(0.986931); left: 6.66667%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.354637712240219rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="180.3318440914154"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -90%; animation-delay: -4.95082s; filter: brightness(0.894014); left: 10%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 3.2767997588962317rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="188.49307976663113"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -86.66666666666667%; animation-delay: -5.95919s; filter: brightness(0.958897); left: 13.3333%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.1306215431541204rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="189.82687078416348"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -83.33333333333333%; animation-delay: -2.89738s; filter: brightness(0.882163); left: 16.6667%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 3.256936213001609rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="187.30116091668606"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -80%; animation-delay: -0.228521s; filter: brightness(0.876366); left: 20%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.367482354864478rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="182.66186080873013"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -76.66666666666666%; animation-delay: -1.07251s; filter: brightness(0.907898); left: 23.3333%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.56550496048294rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="182.5922118127346"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -73.33333333333333%; animation-delay: -5.02244s; filter: brightness(0.911426); left: 26.6667%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 2.604051139205694rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="181.89333305228502"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -70%; animation-delay: -2.73276s; filter: brightness(0.891319); left: 30%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 3.4372647292912006rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="180.85231736302376"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -66.66666666666666%; animation-delay: -4.27175s; filter: brightness(0.884145); left: 33.3333%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 2.765151965431869rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="182.6637102290988"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -63.33333333333333%; animation-delay: -1.16746s; filter: brightness(0.918565); left: 36.6667%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 2.8333185939118266rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="195.85438560694456"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -60%; animation-delay: -1.27838s; filter: brightness(0.909557); left: 40%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.669490084052086rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="198.43465745449066"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -56.666666666666664%; animation-delay: -2.46976s; filter: brightness(0.941317); left: 43.3333%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.299284443259239rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="189.58758294582367"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -53.33333333333333%; animation-delay: -3.65835s; filter: brightness(0.931784); left: 46.6667%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.942777380347252rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="182.81433045864105"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -50%; animation-delay: -2.38979s; filter: brightness(0.914426); left: 50%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.681328758597374rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="193.3614820241928"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -46.666666666666664%; animation-delay: -1.02617s; filter: brightness(0.993552); left: 53.3333%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.345321878790855rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="182.06155717372894"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -43.33333333333333%; animation-delay: -3.93343s; filter: brightness(0.974621); left: 56.6667%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.467288479208946rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="183.45801293849945"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -40%; animation-delay: -5.66895s; filter: brightness(0.969559); left: 60%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 3.4850337356328964rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="183.93024384975433"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -36.666666666666664%; animation-delay: -0.169011s; filter: brightness(0.897068); left: 63.3333%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.694761261343956rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="189.8185819387436"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -33.33333333333333%; animation-delay: -2.82274s; filter: brightness(0.983504); left: 66.6667%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.467408612836152rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="195.37779837846756"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -30%; animation-delay: -4.73294s; filter: brightness(0.933424); left: 70%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 3.2602493837475777rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="199.2248585820198"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -26.666666666666657%; animation-delay: -0.411632s; filter: brightness(0.880282); left: 73.3333%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 2.78786052018404rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="194.52035933732986"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -23.33333333333333%; animation-delay: -4.19347s; filter: brightness(0.889135); left: 76.6667%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.554224231978878rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="190.4777543991804"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -20%; animation-delay: -5.74128s; filter: brightness(0.940534); left: 80%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 2.503084344789386rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="185.40982060600072"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -16.666666666666657%; animation-delay: -1.955s; filter: brightness(0.88817); left: 83.3333%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 2.6710050459951162rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="188.70612882543355"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -13.333333333333329%; animation-delay: -3.5052s; filter: brightness(0.891818); left: 86.6667%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.330251947976649rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="187.9160738363862"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -10%; animation-delay: -5.94616s; filter: brightness(0.877174); left: 90%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 3.6148477206006646rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="186.41115847975016"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -6.666666666666657%; animation-delay: -3.20108s; filter: brightness(0.933426); left: 93.3333%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 4.51549086777959rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="193.0672138184309"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+    <div data-testid="FlightCloud"
+         class="Cloud_root__VXKdF Flight_cloud__5MqSB"
+         style="--skyColor: transparent; --moveTo: -3.3333333333333286%; animation-delay: -1.99091s; filter: brightness(0.96739); left: 96.6667%;"
+    >
+      <div class="Cloud_cloudCircle__lVd1u"
+           style="--dispersion: 3.8294098805636168rem; --cloudColor: #fff;"
+      >
+      </div>
+      <svg width="0"
+           height="0"
+      >
+        <filter id="cloudFilter">
+          <feTurbulence type="fractalNoise"
+                        basefrequency="0.01"
+                        numoctaves="10"
+          >
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic"
+                             scale="190.94323448836803"
+          >
+          </feDisplacementMap>
+        </filter>
+      </svg>
+    </div>
+  </div>
+</div>
+`;

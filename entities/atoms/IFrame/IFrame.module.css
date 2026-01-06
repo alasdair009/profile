@@ -1,0 +1,8 @@
+.root {
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  max-width: var(--size-s512);
+  width: 100%;
+}

@@ -1,7 +1,0 @@
-@use "../../../app/styles/dimensions";
-@use "../../../app/styles/helpers/rem";
-
-.root {
-  height: dimensions.getSize(s512);
-  width: dimensions.getSize(s256);
-}

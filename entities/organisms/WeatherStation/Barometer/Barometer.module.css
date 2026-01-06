@@ -1,0 +1,19 @@
+.root {
+  appearance: none;
+  border-radius: var(--radii-round);
+  height: var(--size-s32);
+  position: absolute;
+  width: var(--size-s32);
+
+  &::-webkit-meter-bar {
+    background: none;
+  }
+
+  &::-webkit-meter-suboptimum-value {
+    background: transparent;
+  }
+
+  &::-webkit-meter-optimum-value {
+    background: transparent;
+  }
+}

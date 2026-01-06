@@ -1,0 +1,25 @@
+.root {
+  --table-break: 0;
+
+  background: var(--color-black-evil);
+  border-collapse: collapse;
+  margin: var(--size-s16) auto;
+  max-width: var(--global-content-max-width);
+  vertical-align: middle;
+  width: 100%;
+
+  thead,
+  tfoot {
+    background: var(--color-green-grass);
+  }
+
+  td {
+    border: 1px solid var(--color-grey-dark);
+    padding: var(--size-s8);
+    position: relative;
+  }
+
+  th {
+    font-weight: var(--font-weight-bold);
+  }
+}

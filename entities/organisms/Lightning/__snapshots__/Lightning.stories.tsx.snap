@@ -1,4 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`organisms/Lightning Default play-test 1`] = `""`;
 
 exports[`organisms/Lightning Default smoke-test 1`] = `
 <section class="sc-dKsqdn hYkMkV">

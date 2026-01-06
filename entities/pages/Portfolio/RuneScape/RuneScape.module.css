@@ -1,0 +1,10 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: var(--global-content-max-width);
+}
+
+.inner {
+  display: flex;
+  gap: var(--size-s8);
+  justify-content: center;
+}

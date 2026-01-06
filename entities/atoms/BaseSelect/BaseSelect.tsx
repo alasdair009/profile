@@ -1,7 +1,7 @@
 "use client";
 import { BaseSelectProps } from "./BaseSelect.types";
 import { useState } from "react";
-import styles from "./BaseSelect.module.scss";
+import styles from "./BaseSelect.module.css";
 
 /**
  * Base select field

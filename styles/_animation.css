@@ -1,0 +1,9 @@
+:root {
+  --animation-rhythm: 1s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --animation-rhythm: 0s;
+  }
+}

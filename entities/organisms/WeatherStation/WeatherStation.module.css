@@ -1,0 +1,115 @@
+.root {
+  display: block;
+  margin: 0 auto;
+  max-width: var(--global-decoration-max-width);
+  position: relative;
+  width: 100%;
+}
+
+.inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: var(--global-content-max-width);
+}
+
+.house {
+  aspect-ratio: 1;
+  height: auto;
+  max-width: 900px;
+  position: relative;
+  width: 100%;
+}
+
+.frame {
+  background: var(--background);
+  border-radius: 2px;
+  border-color: #ddd #eee #fff;
+  border-style: solid;
+  border-width: 5vmin;
+  box-shadow:
+    0 0 5px 0 rgb(from var(--color-white-ghost) r g b / 25%) inset,
+    0 5px 10px 5px rgb(from var(--color-black-evil) r g b / 25%);
+  display: flex;
+  margin: 10vh 10vw 5vh;
+  position: relative;
+
+  &::before {
+    border-radius: var(--radii-r2);
+    inset: -2vmin;
+    box-shadow: 0 var(--size-s2) 5px 0
+      rgb(from var(--color-black-evil) r g b / 25%) inset;
+    content: "";
+    position: absolute;
+  }
+
+  &::after {
+    border-radius: var(--radii-r2);
+    inset: -2.5vmin;
+    box-shadow: 0 var(--size-s2) 5px 0
+      rgb(from var(--color-black-evil) r g b / 25%);
+    content: "";
+    position: absolute;
+  }
+}
+
+.houseTree {
+  --right: 0;
+  --top: 0;
+
+  height: var(--size-s64);
+  position: absolute;
+  right: var(--right);
+  top: var(--top);
+  width: var(--size-s64);
+}
+
+.sunAnchor {
+  --rotation: 0;
+
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(calc(var(--rotation) * 1deg));
+  transition: transform var(--animation-rhythm) var(--curve-default);
+  width: 100%;
+}
+
+.sun {
+  left: var(--size-s24);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.moon {
+  position: absolute !important;
+  right: var(--size-s8);
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cloudWrapper {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.cloud {
+  --xPos: 0;
+  --yPos: 0;
+
+  height: var(--size-s512);
+  left: var(--xPos);
+  opacity: 0.65;
+  position: absolute;
+  top: var(--yPos);
+  transform: translate(-50%, -50%) scale(0.2);
+  width: var(--size-s1024);
+}

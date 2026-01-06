@@ -1,8 +1,8 @@
 import { CSSProperties, HTMLAttributes } from "react";
 import { rgba } from "polished";
 import { LCG, lcgNextRand, makeLCG } from "@/lib/random";
-import styles from "./EffectBox.module.scss";
-import { toRem } from "@/entities";
+import styles from "./EffectBox.module.css";
+import { toRem } from "@/styles/style-helpers";
 
 type EffectBoxProps = {
   particlesPerPlate: number;

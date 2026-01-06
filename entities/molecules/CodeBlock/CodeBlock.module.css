@@ -1,0 +1,15 @@
+.root {
+  display: block;
+  margin: 0 auto;
+  max-width: var(--global-content-max-width);
+  width: 100%;
+}
+
+.codeWrapper {
+  box-shadow: var(--shadow-boxGreen);
+}
+
+.heading {
+  font-size: var(--font-size-small) !important;
+  font-style: italic;
+}

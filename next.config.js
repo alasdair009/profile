@@ -14,6 +14,7 @@ const {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  productionBrowserSourceMaps: true,
   env: {
     VERCEL_ENV,
     VERCEL_URL,
@@ -69,6 +70,14 @@ const nextConfig = {
         permanent: false,
       },
     ];
+  },
+  webpack(config, { dev }) {
+    if (!dev && config.optimization?.minimizer) {
+      config.optimization.minimizer = config.optimization.minimizer.filter(
+        (minimizer) => minimizer?.constructor?.name !== "CssMinimizerPlugin"
+      );
+    }
+    return config;
   },
 };
 

@@ -1,7 +1,7 @@
 import { HTMLAttributes } from "react";
 import trampolineImage from "./trampoline.svg";
 import { Heading, Spacer } from "@/entities";
-import styles from "./Trampoline.module.scss";
+import styles from "./Trampoline.module.css";
 import Image from "next/image";
 
 export function Trampoline({ ...rest }: HTMLAttributes<HTMLDivElement>) {

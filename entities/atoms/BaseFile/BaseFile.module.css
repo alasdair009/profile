@@ -1,0 +1,21 @@
+.root {
+  composes: baseInput from "../../../styles/input.module.css";
+  height: var(--size-s40);
+
+  &::-webkit-file-upload-button {
+    appearance: none;
+    background: var(--color-green-grass);
+    border: none;
+    color: var(--color-white-ghost);
+    cursor: pointer;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-bold);
+    height: 100%;
+    margin-right: var(--size-s16);
+    padding: 0 var(--size-s16);
+
+    &:hover {
+      filter: brightness(1.3);
+    }
+  }
+}

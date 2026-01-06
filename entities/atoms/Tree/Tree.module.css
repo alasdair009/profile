@@ -1,0 +1,30 @@
+@keyframes sway {
+  0%,
+  100% {
+    transform: translate(calc(var(--moveTo) * 1px))
+      skew(calc(var(--swayTo) * 1deg));
+  }
+
+  50% {
+    transform: translate(calc((var(--moveTo) + var(--swayAmount)) * 1px))
+      skew(calc((var(--swayTo) - var(--swayAmount)) * 1deg));
+  }
+}
+
+.leaves {
+  --moveTo: 0;
+  --swayTo: 0;
+  --swayAmount: 0;
+
+  animation: sway calc(var(--animation-rhythm) * 2) infinite var(--curve-linear);
+  stroke: #1a4a24;
+  fill-rule: nonzero;
+  transform: translateX(calc(var(--moveTo) * 1px))
+    skew(calc(var(--swayTo) * 1deg));
+  transition: transform 2s;
+}
+
+.trunk {
+  rx: var(--radii-r2);
+  stroke: #2e1305;
+}

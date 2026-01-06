@@ -1,4 +1,4 @@
-import styles from "./LabelledDate.module.scss";
+import styles from "./LabelledDate.module.css";
 import { HTMLAttributes } from "react";
 import { BaseDate, BaseLabel, ErrorText } from "@/entities";
 import { DateInputType } from "@/entities/atoms/BaseDate/BaseDate.types";

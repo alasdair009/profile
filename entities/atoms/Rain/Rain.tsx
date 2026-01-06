@@ -3,7 +3,7 @@ import { HTMLAttributes, useEffect, useRef } from "react";
 import { lighten, rgba } from "polished";
 import { prefersReducedMotion } from "@/entities";
 import { LCG, lcgNextRand, makeLCG } from "@/lib/random";
-import styles from "./Rain.module.scss";
+import styles from "./Rain.module.css";
 
 type RainProps = {
   rainDrops?: number;

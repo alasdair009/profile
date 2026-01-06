@@ -1,0 +1,38 @@
+.root {
+  composes: baseInput from "../../../styles/input.module.css";
+  cursor: ew-resize;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    aspect-ratio: 1;
+    background: var(--color-green-grass);
+    border: 1px solid var(--color-white-ghost);
+    border-radius: var(--radii-round);
+    height: var(--size-s16);
+  }
+
+  &::-moz-range-thumb {
+    appearance: none;
+    aspect-ratio: 1;
+    background: var(--color-green-grass);
+    border: 1px solid var(--color-white-ghost);
+    border-radius: var(--radii-round);
+    height: var(--size-s16);
+  }
+
+  &::-webkit-slider-runnable-track {
+    background-color: var(--color-grey-dark);
+    border: 1px solid var(--color-green-grass);
+    border-radius: var(--radii-r8);
+  }
+
+  &::-moz-range-track {
+    background-color: var(--color-grey-dark);
+    border: 1px solid var(--color-green-grass);
+    border-radius: var(--radii-r8);
+  }
+}
+
+.invalid {
+  composes: invalid from "../../../styles/input.module.css";
+}

@@ -2,7 +2,7 @@ import { Source } from "@storybook/addon-docs/blocks";
 import type { HTMLAttributes, JSX } from "react";
 
 import { ObjectViewer } from "./ObjectViewer";
-import { colors } from "@/entities";
+import { colors } from "@/styles/tokens";
 
 export type DimensionViewerProps = {
   /**
@@ -12,7 +12,7 @@ export type DimensionViewerProps = {
   /**
    * A simplified object that can be used for the DimensionBar interface
    */
-  barUnits: Record<string, string | number>;
+  barUnits: Record<string, number>;
   /**
    * The title of the code segment
    */
@@ -87,7 +87,7 @@ const DimensionBar = ({
 }: { width: string } & HTMLAttributes<HTMLDivElement>) => (
   <div
     style={{
-      background: colors.greenGrass,
+      background: colors.colorGreenGrass,
       color: "white",
       flex: 1,
       marginBottom: "8px",

@@ -1,5 +1,5 @@
 "use client";
-import styles from "./BaseRange.module.scss";
+import styles from "./BaseRange.module.css";
 import { ChangeEvent, HTMLAttributes, useEffect, useState } from "react";
 
 type BaseRangeProps = {
@@ -35,7 +35,7 @@ export function BaseRange({
 
   return (
     <input
-      className={`${styles.root} ${isInvalidState ? styles.rootStateInvalid : ""}`}
+      className={`${styles.root} ${isInvalidState ? styles.invalid : ""}`}
       onChange={handleOnChange}
       data-testid={BaseRange.name}
       type="range"

@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import styles from "./IFrame.module.scss";
+import styles from "./IFrame.module.css";
 
 type IFrameProps = {
   /**

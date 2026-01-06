@@ -1,0 +1,20 @@
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.root {
+  content: "";
+  border-radius: 50%;
+  display: block;
+  height: var(--size-s48);
+  width: var(--size-s48);
+}
+
+.spinnerImage {
+  animation: rotate var(--animation-rhythm) var(--curve-linear) infinite;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}

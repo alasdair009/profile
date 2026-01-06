@@ -1,0 +1,21 @@
+.root {
+  appearance: none;
+  aspect-ratio: 1;
+  background: var(--color-white-ghost);
+  border: 1px solid var(--color-black-evil);
+  border-radius: var(--radii-round);
+  box-shadow: 0 0 var(--size-s2) 3px var(--color-black-evil);
+  width: var(--size-s32);
+
+  &:checked {
+    background: radial-gradient(
+      var(--color-green-grass) var(--size-s8),
+      var(--color-white-ghost) var(--size-s8),
+      var(--color-white-ghost)
+    );
+  }
+
+  &:invalid {
+    border: var(--size-s2) solid var(--color-red-heat);
+  }
+}

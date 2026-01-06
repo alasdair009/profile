@@ -1,0 +1,33 @@
+.root {
+  align-items: center;
+  aspect-ratio: 1;
+  background: var(--color-black-evil);
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  mask: no-repeat center;
+  mask-size: contain;
+  overflow: hidden;
+  position: relative;
+  width: var(--size-s48);
+
+  &::before {
+    background: linear-gradient(
+        var(--color-white-ghost) 50%,
+        var(--color-green-grass) 50%,
+        var(--color-green-grass) 100%
+      )
+      0 0;
+    content: "";
+    height: 200%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all calc(var(--animation-rhythm) * 0.2);
+    width: 100%;
+  }
+
+  &:hover::before {
+    top: -100%;
+  }
+}

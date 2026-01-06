@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`organisms/Splash Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <section class="Splash_root__8E8KE"
+           itemscope
+           itemtype="https://schema.org/Person"
+           data-testid="Splash"
+  >
+    <div class="Splash_inner__A2S08">
+      <div class="Splash_feetSection__uO0bM">
+        <div class="Splash_copy__JHInG">
+          <h1 class="Heading_root__TRR0m Heading_h1__HdEBz   undefined"
+              data-testid="Heading"
+              style="--align: left; --line-height: 1.3em;"
+          >
+            <span itemprop="givenName">
+              Ali
+            </span>
+            Macrae
+          </h1>
+          <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  Splash_copyParagraph__JYD2a"
+             data-testid="Paragraph"
+             style="--font-size: 2rem; --text-align: left; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: balance; --color: #fff; --margin: 0 auto 1.5rem;"
+          >
+            The gravity defying blend of
+            <span itemprop="jobTitle">
+              web developer
+            </span>
+            and trampolinist.
+          </p>
+          <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  Splash_copyParagraph__JYD2a"
+             data-testid="Paragraph"
+             style="--font-size: 2rem; --text-align: left; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0 auto 1.5rem;"
+          >
+            Always seeking adventures!
+          </p>
+          <a class="undefined Link_root__zGNxh Link_Large__F0LZw "
+             target="_self"
+             data-testid="Link"
+             href="/portfolio"
+             style="--line-height: 1.3em;"
+          >
+            Hire me now!
+          </a>
+        </div>
+      </div>
+      <div class="Splash_headSection__PQ8WU">
+      </div>
+    </div>
+  </section>
+</div>
+`;

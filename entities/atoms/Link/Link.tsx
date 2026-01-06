@@ -3,10 +3,10 @@ import { isExternalDomain } from "@/lib/domains";
 import newTabIcon from "../../assets/new-tab-icon.svg";
 import Image from "next/image";
 import { Link as ViewTransitionLink } from "next-view-transitions";
-import styles from "./Link.module.scss";
-import { lineHeights } from "../../design-tokens/typography";
+import styles from "./Link.module.css";
 import { CSSProperties } from "react";
 import { IFrame } from "../IFrame";
+import { lineHeights } from "@/styles/tokens";
 
 /**
  * Link to a new path or url.
@@ -25,7 +25,7 @@ export function Link({
 
   return (
     <ViewTransitionLink
-      className={`${className} ${styles.root} ${variant === "large" ? styles.Large : ""} ${lines ? styles.rootClamp : ""}`}
+      className={`${className} ${styles.root} ${variant === "large" ? styles.Large : ""} ${lines ? styles.clamp : ""}`}
       href={href}
       target={isExternalURL ? "_blank" : "_self"}
       rel={isExternalURL ? "noopener" : undefined}

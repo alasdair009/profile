@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`atoms/UnorderedList Default play-test 1`] = `
 <ul data-testid="UnorderedList"

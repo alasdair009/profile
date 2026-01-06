@@ -1,9 +1,9 @@
 import type { Preview } from "@storybook/nextjs";
 import theme from "./theme";
-import { breakpoints, device } from "../entities/design-tokens/dimensions";
-import type { Breakpoint } from "../entities/design-tokens/dimensions";
+import { breakpoints, device } from "@/styles/tokens";
+import type { Breakpoint } from "@/styles/styles.types";
 import { ViewportMap } from "storybook/viewport";
-import "../app/styles/global.scss";
+import "@/styles/global.css";
 import { withFont } from "./decorators/withFont";
 import { withStyle } from "./decorators/withStyle";
 import "@fontsource-variable/inter";

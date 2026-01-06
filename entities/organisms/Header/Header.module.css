@@ -1,0 +1,64 @@
+.root {
+  background: rgb(from var(--color-grey-dark) r g b / 50%);
+  border-bottom: var(--size-s2) solid
+    rgb(from var(--color-green-grass) r g b / 25%);
+  display: block;
+  height: var(--global-header-height);
+  margin: 0 auto;
+  max-width: var(--global-decoration-max-width);
+  padding: var(--size-s8);
+  position: sticky;
+  width: 100%;
+}
+
+.inner {
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  max-width: var(--global-content-max-width);
+  width: 100%;
+}
+
+.headerLogo {
+  &:hover {
+    filter: brightness(1.3);
+  }
+}
+
+.headerLinks {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  gap: var(--size-s16);
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.headerLink {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+  justify-content: center;
+  white-space: nowrap;
+
+  &.hideOnNarrow {
+    display: none;
+  }
+}
+
+@media (--breakpoint-xsmall) {
+  .headerLink.hideOnNarrow {
+    display: flex;
+  }
+}
+
+.notificationIcon {
+  height: var(--size-s24);
+  opacity: 0.3;
+  width: var(--size-s24);
+
+  &.isSubscribed {
+    opacity: 1;
+  }
+}

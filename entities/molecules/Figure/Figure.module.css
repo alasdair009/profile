@@ -1,0 +1,25 @@
+.root {
+  margin: var(--size-s16) auto;
+  max-width: var(--global-content-max-width);
+  width: 100%;
+}
+
+.inner {
+  aspect-ratio: 16 / 9;
+  box-shadow: var(--shadow-boxGreen);
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.caption {
+  display: block;
+  font-size: var(--font-size-small);
+  font-style: italic;
+  margin: var(--size-s8) auto;
+  text-align: center;
+}

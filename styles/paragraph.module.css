@@ -1,0 +1,27 @@
+.paragraphStyles {
+  --color: ;
+  --font-size: ;
+  --margin: ;
+  --text-align: ;
+  --text-wrap: ;
+
+  color: var(--color);
+  display: block;
+  font-family: var(--font-family-font-inter) !important;
+  font-size: var(--font-size) !important;
+  margin: var(--margin) !important;
+  max-width: calc(100vw - var(--size-s16));
+  text-align: var(--text-align);
+  text-wrap: var(--text-wrap);
+  width: 100%;
+}
+
+@media (--breakpoint-large) {
+  .paragraphStyles {
+    max-width: var(--global-text-max-width);
+  }
+}
+
+.clamp {
+  composes: lineClamp from "lineClamp.module.css";
+}

@@ -1,0 +1,7 @@
+.root {
+  --multiplier: 0;
+
+  content: "";
+  display: block;
+  margin-bottom: calc(var(--size-s8) * var(--multiplier));
+}

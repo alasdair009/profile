@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`molecules/LabelledFile Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <label class="LabelledFile_root__axFek input_labelledStyles__yWNVm"
+         data-testid="LabelledFile"
+  >
+    <span as="span"
+          class="BaseLabel_root__XDdQ8"
+          data-testid="BaseLabel"
+    >
+      File entry
+    </span>
+    <input class="BaseFile_root__9Mf9i input_baseInput__nbtO7  undefined"
+           data-testid="BaseFile"
+           required
+           type="file"
+    >
+    <span class="ErrorText_root__Pfh0L paragraph_paragraphStyles__5ERhb ErrorText_hide__IGhla"
+          data-testid="LabelledFileError"
+          style="--color: #df1c41; --font-size: small; --text-align: left;"
+    >
+    </span>
+  </label>
+</div>
+`;
+
+exports[`molecules/LabelledFile IsInvalid play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <label class="LabelledFile_root__axFek input_labelledStyles__yWNVm"
+         data-testid="LabelledFile"
+  >
+    <span as="span"
+          class="BaseLabel_root__XDdQ8"
+          data-testid="BaseLabel"
+    >
+      isInvalid entry
+    </span>
+    <input class="BaseFile_root__9Mf9i input_baseInput__nbtO7 undefined undefined"
+           data-testid="BaseFile"
+           required
+           type="file"
+    >
+    <span class="ErrorText_root__Pfh0L paragraph_paragraphStyles__5ERhb "
+          data-testid="LabelledFileError"
+          style="--color: #df1c41; --font-size: small; --text-align: left;"
+    >
+    </span>
+  </label>
+</div>
+`;
+
+exports[`molecules/LabelledFile Required play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <label class="LabelledFile_root__axFek input_labelledStyles__yWNVm"
+         data-testid="LabelledFile"
+  >
+    <span as="span"
+          class="BaseLabel_root__XDdQ8"
+          data-testid="BaseLabel"
+    >
+      Required entry
+    </span>
+    <input class="BaseFile_root__9Mf9i input_baseInput__nbtO7  undefined"
+           data-testid="BaseFile"
+           required
+           type="file"
+    >
+    <span class="ErrorText_root__Pfh0L paragraph_paragraphStyles__5ERhb ErrorText_hide__IGhla"
+          data-testid="LabelledFileError"
+          style="--color: #df1c41; --font-size: small; --text-align: left;"
+    >
+    </span>
+  </label>
+</div>
+`;

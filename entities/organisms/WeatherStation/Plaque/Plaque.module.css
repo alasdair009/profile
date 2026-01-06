@@ -1,0 +1,49 @@
+.root {
+  box-shadow: calc(var(--size-s4) * -1) var(--size-s4) var(--size-s8) 1px
+    rgb(0 0 0 / 50%);
+  color: var(--color-white-ghost);
+  padding: var(--size-s8);
+  position: relative;
+  transition: color calc(var(--animation-rhythm) * 0.25) var(--curve-default);
+  width: var(--size-s256);
+
+  &::before {
+    background:
+      repeating-radial-gradient(#421a00 0 0.0001%, #4d2105 0 0.0002%) 60%
+        60%/3000px 3000px,
+      repeating-conic-gradient(#421a00 0 0.0001%, #4d2105 0 0.0002%) 40%
+        40%/4000px 3000px;
+    border: var(--size-s4) solid var(--color-white-ghost);
+    border-color: #5b1d00 #5b1d00 #371302 #371302;
+    content: "";
+    height: 100%;
+    left: 0;
+    mix-blend-mode: lighten;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &.pending dd {
+    color: transparent;
+  }
+}
+
+.dl {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: var(--font-size-small);
+  margin: 0;
+  position: relative;
+}
+
+.dt {
+  width: 50%;
+}
+
+.dd {
+  align-items: baseline;
+  display: flex;
+  margin: 0;
+  width: 50%;
+}

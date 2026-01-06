@@ -1,0 +1,4 @@
+.scrollbarStyles {
+  scrollbar-color: var(--color-green-grass) var(--color-black-evil);
+  scrollbar-width: thin;
+}

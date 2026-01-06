@@ -1,5 +1,5 @@
 "use client";
-import styles from "./BaseInput.module.scss";
+import styles from "./BaseInput.module.css";
 import { BaseInputProps } from "./BaseInput.types";
 import { useEffect, useState } from "react";
 
@@ -23,7 +23,7 @@ export function BaseInput({ isInvalid = false, ...rest }: BaseInputProps) {
 
   return (
     <input
-      className={`${styles.root} ${isInvalidState ? styles.rootStateInvalid : ""}`}
+      className={`${styles.root} ${isInvalidState ? styles.invalid : ""}`}
       onChange={() => handleOnChange()}
       data-testid={BaseInput.name}
       {...rest}

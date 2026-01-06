@@ -1,0 +1,16 @@
+.root {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: var(--global-content-max-width);
+  position: relative;
+  width: 100%;
+}
+
+.trampolineImage {
+  margin: 0 auto;
+  max-width: var(--size-s512);
+  width: 100%;
+}

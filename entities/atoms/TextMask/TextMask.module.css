@@ -1,0 +1,45 @@
+.root {
+  --maskFill: transparent;
+
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  &::before,
+  &::after {
+    background: var(--maskFill);
+    content: "";
+    flex: 1;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &::before,
+  &::after {
+    background: var(--maskFill);
+    content: "";
+    flex: 1;
+  }
+}
+
+.rect {
+  fill: var(--maskFill);
+  mask: url("#mask");
+}
+
+.svg {
+  height: 100%;
+  width: 100%;
+}
+
+.text {
+  alignment-baseline: middle;
+  font-family: var(--font-Inter);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-black);
+  text-anchor: middle;
+}

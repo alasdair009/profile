@@ -1,0 +1,23 @@
+.root {
+  --skyColor: transpaent;
+
+  background: var(--skyColor);
+  overflow: hidden;
+  position: relative;
+}
+
+.cloudCircle {
+  --dispersion: 0;
+  --cloudColor: transparent;
+
+  border-radius: var(--radii-round);
+  box-shadow: 0 calc(var(--size-s256) * 1.5) var(--dispersion) 0
+    var(--cloudColor);
+  filter: url("#cloudFilter");
+  height: var(--size-s256);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%) translateZ(0);
+  width: var(--size-s512);
+}

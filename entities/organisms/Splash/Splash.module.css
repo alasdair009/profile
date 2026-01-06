@@ -1,0 +1,142 @@
+.root {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: var(--global-decoration-max-width);
+  position: relative;
+  width: 100%;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  max-width: var(--global-content-max-width);
+  width: 100%;
+}
+
+.feetSection {
+  background: var(--color-black-evil);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.headSection {
+  background: linear-gradient(
+    to right,
+    var(--color-white-ghost),
+    var(--color-white-ghost) 50%,
+    var(--color-white-ghost) 50%
+  );
+  height: 480px;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    background: linear-gradient(
+      to right,
+      var(--color-black-evil),
+      var(--color-black-evil) 50%,
+      var(--color-white-ghost) 50%
+    );
+    content: "";
+    height: 100%;
+    left: 0;
+    mask:
+      url("./ali-flight.svg") no-repeat center center,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude; /* mask-composite: destination-out; */
+    mask-size: 75%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.copy {
+  padding: var(--size-s32) var(--size-s16);
+  text-align: center;
+  width: 100%;
+}
+
+.copyParagraph {
+  text-align: center;
+}
+
+@media (--breakpoint-small) {
+  .root {
+    height: calc(100vh - var(--global-header-height));
+    min-height: 320px;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 100%;
+    }
+
+    &::after {
+      background: var(--color-white-ghost);
+    }
+  }
+
+  .inner {
+    flex-direction: row;
+  }
+
+  .feetSection {
+    width: 50%;
+
+    &::before {
+      background: var(--color-white-ghost);
+      mask: url("./ali-flight.svg") no-repeat 350% center;
+      mask-size: 75%;
+    }
+  }
+
+  .headSection {
+    background: transparent;
+    height: auto;
+    width: 50%;
+
+    &::before {
+      background: var(--color-white-ghost);
+      mask:
+        url("./ali-flight.svg") no-repeat -50% center,
+        linear-gradient(#fff 0 0);
+      mask-composite: exclude; /* mask-composite: destination-out; */
+      mask-size: 75%;
+    }
+  }
+
+  .copy {
+    max-width: 480px;
+    padding: var(--size-s16) var(--size-s32) var(--size-s16) var(--size-s16);
+    text-align: left;
+  }
+
+  .copyParagraph {
+    text-align: left;
+  }
+}
+
+@media (--breakpoint-medium) {
+  .copy {
+    padding: var(--size-s16);
+  }
+}

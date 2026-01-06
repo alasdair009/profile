@@ -1,29 +1,4 @@
-export { prefersReducedMotion, curves } from "./design-tokens/animations";
-export { borderRadii } from "./design-tokens/effects";
-export { clipPaths } from "./design-tokens/clipPaths";
-export { colors } from "./design-tokens/colors";
-export {
-  fonts,
-  fontSizes,
-  fontWeights,
-  headingSizes,
-  lineHeights,
-} from "./design-tokens/typography";
-export type {
-  FontSizes,
-  HeadingTypes,
-  TextAlignment,
-} from "./design-tokens/typography";
-export {
-  device,
-  globalInputMaxWidth,
-  globalContentMaxWidth,
-  globalTextMaxWidth,
-  globalDecorationMaxWidth,
-  sizes,
-  toRem,
-} from "./design-tokens/dimensions";
-export type { Breakpoint, Dimension } from "./design-tokens/dimensions";
+export { prefersReducedMotion } from "./design-tokens/animations";
 
 export { Audio } from "./atoms/Audio";
 export { BaseCheckbox } from "./atoms/BaseCheckbox";

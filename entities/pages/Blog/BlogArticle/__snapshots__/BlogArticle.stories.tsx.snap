@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`pages/Blog/BlogArticle Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <div data-testid="BlogArticle">
+    <nav class="BlogArticle_blogNav__la5Vo">
+      <a class="undefined Link_root__zGNxh  "
+         target="_self"
+         data-testid="Link"
+         href="/blog"
+         style="--line-height: 1.3em;"
+      >
+        Back to blog
+      </a>
+    </nav>
+    <article class="Article_root__BtN55"
+             data-testid="Article"
+    >
+      <h1 class="Heading_root__TRR0m Heading_h1__HdEBz   Article_articleHeading__eWbxx"
+          data-testid="Heading"
+          style="--align: center; --line-height: 1.3em;"
+      >
+        Hello Sanity
+      </h1>
+      <time class="Article_articleDate__XG6Y0"
+            datetime="2024-02-10T12:00:00.000Z"
+      >
+        10th February 2024
+      </time>
+      <br class="Spacer_root__ZPecw"
+          data-testid="Spacer"
+          style="--multiplier: 6;"
+      >
+      <figure class="Article_articleFigure__Dm1dn">
+        <img alt="Hello Sanity"
+             decoding="async"
+             data-nimg="fill"
+             class="Article_articleImage__TCrOe"
+             sizes="100vw"
+             srcset="https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=640&amp;q=75 640w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=750&amp;q=75 750w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=828&amp;q=75 828w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=1080&amp;q=75 1080w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=1200&amp;q=75 1200w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=1920&amp;q=75 1920w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=2048&amp;q=75 2048w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=3840&amp;q=75 3840w"
+             src="https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=3840&amp;q=75"
+             style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover;"
+        >
+      </figure>
+      <br class="Spacer_root__ZPecw"
+          data-testid="Spacer"
+          style="--multiplier: 8;"
+      >
+      <div class="Article_content__Cydoi">
+        <div style="display: none;">
+          [@portabletext/react] Unknown block type "", specify a component for it in the \`components.types\` prop
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+`;

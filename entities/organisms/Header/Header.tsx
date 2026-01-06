@@ -1,10 +1,11 @@
 import { HTMLAttributes } from "react";
 import amLogo from "../../assets/am.svg";
-import { Link as HeaderLink, sizes } from "@/entities";
+import { Link as HeaderLink } from "@/entities";
 import { NotificationButton } from "./NotificationButton";
-import styles from "./Header.module.scss";
+import styles from "./Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { sizes } from "@/styles/tokens";
 
 type HeaderProps = {} & HTMLAttributes<HTMLDivElement>;
 export function Header({ children, ...rest }: HeaderProps) {
@@ -16,7 +17,7 @@ export function Header({ children, ...rest }: HeaderProps) {
             className={styles.headerLogo}
             src={amLogo}
             alt="AM logo"
-            height={sizes.s32.raw}
+            height={sizes.s32}
           />
         </Link>
         <div className={styles.headerLinks}>

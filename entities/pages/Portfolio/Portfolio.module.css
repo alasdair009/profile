@@ -1,0 +1,60 @@
+.skillsSection {
+  display: block;
+  max-width: var(--global-content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--size-s16);
+}
+
+.skillGrid {
+  display: block;
+  width: 100%;
+}
+
+@media (--breakpoint-xsmall) {
+  .skillGrid {
+    display: grid;
+    gap: var(--size-s2);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (--breakpoint-small) {
+  .skillGrid {
+    display: grid;
+    gap: var(--size-s2);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.gridLogo {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  &Image {
+    max-width: var(--size-s256);
+  }
+}
+
+@media (--breakpoint-xsmall) {
+  .gridLogo {
+    grid-column: var(--xs-column-start) / var(--xs-column-end);
+    grid-row: var(--xs-row-start) / var(--xs-row-end);
+  }
+}
+
+@media (--breakpoint-small) {
+  .gridLogo {
+    grid-column: var(--s-column-start) / var(--s-column-end);
+    grid-row: var(--s-row-start) / var(--s-row-end);
+  }
+}
+
+.portfolioSection {
+  display: block;
+  max-width: var(--global-content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--size-s16);
+}

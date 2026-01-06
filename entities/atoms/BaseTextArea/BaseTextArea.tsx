@@ -1,6 +1,6 @@
 "use client";
 import { HTMLAttributes, useState } from "react";
-import styles from "./BaseTextArea.module.scss";
+import styles from "./BaseTextArea.module.css";
 
 type BaseTextAreaProps = {
   required?: boolean;
@@ -22,7 +22,7 @@ export function BaseTextArea({
 
   return (
     <textarea
-      className={`${styles.root} ${isInvalidState ? styles.rootStateInvalid : ""}`}
+      className={`${styles.root} ${isInvalidState ? styles.invalid : ""}`}
       onChange={() => handleOnChange()}
       {...rest}
     />

@@ -2,8 +2,9 @@ import { Meta, StoryObj } from "@storybook/nextjs";
 import { CustomizableSelect } from "./CustomizableSelect";
 import Image from "next/image";
 import amLogo from "@/entities/assets/am.svg";
-import { ErrorText, Paragraph, sizes } from "@/entities";
-import styles from "./CustomizableSelect.module.scss";
+import { ErrorText, Paragraph } from "@/entities";
+import styles from "./CustomizableSelect.module.css";
+import { sizes } from "@/styles/tokens";
 
 const meta: Meta<typeof CustomizableSelect> = {
   component: CustomizableSelect,
@@ -35,8 +36,8 @@ const meta: Meta<typeof CustomizableSelect> = {
             <Image
               src={amLogo}
               alt="am Logo"
-              height={sizes.s16.raw}
-              width={sizes.s16.raw}
+              height={sizes.s16}
+              width={sizes.s16}
             />
           </figure>
           <Paragraph margin={0}>Option 1</Paragraph>
@@ -46,8 +47,8 @@ const meta: Meta<typeof CustomizableSelect> = {
             <Image
               src={amLogo}
               alt="am Logo"
-              height={sizes.s16.raw}
-              width={sizes.s16.raw}
+              height={sizes.s16}
+              width={sizes.s16}
             />
           </figure>
           <Paragraph margin={0}>Option 2</Paragraph>
@@ -57,8 +58,8 @@ const meta: Meta<typeof CustomizableSelect> = {
             <Image
               src={amLogo}
               alt="am Logo"
-              height={sizes.s16.raw}
-              width={sizes.s16.raw}
+              height={sizes.s16}
+              width={sizes.s16}
             />
           </figure>
           <Paragraph margin={0}>Option 3</Paragraph>

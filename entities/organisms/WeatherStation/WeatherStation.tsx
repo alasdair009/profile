@@ -1,5 +1,5 @@
 import { ComponentProps, CSSProperties, HTMLAttributes } from "react";
-import { Cloud, colors, Moon, Sun, Tree } from "@/entities";
+import { Cloud, Moon, Sun, Tree } from "@/entities";
 import talihouse from "./house.svg";
 import { StaticImageData } from "next/image";
 import { Rain } from "../../atoms/Rain";
@@ -7,8 +7,9 @@ import { Thermometer } from "./Thermometer/Thermometer";
 import { Barometer } from "./Barometer";
 import { Plaque } from "./Plaque";
 import type { SunState } from "@/app/portfolio/weather/types";
-import styles from "./WeatherStation.module.scss";
+import styles from "./WeatherStation.module.css";
 import Image from "next/image";
+import { colors } from "@/styles/tokens";
 
 export const windDirections = [
   "n",

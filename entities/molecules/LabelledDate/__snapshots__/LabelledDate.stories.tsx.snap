@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`molecules/LabelledDate DateTimeLocale play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <label class="LabelledDate_root__ZJ3Ni input_labelledStyles__yWNVm"
+         data-testid="LabelledDate"
+  >
+    <span as="span"
+          class="BaseLabel_root__XDdQ8"
+          data-testid="BaseLabel"
+    >
+      Date entry
+    </span>
+    <input class="BaseDate_root__GiusD input_baseInput__nbtO7 "
+           data-testid="BaseDate"
+           required
+           type="datetime-local"
+    >
+    <span class="ErrorText_root__Pfh0L paragraph_paragraphStyles__5ERhb ErrorText_hide__IGhla"
+          data-testid="LabelledDateError"
+          style="--color: #df1c41; --font-size: small; --text-align: left;"
+    >
+    </span>
+  </label>
+</div>
+`;
+
+exports[`molecules/LabelledDate Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <label class="LabelledDate_root__ZJ3Ni input_labelledStyles__yWNVm"
+         data-testid="LabelledDate"
+  >
+    <span as="span"
+          class="BaseLabel_root__XDdQ8"
+          data-testid="BaseLabel"
+    >
+      Date entry
+    </span>
+    <input class="BaseDate_root__GiusD input_baseInput__nbtO7 "
+           data-testid="BaseDate"
+           required
+           type="date"
+    >
+    <span class="ErrorText_root__Pfh0L paragraph_paragraphStyles__5ERhb ErrorText_hide__IGhla"
+          data-testid="LabelledDateError"
+          style="--color: #df1c41; --font-size: small; --text-align: left;"
+    >
+    </span>
+  </label>
+</div>
+`;
+
+exports[`molecules/LabelledDate IsInvalid play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <label class="LabelledDate_root__ZJ3Ni input_labelledStyles__yWNVm"
+         data-testid="LabelledDate"
+  >
+    <span as="span"
+          class="BaseLabel_root__XDdQ8"
+          data-testid="BaseLabel"
+    >
+      Date entry
+    </span>
+    <input class="BaseDate_root__GiusD input_baseInput__nbtO7 BaseDate_invalid__gUQsS input_invalid__M5wX1"
+           data-testid="BaseDate"
+           required
+           type="date"
+    >
+    <span class="ErrorText_root__Pfh0L paragraph_paragraphStyles__5ERhb "
+          data-testid="LabelledDateError"
+          style="--color: #df1c41; --font-size: small; --text-align: left;"
+    >
+    </span>
+  </label>
+</div>
+`;
+
+exports[`molecules/LabelledDate Required play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <label class="LabelledDate_root__ZJ3Ni input_labelledStyles__yWNVm"
+         data-testid="LabelledDate"
+  >
+    <span as="span"
+          class="BaseLabel_root__XDdQ8"
+          data-testid="BaseLabel"
+    >
+      Date entry
+    </span>
+    <input class="BaseDate_root__GiusD input_baseInput__nbtO7 "
+           data-testid="BaseDate"
+           required
+           type="date"
+    >
+    <span class="ErrorText_root__Pfh0L paragraph_paragraphStyles__5ERhb ErrorText_hide__IGhla"
+          data-testid="LabelledDateError"
+          style="--color: #df1c41; --font-size: small; --text-align: left;"
+    >
+    </span>
+  </label>
+</div>
+`;

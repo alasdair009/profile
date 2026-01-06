@@ -1,0 +1,119 @@
+@keyframes threeDRotate {
+  0%,
+  100% {
+    transform: perspective(1000px) rotateX(-18deg) rotateY(0);
+  }
+
+  25% {
+    transform: perspective(1000px) rotateX(0) rotateY(-18deg);
+  }
+
+  50% {
+    transform: perspective(1000px) rotateX(18deg) rotateY(0);
+  }
+
+  75% {
+    transform: perspective(1000px) rotateX(0) rotateY(18deg);
+  }
+}
+
+.root {
+  margin: 0 auto;
+  max-width: var(--global-decoration-max-width);
+  overflow: hidden;
+  position: relative;
+}
+
+.inner {
+  --orientation: flex-start;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: var(--global-content-max-width);
+  position: relative;
+  width: 100%;
+}
+
+.backgroundWrapper {
+  background: var(--background);
+  height: 100%;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.foregroundWrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  padding: var(--size-s16);
+  position: relative;
+  width: 100%;
+
+  &.animate {
+    --turnAmount: 0.05;
+
+    animation: threeDRotate calc(var(--animation-rhythm) * 3) infinite
+      var(--curve-linear);
+  }
+}
+
+.foregroundImage {
+  display: block;
+  height: 400px;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  width: 400px;
+}
+
+.frameBoxWrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: var(--size-s16);
+  width: 100%;
+}
+
+.copyBox {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--size-s16);
+  width: 100%;
+}
+
+.flameBox {
+  height: 100%;
+  width: 50%;
+}
+
+.flame {
+  height: 250px;
+  width: 100%;
+}
+
+@media (--breakpoint-medium) {
+  .inner {
+    flex-direction: var(--orientation);
+  }
+
+  .foregroundWrapper {
+    padding: 0;
+    width: 50%;
+  }
+
+  .frameBoxWrapper {
+    width: 50%;
+  }
+
+  .copyBox {
+    width: 50%;
+  }
+}

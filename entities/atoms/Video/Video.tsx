@@ -1,7 +1,7 @@
 import { HTMLAttributes } from "react";
 import { StaticImageData } from "next/image";
 import { prefersReducedMotion } from "@/entities";
-import styles from "./Video.module.scss";
+import styles from "./Video.module.css";
 
 type VideoProps = {
   /**

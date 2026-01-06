@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`experimental/CustomizableSelect Default smoke-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <div class="CustomizableSelect_doesNotSupport__c2emU">
+    <span class="ErrorText_root__Pfh0L paragraph_paragraphStyles__5ERhb "
+          data-testid="ErrorText"
+          style="--color: #df1c41; --font-size: small; --text-align: left;"
+    >
+      You need to enable Experimental Web Platform features in your browser to view this component -
+      <code>
+        chrome://flags/
+      </code>
+    </span>
+  </div>
+  <div class="CustomizableSelect_doesSupport__Hkzwq">
+    <select class="CustomizableSelect_root__3EdH_ input_baseInput__nbtO7">
+    </select>
+    <button class="CustomizableSelect_selectArea__iHxke">
+      <selectedcontent class="CustomizableSelect_selectedContent__0Zjqx">
+        <figure class="CustomizableSelect_figure__2ga7Q">
+          <img alt="am Logo"
+               loading="lazy"
+               width="16"
+               height="16"
+               decoding="async"
+               data-nimg="1"
+               srcset="/static/media/entities/assets/am.svg?w=16&amp;q=75 1x, /static/media/entities/assets/am.svg?w=32&amp;q=75 2x"
+               src="/static/media/entities/assets/am.svg?w=32&amp;q=75"
+               style="color: transparent;"
+          >
+        </figure>
+        <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  "
+           data-testid="Paragraph"
+           style="--font-size: 1rem; --text-align: left; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0;"
+        >
+          Option 1
+        </p>
+      </selectedcontent>
+      <span class="CustomizableSelect_dropButton__p6StT">
+      </span>
+    </button>
+    <option value="1">
+      <figure class="CustomizableSelect_figure__2ga7Q">
+        <img alt="am Logo"
+             loading="lazy"
+             width="16"
+             height="16"
+             decoding="async"
+             data-nimg="1"
+             srcset="/static/media/entities/assets/am.svg?w=16&amp;q=75 1x, /static/media/entities/assets/am.svg?w=32&amp;q=75 2x"
+             src="/static/media/entities/assets/am.svg?w=32&amp;q=75"
+             style="color: transparent;"
+        >
+      </figure>
+      <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  "
+         data-testid="Paragraph"
+         style="--font-size: 1rem; --text-align: left; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0;"
+      >
+        Option 1
+      </p>
+    </option>
+    <option value="2">
+      <figure class="CustomizableSelect_figure__2ga7Q">
+        <img alt="am Logo"
+             loading="lazy"
+             width="16"
+             height="16"
+             decoding="async"
+             data-nimg="1"
+             srcset="/static/media/entities/assets/am.svg?w=16&amp;q=75 1x, /static/media/entities/assets/am.svg?w=32&amp;q=75 2x"
+             src="/static/media/entities/assets/am.svg?w=32&amp;q=75"
+             style="color: transparent;"
+        >
+      </figure>
+      <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  "
+         data-testid="Paragraph"
+         style="--font-size: 1rem; --text-align: left; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0;"
+      >
+        Option 2
+      </p>
+    </option>
+    <option value="3">
+      <figure class="CustomizableSelect_figure__2ga7Q">
+        <img alt="am Logo"
+             loading="lazy"
+             width="16"
+             height="16"
+             decoding="async"
+             data-nimg="1"
+             srcset="/static/media/entities/assets/am.svg?w=16&amp;q=75 1x, /static/media/entities/assets/am.svg?w=32&amp;q=75 2x"
+             src="/static/media/entities/assets/am.svg?w=32&amp;q=75"
+             style="color: transparent;"
+        >
+      </figure>
+      <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  "
+         data-testid="Paragraph"
+         style="--font-size: 1rem; --text-align: left; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0;"
+      >
+        Option 3
+      </p>
+    </option>
+  </div>
+</div>
+`;

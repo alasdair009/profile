@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`molecules/LabelledRange Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <label class="LabelledRange_root__DTVBJ input_labelledStyles__yWNVm"
+         data-testid="LabelledRange"
+  >
+    <span as="span"
+          class="BaseLabel_root__XDdQ8"
+          data-testid="BaseLabel"
+    >
+      Range entry
+    </span>
+    <input class="BaseRange_root__fC_kp input_baseInput__nbtO7 "
+           data-testid="BaseRange"
+           required
+           min="0"
+           max="100"
+           type="range"
+           value="50"
+    >
+    <span class="ErrorText_root__Pfh0L paragraph_paragraphStyles__5ERhb ErrorText_hide__IGhla"
+          data-testid="LabelledRangeError"
+          style="--color: #df1c41; --font-size: small; --text-align: left;"
+    >
+    </span>
+  </label>
+</div>
+`;
+
+exports[`molecules/LabelledRange IsInvalid play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <label class="LabelledRange_root__DTVBJ input_labelledStyles__yWNVm"
+         data-testid="LabelledRange"
+  >
+    <span as="span"
+          class="BaseLabel_root__XDdQ8"
+          data-testid="BaseLabel"
+    >
+      isInvalid entry
+    </span>
+    <input class="BaseRange_root__fC_kp input_baseInput__nbtO7 undefined"
+           data-testid="BaseRange"
+           required
+           min="0"
+           max="100"
+           type="range"
+           value="50"
+    >
+    <span class="ErrorText_root__Pfh0L paragraph_paragraphStyles__5ERhb "
+          data-testid="LabelledRangeError"
+          style="--color: #df1c41; --font-size: small; --text-align: left;"
+    >
+    </span>
+  </label>
+</div>
+`;
+
+exports[`molecules/LabelledRange Required play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <label class="LabelledRange_root__DTVBJ input_labelledStyles__yWNVm"
+         data-testid="LabelledRange"
+  >
+    <span as="span"
+          class="BaseLabel_root__XDdQ8"
+          data-testid="BaseLabel"
+    >
+      Required entry
+    </span>
+    <input class="BaseRange_root__fC_kp input_baseInput__nbtO7 "
+           data-testid="BaseRange"
+           required
+           min="0"
+           max="100"
+           type="range"
+           value="50"
+    >
+    <span class="ErrorText_root__Pfh0L paragraph_paragraphStyles__5ERhb ErrorText_hide__IGhla"
+          data-testid="LabelledRangeError"
+          style="--color: #df1c41; --font-size: small; --text-align: left;"
+    >
+    </span>
+  </label>
+</div>
+`;

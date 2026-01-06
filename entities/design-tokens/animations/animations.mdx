@@ -1,6 +1,6 @@
 import { Meta, Source } from "@storybook/addon-docs/blocks";
 import { CurveViewer } from "./CurveViewer";
-import { curves } from "./curves";
+import { curves } from "../../../styles/tokens";
 
 <Meta title="Design Tokens/Animations" />
 
@@ -20,11 +20,11 @@ Transitions and animations use timing curves to define the rate of change of ani
 
 When the user has opted out of animations in their OS the website should respect this and remove any animation that it reasonably can.
 
-To ensure this is honoured I have provided the following functions:
+To ensure this is honored I have provided the following functions:
 
 <Source
   language="css"
-  code={`animation-duration: animation.animationDuration(1);`}
+  code={`animation-duration: calc(var(--animation-rhythm) * 2);`}
   dark={true}
 />
 

@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import styles from "./Footer.module.scss";
+import styles from "./Footer.module.css";
 
 type FooterProps = {} & HTMLAttributes<HTMLDivElement>;
 export function Footer({ ...rest }: FooterProps) {

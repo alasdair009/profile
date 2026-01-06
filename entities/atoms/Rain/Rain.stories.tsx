@@ -1,6 +1,6 @@
 import { Rain } from "./Rain";
 import { Meta, StoryObj } from "@storybook/nextjs";
-import { colors } from "@/entities";
+import { colors } from "@/styles/tokens";
 import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof Rain> = {

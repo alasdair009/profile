@@ -1,7 +1,7 @@
 import { Heading, HeadingProps } from "./Heading";
 import { Meta, StoryObj } from "@storybook/nextjs";
 import { expect, within } from "storybook/test";
-import { colors, Flurry } from "@/entities";
+import { colors } from "@/styles/tokens";
 
 const meta: Meta<typeof Heading> = {
   component: Heading,

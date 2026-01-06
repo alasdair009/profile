@@ -1,4 +1,93 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`organisms/SocialMediaBar Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <nav class="SocialMediaBar_root__myXaL"
+       data-testid="SocialMediaBar"
+  >
+    <a class="SocialMediaLink_root__cRU_S"
+       target="_blank"
+       rel="noopener"
+       data-testid="SocialMediaLink"
+       href="https://bsky.app/profile/alasdair009.bsky.social"
+       style="mask-image: url(&quot;static/media/entities/atoms/SocialMediaLink/assets/bluesky.svg&quot;);"
+    >
+      Bluesky
+    </a>
+    <a class="SocialMediaLink_root__cRU_S"
+       target="_blank"
+       rel="noopener"
+       data-testid="SocialMediaLink"
+       href="https://www.facebook.com/alasdair009"
+       style="mask-image: url(&quot;static/media/entities/atoms/SocialMediaLink/assets/facebook.svg&quot;);"
+    >
+      Facebook
+    </a>
+    <a class="SocialMediaLink_root__cRU_S"
+       target="_blank"
+       rel="noopener"
+       data-testid="SocialMediaLink"
+       href="https://github.com/alasdair009"
+       style="mask-image: url(&quot;static/media/entities/atoms/SocialMediaLink/assets/github.svg&quot;);"
+    >
+      GitHub
+    </a>
+    <a class="SocialMediaLink_root__cRU_S"
+       target="_blank"
+       rel="noopener"
+       data-testid="SocialMediaLink"
+       href="https://www.instagram.com/alasdair009"
+       style="mask-image: url(&quot;static/media/entities/atoms/SocialMediaLink/assets/instagram.svg&quot;);"
+    >
+      Instagram
+    </a>
+    <a class="SocialMediaLink_root__cRU_S"
+       target="_blank"
+       rel="noopener"
+       data-testid="SocialMediaLink"
+       href="https://www.linkedin.com/in/alasdairmacrae/"
+       style="mask-image: url(&quot;static/media/entities/atoms/SocialMediaLink/assets/linkedin.svg&quot;);"
+    >
+      LinkedIn
+    </a>
+    <a class="SocialMediaLink_root__cRU_S"
+       target="_blank"
+       rel="noopener"
+       data-testid="SocialMediaLink"
+       href="https://x.com/alasdair009"
+       style="mask-image: url(&quot;static/media/entities/atoms/SocialMediaLink/assets/x.svg&quot;);"
+    >
+      X
+    </a>
+    <a class="SocialMediaLink_root__cRU_S"
+       target="_blank"
+       rel="noopener"
+       data-testid="SocialMediaLink"
+       href="https://www.youtube.com/alasdair009"
+       style="mask-image: url(&quot;static/media/entities/atoms/SocialMediaLink/assets/youtube.svg&quot;);"
+    >
+      YouTube
+    </a>
+  </nav>
+</div>
+`;
 
 exports[`organisms/SocialMediaBar Default smoke-test 1`] = `
 <nav class="sc-hDcvty hXbJQq">

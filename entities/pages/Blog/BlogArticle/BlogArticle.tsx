@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import styles from "./BlogArticle.module.scss";
+import styles from "./BlogArticle.module.css";
 import { SanityClient } from "next-sanity";
 import { Article, Link } from "@/entities";
 import imageUrlBuilder from "@sanity/image-url";

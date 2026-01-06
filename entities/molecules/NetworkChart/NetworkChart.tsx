@@ -1,12 +1,13 @@
 "use client";
 import { GraphCanvas, darkTheme } from "reagraph";
 import type { GraphEdge, GraphNode, Theme, GraphSceneProps } from "reagraph";
-import { colors, ErrorText } from "@/entities";
+import { ErrorText } from "@/entities";
 import { HTMLAttributes, ReactNode, useEffect, useState } from "react";
 import { darken } from "polished";
 import { ContextMenu } from "./ContextMenu";
 import { useMounted } from "@/lib/useMounted";
-import styles from "./NetworkChart.module.scss";
+import styles from "./NetworkChart.module.css";
+import { colors } from "@/styles/tokens";
 
 type NetworkChartProps = {
   /**

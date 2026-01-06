@@ -1,6 +1,6 @@
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
-import { colors } from "@/entities";
-import styles from "./ErrorText.module.scss";
+import styles from "./ErrorText.module.css";
+import { colors } from "@/styles/tokens";
 
 type ErrorTextProps = {
   /**
@@ -29,7 +29,7 @@ export function ErrorText({
 }: ErrorTextProps) {
   return (
     <span
-      className={`${styles.root} ${shown ? "" : styles.rootHide}`}
+      className={`${styles.root} ${shown ? "" : styles.hide}`}
       data-testid={ErrorText.name}
       style={
         {

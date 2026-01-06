@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 import { siteDescription, siteName } from "@/lib/metadata";
-import { colors } from "@/entities";
+import { colors } from "@/styles/tokens";
 import screenshotNarrow from "../entities/assets/screenshot-narrow.webp";
 import screenshotWide from "../entities/assets/screenshot-wide.webp";
 import { siteOrigin } from "@/lib/domains";
@@ -14,8 +14,8 @@ export default function manifest(): MetadataRoute.Manifest {
     id: `${siteOrigin}`,
     start_url: "/",
     display: "standalone",
-    background_color: colors.blackEvil,
-    theme_color: colors.greenGrass,
+    background_color: colors.colorblackEvil,
+    theme_color: colors.colorGreenGrass,
     icons: [
       {
         src: "/icon.svg",

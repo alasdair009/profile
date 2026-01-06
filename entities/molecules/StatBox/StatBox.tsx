@@ -1,5 +1,5 @@
 import { Heading, Paragraph, Spacer } from "@/entities";
-import styles from "./StatBox.module.scss";
+import styles from "./StatBox.module.css";
 
 type StatBoxProps = {
   /**

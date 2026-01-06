@@ -1,0 +1,95 @@
+@keyframes strikeAnimation {
+  0%,
+  49%,
+  55%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes strikeGlow {
+  0%,
+  53%,
+  73%,
+  100% {
+    filter: brightness(1);
+  }
+
+  54% {
+    filter: brightness(3);
+  }
+}
+
+.root {
+  position: relative;
+}
+
+.inner {
+  display: flex;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: var(--global-decoration-max-width);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.background {
+  --frequency: 0;
+
+  animation: strikeGlow var(--frequency) linear infinite;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .background {
+    animation: none;
+  }
+}
+
+.strike {
+  --frequency: 0;
+
+  animation: strikeAnimation var(--frequency) linear infinite;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .strike {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+.content {
+  align-items: center;
+  background: linear-gradient(
+    to left,
+    transparent,
+    rgb(from var(--color-black-evil) r g b / 20%),
+    transparent
+  );
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: var(--global-content-max-width);
+  overflow: hidden;
+  padding: var(--size-s8);
+  width: 100%;
+  z-index: 1;
+}

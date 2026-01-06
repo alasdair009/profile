@@ -1,6 +1,6 @@
 "use client";
 import { HTMLAttributes, useState } from "react";
-import styles from "./BaseCheckbox.module.scss";
+import styles from "./BaseCheckbox.module.css";
 
 export type BaseCheckboxProps = {
   /**

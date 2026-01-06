@@ -1,0 +1,1107 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`templates/Error Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <section class="Container_root__485ye Error_root__11Tox"
+           data-testid="Error"
+  >
+    <br class="Spacer_root__ZPecw"
+        data-testid="Spacer"
+        style="--multiplier: 4;"
+    >
+    <h1 class="Heading_root__TRR0m Heading_h1__HdEBz   undefined"
+        data-testid="Heading"
+        style="--align: center; --line-height: 1.3em;"
+    >
+      Whoops!
+    </h1>
+    <div class="Error_inner__8tqsR">
+      <div class="Fire_root__e1ejk Error_backgroundFire__ardaH"
+           data-testid="Fire"
+           style="--baseColor: #2e9b26; --duration: 3; --numberOfParticles: 200; --particleSize: 5rem;"
+      >
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.005284202750772238; --index: 0;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.5019934882875532; --index: 1;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6675799321383238; --index: 2;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.995506888255477; --index: 3;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6857437491416931; --index: 4;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.4865390658378601; --index: 5;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.1783246397972107; --index: 6;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7610508799552917; --index: 7;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7418550848960876; --index: 8;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.016592204570770264; --index: 9;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.9972152116242796; --index: 10;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.899468969553709; --index: 11;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.31071990355849266; --index: 12;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.4246539883315563; --index: 13;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8251371048390865; --index: 14;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.18472207710146904; --index: 15;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6522486172616482; --index: 16;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.49134353920817375; --index: 17;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.9931977055966854; --index: 18;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6838223449885845; --index: 19;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.30277448520064354; --index: 20;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.3650580458343029; --index: 21;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.4828973673284054; --index: 22;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.09356237575411797; --index: 23;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7469929419457912; --index: 24;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.13309304043650627; --index: 25;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.038086798042058945; --index: 26;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.048967194044962525; --index: 27;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.826201984193176; --index: 28;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.1296105906367302; --index: 29;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.1787523254752159; --index: 30;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.29151927679777145; --index: 31;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.04162045568227768; --index: 32;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.09466665261425078; --index: 33;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8370737181976438; --index: 34;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.31865910440683365; --index: 35;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.37490589171648026; --index: 36;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.0426158681511879; --index: 37;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.45546031766571105; --index: 38;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.16399483941495419; --index: 39;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.10606078617274761; --index: 40;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.13318551145493984; --index: 41;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7119588237255812; --index: 42;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.10881098173558712; --index: 43;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.13332743756473064; --index: 44;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.792719280347228; --index: 45;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.19457706809043884; --index: 46;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.37357398867607117; --index: 47;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8677960336208344; --index: 48;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.9217328727245331; --index: 49;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.2130635678768158; --index: 50;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.3042862117290497; --index: 51;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7197137773036957; --index: 52;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.47937914729118347; --index: 53;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.4116266667842865; --index: 54;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.548589438199997; --index: 55;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.9771109521389008; --index: 56;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.1407165229320526; --index: 57;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.609724372625351; --index: 58;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.47525808215141296; --index: 59;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8725315034389496; --index: 60;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6680741012096405; --index: 61;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.39829906821250916; --index: 62;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.34173843264579773; --index: 63;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7381287515163422; --index: 64;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.10307785868644714; --index: 65;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.1710275113582611; --index: 66;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.9503986537456512; --index: 67;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7869153916835785; --index: 68;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.17290064692497253; --index: 69;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6555708348751068; --index: 70;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8047787845134735; --index: 71;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.39401349425315857; --index: 72;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.19651219248771667; --index: 73;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.9448245465755463; --index: 74;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7658407390117645; --index: 75;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8779045045375824; --index: 76;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.49092909693717957; --index: 77;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.028168529272079468; --index: 78;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.20821830653585494; --index: 79;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7869634451344609; --index: 80;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.768889918923378; --index: 81;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.47045738995075226; --index: 82;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8731073290109634; --index: 83;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.30409975349903107; --index: 84;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.9612429291009903; --index: 85;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7888241559267044; --index: 86;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.4878789335489273; --index: 87;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.11514420807361603; --index: 88;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7260179668664932; --index: 89;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.06860525906085968; --index: 90;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.07909478270448744; --index: 91;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8216896927915514; --index: 92;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.5238877199590206; --index: 93;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6989123933017254; --index: 94;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.1471942625939846; --index: 95;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.0012337379157543182; --index: 96;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.2704910303000361; --index: 97;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.9568807715550065; --index: 98;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.5425689034163952; --index: 99;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.0684020183980465; --index: 100;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.4353064412716776; --index: 101;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.325833210721612; --index: 102;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.13976849801838398; --index: 103;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7321007791906595; --index: 104;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.3958036918193102; --index: 105;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.5842002425342798; --index: 106;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.16783116944134235; --index: 107;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.44593908824026585; --index: 108;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.3205579239875078; --index: 109;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.9910262320190668; --index: 110;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.05518539249897003; --index: 111;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8061963471118361; --index: 112;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.653360690921545; --index: 113;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.5335140340030193; --index: 114;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.4878927432000637; --index: 115;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.5317639522254467; --index: 116;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.5471617244184017; --index: 117;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.3318181745707989; --index: 118;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7491535507142544; --index: 119;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.17970369383692741; --index: 120;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.0502910278737545; --index: 121;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.866415154421702; --index: 122;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.20962918549776077; --index: 123;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.35799316316843033; --index: 124;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6008463576436043; --index: 125;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6904341951012611; --index: 126;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.39493418484926224; --index: 127;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.708760179579258; --index: 128;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.354156918823719; --index: 129;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.20555458217859268; --index: 130;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.292078860104084; --index: 131;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.051678456366062164; --index: 132;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.21785146766342223; --index: 133;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.9737714426591992; --index: 134;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.3801286742091179; --index: 135;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.5825535282492638; --index: 136;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.2016500160098076; --index: 137;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.3004002198576927; --index: 138;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.2805752083659172; --index: 139;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.18823888152837753; --index: 140;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.20623301714658737; --index: 141;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6972909793257713; --index: 142;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.3835955187678337; --index: 143;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.27349843829870224; --index: 144;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.5159441158175468; --index: 145;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8138224706053734; --index: 146;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.1637074276804924; --index: 147;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.15965177863836288; --index: 148;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.270096056163311; --index: 149;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8304451331496239; --index: 150;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.4191592261195183; --index: 151;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.5757333263754845; --index: 152;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.46688830107450485; --index: 153;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6986055001616478; --index: 154;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.060992173850536346; --index: 155;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.47880484932102263; --index: 156;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.4452537354081869; --index: 157;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.9111205916851759; --index: 158;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.4328173026442528; --index: 159;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.1373646780848503; --index: 160;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8920871242880821; --index: 161;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8112763091921806; --index: 162;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8159160241484642; --index: 163;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.3599929139018059; --index: 164;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8976214155554771; --index: 165;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.19144677370786667; --index: 166;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8494110926985741; --index: 167;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.9178853556513786; --index: 168;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.9778226837515831; --index: 169;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.2291623279452324; --index: 170;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.34314747899770737; --index: 171;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7172004505991936; --index: 172;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.330963633954525; --index: 173;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.5422513410449028; --index: 174;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8389037474989891; --index: 175;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7065771147608757; --index: 176;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6567818149924278; --index: 177;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.5761789008975029; --index: 178;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.9932045564055443; --index: 179;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.16619723290205002; --index: 180;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.4767921194434166; --index: 181;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.5806093141436577; --index: 182;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.3351331576704979; --index: 183;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8718481585383415; --index: 184;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.8295992836356163; --index: 185;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.46096860617399216; --index: 186;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.39914389699697495; --index: 187;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.1339852139353752; --index: 188;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.34121038764715195; --index: 189;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.5050070211291313; --index: 190;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.23287471383810043; --index: 191;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.7117941901087761; --index: 192;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6703473553061485; --index: 193;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.9843615218997002; --index: 194;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.27995964139699936; --index: 195;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6022538468241692; --index: 196;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.32875945419073105; --index: 197;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6311182901263237; --index: 198;"
+        >
+        </span>
+        <span class="Fire_ember__uWy3w"
+              data-testid="FireEmber"
+              style="--animationDelay: 0.6378413066267967; --index: 199;"
+        >
+        </span>
+      </div>
+      <div class="Error_maskWrapper__CfONm">
+        <div class="TextMask_root__4_JDg Error_errorTextMask__cnJkH"
+             data-testid="TextMask"
+             style="--maskFill: rgba(0,0,0,0.7);"
+        >
+          <div class="TextMask_inner__p8x2X">
+            <svg class="TextMask_svg__c_EgD"
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewbox="0 0 100 100"
+            >
+              <defs>
+                <mask id="mask"
+                      x="0"
+                      y="0"
+                >
+                  <rect x="0"
+                        y="0"
+                        width="100"
+                        height="100"
+                        fill="white"
+                  >
+                  </rect>
+                  <text class="TextMask_text__Sper_"
+                        x="50"
+                        y="50"
+                  >
+                    404
+                  </text>
+                </mask>
+              </defs>
+              <rect class="TextMask_rect__CbsdA"
+                    x="0"
+                    y="0"
+                    height="100"
+                    width="100"
+              >
+              </rect>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  "
+       data-testid="ErrorText"
+       style="--font-size: 1rem; --text-align: center; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0 auto 1.5rem;"
+    >
+      Could not find the page you were looking
+    </p>
+    <br class="Spacer_root__ZPecw"
+        data-testid="Spacer"
+        style="--multiplier: 1;"
+    >
+    <a class="undefined Link_root__zGNxh  "
+       target="_self"
+       data-testid="Link"
+       href="/"
+       style="margin: 0px auto; --line-height: 1.3em;"
+    >
+      Return Home
+    </a>
+    <br class="Spacer_root__ZPecw"
+        data-testid="Spacer"
+        style="--multiplier: 8;"
+    >
+  </section>
+</div>
+`;

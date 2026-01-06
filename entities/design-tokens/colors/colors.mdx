@@ -1,34 +1,16 @@
 import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
-import { colorsBrand, colorsGrey } from "./colors";
-import { CodeBlock } from "../../molecules/CodeBlock";
+import { colors } from "../../../styles/tokens";
 
 <Meta title="Design Tokens/Colors" />
 
 # Colors
 
-Colours used throughout the site are available as SCSS variables and Javascript objects.
+Colours used throughout the site are available as CSS variables and Javascript objects.
 
 <ColorPalette>
   <ColorItem
-    title="Greys"
-    subtitle="Grey colours used mostly for background and copy."
-    colors={colorsGrey}
-  />
-  <ColorItem
     title="Brand"
     subtitle="Main brand decorative colours."
-    colors={colorsBrand}
+    colors={colors}
   />
 </ColorPalette>
-
-<CodeBlock
-  language="scss"
-  code={`@use "styles/colors";\n\n.element{\n   background: colors.$colorGreenGrass\n}`}
-  description="A colour used in scss"
-/>
-
-<CodeBlock
-  language="typescript"
-  code={`import { colors } from "@entities";\n\nconst style: CSSProperties = {\n   background: colors.greenGrass,\n};`}
-  description="A colour used in ts"
-/>

@@ -5,10 +5,10 @@ import {
   HTMLAttributes,
   ReactNode,
 } from "react";
-import { colors, HeadingTypes, TextAlignment } from "@/entities";
+import { colors, lineHeights } from "@/styles/tokens";
+import type { HeadingTypes, TextAlignment } from "@/styles/styles.types";
 import { Property } from "csstype";
-import styles from "./Heading.module.scss";
-import { lineHeights } from "@/entities/design-tokens/typography/typography";
+import styles from "./Heading.module.css";
 
 export type HeadingProps<T extends ElementType> = {
   /**
@@ -57,7 +57,7 @@ export function Heading<T extends ElementType = "h1">({
   level = "h1",
   as,
   align = "left",
-  color = colors.whiteGhost,
+  color = colors.colorWhiteGhost,
   textShadow = false,
   lines,
   children,
@@ -68,7 +68,7 @@ export function Heading<T extends ElementType = "h1">({
   const Root = as ? as : level;
   return (
     <Root
-      className={`${styles.root} ${headerClasses[level]} ${lines ? styles.rootClamp : ""} ${textShadow ? styles.Shadow : ""} ${className}`}
+      className={`${styles.root} ${headerClasses[level]} ${lines ? styles.clamp : ""} ${textShadow ? styles.Shadow : ""} ${className}`}
       data-testid={Heading.displayName}
       style={
         {

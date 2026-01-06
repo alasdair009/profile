@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import styles from "./AboutMe.module.scss";
+import styles from "./AboutMe.module.css";
 import {
   BlockQuote,
   ContactForm,

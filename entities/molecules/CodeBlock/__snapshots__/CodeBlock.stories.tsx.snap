@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`molecules/CodeBlock Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <section class="CodeBlock_root__HLpSt undefined"
+           data-testid="CodeBlock"
+  >
+    <div class="CodeBlock_codeWrapper__zp0NN">
+      <pre style="color: rgb(197, 200, 198); text-shadow: rgba(0, 0, 0, 0.3) 0px 1px; font-family: Inconsolata, Monaco, Consolas, &quot;Courier New&quot;, Courier, monospace; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 4; hyphens: none; padding: 1em; margin: 0.5em 0px; overflow: auto; border-radius: 0.3em; background: rgb(29, 31, 33); max-height: 512px;">
+        <code class="language-typescript"
+              style="white-space: pre; color: rgb(197, 200, 198); text-shadow: rgba(0, 0, 0, 0.3) 0px 1px; font-family: Inconsolata, Monaco, Consolas, &quot;Courier New&quot;, Courier, monospace; direction: ltr; text-align: left; word-spacing: normal; word-break: normal; line-height: 1.5; tab-size: 4; hyphens: none;"
+        >
+          <span class="token"
+                style="color: rgb(150, 203, 254);"
+          >
+            const
+          </span>
+          <span>
+            a
+          </span>
+          <span class="token"
+                style="color: rgb(237, 237, 237);"
+          >
+            =
+          </span>
+          <span>
+          </span>
+          <span class="token"
+                style="color: rgb(255, 115, 253);"
+          >
+            1
+          </span>
+          <span class="token"
+                style="color: rgb(197, 200, 198);"
+          >
+            ;
+          </span>
+        </code>
+      </pre>
+    </div>
+    <h2 class="Heading_root__TRR0m Heading_h6__qYhGh   CodeBlock_heading__oyVOQ"
+        data-testid="Heading"
+        style="--align: center; --line-height: 1.3em;"
+    >
+      An example of source code.
+    </h2>
+  </section>
+</div>
+`;

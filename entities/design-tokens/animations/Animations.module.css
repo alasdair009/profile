@@ -1,0 +1,49 @@
+@keyframes moveAnimation {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.curveViewer {
+  display: flex;
+  gap: var(--size-s8);
+  margin-bottom: var(--size-s32);
+}
+
+.curveWrapper {
+  border: 1px solid var(--color-white-ghost);
+  color: var(--color-white-ghost);
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 147px;
+  padding: var(--size-s8);
+}
+
+.svgWrapper {
+  --curve: "";
+  --offset-path: "";
+
+  position: relative;
+
+  &::after {
+    animation: moveAnimation 2s infinite alternate var(--curve);
+    aspect-ratio: 1;
+    background: var(--color-white-ghost);
+    border-radius: var(--radii-round);
+    content: "";
+    left: 0;
+    offset-path: var(--offset-path);
+    position: absolute;
+    width: var(--size-s8);
+  }
+}
+
+.path {
+  fill: transparent;
+  stroke: var(--color-green-grass);
+  stroke-width: 3px;
+}

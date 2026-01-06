@@ -1,0 +1,20 @@
+.root {
+  aspect-ratio: 1;
+  border-radius: var(--radii-round);
+  display: inline-block;
+  min-height: var(--size-s40);
+  min-width: var(--size-s40);
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    border-radius: var(--radii-round);
+    box-shadow: var(--size-s16) var(--size-s8) 0 0 var(--color-white-ghost);
+    content: "";
+    height: 100%;
+    left: calc(var(--size-s16) * -1);
+    position: absolute;
+    top: calc(var(--size-s8) * -1);
+    width: 100%;
+  }
+}

@@ -1,4 +1,29 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`atoms/HorizontalRule Curve play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <hr class="HorizontalRule_root__Dymi3  HorizontalRule_curve__Db3Yo "
+      data-testid="HorizontalRule"
+  >
+</div>
+`;
 
 exports[`atoms/HorizontalRule Decoration play-test 1`] = `
 <hr data-testid="HorizontalRule"

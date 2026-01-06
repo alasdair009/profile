@@ -1,18 +1,20 @@
 import { HTMLAttributes } from "react";
-import styles from "./CodeBlock.module.scss";
+import styles from "./CodeBlock.module.css";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import typescript from "react-syntax-highlighter/dist/esm/languages/prism/typescript";
 import tsx from "react-syntax-highlighter/dist/esm/languages/prism/tsx";
+import css from "react-syntax-highlighter/dist/esm/languages/prism/css";
 import scss from "react-syntax-highlighter/dist/esm/languages/prism/scss";
 import prism from "react-syntax-highlighter/dist/esm/styles/prism/atom-dark";
 import { Heading } from "@/entities";
 
 type CodeBlockProps = {
-  language: "scss" | "typescript" | "tsx";
+  language: "css" | "scss" | "typescript" | "tsx";
   code: string;
   description: string;
 } & HTMLAttributes<HTMLDivElement>;
 
+SyntaxHighlighter.registerLanguage("css", css);
 SyntaxHighlighter.registerLanguage("scss", scss);
 SyntaxHighlighter.registerLanguage("tsx", tsx);
 SyntaxHighlighter.registerLanguage("typescript", typescript);

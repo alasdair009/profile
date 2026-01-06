@@ -1,4 +1,64 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`atoms/SocialMediaLink Bluesky play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <a class="SocialMediaLink_root__cRU_S"
+     target="_blank"
+     rel="noopener"
+     data-testid="SocialMediaLink"
+     href="https://bsky.app/profile/alasdair009.bsky.social"
+     style="mask-image: url(&quot;static/media/entities/atoms/SocialMediaLink/assets/bluesky.svg&quot;);"
+  >
+  </a>
+</div>
+`;
+
+exports[`atoms/SocialMediaLink Facebook play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <a class="SocialMediaLink_root__cRU_S"
+     target="_blank"
+     rel="noopener"
+     data-testid="SocialMediaLink"
+     href="https://www.facebook.com/alasdair009"
+     style="mask-image: url(&quot;static/media/entities/atoms/SocialMediaLink/assets/facebook.svg&quot;);"
+  >
+  </a>
+</div>
+`;
 
 exports[`atoms/SocialMediaLink GitHub play-test 1`] = `
 <a target="_blank"
@@ -8,6 +68,36 @@ exports[`atoms/SocialMediaLink GitHub play-test 1`] = `
    href="https://github.com/alasdair009"
 >
 </a>
+`;
+
+exports[`atoms/SocialMediaLink Instagram play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <a class="SocialMediaLink_root__cRU_S"
+     target="_blank"
+     rel="noopener"
+     data-testid="SocialMediaLink"
+     href="https://www.instagram.com/alasdair009"
+     style="mask-image: url(&quot;static/media/entities/atoms/SocialMediaLink/assets/instagram.svg&quot;);"
+  >
+  </a>
+</div>
 `;
 
 exports[`atoms/SocialMediaLink LinkedIn play-test 1`] = `
@@ -28,4 +118,34 @@ exports[`atoms/SocialMediaLink X play-test 1`] = `
    href="https://twitter.com/alasdair009"
 >
 </a>
+`;
+
+exports[`atoms/SocialMediaLink YouTube play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <a class="SocialMediaLink_root__cRU_S"
+     target="_blank"
+     rel="noopener"
+     data-testid="SocialMediaLink"
+     href="https://www.youtube.com/alasdair009"
+     style="mask-image: url(&quot;static/media/entities/atoms/SocialMediaLink/assets/youtube.svg&quot;);"
+  >
+  </a>
+</div>
 `;

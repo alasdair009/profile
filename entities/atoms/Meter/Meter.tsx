@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import styles from "./Meter.module.scss";
+import styles from "./Meter.module.css";
 
 type MeterProps = {
   /**

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`organisms/Timeline/TimelineElement Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <div class="vertical-timeline-element"
+       data-testid="TimelineElement"
+  >
+    <div id
+         class="vertical-timeline-element"
+    >
+      <span class="vertical-timeline-element-icon bounce-in">
+        <img alt="first logo"
+             loading="lazy"
+             width="46"
+             height="42"
+             decoding="async"
+             data-nimg="1"
+             class="TimelineElement_logo___ayQu"
+             srcset="/static/media/entities/assets/jagex-logo.svg?w=48&amp;q=75 1x, /static/media/entities/assets/jagex-logo.svg?w=96&amp;q=75 2x"
+             src="/static/media/entities/assets/jagex-logo.svg?w=96&amp;q=75"
+             style="color: transparent;"
+        >
+      </span>
+      <div class="vertical-timeline-element-content bounce-in">
+        <div class="vertical-timeline-element-content-arrow">
+        </div>
+        abc
+        <span class="vertical-timeline-element-date">
+          2011 - present
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

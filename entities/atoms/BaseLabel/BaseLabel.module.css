@@ -1,0 +1,6 @@
+.root {
+  display: block;
+  max-width: var(--global-input-max-width);
+  text-align: center;
+  width: 100%;
+}

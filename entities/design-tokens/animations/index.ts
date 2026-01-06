@@ -1,2 +1,2 @@
-export { curves } from "./curves";
+// export { curves } from "./curves";
 export { prefersReducedMotion } from "./motion";

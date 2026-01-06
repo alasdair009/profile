@@ -2,7 +2,7 @@
 import { CSSProperties, HTMLAttributes, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { prefersReducedMotion } from "@/entities";
-import styles from "./ScoreCounter.module.scss";
+import styles from "./ScoreCounter.module.css";
 import { Progress } from "../../atoms/Progress";
 
 type ScoreCounterProps = {

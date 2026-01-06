@@ -1,0 +1,30 @@
+.root {
+  appearance: none;
+  background-color: color-mix(in srgb, var(--color-green-grass) 50%, black 50%);
+  border-radius: var(--radii-r12);
+  cursor: pointer;
+  height: var(--size-s24);
+  min-width: var(--size-s48);
+  position: relative;
+  transition: background-color calc(0.1 * var(--animation-rhythm)) linear;
+
+  &::before {
+    aspect-ratio: 1;
+    background-color: var(--color-white-ghost);
+    border-radius: var(--radii-round);
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: left calc(0.1 * var(--animation-rhythm)) linear;
+  }
+
+  &:checked {
+    background: var(--color-green-grass);
+
+    &::before {
+      left: calc(100% - (var(--size-s48) / 2));
+    }
+  }
+}

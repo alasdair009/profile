@@ -62,7 +62,7 @@ export const IsInvalid: StoryObj<typeof LabelledRange> = {
     await canvas.findByTestId(BaseRange.name);
 
     await expect(canvas.getByTestId(BaseRange.name)).toHaveStyle(
-      "background-color: rgba(223,28,65,0.15)"
+      "background-color: color(srgb 0.87451 0.109804 0.254902 / 0.15)"
     );
   },
 };

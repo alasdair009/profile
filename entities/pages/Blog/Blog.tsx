@@ -1,6 +1,6 @@
 import { BlogList, Heading, Paragraph } from "@/entities";
 import { HTMLAttributes, Suspense } from "react";
-import styles from "./Blog.module.scss";
+import styles from "./Blog.module.css";
 import { SanityClient } from "next-sanity";
 
 type BlogProps = {

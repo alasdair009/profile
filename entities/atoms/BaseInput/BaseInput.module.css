@@ -1,0 +1,7 @@
+.root {
+  composes: baseInput from "../../../styles/input.module.css";
+}
+
+.invalid {
+  composes: invalid from "../../../styles/input.module.css";
+}

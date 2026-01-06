@@ -1,0 +1,32 @@
+@import url("_animation.css");
+@import url("_generated.css");
+
+:root {
+  composes: scrollbarStyles from "scrollBar.module.css";
+}
+
+html,
+body {
+  background: var(--color-black-evil);
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  color: var(--color-white-ghost);
+}
+
+body {
+  font-family: var(--font-family-font-inter);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}

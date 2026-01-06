@@ -1,7 +1,7 @@
 import { defaultBaseColor, Flame } from "./Flame";
 import { Meta, StoryObj } from "@storybook/nextjs";
 import { expect, within } from "storybook/test";
-import { colors } from "@/entities";
+import { colors } from "@/styles/tokens";
 
 const meta: Meta<typeof Flame> = {
   component: Flame,

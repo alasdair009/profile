@@ -1,0 +1,9 @@
+.root {
+  align-items: center;
+  display: flex;
+  gap: var(--size-s8);
+  justify-content: center;
+  margin: 0 auto;
+  max-width: var(--global-content-max-width);
+  width: 100%;
+}

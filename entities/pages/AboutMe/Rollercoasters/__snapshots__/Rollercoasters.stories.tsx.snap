@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`pages/AboutMe/Rollercoasters Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <div data-testid="Rollercoasters">
+    <h1 class="Heading_root__TRR0m Heading_h1__HdEBz   undefined"
+        data-testid="Heading"
+        style="--align: left; --line-height: 1.3em;"
+    >
+      Rollercoasters
+    </h1>
+    <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  "
+       data-testid="Paragraph"
+       style="--font-size: 1rem; --text-align: left; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0 auto 1.5rem;"
+    >
+      I love themeparks and naturally therefore also rollercoasters. The page serves as a history of my 1 unique rollerocaster experiences around the world.
+    </p>
+    <div class="Rollercoasters_statBoxWrapper___Ir0B">
+      <article class="StatBox_root__ceEI5"
+               data-testid="StatBox"
+      >
+        <h2 class="Heading_root__TRR0m Heading_h4__ngKPA   undefined"
+            data-testid="Heading"
+            style="--align: center; --line-height: 1.3em;"
+        >
+          Fastest
+        </h2>
+        <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  "
+           data-testid="Paragraph"
+           style="--font-size: 1rem; --text-align: center; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0 auto 1.5rem;"
+        >
+          Rollercoaster 1
+        </p>
+        <br class="Spacer_root__ZPecw"
+            data-testid="Spacer"
+            style="--multiplier: 1;"
+        >
+        <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  "
+           data-testid="Paragraph"
+           style="--font-size: 1rem; --text-align: center; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0 auto 1.5rem;"
+        >
+          100km/h
+        </p>
+      </article>
+      <article class="StatBox_root__ceEI5"
+               data-testid="StatBox"
+      >
+        <h2 class="Heading_root__TRR0m Heading_h4__ngKPA   undefined"
+            data-testid="Heading"
+            style="--align: center; --line-height: 1.3em;"
+        >
+          Tallest
+        </h2>
+        <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  "
+           data-testid="Paragraph"
+           style="--font-size: 1rem; --text-align: center; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0 auto 1.5rem;"
+        >
+          Rollercoaster 1
+        </p>
+        <br class="Spacer_root__ZPecw"
+            data-testid="Spacer"
+            style="--multiplier: 1;"
+        >
+        <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  "
+           data-testid="Paragraph"
+           style="--font-size: 1rem; --text-align: center; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0 auto 1.5rem;"
+        >
+          100m
+        </p>
+      </article>
+      <article class="StatBox_root__ceEI5"
+               data-testid="StatBox"
+      >
+        <h2 class="Heading_root__TRR0m Heading_h4__ngKPA   undefined"
+            data-testid="Heading"
+            style="--align: center; --line-height: 1.3em;"
+        >
+          Longest
+        </h2>
+        <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  "
+           data-testid="Paragraph"
+           style="--font-size: 1rem; --text-align: center; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0 auto 1.5rem;"
+        >
+          Rollercoaster 1
+        </p>
+        <br class="Spacer_root__ZPecw"
+            data-testid="Spacer"
+            style="--multiplier: 1;"
+        >
+        <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  "
+           data-testid="Paragraph"
+           style="--font-size: 1rem; --text-align: center; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0 auto 1.5rem;"
+        >
+          1000m
+        </p>
+      </article>
+      <article class="StatBox_root__ceEI5"
+               data-testid="StatBox"
+      >
+        <h2 class="Heading_root__TRR0m Heading_h4__ngKPA   undefined"
+            data-testid="Heading"
+            style="--align: center; --line-height: 1.3em;"
+        >
+          Most Inversions
+        </h2>
+        <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  "
+           data-testid="Paragraph"
+           style="--font-size: 1rem; --text-align: center; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0 auto 1.5rem;"
+        >
+          Rollercoaster 1
+        </p>
+        <br class="Spacer_root__ZPecw"
+            data-testid="Spacer"
+            style="--multiplier: 1;"
+        >
+        <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  "
+           data-testid="Paragraph"
+           style="--font-size: 1rem; --text-align: center; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0 auto 1.5rem;"
+        >
+          10m
+        </p>
+      </article>
+    </div>
+    <table class="Table_root__zYs_0 undefined"
+           data-testid="Table"
+           style="--table-break: medium;"
+    >
+      <thead>
+        <tr>
+          <td>
+            Rollercoaster
+          </td>
+          <td>
+            Theme park
+          </td>
+          <td>
+            Country
+          </td>
+          <td>
+            Year first ridden
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-title="title">
+            Rollercoaster 1
+          </td>
+          <td data-title="theme park">
+            <span>
+              Forest Frontiers
+            </span>
+            <figure class="Rollercoasters_themeParkLogoFigure__bzBie">
+              <img alt="Forest Frontiers logo"
+                   loading="lazy"
+                   width="24"
+                   height="24"
+                   decoding="async"
+                   data-nimg="1"
+                   class="Rollercoasters_themeParkLogoImage__GeFk6"
+                   srcset="https://cdn.sanity.io/images/undefined/undefined/Tb9Ew8CXIwaY6R1kjMvI0uRR-2000x3000.jpg?w=32&amp;q=75 1x, https://cdn.sanity.io/images/undefined/undefined/Tb9Ew8CXIwaY6R1kjMvI0uRR-2000x3000.jpg?w=48&amp;q=75 2x"
+                   src="https://cdn.sanity.io/images/undefined/undefined/Tb9Ew8CXIwaY6R1kjMvI0uRR-2000x3000.jpg?w=48&amp;q=75"
+                   style
+              >
+            </figure>
+          </td>
+          <td data-title="country">
+            uk
+          </td>
+          <td data-title="first ridden">
+            1999
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

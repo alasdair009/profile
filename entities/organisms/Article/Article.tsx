@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from "react";
 import { Heading, Spacer } from "@/entities";
-import styles from "./Article.module.scss";
+import styles from "./Article.module.css";
 import Image from "next/image";
 
 type ArticleProps = {

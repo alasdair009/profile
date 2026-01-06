@@ -1,6 +1,7 @@
 import { HTMLAttributes } from "react";
-import { colors, Heading, Link, Paragraph } from "@/entities";
-import styles from "./Splash.module.scss";
+import { Heading, Link, Paragraph } from "@/entities";
+import { colors } from "@/styles/tokens";
+import styles from "./Splash.module.css";
 
 export function Splash({ ...rest }: HTMLAttributes<HTMLDivElement>) {
   return (

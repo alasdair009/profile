@@ -1,0 +1,40 @@
+.root {
+  align-items: center;
+  background: var(--color-black-evil);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--size-s48));
+  min-height: 400px;
+  position: relative;
+}
+
+.inner {
+  flex: 1;
+  margin: 0 auto;
+  max-width: var(--size-s512);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.backgroundFire {
+  top: 40%;
+  height: 60%;
+  left: 0;
+  position: absolute;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.maskWrapper {
+  display: flex;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.errorTextMask {
+  display: flex;
+  left: 0;
+}

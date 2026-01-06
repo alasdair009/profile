@@ -3,7 +3,7 @@ import { Card } from "@/entities";
 import imageUrlBuilder from "@sanity/image-url";
 import { GET_ALL_POSTS, Post } from "@/lib/sanity/queries";
 import { SanityClient } from "next-sanity";
-import styles from "./BlogList.module.scss";
+import styles from "./BlogList.module.css";
 
 type BlogListProps = {
   sanityClient: SanityClient;

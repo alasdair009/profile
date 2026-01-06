@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import styles from "./Moon.module.scss";
+import styles from "./Moon.module.css";
 
 type MoonProps = {} & HTMLAttributes<HTMLDivElement>;
 
