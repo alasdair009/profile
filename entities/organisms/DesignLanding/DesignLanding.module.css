@@ -26,23 +26,24 @@
 }
 
 .root {
-  box-shadow: 0 0 var(--size-24) var(--size-8) var(--colorblackEvil);
+  box-shadow: 0 0 var(--size-s24) var(--size-s8) var(--color-black-evil);
 }
 
 .inner {
   align-items: center;
-  background: var(--colorblackEvil);
+  background: var(--color-black-evil);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: var(--size-512);
-  padding: var(--size-16);
+  min-height: var(--size-s512);
+  padding: var(--size-s16);
   position: relative;
   overflow: hidden;
   width: 100%;
 
   &::after {
-    box-shadow: inset 0 0 var(--size-32) var(--size-16) var(--colorblackEvil);
+    box-shadow: inset 0 0 var(--size-s32) var(--size-s16)
+      var(--color-black-evil);
     content: "";
     height: 100%;
     pointer-events: none;

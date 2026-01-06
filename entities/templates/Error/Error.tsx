@@ -1,6 +1,5 @@
 import { HTMLAttributes } from "react";
 import {
-  colors,
   Container,
   Fire,
   Heading,
@@ -10,6 +9,7 @@ import {
 } from "@/entities";
 import { rgba } from "polished";
 import styles from "./Error.module.css";
+import { colors } from "@/styles/tokens";
 
 type ErrorProps = {
   errorCode: 404 | 500;

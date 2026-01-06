@@ -5,11 +5,8 @@ import {
   HTMLAttributes,
   ReactNode,
 } from "react";
-import { colors, lineHeights } from "../../../app/styles/tokens";
-import type {
-  HeadingTypes,
-  TextAlignment,
-} from "../../../app/styles/styles.types";
+import { colors, lineHeights } from "@/styles/tokens";
+import type { HeadingTypes, TextAlignment } from "@/styles/styles.types";
 import { Property } from "csstype";
 import styles from "./Heading.module.css";
 

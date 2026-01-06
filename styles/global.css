@@ -1,8 +1,8 @@
-@import url("./_animation.css");
-@import url("./_generated.css");
+@import url("_animation.css");
+@import url("_generated.css");
 
 :root {
-  composes: scrollbarStyles from "./scrollBar.module.css";
+  composes: scrollbarStyles from "scrollBar.module.css";
 }
 
 html,

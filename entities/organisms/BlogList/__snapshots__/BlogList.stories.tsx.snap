@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`organisms/BlogList Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <div class="BlogList_root__GodJy"
+       data-testid="BlogList"
+  >
+    <article class="Card_root__fuSkx"
+             data-testid="Card"
+    >
+      <a class="Card_cardLink__JddJ2 Link_root__zGNxh  "
+         target="_self"
+         data-testid="CardLink"
+         href="/blog/hello-sanity"
+         style="--line-height: 1.3em;"
+      >
+        <figure class="Card_figure__T1MHv">
+          <img alt="Image for the Hello Sanity article"
+               loading="lazy"
+               decoding="async"
+               data-nimg="fill"
+               class="Card_cardImage___aBeN"
+               sizes="(max-width: var(--breakpoints-xsmall)) 19.5rem, 15rem"
+               srcset="https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=16&amp;q=75 16w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=32&amp;q=75 32w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=48&amp;q=75 48w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=64&amp;q=75 64w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=96&amp;q=75 96w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=128&amp;q=75 128w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=256&amp;q=75 256w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=384&amp;q=75 384w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=640&amp;q=75 640w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=750&amp;q=75 750w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=828&amp;q=75 828w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=1080&amp;q=75 1080w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=1200&amp;q=75 1200w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=1920&amp;q=75 1920w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=2048&amp;q=75 2048w, https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=3840&amp;q=75 3840w"
+               src="https://cdn.sanity.io/images/demo/production/abc123-1200x800.jpg?w=3840&amp;q=75"
+               style="position: absolute; height: 100%; width: 100%; inset: 0px;"
+          >
+        </figure>
+        <div>
+          <h2 class="Heading_root__TRR0m Heading_h3__iI8ZP Heading_clamp___rmuv lineClamp_lineClamp__o4IkZ  undefined"
+              data-testid="Heading"
+              style="--align: center; --line-height: 1.3em; --number-of-lines: 3;"
+          >
+            Hello Sanity
+          </h2>
+          <time class="Card_date__VrbM5"
+                datetime="2024-02-10T12:00:00.000Z"
+          >
+            10 Feb 2024
+          </time>
+        </div>
+      </a>
+    </article>
+    <article class="Card_root__fuSkx"
+             data-testid="Card"
+    >
+      <a class="Card_cardLink__JddJ2 Link_root__zGNxh  "
+         target="_self"
+         data-testid="CardLink"
+         href="/blog/rsc-in-storybook"
+         style="--line-height: 1.3em;"
+      >
+        <figure class="Card_figure__T1MHv">
+          <img alt="Image for the RSC in Storybook article"
+               loading="lazy"
+               decoding="async"
+               data-nimg="fill"
+               class="Card_cardImage___aBeN"
+               sizes="(max-width: var(--breakpoints-xsmall)) 19.5rem, 15rem"
+               srcset="https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=16&amp;q=75 16w, https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=32&amp;q=75 32w, https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=48&amp;q=75 48w, https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=64&amp;q=75 64w, https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=96&amp;q=75 96w, https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=128&amp;q=75 128w, https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=256&amp;q=75 256w, https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=384&amp;q=75 384w, https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=640&amp;q=75 640w, https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=750&amp;q=75 750w, https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=828&amp;q=75 828w, https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=1080&amp;q=75 1080w, https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=1200&amp;q=75 1200w, https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=1920&amp;q=75 1920w, https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=2048&amp;q=75 2048w, https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=3840&amp;q=75 3840w"
+               src="https://cdn.sanity.io/images/demo/production/def456-1600x900.png?w=3840&amp;q=75"
+               style="position: absolute; height: 100%; width: 100%; inset: 0px;"
+          >
+        </figure>
+        <div>
+          <h2 class="Heading_root__TRR0m Heading_h3__iI8ZP Heading_clamp___rmuv lineClamp_lineClamp__o4IkZ  undefined"
+              data-testid="Heading"
+              style="--align: center; --line-height: 1.3em; --number-of-lines: 3;"
+          >
+            RSC in Storybook
+          </h2>
+          <time class="Card_date__VrbM5"
+                datetime="2024-03-05T09:00:00.000Z"
+          >
+            5 Mar 2024
+          </time>
+        </div>
+      </a>
+    </article>
+  </div>
+</div>
+`;

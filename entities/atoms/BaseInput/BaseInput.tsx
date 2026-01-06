@@ -23,7 +23,7 @@ export function BaseInput({ isInvalid = false, ...rest }: BaseInputProps) {
 
   return (
     <input
-      className={`${styles.root} ${isInvalidState ? styles.rootStateInvalid : ""}`}
+      className={`${styles.root} ${isInvalidState ? styles.invalid : ""}`}
       onChange={() => handleOnChange()}
       data-testid={BaseInput.name}
       {...rest}

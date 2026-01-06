@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`organisms/WeatherStation/Plaque Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <article class="Plaque_root__99njo  undefined"
+           data-testid="Plaque"
+  >
+    <dl class="Plaque_dl__tnhQ6">
+      <dt class="Plaque_dt___OEV5">
+        Rain:
+      </dt>
+      <dd class="Plaque_dd__1VBen">
+        <sub>
+          mm
+        </sub>
+      </dd>
+      <dt class="Plaque_dt___OEV5">
+        Wind:
+      </dt>
+      <dd class="Plaque_dd__1VBen">
+        <sub>
+          kph
+        </sub>
+        &nbsp;()
+      </dd>
+      <dt class="Plaque_dt___OEV5">
+        Pressure:
+      </dt>
+      <dd class="Plaque_dd__1VBen">
+        <sub>
+          mbar
+        </sub>
+      </dd>
+      <dt class="Plaque_dt___OEV5">
+        Sun angle:
+      </dt>
+      <dd class="Plaque_dd__1VBen">
+        <sub>
+          °
+        </sub>
+      </dd>
+      <dt class="Plaque_dt___OEV5">
+        Cloud cover:
+      </dt>
+      <dd class="Plaque_dd__1VBen">
+        %
+      </dd>
+      <dt class="Plaque_dt___OEV5">
+        Last updated:
+      </dt>
+      <dd class="Plaque_dd__1VBen">
+        -
+      </dd>
+    </dl>
+  </article>
+</div>
+`;

@@ -1,7 +1,7 @@
 .root {
   display: block;
   margin: 0 auto;
-  max-width: var(--globalDecorationMaxWidth);
+  max-width: var(--global-decoration-max-width);
   position: relative;
   width: 100%;
 }
@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  max-width: var(--globalContentMaxWidth);
+  max-width: var(--global-content-max-width);
 }
 
 .house {
@@ -30,26 +30,26 @@
   border-style: solid;
   border-width: 5vmin;
   box-shadow:
-    0 0 5px 0 rgb(from var(--colorWhiteGhost) r g b / 25%) inset,
-    0 5px 10px 5px rgb(from var(--colorblackEvil) r g b / 25%);
+    0 0 5px 0 rgb(from var(--color-white-ghost) r g b / 25%) inset,
+    0 5px 10px 5px rgb(from var(--color-black-evil) r g b / 25%);
   display: flex;
   margin: 10vh 10vw 5vh;
   position: relative;
 
   &::before {
-    border-radius: var(--radii-2);
+    border-radius: var(--radii-r2);
     inset: -2vmin;
-    box-shadow: 0 var(--size-2) 5px 0
-      rgb(from var(--colorblackEvil) r g b / 25%) inset;
+    box-shadow: 0 var(--size-s2) 5px 0
+      rgb(from var(--color-black-evil) r g b / 25%) inset;
     content: "";
     position: absolute;
   }
 
   &::after {
-    border-radius: var(--radii-2);
+    border-radius: var(--radii-r2);
     inset: -2.5vmin;
-    box-shadow: 0 var(--size-2) 5px 0
-      rgb(from var(--colorblackEvil) r g b / 25%);
+    box-shadow: 0 var(--size-s2) 5px 0
+      rgb(from var(--color-black-evil) r g b / 25%);
     content: "";
     position: absolute;
   }
@@ -59,11 +59,11 @@
   --right: 0;
   --top: 0;
 
-  height: var(--size-64);
+  height: var(--size-s64);
   position: absolute;
   right: var(--right);
   top: var(--top);
-  width: var(--size-64);
+  width: var(--size-s64);
 }
 
 .sunAnchor {
@@ -79,7 +79,7 @@
 }
 
 .sun {
-  left: var(--size-24);
+  left: var(--size-s24);
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -87,7 +87,7 @@
 
 .moon {
   position: absolute !important;
-  right: var(--size-8);
+  right: var(--size-s8);
   top: 50%;
   transform: translate(-50%, -50%);
 }
@@ -105,11 +105,11 @@
   --xPos: 0;
   --yPos: 0;
 
-  height: var(--size-512);
+  height: var(--size-s512);
   left: var(--xPos);
   opacity: 0.65;
   position: absolute;
   top: var(--yPos);
   transform: translate(-50%, -50%) scale(0.2);
-  width: var(--size-1024);
+  width: var(--size-s1024);
 }

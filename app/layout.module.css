@@ -1,3 +1,3 @@
 .main {
-  min-height: calc(100vh - var(--size-48) - var(--size-128));
+  min-height: calc(100vh - var(--size-s8) - var(--size-s128));
 }

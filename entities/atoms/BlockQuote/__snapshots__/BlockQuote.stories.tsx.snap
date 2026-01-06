@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`atoms/BlockQuote Default play-test 1`] = `
 <blockquote data-testid="BlockQuote"
@@ -6,4 +6,58 @@ exports[`atoms/BlockQuote Default play-test 1`] = `
 >
   Some cool quote
 </blockquote>
+`;
+
+exports[`atoms/BlockQuote WithCite play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <div class="BlockQuote_root__kcyJe "
+       data-testid="BlockQuote"
+  >
+    <blockquote cite="https://design.alasdairmacrae.co.uk/?path=/story/atoms-blockquote--with-cite"
+                class="BlockQuote_blockQuote__qyqEd"
+    >
+      Some cool quote
+    </blockquote>
+    <cite class="BlockQuote_cite__ErCVy">
+      <a class="BlockQuote_citeLink__YHmn8 Link_root__zGNxh  "
+         target="_blank"
+         rel="noopener"
+         data-testid="Link"
+         href="https://design.alasdairmacrae.co.uk/?path=/story/atoms-blockquote--with-cite"
+         style="--line-height: 1.3em;"
+      >
+        Alasdair Macrae
+        <img title="Third party site, opens in a new tab."
+             alt="Icon to represent this opens in a new tab"
+             loading="lazy"
+             width="128"
+             height="128"
+             decoding="async"
+             data-nimg="1"
+             class="Link_newTabIcon__Um_hI"
+             srcset="/static/media/entities/assets/new-tab-icon.svg?w=128&amp;q=75 1x, /static/media/entities/assets/new-tab-icon.svg?w=256&amp;q=75 2x"
+             src="/static/media/entities/assets/new-tab-icon.svg?w=256&amp;q=75"
+             style="color: transparent;"
+        >
+      </a>
+    </cite>
+  </div>
+</div>
 `;

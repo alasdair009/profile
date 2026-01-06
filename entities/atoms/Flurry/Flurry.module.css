@@ -6,14 +6,14 @@
   align-items: center;
   background: linear-gradient(
     207deg,
-    rgb(from var(--colorGreenGrass) r g b / 35%),
+    rgb(from var(--color-green-grass) r g b / 35%),
     transparent
   );
   display: flex;
   height: 100vh;
   justify-content: center;
   margin: 0 auto;
-  max-width: var(--globalDecorationMaxWidth);
+  max-width: var(--global-decoration-max-width);
   padding: 20px;
   position: relative;
   width: 100%;
@@ -21,10 +21,10 @@
   &::before {
     background: linear-gradient(
       117deg,
-      var(--colorblackEvil) 15%,
+      var(--color-black-evil) 15%,
       transparent 50%,
       transparent 65%,
-      var(--colorblackEvil) 95%
+      var(--color-black-evil) 95%
     );
     content: "";
     height: 100%;
@@ -45,10 +45,10 @@
 }
 
 .content {
-  max-width: var(--globalTextMaxWidth);
+  max-width: var(--global-text-max-width);
   overflow-wrap: break-word;
   position: relative;
-  text-shadow: 0 0 var(--size-8) var(--colorblackEvil);
+  text-shadow: 0 0 var(--size-s8) var(--color-black-evil);
   z-index: 1;
 }
 

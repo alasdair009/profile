@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 import { siteDescription, siteName } from "@/lib/metadata";
-import { colors } from "./styles/tokens";
+import { colors } from "@/styles/tokens";
 import screenshotNarrow from "../entities/assets/screenshot-narrow.webp";
 import screenshotWide from "../entities/assets/screenshot-wide.webp";
 import { siteOrigin } from "@/lib/domains";

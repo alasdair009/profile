@@ -4,13 +4,13 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  max-width: var(--globalContentMaxWidth);
+  max-width: var(--global-content-max-width);
   position: relative;
   width: 100%;
 }
 
 .trampolineImage {
   margin: 0 auto;
-  max-width: var(--size-512);
+  max-width: var(--size-s512);
   width: 100%;
 }

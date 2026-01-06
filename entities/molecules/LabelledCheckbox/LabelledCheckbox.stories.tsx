@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from "@storybook/nextjs";
 import { LabelledCheckbox } from "./LabelledCheckbox";
 import { expect, userEvent, waitFor, within } from "storybook/test";
-import { BaseCheckbox, colors } from "@/entities";
+import { BaseCheckbox } from "@/entities";
+import { colors } from "@/styles/tokens";
 
 const meta: Meta<typeof LabelledCheckbox> = {
   component: LabelledCheckbox,

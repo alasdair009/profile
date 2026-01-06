@@ -1,7 +1,7 @@
 import { CSSProperties, HTMLAttributes } from "react";
 import styles from "./Flag.module.css";
 import Image from "next/image";
-import { colors } from "@/entities";
+import { colors } from "@/styles/tokens";
 
 type FlagProps = {
   /**

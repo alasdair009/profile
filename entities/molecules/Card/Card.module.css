@@ -1,17 +1,17 @@
 .root {
-  background: var(--colorGreyDark);
-  box-shadow: 0 0 10px 6px rgb(from var(--colorWhiteGhost) r g b / 35%);
+  background: var(--color-grey-dark);
+  box-shadow: 0 0 10px 6px rgb(from var(--color-white-ghost) r g b / 35%);
   display: flex;
   height: 300px;
   margin: 0 auto;
-  padding: var(--size-8);
+  padding: var(--size-s8);
   position: relative;
   width: 100%;
 }
 
 @media (--breakpoint-xsmall) {
   .root {
-    max-width: var(--size-256);
+    max-width: var(--size-s256);
   }
 }
 
@@ -41,9 +41,9 @@
 
 .cardImage {
   place-content: center center;
-  background: var(--colorblackEvil);
+  background: var(--color-black-evil);
   display: flex;
-  min-height: var(--size-128);
+  min-height: var(--size-s128);
   object-fit: cover;
   text-align: center;
   width: 100%;
@@ -51,12 +51,12 @@
 
 @media (--breakpoint-xsmall) {
   .cardImage {
-    min-height: var(--size-96);
+    min-height: var(--size-s96);
   }
 }
 
 .date {
-  color: var(--colorWhiteGhost);
+  color: var(--color-white-ghost);
   display: block;
   font-style: italic;
   text-align: center;

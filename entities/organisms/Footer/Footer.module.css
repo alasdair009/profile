@@ -18,7 +18,7 @@
   position: relative;
   width: 100%;
   margin-bottom: -7px; /* Fix for safari gap */
-  height: var(--size-128);
+  height: var(--size-s128);
 }
 
 .parallax {
@@ -49,17 +49,17 @@
 }
 
 .wave1 {
-  fill: color-mix(in srgb, var(--colorGreenGrass) 40%, black 60%);
+  fill: color-mix(in srgb, var(--color-green-grass) 40%, black 60%);
 }
 
 .wave2 {
-  fill: color-mix(in srgb, var(--colorGreenGrass) 60%, black 40%);
+  fill: color-mix(in srgb, var(--color-green-grass) 60%, black 40%);
 }
 
 .wave3 {
-  fill: color-mix(in srgb, var(--colorGreenGrass) 80%, black 20%);
+  fill: color-mix(in srgb, var(--color-green-grass) 80%, black 20%);
 }
 
 .wave4 {
-  fill: var(--colorGreenGrass);
+  fill: var(--color-green-grass);
 }

@@ -1,4 +1,65 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`organisms/ContentPlate Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <section class="ContentPlate_root__4DmfZ"
+           data-testid="ContentPlate"
+  >
+    <figure class="ContentPlate_backgroundWrapper__HJk_i"
+            style="--background: #000;"
+    >
+    </figure>
+    <div class="ContentPlate_inner__X2Fiy"
+         style="--orientation: row;"
+    >
+      <div class="ContentPlate_copyBox__wYH4d">
+        <h3 class="Heading_root__TRR0m Heading_h3__iI8ZP   undefined"
+            data-testid="ContentPlateHeading"
+            style="--align: left; --line-height: 1.3em;"
+        >
+          Children
+        </h3>
+        <p class="Paragraph_root__Csgty paragraph_paragraphStyles__5ERhb  "
+           data-testid="ContentPlateParagraph"
+           style="--font-size: 1rem; --text-align: left; --line-height: 1.3em; --vertical-padding: 0; --text-wrap: wrap; --color: #fff; --margin: 0 auto 1.5rem;"
+        >
+          This is my content plate, there are many like it but this one is mine!
+        </p>
+      </div>
+      <figure class="ContentPlate_foregroundWrapper__hA2sg ">
+        <img alt="AM Logo"
+             loading="lazy"
+             width="176"
+             height="146"
+             decoding="async"
+             data-nimg="1"
+             class="ContentPlate_foregroundImage__dQmh4"
+             srcset="/static/media/entities/assets/am.svg?w=256&amp;q=75 1x, /static/media/entities/assets/am.svg?w=384&amp;q=75 2x"
+             src="/static/media/entities/assets/am.svg?w=384&amp;q=75"
+             style="color: transparent;"
+        >
+      </figure>
+    </div>
+  </section>
+</div>
+`;
 
 exports[`organisms/ContentPlate Default smoke-test 1`] = `
 <section data-testid="ContentPlate"

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`organisms/CopyBlock Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <section class="CopyBlock_root__j4T7n"
+           data-testid="CopyBlock"
+  >
+    This is a line of text that is rendered inside a CopyBlock. The text will wrap nicely and the entity is used for sections of a website where we just need text.
+  </section>
+</div>
+`;

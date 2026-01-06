@@ -2,7 +2,7 @@ import { Source } from "@storybook/addon-docs/blocks";
 import type { HTMLAttributes, JSX } from "react";
 
 import { ObjectViewer } from "./ObjectViewer";
-import { colors } from "../../app/styles/tokens";
+import { colors } from "@/styles/tokens";
 
 export type DimensionViewerProps = {
   /**

@@ -35,7 +35,7 @@ export function BaseRange({
 
   return (
     <input
-      className={`${styles.root} ${isInvalidState ? styles.rootStateInvalid : ""}`}
+      className={`${styles.root} ${isInvalidState ? styles.invalid : ""}`}
       onChange={handleOnChange}
       data-testid={BaseRange.name}
       type="range"

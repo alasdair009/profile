@@ -25,6 +25,6 @@
 }
 
 .trunk {
-  rx: var(--radii-2);
+  rx: var(--radii-r2);
   stroke: #2e1305;
 }

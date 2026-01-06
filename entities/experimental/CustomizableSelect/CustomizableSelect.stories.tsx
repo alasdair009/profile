@@ -4,7 +4,7 @@ import Image from "next/image";
 import amLogo from "@/entities/assets/am.svg";
 import { ErrorText, Paragraph } from "@/entities";
 import styles from "./CustomizableSelect.module.css";
-import { sizes } from "../../../app/styles/tokens";
+import { sizes } from "@/styles/tokens";
 
 const meta: Meta<typeof CustomizableSelect> = {
   component: CustomizableSelect,
@@ -36,8 +36,8 @@ const meta: Meta<typeof CustomizableSelect> = {
             <Image
               src={amLogo}
               alt="am Logo"
-              height={sizes.size16}
-              width={sizes.size16}
+              height={sizes.s16}
+              width={sizes.s16}
             />
           </figure>
           <Paragraph margin={0}>Option 1</Paragraph>
@@ -47,8 +47,8 @@ const meta: Meta<typeof CustomizableSelect> = {
             <Image
               src={amLogo}
               alt="am Logo"
-              height={sizes.size16}
-              width={sizes.size16}
+              height={sizes.s16}
+              width={sizes.s16}
             />
           </figure>
           <Paragraph margin={0}>Option 2</Paragraph>
@@ -58,8 +58,8 @@ const meta: Meta<typeof CustomizableSelect> = {
             <Image
               src={amLogo}
               alt="am Logo"
-              height={sizes.size16}
-              width={sizes.size16}
+              height={sizes.s16}
+              width={sizes.s16}
             />
           </figure>
           <Paragraph margin={0}>Option 3</Paragraph>

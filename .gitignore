@@ -136,4 +136,4 @@ dist
 .vercel
 
 # Generated on build
-/app/styles/_generated.css
+/styles/_generated.css

@@ -2,7 +2,7 @@
   appearance: base-select;
   cursor: pointer;
   padding: 0;
-  composes: baseInput from "../../../app/styles/input.module.css";
+  composes: baseInput from "../../../styles/input.module.css";
 
   &::picker(select) {
     appearance: base-select;
@@ -14,10 +14,10 @@
 
   option {
     align-items: center;
-    background: var(--colorGreyDark);
-    color: var(--colorWhiteGhost);
+    background: var(--color-grey-dark);
+    color: var(--color-white-ghost);
     display: flex;
-    padding: var(--size-8);
+    padding: var(--size-s8);
     width: 100%;
 
     &:hover {
@@ -41,7 +41,7 @@
 .dropButton {
   align-items: center;
   aspect-ratio: 1;
-  background: var(--colorGreenGrass);
+  background: var(--color-green-grass);
   display: flex;
   height: 100%;
   justify-content: center;
@@ -52,10 +52,10 @@
 
   &::before {
     aspect-ratio: 1;
-    background: var(--colorWhiteGhost);
+    background: var(--color-white-ghost);
     clip-path: var(--clip-path-chevronDown);
     content: "";
-    height: var(--size-32);
+    height: var(--size-s32);
   }
 }
 
@@ -72,10 +72,10 @@
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: var(--size-2);
+  padding: var(--size-s2);
   overflow: hidden;
   position: relative;
-  width: var(--size-24);
+  width: var(--size-s24);
 }
 
 .doesNotSupport {

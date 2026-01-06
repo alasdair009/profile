@@ -1,5 +1,5 @@
 import { CSSProperties, HTMLAttributes } from "react";
-import { colors } from "@/entities";
+import { colors } from "@/styles/tokens";
 import styles from "./Thermometer.module.css";
 
 type ThermometerProps = {

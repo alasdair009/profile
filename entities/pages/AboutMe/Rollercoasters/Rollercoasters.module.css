@@ -3,8 +3,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: var(--globalContentMaxWidth);
-  gap: var(--size-24);
+  max-width: var(--global-content-max-width);
+  gap: var(--size-s24);
   margin: 0 auto;
   width: 100%;
 }
@@ -12,8 +12,8 @@
 .themeParkLogoFigure {
   aspect-ratio: 1;
   display: inline-block;
-  height: var(--size-24);
-  margin: 0 0 0 var(--size-8);
+  height: var(--size-s24);
+  margin: 0 0 0 var(--size-s8);
   position: relative;
 }
 

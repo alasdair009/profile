@@ -2,13 +2,13 @@ import { CSSProperties, HTMLAttributes } from "react";
 import styles from "./DesignLanding.module.css";
 import {
   Cloud,
-  colors,
   ContentPlate,
   Heading,
   Paragraph,
   Rain,
   Spacer,
 } from "@/entities";
+import { colors } from "@/styles/tokens";
 import amLogo from "../../assets/am.svg";
 import Image from "next/image";
 

@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
-import { colors } from "@/entities";
 import styles from "./Code.module.css";
+import { colors } from "@/styles/tokens";
 
 type CodeProps = HTMLAttributes<HTMLSpanElement>;
 

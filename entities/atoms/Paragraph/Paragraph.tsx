@@ -1,15 +1,9 @@
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
-import {
-  colors,
-  FontSizes,
-  fontSizes,
-  lineHeights,
-  sizes,
-} from "../../../app/styles/tokens";
-import type { TextAlignment } from "../../../app/styles/tokens";
+import { colors, fontSizes, lineHeights, sizes } from "@/styles/tokens";
+import type { FontSizes, TextAlignment } from "@/styles/styles.types";
 import { Property } from "csstype";
 import styles from "./Paragraph.module.css";
-import { toRem } from "@/app/styles/style-helpers";
+import { toRem } from "@/styles/style-helpers";
 
 type ParagraphProps = {
   /**
@@ -53,7 +47,7 @@ export function Paragraph({
   lines,
   className = "",
   children,
-  margin = `0 auto ${toRem(sizes.size24)}`,
+  margin = `0 auto ${toRem(sizes.s24)}`,
   style,
   ...rest
 }: ParagraphProps) {

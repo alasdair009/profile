@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { toCssVars } from "@/app/styles/style-helpers";
+import { toCssVars } from "@/styles/style-helpers";
 import type { Breakpoint, HeadingTypes, FontSizes } from "./styles.types";
 
 export const curves: Record<
@@ -279,7 +279,7 @@ export const shadows: Record<
   string,
   Exclude<CSSProperties["boxShadow"], undefined>
 > = {
-  boxGreen: "0 0 var(--size-4) var(--size-2) var(--colorGreenGrass)",
+  boxGreen: "0 0 var(--size-s4) var(--size-s2) var(--color-green-grass)",
 };
 
 export const fontFamilies: Record<
@@ -339,8 +339,8 @@ export const allTokens = {
   ...toCssVars(sizes, "size", { unit: "rem" }),
   ...toCssVars(globalSizes, "global", { unit: "rem" }),
   ...toCssVars(breakpoints, "breakpoint", { unit: "px" }),
-  ...toCssVars(radiiInt, "radius", { unit: "rem" }),
-  ...toCssVars(radiiPer, "radius"),
+  ...toCssVars(radiiInt, "radii", { unit: "rem" }),
+  ...toCssVars(radiiPer, "radii"),
   ...toCssVars(shadows, "shadow"),
   ...toCssVars(fontFamilies, "font-family"),
   ...toCssVars(headingSizes, "heading-size", { unit: "rem" }),

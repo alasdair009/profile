@@ -5,7 +5,7 @@ import { NotificationButton } from "./NotificationButton";
 import styles from "./Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { sizes } from "../../../app/styles/tokens";
+import { sizes } from "@/styles/tokens";
 
 type HeaderProps = {} & HTMLAttributes<HTMLDivElement>;
 export function Header({ children, ...rest }: HeaderProps) {
@@ -17,7 +17,7 @@ export function Header({ children, ...rest }: HeaderProps) {
             className={styles.headerLogo}
             src={amLogo}
             alt="AM logo"
-            height={sizes.size32}
+            height={sizes.s32}
           />
         </Link>
         <div className={styles.headerLinks}>

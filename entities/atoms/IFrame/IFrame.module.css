@@ -3,6 +3,6 @@
   border: none;
   display: block;
   margin: 0 auto;
-  max-width: var(--size-512);
+  max-width: var(--size-s512);
   width: 100%;
 }

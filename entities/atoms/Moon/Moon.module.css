@@ -2,19 +2,19 @@
   aspect-ratio: 1;
   border-radius: var(--radii-round);
   display: inline-block;
-  min-height: var(--size-40);
-  min-width: var(--size-40);
+  min-height: var(--size-s40);
+  min-width: var(--size-s40);
   overflow: hidden;
   position: relative;
 
   &::before {
     border-radius: var(--radii-round);
-    box-shadow: var(--size-16) var(--size-8) 0 0 var(--colorWhiteGhost);
+    box-shadow: var(--size-s16) var(--size-s8) 0 0 var(--color-white-ghost);
     content: "";
     height: 100%;
-    left: calc(var(--size-16) * -1);
+    left: calc(var(--size-s16) * -1);
     position: absolute;
-    top: calc(var(--size-8) * -1);
+    top: calc(var(--size-s8) * -1);
     width: 100%;
   }
 }

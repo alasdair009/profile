@@ -23,5 +23,5 @@
 }
 
 .clamp {
-  composes: lineClamp from "./lineClamp.module.css";
+  composes: lineClamp from "lineClamp.module.css";
 }

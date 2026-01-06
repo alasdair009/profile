@@ -1,23 +1,5 @@
 export { prefersReducedMotion } from "./design-tokens/animations";
 
-export {
-  colors,
-  fontSizes,
-  fontWeights,
-  headingSizes,
-  interFont,
-  sizes,
-  lineHeights,
-  globalSizes,
-  fontFamilies,
-  radii,
-  curves,
-  shadows,
-  clipPaths,
-  breakpoints,
-} from "../app/styles/tokens";
-export type { HeadingTypes, TextAlignment } from "../app/styles/tokens";
-
 export { Audio } from "./atoms/Audio";
 export { BaseCheckbox } from "./atoms/BaseCheckbox";
 export { BaseDate } from "./atoms/BaseDate";

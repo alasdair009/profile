@@ -10,7 +10,7 @@
   }
 
   25% {
-    transform: translateX(calc(var(--size-16) * -1)) rotate(90deg);
+    transform: translateX(calc(var(--size-s16) * -1)) rotate(90deg);
   }
 
   50% {
@@ -18,7 +18,7 @@
   }
 
   75% {
-    transform: translateX(var(--size-16)) rotate(270deg);
+    transform: translateX(var(--size-s16)) rotate(270deg);
   }
 
   90% {
@@ -46,7 +46,7 @@
   animation-delay: calc(var(--duration) * var(--delay) * 1s);
   animation-duration: calc(var(--flakeDuration) * 1s);
   aspect-ratio: 1;
-  background: var(--colorWhiteGhost);
+  background: var(--color-white-ghost);
   clip-path: var(--clip-path-snowflake);
   left: calc(
     (100% - var(--size)) * ((var(--index) - 1) / var(--numberOfFlakes))

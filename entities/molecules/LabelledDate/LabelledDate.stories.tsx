@@ -72,7 +72,7 @@ export const IsInvalid: StoryObj<typeof LabelledDate> = {
     await canvas.findByTestId(BaseDate.name);
 
     await expect(canvas.getByTestId(BaseDate.name)).toHaveStyle(
-      "background-color: rgba(223,28,65,0.15)"
+      "background-color: color(srgb 0.87451 0.109804 0.254902 / 0.15)"
     );
   },
 };

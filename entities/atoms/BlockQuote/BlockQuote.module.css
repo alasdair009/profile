@@ -1,7 +1,7 @@
 .root {
   display: block;
-  margin: var(--size-32) auto;
-  max-width: var(--globalDecorationMaxWidth);
+  margin: var(--size-s32) auto;
+  max-width: var(--global-decoration-max-width);
 }
 
 .blockQuote {
@@ -9,15 +9,15 @@
   font-size: var(--font-size-large);
   font-style: italic;
   margin: 0 auto;
-  max-width: var(--globalTextMaxWidth);
-  padding: var(--size-8);
+  max-width: var(--global-text-max-width);
+  padding: var(--size-s8);
   position: relative;
   text-align: center;
   text-wrap: balance;
 
   &::before,
   &::after {
-    color: var(--colorGreenGrass);
+    color: var(--color-green-grass);
     content: '"';
     font-size: var(--font-size-xxlarge);
     font-weight: var(--font-weight-black);
@@ -26,12 +26,12 @@
 
 .cite {
   display: block;
-  margin: var(--size-4) auto 0;
-  max-width: var(--globalTextMaxWidth);
+  margin: var(--size-s4) auto 0;
+  max-width: var(--global-text-max-width);
   text-align: center;
 }
 
 .citeLink {
-  color: var(--colorGreyLight);
+  color: var(--color-grey-light);
   font-weight: var(--font-weight-regular);
 }

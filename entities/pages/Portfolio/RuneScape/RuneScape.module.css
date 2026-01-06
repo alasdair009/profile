@@ -1,10 +1,10 @@
 .wrapper {
   margin: 0 auto;
-  max-width: var(--globalContentMaxWidth);
+  max-width: var(--global-content-max-width);
 }
 
 .inner {
   display: flex;
-  gap: var(--size-8);
+  gap: var(--size-s8);
   justify-content: center;
 }

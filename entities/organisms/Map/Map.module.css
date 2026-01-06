@@ -1,11 +1,11 @@
 .root {
   align-items: center;
   aspect-ratio: 16 / 9;
-  background-color: var(--colorGreyDark);
-  border: 1px solid var(--colorGreenGrass);
+  background-color: var(--color-grey-dark);
+  border: 1px solid var(--color-green-grass);
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: var(--globalContentMaxWidth);
+  max-width: var(--global-content-max-width);
   width: 100%;
 }

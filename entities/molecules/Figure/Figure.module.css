@@ -1,6 +1,6 @@
 .root {
-  margin: var(--size-16) auto;
-  max-width: var(--globalContentMaxWidth);
+  margin: var(--size-s16) auto;
+  max-width: var(--global-content-max-width);
   width: 100%;
 }
 
@@ -20,6 +20,6 @@
   display: block;
   font-size: var(--font-size-small);
   font-style: italic;
-  margin: var(--size-8) auto;
+  margin: var(--size-s8) auto;
   text-align: center;
 }

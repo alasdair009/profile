@@ -1,4 +1,96 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`organisms/Header Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <header class="Header_root__rPHIM"
+          data-testid="Header"
+  >
+    <nav class="Header_inner__zxBl1">
+      <a href="/">
+        <img alt="AM logo"
+             loading="lazy"
+             width="39"
+             height="32"
+             decoding="async"
+             data-nimg="1"
+             class="Header_headerLogo__H5bhD"
+             srcset="/static/media/entities/assets/am.svg?w=48&amp;q=75 1x, /static/media/entities/assets/am.svg?w=96&amp;q=75 2x"
+             src="/static/media/entities/assets/am.svg?w=96&amp;q=75"
+             style="color: transparent;"
+        >
+      </a>
+      <div class="Header_headerLinks__IHU9S">
+        <a class="Header_headerLink__9wVN5 Header_hideOnNarrow__CNm_N Link_root__zGNxh  "
+           target="_self"
+           data-testid="Link"
+           href="/"
+           style="--line-height: 1.3em;"
+        >
+          Home
+        </a>
+        <a class="Header_headerLink__9wVN5 Link_root__zGNxh  "
+           target="_self"
+           data-testid="Link"
+           href="/portfolio"
+           style="--line-height: 1.3em;"
+        >
+          Portfolio
+        </a>
+        <a class="Header_headerLink__9wVN5 Link_root__zGNxh  "
+           target="_self"
+           data-testid="Link"
+           href="/about-me"
+           style="--line-height: 1.3em;"
+        >
+          About
+        </a>
+        <a class="Header_headerLink__9wVN5 Link_root__zGNxh  "
+           target="_self"
+           data-testid="Link"
+           href="/blog"
+           style="--line-height: 1.3em;"
+        >
+          Blog
+        </a>
+        <button class="Button_root__bx_su undefined"
+                data-testid="Button"
+                type="button"
+                style="display: none;"
+        >
+          <img alt="Notifications icon"
+               loading="lazy"
+               width="800"
+               height="800"
+               decoding="async"
+               data-nimg="1"
+               class="Header_notificationIcon__PNRyV "
+               srcset="/static/media/entities/assets/notification.svg?w=828&amp;q=75 1x, /static/media/entities/assets/notification.svg?w=1920&amp;q=75 2x"
+               src="/static/media/entities/assets/notification.svg?w=1920&amp;q=75"
+               style="color: transparent; background: red; display: none;"
+          >
+        </button>
+      </div>
+    </nav>
+  </header>
+</div>
+`;
 
 exports[`organisms/Header Default smoke-test 1`] = `
 <header class="sc-dKsqdn idjsjM">

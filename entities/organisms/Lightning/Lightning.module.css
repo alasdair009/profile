@@ -32,7 +32,7 @@
   display: flex;
   height: 100vh;
   margin: 0 auto;
-  max-width: var(--globalDecorationMaxWidth);
+  max-width: var(--global-decoration-max-width);
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -81,15 +81,15 @@
   background: linear-gradient(
     to left,
     transparent,
-    rgb(from var(--colorblackEvil) r g b / 20%),
+    rgb(from var(--color-black-evil) r g b / 20%),
     transparent
   );
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: var(--globalContentMaxWidth);
+  max-width: var(--global-content-max-width);
   overflow: hidden;
-  padding: var(--size-8);
+  padding: var(--size-s8);
   width: 100%;
   z-index: 1;
 }

@@ -1,8 +1,8 @@
 .skillsSection {
   display: block;
-  max-width: var(--globalContentMaxWidth);
+  max-width: var(--global-content-max-width);
   margin: 0 auto;
-  padding: 0 var(--size-16);
+  padding: 0 var(--size-s16);
 }
 
 .skillGrid {
@@ -13,7 +13,7 @@
 @media (--breakpoint-xsmall) {
   .skillGrid {
     display: grid;
-    gap: var(--size-2);
+    gap: var(--size-s2);
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   }
@@ -22,7 +22,7 @@
 @media (--breakpoint-small) {
   .skillGrid {
     display: grid;
-    gap: var(--size-2);
+    gap: var(--size-s2);
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
   }
@@ -34,7 +34,7 @@
   justify-content: center;
 
   &Image {
-    max-width: var(--size-256);
+    max-width: var(--size-s256);
   }
 }
 
@@ -54,7 +54,7 @@
 
 .portfolioSection {
   display: block;
-  max-width: var(--globalContentMaxWidth);
+  max-width: var(--global-content-max-width);
   margin: 0 auto;
-  padding: 0 var(--size-16);
+  padding: 0 var(--size-s16);
 }

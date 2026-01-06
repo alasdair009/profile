@@ -1,53 +1,53 @@
 .root {
   --emptyBackground: repeating-linear-gradient(
     135deg,
-    var(--colorWhiteGhost),
-    var(--colorWhiteGhost) var(--size-16),
-    color-mix(in srgb, var(--colorWhiteGhost) 90%, black 10%) var(--size-16),
-    color-mix(in srgb, var(--colorWhiteGhost) 90%, black 10%) var(--size-32),
-    var(--colorWhiteGhost) var(--size-32)
+    var(--color-white-ghost),
+    var(--color-white-ghost) var(--size-s16),
+    color-mix(in srgb, var(--color-white-ghost) 90%, black 10%) var(--size-s16),
+    color-mix(in srgb, var(--color-white-ghost) 90%, black 10%) var(--size-s32),
+    var(--color-white-ghost) var(--size-s32)
   );
   --optimumBackground: repeating-linear-gradient(
     135deg,
-    var(--colorGreenGrass),
-    var(--colorGreenGrass) var(--size-16),
-    color-mix(in srgb, var(--colorGreenGrass) 90%, black 10%) var(--size-16),
-    color-mix(in srgb, var(--colorGreenGrass) 90%, black 10%) var(--size-32),
-    var(--colorGreenGrass) var(--size-32)
+    var(--color-green-grass),
+    var(--color-green-grass) var(--size-s16),
+    color-mix(in srgb, var(--color-green-grass) 90%, black 10%) var(--size-s16),
+    color-mix(in srgb, var(--color-green-grass) 90%, black 10%) var(--size-s32),
+    var(--color-green-grass) var(--size-s32)
   );
   --warningBackground: repeating-linear-gradient(
     135deg,
     var(--colorYellowSun),
-    var(--colorYellowSun) var(--size-16),
-    color-mix(in srgb, var(--colorYellowSun) 90%, black 10%) var(--size-16),
-    color-mix(in srgb, var(--colorYellowSun) 90%, black 10%) var(--size-32),
-    var(--colorYellowSun) var(--size-32)
+    var(--colorYellowSun) var(--size-s16),
+    color-mix(in srgb, var(--colorYellowSun) 90%, black 10%) var(--size-s16),
+    color-mix(in srgb, var(--colorYellowSun) 90%, black 10%) var(--size-s32),
+    var(--colorYellowSun) var(--size-s32)
   );
   --dangerBackground: repeating-linear-gradient(
     135deg,
-    var(--colorRedHeat),
-    var(--colorRedHeat) var(--size-16),
-    color-mix(in srgb, var(--colorRedHeat) 90%, black 10%) var(--size-16),
-    color-mix(in srgb, var(--colorRedHeat) 90%, black 10%) var(--size-32),
-    var(--colorRedHeat) var(--size-32)
+    var(--color-red-heat),
+    var(--color-red-heat) var(--size-s16),
+    color-mix(in srgb, var(--color-red-heat) 90%, black 10%) var(--size-s16),
+    color-mix(in srgb, var(--color-red-heat) 90%, black 10%) var(--size-s32),
+    var(--color-red-heat) var(--size-s32)
   );
 
   appearance: none;
   background-image: var(--emptyBackground);
-  border: 1px solid var(--colorblackEvil);
-  border-radius: var(--radii-2);
+  border: 1px solid var(--color-black-evil);
+  border-radius: var(--radii-r2);
   display: flex;
-  height: var(--size-32);
-  max-width: var(--globalInputMaxWidth);
+  height: var(--size-s32);
+  max-width: var(--global-input-max-width);
   width: 100%;
 
   &::-webkit-meter-bar {
     background-image: var(--emptyBackground);
-    box-shadow: 0 5px 5px -5px var(--colorblackEvil) inset;
+    box-shadow: 0 5px 5px -5px var(--color-black-evil) inset;
   }
 
   &::-webkit-meter-inner-element {
-    background: var(--colorWhiteGhost);
+    background: var(--color-white-ghost);
     display: flex;
   }
 

@@ -10,17 +10,17 @@
 
 .curveViewer {
   display: flex;
-  gap: var(--size-8);
-  margin-bottom: var(--size-32);
+  gap: var(--size-s8);
+  margin-bottom: var(--size-s32);
 }
 
 .curveWrapper {
-  border: 1px solid var(--colorWhiteGhost);
-  color: var(--colorWhiteGhost);
+  border: 1px solid var(--color-white-ghost);
+  color: var(--color-white-ghost);
   display: inline-flex;
   flex-direction: column;
   max-width: 147px;
-  padding: var(--size-8);
+  padding: var(--size-s8);
 }
 
 .svgWrapper {
@@ -32,18 +32,18 @@
   &::after {
     animation: moveAnimation 2s infinite alternate var(--curve);
     aspect-ratio: 1;
-    background: var(--colorWhiteGhost);
+    background: var(--color-white-ghost);
     border-radius: var(--radii-round);
     content: "";
     left: 0;
     offset-path: var(--offset-path);
     position: absolute;
-    width: var(--size-8);
+    width: var(--size-s8);
   }
 }
 
 .path {
   fill: transparent;
-  stroke: var(--colorGreenGrass);
+  stroke: var(--color-green-grass);
   stroke-width: 3px;
 }

@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: var(--size-16);
+  padding: var(--size-s16);
 }
 
 @media (--breakpoint-xsmall) {

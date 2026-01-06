@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`atoms/Flag Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <div class="Flag_root__q4fWi undefined"
+       data-testid="Flag"
+  >
+    <div class="Flag_flagWrapper__MZBB_ Flag_showPoll__fbzrD Flag_animateFlag__b8Eas"
+         style="--flag-background: #2e9b26;"
+    >
+      <img alt="AM Logo"
+           loading="lazy"
+           decoding="async"
+           data-nimg="fill"
+           class="Flag_flagImage__r5iNQ"
+           sizes="100vw"
+           srcset="/static/media/entities/assets/am.svg?w=640&amp;q=75 640w, /static/media/entities/assets/am.svg?w=750&amp;q=75 750w, /static/media/entities/assets/am.svg?w=828&amp;q=75 828w, /static/media/entities/assets/am.svg?w=1080&amp;q=75 1080w, /static/media/entities/assets/am.svg?w=1200&amp;q=75 1200w, /static/media/entities/assets/am.svg?w=1920&amp;q=75 1920w, /static/media/entities/assets/am.svg?w=2048&amp;q=75 2048w, /static/media/entities/assets/am.svg?w=3840&amp;q=75 3840w"
+           src="/static/media/entities/assets/am.svg?w=3840&amp;q=75"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+      >
+    </div>
+  </div>
+</div>
+`;

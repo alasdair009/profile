@@ -2,11 +2,11 @@
   appearance: none;
 
   &::-webkit-media-controls-panel {
-    background: var(--colorGreenGrass);
+    background: var(--color-green-grass);
   }
 
   &::-webkit-media-controls-current-time-display,
   &::-webkit-media-controls-time-remaining-display {
-    color: var(--colorWhiteGhost);
+    color: var(--color-white-ghost);
   }
 }

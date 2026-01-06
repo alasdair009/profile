@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: var(--globalDecorationMaxWidth);
+  max-width: var(--global-decoration-max-width);
   position: relative;
   width: 100%;
 }
@@ -13,12 +13,12 @@
   flex-direction: column;
   height: 100%;
   margin: 0 auto;
-  max-width: var(--globalContentMaxWidth);
+  max-width: var(--global-content-max-width);
   width: 100%;
 }
 
 .feetSection {
-  background: var(--colorblackEvil);
+  background: var(--color-black-evil);
   align-items: center;
   display: flex;
   justify-content: center;
@@ -39,9 +39,9 @@
 .headSection {
   background: linear-gradient(
     to right,
-    var(--colorWhiteGhost),
-    var(--colorWhiteGhost) 50%,
-    var(--colorWhiteGhost) 50%
+    var(--color-white-ghost),
+    var(--color-white-ghost) 50%,
+    var(--color-white-ghost) 50%
   );
   height: 480px;
   position: relative;
@@ -50,9 +50,9 @@
   &::before {
     background: linear-gradient(
       to right,
-      var(--colorblackEvil),
-      var(--colorblackEvil) 50%,
-      var(--colorWhiteGhost) 50%
+      var(--color-black-evil),
+      var(--color-black-evil) 50%,
+      var(--color-white-ghost) 50%
     );
     content: "";
     height: 100%;
@@ -69,7 +69,7 @@
 }
 
 .copy {
-  padding: var(--size-32) var(--size-16);
+  padding: var(--size-s32) var(--size-s16);
   text-align: center;
   width: 100%;
 }
@@ -80,7 +80,7 @@
 
 @media (--breakpoint-small) {
   .root {
-    height: calc(100vh - var(--globalHeaderHeight));
+    height: calc(100vh - var(--global-header-height));
     min-height: 320px;
 
     &::before,
@@ -91,7 +91,7 @@
     }
 
     &::after {
-      background: var(--colorWhiteGhost);
+      background: var(--color-white-ghost);
     }
   }
 
@@ -103,7 +103,7 @@
     width: 50%;
 
     &::before {
-      background: var(--colorWhiteGhost);
+      background: var(--color-white-ghost);
       mask: url("./ali-flight.svg") no-repeat 350% center;
       mask-size: 75%;
     }
@@ -115,7 +115,7 @@
     width: 50%;
 
     &::before {
-      background: var(--colorWhiteGhost);
+      background: var(--color-white-ghost);
       mask:
         url("./ali-flight.svg") no-repeat -50% center,
         linear-gradient(#fff 0 0);
@@ -126,7 +126,7 @@
 
   .copy {
     max-width: 480px;
-    padding: var(--size-16) var(--size-32) var(--size-16) var(--size-16);
+    padding: var(--size-s16) var(--size-s32) var(--size-s16) var(--size-s16);
     text-align: left;
   }
 
@@ -137,6 +137,6 @@
 
 @media (--breakpoint-medium) {
   .copy {
-    padding: var(--size-16);
+    padding: var(--size-s16);
   }
 }

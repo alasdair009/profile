@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`templates/Loading Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <article class="Loading_root__k_Nas undefined"
+           data-testid="Loading"
+  >
+    <h1 class="Heading_root__TRR0m Heading_h1__HdEBz   undefined"
+        data-testid="Heading"
+        style="--align: left; --line-height: 1.3em;"
+    >
+      Putting the springs in...
+    </h1>
+    <div class="Spinner_root___gyVk"
+         data-testid="Spinner"
+    >
+      <img alt="A gymnast in a pike shape"
+           loading="lazy"
+           width="183"
+           height="258"
+           decoding="async"
+           data-nimg="1"
+           class="Spinner_spinnerImage__GXH1V"
+           srcset="/static/media/entities/atoms/Spinner/pike.svg?w=256&amp;q=75 1x, /static/media/entities/atoms/Spinner/pike.svg?w=384&amp;q=75 2x"
+           src="/static/media/entities/atoms/Spinner/pike.svg?w=384&amp;q=75"
+           style="color: transparent;"
+      >
+    </div>
+  </article>
+</div>
+`;

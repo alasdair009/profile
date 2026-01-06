@@ -1,51 +1,51 @@
 .root {
   margin: 0 auto;
-  max-width: var(--globalContentMaxWidth);
+  max-width: var(--global-content-max-width);
   position: relative;
   width: 100%;
 }
 
 .articleHeading {
-  max-width: var(--size-512);
+  max-width: var(--size-s512);
 }
 
 .articleDate {
   display: block;
   font-style: italic;
   margin: 0 auto;
-  max-width: var(--globalTextMaxWidth);
+  max-width: var(--global-text-max-width);
   text-align: center;
 }
 
 .articleFigure {
   height: 320px;
   margin: 0 auto;
-  max-width: calc(100% - var(--size-16));
+  max-width: calc(100% - var(--size-s16));
   position: relative;
 }
 
 @media (--breakpoint-large) {
   .articleFigure {
-    max-width: var(--globalTextMaxWidth);
+    max-width: var(--global-text-max-width);
   }
 }
 
 .articleImage {
   box-shadow:
-    calc(var(--size-48) * -1) calc(var(--size-48) * -1) 0
-      calc(var(--size-40) * -1) var(--colorGreenGrass),
-    var(--size-48) var(--size-48) 0 calc(var(--size-40) * -1)
-      var(--colorGreenGrass);
-  margin: var(--size-8);
-  max-width: calc(100% - var(--size-16));
+    calc(var(--size-s48) * -1) calc(var(--size-s48) * -1) 0
+      calc(var(--size-s40) * -1) var(--color-green-grass),
+    var(--size-s48) var(--size-s48) 0 calc(var(--size-s40) * -1)
+      var(--color-green-grass);
+  margin: var(--size-s8);
+  max-width: calc(100% - var(--size-s16));
 }
 
 .content {
   margin: 0 auto;
-  max-width: var(--globalTextMaxWidth);
+  max-width: var(--global-text-max-width);
   overflow: hidden;
   overflow-wrap: break-word;
-  padding: var(--size-8);
+  padding: var(--size-s8);
   position: relative;
   width: 100%;
 

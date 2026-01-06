@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 import { Heading, Map, Paragraph, Spacer, StatBox, Table } from "@/entities";
-import { sizes } from "../../../../app/styles/tokens";
+import { sizes } from "@/styles/tokens";
 import styles from "./Rollercoasters.module.css";
 import Image from "next/image";
 import imageUrlBuilder from "@sanity/image-url";
@@ -97,8 +97,8 @@ export function Rollercoasters({
                         .image(rollercoaster.themeparkLogo.asset)
                         .url()}
                       alt={`${rollercoaster.themeparkTitle} logo`}
-                      width={sizes.size24}
-                      height={sizes.size24}
+                      width={sizes.s24}
+                      height={sizes.s24}
                       className={styles.themeParkLogoImage}
                     />
                   </figure>

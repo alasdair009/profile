@@ -20,8 +20,8 @@
 
 .root {
   margin: 0 auto;
-  max-width: var(--globalContentMaxWidth);
-  padding: var(--size-64) 0;
+  max-width: var(--global-content-max-width);
+  padding: var(--size-s64) 0;
   position: relative;
 }
 
@@ -61,8 +61,8 @@
     border-radius: var(--radii-round);
     bottom: 0;
     box-shadow:
-      inset 5px 5px 10px rgb(from var(--colorWhiteGhost) r g b / 20%),
-      inset -5px -5px 10px rgb(from var(--colorWhiteGhost) r g b / 20%);
+      inset 5px 5px 10px rgb(from var(--color-white-ghost) r g b / 20%),
+      inset -5px -5px 10px rgb(from var(--color-white-ghost) r g b / 20%);
     content: var(--content);
     display: flex;
     font-size: var(--font-size-small);
@@ -77,13 +77,13 @@
 .core {
   aspect-ratio: 1;
   background-image:
-    radial-gradient(transparent 40%, var(--colorWhiteGhost)),
+    radial-gradient(transparent 40%, var(--color-white-ghost)),
     linear-gradient(
-      rgb(from var(--colorWhiteGhost) r g b / 80%),
-      rgb(from var(--colorWhiteGhost) r g b / 80%)
+      rgb(from var(--color-white-ghost) r g b / 80%),
+      rgb(from var(--color-white-ghost) r g b / 80%)
     ),
     radial-gradient(
-      rgb(from var(--colorWhiteGhost) r g b / 10%),
+      rgb(from var(--color-white-ghost) r g b / 10%),
       transparent 50%
     );
   background-position:
@@ -97,11 +97,11 @@
     60% 60%;
   border-radius: var(--radii-round);
   box-shadow:
-    var(--size-80) var(--size-80) var(--size-128)
-      rgb(from var(--colorblackEvil) r g b / 50%),
-    0 0 5rem rgb(from var(--colorWhiteGhost) r g b / 80%);
+    var(--size-s80) var(--size-s80) var(--size-s128)
+      rgb(from var(--color-black-evil) r g b / 50%),
+    0 0 5rem rgb(from var(--color-white-ghost) r g b / 80%);
   margin: 0 auto;
-  max-width: var(--size-192);
+  max-width: var(--size-s192);
   position: relative;
   transform-style: preserve-3d;
   width: 100%;
@@ -117,8 +117,8 @@
 
   &::before {
     background: radial-gradient(
-      var(--colorGreenGrass),
-      rgb(from var(--colorGreenGrass) r g b / 15%)
+      var(--color-green-grass),
+      rgb(from var(--color-green-grass) r g b / 15%)
     );
     mask: url("../../assets/am.svg") no-repeat center;
     opacity: 0.1;
@@ -149,6 +149,6 @@
 
 @media (--breakpoint-medium) {
   .core {
-    max-width: var(--size-256);
+    max-width: var(--size-s256);
   }
 }

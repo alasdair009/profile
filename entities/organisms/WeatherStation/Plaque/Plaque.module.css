@@ -1,11 +1,11 @@
 .root {
-  box-shadow: calc(var(--size-4) * -1) var(--size-4) var(--size-8) 1px
+  box-shadow: calc(var(--size-s4) * -1) var(--size-s4) var(--size-s8) 1px
     rgb(0 0 0 / 50%);
-  color: var(--colorWhiteGhost);
-  padding: var(--size-8);
+  color: var(--color-white-ghost);
+  padding: var(--size-s8);
   position: relative;
   transition: color calc(var(--animation-rhythm) * 0.25) var(--curve-default);
-  width: var(--size-256);
+  width: var(--size-s256);
 
   &::before {
     background:
@@ -13,7 +13,7 @@
         60%/3000px 3000px,
       repeating-conic-gradient(#421a00 0 0.0001%, #4d2105 0 0.0002%) 40%
         40%/4000px 3000px;
-    border: var(--size-4) solid var(--colorWhiteGhost);
+    border: var(--size-s4) solid var(--color-white-ghost);
     border-color: #5b1d00 #5b1d00 #371302 #371302;
     content: "";
     height: 100%;

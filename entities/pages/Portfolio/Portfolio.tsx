@@ -1,7 +1,6 @@
 import { CSSProperties, HTMLAttributes } from "react";
 import {
   BlockQuote,
-  colors,
   ContactForm,
   CopyBlock,
   FixedPlate,
@@ -34,6 +33,7 @@ import runeScapeNewsImage from "@/entities/assets/runescape-news.webp";
 import jagexCorporateImage from "@/entities/assets/jagex-corporate.webp";
 import runeFestImage from "@/entities/assets/runefest.webp";
 import weatherImage from "@/entities/assets/weather.webp";
+import { colors } from "@/styles/tokens";
 
 type PortfolioProps = {} & HTMLAttributes<HTMLDivElement>;
 

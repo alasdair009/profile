@@ -2,10 +2,10 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  max-width: var(--globalDecorationMaxWidth);
+  max-width: var(--global-decoration-max-width);
   margin: 0 auto;
   min-height: 90vh;
-  padding: var(--size-8);
+  padding: var(--size-s8);
   position: relative;
 }
 
@@ -20,15 +20,15 @@
 
 .videoCopy {
   margin: 0 auto;
-  max-width: var(--globalContentMaxWidth);
+  max-width: var(--global-content-max-width);
   position: relative;
 }
 
 .skylinesFigure {
-  border-bottom: 1px solid var(--colorGreenGrass);
-  border-top: 1px solid var(--colorGreenGrass);
+  border-bottom: 1px solid var(--color-green-grass);
+  border-top: 1px solid var(--color-green-grass);
   margin: 0 auto;
-  max-width: var(--globalDecorationMaxWidth);
+  max-width: var(--global-decoration-max-width);
   position: relative;
   width: 100%;
 }
@@ -38,6 +38,6 @@
   object-fit: cover;
   opacity: 0.5;
   height: auto;
-  max-height: var(--size-512);
+  max-height: var(--size-s512);
   width: 100%;
 }

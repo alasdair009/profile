@@ -1,10 +1,10 @@
 .root {
   align-items: center;
-  background: var(--colorblackEvil);
+  background: var(--color-black-evil);
   justify-content: center;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - var(--size-48));
+  height: calc(100vh - var(--size-s48));
   min-height: 400px;
   position: relative;
 }
@@ -12,7 +12,7 @@
 .inner {
   flex: 1;
   margin: 0 auto;
-  max-width: var(--size-512);
+  max-width: var(--size-s512);
   overflow: hidden;
   position: relative;
   width: 100%;

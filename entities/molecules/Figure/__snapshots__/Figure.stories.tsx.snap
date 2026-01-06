@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`molecules/Figure Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <figure class="Figure_root__kJaeZ"
+          data-testid="Figure"
+  >
+    <div class="Figure_inner__pTIzs">
+      <img alt="Alt text about the image."
+           loading="lazy"
+           decoding="async"
+           data-nimg="fill"
+           class="Figure_image__GDWJv"
+           sizes="100vw"
+           srcset="/static/media/entities/assets/am.svg?w=640&amp;q=75 640w, /static/media/entities/assets/am.svg?w=750&amp;q=75 750w, /static/media/entities/assets/am.svg?w=828&amp;q=75 828w, /static/media/entities/assets/am.svg?w=1080&amp;q=75 1080w, /static/media/entities/assets/am.svg?w=1200&amp;q=75 1200w, /static/media/entities/assets/am.svg?w=1920&amp;q=75 1920w, /static/media/entities/assets/am.svg?w=2048&amp;q=75 2048w, /static/media/entities/assets/am.svg?w=3840&amp;q=75 3840w"
+           src="/static/media/entities/assets/am.svg?w=3840&amp;q=75"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+      >
+    </div>
+    <figcaption class="Figure_caption__tmJAk">
+      A caption about the image.
+    </figcaption>
+  </figure>
+</div>
+`;

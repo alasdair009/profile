@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import fs from "fs";
 import path from "path";
-import { allTokens } from "../app/styles/tokens";
+import { allTokens } from "@/styles/tokens";
 
 function toCss(vars: Record<string, string>) {
   return `:root {\n${Object.entries(vars)
@@ -9,7 +9,7 @@ function toCss(vars: Record<string, string>) {
     .join("\n")}\n}`;
 }
 
-const outCss = path.join("app/styles/_generated.css");
+const outCss = path.join("styles/_generated.css");
 
 const cssContent = toCss(allTokens);
 

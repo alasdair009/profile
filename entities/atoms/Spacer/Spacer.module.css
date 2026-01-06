@@ -3,5 +3,5 @@
 
   content: "";
   display: block;
-  margin-bottom: calc(var(--size-8) * var(--multiplier));
+  margin-bottom: calc(var(--size-s8) * var(--multiplier));
 }

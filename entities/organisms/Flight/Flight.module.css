@@ -24,16 +24,16 @@
   --sky-color: transparent;
 
   background-color: var(--sky-color);
-  min-height: var(--size-512);
+  min-height: var(--size-s512);
   overflow: hidden;
   position: relative;
 
   &::before {
     background: linear-gradient(
       transparent 35%,
-      rgb(from var(--colorWhiteGhost) r g b / 50%) 45%,
-      rgb(from var(--colorWhiteGhost) r g b / 50%) 80%,
-      var(--colorWhiteGhost)
+      rgb(from var(--color-white-ghost) r g b / 50%) 45%,
+      rgb(from var(--color-white-ghost) r g b / 50%) 80%,
+      var(--color-white-ghost)
     );
     content: "";
     height: 100%;

@@ -1,4 +1,74 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`organisms/MorphingText Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <section class="MorphingText_root__ABLtv"
+           data-testid="MorphingText"
+  >
+    <h2 class="MorphingText_morpher__dDFN_">
+      <span class="MorphingText_text__0MKjG"
+            data-testid="MorphingTextText"
+            style="--word-count: 7; --word-index: 0;"
+      >
+        The
+      </span>
+      <span class="MorphingText_text__0MKjG"
+            data-testid="MorphingTextText"
+            style="--word-count: 7; --word-index: 1;"
+      >
+        possibilities
+      </span>
+      <span class="MorphingText_text__0MKjG"
+            data-testid="MorphingTextText"
+            style="--word-count: 7; --word-index: 2;"
+      >
+        are
+      </span>
+      <span class="MorphingText_text__0MKjG"
+            data-testid="MorphingTextText"
+            style="--word-count: 7; --word-index: 3;"
+      >
+        endless
+      </span>
+      <span class="MorphingText_text__0MKjG"
+            data-testid="MorphingTextText"
+            style="--word-count: 7; --word-index: 4;"
+      >
+        1
+      </span>
+      <span class="MorphingText_text__0MKjG"
+            data-testid="MorphingTextText"
+            style="--word-count: 7; --word-index: 5;"
+      >
+        2
+      </span>
+      <span class="MorphingText_text__0MKjG"
+            data-testid="MorphingTextText"
+            style="--word-count: 7; --word-index: 6;"
+      >
+        3
+      </span>
+    </h2>
+  </section>
+</div>
+`;
 
 exports[`organisms/MorphingText Default smoke-test 1`] = `
 <section class="sc-ezTrPE dnqBjY">

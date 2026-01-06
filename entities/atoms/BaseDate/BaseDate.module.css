@@ -1,8 +1,8 @@
 .root {
-  composes: baseInput from "../../../app/styles/input.module.css";
+  composes: baseInput from "../../../styles/input.module.css";
 
   &::-webkit-calendar-picker-indicator {
-    background-color: var(--colorGreenGrass);
+    background-color: var(--color-green-grass);
     cursor: pointer;
 
     &:hover {
@@ -12,5 +12,5 @@
 }
 
 .invalid {
-  composes: invalid from "../../../app/styles/input.module.css";
+  composes: invalid from "../../../styles/input.module.css";
 }

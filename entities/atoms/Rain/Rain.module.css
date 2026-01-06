@@ -1,6 +1,6 @@
 .rainCanvasWrapper {
   height: 100%;
-  min-height: var(--size-128);
+  min-height: var(--size-s128);
   position: absolute;
   width: 100%;
 }

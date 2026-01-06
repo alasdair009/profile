@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { Link } from "../../atoms/Link";
 import { HTMLAttributes } from "react";
-import { Heading, toRem } from "@/entities";
+import { Heading } from "@/entities";
 import { StaticImageData } from "next/image";
 import amLogo from "../../assets/am.svg";
 import styles from "./Card.module.css";
+import { toRem } from "@/styles/style-helpers";
 
 type CardProps = {
   href: string;

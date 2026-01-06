@@ -6,7 +6,7 @@ import { Link as ViewTransitionLink } from "next-view-transitions";
 import styles from "./Link.module.css";
 import { CSSProperties } from "react";
 import { IFrame } from "../IFrame";
-import { lineHeights } from "@/app/styles/tokens";
+import { lineHeights } from "@/styles/tokens";
 
 /**
  * Link to a new path or url.

@@ -1,9 +1,5 @@
 import { Meta, Typeset } from "@storybook/addon-docs/blocks";
-import {
-  fontFamilies,
-  fontSizes,
-  fontWeights,
-} from "../../../app/styles/tokens";
+import { fontFamilies, fontSizes, fontWeights } from "../../../styles/tokens";
 
 <Meta title="Design Tokens/Typography" />
 
@@ -16,7 +12,7 @@ The system uses the same font in all areas with associated fallbacks: <code>{fon
   fontWeight={fontWeights.regular}
   sampleText={"Font at regular weight"}
   fontFamily={fontFamilies.fontInter}
-  style={{ color: "var(--colorWhiteGhost)" }}
+  style={{ color: "var(--color-white-ghost)" }}
 />
 
 <Typeset
@@ -24,5 +20,5 @@ The system uses the same font in all areas with associated fallbacks: <code>{fon
   fontWeight={fontWeights.bold}
   sampleText={"Font at bold weight"}
   fontFamily={fontFamilies.fontInter}
-  style={{ color: "var(--colorWhiteGhost)" }}
+  style={{ color: "var(--color-white-ghost)" }}
 />

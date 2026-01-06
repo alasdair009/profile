@@ -1,10 +1,10 @@
 .root {
-  composes: labelledStyles from "../../../app/styles/input.module.css";
+  composes: labelledStyles from "../../../styles/input.module.css";
 }
 
 .labelText {
   display: block;
-  max-width: var(--globalInputMaxWidth);
+  max-width: var(--global-input-max-width);
   text-align: center;
   width: 100%;
 }

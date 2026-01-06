@@ -1,19 +1,19 @@
 .blogNav {
-  margin: var(--size-16) auto var(--size-32);
-  max-width: var(--globalTextMaxWidth);
+  margin: var(--size-s16) auto var(--size-s32);
+  max-width: var(--global-text-max-width);
 
   &Link {
-    margin-left: var(--size-8);
+    margin-left: var(--size-s8);
     position: relative;
 
     &::before {
       aspect-ratio: 1;
-      background: var(--colorWhiteGhost);
+      background: var(--color-white-ghost);
       clip-path: var(--clip-path-arrowLeft);
       content: "";
       display: inline-block;
-      margin-right: var(--size-8);
-      width: var(--size-8);
+      margin-right: var(--size-s8);
+      width: var(--size-s8);
     }
   }
 }

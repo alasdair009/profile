@@ -1,18 +1,18 @@
 .root {
-  composes: baseInput from "../../../app/styles/input.module.css";
-  height: var(--size-40);
+  composes: baseInput from "../../../styles/input.module.css";
+  height: var(--size-s40);
 
   &::-webkit-file-upload-button {
     appearance: none;
-    background: var(--colorGreenGrass);
+    background: var(--color-green-grass);
     border: none;
-    color: var(--colorWhiteGhost);
+    color: var(--color-white-ghost);
     cursor: pointer;
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-bold);
     height: 100%;
-    margin-right: var(--size-16);
-    padding: 0 var(--size-16);
+    margin-right: var(--size-s16);
+    padding: 0 var(--size-s16);
 
     &:hover {
       filter: brightness(1.3);

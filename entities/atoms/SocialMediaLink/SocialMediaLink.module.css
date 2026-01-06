@@ -1,7 +1,7 @@
 .root {
   align-items: center;
   aspect-ratio: 1;
-  background: var(--colorblackEvil);
+  background: var(--color-black-evil);
   color: transparent;
   display: flex;
   justify-content: center;
@@ -9,13 +9,13 @@
   mask-size: contain;
   overflow: hidden;
   position: relative;
-  width: var(--size-48);
+  width: var(--size-s48);
 
   &::before {
     background: linear-gradient(
-        var(--colorWhiteGhost) 50%,
-        var(--colorGreenGrass) 50%,
-        var(--colorGreenGrass) 100%
+        var(--color-white-ghost) 50%,
+        var(--color-green-grass) 50%,
+        var(--color-green-grass) 100%
       )
       0 0;
     content: "";

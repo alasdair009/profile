@@ -1,24 +1,24 @@
 @keyframes rotate {
   0% {
-    background-color: var(--colorRedHeat);
+    background-color: var(--color-red-heat);
     transform: translate(-50%, -50%);
   }
 
   25% {
-    background-color: var(--colorGreenGrass);
+    background-color: var(--color-green-grass);
   }
 
   50% {
-    background-color: var(--colorBlueSea);
+    background-color: var(--color-blue-sea);
     transform: translate(-50%, -50%) rotate(360deg);
   }
 
   75% {
-    background-color: var(--colorblackEvil);
+    background-color: var(--color-black-evil);
   }
 
   100% {
-    background-color: var(--colorRedHeat);
+    background-color: var(--color-red-heat);
     transform: translate(-50%, -50%) rotate(720deg);
   }
 }
@@ -35,7 +35,7 @@
     animation: rotate calc(var(--animation-rhythm) * 6) infinite
       var(--curve-linear);
     aspect-ratio: 1;
-    background: var(--colorGreenGrass);
+    background: var(--color-green-grass);
     mask: url("./assets/fan.svg") no-repeat center;
     max-height: 100%;
     max-width: 100%;

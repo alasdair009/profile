@@ -1,9 +1,9 @@
 .root {
   appearance: none;
   border-radius: var(--radii-round);
-  height: var(--size-32);
+  height: var(--size-s32);
   position: absolute;
-  width: var(--size-32);
+  width: var(--size-s32);
 
   &::-webkit-meter-bar {
     background: none;

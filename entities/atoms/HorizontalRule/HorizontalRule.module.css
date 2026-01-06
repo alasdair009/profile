@@ -1,16 +1,16 @@
 .root {
   border: none;
-  margin: var(--size-32) auto;
-  max-width: var(--globalDecorationMaxWidth);
+  margin: var(--size-s32) auto;
+  max-width: var(--global-decoration-max-width);
   padding: 1px;
   position: relative;
   width: 100%;
   z-index: 1;
 
   &::before {
-    background: var(--colorGreenGrass);
+    background: var(--color-green-grass);
     content: "";
-    height: var(--size-2);
+    height: var(--size-s2);
     left: 50%;
     position: absolute;
     top: 50%;
@@ -20,13 +20,13 @@
 
   &::after {
     aspect-ratio: 1;
-    background: var(--colorblackEvil) url("../../assets/am.svg") no-repeat
+    background: var(--color-black-evil) url("../../assets/am.svg") no-repeat
       center;
-    border: var(--size-2) solid var(--colorGreenGrass);
+    border: var(--size-s2) solid var(--color-green-grass);
     border-radius: 50%;
     content: "";
     display: none;
-    height: var(--size-48);
+    height: var(--size-s48);
     left: 50%;
     position: absolute;
     top: 50%;
@@ -39,11 +39,11 @@
   }
 
   &.Top {
-    margin: var(--size-32) auto 0;
+    margin: var(--size-s32) auto 0;
   }
 
   &.Bottom {
-    margin: 0 auto var(--size-32);
+    margin: 0 auto var(--size-s32);
   }
 
   &.None {
@@ -51,31 +51,31 @@
   }
 
   &.Decoration {
-    padding: calc(var(--size-24) + var(--size-2));
+    padding: calc(var(--size-s24) + var(--size-s2));
 
     &::after {
       display: block;
     }
 
     &.Top {
-      margin-bottom: calc(var(--size-24) - var(--size-2) * -1);
+      margin-bottom: calc(var(--size-s24) - var(--size-s2) * -1);
     }
 
     &.Bottom {
-      margin-top: calc(var(--size-24) - var(--size-2) * -1);
+      margin-top: calc(var(--size-s24) - var(--size-s2) * -1);
     }
 
     &.None {
-      margin: calc(var(--size-24) - var(--size-2) * -1) auto;
+      margin: calc(var(--size-s24) - var(--size-s2) * -1) auto;
     }
   }
 
   &.curve {
     margin: 0;
-    padding: var(--size-32) 0;
+    padding: var(--size-s32) 0;
 
     &::before {
-      background: var(--colorGreenGrass);
+      background: var(--color-green-grass);
       height: 100%;
       mask: url("./pulse.svg") no-repeat center;
       mask-size: 100% 100%;

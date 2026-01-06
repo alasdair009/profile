@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`organisms/Trampoline Default play-test 1`] = `
+<style>
+  :root{
+      --animation-rhythm: 1s;
+      box-sizing: border-box;
+      interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+        --animation-rhythm: 0s;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+<div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
+  <div class="Trampoline_root__ha1w_"
+       data-testid="Trampoline"
+  >
+    <br class="Spacer_root__ZPecw"
+        data-testid="Spacer"
+        style="--multiplier: 4;"
+    >
+    <h2 class="Heading_root__TRR0m Heading_h2___CXSx   undefined"
+        data-testid="TrampolineHeading2"
+        style="--align: left; --line-height: 1.3em;"
+    >
+      Trampoline
+    </h2>
+    <h3 class="Heading_root__TRR0m Heading_h3__iI8ZP   undefined"
+        data-testid="TrampolineHeading3"
+        style="--align: left; --line-height: 1.3em;"
+    >
+      Gymnast &amp; Coach
+    </h3>
+    <br class="Spacer_root__ZPecw"
+        data-testid="Spacer"
+        style="--multiplier: 4;"
+    >
+    <img alt="Eurotramp trampoline"
+         loading="lazy"
+         width="341"
+         height="119"
+         decoding="async"
+         data-nimg="1"
+         class="Trampoline_trampolineImage__TbzhU"
+         srcset="/static/media/entities/organisms/Trampoline/trampoline.svg?w=384&amp;q=75 1x, /static/media/entities/organisms/Trampoline/trampoline.svg?w=750&amp;q=75 2x"
+         src="/static/media/entities/organisms/Trampoline/trampoline.svg?w=750&amp;q=75"
+         style="color: transparent;"
+    >
+    <br class="Spacer_root__ZPecw"
+        data-testid="Spacer"
+        style="--multiplier: 4;"
+    >
+  </div>
+</div>
+`;

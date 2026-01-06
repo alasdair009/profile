@@ -4,5 +4,5 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: var(--size-96);
+  width: var(--size-s96);
 }

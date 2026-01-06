@@ -57,7 +57,7 @@
 
   aspect-ratio: 16 / 9;
   background: var(--flag-background);
-  border: 1px solid var(--colorblackEvil);
+  border: 1px solid var(--color-black-evil);
   position: relative;
   transform-origin: 0 250px;
   transform-style: preserve-3d;
@@ -92,7 +92,7 @@
 
   &.showPoll::before {
     background-color: #444;
-    border-radius: var(--radii-2);
+    border-radius: var(--radii-r2);
     content: "";
     height: 240px;
     left: -5px;

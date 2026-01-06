@@ -2,10 +2,10 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--size-32);
+  gap: var(--size-s32);
   justify-content: space-between;
   margin: 0 auto;
-  max-width: var(--globalContentMaxWidth);
-  padding: var(--size-8);
+  max-width: var(--global-content-max-width);
+  padding: var(--size-s8);
   width: 100%;
 }

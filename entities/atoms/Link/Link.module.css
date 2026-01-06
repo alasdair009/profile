@@ -28,11 +28,11 @@
 
 .hoverIFrameWrapper {
   aspect-ratio: 16 / 9;
-  background: var(--colorGreyDark);
-  border: var(--size-8) solid var(--colorGreyDark);
-  box-shadow: 0 0 var(--size-2) var(--size-2) var(--colorblackEvil);
+  background: var(--color-grey-dark);
+  border: var(--size-s8) solid var(--color-grey-dark);
+  box-shadow: 0 0 var(--size-s2) var(--size-s2) var(--color-black-evil);
   display: none;
-  height: calc(var(--size-128) + var(--size-16));
+  height: calc(var(--size-s128) + var(--size-s16));
   overflow: hidden;
   position: absolute;
   left: 50%;
@@ -50,11 +50,11 @@
   }
 
   align-items: center;
-  color: var(--colorWhiteGhost);
+  color: var(--color-white-ghost);
   display: inline-flex;
   font-size: inherit;
   font-weight: var(--font-weight-bold);
-  max-width: var(--size-512);
+  max-width: var(--size-s512);
   overflow-wrap: break-word;
   position: relative;
   text-decoration: none;
@@ -62,7 +62,7 @@
   &::after {
     animation: release calc(var(--animation-rhythm) * 0.2);
     animation-fill-mode: forwards;
-    background: var(--colorWhiteGhost);
+    background: var(--color-white-ghost);
     bottom: -7px;
     clip-path: polygon(
       0 0,
@@ -77,7 +77,7 @@
       0 25%
     );
     content: "";
-    height: var(--size-8);
+    height: var(--size-s8);
     left: 0;
     position: absolute;
     width: 100%;
@@ -99,44 +99,44 @@
 
   &:visited,
   &:active {
-    color: var(--colorWhiteGhost);
+    color: var(--color-white-ghost);
   }
 
   &.Large {
-    color: var(--colorGreenGrass);
+    color: var(--color-green-grass);
     font-size: var(--font-size-large);
-    padding-bottom: calc(var(--size-16) + var(--size-2));
+    padding-bottom: calc(var(--size-s16) + var(--size-s2));
     text-transform: uppercase;
 
     &:visited,
     &:active {
-      color: var(--colorGreenGrass);
+      color: var(--color-green-grass);
     }
 
     &::after {
       bottom: 0;
-      height: var(--size-16);
+      height: var(--size-s16);
     }
   }
 }
 
 .newTabIcon {
   display: inline-block;
-  height: var(--size-16);
-  margin-left: var(--size-4);
-  width: var(--size-16);
+  height: var(--size-s16);
+  margin-left: var(--size-s4);
+  width: var(--size-s16);
 }
 
 .hoverIFrame {
   aspect-ratio: unset;
-  height: calc(1000% - var(--size-16));
+  height: calc(1000% - var(--size-s16));
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%) scale(0.5);
-  width: calc(1000% - var(--size-16));
+  width: calc(1000% - var(--size-s16));
 }
 
 .clamp {
-  composes: lineClamp from "../../../app/styles/lineClamp.module.css";
+  composes: lineClamp from "../../../styles/lineClamp.module.css";
 }

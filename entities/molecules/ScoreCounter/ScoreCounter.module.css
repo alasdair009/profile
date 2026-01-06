@@ -8,7 +8,7 @@
   justify-content: center;
   position: relative;
   transition: --num 4s;
-  width: var(--size-128);
+  width: var(--size-s128);
 
   @property --integer {
     syntax: "<integer>";
@@ -20,7 +20,7 @@
     align-items: center;
     animation: counter calc(var(--animation-rhythm) * 5) var(--curve-linear)
       infinite alternate;
-    color: var(--colorWhiteGhost);
+    color: var(--color-white-ghost);
     content: counter(num);
     display: flex;
     font-size: var(--font-size-mlarge);

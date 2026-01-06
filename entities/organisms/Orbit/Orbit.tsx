@@ -1,7 +1,7 @@
 import { CSSProperties, HTMLAttributes, ReactNode } from "react";
-import { colors } from "@/entities";
 import { lcgNextRand, makeLCG } from "@/lib/random";
 import styles from "./Orbit.module.css";
+import { colors } from "@/styles/tokens";
 
 type OrbitProps = {
   /**
