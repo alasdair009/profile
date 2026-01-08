@@ -1,30 +1,9 @@
-@keyframes rise {
-  0% {
-    opacity: 0;
-    transform: scale(1);
-    bottom: 0;
-  }
-
-  25% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    transform: scale(0);
-    bottom: 75%;
-  }
-}
-
 .ember {
   --animationDelay: 0;
-  --baseColor: transparent;
-  --duration: 0;
-  --particleSize: 0;
   --index: 0;
-  --numberOfParticles: 0;
 
-  animation: rise calc(var(--duration) * 1s) ease-in infinite;
+  animation: var(--animation-name-rise) calc(var(--duration) * 1s) ease-in
+    infinite;
   animation-delay: calc(var(--animationDelay) * var(--duration) * 1s);
   aspect-ratio: 1;
   background-image: radial-gradient(var(--baseColor) 20%, transparent 70%);
@@ -41,6 +20,11 @@
 }
 
 .root {
+  --baseColor: transparent;
+  --duration: 0;
+  --numberOfParticles: 0;
+  --particleSize: 0;
+
   filter: blur(1px);
   position: relative;
 }

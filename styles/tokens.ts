@@ -2,6 +2,14 @@ import { CSSProperties } from "react";
 import { toCssVars } from "@/styles/style-helpers";
 import type { Breakpoint, HeadingTypes, FontSizes } from "./styles.types";
 
+export const animationNames: Record<
+  string,
+  Exclude<CSSProperties["animationName"], undefined>
+> = {
+  fall: "fall",
+  rise: "rise",
+};
+
 export const curves: Record<
   string,
   Exclude<CSSProperties["animationTimingFunction"], undefined>
@@ -333,6 +341,7 @@ export const fontWeights: Record<"regular" | "bold" | "black", number> = {
 };
 
 export const allTokens = {
+  ...toCssVars(animationNames, "animation-name"),
   ...toCssVars(curves, "curve"),
   ...toCssVars(clipPaths, "clip-path"),
   ...toCssVars(colors, "color"),

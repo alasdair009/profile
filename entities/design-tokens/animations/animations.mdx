@@ -1,6 +1,7 @@
 import { Meta, Source } from "@storybook/addon-docs/blocks";
 import { CurveViewer } from "./CurveViewer";
-import { curves } from "../../../styles/tokens";
+import { animationNames, curves } from "../../../styles/tokens";
+import { AnimationViewer } from "./AnimationViewer";
 
 <Meta title="Design Tokens/Animations" />
 
@@ -9,6 +10,10 @@ import { curves } from "../../../styles/tokens";
 I use a variety of animations across my site. CSS animations are powerful tools but using them cleanly and consistently is essential.
 
 It should also be possible to opt out of animations on a web page but maintain a consistent cognitive load (see prefers reduced motion below).
+
+## Animation Names
+
+<AnimationViewer animationNames={animationNames} />
 
 ## Curves
 
@@ -28,7 +33,8 @@ To ensure this is honored I have provided the following functions:
   dark={true}
 />
 
-When using JavaScript to setup animations you can import the `prefersReducedMotion` boolean to easily check the user's preference.
+When using JavaScript to setup animations you can import the
+import {AnimationViewer} from "./AnimationViewer"; `prefersReducedMotion` boolean to easily check the user's preference.
 
 <Source
   language="ts"

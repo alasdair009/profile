@@ -7,3 +7,55 @@
     --animation-rhythm: 0s;
   }
 }
+
+@keyframes rise {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+    bottom: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+    bottom: 75%;
+  }
+}
+
+@keyframes fall {
+  0% {
+    opacity: 0;
+    transform: translateX(0) rotate(0);
+    top: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  25% {
+    transform: translateX(calc(var(--size-s16) * -1)) rotate(90deg);
+  }
+
+  50% {
+    transform: translateX(0) rotate(180deg);
+  }
+
+  75% {
+    transform: translateX(var(--size-s16)) rotate(270deg);
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    top: 100%;
+    transform: rotate(360deg) translateX(0);
+  }
+}
