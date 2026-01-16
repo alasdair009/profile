@@ -59,3 +59,55 @@
     transform: rotate(360deg) translateX(0);
   }
 }
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes threeDRotate {
+  0%,
+  100% {
+    transform: perspective(1000px) rotateX(-18deg) rotateY(0);
+  }
+
+  25% {
+    transform: perspective(1000px) rotateX(0) rotateY(-18deg);
+  }
+
+  50% {
+    transform: perspective(1000px) rotateX(18deg) rotateY(0);
+  }
+
+  75% {
+    transform: perspective(1000px) rotateX(0) rotateY(18deg);
+  }
+}
+
+@keyframes orbit {
+  0% {
+    opacity: 0.4;
+    transform: rotate(0deg) var(--translate) rotate(0deg);
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0.4;
+    transform: rotate(360deg) var(--translate) rotate(-360deg);
+  }
+}
+
+@keyframes fade {
+  0%,
+  66% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 1;
+  }
+}

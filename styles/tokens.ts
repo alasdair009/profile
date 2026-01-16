@@ -6,8 +6,12 @@ export const animationNames: Record<
   string,
   Exclude<CSSProperties["animationName"], undefined>
 > = {
+  fade: "fade",
   fall: "fall",
+  orbit: "orbit",
   rise: "rise",
+  rotate: "rotate",
+  threeDRotate: "threeDRotate",
 };
 
 export const curves: Record<
@@ -25,6 +29,7 @@ export const clipPaths: Record<
   Exclude<CSSProperties["clipPath"], undefined>
 > = {
   arrowLeft: "polygon(0 50%, 100% 0, 100% 100%)",
+  arrowRight: "polygon(100% 50%, 0 0, 0 100%)",
   blinds: `polygon(
     0% 5%,
     100% 5%,

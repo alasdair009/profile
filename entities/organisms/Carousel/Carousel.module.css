@@ -1,0 +1,106 @@
+.root {
+  margin: 0 auto;
+  max-width: var(--global-content-max-width);
+  padding-bottom: var(--size-s40);
+  position: relative;
+  width: 100%;
+}
+
+.carousel {
+  anchor-name: --carousel;
+  aspect-ratio: 16 / 9;
+  border: var(--size-s2) solid var(--color-green-grass);
+  display: flex;
+  gap: var(--size-s8);
+  margin: 0 auto;
+  max-width: var(--size-s512);
+  overflow-x: scroll;
+  position: relative;
+  scroll-marker-group: after;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+
+  &::scroll-button(*) {
+    aspect-ratio: 1;
+    background: var(--color-green-grass);
+    border: 0;
+    font-size: 2rem;
+    opacity: 0.7;
+    position: absolute;
+    position-anchor: --carousel;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: var(--size-s32);
+
+    &:hover,
+    &:focus {
+      filter: brightness(1.3);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &::scroll-button(left) {
+    clip-path: var(--clip-path-arrow-left);
+    content: "";
+    left: anchor(--carousel left);
+  }
+
+  &::scroll-button(right) {
+    clip-path: var(--clip-path-arrow-right);
+    content: "";
+    right: anchor(--carousel right);
+  }
+
+  &::scroll-marker-group {
+    display: flex;
+    gap: var(--size-s24);
+    justify-content: center;
+    justify-self: anchor-center;
+    position: absolute;
+    position-anchor: --carousel;
+    top: calc(anchor(--carousel bottom) + var(--size-s8));
+  }
+}
+
+.slide {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  justify-content: space-between;
+  margin: 0;
+  scroll-snap-align: center;
+  width: 100%;
+
+  &::scroll-marker {
+    content: attr(data-title);
+    width: var(--size-s16);
+    height: var(--size-s16);
+    background-color: transparent;
+    border: var(--size-s2) solid var(--color-green-grass);
+    border-radius: var(--radii-round);
+    overflow: hidden;
+    text-indent: 16px;
+  }
+
+  &::scroll-marker:target-current {
+    background-color: var(--color-grey-light);
+    transition: all calc(var(--animation-rhythm) * 0.7) var(--curve-linear);
+  }
+}
+
+.image {
+  flex: 1;
+}
+
+.caption {
+  background: var(--color-black-evil);
+  display: flex;
+  justify-content: center;
+  padding: var(--size-s16);
+  width: 100%;
+}

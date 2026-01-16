@@ -57,6 +57,7 @@ export { StatBox } from "./molecules/StatBox";
 
 export { Article } from "./organisms/Article";
 export { BlogList } from "./organisms/BlogList";
+export { Carousel } from "./organisms/Carousel";
 export { ContactForm } from "./organisms/ContactForm";
 export { Container } from "./organisms/Container";
 export { CopyBlock } from "./organisms/CopyBlock";
