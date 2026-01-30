@@ -12,6 +12,7 @@ import {
   Paragraph,
 } from "@/entities";
 import { urlFor } from "@/lib/sanity/client";
+import { CanIUse } from "@/entities/molecules/CanIUse/CanIUse";
 
 export const getPtComponents: () => Promise<
   Partial<PortableTextReactComponents>
@@ -46,6 +47,9 @@ export const getPtComponents: () => Promise<
     types: {
       audio: ({ value }) => {
         return <Audio src={value.source} />;
+      },
+      caniuse: ({ value }) => {
+        return <CanIUse feature={value.feature} />;
       },
       codeBlock: ({ value }) => {
         return (

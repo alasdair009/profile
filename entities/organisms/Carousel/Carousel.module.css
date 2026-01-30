@@ -16,6 +16,7 @@
   max-width: var(--size-s512);
   overflow-x: scroll;
   position: relative;
+  scroll-behavior: smooth;
   scroll-marker-group: after;
   scroll-snap-type: x mandatory;
   width: 100%;

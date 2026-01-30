@@ -1,0 +1,8 @@
+.root {
+  margin: 0 auto;
+  position: relative;
+}
+
+.text {
+  max-width: var(--size-s512);
+}
