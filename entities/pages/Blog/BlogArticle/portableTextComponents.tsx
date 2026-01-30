@@ -48,7 +48,7 @@ export const getPtComponents: () => Promise<
       audio: ({ value }) => {
         return <Audio src={value.source} />;
       },
-      caniuse: ({ value }) => {
+      canIUse: ({ value }) => {
         return <CanIUse feature={value.feature} />;
       },
       codeBlock: ({ value }) => {

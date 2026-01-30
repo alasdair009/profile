@@ -7,6 +7,9 @@
 }
 
 .carousel {
+  --scroll-button-content: "";
+  --scroll-behaviour: smooth;
+  --scroll-marker-display: flex;
   anchor-name: --carousel;
   aspect-ratio: 16 / 9;
   border: var(--size-s2) solid var(--color-green-grass);
@@ -16,7 +19,7 @@
   max-width: var(--size-s512);
   overflow-x: scroll;
   position: relative;
-  scroll-behavior: smooth;
+  scroll-behavior: var(--scroll-behaviour);
   scroll-marker-group: after;
   scroll-snap-type: x mandatory;
   width: 100%;
@@ -30,7 +33,7 @@
     position: absolute;
     position-anchor: --carousel;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-100%);
     cursor: pointer;
     width: var(--size-s32);
 
@@ -46,18 +49,18 @@
 
   &::scroll-button(left) {
     clip-path: var(--clip-path-arrow-left);
-    content: "";
+    content: var(--scroll-button-content);
     left: anchor(--carousel left);
   }
 
   &::scroll-button(right) {
     clip-path: var(--clip-path-arrow-right);
-    content: "";
+    content: var(--scroll-button-content);
     right: anchor(--carousel right);
   }
 
   &::scroll-marker-group {
-    display: flex;
+    display: var(--scroll-marker-display);
     gap: var(--size-s24);
     justify-content: center;
     justify-self: anchor-center;
@@ -96,6 +99,7 @@
 
 .image {
   flex: 1;
+  object-fit: fill;
 }
 
 .caption {

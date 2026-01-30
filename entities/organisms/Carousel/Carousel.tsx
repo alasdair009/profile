@@ -1,8 +1,20 @@
-import { HTMLAttributes } from "react";
+import { CSSProperties, HTMLAttributes } from "react";
 import styles from "./Carousel.module.css";
 import Image, { StaticImageData } from "next/image";
 
 type CarouselProps = {
+  /**
+   * How the slides transition.
+   */
+  scrollBehaviour?: CSSProperties["scrollBehavior"];
+  /**
+   * Show the scroll buttons for the slides.
+   */
+  showScrollButtons?: boolean;
+  /**
+   * Show scroll markers.
+   */
+  showScrollMarkers?: boolean;
   /**
    * Images to display.
    */
@@ -12,14 +24,30 @@ type CarouselProps = {
 /**
  * HTML and CSS only Carousel for showing images.
  */
-export function Carousel({ assets, className = "", ...rest }: CarouselProps) {
+export function Carousel({
+  assets,
+  className = "",
+  scrollBehaviour = "smooth",
+  showScrollButtons = true,
+  showScrollMarkers = true,
+  ...rest
+}: CarouselProps) {
   return (
     <div
       className={`${styles.root} ${className}`}
       data-testid={Carousel.displayName}
       {...rest}
     >
-      <div className={styles.carousel}>
+      <div
+        className={styles.carousel}
+        style={
+          {
+            "--scroll-behaviour": scrollBehaviour,
+            "--scroll-button-content": showScrollButtons ? "''" : "unset",
+            "--scroll-marker-display": showScrollMarkers ? "flex" : "none",
+          } as CSSProperties
+        }
+      >
         {assets.map((asset) => {
           return (
             <figure
