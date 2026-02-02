@@ -1,6 +1,12 @@
 import { CSSProperties } from "react";
 import { toCssVars } from "@/styles/style-helpers";
-import type { Breakpoint, HeadingTypes, FontSizes } from "./styles.types";
+import {
+  Breakpoint,
+  HeadingTypes,
+  FontSizes,
+  ColorKey,
+  SizeKey,
+} from "./styles.types";
 
 export const animationNames: Record<
   string,
@@ -188,7 +194,7 @@ export const clipPaths: Record<
 };
 
 export const colors: Record<
-  string,
+  ColorKey,
   Exclude<CSSProperties["color"], undefined>
 > = {
   blackEvil: "#000",
@@ -201,7 +207,7 @@ export const colors: Record<
   redHeat: "#df1c41",
 };
 
-export const sizes: Record<`s${number}`, number> = {
+export const sizes: Record<SizeKey, number> = {
   s2: 2,
   s4: 4,
   s8: 8,
