@@ -57,7 +57,7 @@ export function Heading<T extends ElementType = "h1">({
   level = "h1",
   as,
   align = "left",
-  color = colors.colorWhiteGhost,
+  color = colors.whiteGhost,
   textShadow = false,
   lines,
   children,

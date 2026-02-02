@@ -4,5 +4,5 @@
   display: inline-block;
   font-family: monospace;
   -webkit-overflow-scrolling: touch;
-  padding: 8px;
+  padding: 0 8px;
 }

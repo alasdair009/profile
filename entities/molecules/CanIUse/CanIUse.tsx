@@ -23,6 +23,7 @@ export function CanIUse({
         {...rest}
       >
         <IFrame
+          className={styles.frame}
           src={`https://caniuse.bitsofco.de/embed/index.html?feat=${feature}&periods=${periods}`}
         />
         <Paragraph

@@ -35,16 +35,16 @@ export function TimelineElement({
       <VerticalTimelineElement
         visible={inView}
         contentStyle={{
-          background: colors.colorGreenGrass,
-          color: colors.colorWhiteGhost,
+          background: colors.greenGrass,
+          color: colors.whiteGhost,
         }}
         contentArrowStyle={{
-          borderRight: `${toRem(sizes.s8)} solid  ${colors.colorGreenGrass}`,
+          borderRight: `${toRem(sizes.s8)} solid  ${colors.greenGrass}`,
         }}
         date={date}
         iconStyle={{
-          background: colors.colorGreenGrass,
-          color: colors.colorWhiteGhost,
+          background: colors.greenGrass,
+          color: colors.whiteGhost,
         }}
         icon={<Image className={styles.logo} src={icon} alt={alt} />}
       >

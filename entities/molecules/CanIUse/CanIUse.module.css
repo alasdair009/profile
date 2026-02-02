@@ -1,6 +1,10 @@
 .root {
-  margin: 0 auto;
+  margin: 0 auto 40px;
   position: relative;
+}
+
+.frame {
+  max-height: 360px;
 }
 
 .text {

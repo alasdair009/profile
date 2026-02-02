@@ -11,10 +11,10 @@ type IFrameProps = {
 /**
  * An HTML iframe for external content
  */
-export function IFrame({ ...rest }: IFrameProps) {
+export function IFrame({ className = "", ...rest }: IFrameProps) {
   return (
     <iframe
-      className={styles.root}
+      className={`${styles.root} ${className}`}
       {...rest}
       allowFullScreen={true}
       data-testid={IFrame.name}
