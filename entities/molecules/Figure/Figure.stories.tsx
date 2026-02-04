@@ -6,9 +6,14 @@ import amLogo from "../../assets/am.svg";
 const meta: Meta<typeof Figure> = {
   component: Figure,
   args: {
-    alt: "Alt text about the image.",
+    imageProps: {
+      alt: "Alt text about the image.",
+      src: amLogo,
+      sizes: "100vw",
+      loading: "lazy",
+      fill: true,
+    },
     caption: "A caption about the image.",
-    src: amLogo.src,
   },
 };
 export default meta;

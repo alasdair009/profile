@@ -2,6 +2,7 @@ import { HTMLAttributes, ReactNode } from "react";
 import { Heading, Spacer } from "@/entities";
 import styles from "./Article.module.css";
 import Image from "next/image";
+import { breakpoints } from "@/styles/tokens";
 
 type ArticleProps = {
   heading: string;
@@ -57,6 +58,7 @@ export function Article({
           src={image}
           alt={heading}
           fill={true}
+          sizes={`(max-width: ${breakpoints.large}px) 100vw, 1184px`}
           style={{ objectFit: "cover" }}
           priority={true}
         />

@@ -1,27 +1,20 @@
 import Image from "next/image";
-import { HTMLAttributes } from "react";
+import { ComponentProps, HTMLAttributes } from "react";
 import styles from "./Figure.module.css";
 
 type FigureProps = {
-  alt: string;
-  src: string;
   caption?: string;
+  imageProps: ComponentProps<typeof Image>;
 } & HTMLAttributes<HTMLDivElement>;
 
 /**
  * Image with caption in semantic html.
  */
-export function Figure({ alt, src, caption, ...rest }: FigureProps) {
+export function Figure({ imageProps, caption, ...rest }: FigureProps) {
   return (
     <figure className={styles.root} data-testid={Figure.name} {...rest}>
       <div className={styles.inner}>
-        <Image
-          alt={alt}
-          loading="lazy"
-          src={src}
-          fill
-          className={styles.image}
-        />
+        <Image className={styles.image} {...imageProps} />
       </div>
       {caption && <figcaption className={styles.caption}>{caption}</figcaption>}
     </figure>

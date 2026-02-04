@@ -13,6 +13,8 @@ import {
 } from "@/entities";
 import { urlFor } from "@/lib/sanity/client";
 import { CanIUse } from "@/entities/molecules/CanIUse/CanIUse";
+import { breakpoints } from "@/styles/tokens";
+import styles from "@/entities/molecules/Figure/Figure.module.css";
 
 export const getPtComponents: () => Promise<
   Partial<PortableTextReactComponents>
@@ -66,13 +68,20 @@ export const getPtComponents: () => Promise<
         }
         return (
           <Figure
-            alt={value.alt || " "}
-            src={urlFor(value)
-              .width(1024)
-              .height(576)
-              .fit("max")
-              .auto("format")
-              .url()}
+            imageProps={{
+              src: urlFor(value)
+                .width(1024)
+                .height(576)
+                .fit("max")
+                .auto("format")
+                .url(),
+              alt: value.alt || " ",
+              sizes: `(max-width: ${breakpoints.large}px) 100vw, 1184px`,
+              placeholder: "blur",
+              blurDataURL: urlFor(value).width(8).height(6).blur(10).url(),
+              loading: "lazy",
+              fill: true,
+            }}
             caption={value.title}
           />
         );
