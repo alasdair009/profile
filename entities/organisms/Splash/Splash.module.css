@@ -41,7 +41,7 @@
     to right,
     var(--color-white-ghost),
     var(--color-white-ghost) 50%,
-    var(--color-white-ghost) 50%
+    var(--color-black-evil) 50%
   );
   height: 480px;
   position: relative;
