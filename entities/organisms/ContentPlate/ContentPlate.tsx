@@ -47,7 +47,7 @@ export function ContentPlate({
         <div className={styles.copyBox}>{children}</div>
         {embedUrl && (
           <div className={styles.frameBoxWrapper}>
-            <IFrame src={embedUrl} />
+            <IFrame src={embedUrl} title="" />
           </div>
         )}
         {flameColor && (

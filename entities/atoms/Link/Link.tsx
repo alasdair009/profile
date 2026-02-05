@@ -50,7 +50,11 @@ export function Link({
       )}
       {hoverFrame && (
         <div className={styles.hoverIFrameWrapper}>
-          <IFrame className={styles.hoverIFrame} src={href} />
+          <IFrame
+            className={styles.hoverIFrame}
+            src={href}
+            title="Link preview"
+          />
         </div>
       )}
     </ViewTransitionLink>

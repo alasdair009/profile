@@ -87,7 +87,7 @@ export const getPtComponents: () => Promise<
         );
       },
       youtube: ({ value }) => {
-        return <IFrame src={value.url} />;
+        return <IFrame src={value.url} title="YouTube embed" />;
       },
     },
     marks: {

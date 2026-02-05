@@ -6,6 +6,10 @@ type IFrameProps = {
    * URL for the iframe content
    */
   src: string;
+  /**
+   * Title to describe frame content for accessibility
+   */
+  title: string;
 } & HTMLAttributes<HTMLIFrameElement>;
 
 /**

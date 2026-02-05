@@ -6,6 +6,7 @@ const meta: Meta<typeof IFrame> = {
   component: IFrame,
   args: {
     src: "https://www.alasdairmacrae.co.uk",
+    title: "IFrame of Alasdair's profile site",
   },
 };
 export default meta;
@@ -17,5 +18,6 @@ export const Default: StoryObj<typeof IFrame> = {
 
     await expect(iFrameElement).toBeInTheDocument();
     await expect(iFrameElement).toHaveAttribute("src", args.src);
+    await expect(iFrameElement).toHaveAttribute("title", args.title);
   },
 };
