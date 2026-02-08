@@ -74,9 +74,12 @@ export function AboutMe({
         <Paragraph>
           I reside in Suffolk UK and am a rollercoaster fanatic and always like
           to take a few days per year to visit theme parks up and down the
-          country. I have over{" "}
+          country. I have
           <Link href="/about-me/rollercoasters">
-            {numberOfRollercoasters} credits from coasters around the world
+            {numberOfRollercoasters > 0
+              ? `over ${numberOfRollercoasters}`
+              : "many"}{" "}
+            credits from coasters around the world
           </Link>{" "}
           with my personal favourite ride being <strong>Tatsu</strong> at Six
           Flags Magic Mountain closely followed by <strong>Kingda Ka</strong> at

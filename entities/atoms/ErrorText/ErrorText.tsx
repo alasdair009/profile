@@ -35,6 +35,7 @@ export function ErrorText({
         {
           "--color": colors.redHeat,
           "--font-size": "small",
+          "--margin": "0 auto",
           "--text-align": align,
           ...style,
         } as CSSProperties

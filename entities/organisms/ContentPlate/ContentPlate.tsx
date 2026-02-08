@@ -63,6 +63,7 @@ export function ContentPlate({
               className={styles.foregroundImage}
               src={foregroundImage}
               alt={foregroundImageAlt}
+              sizes={"(max-width: 400px) 100vw, 400px"}
             />
           </figure>
         )}

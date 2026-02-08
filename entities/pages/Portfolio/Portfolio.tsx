@@ -28,9 +28,11 @@ import { rgba } from "polished";
 import Image from "next/image";
 import amLogo from "@/entities/assets/am.svg";
 import jdsLogo from "@/entities/assets/jds-logo.svg";
+import leaguesScreenshotImage from "@/entities/assets/leagues.webp";
 import jagexLauncherImage from "@/entities/assets/launcher.webp";
 import runeScapeNewsImage from "@/entities/assets/runescape-news.webp";
 import jagexCorporateImage from "@/entities/assets/jagex-corporate.webp";
+import rebrandImage from "@/entities/assets/rebrand.webp";
 import runeFestImage from "@/entities/assets/runefest.webp";
 import weatherImage from "@/entities/assets/weather.webp";
 import { colors } from "@/styles/tokens";
@@ -230,6 +232,43 @@ export function Portfolio({ ...rest }: PortfolioProps) {
           the owner / business.
         </Paragraph>
       </section>
+      <PortfolioPlate
+        contentPlateProps={{
+          foregroundImageAlt: "",
+          foregroundImage: rebrandImage,
+          foregroundAnimate: true,
+          backgroundCss: `linear-gradient(#101d23,black)`,
+        }}
+        heading="RuneScape and Jagex rebrand"
+      >
+        <Paragraph>
+          Implemented and coordinated a brand refresh and update across Jagex's
+          entire ecosystem that included a simultaneous launch of over 50
+          systems including websites, apps, billing systems and internal
+          tooling.
+        </Paragraph>
+      </PortfolioPlate>
+      <PortfolioPlate
+        contentPlateProps={{
+          foregroundImageAlt: "",
+          foregroundImage: leaguesScreenshotImage,
+          foregroundAnimate: true,
+          orientation: "right",
+          backgroundCss: `linear-gradient(#101d23,black)`,
+        }}
+        heading="RuneScape & Old School RuneScape Community App"
+        url="https://rs.runescape.com/hiscores/leagues"
+      >
+        <Paragraph>
+          Built a multi-tenant Next app to support community immersion for
+          RuneScape and Old School RuneScape with accompanying Storybook design
+          system.
+        </Paragraph>
+        <Paragraph>
+          The system includes HiScores, Polls and other systems that encourage
+          players to return and immerse themselves in the games.
+        </Paragraph>
+      </PortfolioPlate>
       <PortfolioPlate
         contentPlateProps={{
           foregroundImageAlt: "White Jagex logo part-way through being drawn",
