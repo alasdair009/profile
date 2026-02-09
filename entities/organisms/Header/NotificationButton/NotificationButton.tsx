@@ -33,11 +33,11 @@ export function NotificationButton({
     }
   }, []);
 
-  useEffect(() => {
-    if ("Notification" in window) {
-      setNotificationState(Notification.permission);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if ("Notification" in window) {
+  //     setNotificationState(Notification.permission);
+  //   }
+  // }, []);
 
   return (
     <Button

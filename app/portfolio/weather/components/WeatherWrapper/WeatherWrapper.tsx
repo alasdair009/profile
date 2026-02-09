@@ -54,7 +54,7 @@ export function WeatherWrapper({ ...rest }: WeatherWrapperProps) {
   }, [currentData, isPending]);
 
   useEffect(() => {
-    updateUi();
+    updateUi().then(r => {});
   }, []);
 
   return (

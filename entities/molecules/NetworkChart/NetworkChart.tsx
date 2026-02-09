@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable react-hooks/set-state-in-effect */
 import { GraphCanvas, darkTheme } from "reagraph";
 import type { GraphEdge, GraphNode, Theme, GraphSceneProps } from "reagraph";
 import { ErrorText } from "@/entities";

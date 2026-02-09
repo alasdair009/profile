@@ -44,10 +44,12 @@ export async function generateMetadata(props: any) {
 
 export default async function ArticlePage(props: any) {
   const params = await props.params;
+  let post: Post;
   try {
-    const post = await getPost(params.slug);
-    return <BlogArticle post={post} sanityClient={sanityClient} />;
+    post = await getPost(params.slug);
   } catch (e) {
     return notFound();
   }
+
+  return <BlogArticle post={post} sanityClient={sanityClient} />;
 }

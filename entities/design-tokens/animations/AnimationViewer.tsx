@@ -10,7 +10,7 @@ export function AnimationViewer({ animationNames }: AnimationViewerProps) {
     <div className={styles.animationViewer}>
       {Object.keys(animationNames).map((animationName) => {
         return (
-          <div className={styles.animationView}>
+          <div className={styles.animationView} key={animationName}>
             <span
               className={styles.animationViewInner}
               style={{ animationName: animationNames[animationName] }}

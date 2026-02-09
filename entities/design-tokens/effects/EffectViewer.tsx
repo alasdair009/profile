@@ -11,7 +11,7 @@ export function EffectViewer({ effectProperty, effects }: EffectViewerProps) {
       {Object.keys(effects).map((effectKey) => {
         const effectValue = effects[effectKey];
         return (
-          <div className={styles.outer}>
+          <div className={styles.outer} key={effectKey}>
             <span
               className={styles.inner}
               style={{ [effectProperty]: effectValue }}

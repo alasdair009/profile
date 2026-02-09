@@ -20,7 +20,13 @@ export function ScoreCounter({ value = 100, ...rest }: ScoreCounterProps) {
     prefersReducedMotion ? value : 0
   );
 
-  const { ref, inView } = useInView({ threshold: 1 });
+  const { ref, inView } = useInView({
+    threshold: 1,
+    onChange: (nextInView) => {
+      if (prefersReducedMotion) return;
+      if (!nextInView) setProgressValue(0);
+    },
+  });
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -47,7 +53,7 @@ export function ScoreCounter({ value = 100, ...rest }: ScoreCounterProps) {
     } else {
       setProgressValue(0);
     }
-  }, [inView]);
+  }, [inView, value]);
 
   return (
     <div

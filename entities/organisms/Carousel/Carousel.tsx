@@ -53,6 +53,7 @@ export function Carousel({
             <figure
               className={styles.slide}
               data-testid={`${Carousel.displayName}Slide`}
+              key={asset.title}
             >
               <Image className={styles.image} src={asset.src} alt={asset.alt} />
               <figcaption className={styles.caption}>{asset.title}</figcaption>

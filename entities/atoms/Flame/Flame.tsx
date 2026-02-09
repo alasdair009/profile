@@ -92,9 +92,8 @@ export function Flame({
   const [canvasWidth, setCanvasWidth] = useState(0);
   const rgbColors = hexToRgb(baseColor);
 
-  let particles: Particle[] = [];
-
   useEffect(() => {
+    const particles: Particle[] = [];
     let interval: NodeJS.Timeout;
     const resizeCanvas = (ctx: CanvasRenderingContext2D) => {
       if (!canvasRef.current || !containerRef.current) {
@@ -184,7 +183,6 @@ export function Flame({
     spreadPercentage,
     particlesPerFrame,
     speed,
-    particles,
     rgbColors.r,
     rgbColors.g,
     rgbColors.b,

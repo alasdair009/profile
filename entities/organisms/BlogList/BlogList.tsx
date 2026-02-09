@@ -13,8 +13,16 @@ type BlogListProps = {
  * Display a list of all the blog articles
  */
 export async function BlogList({ sanityClient, ...rest }: BlogListProps) {
+  let posts: Post[] = [];
   try {
-    const posts = await sanityClient.fetch<Post[]>(GET_ALL_POSTS);
+    posts = await sanityClient.fetch<Post[]>(GET_ALL_POSTS);
+  } catch {
+    return (
+        <ErrorText align="center">
+          Sorry - I was unable to get articles at this time.
+        </ErrorText>
+    );
+  }
     return (
       <div className={styles.root} data-testid={BlogList.displayName} {...rest}>
         {posts.map((post) => {
@@ -34,12 +42,5 @@ export async function BlogList({ sanityClient, ...rest }: BlogListProps) {
         })}
       </div>
     );
-  } catch (e) {
-    return (
-      <ErrorText align="center">
-        Sorry - I was unable to get articles at this time.
-      </ErrorText>
-    );
-  }
 }
 BlogList.displayName = "BlogList";

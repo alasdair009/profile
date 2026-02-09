@@ -242,7 +242,7 @@ export function Portfolio({ ...rest }: PortfolioProps) {
         heading="RuneScape and Jagex rebrand"
       >
         <Paragraph>
-          Implemented and coordinated a brand refresh and update across Jagex's
+          Implemented and coordinated a brand refresh and update across Jagex&apos;s
           entire ecosystem that included a simultaneous launch of over 50
           systems including websites, apps, billing systems and internal
           tooling.
