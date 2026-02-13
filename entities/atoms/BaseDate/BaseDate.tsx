@@ -29,14 +29,6 @@ export function BaseDate({
     setIsInvalidState(false);
   };
 
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) return null;
-
   const minValue = min
     ? formatDateForInput(min, type === "datetime-local")
     : undefined;

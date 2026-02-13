@@ -7,7 +7,7 @@ const meta: Meta<typeof LabelledInput> = {
   component: LabelledInput,
   args: {
     name: "textentry",
-    value: "hello",
+    defaultValue: "hello",
     required: true,
     isInvalid: false,
     label: "Text entry",

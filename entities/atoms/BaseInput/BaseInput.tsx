@@ -1,7 +1,7 @@
 "use client";
 import styles from "./BaseInput.module.css";
 import { BaseInputProps } from "./BaseInput.types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 /**
  * Base input type
@@ -12,14 +12,6 @@ export function BaseInput({ isInvalid = false, ...rest }: BaseInputProps) {
   const handleOnChange = () => {
     setIsInvalidState(false);
   };
-
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) return null;
 
   return (
     <input

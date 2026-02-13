@@ -17,14 +17,6 @@ export function BaseFile({
     setIsInvalidState(false);
   };
 
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) return null;
-
   return (
     <input
       className={`${styles.root} ${isInvalidState ? styles.rootStateInvalid : ""} ${className}`}
