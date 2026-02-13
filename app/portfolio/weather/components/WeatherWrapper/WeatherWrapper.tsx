@@ -1,7 +1,7 @@
 "use client";
 import { WeatherStation } from "@/entities/organisms/WeatherStation";
 import { WeatherData } from "../../types";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 type WeatherWrapperProps = {};
 
@@ -31,7 +31,7 @@ export function WeatherWrapper({ ...rest }: WeatherWrapperProps) {
   );
   const [isPending, setIsPending] = useState(true);
 
-  const updateUi = async () => {
+  const updateUi = useCallback(async () => {
     setIsPending(true);
     const weatherResponseData = await getData();
 
@@ -43,19 +43,23 @@ export function WeatherWrapper({ ...rest }: WeatherWrapperProps) {
     setCurrentData(weatherResponseData);
 
     setIsPending(false);
-  };
+  }, []);
 
   useEffect(() => {
-    const weatherCallInterval = setInterval(async () => {
-      await updateUi();
+    // Defer the first run so we don't call setState synchronously from the effect body
+    const initial = window.setTimeout(() => {
+      void updateUi();
+    }, 0);
+
+    const weatherCallInterval = window.setInterval(() => {
+      void updateUi();
     }, 10000);
 
-    return () => clearInterval(weatherCallInterval);
-  }, [currentData, isPending]);
-
-  useEffect(() => {
-    updateUi().then(r => {});
-  }, []);
+    return () => {
+      clearTimeout(initial);
+      clearInterval(weatherCallInterval);
+    };
+  }, [updateUi]);
 
   return (
     <div data-testid={WeatherWrapper.name} {...rest}>

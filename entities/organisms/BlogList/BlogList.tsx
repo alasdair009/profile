@@ -18,29 +18,29 @@ export async function BlogList({ sanityClient, ...rest }: BlogListProps) {
     posts = await sanityClient.fetch<Post[]>(GET_ALL_POSTS);
   } catch {
     return (
-        <ErrorText align="center">
-          Sorry - I was unable to get articles at this time.
-        </ErrorText>
+      <ErrorText align="center">
+        Sorry - I was unable to get articles at this time.
+      </ErrorText>
     );
   }
-    return (
-      <div className={styles.root} data-testid={BlogList.displayName} {...rest}>
-        {posts.map((post) => {
-          const postDate = new Date(post.publishedAt);
-          return (
-            <Card
-              key={post.title}
-              href={`/blog/${post.slug.current}`}
-              title={post.title}
-              date={postDate}
-              image={imageUrlBuilder(sanityClient)
-                .image(post.mainImage.asset)
-                .url()}
-              imageAlt={`Image for the ${post.title} article`}
-            />
-          );
-        })}
-      </div>
-    );
+  return (
+    <div className={styles.root} data-testid={BlogList.displayName} {...rest}>
+      {posts.map((post) => {
+        const postDate = new Date(post.publishedAt);
+        return (
+          <Card
+            key={post.title}
+            href={`/blog/${post.slug.current}`}
+            title={post.title}
+            date={postDate}
+            image={imageUrlBuilder(sanityClient)
+              .image(post.mainImage.asset)
+              .url()}
+            imageAlt={`Image for the ${post.title} article`}
+          />
+        );
+      })}
+    </div>
+  );
 }
 BlogList.displayName = "BlogList";

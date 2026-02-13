@@ -29,30 +29,19 @@ export function ScoreCounter({ value = 100, ...rest }: ScoreCounterProps) {
   });
 
   useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
+    if (prefersReducedMotion) return;
+    if (!inView) return;
 
-    if (inView) {
-      let start = 0;
-      if (start >= value) {
-        return;
-      }
+    let start = 0;
+    if (start >= value) return;
 
-      const progressInterval = setInterval(() => {
-        start += 2;
-        setProgressValue(start);
-        if (start >= value) {
-          clearInterval(progressInterval);
-        }
-      }, 1);
+    const progressInterval = setInterval(() => {
+      start += 2;
+      setProgressValue(start);
+      if (start >= value) clearInterval(progressInterval);
+    }, 1);
 
-      return () => {
-        clearInterval(progressInterval);
-      };
-    } else {
-      setProgressValue(0);
-    }
+    return () => clearInterval(progressInterval);
   }, [inView, value]);
 
   return (

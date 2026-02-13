@@ -42,18 +42,18 @@ export function Rain({
   className,
   ...rest
 }: RainProps) {
-  const rainLCG = makeLCG();
+  const rainLCGRef = useRef<LCG>(makeLCG());
   const rainCanvasRef = useRef<HTMLCanvasElement | null>(null);
-  const rain: RainDrop[] = [];
-  const rainTrough: RainTrough[] = [];
+  const rainRef = useRef<RainDrop[]>([]);
+  const rainTroughRef = useRef<RainTrough[]>([]);
   const troughColor = lighten(0.02, rainColor);
 
   const drawRain = (ctx: CanvasRenderingContext2D, i: number) => {
     ctx.beginPath();
-    ctx.moveTo(rain[i].x, rain[i].y);
+    ctx.moveTo(rainRef.current[i].x, rainRef.current[i].y);
     ctx.lineTo(
-      rain[i].x + rain[i].l * rain[i].xs,
-      rain[i].y + rain[i].l * rain[i].ys
+      rainRef.current[i].x + rainRef.current[i].l * rainRef.current[i].xs,
+      rainRef.current[i].y + rainRef.current[i].l * rainRef.current[i].ys
     );
     ctx.strokeStyle = rgba(rainColor, 0.5);
     ctx.lineWidth = 1;
@@ -65,15 +65,20 @@ export function Rain({
     ctx.beginPath();
     const grd = ctx.createLinearGradient(
       0,
-      rainTrough[i].y,
+      rainTroughRef.current[i].y,
       0,
-      rainTrough[i].y + rainTrough[i].length
+      rainTroughRef.current[i].y + rainTroughRef.current[i].length
     );
     grd.addColorStop(0, rgba(troughColor, 0));
-    grd.addColorStop(1, rgba(troughColor, rainTrough[i].opacity));
+    grd.addColorStop(1, rgba(troughColor, rainTroughRef.current[i].opacity));
 
     ctx.fillStyle = grd;
-    ctx.fillRect(rainTrough[i].x, rainTrough[i].y, 1, rainTrough[i].length);
+    ctx.fillRect(
+      rainTroughRef.current[i].x,
+      rainTroughRef.current[i].y,
+      1,
+      rainTroughRef.current[i].length
+    );
     ctx.fill();
   };
 
@@ -83,25 +88,25 @@ export function Rain({
 
   const createRain = (w: number, h: number) => {
     for (let i = 0; i < rainDrops; i++) {
-      rain[i] = {
-        x: lcgNextRand(rainLCG) * w,
-        y: lcgNextRand(rainLCG) * h,
-        l: lcgNextRand(rainLCG),
-        xs: -4 + lcgNextRand(rainLCG) * 4 + 2,
-        ys: lcgNextRand(rainLCG) * 10 + 10,
+      rainRef.current[i] = {
+        x: lcgNextRand(rainLCGRef.current) * w,
+        y: lcgNextRand(rainLCGRef.current) * h,
+        l: lcgNextRand(rainLCGRef.current),
+        xs: -4 + lcgNextRand(rainLCGRef.current) * 4 + 2,
+        ys: lcgNextRand(rainLCGRef.current) * 10 + 10,
       };
     }
   };
 
   const createRainTrough = (w: number, h: number) => {
     for (let i = 0; i < rainDrops; i++) {
-      rainTrough[i] = {
-        x: random(rainLCG, 0, w),
-        y: random(rainLCG, 0, h),
-        length: Math.floor(random(rainLCG, 1, 830)),
-        opacity: lcgNextRand(rainLCG) * 0.2,
-        xs: random(rainLCG, -2, 2),
-        ys: random(rainLCG, 10, 20),
+      rainTroughRef.current[i] = {
+        x: random(rainLCGRef.current, 0, w),
+        y: random(rainLCGRef.current, 0, h),
+        length: Math.floor(random(rainLCGRef.current, 1, 830)),
+        opacity: lcgNextRand(rainLCGRef.current) * 0.2,
+        xs: random(rainLCGRef.current, -2, 2),
+        ys: random(rainLCGRef.current, 10, 20),
       };
     }
   };
@@ -111,20 +116,23 @@ export function Rain({
 
     for (let i = 0; i < rainDrops; i++) {
       if (!prefersReducedMotion) {
-        rain[i].x += rain[i].xs;
-        rain[i].y += rain[i].ys;
-        if (rain[i].x > w || rain[i].y > h) {
-          rain[i].x = lcgNextRand(rainLCG) * w;
-          rain[i].y = -20;
+        rainRef.current[i].x += rainRef.current[i].xs;
+        rainRef.current[i].y += rainRef.current[i].ys;
+        if (rainRef.current[i].x > w || rainRef.current[i].y > h) {
+          rainRef.current[i].x = lcgNextRand(rainLCGRef.current) * w;
+          rainRef.current[i].y = -20;
         }
       }
       drawRain(ctx, i);
 
       if (!prefersReducedMotion) {
-        if (rainTrough[i].y >= h) {
-          rainTrough[i].y = h - rainTrough[i].y - rainTrough[i].length * 5;
+        if (rainTroughRef.current[i].y >= h) {
+          rainTroughRef.current[i].y =
+            h -
+            rainTroughRef.current[i].y -
+            rainTroughRef.current[i].length * 5;
         } else {
-          rainTrough[i].y += speedRainTrough;
+          rainTroughRef.current[i].y += speedRainTrough;
         }
       }
       drawRainTrough(ctx, i);
@@ -158,7 +166,7 @@ export function Rain({
       requestAnimationFrame(animloop);
     };
     animloop();
-  }, [drawRain]);
+  });
 
   return (
     <div

@@ -11,10 +11,11 @@ type FigureProps = {
  * Image with caption in semantic html.
  */
 export function Figure({ imageProps, caption, ...rest }: FigureProps) {
+  const { alt, ...otherImageProps } = imageProps;
   return (
     <figure className={styles.root} data-testid={Figure.name} {...rest}>
       <div className={styles.inner}>
-        <Image className={styles.image} {...imageProps} />
+        <Image className={styles.image} alt={alt} {...otherImageProps} />
       </div>
       {caption && <figcaption className={styles.caption}>{caption}</figcaption>}
     </figure>
