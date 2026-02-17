@@ -25,7 +25,9 @@ export default function HomePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(personSchema).replace(/</g, "\\u003c"),
+        }}
       />
       <Home
         contactFormEndPoint={`${process.env.NEXT_FORMSPREE_CONTACT_ENDPOINT}`}
