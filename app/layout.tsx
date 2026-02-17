@@ -7,12 +7,27 @@ import "@/styles/global.css";
 import styles from "./layout.module.css";
 import { ReactNode } from "react";
 import { interFont } from "@/styles/fonts";
+import { siteOrigin } from "@/lib/domains";
+import { myName } from "@/lib/metadata";
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: myName,
+  url: siteOrigin,
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <ViewTransitions>
       <html lang="en">
         <body className={interFont.className}>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(websiteSchema),
+            }}
+          />
           <Header />
           <main className={styles.main}>{children}</main>
           <Footer />

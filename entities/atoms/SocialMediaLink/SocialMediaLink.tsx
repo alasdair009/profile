@@ -9,6 +9,7 @@ import instagramIcon from "@/entities/atoms/SocialMediaLink/assets/instagram.svg
 import linkedInIcon from "@/entities/atoms/SocialMediaLink/assets/linkedin.svg";
 import xIcon from "@/entities/atoms/SocialMediaLink/assets/x.svg";
 import youTubeIcon from "@/entities/atoms/SocialMediaLink/assets/youtube.svg";
+import { socialMedia } from "@/lib/metadata";
 
 type SocialMediaProps = {
   /**
@@ -22,22 +23,19 @@ const getSocialMediaDetails = (
 ): [string, string] => {
   switch (variant) {
     case "bluesky":
-      return [
-        "https://bsky.app/profile/alasdair009.bsky.social",
-        blueskyIcon.src,
-      ];
+      return [socialMedia.blueSky, blueskyIcon.src];
     case "facebook":
-      return ["https://www.facebook.com/alasdair009", facebookIcon.src];
+      return [socialMedia.facebook, facebookIcon.src];
     case "github":
-      return ["https://github.com/alasdair009", gitHubIcon.src];
+      return [socialMedia.github, gitHubIcon.src];
     case "instagram":
-      return ["https://www.instagram.com/alasdair009", instagramIcon.src];
+      return [socialMedia.instagram, instagramIcon.src];
     case "linkedin":
-      return ["https://www.linkedin.com/in/alasdairmacrae/", linkedInIcon.src];
+      return [socialMedia.linkedin, linkedInIcon.src];
     case "x":
-      return ["https://x.com/alasdair009", xIcon.src];
+      return [socialMedia.x, xIcon.src];
     case "youtube":
-      return ["https://www.youtube.com/alasdair009", youTubeIcon.src];
+      return [socialMedia.youtube, youTubeIcon.src];
   }
 };
 
