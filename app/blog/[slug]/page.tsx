@@ -4,11 +4,12 @@ import { sanityClient } from "@/lib/sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 import { Post } from "@/lib/sanity/queries";
 import { notFound } from "next/navigation";
+import { siteOrigin } from "@/lib/domains";
 
 async function getPost(slug: string) {
   return sanityClient.fetch<Post>(
     `
-    *[_type == "post" && slug.current == $slug][0]{title, description, body, slug, mainImage, publishedAt, categories, "categoriesTitle": categories->title}
+    *[_type == "post" && slug.current == $slug][0]{title, description, body, slug, mainImage, publishedAt, categories, _updatedAt, "categoriesTitle": categories->title}
   `,
     { slug }
   );
@@ -51,5 +52,40 @@ export default async function ArticlePage(props: any) {
     return notFound();
   }
 
-  return <BlogArticle post={post} sanityClient={sanityClient} />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${siteOrigin}/blog/${params.slug}#blogposting`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteOrigin}/blog/${params.slug}`,
+    },
+    headline: post.title,
+    description: post.description,
+    image: [imageUrlBuilder(sanityClient).image(post.mainImage.asset).url()],
+    datePublished: post.publishedAt,
+    dateModified: post._updatedAt,
+    author: {
+      "@type": "Person",
+      name: "Alasdair Macrae",
+      url: siteOrigin,
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Alasdair Macrae",
+      url: siteOrigin,
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      <BlogArticle post={post} sanityClient={sanityClient} />
+    </>
+  );
 }

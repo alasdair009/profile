@@ -22,6 +22,7 @@ export const GET_ALL_POSTS = `*[_type == "post" && listed == true] | order(publi
 
 export type Post = {
   _id: string;
+  _updatedAt: string;
   title: string;
   slug: {
     current: string;

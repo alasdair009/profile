@@ -13,6 +13,7 @@ import { myName } from "@/lib/metadata";
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${siteOrigin}#website`,
   name: myName,
   url: siteOrigin,
 };

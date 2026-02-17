@@ -13,6 +13,7 @@ export const metadata: Metadata = generateMetaData();
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": `${siteOrigin}#person`,
   name: myName,
   url: siteOrigin,
   jobTitle: "Front-End Web Engineer",
