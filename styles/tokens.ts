@@ -8,6 +8,68 @@ import {
   SizeKey,
 } from "./styles.types";
 
+export const sizes: Record<SizeKey, number> = {
+  s2: 2,
+  s4: 4,
+  s8: 8,
+  s12: 12,
+  s16: 16,
+  s24: 24,
+  s32: 32,
+  s40: 40,
+  s48: 48,
+  s56: 56,
+  s64: 64,
+  s72: 72,
+  s80: 80,
+  s96: 96,
+  s128: 128,
+  s192: 192,
+  s256: 256,
+  s512: 512,
+  s1024: 1024,
+};
+
+export const globalSizes: Record<string, number> = {
+  // Maximum width that inputs should be set to.
+  inputMaxWidth: 480,
+
+  // Maximum width that text should be confined to.
+  textMaxWidth: 1200,
+
+  // Maximum width that content should extend to.
+  contentMaxWidth: 1600,
+
+  // Maximum width decorative elements can stretch to on the screen.
+  decorationMaxWidth: 3440,
+  headerHeight: 48,
+};
+
+export const breakpoints: Record<Breakpoint, number> = {
+  base: 0,
+  min: 320,
+  xsmall: 640,
+  small: 768,
+  medium: 1024,
+  large: globalSizes.textMaxWidth,
+  xlarge: globalSizes.contentMaxWidth,
+  wide: globalSizes.decorationMaxWidth,
+};
+
+export const device: Record<
+  Breakpoint,
+  `min-width: ${(typeof breakpoints)[Breakpoint]}px`
+> = {
+  base: `min-width: ${breakpoints.base}px`,
+  min: `min-width: ${breakpoints.min}px`,
+  xsmall: `min-width: ${breakpoints.xsmall}px`,
+  small: `min-width: ${breakpoints.small}px`,
+  medium: `min-width: ${breakpoints.medium}px`,
+  large: `min-width: ${breakpoints.large}px`,
+  xlarge: `min-width: ${breakpoints.xlarge}px`,
+  wide: `min-width: ${breakpoints.wide}px`,
+};
+
 export const animationNames: Record<
   string,
   Exclude<CSSProperties["animationName"], undefined>
@@ -101,6 +163,12 @@ export const clipPaths: Record<
     10% 90%,
     10% 30%
 )`,
+  parallelogram: `polygon(
+    calc(0% + ${sizes.s8}px) 0,
+    100% 0,
+    calc(100% - ${sizes.s8}px) 100%,
+    0 100%
+  )`,
   snowflake: `polygon(
     52% 20%,
     52% 27%,
@@ -207,68 +275,6 @@ export const colors: Record<
   redHeat: "#df1c41",
 };
 
-export const sizes: Record<SizeKey, number> = {
-  s2: 2,
-  s4: 4,
-  s8: 8,
-  s12: 12,
-  s16: 16,
-  s24: 24,
-  s32: 32,
-  s40: 40,
-  s48: 48,
-  s56: 56,
-  s64: 64,
-  s72: 72,
-  s80: 80,
-  s96: 96,
-  s128: 128,
-  s192: 192,
-  s256: 256,
-  s512: 512,
-  s1024: 1024,
-};
-
-export const globalSizes: Record<string, number> = {
-  // Maximum width that inputs should be set to.
-  inputMaxWidth: 480,
-
-  // Maximum width that text should be confined to.
-  textMaxWidth: 1200,
-
-  // Maximum width that content should extend to.
-  contentMaxWidth: 1600,
-
-  // Maximum width decorative elements can stretch to on the screen.
-  decorationMaxWidth: 3440,
-  headerHeight: 48,
-};
-
-export const breakpoints: Record<Breakpoint, number> = {
-  base: 0,
-  min: 320,
-  xsmall: 640,
-  small: 768,
-  medium: 1024,
-  large: globalSizes.textMaxWidth,
-  xlarge: globalSizes.contentMaxWidth,
-  wide: globalSizes.decorationMaxWidth,
-};
-
-export const device: Record<
-  Breakpoint,
-  `min-width: ${(typeof breakpoints)[Breakpoint]}px`
-> = {
-  base: `min-width: ${breakpoints.base}px`,
-  min: `min-width: ${breakpoints.min}px`,
-  xsmall: `min-width: ${breakpoints.xsmall}px`,
-  small: `min-width: ${breakpoints.small}px`,
-  medium: `min-width: ${breakpoints.medium}px`,
-  large: `min-width: ${breakpoints.large}px`,
-  xlarge: `min-width: ${breakpoints.xlarge}px`,
-  wide: `min-width: ${breakpoints.wide}px`,
-};
-
 const radiiInt: Record<
   `r${number}`,
   Exclude<CSSProperties["borderRadius"], undefined>
@@ -298,7 +304,7 @@ export const shadows: Record<
   string,
   Exclude<CSSProperties["boxShadow"], undefined>
 > = {
-  boxGreen: "0 0 var(--size-s4) var(--size-s2) var(--color-green-grass)",
+  boxGreen: `0 0 ${sizes.s4}px ${sizes.s2}px ${colors.greenGrass}`,
 };
 
 export const fontFamilies: Record<

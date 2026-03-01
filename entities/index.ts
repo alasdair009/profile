@@ -23,6 +23,7 @@ export { Flurry } from "./atoms/Flurry";
 export { Heading } from "./atoms/Heading";
 export { HorizontalRule } from "./atoms/HorizontalRule";
 export { IFrame } from "./atoms/IFrame";
+export { LightRays } from "./atoms/LightRays";
 export { Link } from "./atoms/Link";
 export { Meter } from "./atoms/Meter";
 export { Moon } from "./atoms/Moon";

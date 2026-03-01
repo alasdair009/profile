@@ -1,11 +1,4 @@
 .root {
-  --buttonClipPath: polygon(
-    calc(0% + var(--size-s8)) 0,
-    100% 0,
-    calc(100% - var(--size-s8)) 100%,
-    0 100%
-  );
-
   align-items: center;
   appearance: none;
   background: transparent;
@@ -28,7 +21,7 @@
   &::before,
   &::after {
     background: var(--color-green-grass);
-    clip-path: var(--buttonClipPath);
+    clip-path: var(--clip-path-parallelogram);
     content: "";
     display: block;
     height: 100%;
