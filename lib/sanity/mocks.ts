@@ -18,6 +18,7 @@ export const mockPosts: Post[] = [
       _type: "",
       _key: "",
     },
+    _updatedAt: "2024-02-10T12:00:00Z",
   },
   {
     title: "RSC in Storybook",
@@ -34,6 +35,7 @@ export const mockPosts: Post[] = [
       _type: "",
       _key: "",
     },
+    _updatedAt: "2024-03-05T09:00:00Z",
   },
 ];
 
