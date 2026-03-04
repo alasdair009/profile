@@ -1,5 +1,5 @@
 import { ScoreCounter } from "./ScoreCounter";
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { expect, userEvent, waitFor, within } from "storybook/test";
 import { Progress } from "@/entities/atoms/Progress";
 

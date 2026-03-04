@@ -1,5 +1,5 @@
 import { Rain } from "./Rain";
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { colors } from "@/styles/tokens";
 import { expect, within } from "storybook/test";
 

@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Article, getNiceDate } from "./Article";
 import amLogo from "../../assets/am.svg";
 import { expect, within } from "storybook/test";

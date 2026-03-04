@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { AboutMe } from "./AboutMe";
 import { expect, within } from "storybook/test";
 

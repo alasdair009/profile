@@ -1,5 +1,5 @@
 import { ContentPlate } from "./ContentPlate";
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Flame, Heading, Paragraph } from "@/entities";
 import amLogo from "../../assets/am.svg";
 import { expect, within } from "storybook/test";

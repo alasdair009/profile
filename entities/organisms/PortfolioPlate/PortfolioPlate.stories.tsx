@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { PortfolioPlate } from "./PortfolioPlate";
 import jdsLogo from "../../assets/jds-logo.svg";
 import jagexLauncherImage from "../../assets/launcher.webp";

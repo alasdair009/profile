@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Progress, ProgressProps } from "@/entities/atoms/Progress/Progress";
 import { expect, within } from "storybook/test";
 

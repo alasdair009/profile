@@ -1,5 +1,5 @@
 import { LabelledTextArea } from "./LabelledTextArea";
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { expect, userEvent, within } from "storybook/test";
 import { colors } from "@/styles/tokens";
 

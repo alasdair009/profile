@@ -1,5 +1,5 @@
 import { CopyBlock } from "./CopyBlock";
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof CopyBlock> = {

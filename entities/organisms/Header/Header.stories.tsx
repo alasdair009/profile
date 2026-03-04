@@ -1,5 +1,5 @@
 import { Header } from "./Header";
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { ComponentType } from "react";
 import { expect, within } from "storybook/test";
 

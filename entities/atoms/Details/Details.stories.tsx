@@ -1,5 +1,5 @@
 import { Details } from "./Details";
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { expect, waitFor, within } from "storybook/test";
 import { Heading, Paragraph } from "@/entities";
 

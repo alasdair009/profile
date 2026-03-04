@@ -1,5 +1,5 @@
 import { Button } from "./Button";
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { expect, fn, userEvent, waitFor, within } from "storybook/test";
 
 const meta: Meta<typeof Button> = {

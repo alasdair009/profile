@@ -1,5 +1,5 @@
 import { ContactForm } from "./ContactForm";
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { expect, fn, userEvent, within } from "storybook/test";
 
 const onFormSubmittedSpy = fn();

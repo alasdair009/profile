@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { MorphingText } from "./MorphingText";
 import { expect, within } from "storybook/test";
 

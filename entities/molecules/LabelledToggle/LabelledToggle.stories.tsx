@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { LabelledToggle } from "./LabelledToggle";
 import { expect, userEvent, waitFor, within } from "storybook/test";
 import { BaseToggle } from "../../atoms/BaseToggle";

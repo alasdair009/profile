@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { BlogArticle } from "./BlogArticle";
 import { expect, waitFor, within } from "storybook/test";
 import { mockPosts, mockSanityClient } from "@/lib/sanity/mocks";

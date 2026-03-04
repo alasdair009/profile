@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { LabelledCheckbox } from "./LabelledCheckbox";
 import { expect, userEvent, waitFor, within } from "storybook/test";
 import { BaseCheckbox } from "@/entities";

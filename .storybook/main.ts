@@ -1,13 +1,11 @@
-// This file has been automatically migrated to valid ESM format by Storybook.
 import { fileURLToPath } from "node:url";
-import { dirname } from "node:path";
-import { createRequire } from "node:module";
-import type { StorybookConfig } from "@storybook/nextjs";
+import type { StorybookConfig } from "@storybook/nextjs-vite";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const require = createRequire(import.meta.url);
-const path = require("path");
-import webpack from "webpack";
+import { mergeConfig } from "vite";
+import { dirname, resolve as resolvePath } from "node:path";
+
+const emptyShim = resolvePath(__dirname, "./shims/empty.ts");
 
 const config: StorybookConfig = {
   stories: [
@@ -21,32 +19,45 @@ const config: StorybookConfig = {
     "@storybook/addon-a11y",
   ],
   framework: {
-    name: "@storybook/nextjs",
+    name: "@storybook/nextjs-vite",
     options: {},
   },
   docs: {},
   staticDirs: ["../public"],
-  webpackFinal: async (config, { configType }) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      "@/entities": path.resolve(__dirname, "/entities"),
-      "@/lib": path.resolve(__dirname, "/lib"),
-    };
+  viteFinal: async (config) => {
+    const mockGetData = resolvePath(__dirname, "./mocks/getData.ts");
+    const mysql2PromiseShim = resolvePath(
+      __dirname,
+      "./shims/mysql2-promise.ts"
+    );
 
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      net: false,
-      tls: false,
-      fs: false,
-    };
+    return mergeConfig(config, {
+      resolve: {
+        alias: {
+          "@/entities": resolvePath(__dirname, "../entities"),
+          "@/lib": resolvePath(__dirname, "../lib"),
 
-    // 🧩 Add DefinePlugin to inject Sanity (and any Storybook) environment variables
-    (config.plugins ||= []).push(
-      new webpack.DefinePlugin({
-        // Useful flag for storybook-only code paths
+          // Stub server-only loader used by TrampolineMoveNetwork
+          "entities/pages/AboutMe/Trampolining/components/TrampolineMoveNetwork/getData":
+            mockGetData,
+          "entities/pages/AboutMe/Trampolining/components/TrampolineMoveNetwork/getData.ts":
+            mockGetData,
+
+          // Node built-ins stubs
+          fs: emptyShim,
+          net: emptyShim,
+          tls: emptyShim,
+
+          // Optional safety net (keep if you want future-proofing)
+          "mysql2/promise": mysql2PromiseShim,
+          mysql2: mysql2PromiseShim,
+        },
+      },
+      optimizeDeps: {
+        exclude: ["mysql2", "mysql2/promise"],
+      },
+      define: {
         "process.env.STORYBOOK": JSON.stringify("true"),
-
-        // Map STORYBOOK_ vars (from Vercel) to the NEXT_PUBLIC_ vars your Sanity client expects
         "process.env.NEXT_PUBLIC_SANITY_PROJECT_ID": JSON.stringify(
           process.env.STORYBOOK_SANITY_PROJECT_ID || ""
         ),
@@ -56,10 +67,8 @@ const config: StorybookConfig = {
         "process.env.NEXT_PUBLIC_SANITY_API_VERSION": JSON.stringify(
           process.env.STORYBOOK_SANITY_API_VERSION || "2023-01-01"
         ),
-      })
-    );
-
-    return config;
+      },
+    });
   },
 };
 export default config;

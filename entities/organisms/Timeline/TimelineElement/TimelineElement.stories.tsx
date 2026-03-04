@@ -1,5 +1,5 @@
 import { TimelineElement } from "./TimelineElement";
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import jagexLogo from "../../../assets/jagex-logo.svg";
 import { expect, within } from "storybook/test";
 

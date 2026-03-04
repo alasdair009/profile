@@ -8,19 +8,13 @@ import {
   UnorderedList,
 } from "@/entities";
 import TrampolineMoveNetwork from "./components/TrampolineMoveNetwork/TrampolineMoveNetwork";
-import type { ConnectionOptions } from "mysql2/promise";
 
-type TrampoliningProps = {
-  connectionOptions?: ConnectionOptions;
-} & HTMLAttributes<HTMLDivElement>;
+type TrampoliningProps = {} & HTMLAttributes<HTMLDivElement>;
 
 /**
  * All my rollercoaster credits from around the world.
  */
-export function Trampolining({
-  connectionOptions,
-  ...rest
-}: TrampoliningProps) {
+export function Trampolining({ ...rest }: TrampoliningProps) {
   return (
     <div data-testid={Trampolining.displayName} {...rest}>
       <Heading>Trampolining</Heading>
@@ -122,9 +116,7 @@ export function Trampolining({
         fondly!
       </Paragraph>
       <HorizontalRule />
-      {connectionOptions && (
-        <TrampolineMoveNetwork connectionOptions={connectionOptions} />
-      )}
+      <TrampolineMoveNetwork />
     </div>
   );
 }

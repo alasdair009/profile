@@ -1,5 +1,5 @@
 import { SocialMediaLink } from "./SocialMediaLink";
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { expect, userEvent, within } from "storybook/test";
 
 const meta: Meta<typeof SocialMediaLink> = {

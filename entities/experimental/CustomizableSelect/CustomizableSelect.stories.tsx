@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { CustomizableSelect } from "./CustomizableSelect";
 import Image from "next/image";
 import amLogo from "@/entities/assets/am.svg";

@@ -1,5 +1,5 @@
 import { Video } from "./Video";
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import trampolinePosterImage from "../../assets/trampoline-poster.webp";
 import { expect, within } from "storybook/test";
 

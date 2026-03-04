@@ -33,7 +33,7 @@
     "@react-google-maps/api": "^2.20.5",
     "@vercel/edge-config": "^1.4.0",
     "lightningcss": "^1.30.2",
-    "mysql2": "^3.11.0",
+    "mysql2": "^3.18.2",
     "next": "^15.5.8",
     "next-sanity": "^11.6.10",
     "next-view-transitions": "^0.3.4",
@@ -51,7 +51,6 @@
     "@storybook/addon-a11y": "^10.2.14",
     "@storybook/addon-docs": "^10.2.14",
     "@storybook/addon-links": "^10.2.14",
-    "@storybook/nextjs": "^10.2.14",
     "@storybook/test-runner": "^0.24.2",
     "@types/node": "^20.14.14",
     "@types/react": "19.0.8",
@@ -84,7 +83,9 @@
     "stylelint-config-standard": "^39.0.1",
     "superstruct": "^1.0.4",
     "tsx": "^4.21.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "@storybook/nextjs-vite": "10.2.14",
+    "vite": "^7.0.0"
   },
   "readme": "ERROR: No README data found!",
   "_id": "profile@0.1.0",

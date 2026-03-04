@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { CanIUse } from "./CanIUse";
 import { expect, within } from "storybook/test";
 import { IFrame } from "../../atoms/IFrame";

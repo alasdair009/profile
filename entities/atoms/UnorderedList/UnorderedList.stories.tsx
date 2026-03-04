@@ -1,5 +1,5 @@
 import { UnorderedList } from "./UnorderedList";
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { expect, within } from "storybook/test";
 import { TextMask } from "@/entities";
 

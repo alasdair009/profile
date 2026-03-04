@@ -1,19 +1,26 @@
 "use server";
-
-import mysql, { ConnectionOptions, RowDataPacket } from "mysql2/promise";
+import "server-only";
+import mysql from "mysql2/promise";
 import { GraphEdge, GraphNode } from "reagraph";
 
-export const getMoveData = async (connectionOptions: ConnectionOptions) => {
+const connectionOptions: mysql.ConnectionOptions = {
+  host: `${process.env.CANGAROOS_DB_HOST}`,
+  user: `${process.env.CANGAROOS_DB_USER}`,
+  password: `${process.env.CANGAROOS_DB_PASSWORD}`,
+  database: `${process.env.CANGAROOS_DB_NAME}`,
+};
+
+export const getMoveData = async () => {
   let nodes: GraphNode[] = [];
   let edges: GraphEdge[] = [];
   let error = "ok";
   try {
     const connection = await mysql.createConnection(connectionOptions);
-    const [movesResults] = await connection.query<RowDataPacket[]>(
+    const [movesResults] = await connection.query<mysql.RowDataPacket[]>(
       "SELECT * FROM `VU_moves` WHERE id > 0 AND active = 1"
     );
 
-    const [edgesResults] = await connection.query<RowDataPacket[]>(
+    const [edgesResults] = await connection.query<mysql.RowDataPacket[]>(
       "SELECT * FROM `VU_moves_links` WHERE id > 0"
     );
 

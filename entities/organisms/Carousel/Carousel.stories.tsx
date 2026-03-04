@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Carousel } from "./Carousel";
 import { expect, within } from "storybook/test";
 import amLogo from "../../assets/am.svg";

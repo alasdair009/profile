@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { NetworkChart } from "./NetworkChart";
 import { expect, fn, waitFor, within } from "storybook/test";
 

@@ -1,4 +1,4 @@
-import type { Preview } from "@storybook/nextjs";
+import type { Preview } from "@storybook/nextjs-vite";
 import theme from "./theme";
 import { breakpoints, device } from "../styles/tokens";
 import type { Breakpoint } from "../styles/styles.types";
@@ -7,6 +7,7 @@ import "@/styles/global.css";
 import { withFont } from "./decorators/withFont";
 import { withStyle } from "./decorators/withStyle";
 import "@fontsource-variable/inter";
+import { withViewTransistion } from "./decorators/withViewTransistion";
 
 const customViewports: ViewportMap = {};
 
@@ -61,7 +62,7 @@ const preview: Preview = {
       options: customViewports,
     },
   },
-  decorators: [withFont, withStyle],
+  decorators: [withViewTransistion, withFont, withStyle],
   tags: ["autodocs"],
 };
 
