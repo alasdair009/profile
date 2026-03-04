@@ -26,7 +26,7 @@ const meta: Meta<typeof Flurry> = {
 export default meta;
 
 export const Default: StoryObj<typeof Flurry> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const flurryElement = canvas.getByTestId(Flurry.name);
     const content = canvas.getByText("Flurry");

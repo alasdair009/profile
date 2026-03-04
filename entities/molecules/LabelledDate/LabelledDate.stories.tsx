@@ -1,7 +1,7 @@
 import { LabelledDate } from "./LabelledDate";
 import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { expect, within } from "storybook/test";
-import { BaseDate, BaseInput } from "@/entities";
+import { BaseDate } from "@/entities";
 
 const meta: Meta<typeof LabelledDate> = {
   component: LabelledDate,

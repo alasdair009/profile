@@ -29,7 +29,7 @@ const meta: Meta<typeof RuneScape> = {
 export default meta;
 
 export const Default: StoryObj<typeof RuneScape> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const runeScapeElement: HTMLDivElement = canvas.getByTestId(
       RuneScape.displayName

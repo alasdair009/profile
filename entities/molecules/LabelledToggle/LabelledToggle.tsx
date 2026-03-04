@@ -12,7 +12,7 @@ type LabelledToggleProps = {
 /**
  * Labelled checkbox.
  */
-export function LabelledToggle({ name, label, ...rest }: LabelledToggleProps) {
+export function LabelledToggle({ label, ...rest }: LabelledToggleProps) {
   return (
     <div className={styles.root} data-testid={LabelledToggle.displayName}>
       <BaseLabel as="span">{label}</BaseLabel>

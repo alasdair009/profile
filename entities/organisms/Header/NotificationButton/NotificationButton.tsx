@@ -1,7 +1,7 @@
 "use client";
 
 import notificationIcon from "@/entities/assets/notification.svg";
-import { HTMLAttributes, useCallback, useEffect, useState } from "react";
+import { HTMLAttributes, useCallback, useState } from "react";
 import styles from "../Header.module.css";
 import { Button } from "@/entities";
 import Image from "next/image";

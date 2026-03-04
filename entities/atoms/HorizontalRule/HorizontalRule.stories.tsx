@@ -13,7 +13,7 @@ const meta: Meta<typeof HorizontalRule> = {
 export default meta;
 
 export const Default: StoryObj<typeof HorizontalRule> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const ruleElement = canvas.getByTestId(HorizontalRule.displayName);
 
@@ -25,7 +25,7 @@ export const Decoration: StoryObj<typeof HorizontalRule> = {
   args: {
     decoration: true,
   },
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const ruleElement = canvas.getByTestId(HorizontalRule.displayName);
 
@@ -37,7 +37,7 @@ export const Curve: StoryObj<typeof HorizontalRule> = {
   args: {
     curve: true,
   },
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const ruleElement = canvas.getByTestId(HorizontalRule.displayName);
 

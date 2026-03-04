@@ -68,6 +68,7 @@ const getSkyColor = (
 
 /**
  * Calculates the amount to transform the sun by to reflect its position in the sky.
+ * @param nowHour - the current hour
  * @param nextRiseHour - the hour the sun next rises
  * @param nextSettingHour - the hour the sun next sets
  */
@@ -93,7 +94,6 @@ export function WeatherStation({
   isPending = false,
   sunState,
   nextRising,
-  nextNoon,
   nextSetting,
   cloudCover,
   now = new Date(),

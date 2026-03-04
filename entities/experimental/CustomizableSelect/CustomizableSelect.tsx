@@ -12,15 +12,11 @@ type SelectMenuProps = {
 /**
  * An experimental new spec for a styled dropdown box.
  */
-export function CustomizableSelect({
-  defaultValue,
-  children,
-  ...rest
-}: SelectMenuProps) {
+export function CustomizableSelect({ children, ...rest }: SelectMenuProps) {
   return (
     <select className={styles.root} {...rest}>
       <button className={styles.selectArea}>
-        {/*@ts-ignore*/}
+        {/*@ts-expect-error this will be fine soon*/}
         <selectedcontent className={styles.selectedContent} />
         <span className={styles.dropButton} />
       </button>

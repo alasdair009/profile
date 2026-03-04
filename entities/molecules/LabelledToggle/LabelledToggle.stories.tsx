@@ -13,7 +13,7 @@ const meta: Meta<typeof LabelledToggle> = {
 export default meta;
 
 export const Default: StoryObj<typeof LabelledToggle> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const checkboxElement = canvas.getByTestId(BaseToggle.displayName);
     const labelElement = canvas.getByText("Toggle entry");

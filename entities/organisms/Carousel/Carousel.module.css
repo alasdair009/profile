@@ -20,11 +20,11 @@
   overflow-x: scroll;
   position: relative;
   scroll-behavior: var(--scroll-behaviour);
-  scroll-marker-group: after;
+  /*scroll-marker-group: after;*/
   scroll-snap-type: x mandatory;
   width: 100%;
 
-  &::scroll-button(*) {
+  /*&::scroll-button(*) {
     aspect-ratio: 1;
     background: var(--color-green-grass);
     border: 0;
@@ -67,7 +67,7 @@
     position: absolute;
     position-anchor: --carousel;
     top: calc(anchor(--carousel bottom) + var(--size-s8));
-  }
+  }*/
 }
 
 .slide {
@@ -80,7 +80,7 @@
   scroll-snap-align: center;
   width: 100%;
 
-  &::scroll-marker {
+  /*&::scroll-marker {
     content: attr(data-title);
     width: var(--size-s16);
     height: var(--size-s16);
@@ -94,7 +94,7 @@
   &::scroll-marker:target-current {
     background-color: var(--color-grey-light);
     transition: all calc(var(--animation-rhythm) * 0.7) var(--curve-linear);
-  }
+  }*/
 }
 
 .image {

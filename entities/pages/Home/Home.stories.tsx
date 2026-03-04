@@ -13,7 +13,7 @@ const meta: Meta<typeof Home> = {
 export default meta;
 
 export const Default: StoryObj<typeof Home> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const homeElement: HTMLDivElement = canvas.getByTestId(Home.displayName);
 

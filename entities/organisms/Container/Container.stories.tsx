@@ -16,7 +16,7 @@ const meta: Meta<typeof Container> = {
 export default meta;
 
 export const Default: StoryObj<typeof Container> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const containerElement: HTMLDivElement = canvas.getByTestId(
       Container.displayName

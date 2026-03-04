@@ -47,7 +47,6 @@ type LabelledDateProps = {
  */
 export function LabelledDate({
   isInvalid,
-  name,
   label,
   min,
   max,

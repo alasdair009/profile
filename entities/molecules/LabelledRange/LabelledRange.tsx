@@ -42,7 +42,6 @@ type LabelledRangeProps = {
  */
 export function LabelledRange({
   isInvalid,
-  name,
   label,
   errorText = `Please chose a valid ${label}`,
   ...rest

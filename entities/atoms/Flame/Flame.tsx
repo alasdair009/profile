@@ -76,7 +76,6 @@ const hexToRgb = (hex: string) => {
  * Canvas rendered flame with customisable size and intensity.
  */
 export function Flame({
-  children,
   className,
   maxLife = 40,
   speed = 3,

@@ -16,7 +16,7 @@ const meta: Meta<typeof LabelledCheckbox> = {
 export default meta;
 
 export const Default: StoryObj<typeof LabelledCheckbox> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const checkboxElement = canvas.getByTestId(BaseCheckbox.name);
     const labelElement = canvas.getByText("Checkbox entry");
@@ -34,7 +34,7 @@ export const Invalid: StoryObj<typeof LabelledCheckbox> = {
   args: {
     isInvalid: true,
   },
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const checkboxElement = canvas.getByTestId(BaseCheckbox.name);
 

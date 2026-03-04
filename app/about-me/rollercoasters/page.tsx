@@ -1,8 +1,7 @@
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
-import { GET_ALL_PARKS, GET_ALL_ROLLERCOASTERS } from "@/lib/sanity/queries";
+import { GET_ALL_ROLLERCOASTERS } from "@/lib/sanity/queries";
 import { sanityClient } from "@/lib/sanity/client";
-import { SanityDocument } from "next-sanity";
 import { MarkerProps } from "@react-google-maps/api";
 import { Rollercoasters } from "@/entities/pages/AboutMe/Rollercoasters";
 import { Rollercoaster } from "@/entities/pages/AboutMe/Rollercoasters/Rollercoasters";
@@ -20,8 +19,6 @@ export default async function RollercoastersPage() {
     GET_ALL_ROLLERCOASTERS
   );
 
-  const themeParks = await sanityClient.fetch<SanityDocument[]>(GET_ALL_PARKS);
-
   const fastestRollercoaster = rollercoasters.reduce((prev, current) => {
     return prev && prev.speed > current.speed ? prev : current;
   });
@@ -34,7 +31,7 @@ export default async function RollercoastersPage() {
   const mostInvertedRollercoaster = rollercoasters.reduce((prev, current) => {
     return prev && prev.inversions > current.inversions ? prev : current;
   });
-  let latLangs: MarkerProps[] = [];
+  const latLangs: MarkerProps[] = [];
   rollercoasters.forEach((rollercoaster) => {
     const latLng = rollercoaster.coords.split(",");
     latLangs.push({

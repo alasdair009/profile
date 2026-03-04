@@ -17,7 +17,7 @@ type DesignLandingProps = HTMLAttributes<HTMLDivElement>;
 /**
  * Landing splash component for the design system.
  */
-export function DesignLanding({ children, ...rest }: DesignLandingProps) {
+export function DesignLanding({ ...rest }: DesignLandingProps) {
   return (
     <section
       className={styles.root}

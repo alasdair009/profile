@@ -14,7 +14,6 @@ import {
 import { urlFor } from "@/lib/sanity/client";
 import { CanIUse } from "@/entities/molecules/CanIUse/CanIUse";
 import { breakpoints } from "@/styles/tokens";
-import styles from "@/entities/molecules/Figure/Figure.module.css";
 
 export const getPtComponents: () => Promise<
   Partial<PortableTextReactComponents>

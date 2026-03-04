@@ -6,6 +6,7 @@ import Image from "next/image";
 import imageUrlBuilder from "@sanity/image-url";
 import { MarkerProps } from "@react-google-maps/api";
 import type { SanityClient } from "next-sanity";
+import { SanityImageSource } from "@sanity/asset-utils";
 
 export type Rollercoaster = {
   title: string;
@@ -14,7 +15,7 @@ export type Rollercoaster = {
   length: number;
   inversions: number;
   themeparkTitle: string;
-  themeparkLogo: any;
+  themeparkLogo: { asset: SanityImageSource };
   themeparkCountry: string;
   firstRidden: string;
   coords: string;

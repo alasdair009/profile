@@ -29,7 +29,6 @@ export const Checked: StoryObj<typeof LabelledRadio> = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const labelledRadio = canvas.getByTestId(LabelledRadio.name);
     const baseRadioElement = canvas.getByTestId(BaseRadio.name);
 
     await expect(baseRadioElement).toHaveAttribute("checked");

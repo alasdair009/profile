@@ -13,7 +13,7 @@ const meta: Meta<typeof Portfolio> = {
 export default meta;
 
 export const Default: StoryObj<typeof Portfolio> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const portfolioElement: HTMLDivElement = canvas.getByTestId(
       Portfolio.displayName

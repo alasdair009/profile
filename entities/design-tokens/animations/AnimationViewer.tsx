@@ -1,4 +1,4 @@
-import type { CSSProperties, JSX } from "react";
+import type { CSSProperties } from "react";
 import styles from "./Animations.module.css";
 
 type AnimationViewerProps = {

@@ -27,6 +27,7 @@ export type FontSizes =
 
 export type TextAlignment = "left" | "center" | "right";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const colorKeys = [
   "blackEvil",
   "greyLight",
@@ -39,6 +40,7 @@ const colorKeys = [
 ] as const;
 export type ColorKey = (typeof colorKeys)[number];
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const sizeKeys = [
   "s2",
   "s4",

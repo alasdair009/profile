@@ -31,7 +31,7 @@ const meta: Meta<typeof Rollercoasters> = {
 export default meta;
 
 export const Default: StoryObj<typeof Rollercoasters> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const homeElement: HTMLDivElement = canvas.getByTestId(
       Rollercoasters.displayName

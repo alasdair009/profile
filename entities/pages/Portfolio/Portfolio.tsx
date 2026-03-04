@@ -41,7 +41,7 @@ type PortfolioProps = {} & HTMLAttributes<HTMLDivElement>;
 
 const currentEmployer = getCurrentEmployer();
 const employmentHistory: TimelineEntry[] = [];
-careerHistory.roles.forEach((employment, index) => {
+careerHistory.roles.forEach((employment) => {
   employmentHistory.push({
     date: `${employment.startDate.toLocaleString("default", {
       month: "long",

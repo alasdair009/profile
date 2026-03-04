@@ -14,7 +14,7 @@ const meta: Meta<typeof BlogArticle> = {
 export default meta;
 
 export const Default: StoryObj<typeof BlogArticle> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
     await waitFor(() =>

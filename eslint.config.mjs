@@ -1,24 +1,24 @@
-import { defineConfig } from "eslint/config";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
+import { defineConfig, globalIgnores } from "eslint/config";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
+
+import storybook from "eslint-plugin-storybook";
+import prettier from "eslint-config-prettier/flat";
 
 export default defineConfig([
-  {
-    ignores: ["**/storybook-static/**", "/scripts/**", "**.next/**"],
-  },
-  ...compat.extends(
-    "next/core-web-vitals",
-    "plugin:storybook/recommended",
-    "prettier"
-  ),
+  globalIgnores([
+    "storybook-static/**",
+    "scripts/**",
+    ".next/**",
+    "out/**",
+    "build/**",
+  ]),
+
+  ...nextCoreWebVitals,
+  ...nextTypescript,
+
+  ...storybook.configs["flat/recommended"],
+
+  prettier,
 ]);

@@ -19,7 +19,7 @@ const meta: Meta<typeof Error> = {
 export default meta;
 
 export const Default: StoryObj<typeof Error> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const errorElement: HTMLDivElement = canvas.getByTestId(Error.name);
 

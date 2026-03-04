@@ -39,7 +39,7 @@ const meta: Meta<typeof NetworkChart> = {
 export default meta;
 
 export const Default: StoryObj<typeof NetworkChart> = {
-  play: async ({ args, canvasElement, step }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
     await waitFor(() =>
