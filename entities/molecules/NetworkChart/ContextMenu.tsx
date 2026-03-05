@@ -2,7 +2,7 @@ import { Button, Heading, Paragraph, UnorderedList } from "@/entities";
 import styles from "./NetworkChart.module.css";
 
 type ContextMenuProps = {
-  onClose: any;
+  onClose: () => void;
   label: string;
   description: string;
   altnames: string;

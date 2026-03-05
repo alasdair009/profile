@@ -1,9 +1,9 @@
 "use client";
 import { WeatherStation } from "@/entities/organisms/WeatherStation";
 import { WeatherData } from "../../types";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, HTMLAttributes } from "react";
 
-type WeatherWrapperProps = {};
+type WeatherWrapperProps = HTMLAttributes<HTMLDivElement>;
 
 /**
  * TypeGuard to verify successful Netatmo response.

@@ -1,6 +1,6 @@
 import { ScoreCounter } from "./ScoreCounter";
 import { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { expect, userEvent, waitFor, within } from "storybook/test";
+import { expect, within } from "storybook/test";
 import { Progress } from "@/entities/atoms/Progress";
 
 const meta: Meta<typeof ScoreCounter> = {
@@ -22,7 +22,7 @@ const meta: Meta<typeof ScoreCounter> = {
 export default meta;
 
 export const Default: StoryObj<typeof ScoreCounter> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const networkChartElement = canvas.getByTestId(ScoreCounter.displayName);
     const progressElement = canvas.getByTestId(
@@ -38,7 +38,7 @@ export const Fifty: StoryObj<typeof ScoreCounter> = {
   args: {
     value: 50,
   },
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const networkChartElement = canvas.getByTestId(ScoreCounter.displayName);
     const progressElement = canvas.getByTestId(

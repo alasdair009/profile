@@ -10,6 +10,7 @@ import type { HeadingTypes, TextAlignment } from "@/styles/styles.types";
 import { Property } from "csstype";
 import styles from "./Heading.module.css";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export type HeadingProps<T extends ElementType> = {
   /**
    * Visual style of the Heading.

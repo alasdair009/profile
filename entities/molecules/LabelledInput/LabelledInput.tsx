@@ -40,7 +40,6 @@ type LabelledInputProps = {
 export function LabelledInput({
   isInvalid,
   type,
-  name,
   label,
   errorText = `Please enter a valid ${label}`,
   ...rest

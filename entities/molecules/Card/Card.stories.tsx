@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Card } from "./Card";
 import { expect, within } from "storybook/test";
-import { Link } from "../../atoms/Link";
 
 const meta: Meta<typeof Card> = {
   component: Card,

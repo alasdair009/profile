@@ -1,5 +1,5 @@
 import { create } from "storybook/theming/create";
-// @ts-ignore
+//@ts-expect-error this is fine to use here
 import amLogo from "./assets/am.svg";
 
 export default create({

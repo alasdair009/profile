@@ -11,8 +11,8 @@ const connectionOptions: mysql.ConnectionOptions = {
 };
 
 export const getMoveData = async () => {
-  let nodes: GraphNode[] = [];
-  let edges: GraphEdge[] = [];
+  const nodes: GraphNode[] = [];
+  const edges: GraphEdge[] = [];
   let error = "ok";
   try {
     const connection = await mysql.createConnection(connectionOptions);

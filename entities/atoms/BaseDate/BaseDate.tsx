@@ -1,7 +1,7 @@
 "use client";
 import styles from "./BaseDate.module.css";
 import type { BaseDateProps } from "./BaseDate.types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const formatDateForInput = (date: Date, withTime = false) => {
   const month = String(date.getMonth() + 1).padStart(2, "0");

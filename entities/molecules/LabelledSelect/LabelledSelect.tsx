@@ -35,7 +35,6 @@ type LabelledSelectProps = {
  */
 export function LabelledSelect({
   isInvalid,
-  name,
   label,
   errorText = `Please enter a valid ${label}`,
   children,

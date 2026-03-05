@@ -45,7 +45,7 @@ const meta: Meta<typeof Table> = {
 export default meta;
 
 export const Default: StoryObj<typeof Table> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
     await expect(canvas.getByTestId(Table.name)).toBeInTheDocument();
@@ -65,7 +65,7 @@ export const Responsive: StoryObj<typeof Table> = {
       },
     },
   },
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
     await expect(canvas.getByTestId(Table.name)).toBeInTheDocument();

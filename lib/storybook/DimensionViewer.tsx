@@ -36,7 +36,6 @@ export function DimensionViewer({
   title,
   sourceExample,
   objectName,
-  barUnits,
   suffix = "",
 }: DimensionViewerProps): JSX.Element {
   return (

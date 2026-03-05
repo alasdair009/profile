@@ -71,14 +71,14 @@ const nextConfig = {
       },
     ];
   },
-  webpack(config, { dev }) {
-    if (!dev && config.optimization?.minimizer) {
-      config.optimization.minimizer = config.optimization.minimizer.filter(
-        (minimizer) => minimizer?.constructor?.name !== "CssMinimizerPlugin"
-      );
-    }
-    return config;
-  },
+  // webpack(config, { dev }) {
+  //   if (!dev && config.optimization?.minimizer) {
+  //     config.optimization.minimizer = config.optimization.minimizer.filter(
+  //       (minimizer) => minimizer?.constructor?.name !== "CssMinimizerPlugin"
+  //     );
+  //   }
+  //   return config;
+  // },
 };
 
 module.exports = nextConfig;

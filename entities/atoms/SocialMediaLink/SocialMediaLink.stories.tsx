@@ -1,6 +1,6 @@
 import { SocialMediaLink } from "./SocialMediaLink";
 import { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { expect, userEvent, within } from "storybook/test";
+import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof SocialMediaLink> = {
   component: SocialMediaLink,
@@ -43,7 +43,7 @@ export const LinkedIn: StoryObj<typeof SocialMediaLink> = {
   args: {
     variant: "linkedin",
   },
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const socialMediaElement = canvas.getByTestId(SocialMediaLink.name);
 
@@ -59,7 +59,7 @@ export const GitHub: StoryObj<typeof SocialMediaLink> = {
   args: {
     variant: "github",
   },
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const socialMediaElement = canvas.getByTestId(SocialMediaLink.name);
 
@@ -75,7 +75,7 @@ export const Facebook: StoryObj<typeof SocialMediaLink> = {
   args: {
     variant: "facebook",
   },
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const socialMediaElement = canvas.getByTestId(SocialMediaLink.name);
 
@@ -91,7 +91,7 @@ export const Instagram: StoryObj<typeof SocialMediaLink> = {
   args: {
     variant: "instagram",
   },
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const socialMediaElement = canvas.getByTestId(SocialMediaLink.name);
 
@@ -107,7 +107,7 @@ export const YouTube: StoryObj<typeof SocialMediaLink> = {
   args: {
     variant: "youtube",
   },
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const socialMediaElement = canvas.getByTestId(SocialMediaLink.name);
 

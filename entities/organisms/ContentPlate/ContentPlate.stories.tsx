@@ -63,7 +63,7 @@ export const WithFlame: StoryObj<typeof ContentPlate> = {
     chromatic: { disable: true },
   },
   tags: ["no-snaps"],
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const contentPlateElement: HTMLDivElement = canvas.getByTestId(
       ContentPlate.displayName

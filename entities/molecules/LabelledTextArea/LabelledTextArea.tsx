@@ -28,11 +28,7 @@ type LabelledTextAreaProps = {
 /**
  * HTML textarea input field.
  */
-export function LabelledTextArea({
-  label,
-  name,
-  ...rest
-}: LabelledTextAreaProps) {
+export function LabelledTextArea({ label, ...rest }: LabelledTextAreaProps) {
   return (
     <label className={styles.root} data-testid={LabelledTextArea.name}>
       <span className={styles.labelText}>{label}</span>

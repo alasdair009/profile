@@ -15,7 +15,6 @@ type LabelledInputProps = {
  */
 export function LabelledRadio({
   isInvalid,
-  name,
   label,
   ...rest
 }: LabelledInputProps) {

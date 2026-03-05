@@ -11,7 +11,7 @@ const meta: Meta<typeof Footer> = {
 export default meta;
 
 export const Default: StoryObj<typeof Footer> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const footerElement = canvas.getByTestId(Footer.name);
 

@@ -52,7 +52,6 @@ export function NetworkChart({
   nodes,
   edges,
   onNodeClick,
-  contextMenu,
   ...rest
 }: NetworkChartProps) {
   const [isBrowser, setIsBrowser] = useState(false);

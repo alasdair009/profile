@@ -13,7 +13,7 @@ const meta: Meta<typeof AboutMe> = {
 export default meta;
 
 export const Default: StoryObj<typeof AboutMe> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const homeElement: HTMLDivElement = canvas.getByTestId(AboutMe.displayName);
 

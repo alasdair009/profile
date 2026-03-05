@@ -9,7 +9,7 @@ const meta: Meta<typeof Weather> = {
 export default meta;
 
 export const Default: StoryObj<typeof Weather> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const runeScapeElement: HTMLDivElement = canvas.getByTestId(
       Weather.displayName

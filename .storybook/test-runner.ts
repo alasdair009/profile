@@ -4,7 +4,7 @@ const config: TestRunnerConfig = {
   tags: {
     exclude: ["no-snaps"],
   },
-  async postVisit(page, context) {
+  async postVisit(page) {
     const elementHandler = await page.$("#storybook-root");
     const innerHTML = await elementHandler.innerHTML();
     expect(innerHTML).toMatchSnapshot();

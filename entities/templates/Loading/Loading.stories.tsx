@@ -9,7 +9,7 @@ const meta: Meta<typeof Loading> = {
 export default meta;
 
 export const Default: StoryObj<typeof Loading> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const errorElement: HTMLDivElement = canvas.getByTestId(Loading.name);
 

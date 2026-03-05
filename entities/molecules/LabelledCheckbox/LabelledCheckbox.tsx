@@ -14,7 +14,6 @@ type LabelledCheckboxProps = {
  */
 export function LabelledCheckbox({
   isInvalid,
-  name,
   label,
   ...rest
 }: LabelledCheckboxProps) {

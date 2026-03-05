@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Orbit } from "./Orbit";
 import { colors } from "@/styles/tokens";
-import { expect, userEvent, waitFor, within } from "storybook/test";
+import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof Orbit> = {
   component: Orbit,
@@ -26,7 +26,7 @@ const meta: Meta<typeof Orbit> = {
 export default meta;
 
 export const Default: StoryObj<typeof Orbit> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const orbitElement = canvas.getByTestId(Orbit.name);
     const particleElements = canvas.getAllByTestId(`${Orbit.name}Particle`);

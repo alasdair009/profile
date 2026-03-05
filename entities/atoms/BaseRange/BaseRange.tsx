@@ -1,6 +1,6 @@
 "use client";
 import styles from "./BaseRange.module.css";
-import { ChangeEvent, HTMLAttributes, useEffect, useState } from "react";
+import { ChangeEvent, HTMLAttributes, useState } from "react";
 
 type BaseRangeProps = {
   isInvalid?: boolean;

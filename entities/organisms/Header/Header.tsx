@@ -8,7 +8,7 @@ import Link from "next/link";
 import { sizes } from "@/styles/tokens";
 
 type HeaderProps = {} & HTMLAttributes<HTMLDivElement>;
-export function Header({ children, ...rest }: HeaderProps) {
+export function Header({ ...rest }: HeaderProps) {
   return (
     <header className={styles.root} data-testid={Header.name} {...rest}>
       <nav className={styles.inner}>

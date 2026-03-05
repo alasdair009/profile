@@ -4,9 +4,6 @@ import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof Sun> = {
   component: Sun,
-  args: {
-    lenseFlare: false,
-  },
 };
 export default meta;
 

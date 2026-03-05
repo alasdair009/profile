@@ -62,7 +62,7 @@ export const Accordion: StoryObj<typeof Details> = {
       </Details>
     </>
   ),
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
     await waitFor(() =>

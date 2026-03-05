@@ -29,7 +29,6 @@ const meta: Meta<typeof Timeline> = {
     ],
   },
   subcomponents: {
-    // @ts-ignore
     TimelineElement: TimelineElement,
   },
 };

@@ -2,6 +2,7 @@
 import { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
 import styles from "./BaseLabel.module.css";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 type BaseLabelProps<T extends ElementType> = {
   as?: "label" | "span";
   children: ReactNode;

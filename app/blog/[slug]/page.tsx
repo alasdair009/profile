@@ -6,6 +6,12 @@ import { Post } from "@/lib/sanity/queries";
 import { notFound } from "next/navigation";
 import { siteOrigin } from "@/lib/domains";
 
+type ArticlePageProps = {
+  params: {
+    slug: string;
+  };
+};
+
 async function getPost(slug: string) {
   return sanityClient.fetch<Post>(
     `
@@ -15,8 +21,7 @@ async function getPost(slug: string) {
   );
 }
 
-export async function generateMetadata(props: any) {
-  const params = await props.params;
+export async function generateMetadata({ params }: ArticlePageProps) {
   try {
     const post = await getPost(params.slug);
 
@@ -32,6 +37,7 @@ export async function generateMetadata(props: any) {
         tags: "web",
       }
     );
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (e) {
     return generateMetaData(
       "Blog article not found",
@@ -43,11 +49,11 @@ export async function generateMetadata(props: any) {
   }
 }
 
-export default async function ArticlePage(props: any) {
-  const params = await props.params;
+export default async function ArticlePage({ params }: ArticlePageProps) {
   let post: Post;
   try {
     post = await getPost(params.slug);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (e) {
     return notFound();
   }

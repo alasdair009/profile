@@ -9,7 +9,6 @@ const meta: Meta<typeof SocialMediaBar> = {
     controls: { hideNoControlsWarning: true },
   },
   subcomponents: {
-    // @ts-ignore
     SocialMediaLink: SocialMediaLink,
   },
 };

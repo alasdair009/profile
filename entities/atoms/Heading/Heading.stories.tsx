@@ -1,7 +1,8 @@
-import { Heading, HeadingProps } from "./Heading";
+import { Heading } from "./Heading";
 import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { expect, within } from "storybook/test";
 import { colors } from "@/styles/tokens";
+import { ComponentProps } from "react";
 
 const meta: Meta<typeof Heading> = {
   component: Heading,
@@ -83,7 +84,7 @@ export const H6: StoryObj<typeof Heading> = {
 };
 
 const headerTest = async (
-  args: HeadingProps<any>,
+  args: ComponentProps<typeof Heading>,
   canvasElement: HTMLElement
 ) => {
   const canvas = within(canvasElement);

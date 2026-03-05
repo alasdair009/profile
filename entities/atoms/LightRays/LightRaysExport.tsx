@@ -1,12 +1,5 @@
 "use client";
-import {
-  useRef,
-  useEffect,
-  useState,
-  FC,
-  CSSProperties,
-  HTMLAttributes,
-} from "react";
+import { useRef, useEffect, useState, FC, HTMLAttributes } from "react";
 import { Renderer, Program, Triangle, Mesh } from "ogl";
 
 export type RaysOrigin =

@@ -5,5 +5,5 @@ type BarometerProps = {
 };
 
 export function Barometer({ pressure }: BarometerProps) {
-  return <meter className={styles.root} />;
+  return <meter className={styles.root} data-pressure={pressure} />;
 }

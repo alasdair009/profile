@@ -1,13 +1,6 @@
 import { Metadata } from "next";
 import { siteOrigin } from "@/lib/domains";
 import { OpenGraphType } from "next/dist/lib/metadata/types/opengraph-types";
-import blueskyIcon from "@/entities/atoms/SocialMediaLink/assets/bluesky.svg";
-import facebookIcon from "@/entities/atoms/SocialMediaLink/assets/facebook.svg";
-import gitHubIcon from "@/entities/atoms/SocialMediaLink/assets/github.svg";
-import instagramIcon from "@/entities/atoms/SocialMediaLink/assets/instagram.svg";
-import linkedInIcon from "@/entities/atoms/SocialMediaLink/assets/linkedin.svg";
-import xIcon from "@/entities/atoms/SocialMediaLink/assets/x.svg";
-import youTubeIcon from "@/entities/atoms/SocialMediaLink/assets/youtube.svg";
 
 const xHandle = "alasdair009";
 
@@ -41,7 +34,7 @@ export const generateMetaData = (
         tags?: null | string | Array<string>;
       }
     | undefined = undefined,
-  alternates: {} | undefined = undefined
+  alternates: object | undefined = undefined
 ): Metadata => {
   return {
     title: `${pageTitle} | ${siteName} | front end web engineer trampolinist`,

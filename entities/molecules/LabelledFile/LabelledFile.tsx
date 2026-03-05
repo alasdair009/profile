@@ -30,7 +30,6 @@ type LabelledInputProps = {
  */
 export function LabelledFile({
   isInvalid,
-  name,
   label,
   errorText = `Please chose a valid ${label}`,
   ...rest

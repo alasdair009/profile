@@ -36,6 +36,7 @@ export function EffectBox({
       className={styles.effectBox}
       style={
         {
+          ...style,
           "--index": index,
           "--shadows": generateParticles(index, particlesPerPlate),
         } as CSSProperties

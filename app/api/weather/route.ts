@@ -14,7 +14,7 @@ function isWindDirection(
 ): maybeDirection is WindDirection {
   return (
     typeof maybeDirection === "string" &&
-    // @ts-ignore
+    //@ts-expect-error this is fine
     windDirections.includes(maybeDirection)
   );
 }

@@ -24,8 +24,11 @@ type ContactFormProps = {
   onFormSubmitted?: () => void;
 } & Exclude<HTMLAttributes<HTMLFormElement>, "onSubmit">;
 
-const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY;
-declare var grecaptcha: any;
+const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY ?? "";
+declare let grecaptcha: {
+  ready: (callback: () => void) => void;
+  execute: (siteKey: string, options: { action: string }) => Promise<string>;
+};
 
 /**
  * Standard contact form
