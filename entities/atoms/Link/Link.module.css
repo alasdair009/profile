@@ -29,7 +29,7 @@
 .hoverIFrameWrapper {
   aspect-ratio: 16 / 9;
   background: var(--color-grey-dark);
-  border: var(--size-s8) solid var(--color-grey-dark);
+  border: var(--border-ultra-black);
   box-shadow: 0 0 var(--size-s2) var(--size-s2) var(--color-black-evil);
   display: none;
   height: calc(var(--size-s128) + var(--size-s16));

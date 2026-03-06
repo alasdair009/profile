@@ -25,8 +25,8 @@
 }
 
 .skylinesFigure {
-  border-bottom: 1px solid var(--color-green-grass);
-  border-top: 1px solid var(--color-green-grass);
+  border-bottom: var(--border-thin-green);
+  border-top: var(--border-thin-green);
   margin: 0 auto;
   max-width: var(--global-decoration-max-width);
   position: relative;

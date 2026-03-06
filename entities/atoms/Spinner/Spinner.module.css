@@ -1,6 +1,6 @@
 .root {
   content: "";
-  border-radius: 50%;
+  border-radius: var(--radii-round);
   display: block;
   height: var(--size-s48);
   width: var(--size-s48);

@@ -1,13 +1,12 @@
 "use client";
 import { StaticImageData } from "next/image";
-import { colors, sizes } from "@/styles/tokens";
+import { borders, colors } from "@/styles/tokens";
 import Image from "next/image";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { useInView } from "react-intersection-observer";
 import { HTMLAttributes } from "react";
 import "react-vertical-timeline-component/style.min.css";
 import styles from "./TimelineElement.module.css";
-import { toRem } from "@/styles/style-helpers";
 
 type TimelineElementProps = {
   date: string;
@@ -39,7 +38,7 @@ export function TimelineElement({
           color: colors.whiteGhost,
         }}
         contentArrowStyle={{
-          borderRight: `${toRem(sizes.s8)} solid  ${colors.greenGrass}`,
+          borderRight: borders.ultraGreen,
         }}
         date={date}
         iconStyle={{

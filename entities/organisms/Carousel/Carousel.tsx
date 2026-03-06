@@ -1,6 +1,7 @@
 import { CSSProperties, HTMLAttributes, useId } from "react";
 import styles from "./Carousel.module.css";
 import Image, { StaticImageData } from "next/image";
+import { borders } from "@/styles/tokens";
 
 type CarouselProps = {
   /**
@@ -92,7 +93,7 @@ export function Carousel({
   width: var(--size-s16);
   height: var(--size-s16);
   background-color: transparent;
-  border: var(--size-s2) solid var(--color-green-grass);
+  border: ${borders.mediumGreen};
   border-radius: var(--radii-round);
   overflow: hidden;
   text-indent: 16px;

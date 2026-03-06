@@ -22,7 +22,7 @@
     aspect-ratio: 1;
     background: var(--color-black-evil) url("../../assets/am.svg") no-repeat
       center;
-    border: var(--size-s2) solid var(--color-green-grass);
+    border: var(--border-medium-green);
     border-radius: 50%;
     content: "";
     display: none;

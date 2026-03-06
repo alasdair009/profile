@@ -1,0 +1,38 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { borders, fontSizes, sizes } from "../../../styles/tokens";
+
+<Meta title="Design Tokens/Borders" />
+
+# Borders
+
+Standardised borders for use across the site.
+
+<div
+  style={{
+    display: "flex",
+    flexWrap: "wrap",
+    gap: 8,
+    justifyContent: "space-between",
+    width: "100%",
+  }}
+>
+  {Object.keys(borders).map((borderKey) => {
+    return (
+      <div
+        key={borderKey}
+        style={{
+          alignItems: "center",
+          aspectRatio: 1,
+          border: borders[borderKey],
+          display: "flex",
+          fontSize: fontSizes.small,
+          justifyContent: "center",
+          overflow: "hidden",
+          width: sizes.s80,
+        }}
+      >
+        {borderKey}
+      </div>
+    );
+  })}
+</div>

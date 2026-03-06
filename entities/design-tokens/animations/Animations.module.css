@@ -15,7 +15,7 @@
 }
 
 .curveWrapper {
-  border: 1px solid var(--color-white-ghost);
+  border: var(--border-thin-white);
   color: var(--color-white-ghost);
   display: inline-flex;
   flex-direction: column;
@@ -59,7 +59,7 @@
 .animationView {
   align-items: center;
   aspect-ratio: 1;
-  border: 1px solid var(--color-white-ghost);
+  border: var(--border-thin-white);
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -72,7 +72,7 @@
   animation-iteration-count: infinite;
   animation-duration: 4s;
   background: var(--color-black-evil);
-  border: 1px solid var(--color-green-grass);
+  border: var(--border-thin-green);
   display: flex;
   height: 50px;
   justify-content: center;

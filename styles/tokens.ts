@@ -275,6 +275,23 @@ export const colors: Record<
   redHeat: "#df1c41",
 };
 
+export const borders: Record<
+  string,
+  Exclude<CSSProperties["border"], undefined>
+> = {
+  mediumGreen: `2px solid ${colors.greenGrass}`,
+  mediumRed: `2px solid ${colors.redHeat}`,
+  thinBlack: `1px solid ${colors.blackEvil}`,
+  thinBlue: `1px solid ${colors.blueSea}`,
+  thinGreen: `1px solid ${colors.greenGrass}`,
+  thinGrey: `1px solid ${colors.greyDark}`,
+  thinRed: `1px solid ${colors.redHeat}`,
+  thinWhite: `1px solid ${colors.whiteGhost}`,
+  thickWhite: `4px solid ${colors.whiteGhost}`,
+  ultraBlack: `8px solid ${colors.blackEvil}`,
+  ultraGreen: `8px solid ${colors.greenGrass}`,
+};
+
 const radiiInt: Record<
   `r${number}`,
   Exclude<CSSProperties["borderRadius"], undefined>
@@ -359,6 +376,7 @@ export const fontWeights: Record<"regular" | "bold" | "black", number> = {
 
 export const allTokens = {
   ...toCssVars(animationNames, "animation-name"),
+  ...toCssVars(borders, "border"),
   ...toCssVars(curves, "curve"),
   ...toCssVars(clipPaths, "clip-path"),
   ...toCssVars(colors, "color"),

@@ -1,7 +1,7 @@
 .root {
   align-items: center;
   aspect-ratio: 1;
-  border-radius: 50%;
+  border-radius: var(--radii-round);
   display: flex;
   height: var(--size-s96);
   justify-content: center;

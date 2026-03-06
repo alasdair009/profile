@@ -27,7 +27,7 @@
     align-items: center;
     aspect-ratio: 1;
     background: var(--color);
-    border: 1px solid var(--color-black-evil);
+    border: var(--border-thin-black);
     border-radius: var(--radii-round);
     bottom: var(--size-s16);
     color: var(--color-black-evil);
@@ -44,7 +44,7 @@
 .lig {
   appearance: none;
   background: var(--color-white-ghost);
-  border: 1px solid var(--color-black-evil);
+  border: var(--border-thin-black);
   height: var(--size-s16);
   left: 50%;
   position: absolute;

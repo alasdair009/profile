@@ -12,7 +12,7 @@
   --scroll-marker-display: flex;
   anchor-name: --carousel;
   aspect-ratio: 16 / 9;
-  border: var(--size-s2) solid var(--color-green-grass);
+  border: var(--border-medium-green);
   display: flex;
   gap: var(--size-s8);
   margin: 0 auto;
@@ -85,7 +85,7 @@
     width: var(--size-s16);
     height: var(--size-s16);
     background-color: transparent;
-    border: var(--size-s2) solid var(--color-green-grass);
+    border: var(--border-medium-green);
     border-radius: var(--radii-round);
     overflow: hidden;
     text-indent: 16px;

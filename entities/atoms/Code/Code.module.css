@@ -1,6 +1,6 @@
 .root {
   background: var(--color-grey-dark);
-  border: 1px solid colors.var(--color-green-grass);
+  border: var(--border-thin-green);
   display: inline-block;
   font-family: monospace;
   -webkit-overflow-scrolling: touch;

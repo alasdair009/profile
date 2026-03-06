@@ -6,7 +6,7 @@
     appearance: none;
     aspect-ratio: 1;
     background: var(--color-green-grass);
-    border: 1px solid var(--color-white-ghost);
+    border: var(--border-thin-white);
     border-radius: var(--radii-round);
     height: var(--size-s16);
   }
@@ -15,20 +15,20 @@
     appearance: none;
     aspect-ratio: 1;
     background: var(--color-green-grass);
-    border: 1px solid var(--color-white-ghost);
+    border: var(--border-thin-white);
     border-radius: var(--radii-round);
     height: var(--size-s16);
   }
 
   &::-webkit-slider-runnable-track {
     background-color: var(--color-grey-dark);
-    border: 1px solid var(--color-green-grass);
+    border: var(--border-thin-green);
     border-radius: var(--radii-r8);
   }
 
   &::-moz-range-track {
     background-color: var(--color-grey-dark);
-    border: 1px solid var(--color-green-grass);
+    border: var(--border-thin-green);
     border-radius: var(--radii-r8);
   }
 }
