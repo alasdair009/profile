@@ -15,7 +15,7 @@ export default meta;
 export const Default: StoryObj<typeof LightRays> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const sunElement = canvas.getByTestId(LightRays.name);
+    const sunElement = canvas.getByTestId(LightRays.displayName);
 
     await expect(sunElement).toBeInTheDocument();
   },
