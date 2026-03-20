@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import { Heading, Link, Paragraph } from "@/entities";
+import { Heading, Link, LiquidMetal, Paragraph, Spacer } from "@/entities";
 import { colors } from "@/styles/tokens";
 import styles from "./Splash.module.css";
 
@@ -13,29 +13,28 @@ export function Splash({ ...rest }: HTMLAttributes<HTMLDivElement>) {
       {...rest}
     >
       <div className={styles.inner}>
-        <div className={styles.feetSection}>
-          <div className={styles.copy}>
-            <Heading>
-              <span itemProp="givenName">Ali</span> Macrae
-            </Heading>
-            <Paragraph
-              className={styles.copyParagraph}
-              color={colors.whiteGhost}
-              fontSize="large"
-              textWrap="balance"
-            >
-              The gravity defying blend of{" "}
-              <span itemProp="jobTitle">web developer</span> and trampolinist.
-            </Paragraph>
-            <Paragraph className={styles.copyParagraph} fontSize="large">
-              Always seeking adventures!
-            </Paragraph>
-            <Link variant="large" href="/portfolio">
-              Hire me now!
-            </Link>
-          </div>
+        <LiquidMetal className={styles.liquidMetal} opacity={0.3} />
+        <div className={styles.content}>
+          <Heading>
+            <span itemProp="givenName">Ali</span> Macrae
+          </Heading>
+          <Paragraph fontSize="large" align="center">
+            The gravity defying blend of{" "}
+            <span itemProp="jobTitle">web developer</span> and trampolinist.
+          </Paragraph>
+          <Paragraph
+            className={styles.copyParagraph}
+            fontSize="large"
+            align="center"
+          >
+            Always seeking adventures!
+          </Paragraph>
+          <Spacer />
+          <Spacer />
+          <Link variant="large" href="/portfolio">
+            Hire me now!
+          </Link>
         </div>
-        <div className={styles.headSection} />
       </div>
     </section>
   );

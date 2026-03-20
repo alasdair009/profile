@@ -8,23 +8,23 @@ type LiquidMetalProps = {
   /**
    * Thickest colour of the animation.
    */
-  baseColor: string;
+  baseColor?: string;
   /**
    * Maximum displacement moved by a point on a wave.
    */
-  amplitude: ComponentProps<typeof LiquidChrome>["amplitude"];
+  amplitude?: ComponentProps<typeof LiquidChrome>["amplitude"];
   /**
    * Speed of the animation.
    */
-  speed: ComponentProps<typeof LiquidChrome>["speed"];
+  speed?: ComponentProps<typeof LiquidChrome>["speed"];
   /**
    * Opacity of the entity.
    */
-  opacity: CSSProperties["opacity"];
+  opacity?: CSSProperties["opacity"];
   /**
    * Number of pixels of blur of the entity.
    */
-  blur: number;
+  blur?: number;
 } & HTMLAttributes<HTMLDivElement>;
 
 function hexToRgb(hex: string) {
