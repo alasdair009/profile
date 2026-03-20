@@ -35,10 +35,6 @@ export function Carousel({
 }: CarouselProps) {
   const styleId = useId();
   const experimentalCss = `
-.${styles.carousel} {
-  anchor-name: --carousel;
-  scroll-marker-group: after;
-}
 
 /* Buttons */
 .${styles.carousel}::scroll-button(*) {

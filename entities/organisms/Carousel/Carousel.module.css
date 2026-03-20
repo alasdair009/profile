@@ -20,7 +20,7 @@
   overflow-x: scroll;
   position: relative;
   scroll-behavior: var(--scroll-behaviour);
-  /*scroll-marker-group: after;*/
+  scroll-marker-group: after;
   scroll-snap-type: x mandatory;
   width: 100%;
 
