@@ -1,8 +1,8 @@
-import { HTMLAttributes } from "react";
+import { InputHTMLAttributes } from "react";
 
 export type TextInputType = "text" | "email" | "password";
 
 export type BaseInputProps = {
   isInvalid?: boolean;
   type: TextInputType;
-} & HTMLAttributes<HTMLInputElement>;
+} & InputHTMLAttributes<HTMLInputElement>;

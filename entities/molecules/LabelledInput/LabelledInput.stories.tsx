@@ -107,3 +107,28 @@ export const IsInvalid: StoryObj<typeof LabelledInput> = {
     );
   },
 };
+
+export const DataList: StoryObj<typeof LabelledInput> = {
+  args: {
+    label: "Datalist entry",
+    type: "text",
+    id: "dataList example",
+    dataList: [
+      { label: "label 1", value: 1 },
+      { label: "label 2", value: 2 },
+      { label: "label 3", value: 3 },
+    ],
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const labelledInputElement = canvas.getByTestId(LabelledInput.name);
+    await canvas.findByTestId(BaseInput.name);
+
+    await expect(labelledInputElement).toBeInTheDocument();
+    await expect(canvas.getByText("Datalist entry")).toBeInTheDocument();
+    await expect(canvas.getByTestId(BaseInput.name)).toHaveAttribute(
+      "type",
+      "text"
+    );
+  },
+};

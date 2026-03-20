@@ -32,6 +32,10 @@ type LabelledInputProps = {
    * Error text the field should display.
    */
   errorText?: string;
+  /**
+   * Datalist entries
+   */
+  dataList?: { label: string; value: string | number }[];
 } & HTMLAttributes<HTMLInputElement>;
 
 /**
@@ -42,12 +46,32 @@ export function LabelledInput({
   type,
   label,
   errorText = `Please enter a valid ${label}`,
+  dataList,
+  id,
   ...rest
 }: LabelledInputProps) {
+  const listId = `list=${id}`;
   return (
     <label className={styles.root} data-testid={LabelledInput.name}>
       <BaseLabel as="span">{label}</BaseLabel>
-      <BaseInput type={type} isInvalid={isInvalid} {...rest} />
+      <BaseInput
+        type={type}
+        isInvalid={isInvalid}
+        id={id}
+        list={listId}
+        {...rest}
+      />
+      {id && dataList && (
+        <datalist id={listId}>
+          {dataList.map((option) => {
+            return (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            );
+          })}
+        </datalist>
+      )}
       <ErrorText
         shown={isInvalid || false}
         data-testid={`${LabelledInput.name}Error`}
