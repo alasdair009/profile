@@ -1,8 +1,37 @@
+@keyframes grow {
+  to {
+    width: 100%;
+  }
+}
+
 .root {
   margin: 0 auto;
   max-width: var(--global-content-max-width);
   position: relative;
   width: 100%;
+}
+
+.readProgress {
+  background: var(--color-grey-dark);
+  border: var(--border-thin-grey-light);
+  box-shadow: var(--shadow-bar-black-down);
+  display: flex;
+  height: var(--size-s16);
+  justify-content: flex-start;
+  margin: 0 auto var(--size-s8);
+  max-width: var(--global-text-max-width);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+
+  &::before {
+    animation: grow linear forwards;
+    animation-timeline: scroll();
+    background: var(--color-green-grass);
+    content: "";
+    width: 0;
+  }
 }
 
 .articleHeading {

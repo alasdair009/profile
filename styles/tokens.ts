@@ -285,6 +285,7 @@ export const borders: Record<
   thinBlue: `1px solid ${colors.blueSea}`,
   thinGreen: `1px solid ${colors.greenGrass}`,
   thinGrey: `1px solid ${colors.greyDark}`,
+  thinGreyLight: `1px solid ${colors.greyLight}`,
   thinRed: `1px solid ${colors.redHeat}`,
   thinWhite: `1px solid ${colors.whiteGhost}`,
   thickWhite: `4px solid ${colors.whiteGhost}`,
@@ -321,6 +322,7 @@ export const shadows: Record<
   string,
   Exclude<CSSProperties["boxShadow"], undefined>
 > = {
+  barBlackDown: `0 3px 5px 5px ${colors.blackEvil}`,
   boxGreen: `0 0 ${sizes.s4}px ${sizes.s2}px ${colors.greenGrass}`,
 };
 

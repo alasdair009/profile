@@ -45,6 +45,7 @@ export function Article({
 }: ArticleProps) {
   return (
     <article className={styles.root} data-testid={Article.name} {...rest}>
+      <div className={styles.readProgress} />
       <Heading className={styles.articleHeading} align="center">
         {heading}
       </Heading>
