@@ -7,9 +7,7 @@ import { notFound } from "next/navigation";
 import { siteOrigin } from "@/lib/domains";
 
 type ArticlePageProps = {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 };
 
 async function getPost(slug: string) {
@@ -22,8 +20,9 @@ async function getPost(slug: string) {
 }
 
 export async function generateMetadata({ params }: ArticlePageProps) {
+  const { slug } = await params;
   try {
-    const post = await getPost(params.slug);
+    const post = await getPost(slug);
 
     return generateMetaData(
       post.title,
@@ -42,7 +41,7 @@ export async function generateMetadata({ params }: ArticlePageProps) {
     return generateMetaData(
       "Blog article not found",
       "We could not find the article",
-      `blog/${params.slug}`,
+      `blog/${slug}`,
       undefined,
       "website"
     );
@@ -50,9 +49,10 @@ export async function generateMetadata({ params }: ArticlePageProps) {
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
+  const { slug } = await params;
   let post: Post;
   try {
-    post = await getPost(params.slug);
+    post = await getPost(slug);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (e) {
     return notFound();
@@ -61,10 +61,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "@id": `${siteOrigin}/blog/${params.slug}#blogposting`,
+    "@id": `${siteOrigin}/blog/${slug}#blogposting`,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${siteOrigin}/blog/${params.slug}`,
+      "@id": `${siteOrigin}/blog/${slug}`,
     },
     headline: post.title,
     description: post.description,
