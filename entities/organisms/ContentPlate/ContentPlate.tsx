@@ -13,6 +13,7 @@ export function ContentPlate({
   foregroundImage,
   foregroundImageAlt,
   foregroundAnimate = false,
+  foregroundImageLoading,
   flameColor,
   children,
   ...rest
@@ -64,6 +65,7 @@ export function ContentPlate({
               src={foregroundImage}
               alt={foregroundImageAlt}
               sizes={"(max-width: 400px) 100vw, 400px"}
+              loading={foregroundImageLoading}
             />
           </figure>
         )}

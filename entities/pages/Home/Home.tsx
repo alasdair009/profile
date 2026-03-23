@@ -40,6 +40,7 @@ export function Home({ contactFormEndPoint, ...rest }: HomeProps) {
       <ContentPlate
         foregroundImage={portraitImage}
         foregroundImageAlt="Headshot photo of Ali"
+        foregroundImageLoading="eager"
         orientation="right"
         itemScope={true}
         itemType="https://schema.org/Person"

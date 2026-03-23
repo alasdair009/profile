@@ -5,21 +5,25 @@ import imageUrlBuilder from "@sanity/image-url";
 import { Post } from "@/lib/sanity/queries";
 import { notFound } from "next/navigation";
 import { siteOrigin } from "@/lib/domains";
+import { cache } from "react";
+import { Metadata } from "next";
 
 type ArticlePageProps = {
   params: Promise<{ slug: string }>;
 };
 
-async function getPost(slug: string) {
+const getPost = cache(async (slug: string) => {
   return sanityClient.fetch<Post>(
     `
     *[_type == "post" && slug.current == $slug][0]{title, description, body, slug, mainImage, publishedAt, categories, _updatedAt, "categoriesTitle": categories->title}
   `,
     { slug }
   );
-}
+});
 
-export async function generateMetadata({ params }: ArticlePageProps) {
+export async function generateMetadata({
+  params,
+}: ArticlePageProps): Promise<Metadata> {
   const { slug } = await params;
   try {
     const post = await getPost(slug);

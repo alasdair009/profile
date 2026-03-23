@@ -1,5 +1,5 @@
 import { Property } from "csstype";
-import { StaticImageData } from "next/image";
+import type { ImageProps, StaticImageData } from "next/image";
 import { HTMLAttributes, ReactNode } from "react";
 
 export type ContentPlateProps = {
@@ -10,6 +10,7 @@ export type ContentPlateProps = {
   foregroundImage?: StaticImageData;
   foregroundImageAlt?: string;
   foregroundAnimate?: boolean;
+  foregroundImageLoading?: ImageProps["loading"];
   embedUrl?: string;
   flameColor?: string;
   children: ReactNode;
