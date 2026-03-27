@@ -4,15 +4,21 @@ import imageUrlBuilder from "@sanity/image-url";
 import { GET_ALL_POSTS, Post } from "@/lib/sanity/queries";
 import { SanityClient } from "next-sanity";
 import styles from "./BlogList.module.css";
+import type { ImageProps } from "next/image";
 
 type BlogListProps = {
   sanityClient: SanityClient;
+  imageLoading?: ImageProps["loading"];
 } & HTMLAttributes<HTMLDivElement>;
 
 /**
  * Display a list of all the blog articles
  */
-export async function BlogList({ sanityClient, ...rest }: BlogListProps) {
+export async function BlogList({
+  sanityClient,
+  imageLoading,
+  ...rest
+}: BlogListProps) {
   let posts: Post[] = [];
   try {
     posts = await sanityClient.fetch<Post[]>(GET_ALL_POSTS);
@@ -37,6 +43,7 @@ export async function BlogList({ sanityClient, ...rest }: BlogListProps) {
               .image(post.mainImage.asset)
               .url()}
             imageAlt={`Image for the ${post.title} article`}
+            imageLoading={imageLoading}
           />
         );
       })}

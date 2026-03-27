@@ -1,0 +1,80 @@
+.root {
+  display: flex;
+  position: relative;
+}
+
+.electricBorder {
+  --electric-light-color: oklch(from var(--electric-border-color) l c h);
+  position: relative;
+  border-radius: inherit;
+  overflow: visible;
+  isolation: isolate;
+  padding: var(--size-s4);
+  width: 100%;
+}
+
+.ebCanvasContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ebCanvas {
+  display: block;
+}
+
+.ebContent {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  position: relative;
+  border-radius: inherit;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+}
+
+.ebLayers {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ebGlow1,
+.ebGlow2,
+.ebBackgroundGlow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.ebGlow1 {
+  border: 2px solid oklch(from var(--electric-border-color) l c h / 0.6);
+  filter: blur(1px);
+}
+
+.ebGlow2 {
+  border: 2px solid var(--electric-light-color);
+  filter: blur(4px);
+}
+
+.ebBackgroundGlow {
+  z-index: -1;
+  transform: scale(1.1);
+  filter: blur(32px);
+  opacity: 0.3;
+  background: linear-gradient(
+    -30deg,
+    var(--electric-light-color),
+    transparent,
+    var(--electric-border-color)
+  );
+}

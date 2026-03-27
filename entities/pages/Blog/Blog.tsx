@@ -23,7 +23,7 @@ export async function Blog({ sanityClient, ...rest }: BlogProps) {
         trampoline coaching and general adventures.
       </Paragraph>
       <Suspense fallback={<Paragraph align="center">Loading...</Paragraph>}>
-        <BlogList sanityClient={sanityClient} />
+        <BlogList sanityClient={sanityClient} imageLoading="eager" />
       </Suspense>
     </div>
   );

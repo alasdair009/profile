@@ -16,6 +16,7 @@ export { Button } from "./atoms/Button";
 export { Cloud } from "./atoms/Cloud";
 export { Code } from "./atoms/Code";
 export { Details } from "./atoms/Details";
+export { ElectricBorder } from "./atoms/ElectricBorder";
 export { Fire } from "./atoms/Fire";
 export { Flame } from "./atoms/Flame";
 export { Flag } from "./atoms/Flag";
