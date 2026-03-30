@@ -15,6 +15,8 @@ export default function manifest(): MetadataRoute.Manifest {
     start_url: "/",
     display: "standalone",
     background_color: colors.blackEvil,
+    lang: "en-GB",
+    scope: "/",
     theme_color: colors.greenGrass,
     icons: [
       {
@@ -27,14 +29,14 @@ export default function manifest(): MetadataRoute.Manifest {
       {
         src: screenshotWide.src,
         sizes: "1606x1216",
-        type: "image/png",
+        type: "image/webp",
         form_factor: "wide",
         label: "AM home",
       },
       {
         src: screenshotNarrow.src,
         sizes: "433x336",
-        type: "image/png",
+        type: "image/webp",
         form_factor: "narrow",
         label: "AM home",
       },
