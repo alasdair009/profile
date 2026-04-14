@@ -1,4 +1,4 @@
-import { HTMLAttributes } from "react";
+import { InputHTMLAttributes } from "react";
 import { TextInputType } from "../../atoms/BaseInput/BaseInput.types";
 import { BaseInput, BaseLabel, ErrorText } from "@/entities";
 import styles from "./LabelledInput.module.css";
@@ -36,7 +36,7 @@ type LabelledInputProps = {
    * Datalist entries
    */
   dataList?: { label: string; value: string | number }[];
-} & HTMLAttributes<HTMLInputElement>;
+} & InputHTMLAttributes<HTMLInputElement>;
 
 /**
  * Labelled text input field for forms.
