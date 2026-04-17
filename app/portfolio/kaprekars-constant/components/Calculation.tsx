@@ -1,7 +1,7 @@
 "use client";
-import { sizes } from "@/styles/tokens";
 import { Button, LabelledInput } from "@/entities";
-import { FormEvent, useRef } from "react";
+import { ReactNode, SubmitEvent, useRef, useState } from "react";
+import styles from "./Calculation.module.css";
 
 export const kaprekarConstant = 6174 as const;
 
@@ -16,31 +16,50 @@ const performKaprekarStep = (input: string) => {
   const digits = input.split("");
   const ascending = [...digits].sort().join("");
   const descending = [...digits].sort().reverse().join("");
-  return Number(descending) - Number(ascending);
+  const result = Number(descending) - Number(ascending);
+  return {
+    value: result,
+    calculation: (
+      <>
+        <div className={styles.step}>
+          <span className={styles.desc}>{descending}</span>
+          <span className={styles.asc}>{ascending}</span>
+          <span className={styles.res}>{result}</span>
+        </div>
+      </>
+    ),
+  };
 };
 
 export function Calculation() {
   const outputRef = useRef<HTMLOutputElement>(null);
+  const [outputHTML, setOutputHTML] = useState<ReactNode>(<></>);
   const handleSubmit = (e: SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const start = formData.get("start") as string;
-    const result = performKaprekarStep(start);
-    outputRef.current?.innerText = `The result is ${result}`;
+    let currentValue = parseInt(formData.get("start") as string);
+    let currentCalc = <>Start with: {currentValue}</>;
+    setOutputHTML(currentCalc);
+
+    let counter = 0;
+    while (currentValue !== kaprekarConstant && counter < 10) {
+      const { value, calculation } = performKaprekarStep(`${currentValue}`);
+      currentCalc = (
+        <>
+          {currentCalc}
+          <hr />
+          {calculation}
+        </>
+      );
+      currentValue = value;
+      console.log(currentValue);
+      setOutputHTML(currentCalc);
+      counter++;
+    }
   };
   return (
     <>
-      <form
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          margin: "0 auto",
-          width: "100%",
-          maxWidth: sizes.s512,
-        }}
-        onSubmit={handleSubmit}
-      >
+      <form className={styles.root} onSubmit={handleSubmit}>
         <LabelledInput
           label="start number"
           type="text"
@@ -51,10 +70,13 @@ export function Calculation() {
           title="Enter exactly 4 digits, and they cannot all be the same."
           placeholder="e.g. 1234"
           style={{ letterSpacing: "0.5em", textAlign: "center", width: "auto" }}
+          autoComplete="off"
         />
         <Button type="submit">Submit</Button>
       </form>
-      <output ref={outputRef}></output>
+      <output className={styles.output} ref={outputRef}>
+        {outputHTML}
+      </output>
     </>
   );
 }
