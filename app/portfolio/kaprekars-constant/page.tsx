@@ -1,10 +1,8 @@
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
 import { Heading, Paragraph } from "@/entities";
-import {
-  Calculation,
-  kaprekarConstant,
-} from "@/app/portfolio/kaprekars-constant/components/Calculation";
+import { Calculation } from "./components/Calculation";
+import { kaprekarConstant } from "./components/constants";
 
 export const metadata: Metadata = generateMetaData(
   "Kaprekar's Constant Tech Demo",
@@ -22,7 +20,8 @@ export default async function RuneScapePage() {
         involves taking a four-digit number, arranging its digits in descending
         and ascending order, subtracting the smaller number from the larger one,
         and repeating the process with the result. Eventually, the process will
-        reach the number 6174, which is known as Kaprekar&apos;s Constant.
+        reach the number {kaprekarConstant}, which is known as Kaprekar&apos;s
+        Constant.
       </Paragraph>
       <Calculation />
     </>

@@ -2,8 +2,7 @@
 import { Button, HorizontalRule, LabelledInput } from "@/entities";
 import { ReactNode, SubmitEvent, useState } from "react";
 import styles from "./Calculation.module.css";
-
-export const kaprekarConstant = 6174 as const;
+import { kaprekarConstant } from "./constants";
 
 const performKaprekarStep = (input: string) => {
   if (!/^\d{4}$/.test(input)) {
