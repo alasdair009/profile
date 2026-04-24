@@ -1,6 +1,6 @@
 "use client";
-import { Button, LabelledInput } from "@/entities";
-import { ReactNode, SubmitEvent, useRef, useState } from "react";
+import { Button, HorizontalRule, LabelledInput } from "@/entities";
+import { ReactNode, SubmitEvent, useState } from "react";
 import styles from "./Calculation.module.css";
 
 export const kaprekarConstant = 6174 as const;
@@ -23,7 +23,7 @@ const performKaprekarStep = (input: string) => {
       <>
         <div className={styles.step}>
           <span className={styles.desc}>{descending}</span>
-          <span className={styles.asc}>{ascending}</span>
+          <span className={styles.asc}>- {ascending}</span>
           <span className={styles.res}>{result}</span>
         </div>
       </>
@@ -32,30 +32,47 @@ const performKaprekarStep = (input: string) => {
 };
 
 export function Calculation() {
-  const outputRef = useRef<HTMLOutputElement>(null);
   const [outputHTML, setOutputHTML] = useState<ReactNode>(<></>);
+
   const handleSubmit = (e: SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setOutputHTML(<></>);
     const formData = new FormData(e.currentTarget);
     let currentValue = parseInt(formData.get("start") as string);
-    let currentCalc = <>Start with: {currentValue}</>;
+    let currentCalc = (
+      <span className={styles.startsWith}>Start with: {currentValue}</span>
+    );
     setOutputHTML(currentCalc);
 
     let counter = 0;
-    while (currentValue !== kaprekarConstant && counter < 10) {
-      const { value, calculation } = performKaprekarStep(`${currentValue}`);
-      currentCalc = (
-        <>
-          {currentCalc}
-          <hr />
-          {calculation}
-        </>
-      );
-      currentValue = value;
-      console.log(currentValue);
-      setOutputHTML(currentCalc);
-      counter++;
-    }
+    const doTheWork = setInterval(() => {
+      if (currentValue === kaprekarConstant) {
+        console.log("done");
+        setOutputHTML(
+          <>
+            {currentCalc}
+            <HorizontalRule />
+            <span className={styles.completed}>
+              Completed in {counter} steps
+            </span>
+          </>
+        );
+        clearInterval(doTheWork);
+      } else {
+        const { value, calculation } = performKaprekarStep(`${currentValue}`);
+        currentCalc = (
+          <>
+            {currentCalc}
+            <HorizontalRule />
+            {calculation}
+          </>
+        );
+        currentValue = value;
+        console.log(currentValue);
+        counter++;
+        setOutputHTML(currentCalc);
+      }
+    }, 300);
   };
   return (
     <>
@@ -74,9 +91,7 @@ export function Calculation() {
         />
         <Button type="submit">Submit</Button>
       </form>
-      <output className={styles.output} ref={outputRef}>
-        {outputHTML}
-      </output>
+      <output className={styles.output}>{outputHTML}</output>
     </>
   );
 }

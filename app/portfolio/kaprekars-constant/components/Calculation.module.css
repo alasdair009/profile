@@ -9,18 +9,34 @@
 
 .output {
   display: block;
-  margin: 0 auto;
-  max-width: var(--size-s512);
+  margin: var(--size-s24) auto;
+  max-width: var(--size-s256);
   position: relative;
 }
 
+.startsWith,
+.completed {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .step {
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
 }
 
 .asc {
-  text-decoration: underline;
+  position: relative;
+
+  &::after {
+    background: var(--color-white-ghost);
+    content: "";
+    display: block;
+    height: var(--size-s2);
+    margin-block: var(--size-s2);
+    width: 100%;
+  }
 }
 
 .desc {
