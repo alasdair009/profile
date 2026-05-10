@@ -6,6 +6,7 @@
   justify-content: space-between;
   margin: 0 auto;
   max-width: var(--global-content-max-width);
+  overflow: hidden;
   padding: var(--size-s8);
   width: 100%;
 }
