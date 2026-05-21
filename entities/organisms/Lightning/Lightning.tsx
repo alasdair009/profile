@@ -25,6 +25,7 @@ export function Lightning({
               "--frequency": `${frequency}s`,
             } as CSSProperties
           }
+          sizes="100vw"
         />
         <Rain />
         <Image

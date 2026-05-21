@@ -23,6 +23,7 @@ export function FixedPlate({
         placeholder={placeholder}
         src={image}
         alt={alt}
+        sizes="100vw"
       />
     </figure>
   );

@@ -18,6 +18,8 @@ export function Header({ ...rest }: HeaderProps) {
             src={amLogo}
             alt="AM logo"
             height={sizes.s32}
+            width={39}
+            sizes={`39px`}
           />
         </Link>
         <div className={styles.headerLinks}>

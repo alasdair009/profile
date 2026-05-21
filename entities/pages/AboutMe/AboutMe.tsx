@@ -96,6 +96,7 @@ export function AboutMe({
           src={skylinesImage}
           alt="An ariel view of a city in the City Skyliens game"
           className={styles.skylinesImage}
+          sizes="100vw"
         />
       </figure>
       <CopyBlock>
