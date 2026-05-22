@@ -36,7 +36,7 @@
     "lightningcss": "^1.30.2",
     "mysql2": "^3.18.2",
     "next": "16.2.6",
-    "next-sanity": "^12.4.5",
+    "next-sanity": "^13.0.3",
     "next-view-transitions": "^0.3.4",
     "ogl": "^1.0.11",
     "react": "19.2.6",
@@ -48,7 +48,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^5.2.1",
     "@csstools/postcss-global-data": "^3.1.0",
-    "@sanity/image-url": "^1.1.0",
+    "@sanity/image-url": "^2.1.1",
     "@storybook/addon-a11y": "^10.4.1",
     "@storybook/addon-docs": "^10.4.1",
     "@storybook/addon-links": "^10.4.1",
