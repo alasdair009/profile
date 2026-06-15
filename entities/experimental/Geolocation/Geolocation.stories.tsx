@@ -9,7 +9,7 @@ const meta: Meta<typeof Geolocation> = {
 export default meta;
 
 export const Default: StoryObj<typeof Geolocation> = {
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const geolocationElement = canvas.getByTestId(Geolocation.displayName);
 

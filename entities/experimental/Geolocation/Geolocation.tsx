@@ -2,42 +2,39 @@
 import { HTMLAttributes } from "react";
 import styles from "./Geolocation.module.css";
 import { useEffect, useRef } from "react";
+import { GeolocationElement, GeolocationLocationDetail } from "@/ambient";
 
-type GeolocationProps = HTMLAttributes<HTMLElement>;
+type GeolocationProps = HTMLAttributes<GeolocationElement>;
 
 /**
- * Source code in a monospaced box.
+ * Renders a geolocation element that alerts the current coordinates.
  */
 export function Geolocation({ children, ...rest }: GeolocationProps) {
-  const geoRef = useRef<HTMLElement>(null);
+  const geoRef = useRef<GeolocationElement | null>(null);
 
   useEffect(() => {
     const geo = geoRef.current;
     if (!geo) {
-      console.warn("Geolocation element not found");
       return;
     }
 
-    const handleLocation = (event: Event) => {
-      console.log("Location event received");
-      const target = event.target;
+    const handleLocation = (event: CustomEvent<GeolocationLocationDetail>) => {
+      const target = event.currentTarget as GeolocationElement | null;
+      if (!target?.position) return;
 
-      if (target.position) {
-        const { latitude, longitude } = target.position.coords;
+      const { latitude, longitude } = target.position.coords;
 
-        console.log({ latitude, longitude });
-      }
+      alert(`${latitude}, ${longitude}`);
     };
 
-    geo.addEventListener("location", handleLocation);
+    geo.addEventListener("location", handleLocation as EventListener);
 
     return () => {
-      geo.removeEventListener("location", handleLocation);
+      geo.removeEventListener("location", handleLocation as EventListener);
     };
   }, []);
 
   return (
-    // @ts-expect-error Experimental HTML element not yet in TypeScript DOM typings
     <geolocation
       ref={geoRef}
       className={`${styles.root}`}
@@ -45,7 +42,6 @@ export function Geolocation({ children, ...rest }: GeolocationProps) {
       {...rest}
     >
       {children}
-      {/*@ts-expect-error Experimental HTML element not yet in TypeScript DOM typings*/}
     </geolocation>
   );
 }
