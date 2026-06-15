@@ -9,20 +9,31 @@ declare module "*.css" {
 
 import type { HTMLAttributes } from "react";
 
+export interface GeolocationElement extends HTMLElement {
+  position?: GeolocationPosition;
+}
+
 export interface GeolocationLocationDetail {
   latitude: number;
   longitude: number;
 }
 
-interface GeolocationElement extends HTMLElement {
-  position?: GeolocationPosition;
-}
-
 declare global {
-  interface HTMLElementEventMap {
-    location: CustomEvent<GeolocationLocationDetail>;
+  namespace JSX {
+    interface IntrinsicElements {
+      geolocation: DetailedHTMLProps<
+        HTMLAttributes<GeolocationElement>,
+        GeolocationElement
+      >;
+    }
   }
 
+  interface HTMLElementTagNameMap {
+    geolocation: GeolocationElement;
+  }
+}
+
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       geolocation: DetailedHTMLProps<
@@ -32,3 +43,16 @@ declare global {
     }
   }
 }
+
+declare module "react/jsx-runtime" {
+  namespace JSX {
+    interface IntrinsicElements {
+      geolocation: DetailedHTMLProps<
+        HTMLAttributes<GeolocationElement>,
+        GeolocationElement
+      >;
+    }
+  }
+}
+
+export {};
