@@ -1,10 +1,12 @@
 import { siteOrigin } from "@/lib/domains";
 import { myName, siteName } from "@/lib/metadata";
 import { sanityClient } from "@/lib/sanity/client";
-import { GET_ALL_POSTS, Post } from "@/lib/sanity/queries";
+import { GET_POSTS_BY_CAT, Post } from "@/lib/sanity/queries";
 
 export async function GET() {
-  const posts = await sanityClient.fetch<Post[]>(GET_ALL_POSTS);
+  const posts = await sanityClient.fetch<Post[]>(
+    GET_POSTS_BY_CAT.replace("$cat", "web")
+  );
   const now = new Date();
 
   console.log({ posts });

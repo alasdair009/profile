@@ -20,6 +20,26 @@ export const GET_ALL_POSTS = `*[_type == "post" && listed == true] | order(publi
   body
 }`;
 
+export const GET_POSTS_BY_CAT = `*[_type == "post" && listed == true && "$cat" in categories[]->title] | order(publishedAt desc) {
+  _id,
+  _type,
+  _createdAt,
+  _updatedAt,
+  title,
+  slug,
+  listed,
+  description,
+  author->,
+  mainImage {
+    ...,
+    asset->
+  },
+  categories[]->,
+  publishedAt,
+  body
+}
+`;
+
 export type Post = {
   _id: string;
   _updatedAt: string;
