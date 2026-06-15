@@ -95,7 +95,7 @@
     "@types/react-dom": "19.2.3",
     "@octokit/plugin-paginate-rest": "11.4.1",
     "@octokit/request": "9.2.1",
-    "esbuild": "0.25.0",
+    "esbuild": "0.28.1",
     "prismjs": "1.30.0",
     "next-view-transitions": {
       "react": "$react",
