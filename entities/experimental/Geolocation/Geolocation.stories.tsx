@@ -4,7 +4,11 @@ import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof Geolocation> = {
   component: Geolocation,
-  args: {},
+  argTypes: {},
+  args: {
+    autolocate: false,
+    watch: false,
+  },
 };
 export default meta;
 
