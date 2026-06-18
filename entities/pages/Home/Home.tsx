@@ -21,7 +21,6 @@ import challengeImage from "@/entities/assets/challenge.svg";
 import storybookImage from "@/entities/assets/storybook.svg";
 import addValueImage from "@/entities/assets/addValue.svg";
 import trampolineImage from "@/entities/assets/trampoline.svg";
-import { sizes } from "@/styles/tokens";
 
 type HomeProps = {
   /**
@@ -37,11 +36,7 @@ export function Home({ contactFormEndPoint, ...rest }: HomeProps) {
   return (
     <div data-testid={Home.displayName} {...rest}>
       <Splash />
-      <HorizontalRule
-        margin="bottom"
-        decoration={true}
-        style={{ marginTop: `-${sizes.s24}px` }}
-      />
+      <HorizontalRule margin="bottom" decoration={true} />
       <ContentPlate
         foregroundImage={portraitImage}
         foregroundImageAlt="Headshot photo of Ali"

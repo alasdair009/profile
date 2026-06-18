@@ -1,5 +1,5 @@
 .root {
-  background: rgb(from var(--color-grey-dark) r g b / 50%);
+  background: rgb(from var(--color-grey-dark) r g b / 75%);
   border-bottom: var(--size-s2) solid
     rgb(from var(--color-green-grass) r g b / 25%);
   display: block;
@@ -8,7 +8,9 @@
   max-width: var(--global-decoration-max-width);
   padding: var(--size-s8);
   position: sticky;
+  top: 0;
   width: 100%;
+  z-index: var(--z-index-max-content);
 }
 
 .inner {

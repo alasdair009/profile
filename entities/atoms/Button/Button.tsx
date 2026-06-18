@@ -7,9 +7,10 @@ import styles from "./Button.module.css";
 export function Button({ variant = "standard", ...rest }: ButtonProps) {
   return (
     <button
-      className={`${styles.root} ${variant === "transparent" ? styles.rootTransparent : ""}`}
-      data-testid={Button.name}
+      className={`${styles.root} ${variant === "transparent" ? styles.transparent : ""}`}
+      data-testid={Button.displayName}
       {...rest}
     />
   );
 }
+Button.displayName = "Button";

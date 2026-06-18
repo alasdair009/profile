@@ -55,15 +55,20 @@
   &:active::before {
     background: color-mix(in srgb, var(--color-green-grass) 50%, white 5%);
   }
+}
 
-  &.transparent {
-    height: auto;
-    min-width: 0;
-    padding: 0;
+.transparent {
+  height: auto;
+  min-width: 0;
+  padding: 0;
+  transition: color calc(var(--animation-rhythm) * 0.5);
 
-    &::before,
-    &::after {
-      display: none;
-    }
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  &:hover {
+    color: var(--color-green-grass);
   }
 }

@@ -33,6 +33,7 @@ export function Splash({ ...rest }: HTMLAttributes<HTMLDivElement>) {
           <Link variant="large" href="/portfolio">
             Hire me now!
           </Link>
+          <Spacer />
         </div>
       </div>
     </section>

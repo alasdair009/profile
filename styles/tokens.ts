@@ -376,6 +376,11 @@ export const fontWeights: Record<"regular" | "bold" | "black", number> = {
   black: 900,
 };
 
+export const zIndexes: Record<"maxContent" | "dialog", number> = {
+  maxContent: 999998,
+  dialog: 999999,
+};
+
 export const allTokens = {
   ...toCssVars(animationNames, "animation-name"),
   ...toCssVars(borders, "border"),
@@ -393,4 +398,5 @@ export const allTokens = {
   ...toCssVars(lineHeights, "line-height"),
   ...toCssVars(fontSizes, "font-size", { unit: "rem" }),
   ...toCssVars(fontWeights, "font-weight"),
+  ...toCssVars(zIndexes, "z-index"),
 };

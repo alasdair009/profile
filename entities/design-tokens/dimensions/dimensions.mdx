@@ -1,6 +1,12 @@
 import { Meta } from "@storybook/addon-docs/blocks";
 import { DimensionViewer } from "../../../lib/storybook/DimensionViewer";
-import { breakpoints, globalSizes, sizes } from "../../../styles/tokens";
+import {
+  breakpoints,
+  globalSizes,
+  sizes,
+  zIndexes,
+} from "../../../styles/tokens";
+import { ObjectViewer } from "../../../lib/storybook/ObjectViewer";
 
 <Meta title="Design Tokens/Dimensions" />
 
@@ -44,3 +50,9 @@ These are used to adjust the content layout for different device screen widths.
   sourceExample="@media (--breakpoint-medium){...}"
   objectName="breakpoints"
 />
+
+## zIndexes
+
+The following are the defined zIndexes for use in the project.
+
+<ObjectViewer object={zIndexes} title="zIndex" />

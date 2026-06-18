@@ -58,15 +58,15 @@
     }
 
     &.Top {
-      margin-bottom: calc(var(--size-s24) - var(--size-s2) * -1);
+      margin-bottom: calc((var(--size-s24) + var(--size-s2)) * -1);
     }
 
     &.Bottom {
-      margin-top: calc(var(--size-s24) - var(--size-s2) * -1);
+      margin-top: calc((var(--size-s24) + var(--size-s2)) * -1);
     }
 
     &.None {
-      margin: calc(var(--size-s24) - var(--size-s2) * -1) auto;
+      margin: calc((var(--size-s24) + var(--size-s2)) * -1) auto;
     }
   }
 
