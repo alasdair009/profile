@@ -16,7 +16,7 @@
     "lint:css:fix": "stylelint '**/*.css' --fix",
     "check": "npx tsc --noEmit",
     "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ixgnore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore .",
     "prestorybook": "npm run generate:css-vars",
     "storybook": "storybook dev -p 6006",
     "prebuild-storybook": "npm run generate:css-vars",
