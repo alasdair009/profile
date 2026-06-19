@@ -25,6 +25,7 @@ export { Heading } from "./atoms/Heading";
 export { HorizontalRule } from "./atoms/HorizontalRule";
 export { IFrame } from "./atoms/IFrame";
 export { LightRays } from "./atoms/LightRays";
+export { Lightfall } from "./atoms/Lightfall";
 export { Link } from "./atoms/Link";
 export { LiquidMetal } from "./atoms/LiquidMetal";
 export { Meter } from "./atoms/Meter";

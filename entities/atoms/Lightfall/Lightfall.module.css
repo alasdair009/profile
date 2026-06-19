@@ -1,0 +1,21 @@
+.root {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-width: var(--global-decoration-max-width);
+  min-height: var(--size-s512);
+  position: relative;
+  width: 100%;
+}
+
+.lights {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.content {
+  position: relative;
+}

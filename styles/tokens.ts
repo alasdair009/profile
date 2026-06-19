@@ -265,10 +265,10 @@ export const colors: Record<
   ColorKey,
   Exclude<CSSProperties["color"], undefined>
 > = {
-  blackEvil: "#000",
+  blackEvil: "#000000",
   greyLight: "#656565",
   greyDark: "#222425",
-  whiteGhost: "#fff",
+  whiteGhost: "#ffffff",
   blueSea: "#3487f5",
   greenGrass: "#2e9b26",
   yellowSun: "#c5c527",

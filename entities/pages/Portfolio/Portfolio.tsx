@@ -7,6 +7,7 @@ import {
   Flurry,
   Heading,
   HorizontalRule,
+  Lightfall,
   Link,
   Paragraph,
   PortfolioPlate,
@@ -69,16 +70,30 @@ careerHistory.roles.forEach((employment) => {
 export function Portfolio({ ...rest }: PortfolioProps) {
   return (
     <div data-testid={Portfolio.displayName} {...rest}>
-      <Flurry background={aliSvg} backgroundAlt="SVG portrait of Ali">
+      <Lightfall>
         <Heading>Portfolio</Heading>
         <Paragraph align="center" fontSize="large" textWrap="balance">
           I am a front-end web engineer with a passion for solving complex
           problems with elegant solutions.
         </Paragraph>
+      </Lightfall>
+      <HorizontalRule decoration={true} margin="none" />
+      <Flurry background={aliSvg} backgroundAlt="SVG portrait of Ali">
+        <Heading as="h2" level="h2">
+          A gamer at heart
+        </Heading>
         <Paragraph align="center" fontSize="mlarge" textWrap="balance">
           I have over <strong>{getTotalExperienceYears("web")}</strong> years
           experience in web development building sites and apps for games
           studios and volunteer projects.
+        </Paragraph>
+        <Paragraph align="center" fontSize="mlarge" textWrap="balance">
+          I blog about my experience and quests in web development, and you can
+          view my public articles on my <Link href="/blog">blog page</Link>.
+        </Paragraph>
+        <Paragraph align="center" fontSize="mlarge" textWrap="balance">
+          Below you can read about my employment history, skills and
+          professional portfolio.
         </Paragraph>
       </Flurry>
       <HorizontalRule margin="none" />
