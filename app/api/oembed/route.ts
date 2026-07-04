@@ -20,7 +20,7 @@ type OembedResponse = SitePage & {
   provider_name?: string;
   provider_url?: string;
   cache_age?: number;
-  url?: string;
+  url: string;
   height?: number;
   width?: number;
   html?: string;
@@ -108,6 +108,7 @@ export async function GET(request: Request) {
     thumbnail_url: page.thumbnail_url,
     thumbnail_width: page.thumbnail_width,
     thumbnail_height: page.thumbnail_height,
+    url: `${siteOrigin}/${pathname}`,
   };
   return Response.json(oembedData);
 }
