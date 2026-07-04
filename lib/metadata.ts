@@ -88,3 +88,9 @@ export const generateMetaData = (
       : undefined,
   };
 };
+
+export const generateOEmbedUrl = (pagePath: string) => {
+  return {
+    "application/json+oembed": `${siteOrigin}/api/oembed?url=${encodeURIComponent(`${siteOrigin}/${pagePath}`)}&format=json`,
+  };
+};

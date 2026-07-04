@@ -1,11 +1,19 @@
 import { Metadata } from "next";
-import { generateMetaData } from "@/lib/metadata";
+import { generateMetaData, generateOEmbedUrl } from "@/lib/metadata";
 import { Trampolining } from "@/entities";
+
+const pagePath = "about-me/trampolining";
 
 export const metadata: Metadata = generateMetaData(
   "Trampolining",
   "Thoughts and ideas on my trampoline journey",
-  "about-me/trampolining"
+  pagePath,
+  undefined,
+  undefined,
+  undefined,
+  {
+    types: generateOEmbedUrl(pagePath),
+  }
 );
 
 export default async function TrampoliningPage() {

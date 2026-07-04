@@ -137,3 +137,6 @@ dist
 
 # Generated on build
 /styles/_generated.css
+
+# Certs directory
+/certificates/
