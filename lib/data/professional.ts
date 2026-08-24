@@ -11,7 +11,11 @@ import jagexLauncherImage from "@/entities/assets/launcher.webp";
 import runeScapeNewsImage from "@/entities/assets/runescape-news.webp";
 import jagexCorporateImage from "@/entities/assets/jagex-corporate.webp";
 import runeFestImage from "@/entities/assets/runefest.webp";
-import { CSSProperties } from "react";
+import oneTrustImage from "@/entities/assets/one-trust.webp";
+import runeFestPanelImage from "@/entities/assets/runefest-panel.webp";
+import type { Property } from "csstype";
+import { rgba } from "polished";
+import { background } from "storybook/theming";
 
 type Company = "jagex" | "pkr" | "realtimeWorlds" | "codemasters";
 type Field = "web" | "design" | "qa";
@@ -162,10 +166,103 @@ export const getCurrentEmployer = () => {
   });
 };
 
+type Skill = {
+  background: Property.BackgroundColor;
+  value: number;
+  heading: string;
+  copy: string;
+  grid: {
+    xsmall: {
+      columnStart: number;
+      rowStart: number;
+      columnEnd?: number;
+    };
+    small: {
+      columnStart: number;
+      rowStart: number;
+      columnEnd?: number;
+      rowEnd?: number;
+    };
+  };
+};
+
+export const skills: Skill[] = [
+  {
+    background: rgba(colors.redHeat, 0.25),
+    value: 100,
+    heading: "Storybook",
+    copy: "I am an avid supporter of design system delivered through Storybook.js for display, maintenance and testing. I have planned and delivered progressively more ambitious implementations of these that have been of high value to the business.",
+    grid: {
+      xsmall: { columnStart: 1, rowStart: 1 },
+      small: { columnStart: 1, rowStart: 1 },
+    },
+  },
+  {
+    background: rgba(colors.greenGrass, 0.25),
+    value: 100,
+    heading: "CSS",
+    copy: "Passionate about pushing the boundaries of what CSS can achieve in a browser.",
+    grid: {
+      xsmall: { columnStart: 2, rowStart: 1 },
+      small: { columnStart: 2, rowStart: 1 },
+    },
+  },
+  {
+    background: rgba(colors.blueSea, 0.25),
+    value: 100,
+    heading: "React",
+    copy: "",
+    grid: {
+      xsmall: { columnStart: 1, rowStart: 2, columnEnd: 3 },
+      small: { columnStart: 1, columnEnd: 2, rowStart: 2, rowEnd: 4 },
+    },
+  },
+  {
+    background: rgba(colors.redHeat, 0.25),
+    value: 100,
+    heading: "php",
+    copy: "",
+    grid: {
+      xsmall: { columnStart: 1, rowStart: 4 },
+      small: { columnStart: 3, rowStart: 1, rowEnd: 3 },
+    },
+  },
+  {
+    background: rgba(colors.greenGrass, 0.25),
+    value: 50,
+    heading: "Java / Freemarker",
+    copy: "Moderate experience developing a proprietary Java based framework to support several very mature online MMORPGs.",
+    grid: {
+      xsmall: { columnStart: 2, rowStart: 4 },
+      small: { columnStart: 2, columnEnd: 4, rowStart: 3, rowEnd: 4 },
+    },
+  },
+  {
+    background: rgba(colors.redHeat, 0.25),
+    value: 25,
+    heading: "Video editing",
+    copy: "Basic experience editing videos with Adobe Premier for display in presentations or usage in web technologies.",
+    grid: {
+      xsmall: { columnStart: 2, rowStart: 5 },
+      small: { columnStart: 1, rowStart: 4, columnEnd: 3 },
+    },
+  },
+  {
+    background: rgba(colors.blueSea, 0.25),
+    value: 25,
+    heading: "Dev Blogging",
+    copy: "Active maintainer of Dev Blogs and internal monthly roundups for my department. Passion for increasing visibility of value delivered",
+    grid: {
+      xsmall: { columnStart: 1, rowStart: 5 },
+      small: { columnStart: 3, rowStart: 4, columnEnd: 4 },
+    },
+  },
+];
+
 type PortfolioEntry = {
   title: string;
   body: string[];
-  backgroundCss: CSSProperties["background"];
+  backgroundCss: Property.Background;
   image?: StaticImageData;
   imageAlt?: string;
   url?: string;
@@ -173,6 +270,16 @@ type PortfolioEntry = {
 };
 
 export const workPortfolio: PortfolioEntry[] = [
+  {
+    title: "Athena - marketing technology integration",
+    body: [
+      "Constructed a state managed wrapper to integrate OneTrust consent management, PostHog analytics and Singular marketing technology globally across the Jagex websites and Launcher.",
+    ],
+    backgroundCss: `linear-gradient(#101d23,black)`,
+    image: oneTrustImage,
+    imageAlt: "",
+    url: "https://play.runescape.com/cookies",
+  },
   {
     title: "RuneScape and Jagex rebrand",
     body: [
@@ -251,5 +358,7 @@ export const workPortfolio: PortfolioEntry[] = [
     ],
     backgroundCss: `linear-gradient(#101d23,black)`,
     embedUrl: "https://www.youtube.com/embed/JbVKUi9wezo?si=M2ZfSmqERR2hwzmV",
+    image: runeFestPanelImage,
+    imageAlt: "",
   },
 ];

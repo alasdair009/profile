@@ -1,4 +1,4 @@
-import { CSSProperties, HTMLAttributes } from "react";
+import { ComponentProps, CSSProperties, HTMLAttributes } from "react";
 import {
   BlockQuote,
   ContactForm,
@@ -22,21 +22,14 @@ import {
   companyDetails,
   getCurrentEmployer,
   getTotalExperienceYears,
+  skills,
+  workPortfolio,
 } from "@/lib/data/professional";
 import jagexLogo from "@/entities/assets/jagex-square.webp";
 import styles from "./Portfolio.module.css";
-import { rgba } from "polished";
 import Image from "next/image";
 import amLogo from "@/entities/assets/am.svg";
-import jdsLogo from "@/entities/assets/jds-logo.svg";
-import leaguesScreenshotImage from "@/entities/assets/leagues.webp";
-import jagexLauncherImage from "@/entities/assets/launcher.webp";
-import runeScapeNewsImage from "@/entities/assets/runescape-news.webp";
-import jagexCorporateImage from "@/entities/assets/jagex-corporate.webp";
-import rebrandImage from "@/entities/assets/rebrand.webp";
-import runeFestImage from "@/entities/assets/runefest.webp";
 import weatherImage from "@/entities/assets/weather.webp";
-import { colors } from "@/styles/tokens";
 
 type PortfolioProps = {} & HTMLAttributes<HTMLDivElement>;
 
@@ -147,36 +140,16 @@ export function Portfolio({ ...rest }: PortfolioProps) {
           delivered to the business.
         </Paragraph>
         <div className={styles.skillGrid}>
-          <Skill
-            background={rgba(colors.redHeat, 0.25)}
-            value={100}
-            heading="Storybook"
-            copy="I am an avid supporter of design system delivered through Storybook.js for display, maintenace and testing. I have planned and delivered progresiively more ambitious implementations of these that have been of high value to the business."
-            grid={{
-              xsmall: { columnStart: 1, rowStart: 1 },
-              small: { columnStart: 1, rowStart: 1 },
-            }}
-          />
-          <Skill
-            background={rgba(colors.greenGrass, 0.25)}
-            value={100}
-            heading="CSS"
-            copy="Passionate about pushing the boundaries of what CSS can achieve in a browser."
-            grid={{
-              xsmall: { columnStart: 2, rowStart: 1 },
-              small: { columnStart: 2, rowStart: 1 },
-            }}
-          />
-          <Skill
-            background={rgba(colors.blueSea, 0.25)}
-            value={100}
-            heading="React"
-            copy="Extensive experience building apps and websites using React and associated frameworks."
-            grid={{
-              xsmall: { columnStart: 1, rowStart: 2, columnEnd: 3 },
-              small: { columnStart: 1, columnEnd: 2, rowStart: 2, rowEnd: 4 },
-            }}
-          />
+          {skills.map((skill) => (
+            <Skill
+              key={skill.heading}
+              background={skill.background}
+              value={skill.value}
+              heading={skill.heading}
+              copy={skill.copy}
+              grid={skill.grid}
+            />
+          ))}
           <figure
             className={styles.gridLogo}
             style={
@@ -195,46 +168,6 @@ export function Portfolio({ ...rest }: PortfolioProps) {
               className={styles.gridLogoImage}
             />
           </figure>
-          <Skill
-            background={rgba(colors.redHeat, 0.25)}
-            value={100}
-            heading="php"
-            copy="Built a wide variety of personal projects to support volunteer organisations including trampoline clubs, family history researchers and small local professionals."
-            grid={{
-              xsmall: { columnStart: 1, rowStart: 4 },
-              small: { columnStart: 3, rowStart: 1, rowEnd: 3 },
-            }}
-          />
-          <Skill
-            background={rgba(colors.greenGrass, 0.25)}
-            value={50}
-            heading="Java / Freemarker"
-            copy="Moderate experience developing a proprietary Java based framework to support several very mature online MMORPGs."
-            grid={{
-              xsmall: { columnStart: 2, rowStart: 4 },
-              small: { columnStart: 2, columnEnd: 4, rowStart: 3, rowEnd: 4 },
-            }}
-          />
-          <Skill
-            background={rgba(colors.redHeat, 0.25)}
-            value={25}
-            heading="Video editing"
-            copy="Basic experience editing videos with Adobe Premier for display in presentations or usage in web technologies."
-            grid={{
-              xsmall: { columnStart: 2, rowStart: 5 },
-              small: { columnStart: 1, rowStart: 4, columnEnd: 3 },
-            }}
-          />
-          <Skill
-            background={rgba(colors.blueSea, 0.25)}
-            value={25}
-            heading="Dev Blogging"
-            copy="Active maintainer of Dev Blogs and internal monthly roundups for my department. Passion for increasing visibility of value deliverd"
-            grid={{
-              xsmall: { columnStart: 1, rowStart: 5 },
-              small: { columnStart: 3, rowStart: 4, columnEnd: 4 },
-            }}
-          />
         </div>
       </section>
       <HorizontalRule margin="bottom" />
@@ -247,153 +180,30 @@ export function Portfolio({ ...rest }: PortfolioProps) {
           the owner / business.
         </Paragraph>
       </section>
-      <PortfolioPlate
-        contentPlateProps={{
-          foregroundImageAlt: "",
-          foregroundImage: rebrandImage,
+      {workPortfolio.map((entry, i) => {
+        const plateProps: ComponentProps<
+          typeof PortfolioPlate
+        >["contentPlateProps"] = {
+          foregroundImageAlt: entry.imageAlt,
+          foregroundImage: entry.image,
           foregroundAnimate: true,
-          backgroundCss: `linear-gradient(#101d23,black)`,
-        }}
-        heading="RuneScape and Jagex rebrand"
-      >
-        <Paragraph>
-          Implemented and coordinated a brand refresh and update across
-          Jagex&apos;s entire ecosystem that included a simultaneous launch of
-          over 50 systems including websites, apps, billing systems and internal
-          tooling.
-        </Paragraph>
-      </PortfolioPlate>
-      <PortfolioPlate
-        contentPlateProps={{
-          foregroundImageAlt: "",
-          foregroundImage: leaguesScreenshotImage,
-          foregroundAnimate: true,
-          orientation: "right",
-          backgroundCss: `linear-gradient(#101d23,black)`,
-        }}
-        heading="RuneScape & Old School RuneScape Community App"
-        url="https://rs.runescape.com/hiscores/leagues"
-      >
-        <Paragraph>
-          Built a multi-tenant Next app to support community immersion for
-          RuneScape and Old School RuneScape with accompanying Storybook design
-          system.
-        </Paragraph>
-        <Paragraph>
-          The system includes HiScores, Polls and other systems that encourage
-          players to return and immerse themselves in the games.
-        </Paragraph>
-      </PortfolioPlate>
-      <PortfolioPlate
-        contentPlateProps={{
-          foregroundImageAlt: "White Jagex logo part-way through being drawn",
-          foregroundImage: jdsLogo,
-          foregroundAnimate: true,
-          backgroundCss: `linear-gradient(#1c1c1c,${colors.blackEvil})`,
-        }}
-        heading="Jagex Design System"
-      >
-        <Paragraph>
-          Responsible for constructing a large design system to style and
-          maintain consistent branding across all Jagex Publishing Platform
-          products including websites and apps. This library was written in
-          React and displayed via Storybook.js.
-        </Paragraph>
-        <Paragraph>
-          The system covers all areas of visual implementation including
-          colours, animation, typography, sizing, components and is all
-          structured using atomic design principles.
-        </Paragraph>
-      </PortfolioPlate>
-      <PortfolioPlate
-        contentPlateProps={{
-          foregroundImage: jagexLauncherImage,
-          foregroundImageAlt:
-            "The opening UI from the Jagex Launcher displaying RuneScape",
-          foregroundAnimate: true,
-          backgroundCss: `linear-gradient(#07111b,black)`,
-          orientation: "right",
-        }}
-        heading="Jagex Launcher"
-        url="https://www.jagex.com/launcher"
-      >
-        <Paragraph>
-          The Jagex Launcher is an application that is used to run all Jagex
-          products. I was responsible for maintaining the{" "}
-          <abbr title="Jagex Design System">JDS</abbr> (see above) integration
-          that delivered the visual aesthetics and functionality for the
-          front-end.
-        </Paragraph>
-      </PortfolioPlate>
-      <PortfolioPlate
-        contentPlateProps={{
-          foregroundImage: runeScapeNewsImage,
-          foregroundImageAlt: "A RuneScape news article",
-          foregroundAnimate: true,
-          backgroundCss: `linear-gradient(#101d23,black)`,
-        }}
-        heading="RuneScape News"
-        url="https://secure.runescape.com/m=news/vorkath-battle-for-forinthry---this-week-in-runescape"
-      >
-        <Paragraph>
-          Rebuilt the RuneScape news article view hosted on proprietary
-          technology to work better on modern browsers and be ready for the
-          launch of RuneScape Mobile.
-        </Paragraph>
-      </PortfolioPlate>
-      <PortfolioPlate
-        contentPlateProps={{
-          foregroundImage: jagexCorporateImage,
-          foregroundImageAlt: "The Jagex corporate website homepage",
-          foregroundAnimate: true,
-          backgroundCss: `linear-gradient(#4b4c01,black)`,
-          orientation: "right",
-        }}
-        heading="Jagex Corporate website"
-        url="https://www.jagex.com"
-      >
-        <Paragraph>
-          The corporate website for Jagex Games Ltd. This site content was
-          powered by Contentful CMS and later migrated to a fixed code driven
-          version. The site is driven via Express with EJS for page templating.
-        </Paragraph>
-      </PortfolioPlate>
-      <PortfolioPlate
-        contentPlateProps={{
-          foregroundImage: runeFestImage,
-          foregroundImageAlt: "The golden dragon RuneFest logo",
-          foregroundAnimate: true,
-          backgroundCss: `linear-gradient(#101d23,black)`,
-        }}
-        heading="RuneFest"
-        url="https://www.runefest.com"
-      >
-        <Paragraph>
-          RuneScape and Old School RuneScape&apos;s player event runs most years
-          and requires a large input from teams across the studio. For this
-          event I have built multiple versions of this site on many different
-          tech stacks.
-        </Paragraph>
-        <Paragraph>
-          I also built my first ever Progressive Web App for RuneFest 2017 that
-          was used to assist players throughout their visit to the event.
-        </Paragraph>
-      </PortfolioPlate>
-      <PortfolioPlate
-        contentPlateProps={{
-          embedUrl:
-            "https://www.youtube.com/embed/JbVKUi9wezo?si=M2ZfSmqERR2hwzmV",
-          backgroundCss: `linear-gradient(#101d23,black)`,
-          orientation: "right",
-        }}
-        heading="RuneFest Panel"
-      >
-        <Paragraph>
-          At RuneFest 2018 myself and other members of the team hosted a talk on
-          one of the stages at the event explaining the work that goes into
-          managing Jagex&apos;s web services.
-        </Paragraph>
-      </PortfolioPlate>
+          orientation: (i & 1) === 0 ? "left" : "right",
+          backgroundCss: entry.backgroundCss,
+          embedUrl: entry.embedUrl,
+        };
+        return (
+          <PortfolioPlate
+            key={entry.title}
+            contentPlateProps={plateProps}
+            heading={entry.title}
+            url={entry.url}
+          >
+            {entry.body.map((line, j) => (
+              <Paragraph key={`${entry.title}l${j}`}>{line}</Paragraph>
+            ))}
+          </PortfolioPlate>
+        );
+      })}
       <HorizontalRule />
       <section className={styles.portfolioSection}>
         <Heading level="h2">Personal Portfolio</Heading>
