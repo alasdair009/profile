@@ -1,0 +1,30 @@
+.root {
+  display: block;
+  margin: 0 auto;
+  max-width: var(--global-text-max-width);
+  width: 100%;
+
+  dt {
+    font-size: var(--font-size-mlarge);
+    font-weight: var(--font-weight-bold);
+  }
+
+  dd {
+    font-size: var(--font-size-medium);
+    margin: 0 0 var(--size-s16);
+  }
+}
+
+.rootInline {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--size-s8) var(--size-s16);
+
+  dt {
+    font-size: var(--font-size-medium);
+  }
+
+  dd {
+    margin: 0;
+  }
+}

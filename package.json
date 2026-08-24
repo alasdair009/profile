@@ -39,6 +39,7 @@
     "next-sanity": "^13.3.3",
     "next-view-transitions": "^0.3.4",
     "ogl": "^1.0.11",
+    "puppeteer": "^25.8.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "react-intersection-observer": "^9.15.1",
