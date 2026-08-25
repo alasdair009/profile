@@ -1,7 +1,23 @@
-import puppeteer from "puppeteer";
+import chromium from "@sparticuz/chromium";
+import puppeteer from "puppeteer-core";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+
+const getBrowserConfig = async () => {
+  if (process.env.VERCEL) {
+    return {
+      args: [...chromium.args, "--disable-setuid-sandbox", "--no-sandbox"],
+      executablePath: await chromium.executablePath(),
+      headless: true as const,
+    };
+  }
+
+  return {
+    channel: "chrome" as const,
+    headless: true as const,
+  };
+};
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -11,10 +27,7 @@ export async function GET(request: Request) {
   previewUrl.searchParams.set("title", title);
   previewUrl.searchParams.set("generatedAt", generatedAt);
 
-  const browser = await puppeteer.launch({
-    args: ["--disable-setuid-sandbox", "--no-sandbox"],
-    headless: true,
-  });
+  const browser = await puppeteer.launch(await getBrowserConfig());
 
   try {
     const page = await browser.newPage();
