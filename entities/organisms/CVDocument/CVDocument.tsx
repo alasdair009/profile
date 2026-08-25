@@ -258,14 +258,18 @@ export function CVDocument({
         </div>
         <div className={styles.contentGridTitle}>About me:</div>
         <div className={styles.contentGridBody}>
-          <Paragraph align="left" margin="0" fontSize="small">
+          <Paragraph align="left" fontSize="small">
             Outside of work I am a former national trampolinist and current
             Level 4 Trampoline Coach for the Cambridge Cangaroos Trampoline
-            Club.
+            Club. I also casually enjoy squash and travelling.
           </Paragraph>
-          <Paragraph align="left" margin="0" fontSize="small">
+          <Paragraph align="left" fontSize="small">
             If that was not enough time on the ground I am also a rollercoaster
             enthusiast having travelled to theme parks all over the world!
+          </Paragraph>
+          <Paragraph align="left" fontSize="small">
+            I am able to work efficiently both on-site and remotely and am a
+            firm believer in building strong workplace relationships.
           </Paragraph>
         </div>
         <div className={styles.contentGridTitle}>Referees:</div>

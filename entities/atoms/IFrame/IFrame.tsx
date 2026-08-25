@@ -16,7 +16,7 @@ type IFrameProps = {
   /**
    * Placeholder to load instead of the frame to reduce network requests
    */
-  placeholder: { image: StaticImageData; alt: string };
+  placeholder?: { image: StaticImageData; alt: string };
 } & HTMLAttributes<HTMLDivElement>;
 
 /**

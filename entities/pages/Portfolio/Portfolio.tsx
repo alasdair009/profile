@@ -12,6 +12,8 @@ import {
   Paragraph,
   PortfolioPlate,
   Skill,
+  SocialMediaBar,
+  Spacer,
   Timeline,
   TimelineEntry,
   UnorderedList,
@@ -231,7 +233,21 @@ export function Portfolio({ ...rest }: PortfolioProps) {
           </PortfolioPlate>
         );
       })}
+      <HorizontalRule />
+      <Heading level="h2">CV</Heading>
+      <Paragraph align="center" textWrap="balance">
+        My CV is available for a more condensed format of my professional and
+        personal experience - <Link href="/cv">read it here</Link>.
+      </Paragraph>
       <HorizontalRule decoration={true} />
+      <Heading level="h2">Want to chat more?</Heading>
+      <Paragraph align="center" textWrap="balance">
+        I am always happy to talk about experience of discuss potential exciting
+        new projects and ideas. You can reach out to me using the form below or
+        contact me on Social Media.
+      </Paragraph>
+      <SocialMediaBar />
+      <Spacer multiplier={2} />
       <ContactForm
         submitEndpoint={`${process.env.NEXT_FORMSPREE_CONTACT_ENDPOINT}`}
       />

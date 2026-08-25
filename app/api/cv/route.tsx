@@ -24,7 +24,8 @@ export async function GET(request: Request) {
     await page.addStyleTag({
       content: `
         header,
-        footer {
+        footer,
+        .web-header{
           display: none !important;
         }
 

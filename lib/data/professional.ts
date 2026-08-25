@@ -226,7 +226,7 @@ export const skills: Skill[] = [
     background: rgba(colors.blueSea, 0.25),
     value: 100,
     heading: "React",
-    copy: "",
+    copy: "Vast experience in React/Next for constructing web apps and sites for AAA games and corporate websites.",
     grid: {
       xsmall: { columnStart: 1, rowStart: 2, columnEnd: 3 },
       small: { columnStart: 1, columnEnd: 2, rowStart: 2, rowEnd: 4 },
@@ -236,7 +236,7 @@ export const skills: Skill[] = [
     background: rgba(colors.redHeat, 0.25),
     value: 100,
     heading: "php",
-    copy: "",
+    copy: "Many years of experience in php on LAMP servers to deliver mysql database driven websites and internal web-based tools.",
     grid: {
       xsmall: { columnStart: 1, rowStart: 4 },
       small: { columnStart: 3, rowStart: 1, rowEnd: 3 },
@@ -270,6 +270,36 @@ export const skills: Skill[] = [
     grid: {
       xsmall: { columnStart: 1, rowStart: 5 },
       small: { columnStart: 3, rowStart: 4, columnEnd: 4 },
+    },
+  },
+  {
+    background: rgba(colors.blueSea, 0.25),
+    value: 25,
+    heading: "Marketing tooling",
+    copy: "Decent exposure to integrating marketing and analytical tools including PostHog, GA/GTM and Singular.",
+    grid: {
+      xsmall: {
+        columnStart: 2,
+        rowStart: 6,
+      },
+      small: { columnStart: 1, rowStart: 5 },
+    },
+  },
+  {
+    background: rgba(colors.greenGrass, 0.25),
+    value: 75,
+    heading: "Web compliance",
+    copy: "Substantial experience with developing Consent compliance websites and applications using OneTrust and Cookiebot.",
+    grid: {
+      xsmall: {
+        columnStart: 1,
+        rowStart: 6,
+      },
+      small: {
+        columnStart: 2,
+        rowStart: 5,
+        columnEnd: 4,
+      },
     },
   },
 ];

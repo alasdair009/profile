@@ -80,10 +80,13 @@
 }
 
 .portfolioImage {
+  align-items: center;
+  display: flex;
   grid-column-start: 4;
   grid-row-start: 1;
   grid-column-end: 4;
   grid-row-end: 4;
+  justify-content: flex-end;
 }
 
 .portfolioBody {
