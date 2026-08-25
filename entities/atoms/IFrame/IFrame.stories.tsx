@@ -60,6 +60,7 @@ const iFrameTests = async (
   if (args.placeholder) {
     await step(`Check placeholder`, async () => {
       await expect(
+        // @ts-expect-error args.placeholder is already confirmed as defined
         canvas.getByAltText(args.placeholder.alt)
       ).toBeInTheDocument();
       await userEvent.click(iFrameElementPlaceholder as HTMLElement);
