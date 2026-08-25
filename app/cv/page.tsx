@@ -12,8 +12,10 @@ export const metadata: Metadata = generateMetaData(
 
 export default async function CvPage() {
   return (
-    <div style={{ margin: "0 auto", width: 800 }}>
-      <CVDocument />
+    <div style={{ margin: "0 auto", maxWidth: "100vw", overflow: "scroll" }}>
+      <div style={{ margin: "0 auto", width: 794 }}>
+        <CVDocument />
+      </div>
     </div>
   );
 }

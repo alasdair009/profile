@@ -2,6 +2,15 @@ import { ContentPlate, Heading, Link } from "@/entities";
 import { PortfolioPlateProps } from "./types";
 import { siteOrigin } from "@/lib/domains";
 
+const generateUrlToShow = (url?: string) => {
+  if (!url) {
+    return undefined;
+  }
+  const urlForAttribute = url.startsWith("http") ? url : `${siteOrigin}${url}`;
+  const urlToShow = urlForAttribute.replace("https://", "");
+  return { urlToShow, urlForAttribute };
+};
+
 export function PortfolioPlate({
   contentPlateProps,
   heading,
@@ -9,7 +18,7 @@ export function PortfolioPlate({
   children,
   ...rest
 }: PortfolioPlateProps) {
-  const urlToShow = url?.startsWith("http") ? url : `${siteOrigin}${url}`;
+  const urlDetails = generateUrlToShow(url);
   return (
     <ContentPlate
       {...contentPlateProps}
@@ -17,8 +26,8 @@ export function PortfolioPlate({
       {...rest}
     >
       <Heading level="h3">{heading}</Heading>
-      {url ? (
-        <Link href={url}>{urlToShow}</Link>
+      {urlDetails ? (
+        <Link href={urlDetails.urlForAttribute}>{urlDetails.urlToShow}</Link>
       ) : !contentPlateProps.embedUrl ? (
         <pre>(URL not public)</pre>
       ) : (

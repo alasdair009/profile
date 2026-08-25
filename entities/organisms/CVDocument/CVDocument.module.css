@@ -108,7 +108,10 @@
 }
 
 .roleTitleCompany {
+  align-items: center;
+  display: flex;
   font-size: var(--font-size-small) !important;
   font-weight: var(--font-weight-normal) !important;
+  gap: var(--size-s8);
   margin: 0 0 var(--size-s8) !important;
 }

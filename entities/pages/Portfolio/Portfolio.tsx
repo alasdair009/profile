@@ -22,6 +22,7 @@ import {
   companyDetails,
   getCurrentEmployer,
   getTotalExperienceYears,
+  personalProjects,
   skills,
   workPortfolio,
 } from "@/lib/data/professional";
@@ -29,7 +30,6 @@ import jagexLogo from "@/entities/assets/jagex-square.webp";
 import styles from "./Portfolio.module.css";
 import Image from "next/image";
 import amLogo from "@/entities/assets/am.svg";
-import weatherImage from "@/entities/assets/weather.webp";
 
 type PortfolioProps = {} & HTMLAttributes<HTMLDivElement>;
 
@@ -213,20 +213,24 @@ export function Portfolio({ ...rest }: PortfolioProps) {
           on my GitHub for review but private projects are available on request.
         </Paragraph>
       </section>
-      <PortfolioPlate
-        contentPlateProps={{
-          foregroundImage: weatherImage,
-          foregroundImageAlt: "An SVG render of a house",
-        }}
-        heading="Weather Station"
-        url="/portfolio/weather"
-      >
-        <Paragraph>
-          I built a web app to read live data from my Netatmo Weather station.
-          The data from the station is read and used to adjust an SVG graphic
-          using CSS animations and transformations.
-        </Paragraph>
-      </PortfolioPlate>
+      {personalProjects.map((project, i) => {
+        return (
+          <PortfolioPlate
+            contentPlateProps={{
+              foregroundImage: project.image,
+              foregroundImageAlt: project.imageAlt,
+              orientation: (i & 1) === 0 ? "left" : "right",
+            }}
+            heading={project.title}
+            key={project.title}
+            url={project.url}
+          >
+            {project.body.map((line, j) => (
+              <Paragraph key={`${project.title}l${j}`}>{line}</Paragraph>
+            ))}
+          </PortfolioPlate>
+        );
+      })}
       <HorizontalRule decoration={true} />
       <ContactForm
         submitEndpoint={`${process.env.NEXT_FORMSPREE_CONTACT_ENDPOINT}`}

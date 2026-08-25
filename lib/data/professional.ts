@@ -7,15 +7,17 @@ import rebrandImage from "@/entities/assets/rebrand.webp";
 import leaguesScreenshotImage from "@/entities/assets/leagues.webp";
 import jdsLogo from "@/entities/assets/jds-logo.svg";
 import { colors } from "@/styles/tokens";
+import cangaroosImage from "@/entities/assets/cangaroos.webp";
 import jagexLauncherImage from "@/entities/assets/launcher.webp";
 import runeScapeNewsImage from "@/entities/assets/runescape-news.webp";
 import jagexCorporateImage from "@/entities/assets/jagex-corporate.webp";
 import runeFestImage from "@/entities/assets/runefest.webp";
 import oneTrustImage from "@/entities/assets/one-trust.webp";
 import runeFestPanelImage from "@/entities/assets/runefest-panel.webp";
+import weatherStationImage from "@/entities/assets/weather.webp";
 import type { Property } from "csstype";
 import { rgba } from "polished";
-import { background } from "storybook/theming";
+import { siteOrigin } from "@/lib/domains";
 
 type Company = "jagex" | "pkr" | "realtimeWorlds" | "codemasters";
 type Field = "web" | "design" | "qa";
@@ -60,13 +62,26 @@ export const careerHistory: CareerHistoryData = {
     {
       company: "jagex",
       position: "Senior Web Engineer",
+      startDate: new Date("2020-01-01"),
+      field: "web",
+      responsibilities: [
+        "Constructing and maintain cross-departmental design systems used by multiple teams",
+        "Implementing new tech stacks to replace legacy proprietary systems",
+        "Supporting junior engineers in their professional development",
+        "Coordinating outsource teams on collaborative projects",
+        "Ensure consent compliance on all Jagex services",
+      ],
+    },
+    {
+      company: "jagex",
+      position: "Senior Web Developer",
       startDate: new Date("2018-04-01"),
       field: "web",
       responsibilities: [
-        "Constructing and maintain cross-departmental design systems.",
-        "Implementing new tech stacks to replace legacy proprietary systems.",
-        "Supporting junior engineers in their professional development.",
-        "Coordinating outsource teams on collaborative projects.",
+        "Lead and drive the construction of RuneScape and Jagex website systems",
+        "Gain a deep understanding of in-house proprietary system languages",
+        "Supporting junior developers in their professional development",
+        "Work closely with game teams to deliver rich supportive game experiences",
       ],
     },
     {
@@ -75,9 +90,9 @@ export const careerHistory: CareerHistoryData = {
       startDate: new Date("2013-07-01"),
       field: "web",
       responsibilities: [
-        "Maintain and advance websites for all Jagex Games Ltd products.",
-        "Deliver player-first driven web experiences across a variety of frameworks.",
-        "Support other Jagex ventures including festivals, recruitment and third party acquisitions.",
+        "Maintain and advance websites for all Jagex Games Ltd products",
+        "Deliver player-first driven web experiences across a variety of frameworks",
+        "Support other Jagex ventures including festivals, recruitment and third party acquisitions",
       ],
     },
     {
@@ -343,7 +358,7 @@ export const workPortfolio: PortfolioEntry[] = [
   {
     title: "RuneFest",
     body: [
-      "RuneScape and Old School RuneScape&apos;s player event runs most years and requires a large input from teams across the studio. For this event I have built multiple versions of this site on many different tech stacks.",
+      "RuneScape and Old School RuneScape's player event runs most years and requires a large input from teams across the studio. For this event I have built multiple versions of this site on many different tech stacks.",
       "I also built my first ever Progressive Web App for RuneFest 2017 that was used to assist players throughout their visit to the event.",
     ],
     backgroundCss: ``,
@@ -354,11 +369,40 @@ export const workPortfolio: PortfolioEntry[] = [
   {
     title: "RuneFest Panel",
     body: [
-      "At RuneFest 2018 myself and other members of the team hosted a talk on one of the stages at the event explaining the work that goes into managing Jagex&apos;s web services.",
+      "At RuneFest 2018 myself and other members of the team hosted a talk on one of the stages at the event explaining the work that goes into managing Jagex's web services.",
     ],
     backgroundCss: `linear-gradient(#101d23,black)`,
     embedUrl: "https://www.youtube.com/embed/JbVKUi9wezo?si=M2ZfSmqERR2hwzmV",
     image: runeFestPanelImage,
     imageAlt: "",
+  },
+];
+
+type PersonalProject = {
+  title: string;
+  body: string[];
+  image?: StaticImageData;
+  imageAlt?: string;
+  url?: string;
+};
+
+export const personalProjects: PersonalProject[] = [
+  {
+    title: "JS Weather Station",
+    body: [
+      "I built a web app to read live data from my Netatmo Weather station. The data from the station is read and used to adjust an SVG graphic using CSS animations and transformations.",
+    ],
+    image: weatherStationImage,
+    imageAlt: "An SVG render of a house",
+    url: `${siteOrigin}/blog/taking-the-weather-with-you-with-js`,
+  },
+  {
+    title: "Cambridge Cangaroos website",
+    body: [
+      "I constructed a website to advertise, administrate and provide performance analysis tools for my local trampoline club.",
+    ],
+    image: cangaroosImage,
+    imageAlt: "My member profile page on the Cangaroos website",
+    url: "https://www.cangaroos.org/member/alasdairmacrae",
   },
 ];

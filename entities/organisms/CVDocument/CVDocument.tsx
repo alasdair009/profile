@@ -10,6 +10,7 @@ import styles from "./CVDocument.module.css";
 import {
   careerHistory,
   companyDetails,
+  personalProjects,
   workPortfolio,
 } from "@/lib/data/professional";
 import Image from "next/image";
@@ -118,7 +119,7 @@ export function CVDocument({
             </li>
             <li>
               Successfully implemented multiple professional design systems
-              using Storybook.js.
+              using Storybook.js for use across multiple teams
             </li>
             <li>
               Solid comprehension of Node, Java and MySQL for web service
@@ -126,6 +127,10 @@ export function CVDocument({
             </li>
             <li>
               Vast experience in React/Next for constructing web apps and sites
+            </li>
+            <li>
+              Appreciation for AI Tools (Chat GPT / Codex) for development
+              support
             </li>
             <li>
               Years of experience in various propitiatory in-house languages
@@ -174,6 +179,37 @@ export function CVDocument({
             })}
           </div>
         </div>
+        <div className={styles.contentGridTitle}>Personal projects:</div>
+        <div className={styles.contentGridBody}>
+          {personalProjects.map((project) => {
+            return (
+              <article className={styles.portfolio} key={project.title}>
+                <div className={styles.portfolioImage}>
+                  <Image
+                    src={project.image ? project.image : placeholder}
+                    alt={`${project.imageAlt}`}
+                    width={100}
+                  />
+                </div>
+                <div className={styles.portfolioBody}>
+                  <Heading
+                    className={`${styles.roleTitle} ${styles.roleTitlePos}`}
+                    level="h5"
+                    as="h3"
+                    align="left"
+                  >
+                    {project.title}
+                  </Heading>
+                  {project.body.map((bodyLine, i) => (
+                    <Paragraph key={`${project.title}b${i}`} fontSize="small">
+                      {bodyLine}
+                    </Paragraph>
+                  ))}
+                </div>
+              </article>
+            );
+          })}
+        </div>
         <div className={styles.contentGridTitle}>Employment history:</div>
         <div className={styles.contentGridBody}>
           <div className={styles.employments}>
@@ -198,6 +234,11 @@ export function CVDocument({
                     as="h3"
                     align="left"
                   >
+                    <Image
+                      src={companyDetails[role.company].logo}
+                      alt=""
+                      height={10}
+                    />{" "}
                     {companyDetails[role.company].name} - {roleDate}
                   </Heading>
                   <Paragraph align="left" margin="0" fontSize="small">
