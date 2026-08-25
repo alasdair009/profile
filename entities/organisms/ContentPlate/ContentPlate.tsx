@@ -20,7 +20,8 @@ export function ContentPlate({
 }: ContentPlateProps) {
   const showForeground =
     typeof foregroundImage !== "undefined" &&
-    typeof foregroundImageAlt !== "undefined";
+    typeof foregroundImageAlt !== "undefined" &&
+    typeof embedUrl === "undefined";
   return (
     <section
       className={styles.root}
@@ -46,9 +47,16 @@ export function ContentPlate({
         }
       >
         <div className={styles.copyBox}>{children}</div>
-        {embedUrl && (
+        {embedUrl && foregroundImage && (
           <div className={styles.frameBoxWrapper}>
-            <IFrame src={embedUrl} title="" />
+            <IFrame
+              src={embedUrl}
+              title=""
+              placeholder={{
+                alt: foregroundImageAlt || "",
+                image: foregroundImage,
+              }}
+            />
           </div>
         )}
         {flameColor && (

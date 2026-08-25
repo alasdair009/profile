@@ -1,7 +1,9 @@
+"use client";
 import { HTMLAttributes } from "react";
 import styles from "./Lightfall.module.css";
 import LightfallExport from "./LightfallExport";
 import { colors } from "@/styles/tokens";
+import { useEffect, useRef, useState } from "react";
 
 type LightfallProps = {
   /**
@@ -34,16 +36,33 @@ export function Lightfall({
   children,
   ...rest
 }: LightfallProps) {
+  const rootRef = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const node = rootRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.05 }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
   return (
     <div
       className={`${styles.root} ${className}`}
       data-testid={Lightfall.displayName}
+      ref={rootRef}
       {...rest}
     >
       <LightfallExport
         colors={[color1, color2, color3]}
         backgroundColor={backgroundColor}
         className={styles.lights}
+        paused={!isVisible}
         speed={0.5}
         streakCount={9}
         streakWidth={0.2}
