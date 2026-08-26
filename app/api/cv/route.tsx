@@ -22,6 +22,7 @@ const getBrowserConfig = async () => {
 
 export async function GET(request: Request) {
   const previewUrl = new URL("/cv", request.url);
+  previewUrl.searchParams.set("pdf", "1");
 
   const browser = await puppeteer.launch(await getBrowserConfig());
 
