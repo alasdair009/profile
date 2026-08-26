@@ -1,6 +1,7 @@
 import { CVDocument, Heading, Link, Paragraph } from "@/entities";
 import { Metadata } from "next";
 import { generateMetaData } from "@/lib/metadata";
+import { CVPrefetch } from "./CVPrefetch";
 
 export const dynamic = "force-dynamic";
 
@@ -21,10 +22,12 @@ export default async function CvPage() {
           <Link href="/api/cv" target="_blank">
             download it as a PDF
           </Link>{" "}
-          to save. You can also view my{" "}
+          to save. The PDF starts preparing when this page loads so the download
+          is ready sooner. You can also view my{" "}
           <Link href="/portfolio">online portfolio</Link> for links to content.
           Further information and references are available on request.
         </Paragraph>
+        <CVPrefetch />
       </section>
       <div style={{ margin: "0 auto", maxWidth: "100vw", overflow: "scroll" }}>
         <div style={{ margin: "0 auto", width: 794 }}>
