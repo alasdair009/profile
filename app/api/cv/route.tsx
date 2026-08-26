@@ -21,12 +21,7 @@ const getBrowserConfig = async () => {
 };
 
 export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const title = searchParams.get("title")?.trim() || "Portfolio Export";
-  const generatedAt = new Date().toISOString();
   const previewUrl = new URL("/cv", request.url);
-  previewUrl.searchParams.set("title", title);
-  previewUrl.searchParams.set("generatedAt", generatedAt);
 
   const browser = await puppeteer.launch(await getBrowserConfig());
 
@@ -68,6 +63,8 @@ export async function GET(request: Request) {
 
     return new Response(pdfBytes, {
       headers: {
+        "Cache-Control":
+          "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800",
         "Content-Disposition": 'inline; filename="alasdair-macrae-cv.pdf"',
         "Content-Type": "application/pdf",
       },

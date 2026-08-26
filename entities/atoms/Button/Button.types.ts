@@ -1,4 +1,4 @@
-import { HTMLAttributes, PointerEvent } from "react";
+import { ButtonHTMLAttributes, PointerEvent } from "react";
 
 export type ButtonVariant = "standard" | "transparent";
 
@@ -15,4 +15,4 @@ export type ButtonProps = {
    * Visual variant of the button.
    */
   variant?: ButtonVariant;
-} & HTMLAttributes<HTMLButtonElement>;
+} & ButtonHTMLAttributes<HTMLButtonElement>;
