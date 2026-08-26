@@ -15,6 +15,9 @@ const {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   productionBrowserSourceMaps: true,
+  outputFileTracingIncludes: {
+    "/api/cv/route": ["./node_modules/@sparticuz/chromium/bin/**"],
+  },
   env: {
     VERCEL_ENV,
     VERCEL_URL,
