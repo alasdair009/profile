@@ -3,6 +3,7 @@ import puppeteer from "puppeteer-core";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+export const maxDuration = 60;
 
 const getBrowserConfig = async () => {
   if (process.env.VERCEL) {
@@ -32,8 +33,9 @@ export async function GET(request: Request) {
   try {
     const page = await browser.newPage();
     await page.goto(previewUrl.toString(), {
-      waitUntil: "networkidle0",
+      waitUntil: "domcontentloaded",
     });
+    await page.waitForSelector('[data-testid="CVDocument"]');
     await page.addStyleTag({
       content: `
         header,
