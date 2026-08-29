@@ -142,16 +142,20 @@ export function Portfolio({ ...rest }: PortfolioProps) {
           delivered to the business.
         </Paragraph>
         <div className={styles.skillGrid}>
-          {skills.map((skill) => (
-            <Skill
-              key={skill.heading}
-              background={skill.background}
-              value={skill.value}
-              heading={skill.heading}
-              copy={skill.copy}
-              grid={skill.grid}
-            />
-          ))}
+          {skills.map((skill) => {
+            if (skill.value && skill.copy && skill.grid) {
+              return (
+                <Skill
+                  key={skill.heading}
+                  background={skill.background}
+                  value={skill.value}
+                  heading={skill.heading}
+                  copy={skill.copy}
+                  grid={skill.grid}
+                />
+              );
+            }
+          })}
           <figure
             className={styles.gridLogo}
             style={

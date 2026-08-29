@@ -1,10 +1,6 @@
 .root {
-  background: linear-gradient(
-    180deg,
-    rgba(9, 18, 13, 1) 0%,
-    rgba(17, 36, 26, 1) 100%
-  );
-  color: #f4fff4;
+  background: var(--color-white-ghost);
+  color: var(--color-black-evil);
   font-family:
     Inter,
     ui-sans-serif,
@@ -117,4 +113,8 @@
   font-weight: var(--font-weight-normal) !important;
   gap: var(--size-s8);
   margin: 0 0 var(--size-s8) !important;
+}
+
+.roleLogo {
+  filter: brightness(0);
 }

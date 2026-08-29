@@ -69,7 +69,7 @@ export const careerHistory: CareerHistoryData = {
         "Implementing new tech stacks to replace legacy proprietary systems",
         "Supporting junior engineers in their professional development",
         "Coordinating outsource teams on collaborative projects",
-        "Ensure consent compliance on all Jagex services",
+        "Ensuring consent compliance on all Jagex services",
       ],
     },
     {
@@ -182,11 +182,12 @@ export const getCurrentEmployer = () => {
 };
 
 type Skill = {
-  background: Property.BackgroundColor;
-  value: number;
+  background?: Property.BackgroundColor;
+  value?: number;
   heading: string;
-  copy: string;
-  grid: {
+  copy?: string;
+  cv?: string;
+  grid?: {
     xsmall: {
       columnStart: number;
       rowStart: number;
@@ -203,14 +204,27 @@ type Skill = {
 
 export const skills: Skill[] = [
   {
+    heading: "Frontend",
+    cv: "JavaScript, TypeScript, React, Next.js, HTML, CSS, animation, SVG",
+  },
+  {
+    heading: "Platforms",
+    cv: "Platforms: Node.js, Express, Contentful, Java, PHP, MySQL",
+  },
+  {
     background: rgba(colors.redHeat, 0.25),
     value: 100,
-    heading: "Storybook",
+    heading: "Design Systems",
     copy: "I am an avid supporter of design system delivered through Storybook.js for display, maintenance and testing. I have planned and delivered progressively more ambitious implementations of these that have been of high value to the business.",
+    cv: "Storybook, component libraries, design tokens, atomic design",
     grid: {
       xsmall: { columnStart: 1, rowStart: 1 },
       small: { columnStart: 1, rowStart: 1 },
     },
+  },
+  {
+    heading: "Quality and delivery",
+    cv: "Accessibility, performance, analytics, consent management, testing, mentoring, vendor coordination",
   },
   {
     background: rgba(colors.greenGrass, 0.25),
@@ -226,7 +240,7 @@ export const skills: Skill[] = [
     background: rgba(colors.blueSea, 0.25),
     value: 100,
     heading: "React",
-    copy: "Vast experience in React/Next for constructing web apps and sites for AAA games and corporate websites.",
+    copy: "Vast experience in React/Next.js for constructing web apps and sites for AAA games and corporate websites.",
     grid: {
       xsmall: { columnStart: 1, rowStart: 2, columnEnd: 3 },
       small: { columnStart: 1, columnEnd: 2, rowStart: 2, rowEnd: 4 },
@@ -277,6 +291,7 @@ export const skills: Skill[] = [
     value: 25,
     heading: "Marketing tooling",
     copy: "Decent exposure to integrating marketing and analytical tools including PostHog, GA/GTM and Singular.",
+    cv: "PostHog, GA/GTM, Singular, A/B Testing solutions",
     grid: {
       xsmall: {
         columnStart: 2,
@@ -290,6 +305,7 @@ export const skills: Skill[] = [
     value: 75,
     heading: "Web compliance",
     copy: "Substantial experience with developing Consent compliance websites and applications using OneTrust and Cookiebot.",
+    cv: "OneTrust, CookieBot, Google Consent",
     grid: {
       xsmall: {
         columnStart: 1,
@@ -318,7 +334,7 @@ export const workPortfolio: PortfolioEntry[] = [
   {
     title: "Athena - marketing technology integration",
     body: [
-      "Constructed a state managed wrapper to integrate OneTrust consent management, PostHog analytics and Singular marketing technology globally across the Jagex websites and Launcher.",
+      "Constructed a state managed wrapper to integrate OneTrust consent management, PostHog analytics and Singular marketing technology globally across the Jagex websites and Launcher to reduce the duplication of work by the other 15 technology teams that used it.",
     ],
     backgroundCss: `linear-gradient(#101d23,black)`,
     image: oneTrustImage,
@@ -328,7 +344,7 @@ export const workPortfolio: PortfolioEntry[] = [
   {
     title: "RuneScape and Jagex rebrand",
     body: [
-      "Implemented and coordinated a brand refresh and update across Jagex's entire ecosystem that included a simultaneous launch of over 50 systems including websites, apps, billing systems and internal tooling.",
+      "Implemented and coordinated a brand refresh and update across Jagex's entire ecosystem that included a simultaneous launch of over 50 systems including websites, apps, billing systems and internal tooling. I undertook the majority of the code changes and then planned and ran a seamless launch that completed on schedule to high praise from senior management.",
     ],
     backgroundCss: `linear-gradient(#101d23,black)`,
     image: rebrandImage,
@@ -337,7 +353,7 @@ export const workPortfolio: PortfolioEntry[] = [
   {
     title: "RuneScape & Old School RuneScape Community App",
     body: [
-      "Built a multi-tenant Next app to support community immersion for RuneScape and Old School RuneScape with accompanying Storybook design system.",
+      "Built a multi-tenant Next.s app to support community immersion for RuneScape and Old School RuneScape with accompanying Storybook design system.",
       "The system includes HiScores, Polls and other systems that encourage players to return and immerse themselves in the games.",
     ],
     backgroundCss: `linear-gradient(#101d23,black)`,
@@ -348,7 +364,7 @@ export const workPortfolio: PortfolioEntry[] = [
   {
     title: "Jagex Design System",
     body: [
-      "Responsible for constructing a large design system to style and maintain consistent branding across all Jagex Publishing Platform products including websites and apps. This library was written in React and displayed via Storybook.js.",
+      "Constructed a large design system using React/Next.js and Storybook.js to style and maintain consistent branding across all Jagex Publishing Platform products including websites and apps.",
       "The system covers all areas of visual implementation including colours, animation, typography, sizing, components and is all structured using atomic design principles.",
     ],
     backgroundCss: `linear-gradient(#1c1c1c,${colors.blackEvil})`,
@@ -358,7 +374,7 @@ export const workPortfolio: PortfolioEntry[] = [
   {
     title: "Jagex Launcher",
     body: [
-      "The Jagex Launcher is an application that is used to run all Jagex products. I was responsible for maintaining the JDS (see above) integration that delivered the visual aesthetics and functionality for the front-end.",
+      "The Jagex Launcher is an application that is used to run all Jagex products. I was responsible for maintaining the design system integration that delivered the visual aesthetics and functionality for the front-end as well event tracking and consent compliance.",
     ],
     backgroundCss: `linear-gradient(#07111b,black)`,
     image: jagexLauncherImage,
@@ -368,7 +384,7 @@ export const workPortfolio: PortfolioEntry[] = [
   {
     title: "RuneScape News",
     body: [
-      "Rebuilt the RuneScape news article view hosted on proprietary technology to work better on modern browsers and be ready for the launch of RuneScape Mobile.",
+      "Rebuilt the RuneScape news system using Java and Freemarker hosted on proprietary technology to work better on modern browsers and be ready for the launch of RuneScape Mobile improving article engagement by over 40%.",
     ],
     backgroundCss: `linear-gradient(#101d23,black)`,
     image: runeScapeNewsImage,
@@ -399,7 +415,7 @@ export const workPortfolio: PortfolioEntry[] = [
   {
     title: "RuneFest Panel",
     body: [
-      "At RuneFest 2018 myself and other members of the team hosted a talk on one of the stages at the event explaining the work that goes into managing Jagex's web services.",
+      "At RuneFest 2018 other team members and I hosted a talk on one of the stages at the event explaining the work that goes into managing Jagex's web services.",
     ],
     backgroundCss: `linear-gradient(#101d23,black)`,
     embedUrl: "https://www.youtube.com/embed/JbVKUi9wezo?si=M2ZfSmqERR2hwzmV",
