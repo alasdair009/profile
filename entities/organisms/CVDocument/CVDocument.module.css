@@ -74,10 +74,12 @@
 }
 
 .portfolio {
+  break-inside: avoid-page;
   display: grid;
   gap: var(--size-s8);
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  page-break-inside: avoid;
 }
 
 .portfolioFigure {
@@ -110,6 +112,11 @@
   display: flex;
   flex-direction: column;
   gap: var(--size-s16);
+}
+
+.employment {
+  break-inside: avoid-page;
+  page-break-inside: avoid;
 }
 
 .roleTitle {

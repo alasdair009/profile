@@ -208,7 +208,7 @@ export function CVDocument({
                 month: "long",
               })} ${role.startDate.getFullYear()}`;
               return (
-                <div key={thisRoleKey}>
+                <div className={styles.employment} key={thisRoleKey}>
                   <Heading
                     className={`${styles.roleTitle} ${styles.roleTitlePos}`}
                     level="h5"
