@@ -22,7 +22,7 @@ import placeholder from "../../assets/am.svg";
 import type { HTMLAttributes } from "react";
 import { myName } from "@/lib/metadata";
 import { siteOrigin } from "@/lib/domains";
-import { colors } from "@/styles/tokens";
+import { colors, sizes } from "@/styles/tokens";
 
 type CVDocumentProps = {
   hasPersonalInfo?: boolean;
@@ -125,54 +125,55 @@ export function CVDocument({
         </div>
         <div className={styles.contentGridTitle}>Commercial projects:</div>
         <div className={styles.contentGridBody}>
-          <div>
-            {workPortfolio.map((entry) => {
-              return (
-                <article className={styles.portfolio} key={entry.title}>
-                  <div className={styles.portfolioImage}>
-                    <Image
-                      src={entry.image ? entry.image : placeholder}
-                      alt={`${entry.imageAlt}`}
-                      width={100}
-                    />
-                  </div>
-                  <div className={styles.portfolioBody}>
-                    <Heading
-                      className={`${styles.roleTitle} ${styles.roleTitlePos}`}
-                      level="h5"
-                      as="h3"
-                      align="left"
+          {workPortfolio.map((entry) => {
+            return (
+              <article className={styles.portfolio} key={entry.title}>
+                <div className={styles.portfolioFigure}>
+                  <Image
+                    className={styles.portfolioImage}
+                    src={entry.image ? entry.image : placeholder}
+                    alt={`${entry.imageAlt}`}
+                    width={100}
+                  />
+                </div>
+                <div className={styles.portfolioBody}>
+                  <Heading
+                    className={`${styles.roleTitle} ${styles.roleTitlePos}`}
+                    level="h5"
+                    as="h3"
+                    align="left"
+                    color={colors.blackEvil}
+                  >
+                    {entry.title}
+                  </Heading>
+                  {entry.body.map((bodyLine, i) => (
+                    <Paragraph
+                      key={`${entry.title}b${i}`}
+                      fontSize="small"
                       color={colors.blackEvil}
+                      margin="none"
                     >
-                      {entry.title}
-                    </Heading>
-                    {entry.body.map((bodyLine, i) => (
-                      <Paragraph
-                        key={`${entry.title}b${i}`}
-                        fontSize="small"
-                        color={colors.blackEvil}
-                      >
-                        {bodyLine}
-                      </Paragraph>
-                    ))}
-                  </div>
-                </article>
-              );
-            })}
-          </div>
+                      {bodyLine}
+                    </Paragraph>
+                  ))}
+                </div>
+              </article>
+            );
+          })}
         </div>
         <div className={styles.contentGridTitle}>Personal projects:</div>
         <div className={styles.contentGridBody}>
           {personalProjects.map((project) => {
             return (
               <article className={styles.portfolio} key={project.title}>
-                <div className={styles.portfolioImage}>
+                <figure className={styles.portfolioFigure}>
                   <Image
+                    className={styles.portfolioImage}
                     src={project.image ? project.image : placeholder}
                     alt={`${project.imageAlt}`}
                     width={100}
                   />
-                </div>
+                </figure>
                 <div className={styles.portfolioBody}>
                   <Heading
                     className={`${styles.roleTitle} ${styles.roleTitlePos}`}
