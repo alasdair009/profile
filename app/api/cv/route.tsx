@@ -34,6 +34,9 @@ export async function GET(request: Request) {
     await page.waitForSelector('[data-testid="CVDocument"]');
     await page.addStyleTag({
       content: `
+        body {
+          background: white;
+        }
         header,
         footer,
         .web-header{

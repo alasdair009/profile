@@ -22,7 +22,7 @@ import placeholder from "../../assets/am.svg";
 import type { HTMLAttributes } from "react";
 import { myName } from "@/lib/metadata";
 import { siteOrigin } from "@/lib/domains";
-import { colors } from "@/styles/tokens";
+import { colors, sizes } from "@/styles/tokens";
 
 type CVDocumentProps = {
   hasPersonalInfo?: boolean;
@@ -96,7 +96,7 @@ export function CVDocument({
             <dd>Full car and motorbike</dd>
           </DetailList>
         </div>
-        <div className={styles.contentGridTitle}>Objective:</div>
+        <div className={styles.contentGridTitle}>Profile:</div>
         <div className={styles.contentGridBody}>
           <Paragraph fontSize="small" margin="none" color={colors.blackEvil}>
             Senior front-end engineer with {getTotalExperienceYears("web")}{" "}
@@ -233,14 +233,6 @@ export function CVDocument({
                     />{" "}
                     {companyDetails[role.company].name} - {roleDate}
                   </Heading>
-                  <Paragraph
-                    align="left"
-                    margin="0"
-                    fontSize="small"
-                    color={colors.blackEvil}
-                  >
-                    Responsible for:
-                  </Paragraph>
                   <UnorderedList className={styles.list}>
                     {role.responsibilities.map((responsibility, i) => {
                       return (
@@ -255,12 +247,22 @@ export function CVDocument({
         </div>
         <div className={styles.contentGridTitle}>About me:</div>
         <div className={styles.contentGridBody}>
-          <Paragraph align="left" fontSize="small" color={colors.blackEvil}>
+          <Paragraph
+            align="left"
+            fontSize="small"
+            color={colors.blackEvil}
+            margin={`0 auto ${sizes.s4}px`}
+          >
             Outside of work I am a former national trampolinist and current
             Level 4 Trampoline Coach for the Cambridge Cangaroos Trampoline
             Club. I also casually enjoy squash and travelling.
           </Paragraph>
-          <Paragraph align="left" fontSize="small" color={colors.blackEvil}>
+          <Paragraph
+            align="left"
+            fontSize="small"
+            color={colors.blackEvil}
+            margin={`0 auto ${sizes.s4}px`}
+          >
             If that was not enough time on the ground I am also a rollercoaster
             enthusiast having travelled to theme parks all over the world!
           </Paragraph>
@@ -273,10 +275,6 @@ export function CVDocument({
             I am able to work efficiently both on-site and remotely and am a
             firm believer in building strong workplace relationships.
           </Paragraph>
-        </div>
-        <div className={styles.contentGridTitle}>Referees:</div>
-        <div className={styles.contentGridBody}>
-          References are available on request.
         </div>
       </div>
     </div>
