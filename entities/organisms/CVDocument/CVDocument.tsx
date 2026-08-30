@@ -22,7 +22,7 @@ import placeholder from "../../assets/am.svg";
 import type { HTMLAttributes } from "react";
 import { myName } from "@/lib/metadata";
 import { siteOrigin } from "@/lib/domains";
-import { colors, sizes } from "@/styles/tokens";
+import { colors } from "@/styles/tokens";
 
 type CVDocumentProps = {
   hasPersonalInfo?: boolean;
@@ -100,7 +100,7 @@ export function CVDocument({
         <div className={styles.contentGridBody}>
           <Paragraph fontSize="small" margin="none" color={colors.blackEvil}>
             Senior front-end engineer with {getTotalExperienceYears("web")}{" "}
-            years experience, building high-quality digital experiences for
+            years&#39; experience, building high-quality digital experiences for
             global gaming communities. Specialist in React, Next.js, TypeScript,
             design systems and animated interfaces, with experience coordinating
             complex launches across more than 50 customer-facing and internal

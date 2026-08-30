@@ -65,10 +65,10 @@ export const careerHistory: CareerHistoryData = {
       startDate: new Date("2020-01-01"),
       field: "web",
       responsibilities: [
-        "Constructing and maintain cross-departmental design systems used by multiple teams",
+        "Constructing and maintaining cross-departmental design systems used by multiple teams",
         "Implementing new tech stacks to replace legacy proprietary systems",
         "Supporting junior engineers in their professional development",
-        "Coordinating outsource teams on collaborative projects",
+        "Coordinating outsourced teams on collaborative projects",
         "Ensuring consent compliance on all Jagex services",
       ],
     },
@@ -123,7 +123,7 @@ export const careerHistory: CareerHistoryData = {
       responsibilities: [
         "Exploratory, destructive and scheduled testing of Jagex games including Stellar Dawn, RuneScape and Transformers Universe.",
         "Build and organise test scripting software for all studio QA teams.",
-        "Lead the charge in migrating from proprietary ticket managing software to JIRA.",
+        "Lead the charge in migrating from proprietary ticket-management software to JIRA.",
       ],
     },
     {
@@ -209,7 +209,7 @@ export const skills: Skill[] = [
   },
   {
     heading: "Platforms",
-    cv: "Platforms: Node.js, Express, Contentful, Java, PHP, MySQL",
+    cv: "Node.js, Express, Contentful, Java, PHP, MySQL",
   },
   {
     background: rgba(colors.redHeat, 0.25),
@@ -259,7 +259,7 @@ export const skills: Skill[] = [
   {
     background: rgba(colors.greenGrass, 0.25),
     value: 50,
-    heading: "Java / Freemarker",
+    heading: "Java / FreeMarker",
     copy: "Moderate experience developing a proprietary Java based framework to support several very mature online MMORPGs.",
     grid: {
       xsmall: { columnStart: 2, rowStart: 4 },
@@ -305,7 +305,7 @@ export const skills: Skill[] = [
     value: 75,
     heading: "Web compliance",
     copy: "Substantial experience with developing Consent compliance websites and applications using OneTrust and Cookiebot.",
-    cv: "OneTrust, CookieBot, Google Consent",
+    cv: "OneTrust, CookieBot, Google Consent Mode",
     grid: {
       xsmall: {
         columnStart: 1,
@@ -334,7 +334,7 @@ export const workPortfolio: PortfolioEntry[] = [
   {
     title: "Athena - marketing technology integration",
     body: [
-      "Constructed a state managed wrapper to integrate OneTrust consent management, PostHog analytics and Singular marketing technology globally across the Jagex websites and Launcher to reduce the duplication of work by the other 15 technology teams that used it.",
+      "Constructed a state-managed wrapper to integrate OneTrust consent management, PostHog analytics and Singular marketing technology globally across the Jagex websites and Launcher to reduce the duplication of work by the 15 other technology teams that used it.",
     ],
     backgroundCss: `linear-gradient(#101d23,black)`,
     image: oneTrustImage,
@@ -353,7 +353,7 @@ export const workPortfolio: PortfolioEntry[] = [
   {
     title: "RuneScape & Old School RuneScape Community App",
     body: [
-      "Built a multi-tenant Next.s app to support community immersion for RuneScape and Old School RuneScape with accompanying Storybook design system.",
+      "Built a multi-tenant Next.js app to support community immersion for RuneScape and Old School RuneScape with accompanying Storybook design system.",
       "The system includes HiScores, Polls and other systems that encourage players to return and immerse themselves in the games.",
     ],
     backgroundCss: `linear-gradient(#101d23,black)`,
@@ -374,7 +374,7 @@ export const workPortfolio: PortfolioEntry[] = [
   {
     title: "Jagex Launcher",
     body: [
-      "The Jagex Launcher is an application that is used to run all Jagex products. I was responsible for maintaining the design system integration that delivered the visual aesthetics and functionality for the front-end as well event tracking and consent compliance.",
+      "The Jagex Launcher is an application that is used to run all Jagex products. I was responsible for maintaining the design system integration that delivered the visual aesthetics and functionality for the front-end as well as event tracking and consent compliance.",
     ],
     backgroundCss: `linear-gradient(#07111b,black)`,
     image: jagexLauncherImage,
@@ -384,7 +384,7 @@ export const workPortfolio: PortfolioEntry[] = [
   {
     title: "RuneScape News",
     body: [
-      "Rebuilt the RuneScape news system using Java and Freemarker hosted on proprietary technology to work better on modern browsers and be ready for the launch of RuneScape Mobile improving article engagement by over 40%.",
+      "Rebuilt the RuneScape news system using Java and FreeMarker hosted on proprietary technology to work better on modern browsers and be ready for the launch of RuneScape Mobile improving article engagement by over 40%.",
     ],
     backgroundCss: `linear-gradient(#101d23,black)`,
     image: runeScapeNewsImage,
