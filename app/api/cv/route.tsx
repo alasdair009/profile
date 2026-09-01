@@ -1,4 +1,5 @@
 import chromium from "@sparticuz/chromium";
+import { PDFDocument } from "pdf-lib";
 import puppeteer from "puppeteer-core";
 
 export const runtime = "nodejs";
@@ -34,9 +35,15 @@ export async function GET(request: Request) {
     await page.waitForSelector('[data-testid="CVDocument"]');
     await page.addStyleTag({
       content: `
+        html,
         body {
           background: white;
         }
+
+        main {
+          background: white !important;
+        }
+
         header,
         footer,
         .web-header{
@@ -44,6 +51,7 @@ export async function GET(request: Request) {
         }
 
         body > main {
+          background: white !important;
           min-height: auto !important;
         }
       `,
@@ -60,12 +68,23 @@ export async function GET(request: Request) {
       },
       printBackground: true,
     });
-    const pdfBytes = pdf.buffer.slice(
+    const rawPdfBytes = pdf.buffer.slice(
       pdf.byteOffset,
       pdf.byteOffset + pdf.byteLength
     ) as ArrayBuffer;
+    const pdfDocument = await PDFDocument.load(rawPdfBytes);
+    pdfDocument.setTitle("Alasdair Macrae | Senior Front-End Engineer");
+    pdfDocument.setAuthor("Alasdair Macrae");
+    pdfDocument.setSubject("Curriculum Vitae");
+    pdfDocument.setCreator("alasdairmacrae.co.uk");
+    pdfDocument.setProducer("Puppeteer + pdf-lib");
+    const pdfBytes = await pdfDocument.save();
+    const responseBytes = pdfBytes.buffer.slice(
+      pdfBytes.byteOffset,
+      pdfBytes.byteOffset + pdfBytes.byteLength
+    ) as ArrayBuffer;
 
-    return new Response(pdfBytes, {
+    return new Response(responseBytes, {
       headers: {
         "Cache-Control":
           "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800",

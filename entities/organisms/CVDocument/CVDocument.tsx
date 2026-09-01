@@ -202,11 +202,20 @@ export function CVDocument({
         <div className={styles.contentGridTitle}>Employment history:</div>
         <div className={styles.contentGridBody}>
           <div className={styles.employments}>
-            {careerHistory.roles.map((role) => {
+            {careerHistory.roles.map((role, i) => {
               const thisRoleKey = `${role.company}${role.position}`;
               const roleDate = `${role.startDate.toLocaleString("default", {
                 month: "long",
               })} ${role.startDate.getFullYear()}`;
+              const roleEndDate =
+                i > 0
+                  ? `${careerHistory.roles[i - 1].startDate.toLocaleString(
+                      "default",
+                      {
+                        month: "long",
+                      }
+                    )} ${careerHistory.roles[i - 1].startDate.getFullYear()}`
+                  : "present";
               return (
                 <div className={styles.employment} key={thisRoleKey}>
                   <Heading
@@ -231,7 +240,8 @@ export function CVDocument({
                       alt=""
                       height={10}
                     />{" "}
-                    {companyDetails[role.company].name} - {roleDate}
+                    {companyDetails[role.company].name} - {roleDate} to{" "}
+                    {roleEndDate}
                   </Heading>
                   <UnorderedList className={styles.list}>
                     {role.responsibilities.map((responsibility, i) => {

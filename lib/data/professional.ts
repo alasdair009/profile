@@ -78,21 +78,31 @@ export const careerHistory: CareerHistoryData = {
       startDate: new Date("2018-04-01"),
       field: "web",
       responsibilities: [
-        "Lead and drive the construction of RuneScape and Jagex website systems",
-        "Gain a deep understanding of in-house proprietary system languages",
-        "Supporting junior developers in their professional development",
-        "Work closely with game teams to deliver rich supportive game experiences",
+        "Led development of RuneScape and Jagex web platforms",
+        "Mastered proprietary languages to maintain and modernise legacy web systems",
+        "Supported junior developers in their professional development",
+        "Worked closely with game teams to deliver engaging player-focused web experiences",
       ],
     },
     {
       company: "jagex",
       position: "Web Developer",
+      startDate: new Date("2014-07-01"),
+      field: "web",
+      responsibilities: [
+        "Maintained and enhanced websites across the Jagex product portfolio",
+        "Delivered player-focused web experiences across multiple frameworks",
+        "Supported other Jagex initiatives, including festivals, recruitment and third-party acquisitions",
+      ],
+    },
+    {
+      company: "jagex",
+      position: "Junior Web Developer",
       startDate: new Date("2013-07-01"),
       field: "web",
       responsibilities: [
-        "Maintain and advance websites for all Jagex Games Ltd products",
-        "Deliver player-first driven web experiences across a variety of frameworks",
-        "Support other Jagex ventures including festivals, recruitment and third party acquisitions",
+        "Built supporting pages for the RuneScape 3 release",
+        "Supported game-client-dependent interfaces for the in-browser Java applet",
       ],
     },
     {
@@ -101,8 +111,8 @@ export const careerHistory: CareerHistoryData = {
       startDate: new Date("2012-11-01"),
       field: "qa",
       responsibilities: [
-        "Accountable for the quality of Jagex web-based releases",
-        "Build and maintain tools to assist with the QA process",
+        "Ensured the quality of Jagex web-based releases",
+        "Built and maintained tools supporting the QA process",
       ],
     },
     {
@@ -111,8 +121,8 @@ export const careerHistory: CareerHistoryData = {
       startDate: new Date("2012-06-01"),
       field: "qa",
       responsibilities: [
-        "Implement automation tools for testing all PKR product flows",
-        "Level up other members of the QA team in automation testing",
+        "Implemented automation tools for testing all PKR product flows",
+        "Coached QA colleagues in automation testing",
       ],
     },
     {
@@ -121,9 +131,9 @@ export const careerHistory: CareerHistoryData = {
       startDate: new Date("2011-05-01"),
       field: "qa",
       responsibilities: [
-        "Exploratory, destructive and scheduled testing of Jagex games including Stellar Dawn, RuneScape and Transformers Universe.",
-        "Build and organise test scripting software for all studio QA teams.",
-        "Lead the charge in migrating from proprietary ticket-management software to JIRA.",
+        "Performed exploratory, destructive and scheduled testing of Jagex games including Stellar Dawn, RuneScape and Transformers Universe.",
+        "Built and organised test scripting software for all studio QA teams.",
+        "Led the migration from proprietary ticket-management software to Jira",
       ],
     },
     {
@@ -132,9 +142,9 @@ export const careerHistory: CareerHistoryData = {
       startDate: new Date("2011-02-01"),
       field: "design",
       responsibilities: [
-        "Spline and asset placement on F1 2011 tracks",
-        "AI racing line optimisation via 3D Studio Max",
-        "Feedback areas for improvement in game mechanics",
+        "Placed splines and assets on F1 2011 tracks",
+        "Optimised AI racing lines using 3D Studio Max",
+        "Identified and communicated improvements to game mechanics",
       ],
     },
     {
@@ -143,9 +153,9 @@ export const careerHistory: CareerHistoryData = {
       startDate: new Date("2010-10-01"),
       field: "qa",
       responsibilities: [
-        "Manually test online and network components of Operation Flashpoint: Red River for release",
-        "Complete multiplayer passthroughs to confirm build stability",
-        "Install builds on console dev kits to ensure feature platform parity",
+        "Tested online and network components of Operation Flashpoint: Red River ahead of release",
+        "Completed multiplayer playthroughs to confirm build stability",
+        "Installed builds on console dev kits to ensure feature platform parity",
       ],
     },
     {
@@ -154,8 +164,8 @@ export const careerHistory: CareerHistoryData = {
       startDate: new Date("2010-03-01"),
       field: "qa",
       responsibilities: [
-        "Perform exploratory and scripted testing of APB",
-        "Leading benchmark testing of builds to verify stability",
+        "Performed exploratory and scripted testing of APB",
+        "Led benchmark testing of builds to verify stability",
       ],
     },
   ],
@@ -291,7 +301,7 @@ export const skills: Skill[] = [
     value: 25,
     heading: "Marketing tooling",
     copy: "Decent exposure to integrating marketing and analytical tools including PostHog, GA/GTM and Singular.",
-    cv: "PostHog, GA/GTM, Singular, A/B Testing solutions",
+    cv: "PostHog, GA/GTM, Singular, A/B testing",
     grid: {
       xsmall: {
         columnStart: 2,
@@ -334,7 +344,7 @@ export const workPortfolio: PortfolioEntry[] = [
   {
     title: "Athena - marketing technology integration",
     body: [
-      "Constructed a state-managed wrapper to integrate OneTrust consent management, PostHog analytics and Singular marketing technology globally across the Jagex websites and Launcher to reduce the duplication of work by the 15 other technology teams that used it.",
+      "Built a shared integration layer for OneTrust, PostHog and Singular across Jagex websites and the Launcher, eliminating duplicated implementation work across 15 technology teams.",
     ],
     backgroundCss: `linear-gradient(#101d23,black)`,
     image: oneTrustImage,
@@ -394,7 +404,7 @@ export const workPortfolio: PortfolioEntry[] = [
   {
     title: "Jagex Corporate website",
     body: [
-      "The corporate website for Jagex Games Ltd. This site content was powered by Contentful CMS and later migrated to a fixed code driven version. The site is driven via Express with EJS for page templating.",
+      "The corporate website for Jagex Games Ltd. This site content was powered by Contentful CMS and later migrated to a fixed, code-driven version. The site is driven via Express with EJS for page templating.",
     ],
     backgroundCss: `linear-gradient(#4b4c01,black)`,
     image: jagexCorporateImage,
