@@ -1,4 +1,7 @@
-export const siteOrigin = "https://www.alasdairmacrae.co.uk";
+export const mainDomain = "alasdairmacrae.co.uk";
+export const siteOrigin = `https://www.${mainDomain}`;
+export const designSystemOrigin = `https://design.${mainDomain}`;
+export const CDNOrigin = `https://files.${mainDomain}`;
 
 export const vercelOrigin = "https://profile-ivory-three.vercel.app";
 

@@ -16,6 +16,7 @@ export const socialMedia = {
 
 export const siteName = "Alasdair Macrae";
 export const myName = "Alasdair Macrae";
+export const myTitle = "Senior Web Engineer";
 export const siteDescription =
   "Front-end web engineer with a passion for pushing the limits of CSS to new heights. I have experience as a developer with different languages & infrastructures to build awesome web experiences.";
 export const generateMetaData = (

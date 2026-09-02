@@ -18,6 +18,7 @@ import rollercoasterImage from "@/entities/assets/rollercoaster.svg";
 import Image from "next/image";
 import skylinesImage from "@/entities/assets/city-skylines.webp";
 import homekitImage from "@/entities/assets/homekit.svg";
+import { CDNOrigin } from "@/lib/domains";
 
 type AboutMeProps = {
   /**
@@ -42,8 +43,8 @@ export function AboutMe({
     <div data-testid={AboutMe.displayName} {...rest}>
       <section className={styles.videoWrapper}>
         <Video
-          webmSrc="https://files.alasdairmacrae.co.uk/trampoline-cambs.webm"
-          mp4Src="https://files.alasdairmacrae.co.uk/trampoline-cambs.mp4"
+          webmSrc={`${CDNOrigin}/trampoline-cambs.webm`}
+          mp4Src={`${CDNOrigin}/trampoline-cambs.mp4`}
           poster={trampolinePosterImage}
           className={styles.video}
         />

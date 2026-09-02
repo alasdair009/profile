@@ -1,6 +1,9 @@
 import chromium from "@sparticuz/chromium";
 import { PDFDocument } from "pdf-lib";
 import puppeteer from "puppeteer-core";
+import { CVDocument } from "@/entities";
+import { myName, myTitle } from "@/lib/metadata";
+import { mainDomain } from "@/lib/domains";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -32,7 +35,7 @@ export async function GET(request: Request) {
     await page.goto(previewUrl.toString(), {
       waitUntil: "domcontentloaded",
     });
-    await page.waitForSelector('[data-testid="CVDocument"]');
+    await page.waitForSelector(`[data-testid="${CVDocument.displayName}"]`);
     await page.addStyleTag({
       content: `
         html,
@@ -73,10 +76,10 @@ export async function GET(request: Request) {
       pdf.byteOffset + pdf.byteLength
     ) as ArrayBuffer;
     const pdfDocument = await PDFDocument.load(rawPdfBytes);
-    pdfDocument.setTitle("Alasdair Macrae | Senior Front-End Engineer");
-    pdfDocument.setAuthor("Alasdair Macrae");
+    pdfDocument.setTitle(`${myName} | ${myTitle}`);
+    pdfDocument.setAuthor(myName);
     pdfDocument.setSubject("Curriculum Vitae");
-    pdfDocument.setCreator("alasdairmacrae.co.uk");
+    pdfDocument.setCreator(mainDomain);
     pdfDocument.setProducer("Puppeteer + pdf-lib");
     const pdfBytes = await pdfDocument.save();
     const responseBytes = pdfBytes.buffer.slice(
@@ -88,7 +91,7 @@ export async function GET(request: Request) {
       headers: {
         "Cache-Control":
           "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800",
-        "Content-Disposition": 'inline; filename="alasdair-macrae-cv.pdf"',
+        "Content-Disposition": `inline; filename="${myName.toLowerCase().replace(" ", "-")}-cv.pdf"`,
         "Content-Type": "application/pdf",
       },
     });

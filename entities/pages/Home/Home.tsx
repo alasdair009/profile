@@ -21,6 +21,8 @@ import challengeImage from "@/entities/assets/challenge.svg";
 import storybookImage from "@/entities/assets/storybook.svg";
 import addValueImage from "@/entities/assets/addValue.svg";
 import trampolineImage from "@/entities/assets/trampoline.svg";
+import { myTitle } from "@/lib/metadata";
+import { designSystemOrigin } from "@/lib/domains";
 
 type HomeProps = {
   /**
@@ -49,7 +51,7 @@ export function Home({ contactFormEndPoint, ...rest }: HomeProps) {
         <Paragraph>
           My name is <span itemProp="givenName">Alasdair</span> (Ali). I am
           a&nbsp;
-          <strong itemProp="jobTitle">front-end web engineer</strong> with over{" "}
+          <strong itemProp="jobTitle">${myTitle}</strong> with over{" "}
           {getTotalExperienceYears()} years experience working in the games
           industry.
         </Paragraph>
@@ -98,8 +100,8 @@ export function Home({ contactFormEndPoint, ...rest }: HomeProps) {
         </Paragraph>
         <Paragraph>
           This site also has its own design system that you can view at{" "}
-          <Link target="_blank" href="https://design.alasdairmacrae.co.uk">
-            design.alasdairmacrae.co.uk
+          <Link target="_blank" href={designSystemOrigin}>
+            {designSystemOrigin.replace("https://", "")}
           </Link>
           .
         </Paragraph>

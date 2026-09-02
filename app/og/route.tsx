@@ -2,6 +2,7 @@
 import { ImageResponse } from "next/og";
 import { darken } from "polished";
 import { CSSProperties } from "react";
+import { CDNOrigin } from "@/lib/domains";
 
 export const runtime = "edge";
 
@@ -21,7 +22,7 @@ const galleryStyles: CSSProperties = {
   width: 140,
 };
 
-const cDNFolder = "https://files.alasdairmacrae.co.uk/og";
+const cDNFolder = `${CDNOrigin}/og`;
 
 export async function GET(request: Request) {
   try {

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import {
   generateMetaData,
   myName,
+  myTitle,
   siteDescription,
   socialMedia,
 } from "@/lib/metadata";
@@ -16,7 +17,7 @@ const personSchema = {
   "@id": `${siteOrigin}#person`,
   name: myName,
   url: siteOrigin,
-  jobTitle: "Front-End Web Engineer",
+  jobTitle: myTitle,
   description: siteDescription,
   sameAs: [socialMedia.github, socialMedia.linkedin],
 };

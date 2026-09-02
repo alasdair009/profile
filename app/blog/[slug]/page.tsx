@@ -1,5 +1,5 @@
 import { BlogArticle } from "@/entities";
-import { generateMetaData } from "@/lib/metadata";
+import { generateMetaData, myName } from "@/lib/metadata";
 import { sanityClient } from "@/lib/sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 import { Post } from "@/lib/sanity/queries";
@@ -77,12 +77,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     dateModified: post._updatedAt,
     author: {
       "@type": "Person",
-      name: "Alasdair Macrae",
+      name: myName,
       url: siteOrigin,
     },
     publisher: {
       "@type": "Person",
-      name: "Alasdair Macrae",
+      name: myName,
       url: siteOrigin,
     },
   };
