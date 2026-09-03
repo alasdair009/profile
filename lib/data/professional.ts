@@ -233,8 +233,12 @@ export const skills: Skill[] = [
     },
   },
   {
+    heading: "Testing",
+    cv: "Vitest, Jest, Storybook automation tests, Axe Testing, Chromatic integrations, UpTime monitoring",
+  },
+  {
     heading: "Quality and delivery",
-    cv: "Accessibility, performance, analytics, consent management, testing, mentoring, vendor coordination",
+    cv: "GitHub actions, BitBucket Pipelines, consent management, mentoring, vendor coordination",
   },
   {
     background: rgba(colors.greenGrass, 0.25),

@@ -19,6 +19,7 @@ import Image from "next/image";
 import skylinesImage from "@/entities/assets/city-skylines.webp";
 import homekitImage from "@/entities/assets/homekit.svg";
 import { CDNOrigin } from "@/lib/domains";
+import { myLocation } from "@/lib/metadata";
 
 type AboutMeProps = {
   /**
@@ -73,8 +74,8 @@ export function AboutMe({
       <CopyBlock>
         <Heading level="h2">When i&apos;m on the ground...</Heading>
         <Paragraph>
-          I reside in Suffolk UK and am a rollercoaster fanatic and always like
-          to take a few days per year to visit theme parks up and down the
+          I reside in {myLocation} and am a rollercoaster fanatic and always
+          like to take a few days per year to visit theme parks up and down the
           country. I have
           <Link href="/about-me/rollercoasters">
             {numberOfRollercoasters > 0

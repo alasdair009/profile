@@ -20,7 +20,7 @@ import cvPhoto from "../../assets/me.webp";
 import qrCode from "../../assets/qr.svg";
 import placeholder from "../../assets/am.svg";
 import type { HTMLAttributes } from "react";
-import { myName } from "@/lib/metadata";
+import { myLocation, myName } from "@/lib/metadata";
 import { siteOrigin } from "@/lib/domains";
 import { colors, sizes } from "@/styles/tokens";
 
@@ -92,6 +92,8 @@ export function CVDocument({
           <DetailList className={styles.detailList} hasInlineContent={true}>
             <dt>Nationality:</dt>
             <dd>British</dd>
+            <dt>Location:</dt>
+            <dd>{myLocation} - willing to commute to London.</dd>
             <dt>Driving Licences:</dt>
             <dd>Full car and motorbike</dd>
           </DetailList>
