@@ -25,6 +25,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
+      url: `${siteOrigin}/cv`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${siteOrigin}/portfolio/weather`,
       lastModified: new Date(),
       changeFrequency: "monthly",
@@ -38,6 +44,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${siteOrigin}/about-me/rollercoasters`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${siteOrigin}/about-me/trampolining`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.5,
