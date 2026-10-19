@@ -51,7 +51,7 @@ export function Home({ contactFormEndPoint, ...rest }: HomeProps) {
         <Paragraph>
           My name is <span itemProp="givenName">Alasdair</span> (Ali). I am
           a&nbsp;
-          <strong itemProp="jobTitle">${myTitle}</strong> with over{" "}
+          <strong itemProp="jobTitle">{myTitle}</strong> with over{" "}
           {getTotalExperienceYears()} years experience working in the games
           industry.
         </Paragraph>
