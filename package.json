@@ -36,14 +36,14 @@
     "@vercel/edge-config": "^1.4.0",
     "lightningcss": "^1.30.2",
     "mysql2": "^3.18.2",
-    "next": "16.3.1",
+    "next": "16.4.2",
     "next-sanity": "^13.3.4",
     "next-view-transitions": "^0.3.4",
     "ogl": "^1.0.11",
     "pdf-lib": "^1.17.1",
     "puppeteer-core": "^25.8.0",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "react-intersection-observer": "^9.15.1",
     "react-syntax-highlighter": "^15.6.1",
     "reagraph": "^4.24.0"
@@ -58,8 +58,8 @@
     "@storybook/nextjs-vite": "10.5.9",
     "@storybook/test-runner": "^0.24.4",
     "@types/node": "^20.14.14",
-    "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
     "@types/react-syntax-highlighter": "^15.5.13",
     "@types/react-vertical-timeline-component": "^3.3.6",
     "@vercel/analytics": "^1.2.2",
@@ -68,8 +68,8 @@
     "axios": "^1.7.9",
     "chromatic": "^13.3.0",
     "dotenv": "^16.3.1",
-    "eslint": "^9.39.5",
-    "eslint-config-next": "^16.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-storybook": "^10.5.9",
@@ -100,6 +100,8 @@
     "@vercel/frameworks": {
       "js-yaml": "4.3.2"
     },
-    "prismjs": "1.30.0"
+    "prismjs": "1.30.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0"
   }
 }
