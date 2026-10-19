@@ -100,16 +100,6 @@
     "@vercel/frameworks": {
       "js-yaml": "4.3.2"
     },
-    "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.4",
-    "@octokit/plugin-paginate-rest": "11.4.1",
-    "@octokit/request": "9.2.1",
-    "esbuild": "0.28.1",
-    "prismjs": "1.30.0",
-    "next-view-transitions": {
-      "react": "$react",
-      "react-dom": "$react-dom"
-    },
-    "storybook": "$storybook"
+    "prismjs": "1.30.0"
   }
 }
