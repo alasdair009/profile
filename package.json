@@ -37,7 +37,7 @@
     "lightningcss": "^1.30.2",
     "mysql2": "^3.18.2",
     "next": "16.3.1",
-    "next-sanity": "^13.3.3",
+    "next-sanity": "^13.3.4",
     "next-view-transitions": "^0.3.4",
     "ogl": "^1.0.11",
     "pdf-lib": "^1.17.1",
@@ -94,6 +94,12 @@
   "readme": "ERROR: No README data found!",
   "_id": "profile@0.1.0",
   "overrides": {
+    "@istanbuljs/load-nyc-config": {
+      "js-yaml": "4.3.2"
+    },
+    "@vercel/frameworks": {
+      "js-yaml": "4.3.2"
+    },
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.4",
     "@octokit/plugin-paginate-rest": "11.4.1",
