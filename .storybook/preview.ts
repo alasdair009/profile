@@ -32,7 +32,9 @@ const customViewports: ViewportMap = {};
 const preview: Preview = {
   parameters: {
     nextjs: {
-      appDirectory: true,
+      // None of the component stories use App Router APIs. Storybook 10.6.2's
+      // App Router mock is incompatible with the context expected by Next 16.4.
+      appDirectory: false,
     },
     controls: {
       matchers: {

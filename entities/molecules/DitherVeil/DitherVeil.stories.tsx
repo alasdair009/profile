@@ -4,13 +4,6 @@ import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof DitherVeil> = {
   component: DitherVeil,
-  parameters: {
-    // Next 16.4 expects a newer App Router context shape than the current
-    // Storybook adapter provides. This component does not use App Router APIs.
-    nextjs: {
-      appDirectory: false,
-    },
-  },
   args: {},
 };
 export default meta;
