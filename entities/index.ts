@@ -47,6 +47,7 @@ export { Video } from "./atoms/Video";
 
 export { Card } from "./molecules/Card";
 export { CodeBlock } from "./molecules/CodeBlock";
+export { DitherVeil } from "./molecules/DitherVeil";
 export { Figure } from "./molecules/Figure";
 export { LabelledCheckbox } from "./molecules/LabelledCheckbox";
 export { LabelledDate } from "./molecules/LabelledDate";
