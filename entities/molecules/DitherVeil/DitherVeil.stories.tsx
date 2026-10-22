@@ -8,7 +8,10 @@ const meta: Meta<typeof DitherVeil> = {
   argTypes: {
     levels: {
       control: {
-        control: { type: "range", min: 2, max: 5, step: 1 },
+        type: "range",
+        min: 2,
+        max: 5,
+        step: 1,
       },
     },
     paperColor: {
