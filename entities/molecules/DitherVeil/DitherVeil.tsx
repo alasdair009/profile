@@ -22,7 +22,7 @@ type DitherVeilProps = {
    */
   pixelSize: DitherVeilExportProps["pixelSize"];
   /**
-   *
+   * Number of tones per channel.
    */
   levels: number;
 } & HTMLAttributes<HTMLDivElement>;
