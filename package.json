@@ -63,7 +63,6 @@
     "@types/react-syntax-highlighter": "^15.5.13",
     "@types/react-vertical-timeline-component": "^3.3.6",
     "@vercel/analytics": "^1.2.2",
-    "@vercel/og": "^0.5.20",
     "@vercel/speed-insights": "^1.0.7",
     "axios": "^1.7.9",
     "chromatic": "^13.3.0",
@@ -96,7 +95,8 @@
       "js-yaml": "4.3.2"
     },
     "@vercel/frameworks": {
-      "js-yaml": "4.3.2"
+      "js-yaml": "4.3.2",
+      "smol-toml": "1.9.1"
     },
     "prismjs": "1.30.0",
     "@types/react": "19.3.0",
