@@ -24,7 +24,6 @@
     "prepare": "husky install",
     "chromatic": "chromatic --exit-zero-on-changes",
     "depcheck": "npx depcheck",
-    "test-storybook": "test-storybook",
     "generate:css-vars": "tsx scripts/generate-css-vars.ts",
     "postinstall": "npm run generate:css-vars"
   },
@@ -56,7 +55,6 @@
     "@storybook/addon-docs": "^10.6.2",
     "@storybook/addon-links": "^10.6.2",
     "@storybook/nextjs-vite": "10.6.2",
-    "@storybook/test-runner": "^0.26.0",
     "@types/node": "^20.14.14",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
@@ -93,6 +91,9 @@
   "overrides": {
     "@istanbuljs/load-nyc-config": {
       "js-yaml": "4.3.2"
+    },
+    "@sanity/workbench-cli": {
+      "@module-federation/vite": "1.23.9"
     },
     "@vercel/frameworks": {
       "js-yaml": "4.3.2",
