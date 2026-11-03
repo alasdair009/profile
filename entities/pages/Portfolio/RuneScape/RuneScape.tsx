@@ -1,7 +1,10 @@
 import { HTMLAttributes } from "react";
 import styles from "./RuneScape.module.css";
-import { ErrorText, Heading, Paragraph, Table } from "@/entities";
 import Image from "next/image";
+import { Heading } from "../../../atoms/Heading";
+import { Paragraph } from "../../../atoms/Paragraph";
+import { Table } from "../../../atoms/Table";
+import { ErrorText } from "../../../atoms/ErrorText";
 
 type RuneScapeProps = {
   /**

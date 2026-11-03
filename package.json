@@ -33,7 +33,6 @@
     "@react-google-maps/api": "^2.20.5",
     "@sparticuz/chromium": "^138.0.2",
     "@vercel/edge-config": "^1.4.0",
-    "lightningcss": "^1.30.2",
     "mysql2": "^3.18.2",
     "next": "16.4.2",
     "next-sanity": "^13.3.4",

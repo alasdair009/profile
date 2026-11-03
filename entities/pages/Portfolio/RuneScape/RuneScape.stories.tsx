@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { RuneScape } from "./";
+import { RuneScape } from "./RuneScape";
 import { expect, within } from "storybook/test";
 
 const meta: Meta<typeof RuneScape> = {

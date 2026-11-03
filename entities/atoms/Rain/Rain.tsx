@@ -1,7 +1,7 @@
 "use client";
 import { HTMLAttributes, useEffect, useRef } from "react";
 import { lighten, rgba } from "polished";
-import { prefersReducedMotion } from "@/entities";
+import { prefersReducedMotion } from "../../design-tokens/animations";
 import { LCG, lcgNextRand, makeLCG } from "@/lib/random";
 import styles from "./Rain.module.css";
 

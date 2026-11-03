@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ContentPlateProps } from "./ContentPlate.types";
-import { Flame, IFrame } from "@/entities";
+import { IFrame } from "../../atoms/IFrame";
+import { Flame } from "../../atoms/Flame";
 import styles from "./ContentPlate.module.css";
 import { CSSProperties } from "react";
 
