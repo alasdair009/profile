@@ -62,6 +62,7 @@ export function Article({
           sizes={`(max-width: ${breakpoints.large}px) 100vw, 1184px`}
           style={{ objectFit: "cover" }}
           priority={true}
+          fetchPriority="high"
         />
       </figure>
       <Spacer multiplier={8} />
