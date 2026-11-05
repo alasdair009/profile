@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`molecules/LabelledDate DateTimeLocale play-test 1`] = `
+exports[`molecules/LabelledMonth DateTimeLocale play-test 1`] = `
 <style>
   :root{
       --animation-rhythm: 1s;
@@ -20,7 +20,7 @@ exports[`molecules/LabelledDate DateTimeLocale play-test 1`] = `
 </style>
 <div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
   <label class="LabelledDate_root__ZJ3Ni input_labelledStyles__yWNVm"
-         data-testid="LabelledDate"
+         data-testid="LabelledMonth"
   >
     <span as="span"
           class="BaseLabel_root__XDdQ8"
@@ -42,7 +42,7 @@ exports[`molecules/LabelledDate DateTimeLocale play-test 1`] = `
 </div>
 `;
 
-exports[`molecules/LabelledDate Default play-test 1`] = `
+exports[`molecules/LabelledMonth Default play-test 1`] = `
 <style>
   :root{
       --animation-rhythm: 1s;
@@ -62,7 +62,7 @@ exports[`molecules/LabelledDate Default play-test 1`] = `
 </style>
 <div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
   <label class="LabelledDate_root__ZJ3Ni input_labelledStyles__yWNVm"
-         data-testid="LabelledDate"
+         data-testid="LabelledMonth"
   >
     <span as="span"
           class="BaseLabel_root__XDdQ8"
@@ -84,7 +84,7 @@ exports[`molecules/LabelledDate Default play-test 1`] = `
 </div>
 `;
 
-exports[`molecules/LabelledDate IsInvalid play-test 1`] = `
+exports[`molecules/LabelledMonth IsInvalid play-test 1`] = `
 <style>
   :root{
       --animation-rhythm: 1s;
@@ -104,7 +104,7 @@ exports[`molecules/LabelledDate IsInvalid play-test 1`] = `
 </style>
 <div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
   <label class="LabelledDate_root__ZJ3Ni input_labelledStyles__yWNVm"
-         data-testid="LabelledDate"
+         data-testid="LabelledMonth"
   >
     <span as="span"
           class="BaseLabel_root__XDdQ8"
@@ -126,7 +126,7 @@ exports[`molecules/LabelledDate IsInvalid play-test 1`] = `
 </div>
 `;
 
-exports[`molecules/LabelledDate Required play-test 1`] = `
+exports[`molecules/LabelledMonth Required play-test 1`] = `
 <style>
   :root{
       --animation-rhythm: 1s;
@@ -146,7 +146,7 @@ exports[`molecules/LabelledDate Required play-test 1`] = `
 </style>
 <div style="font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif;">
   <label class="LabelledDate_root__ZJ3Ni input_labelledStyles__yWNVm"
-         data-testid="LabelledDate"
+         data-testid="LabelledMonth"
   >
     <span as="span"
           class="BaseLabel_root__XDdQ8"
