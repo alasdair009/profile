@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 60">
+  <defs>
+    <style>
+      .tail {
+        animation: tail-swish 0.65s ease-in-out infinite alternate;
+        transform-box: view-box;
+        transform-origin: 34px 30px;
+      }
+
+      .body {
+        animation: body-sway 0.65s ease-in-out infinite alternate;
+        transform-box: view-box;
+        transform-origin: 34px 30px;
+      }
+
+      @keyframes tail-swish {
+        from { transform: rotate(-8deg); }
+        to { transform: rotate(8deg); }
+      }
+
+      @keyframes body-sway {
+        from { transform: rotate(1deg) scaleY(0.99); }
+        to { transform: rotate(-1deg) scaleY(1.01); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .body,
+        .tail { animation: none; }
+      }
+    </style>
+    <linearGradient id="fish-body" x1="28" y1="13" x2="101" y2="47" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffd88a"/>
+      <stop offset="0.48" stop-color="#e98645"/>
+      <stop offset="1" stop-color="#b74931"/>
+    </linearGradient>
+    <linearGradient id="fish-fin" x1="7" y1="14" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#efad61" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#a63d36" stop-opacity="0.75"/>
+    </linearGradient>
+  </defs>
+
+  <path class="tail" d="M34 30 8 12c3 10 3 26 0 36l26-18Z" fill="url(#fish-fin)"/>
+  <g class="body">
+    <path d="M34 30C45 13 75 10 96 21c8 4 14 9 17 9-3 1-9 7-17 10-21 10-51 7-62-10Z" fill="url(#fish-body)"/>
+    <path d="M59 17c-2-7 3-12 14-13-6 5-7 10-5 14l-9-1ZM58 43c-1 7 5 11 16 12-7-4-9-9-6-13l-10 1Z" fill="#d96c45" fill-opacity="0.8"/>
+    <path d="M66 30c-4 1-8 5-9 10 7-1 12-4 16-9l-7-1Z" fill="#f3b76c" fill-opacity="0.78"/>
+    <path d="M88 19c-4 7-4 15 0 22" fill="none" stroke="#953b34" stroke-opacity="0.42" stroke-width="1.5"/>
+    <circle cx="98" cy="26" r="2.6" fill="#f8e3ad"/>
+    <circle cx="98.5" cy="26" r="1.25" fill="#252a2d"/>
+    <path d="M108 31c2 1 4 1 6 0" fill="none" stroke="#713631" stroke-linecap="round"/>
+  </g>
+</svg>

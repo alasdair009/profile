@@ -1,0 +1,249 @@
+.root {
+  margin: 0 auto;
+  max-width: var(--global-decoration-max-width);
+  position: relative;
+  width: 100%;
+}
+
+.inner {
+  --reflection-height: 800;
+  --water-blur: 1;
+  --water-luminosity: 1;
+
+  height: calc(var(--reflection-height) * 1px);
+  margin: 0 auto;
+  max-width: var(--global-content-max-width);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    animation: pond-ripple 5s ease-out infinite;
+    aspect-ratio: 5 / 1;
+    background: radial-gradient(
+      ellipse,
+      transparent 46%,
+      rgb(220 250 252 / 28%) 48%,
+      transparent 51%,
+      transparent 62%,
+      rgb(188 232 239 / 18%) 64%,
+      transparent 67%,
+      transparent 78%,
+      rgb(188 232 239 / 10%) 80%,
+      transparent 83%
+    );
+    bottom: 23%;
+    content: "";
+    filter: blur(1px);
+    left: 40%;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transform: scale(0.35);
+    width: 20%;
+    z-index: 2;
+  }
+
+  &::after {
+    animation: waterline-drift 5.5s ease-in-out infinite;
+    background:
+      radial-gradient(
+        ellipse 30% 3% at 18% 12%,
+        rgb(255 255 255 / 10%),
+        transparent 72%
+      ),
+      radial-gradient(
+        ellipse 22% 2% at 72% 27%,
+        rgb(210 245 248 / 8%),
+        transparent 75%
+      ),
+      radial-gradient(
+        ellipse 36% 2.5% at 43% 58%,
+        rgb(210 245 248 / 5%),
+        transparent 78%
+      ),
+      linear-gradient(
+        to bottom,
+        rgb(210 245 248 / 30%) 0%,
+        rgb(86 168 184 / 22%) 18%,
+        rgb(22 91 118 / 48%) 100%
+      );
+    backdrop-filter: blur(calc(var(--water-blur) * 1px)) saturate(0.85);
+    bottom: 0;
+    clip-path: polygon(
+      0 3%,
+      6% 0.2%,
+      13% 2.6%,
+      21% 0.1%,
+      29% 3.2%,
+      38% 0.4%,
+      47% 2.8%,
+      56% 0.2%,
+      64% 3.4%,
+      73% 0.5%,
+      82% 2.7%,
+      91% 0.2%,
+      100% 2.9%,
+      100% 100%,
+      0 100%
+    );
+    content: "";
+    height: 52%;
+    left: 0;
+    opacity: var(--water-luminosity);
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+@keyframes pond-ripple {
+  0% {
+    opacity: 0;
+    transform: scale(0.35);
+  }
+
+  15% {
+    opacity: 0.65;
+  }
+
+  75%,
+  100% {
+    opacity: 0;
+    transform: scale(1.7);
+  }
+}
+
+@keyframes waterline-drift {
+  0%,
+  100% {
+    clip-path: polygon(
+      0 3%,
+      6% 0.2%,
+      13% 2.6%,
+      21% 0.1%,
+      29% 3.2%,
+      38% 0.4%,
+      47% 2.8%,
+      56% 0.2%,
+      64% 3.4%,
+      73% 0.5%,
+      82% 2.7%,
+      91% 0.2%,
+      100% 2.9%,
+      100% 100%,
+      0 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0 0.3%,
+      7% 2.9%,
+      14% 0.2%,
+      22% 3.1%,
+      30% 0.4%,
+      39% 2.7%,
+      48% 0.1%,
+      57% 3.3%,
+      65% 0.3%,
+      74% 3%,
+      83% 0.2%,
+      92% 2.8%,
+      100% 0.4%,
+      100% 100%,
+      0 100%
+    );
+  }
+}
+
+@keyframes fish-swim {
+  0% {
+    left: -10%;
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  25% {
+    transform: translateY(-7px) rotate(1deg);
+  }
+
+  50% {
+    transform: translateY(3px) rotate(-1deg);
+  }
+
+  75% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+
+  100% {
+    left: 105%;
+    transform: translateY(0) rotate(-2deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inner::before,
+  .inner::after {
+    animation: none;
+  }
+
+  .fish {
+    display: none;
+  }
+}
+
+.vista {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  width: 100%;
+  -webkit-box-reflect: below -5px linear-gradient(transparent, rgb(0 0 0 / 50%));
+}
+
+.fish {
+  animation: fish-swim 16s linear infinite;
+  animation-delay: -2s;
+  bottom: 17%;
+  filter: blur(0.3px) drop-shadow(0 3px 4px rgb(3 40 52 / 28%));
+  height: auto;
+  left: -10%;
+  opacity: 0.62;
+  pointer-events: none;
+  position: absolute;
+  width: clamp(56px, 6vw, 88px);
+  z-index: 1;
+}
+
+.fishTwo {
+  animation-delay: -9s;
+  animation-duration: 20s;
+  bottom: 27%;
+  opacity: 0.48;
+  width: clamp(44px, 5vw, 68px);
+}
+
+.fishThree {
+  animation-delay: -16s;
+  animation-duration: 24s;
+  bottom: 8%;
+  filter: blur(0.7px) drop-shadow(0 3px 5px rgb(3 40 52 / 24%));
+  opacity: 0.38;
+  width: clamp(66px, 7vw, 102px);
+}
+
+.fishFour {
+  animation-delay: -5s;
+  animation-duration: 14s;
+  bottom: 35%;
+  opacity: 0.55;
+  width: clamp(38px, 4vw, 58px);
+}
+
+@supports (
+  -webkit-box-reflect: below -5px linear-gradient(transparent, rgb(0 0 0 / 50%))
+) {
+  .canIUse {
+    display: none !important;
+  }
+}
