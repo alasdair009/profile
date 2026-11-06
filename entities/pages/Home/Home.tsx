@@ -3,7 +3,6 @@ import {
   ContactForm,
   ContentPlate,
   CopyBlock,
-  DitherVeil,
   FixedPlate,
   Heading,
   HorizontalRule,
@@ -16,7 +15,6 @@ import {
   Spacer,
   Splash,
 } from "@/entities";
-import portraitImage from "@/entities/assets/ali-portrait.svg";
 import { getTotalExperienceYears } from "@/lib/data/professional";
 import challengeImage from "@/entities/assets/challenge.svg";
 import storybookImage from "@/entities/assets/storybook.svg";
