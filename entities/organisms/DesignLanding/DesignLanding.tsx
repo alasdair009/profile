@@ -3,6 +3,7 @@ import styles from "./DesignLanding.module.css";
 import {
   Cloud,
   ContentPlate,
+  Flame,
   Heading,
   Paragraph,
   Rain,
@@ -135,7 +136,16 @@ DesignLanding.displayName = "DesignLanding";
 
 export function DesignLandingContentPlate() {
   return (
-    <ContentPlate flameColor={colors.greenGrass}>
+    <ContentPlate
+      foregroundContent={
+        <div style={{ height: "100%", width: "50%" }}>
+          <Flame
+            style={{ height: 250, width: "100%" }}
+            baseColor={colors.greenGrass}
+          />
+        </div>
+      }
+    >
       <Heading level="h2">Like what you see?</Heading>
       <Paragraph>
         This Storybook instance serves as a playground for my front-end

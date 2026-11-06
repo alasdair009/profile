@@ -7,6 +7,11 @@ import { colors } from "@/styles/tokens";
 
 const meta: Meta<typeof ContentPlate> = {
   component: ContentPlate,
+  subcomponents: {
+    ditherVeil: ContentPlate.DitherVeil,
+    iframe: ContentPlate.IFrame,
+    image: ContentPlate.Image,
+  },
   argTypes: {
     backgroundCss: {
       control: {
@@ -36,8 +41,12 @@ export default meta;
 
 export const Default: StoryObj<typeof ContentPlate> = {
   args: {
-    foregroundImage: amLogo,
-    foregroundImageAlt: "AM Logo",
+    foregroundContent: (
+      <ContentPlate.Image
+        foregroundImage={amLogo}
+        foregroundImageAlt="AM Logo"
+      />
+    ),
   },
   play: async ({ args, canvasElement }) => {
     const canvas = within(canvasElement);
@@ -46,9 +55,7 @@ export const Default: StoryObj<typeof ContentPlate> = {
     );
 
     await expect(contentPlateElement).toBeInTheDocument();
-    await expect(
-      canvas.getByAltText(args.foregroundImageAlt as string)
-    ).toBeInTheDocument();
+    await expect(canvas.getByAltText("AM Logo")).toBeInTheDocument();
     await expect(contentPlateElement.children[0]).toHaveStyle(
       `background-color: ${args.backgroundCss}`
     );
@@ -57,7 +64,11 @@ export const Default: StoryObj<typeof ContentPlate> = {
 
 export const WithFlame: StoryObj<typeof ContentPlate> = {
   args: {
-    flameColor: "red",
+    foregroundContent: (
+      <div style={{ height: "100%", width: "50%" }}>
+        <Flame style={{ height: 250, width: "100%" }} baseColor="red" />
+      </div>
+    ),
   },
   parameters: {
     chromatic: { disable: true },

@@ -352,7 +352,7 @@ export const workPortfolio: PortfolioEntry[] = [
     ],
     backgroundCss: `linear-gradient(#101d23,black)`,
     image: oneTrustImage,
-    imageAlt: "",
+    imageAlt: "A OneTrust popup",
     url: "https://play.runescape.com/cookies",
   },
   {
@@ -362,7 +362,7 @@ export const workPortfolio: PortfolioEntry[] = [
     ],
     backgroundCss: `linear-gradient(#101d23,black)`,
     image: rebrandImage,
-    imageAlt: "",
+    imageAlt: "RuneScape homepage with the new RuneScape logo",
   },
   {
     title: "RuneScape & Old School RuneScape Community App",
@@ -372,7 +372,7 @@ export const workPortfolio: PortfolioEntry[] = [
     ],
     backgroundCss: `linear-gradient(#101d23,black)`,
     image: leaguesScreenshotImage,
-    imageAlt: "",
+    imageAlt: "RuneScape Leagues HiScores running on a modern NextJS app",
     url: "https://rs.runescape.com/hiscores/leagues",
   },
   {

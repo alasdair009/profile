@@ -12,19 +12,19 @@ type DitherVeilProps = {
   /**
    * Colour of the pixels that shroud the asset.
    */
-  paperColor: Property.Color;
+  paperColor?: Property.Color;
   /**
    * Style of pixels that shroud the asset.
    */
-  pattern: Pattern;
+  pattern?: Pattern;
   /**
    * Size of the pixels that shroud the asset.
    */
-  pixelSize: DitherVeilExportProps["pixelSize"];
+  pixelSize?: DitherVeilExportProps["pixelSize"];
   /**
    * Number of tones per channel.
    */
-  levels: number;
+  levels?: number;
 } & HTMLAttributes<HTMLDivElement>;
 
 /**

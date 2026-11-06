@@ -7,11 +7,21 @@ export type ContentPlateProps = {
   backgroundCss?: Property.Background;
   backgroundImage?: StaticImageData;
   backgroundImageAlt?: string;
-  foregroundImage?: StaticImageData;
-  foregroundImageAlt?: string;
-  foregroundAnimate?: boolean;
-  foregroundImageLoading?: ImageProps["loading"];
-  embedUrl?: string;
-  flameColor?: string;
+  foregroundContent?: ReactNode;
   children: ReactNode;
 } & HTMLAttributes<HTMLDivElement>;
+
+export type ContentPlateImageProps = {
+  foregroundImage: StaticImageData;
+  foregroundImageAlt: string;
+  foregroundAnimate?: boolean;
+  foregroundImageLoading?: ImageProps["loading"];
+} & HTMLAttributes<HTMLDivElement>;
+
+export type ContentPlateIFrameProps = {
+  embedUrl: string;
+  placeholderImage?: StaticImageData;
+  placeholderAlt?: string;
+} & HTMLAttributes<HTMLDivElement>;
+
+export type ContentPlateDitherVeilProps = {} & HTMLAttributes<HTMLDivElement>;

@@ -1,28 +1,20 @@
 import Image from "next/image";
 import { ContentPlateProps } from "./ContentPlate.types";
-import { IFrame } from "../../atoms/IFrame";
-import { Flame } from "../../atoms/Flame";
 import styles from "./ContentPlate.module.css";
 import { CSSProperties } from "react";
+import { ContentPlateImage } from "./ContentPlateImage";
+import { ContentPlateIFrame } from "./ContentPlateIFrame";
+import { ContentPlateDitherVeil } from "@/entities/organisms/ContentPlate/ContentPlateDitherVeil";
 
 export function ContentPlate({
   orientation = "left",
   backgroundCss = "none",
   backgroundImage,
   backgroundImageAlt,
-  embedUrl,
-  foregroundImage,
-  foregroundImageAlt,
-  foregroundAnimate = false,
-  foregroundImageLoading,
-  flameColor,
+  foregroundContent,
   children,
   ...rest
 }: ContentPlateProps) {
-  const showForeground =
-    typeof foregroundImage !== "undefined" &&
-    typeof foregroundImageAlt !== "undefined" &&
-    typeof embedUrl === "undefined";
   return (
     <section
       className={styles.root}
@@ -48,38 +40,12 @@ export function ContentPlate({
         }
       >
         <div className={styles.copyBox}>{children}</div>
-        {embedUrl && foregroundImage && (
-          <div className={styles.frameBoxWrapper}>
-            <IFrame
-              src={embedUrl}
-              title=""
-              placeholder={{
-                alt: foregroundImageAlt || "",
-                image: foregroundImage,
-              }}
-            />
-          </div>
-        )}
-        {flameColor && (
-          <div className={styles.flameBox}>
-            <Flame className={styles.flame} baseColor={flameColor} />
-          </div>
-        )}
-        {showForeground && (
-          <figure
-            className={`${styles.foregroundWrapper} ${foregroundAnimate ? styles.animate : ""}`}
-          >
-            <Image
-              className={styles.foregroundImage}
-              src={foregroundImage}
-              alt={foregroundImageAlt}
-              sizes={"(max-width: 400px) 100vw, 400px"}
-              loading={foregroundImageLoading}
-            />
-          </figure>
-        )}
+        {foregroundContent}
       </div>
     </section>
   );
 }
 ContentPlate.displayName = "ContentPlate";
+ContentPlate.DitherVeil = ContentPlateDitherVeil;
+ContentPlate.IFrame = ContentPlateIFrame;
+ContentPlate.Image = ContentPlateImage;

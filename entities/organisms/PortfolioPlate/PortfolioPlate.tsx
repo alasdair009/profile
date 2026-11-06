@@ -1,6 +1,8 @@
 import { ContentPlate, Heading, Link } from "@/entities";
 import { PortfolioPlateProps } from "./types";
 import { siteOrigin } from "@/lib/domains";
+import { isValidElement } from "react";
+import { ContentPlateIFrameProps } from "@/entities/organisms/ContentPlate/ContentPlate.types";
 
 const generateUrlToShow = (url?: string) => {
   if (!url) {
@@ -19,6 +21,11 @@ export function PortfolioPlate({
   ...rest
 }: PortfolioPlateProps) {
   const urlDetails = generateUrlToShow(url);
+  const embedUrl = isValidElement<ContentPlateIFrameProps>(
+    contentPlateProps["foregroundContent"]
+  )
+    ? contentPlateProps["foregroundContent"].props.embedUrl
+    : undefined;
   return (
     <ContentPlate
       {...contentPlateProps}
@@ -28,7 +35,7 @@ export function PortfolioPlate({
       <Heading level="h3">{heading}</Heading>
       {urlDetails ? (
         <Link href={urlDetails.urlForAttribute}>{urlDetails.urlToShow}</Link>
-      ) : !contentPlateProps.embedUrl ? (
+      ) : !embedUrl ? (
         <pre>(URL not public)</pre>
       ) : (
         <></>

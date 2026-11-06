@@ -1,7 +1,13 @@
-import { ComponentProps, CSSProperties, HTMLAttributes } from "react";
+import {
+  ComponentProps,
+  CSSProperties,
+  HTMLAttributes,
+  ReactNode,
+} from "react";
 import {
   BlockQuote,
   ContactForm,
+  ContentPlate,
   CopyBlock,
   FixedPlate,
   Flurry,
@@ -187,15 +193,24 @@ export function Portfolio({ ...rest }: PortfolioProps) {
         </Paragraph>
       </section>
       {workPortfolio.map((entry, i) => {
+        let foregroundContent: ReactNode;
+        if (entry.image && entry.imageAlt) {
+          foregroundContent = (
+            <ContentPlate.Image
+              foregroundImage={entry.image}
+              foregroundImageAlt={entry.imageAlt}
+              foregroundAnimate={true}
+            />
+          );
+        } else if (entry.embedUrl) {
+          foregroundContent = <ContentPlate.IFrame embedUrl={entry.embedUrl} />;
+        }
         const plateProps: ComponentProps<
           typeof PortfolioPlate
         >["contentPlateProps"] = {
-          foregroundImageAlt: entry.imageAlt,
-          foregroundImage: entry.image,
-          foregroundAnimate: true,
+          foregroundContent: foregroundContent,
           orientation: (i & 1) === 0 ? "left" : "right",
           backgroundCss: entry.backgroundCss,
-          embedUrl: entry.embedUrl,
         };
         return (
           <PortfolioPlate
@@ -220,11 +235,20 @@ export function Portfolio({ ...rest }: PortfolioProps) {
         </Paragraph>
       </section>
       {personalProjects.map((project, i) => {
+        let foregroundContent: ReactNode;
+        if (project.image && project.imageAlt) {
+          foregroundContent = (
+            <ContentPlate.Image
+              foregroundImage={project.image}
+              foregroundImageAlt={project.imageAlt}
+              foregroundAnimate={true}
+            />
+          );
+        }
         return (
           <PortfolioPlate
             contentPlateProps={{
-              foregroundImage: project.image,
-              foregroundImageAlt: project.imageAlt,
+              foregroundContent: foregroundContent,
               orientation: (i & 1) === 0 ? "left" : "right",
             }}
             heading={project.title}

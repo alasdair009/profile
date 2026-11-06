@@ -3,6 +3,7 @@ import {
   ContactForm,
   ContentPlate,
   CopyBlock,
+  DitherVeil,
   FixedPlate,
   Heading,
   HorizontalRule,
@@ -40,9 +41,7 @@ export function Home({ contactFormEndPoint, ...rest }: HomeProps) {
       <Splash />
       <HorizontalRule margin="bottom" decoration={true} />
       <ContentPlate
-        foregroundImage={portraitImage}
-        foregroundImageAlt="Headshot photo of Ali"
-        foregroundImageLoading="eager"
+        foregroundContent={<ContentPlate.DitherVeil />}
         orientation="right"
         itemScope={true}
         itemType="https://schema.org/Person"
@@ -65,8 +64,12 @@ export function Home({ contactFormEndPoint, ...rest }: HomeProps) {
       <FixedPlate />
       <HorizontalRule margin="none" />
       <ContentPlate
-        foregroundImage={challengeImage}
-        foregroundImageAlt="Two swords moving back and forth"
+        foregroundContent={
+          <ContentPlate.Image
+            foregroundImage={challengeImage}
+            foregroundImageAlt="Two swords moving back and forth"
+          />
+        }
       >
         <Heading level="h2" align="center">
           Challenging the web!
@@ -80,9 +83,13 @@ export function Home({ contactFormEndPoint, ...rest }: HomeProps) {
         </Paragraph>
       </ContentPlate>
       <ContentPlate
+        foregroundContent={
+          <ContentPlate.Image
+            foregroundImage={storybookImage}
+            foregroundImageAlt="Storybook Logo: White S on a pink rectangle"
+          />
+        }
         orientation="right"
-        foregroundImage={storybookImage}
-        foregroundImageAlt="Storybook Logo: White S on a pink rectangle"
       >
         <Heading level="h2" align="center">
           Design systems
@@ -107,8 +114,12 @@ export function Home({ contactFormEndPoint, ...rest }: HomeProps) {
         </Paragraph>
       </ContentPlate>
       <ContentPlate
-        foregroundImage={addValueImage}
-        foregroundImageAlt="A hand raising plus symbols"
+        foregroundContent={
+          <ContentPlate.Image
+            foregroundImage={addValueImage}
+            foregroundImageAlt="A hand raising plus symbols"
+          />
+        }
       >
         <Heading level="h2" align="center">
           How I add value
@@ -135,8 +146,12 @@ export function Home({ contactFormEndPoint, ...rest }: HomeProps) {
       </Lightning>
       <HorizontalRule margin="bottom" />
       <ContentPlate
-        foregroundImage={trampolineImage}
-        foregroundImageAlt="A gymnast on a trampoline"
+        foregroundContent={
+          <ContentPlate.Image
+            foregroundImage={trampolineImage}
+            foregroundImageAlt="A gymnast on a trampoline"
+          />
+        }
         orientation="left"
       >
         <Heading level="h2">Jumping above!</Heading>
