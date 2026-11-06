@@ -3,6 +3,7 @@ import { PortfolioPlate } from "./PortfolioPlate";
 import jdsLogo from "../../assets/jds-logo.svg";
 import jagexLauncherImage from "../../assets/launcher.webp";
 import { Link, Paragraph } from "@/entities";
+import { ContentPlate } from "../ContentPlate";
 import { expect, within } from "storybook/test";
 import { colors } from "@/styles/tokens";
 
@@ -19,8 +20,12 @@ export default meta;
 export const Default: StoryObj<typeof PortfolioPlate> = {
   args: {
     contentPlateProps: {
-      foregroundImage: jdsLogo,
-      foregroundImageAlt: "White Jagex logo part-way through being drawn",
+      foregroundContent: (
+        <ContentPlate.Image
+          foregroundImage={jdsLogo}
+          foregroundImageAlt="White Jagex logo part-way through being drawn"
+        />
+      ),
       backgroundCss: `linear-gradient(#1c1c1c,${colors.blackEvil})`,
     },
     heading: "JDS",
@@ -53,9 +58,12 @@ export const Default: StoryObj<typeof PortfolioPlate> = {
 export const WithUrl: StoryObj<typeof PortfolioPlate> = {
   args: {
     contentPlateProps: {
-      foregroundImage: jagexLauncherImage,
-      foregroundImageAlt:
-        "The opening UI from the Jagex Launcher displaying RuneScape",
+      foregroundContent: (
+        <ContentPlate.Image
+          foregroundImage={jagexLauncherImage}
+          foregroundImageAlt="The opening UI from the Jagex Launcher displaying RuneScape"
+        />
+      ),
       backgroundCss: `linear-gradient(#07111b,${colors.blackEvil})`,
     },
     heading: "Jagex Launcher",

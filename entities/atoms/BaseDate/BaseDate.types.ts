@@ -1,4 +1,4 @@
-import { InputHTMLAttributes } from "react";
+import { HTMLAttributes } from "react";
 
 export type DateInputType = "date" | "datetime-local";
 
@@ -7,4 +7,4 @@ export type BaseDateProps = {
   isInvalid?: boolean;
   min?: Date;
   max?: Date;
-} & InputHTMLAttributes<HTMLInputElement>;
+} & HTMLAttributes<HTMLInputElement>;
